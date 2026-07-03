@@ -1,0 +1,2640 @@
+<!DOCTYPE html><html lang="en-CA" style="--bookingWidgetPrimaryColor: #80b5a4; --bookingWidgetPrimaryColorDarker: rgb(118,171,154);"><head><style>@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");.CareCruModal{display:block;position:fixed;content:"";top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:-1;opacity:0;transition:opacity .2s,z-index 0s .2s;text-align:center;overflow:hidden;overflow-y:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;visibility:hidden}.CareCruModal.CareCruActive{z-index:999999;opacity:1;visibility:visible;transition:opacity .2s}.CareCruModal:before{overflow:hidden;width:0;height:100%;content:""}.CareCruModal:before,.CareCruModal>*{display:inline-block;vertical-align:middle}.CareCruModal>*{white-space:normal;text-align:left}.CareCruModalInner{position:relative;overflow:hidden;width:600px;height:100%;max-width:100%;overflow-y:auto;background:#fff;z-index:-1;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s,z-index 0s .2s}@media screen and (min-width:610px){.CareCruModalInner{height:650px}}.CareCruModalInner.CareCruActive{z-index:100;opacity:1;transform:scale(1);transition:opacity .2s,transform .2s}.CareCruButton{position:fixed;right:-160px;opacity:0;top:250px;min-width:157px;min-height:75px;cursor:pointer;display:flex;flex-direction:row;align-items:center;background-color:var(--bookingWidgetPrimaryColor);text-align:right;justify-content:center;padding:20px;color:#fff;box-sizing:border-box;z-index:9998;box-shadow:1px 2px 3px 0 hsla(0,0%,50.2%,.15);transition:all .2s ease-in;text-transform:uppercase;font-family:"Roboto"!important;font-size:19px;letter-spacing:0;line-height:19px;text-shadow:.5px .5px .5px rgba(0,0,0,.1);border-bottom-left-radius:999px;border-top-left-radius:999px}.CareCruButton.Request{font-size:15.5px}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;right:-160px}50%{opacity:0;right:-20px}to{opacity:1;right:0}}.CareCruButton .CareCruButtonIconBook{display:block;font-weight:600;font-size:25px;line-height:25px;color:#fff;font-family:"Roboto"!important}.CareCruButtonIcon{padding-right:.6rem;color:#fff;transition:all .2s ease-in;top:24px}.CareCruButtonIcon .CareCruButtonIconSVG{fill:currentColor;height:35px;transition:all .2s ease-in}.CareCruButton:hover{background:var(--bookingWidgetPrimaryColorDarker);box-shadow:1px 4px 5px 0 hsla(0,0%,50.2%,.25);transition:all .2s ease-in}.CareCruButton:hover .CareCruButtonIcon{transition:all .2s ease-in;border-color:var(--bookingWidgetPrimaryColorDarker)}.CareCruButton:hover .CareCruButtonIcon .CareCruButtonIconSVG{transition:all .2s ease-in;color:var(--bookingWidgetPrimaryColorDarker)}@media screen and (max-width:610px){.CareCruButton{top:auto;right:0;opacity:0;width:90%;left:5%;font-size:18px;justify-content:center;box-sizing:border-box;border-radius:9999px;padding:10px 0;text-align:center;min-height:auto}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;bottom:-3%}50%{opacity:0}to{opacity:1;bottom:2.5%}}.CareCruButton .CareCruButtonIconBook{display:inline;font-size:18px}.CareCruButtonIcon{display:none}}#CareCruIframe{z-index:101;position:absolute;top:0;left:0;width:1px;min-width:100%;height:100%;border:none;overflow:hidden}#hiddenCareCru{display:none}#locationWrapper .header{flex-flow:nowrap}#hiddenCareCru.active{display:block}.CareCruSpinner{font-family:"Roboto";margin:0 auto;text-align:center;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;font-weight:700;letter-spacing:.035em;z-index:102;position:relative;background:#fff;opacity:1}.CareCruSpinner,.CareCruSpinner.CareCruFadeOut{transition:opacity 1s cubic-bezier(.175,.885,.32,1.275)}.CareCruSpinner.CareCruFadeOut{opacity:0}.CareCruSpinner>div>div{width:18px;height:18px;background-color:var(--bookingWidgetPrimaryColor);border-radius:100%;display:inline-block;-webkit-animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both;animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both}.CareCruSpinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.CareCruSpinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}.CareCruSpinner>span{margin-top:12px}@-webkit-keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}
+/*# sourceMappingURL=widget.css.map */</style><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta charset="UTF-8"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-HK1TVSQ509&amp;cx=c&amp;gtm=4e66u1h1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-16490485258&amp;cx=c&amp;gtm=4e66u1h1"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-T8NJGFCT"></script><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+        <!-- <meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Cache-Control" content="no-cache"> -->
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="distribution" content="global">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta name="google-site-verification" content="2Yk0t-5a3PJq35aUvQEhbWIAKXsuIUh7MQID4BzqZBg">
+        
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Dental Hygienist in NE Calgary - Hygiene Therapy Clinic</title>
+<link data-rocket-prefetch="" href="https://www.clarity.ms" rel="dns-prefetch">
+<link data-rocket-prefetch="" href="https://connect.facebook.net" rel="dns-prefetch">
+<link data-rocket-prefetch="" href="https://s.yimg.jp" rel="dns-prefetch">
+<link data-rocket-prefetch="" href="https://www.googletagmanager.com" rel="dns-prefetch">
+<link data-rocket-prefetch="" href="https://www.gstatic.com" rel="dns-prefetch">
+<link data-rocket-prefetch="" href="https://www.google.com" rel="dns-prefetch">
+<link data-rocket-prefetch="" href="https://capi-automation.s3.us-east-2.amazonaws.com" rel="dns-prefetch">
+<link crossorigin="" data-rocket-preload="" as="font" href="https://sunridgedental.ca/wp-content/themes/theme30/fonts/Roboto-Light.woff2" rel="preload">
+<link crossorigin="" data-rocket-preload="" as="font" href="https://sunridgedental.ca/wp-content/themes/theme30/fonts/fa-solid-900.woff2" rel="preload">
+<link crossorigin="" data-rocket-preload="" as="font" href="https://sunridgedental.ca/wp-content/themes/theme30/fonts/fa-brands-400.woff2" rel="preload"><link rel="preload" data-rocket-preload="" as="image" href="https://sunridgedental.ca/wp-content/uploads/2020/12/hygiene-therapy.jpg" fetchpriority="high">
+	<meta name="description" content="Experience top-notch hygiene therapy from dental hygienists in NE Calgary. Ensure optimal oral health at our clinic. Contact Us!">
+	<link rel="canonical" href="https://sunridgedental.ca/service/hygiene-therapy-calgary/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Dental Hygienist in NE Calgary - Hygiene Therapy Clinic">
+	<meta property="og:description" content="Experience top-notch hygiene therapy from dental hygienists in NE Calgary. Ensure optimal oral health at our clinic. Contact Us!">
+	<meta property="og:url" content="https://sunridgedental.ca/service/hygiene-therapy-calgary/">
+	<meta property="og:site_name" content="Sunridge Dental Clinic">
+	<meta property="article:publisher" content="https://www.facebook.com/sunridgedental">
+	<meta property="article:modified_time" content="2024-12-23T07:10:08+00:00">
+	<meta property="og:image" content="https://sunridgedental.ca/wp-content/uploads/2020/12/hygiene-therapy.jpg">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="600">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://sunridgedental.ca/wp-content/uploads/2020/12/hygiene-therapy.jpg">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/sunridgedental.ca\/service\/hygiene-therapy-calgary\/","url":"https:\/\/sunridgedental.ca\/service\/hygiene-therapy-calgary\/","name":"Dental Hygienist in NE Calgary - Hygiene Therapy Clinic","isPartOf":{"@id":"https:\/\/sunridgedental.ca\/#website"},"datePublished":"2020-12-17T18:45:05+00:00","dateModified":"2024-12-23T07:10:08+00:00","description":"Experience top-notch hygiene therapy from dental hygienists in NE Calgary. Ensure optimal oral health at our clinic. Contact Us!","breadcrumb":{"@id":"https:\/\/sunridgedental.ca\/service\/hygiene-therapy-calgary\/#breadcrumb"},"inLanguage":"en-CA","potentialAction":[{"@type":"ReadAction","target":["https:\/\/sunridgedental.ca\/service\/hygiene-therapy-calgary\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/sunridgedental.ca\/service\/hygiene-therapy-calgary\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/sunridgedental.ca\/"},{"@type":"ListItem","position":2,"name":"Hygiene Therapy"}]},{"@type":"WebSite","@id":"https:\/\/sunridgedental.ca\/#website","url":"https:\/\/sunridgedental.ca\/","name":"Sunridge Dental Clinic","description":"","publisher":{"@id":"https:\/\/sunridgedental.ca\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/sunridgedental.ca\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-CA"},{"@type":"Organization","@id":"https:\/\/sunridgedental.ca\/#organization","name":"Sunridge Dental Clinic","url":"https:\/\/sunridgedental.ca\/","logo":{"@type":"ImageObject","inLanguage":"en-CA","@id":"https:\/\/sunridgedental.ca\/#\/schema\/logo\/image\/","url":"https:\/\/sunridgedental.ca\/wp-content\/uploads\/2020\/11\/Logo.png","contentUrl":"https:\/\/sunridgedental.ca\/wp-content\/uploads\/2020\/11\/Logo.png","width":350,"height":150,"caption":"Sunridge Dental Clinic"},"image":{"@id":"https:\/\/sunridgedental.ca\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/sunridgedental","https:\/\/www.instagram.com\/sunridge_dental_clinic"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//code.jquery.com">
+<link rel="dns-prefetch" href="//www.google.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+
+<link rel="alternate" type="application/rss+xml" title="Sunridge Dental Clinic » Feed" href="https://sunridgedental.ca/feed/">
+<link rel="alternate" type="application/rss+xml" title="Sunridge Dental Clinic » Comments Feed" href="https://sunridgedental.ca/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://sunridgedental.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsunridgedental.ca%2Fservice%2Fhygiene-therapy-calgary%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://sunridgedental.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsunridgedental.ca%2Fservice%2Fhygiene-therapy-calgary%2F&amp;format=xml">
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css" type="text/css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link data-minify="1" rel="stylesheet" id="cip-child-css" href="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/plugins/aow_cip/css/contentshare.css?ver=1780887388" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="my-plugin-style-css" href="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/plugins/aow_cip%202/css/contentshare.css?ver=1780887388" type="text/css" media="all">
+<link rel="stylesheet" id="aow_gf_failure_notification-css" href="https://sunridgedental.ca/wp-content/plugins/aow_gf_failure_notification/public/css/aow_gf_failure_notification-public.css?ver=1.3.0" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="multitheme-style-css" href="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/themes/theme30/style.css?ver=1780887388" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="theme30_bootstrap-css" href="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/themes/theme30/css/bootstrap.min.css?ver=1780887388" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="theme30_style-css" href="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/themes/theme30/css/style.css?ver=1780887388" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="theme30_responsive-css" href="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/themes/theme30/css/responsive.css?ver=1780887388" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="divi-builder-style-css" href="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/plugins/divi-builder/css/style-static.min.css?ver=1780887388" type="text/css" media="all">
+<script data-minify="1" type="text/javascript" src="https://sunridgedental.ca/wp-content/cache/min/1/ajax/libs/jquery/3.2.0/jquery.min.js?ver=1780887388" id="jquery-js"></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/plugins/aow_gf_failure_notification/public/js/aow_gf_failure_notification-public.js?ver=1780887388" id="aow_gf_failure_notification-js"></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/plugins/handl-utm-grabber/js/js.cookie.js?ver=1780887388" id="js.cookie-js"></script>
+<script type="text/javascript" id="handl-utm-grabber-js-extra">
+/* <![CDATA[ */
+var handl_utm = [];
+//# sourceURL=handl-utm-grabber-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/plugins/handl-utm-grabber/js/handl-utm-grabber.js?ver=1780887388" id="handl-utm-grabber-js"></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://sunridgedental.ca/wp-content/cache/min/1/jquery-migrate-3.0.0.min.js?ver=1780887389" id="jquery-migrate-js"></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://sunridgedental.ca/wp-content/themes/theme30/js/bootstrap.min.js?ver=6.9.4" id="theme30-bootstrap-js"></script>
+<link rel="https://api.w.org/" href="https://sunridgedental.ca/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://sunridgedental.ca/wp-json/wp/v2/service/12699"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://sunridgedental.ca/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9.4">
+<link rel="shortlink" href="https://sunridgedental.ca/?p=12699">
+<meta name="generator" content="Site Kit by Google 1.180.0">
+<!-- Google Tag Manager snippet added by Site Kit -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-T8NJGFCT' );
+			
+/* ]]> */
+</script>
+
+<!-- End Google Tag Manager snippet added by Site Kit -->
+<link rel="icon" href="https://sunridgedental.ca/wp-content/uploads/2020/10/FAV.png" sizes="32x32">
+<link rel="icon" href="https://sunridgedental.ca/wp-content/uploads/2020/10/FAV.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://sunridgedental.ca/wp-content/uploads/2020/10/FAV.png">
+<meta name="msapplication-TileImage" content="https://sunridgedental.ca/wp-content/uploads/2020/10/FAV.png">
+		<style type="text/css" id="wp-custom-css">
+			ul.breadcrum-tab {
+    display: flex;
+    list-style: none;
+	    justify-content: center;
+	margin: 20px 0;
+}
+
+li.active.breadcrumb-item {
+    color: #91b7ac;
+    font-weight: 500;
+}
+li.breadcrumb-item {
+    margin-left: 4px;
+}
+a, a:focus {
+    font-weight: 500;
+}
+.teastitle {
+font-size:36px;
+    text-transform: uppercase;
+}
+.teasertext .button, .teasertext .button:focus {
+    border: 2px solid #000000;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 14px 28px;
+}
+
+.teasertext p {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.teamsection {
+    padding: 20px 0 20px;
+}
+.home .teamsection {
+    padding: 60px 0 0;
+}
+.blogroundbox {
+    text-align: left;
+}
+.footform-section {
+    padding: 0;
+  
+}
+.bloginsmbox {
+    max-width: 100%;
+
+}
+.blogroundbox {
+    text-align: left;
+    border: 2px solid #eee;
+    padding: 20px;
+}		</style>
+		        <script type="text/rocketlazyloadscript">
+            var $=jQuery;
+        </script>	
+        <link data-minify="1" type="text/css" href="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/themes/theme30/custom-styles.css?ver=1780887388" rel="stylesheet">
+<script type="text/rocketlazyloadscript">
+  var script1 = document.createElement("link");
+  script1.rel="alternate"; 
+  script1.href= window.location.href;
+    script1.hreflang= "en-CA";
+  document.head.prepend(script1);  
+</script>
+        <link data-minify="1" type="text/css" href="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/themes/theme30/css/color/custom-styles.css?ver=1780887388" rel="stylesheet">
+        <script type="text/rocketlazyloadscript" data-rocket-src="https://sunridgedental.ca/wp-content/themes/theme30/js/bannerowlcarousel.js"></script>
+
+
+
+
+	
+
+
+        <style type="text/css">
+
+
+
+            .blogdetailsbox h2 { color: #524625; }
+
+.teastitle {color: #fff;}
+
+.header-five #logo{padding: 5px 0;}
+
+.fixed .header-five #logo{padding: 5px 0;}
+
+.header-five #nav > li > a{padding: 30px 15px;}
+
+.bodyheader5.fixed #container {padding-top: 186px;}
+
+.copyright p{color:#fff;margin: 0;}
+
+.foothourslist .foothourstime {font-size: 16px;}
+
+.teamsectionopt1 .service-description p{color:#fff;}
+
+.teamsectionopt2 .service-description p{color:#fff;}
+
+#nav li ul li:hover > a {color: #ffffff;}
+
+.hmreviewbox h2 {
+
+color:#fff;
+
+    }
+
+
+
+.servicedecs ul li{list-style-position: outside;}
+
+.servicedecs ul{margin-left:20px;}
+
+.service-wrapper .entry-content:hover p
+
+{
+
+color:#fff;
+
+}
+
+.single-team section.teamsection.teamsectionopt1 {
+
+    display: none;
+
+}
+
+.header-five .headaddress a, .header-five .headcall a { color: #54461f;}
+
+.header-five .headaddress a:hover, .header-five .headcall a:hover { color: #91b7ac;}
+
+.teasertext .button, .teasertext .button:focus{color: #595959;}
+
+.teasertext .button:hover, .teasertext .button:focus{color: #ffffff;}
+
+.header-five .headbookapp a{background-color: #91b7ac;}
+
+.header-five .headbookapp a:hover{background-color: #c3c985;}
+
+.advcircleicon { background-color: #91b7ac;}
+
+.owl-carousel .owl-nav [class*='owl-']{color: #91b7ac;}
+
+.owl-carousel .owl-nav [class*='owl-']:hover{color: #c3c985 ;}
+
+.header-five .socialmedia li a{color: #91b7ac;}
+
+.header-five .socialmedia li a:hover{color: #595959;}
+
+.footsocial li a{color: #91b7ac;}
+
+.footsocial li a:hover{color: #595959;}
+
+a:hover { color: #c3c985;}
+
+.header-five .headaddress a i, .header-five .headcall a i { color: #54461f;}
+
+.page-template-template-blog .entry-content-inner .service-content p { color: #fff; }
+
+.page-id-12482 .img-circle { border-radius: 0; }
+
+.page-id-12482 .teamroundbox .teaminbox, .page-id-12482 .teamroundbox .teamthumb { max-width: 300px; }
+
+.mobilecallbtn a:hover { background-color: #524625; color: #fff;}
+
+.home .footform-section { background-color: #efefef;}
+
+#nav ul { right: 0; left: auto; }
+
+.heapBox .heap .heapOptions .heapOption a:hover{background-color: #c3c985;}
+
+.heapBox .heap .heapOptions .heapOption a.selected{background-color: #c3c985;}
+
+
+
+.servicedecs h2{ color: #91b7ac;}
+
+.aboutimageblock { padding-top: 120px; }
+
+.page-insurance-and-financing .page-header h1, .page-privacy-policy .page-header h1  { text-align: center; }
+
+
+
+.teamselist .entry-content-inner .service-title, .teamselist .entry-content-inner .service-title a, .teamselist .entry-content-inner .service-title a:focus, .blogboxlist .entry-content-inner .service-title, .blogboxlist .entry-content-inner .service-title a, .blogboxlist .entry-content-inner .service-title a:focus { color: #ffff; }
+
+
+
+
+
+.teamselist .entry-content-inner .service-title a:hover, .blogboxlist .entry-content-inner .service-title a:hover { color: #c3c985; }
+
+.aboutcontentopt3.hmabout-section { border-top: 0; }
+
+
+
+.footer-two .foothourslist li{width: 100%;}
+
+span.foothoursday {
+
+    width: 125px !important;
+
+}
+
+.header-five .header-right {
+
+    padding: 34px 0 24px 320px;
+
+}
+
+
+
+#nav ul li ul {left: 0px; margin-left: -260px;}
+
+.header-five #nav li:last-child ul {left: 0px; top:-122px;} 
+
+
+
+#nav li ul li a::after {
+
+    color: #fff;
+
+}
+
+
+
+.aboutvideoblock iframe { position: relative; width: 100%; }
+
+.aboutvideoblock img { display: none; }
+
+
+
+.formlin a { width: 100%; text-align: center; max-width: 380px; }
+
+.formlin { margin-bottom: 10px; }
+
+.formlin.patient-forms { margin-bottom: 10px; }
+
+.blogdetailsbox a, a:focus {color: #c3c985;}
+
+.blogdetailsbox a:hover {color: #595959;}
+
+.service-box-image-inner-img{background-position: center top;}
+
+.abt-btn {text-align: center;}
+
+#post-12833 h1{text-align:center;}
+
+.footerbookform .aawfieldcol.aawfieldtextarea, .bookaptmntform .aawfieldcol.aawfieldtextarea { width: 100%; }
+
+.contactpageform .aawfieldcol.aawfieldtextarea { width: 66.66%; }
+
+.service-wrapper .service-box-image-inner{height: 73%;}
+.copyright a {color: #91b7ac !important;}
+.copyright a:hover {color: #c3c985 !important;}
+.aawformblock .ui-datepicker-trigger .sprite:before {
+    content: "\f073";
+    font-family: "Font Awesome 5 free";
+    font-size: 20px;
+}
+.postid-13074 ol li::marker{font-weight: 700;}
+.page-id-12833 .aboutweldesc.page-description h2 {margin: 20px 0px;}
+.page-id-13115 .page-header {
+	text-align: center;
+}
+.orphan li a {
+	color: #595959 !important;
+}
+.orphan li a:hover {
+	color: #c3c985 !important;
+}
+.aboutcontent.clentlogo.hmclentlogo {
+    padding: 20px 0 0 0;
+}
+.insurance_list li {
+    width: 50%;
+    float: left;
+}
+
+.single-post .hmlogosilder {
+    margin-top: 20px;
+}
+
+.callnowbox {
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.callnowbox a i {
+    transform: rotate(90deg);
+    margin-right: 6px;
+}
+
+.footerservice-section ul li {
+    list-style-type: none;
+    padding: 5px 0px;
+}
+
+.footerservice-section ul { padding: 0; margin: 0; }
+.footerservice-section { background-color: #595959; padding: 40px 0; }
+.foottitle h3, .footerservice-section ul li a { color: #fff; }
+.footerservice-section ul li a:hover { color: #c3c985; }
+.foottitle h3 { margin-top: 0; }
+
+.foottitle.cenman {
+    text-align: center;
+    margin-bottom: 18px;
+}
+.blogbox .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blogbox .row img {
+    border-radius: 0;
+}
+
+/*blog form*/
+
+.blog_form {
+    position: absolute;
+    z-index: 10;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    background: #fff9;
+    padding: 30px 15px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.blog_form .contactpageform .aawfieldcol {
+    width: 100%;
+}
+section.inpgbannersection{position:relative;}
+section.inpgbannersection .innerbanner{height:500px;}
+
+.teaserBanner.owl-carousel .owl-dots { display: none; }
+
+
+.hmfuturesection .col-md-6.col-sm-6.col-xs-12 {
+	width: 100%;
+}
+.hmfuturesection .aboutweldesc h2 {
+	color: #fff;
+	margin: 0 0 25px;
+	font-size: 35px;
+	line-height: 1.2;
+	font-weight: 500;
+	text-align: center;
+}
+.hmfuturesection .aboutweldesc h3 {
+	color: #fff;
+	text-align: center;
+	margin-top: 20px;
+}
+.hmfuturesection .extranewpatient {
+	display: flex;
+}
+.hmfuturesection .extranewpatientbox {
+	width: 50%;
+	padding: 30px;
+}
+.hmfuturesection .aboutweldesc {
+	text-align: center;
+}
+.hmfuturesection .button {
+	color: #91b7ac;
+	background: #fff;
+}
+.hmfuturesection .button:hover{
+color: #fff;
+	background: #c3c985;
+}
+#custompopup{padding-right: 0px !important;}
+#custompopup .modal-dialog{padding: 0px 15px;max-width: 560px;margin: 0 auto;text-align: center;top: 50%;-webkit-transform: translate(-50%);-ms-transform: translate(-50%);-o-transform: translate(-50%);transform: translate(-50%);transform: translateY(-50%);}
+#custompopup .modal-header{padding: 0;border-bottom: 0px;}
+#custompopup .modal-body{padding: 25px;}
+#custompopup .close{position: absolute;top: -15px;right: -15px;width: 30px;height: 30px;background: #91b7ac;color: #fff;z-index: 9;border-radius: 50%;opacity: 1;}
+#custompopup .close:hover{background: #c3c985;}
+#custompopup h2{margin-bottom: 0px;}
+.blogdetailsbox ul { padding-left: 40px; }
+.pb-10 li { padding-bottom: 10px; }
+.teaserBanner .owl-item:nth-child(4) .item, .teaserBanner .owl-item:nth-child(12) .item {
+	background-position: center left -300px;
+}
+
+div#myModal {
+	padding-right: 0 !important;
+}
+.modal.in .modal-dialog {
+	transform: translate(0,25%);
+}
+.md-cls-btn {
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	z-index: 1;
+}
+.btn-close {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	z-index: 1;
+	opacity: 1;
+	border: 1px solid #91b7ac;
+	color: #fff;
+	background-color: #91b7ac;
+	font-size: 24px;
+	line-height: 24px;
+}
+.modal-des {
+	text-align: center;
+}
+.modal-des p {
+	line-height: 1.4;
+}
+.modaldes-inner p:last-child {
+	margin-bottom: 0;
+}
+.modaldes-inner p a {
+	color: #595959;
+	font-weight: 500;
+}
+.modaldes-inner p a:hover {
+	color: #91b7ac;
+}
+
+#gform_wrapper_4 #input_4_8,
+#gform_wrapper_4 #input_4_3,
+#gform_wrapper_4 #input_4_4 {
+    border: 1px solid #384657 !important;
+    color: #4e4e4e !important;
+    text-align: left;
+    background-color: #fff;
+    padding: 5px 10px !important;
+    height: auto !important;
+    width: 100% !important;
+}
+
+.et-db #et-boc .et-l .et_pb_text a,
+.et-db #et-boc .et-l .et_pb_blurb a,
+.et-db #et-boc .et-l .et_pb_module a {
+    color: #000 !important;
+	text-align:left;
+	background-color:#fff;
+	border: 1px solid #384657 !important;
+}
+
+#input_4_9 #label_4_9_0, 
+#input_4_9 #label_4_9_1,
+#input_4_10 #label_4_10_0,
+#input_4_10 #label_4_10_1 {
+    color: #384657;
+text-align:left;
+
+}
+
+#gform_wrapper_4 input[type="radio"] {
+    appearance: auto !important;
+    -webkit-appearance: radio !important;
+    opacity: 1 !important;
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
+    z-index: 2;
+}
+
+body #gform_wrapper_4 #gform_submit_button_4 {
+    background: #384657 !important;
+    color: #fff !important;
+
+    font-size: 18px !important;
+    font-weight: 600 !important;
+
+    padding: 16px 32px !important;
+
+    border: none !important;
+    border-radius: 50px !important;
+
+    cursor: pointer !important;
+
+    width: 100% !important;
+    max-width: 200px !important;
+
+    height: auto !important;
+    line-height: 1.4 !important;
+
+    display: inline-block !important;
+
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+body #gform_wrapper_4 #gform_submit_button_4:hover {
+    background: #333 !important;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+
+        </style>
+
+
+
+            
+
+
+        <style type="text/css">
+
+
+
+            .aboutcontentopt3.hmabout-section{background-position:center left -590px;}
+.postid-13324 .inpgbannersection .innerbanner {
+    height: 600px;
+}
+
+}
+
+@media only screen and (max-width:1440px){
+.teaserBanner .owl-item:nth-child(4) .item, .teaserBanner .owl-item:nth-child(12) .item {
+	background-position: center left -340px;
+}
+}
+
+@media only screen and (max-width:1366px){
+.teaserBanner .owl-item:nth-child(4) .item, .teaserBanner .owl-item:nth-child(12) .item {
+	background-position: center left -140px;
+}
+}
+
+
+
+@media only screen and (min-width:1200px)
+
+{
+
+span.foothoursday {
+
+    width: 160px !important;
+
+}
+
+}
+
+@media only screen and (max-width:1599px){
+
+
+
+.aboutcontentopt3.hmabout-section { background-position: center left -780px; }
+
+
+
+}
+
+
+
+@media only screen and (max-width: 1280px){
+
+
+
+.aboutcontentopt3.hmabout-section { background-position: center left -790px; }
+
+
+
+}
+
+
+
+@media only screen and (max-width: 1199px) {
+.teaserBanner .owl-item:nth-child(4) .item, .teaserBanner .owl-item:nth-child(12) .item {
+	background-position: center left -240px;
+}
+
+.indexbanner-four .teasertext{max-width:385px;}
+
+.bodyheader5.fixed #container {
+
+    padding-top: 200px;
+
+}
+
+.header-five .headertop .col-md-7.col-sm-6.col-xs-12 {  width: 62%;}
+
+.header-five .headertop .col-md-5.col-sm-6.col-xs-12 { width: 38%;}
+
+.foothourslist .foothoursday {font-size: 14px;}
+
+.foothourslist .foothourstime {font-size: 14px;}
+
+.aboutcontentopt3.hmabout-section { background-position: center left -830px; }
+
+.aboutimageblock { padding-top: 180px; }
+
+.indexbanner-four .teaserBanner .item{background-position: 35% center;}
+
+}
+
+
+
+@media only screen and (max-width: 991px) {
+.teaserBanner .owl-item:nth-child(4) .item, .teaserBanner .owl-item:nth-child(12) .item {
+	background-position: center center;
+}
+.indexbanner-four .hmbookform {background-color: #eaf3f6;}
+.hmbookform .heapBox .holder {background-color: #eaf3f6;}
+section.inpgbannersection .innerbanner{height:300px;}
+.postid-12995 .inpgbannersection .innerbanner, .postid-12519 .inpgbannersection .innerbanner, .postid-12522 .inpgbannersection .innerbanner, .postid-12921 .inpgbannersection .innerbanner, .postid-12964 .inpgbannersection .innerbanner {
+    background-position: 0;
+}
+.blog_form {
+    position: relative;
+    max-width: 100%;
+    padding: 30px 15px 0;
+    top: auto;
+    right: auto;
+    transform: inherit;
+    -webkit-transform: inherit;
+    -moz-transform: inherit;
+    -ms-transform: inherit;
+    -o-transform: inherit;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.foottitle h3 { margin-top: 10px; text-align: center; }
+
+.areaservlist, .foottitle.cenfoot { text-align: center; }
+
+.header-five .headbookapp a {padding: 9px 0px;}
+
+.header-five #nav li:last-child ul{top:inherit;}
+
+#nav ul li ul {
+
+    left: 0px;
+
+    margin-left: 0 !important;
+
+}
+
+.header-five .mainNavigation{padding-top:20px;}
+
+.foothourslist .foothoursday {width: 125px;}
+
+.aboutimageblock { padding-top: 0px; }
+
+.menu-icon:hover {color: #524625;}
+
+.header-five .headertop .col-md-7.col-sm-6.col-xs-12 {  width: 50%;}
+
+.header-five .headertop .col-md-5.col-sm-6.col-xs-12 { width: 50%;}
+
+.hmbannerform .aawfieldcol.aawfieldtextarea{width:100%;}
+
+.header-five .header-right {padding: 51px 0 50px 320px;}
+
+.header-five #nav > li > a{padding: 10px 30px 10px 15px;}
+
+.teastitle {margin-bottom: 0;}
+
+.indexbanner-four .teasercaption {padding: 15px 0 15px;}
+
+.header-five .headcall {margin: 10px 0px;}
+
+.header-five .headaddress {margin-bottom: 10px;}
+
+.header-five .headbox {padding: 30px 0;}
+
+.header-five #nav > li:hover > a {background-color: #c3c985; color: #ffffff;}
+
+.arrowclick::after {border-top-color: #ffffff;}
+
+#nav > li:hover > .arrowclick::after {border-top-color: #ffffff;}
+
+.page-id-12482 .teamlist-two.teamselist .item { max-width: 400px; }
+
+.indexbanner-four .teasertext {max-width: 100% ;}
+
+}
+
+@media only screen and (min-width: 768px) {
+.modal-dialog {
+	width: 700px;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.teamlist-two .item {
+	width: 100%;
+}
+.teamlist-two.teamselist{display:block;}
+.page-id-12482 .teamlist-two.teamselist .item {
+    max-width: 400px;
+    float: none;
+    margin: 0 auto 25px;
+    display: block;
+}
+.foottitle, .footservice-list.footblock h3, .footerservice-section ul li { text-align: center; }
+
+.insurance_list li {
+    width: 100%;
+    float: none;
+}
+
+.contactpageform .aawfieldcol.aawfieldtextarea { width: 100%; }
+
+ul.list{margin-bottom:5px;}
+
+.header-five .mainNavigation { padding-top: 0; }
+
+.header-five #logo { padding-bottom: 10px; }
+
+.header-five .headaddress a {display: inline;}
+
+.header-five .headaddress a i{top:2px;}
+
+.header-five .headertop .col-md-7.col-sm-6.col-xs-12 {  width: 100%;}
+
+.header-five .headertop .col-md-5.col-sm-6.col-xs-12 { width: 100%;}
+
+.header-five .header-right { padding: 10px 0px; padding-top: 0; }
+
+.header-five .headbox { padding: 5px 0; margin-bottom: 20px; }
+
+.foodhour.footblock { margin-bottom: 20px;}
+
+.page-id-12482 .teamlist-two.teamselist .item { max-width: 400px; }
+
+.hmfuturesection .extranewpatientbox {
+	width: 100%;
+	padding: 20px;
+}
+.hmfuturesection .button {
+	padding: 10px 15px;
+}
+.hmfuturesection .extranewpatient {
+	display: block;
+}
+
+}
+
+@media only screen and (max-width: 639px) {
+
+.postid-12995 .inpgbannersection .innerbanner, .postid-12519 .inpgbannersection .innerbanner, .postid-12522 .inpgbannersection .innerbanner, .postid-12921 .inpgbannersection .innerbanner, .postid-12964 .inpgbannersection .innerbanner {
+    background-position: 25%;
+}
+.plantop .plantopinfo > span {font-size: 18px;}
+
+}
+
+@media only screen and (max-width: 575px) {
+.teaserBanner .owl-item:nth-child(4) .item, .teaserBanner .owl-item:nth-child(12) .item {
+	background-position: -50px 0;
+}
+.orphan .item {
+	width: 100%;
+}
+.footer-two .foothourslist{max-width:243px;}
+
+.indexbanner-four .teaserBanner .item{background-position:center left -60px;}
+
+.foothourslist .foothoursday {width: 125px;}
+
+.foodhour.footblock { margin-bottom: 0px;}
+.blogthumb {
+    max-width: 340px;
+}
+}
+@media only screen and (max-width: 479px) {
+.modal.in .modal-dialog {
+	transform: translate(0,15%) !important;
+}
+.modal.in .modal-dialog {
+	transform: translate(0,50%);
+}
+.teaserBanner .owl-item:nth-child(4) .item, .teaserBanner .owl-item:nth-child(12) .item {
+	background-position: -100px 0px;
+}
+.header-five .headbox {margin-bottom: 0;}
+}
+@media only screen and (max-width: 356px) {
+
+.header-five .headcall a {font-size: 15px;}
+
+.header-five .headcall a i {font-size: 15px;}
+
+.header-five .headaddress a i {font-size: 15px;}
+.orphan {
+	padding-left: 20px;
+}
+}
+
+@media only screen and (max-width: 369px) {
+.modal.in .modal-dialog {
+	transform: translate(0,10%) !important;
+}
+.modal.in .modal-dialog {
+	transform: translate(0,100%);
+}
+}
+
+
+        </style>
+
+
+
+    
+
+
+	
+
+
+
+                        <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-16490485258"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16490485258');
+    </script>
+    
+    <script type="text/javascript">
+       /* $(document).ready(function(){*/
+        function getCookie(cname) { //fetch cookie data function start
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        var url=window.top.location.href;
+        if( url.indexOf('vsrefdom=cpc-google') != -1 || getCookie("cpc")=="1" ){
+            if(getCookie("cpc")=="1")
+            {
+            }else{
+                set_cookie();
+            }
+            setTimeout(function(){ 
+                gtag('config', 'AW-16490485258/jRrRCO_Hm6MZEIqso7c9', {
+                    'phone_conversion_number': '(587) 847-3122'
+                });
+            }, 1000);
+            //end Google Number Replacer widget 
+        } //if condition end 
+
+        function set_cookie(){ // cookie set function start
+            var cname="cpc";
+            var cvalue="1";
+            var d = new Date();
+            var minutes = 60;
+            d.setTime(d.getTime() + (minutes * 60 * 1000));
+            var expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";"+ expires +";path=/";
+        }
+//});
+</script>
+<style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.21.3" data-wpr-features="wpr_delay_js wpr_minify_js wpr_preconnect_external_domains wpr_auto_preload_fonts wpr_automatic_lazy_rendering wpr_oci wpr_minify_css wpr_desktop"><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16490485258/?random=1783044569451&amp;cv=11&amp;fst=1783044569451&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be6710h2v9216731121z89179857219za20gzb9179857219zd9179857219xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938468~119027224~119348851~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fsunridgedental.ca%2Fservice%2Fhygiene-therapy-calgary%2F&amp;rcb=8&amp;frm=0&amp;tiba=Dental%20Hygienist%20in%20NE%20Calgary%20-%20Hygiene%20Therapy%20Clinic&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1771828181.1783044533&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script></head>
+
+
+
+<body class="wp-singular service-template-default single single-service postid-12699 wp-theme-theme30  bodyheader5 bodyfont headingfont sunridgedentalclinic et_divi_builder service-hygiene-therapy-calgary et-pb-theme-theme 30 et-db">
+            <div id="wrapper">
+            
+<header id="header" class="header-five">
+
+    <div class="headertop">
+
+        <div class="container">
+
+            <div class="row">
+                                <div class="col-md-7 col-sm-6 col-xs-12">
+
+                    
+                    <div class="headcall">
+
+                        <a href="tel:+15873250431"><i class="fas fa-mobile-alt"></i> (587) 325-0431</a>
+
+                    </div>
+
+                    
+                    
+                    <div class="headaddress">
+
+                        <a href="https://www.google.com/maps/place/Sunridge+Dental+Clinic/@51.073888,-113.9859106,20z/data=!4m5!3m4!1s0x537164c5a00531a3:0x5faa8d8accbffd12!8m2!3d51.073888!4d-113.985637" rel="noreferrer" target="blank"><i class="fas fa-map-marker-alt"></i> 163 Sunridge Mall 2525-36 St, NE Calgary, AB T1Y 5T4</a>
+
+                    </div>
+
+                    
+                </div>
+
+
+
+
+                        <div class="col-md-5 col-sm-6 col-xs-12">
+
+                            <div class="headbox">
+
+
+
+                                                                <ul class="socialmedia">
+
+                                    
+                                    
+                                    <li><a href="https://www.facebook.com/sunridgedental/" rel="noreferrer" target="_blank" title="Facebook">
+
+                                            <i class="fab fa-facebook-f"></i></a></li>
+
+                                    
+                                    <li><a href="https://www.instagram.com/sunridge_dental_clinic/" rel="noreferrer" target="_blank" title="Instagram">
+
+                                            <i class="fab fa-instagram"></i></a></li>
+
+                                    
+                                    <li><a href="https://www.linkedin.com/company/sunridge-dental-clinic-ca" rel="noreferrer" target="_blank" title="Linkedin">
+
+                                            <i class="fab fa-linkedin-in"></i></a></li>
+
+                                    
+                                    
+
+                                </ul>
+                                
+
+                                
+                                
+                                            <div class="headbookapp"><a href="https://sunridgedental.ca/request-an-appointment/">REQUEST AN APPOINTMENT</a></div>
+
+                                
+                                
+
+
+                                
+
+
+                            </div>
+
+                        </div>
+                
+                
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="header-inner">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            <div class="headermain clearfix">
+
+                                <div id="logo">
+
+                                    <a href="https://sunridgedental.ca/" title="Dentist Calgary - Sunridge Dental Clinic">
+                                                                                <img alt="Dentist Calgary - Sunridge Dental Clinic" src="https://sunridgedental.ca/wp-content/uploads/2020/11/Logo.png" width="254" height="52">
+                                                                            </a>
+
+                                </div>
+
+                                <div class="header-right">
+
+                                    <nav id="mainNav" class="mainNavigation">
+
+                                        <a class="menu-icon" href="#" title="Menu"><i class="fa fa-bars"></i><span>Menu</span></a>
+
+                                        <div class="menuPart cf">
+
+                                            <div class="menu-mainmenu-container"><ul id="nav" class="cf"><li id="menu-item-12815" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-12815"><a href="https://sunridgedental.ca/">Home</a></li>
+<li id="menu-item-12541" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12541"><a href="#">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-14017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14017"><a href="https://sunridgedental.ca/meet-the-doctors/">Meet The Doctors</a></li>
+	<li id="menu-item-12936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12936"><a href="https://sunridgedental.ca/gallery/">Gallery</a></li>
+	<li id="menu-item-13972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13972"><a href="https://sunridgedental.ca/refer-a-friend/">Refer a Friend</a></li>
+</ul>
+</li>
+<li id="menu-item-12542" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12542"><a href="#">Patients</a>
+<ul class="sub-menu">
+	<li id="menu-item-12545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12545"><a href="https://sunridgedental.ca/insurance-and-financing/">Insurance and Financing</a></li>
+	<li id="menu-item-13963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13963"><a href="https://sunridgedental.ca/cdcp-information-for-patients/">CDCP Information for Patients</a></li>
+	<li id="menu-item-12839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12839"><a href="https://sunridgedental.ca/patient-forms/">Patient Forms</a></li>
+	<li id="menu-item-13911" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-13911"><a href="https://sunridgedental.ca/service/canadian-dental-care-plan/">Canadian Dental Care Plan</a></li>
+</ul>
+</li>
+<li id="menu-item-12719" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-12719"><a href="#">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-12720" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-12720"><a href="#">Preventive Treatments</a>
+	<ul class="sub-menu">
+		<li id="menu-item-12583" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12583"><a href="https://sunridgedental.ca/service/dental-exams-and-cleanings-calgary/">Exams &amp; Cleanings</a></li>
+		<li id="menu-item-12727" class="menu-item menu-item-type-post_type menu-item-object-service current-menu-item menu-item-12727"><a href="https://sunridgedental.ca/service/hygiene-therapy-calgary/" aria-current="page">Hygiene Therapy</a></li>
+		<li id="menu-item-12580" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12580"><a href="https://sunridgedental.ca/service/oral-cancer-screenings-calgary/">Oral Cancer Screenings</a></li>
+		<li id="menu-item-12581" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12581"><a href="https://sunridgedental.ca/service/fluoride-treatment-calgary/">Fluoride Treatment</a></li>
+		<li id="menu-item-12726" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12726"><a href="https://sunridgedental.ca/service/silver-diamine-fluoride-calgary/">Silver Diamine Fluoride</a></li>
+	</ul>
+</li>
+	<li id="menu-item-12721" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12721"><a href="https://sunridgedental.ca/service/family-dentistry/">Family Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-12589" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12589"><a href="https://sunridgedental.ca/service/childrens-dentistry-calgary/">Children’s Dentistry</a></li>
+		<li id="menu-item-12723" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12723"><a href="https://sunridgedental.ca/service/teen-dentistry/">Teen Dentistry</a></li>
+		<li id="menu-item-12725" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12725"><a href="https://sunridgedental.ca/service/adult-dentistry-calgary/">Adult Dentistry</a></li>
+		<li id="menu-item-12724" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12724"><a href="https://sunridgedental.ca/service/senior-dentistry-calgary/">Senior Dentistry</a></li>
+	</ul>
+</li>
+	<li id="menu-item-12579" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12579"><a href="https://sunridgedental.ca/service/cosmetic-dentistry/">Cosmetic Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-12614" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12614"><a href="https://sunridgedental.ca/service/dental-bonding-calgary/">Dental Bonding</a></li>
+		<li id="menu-item-12609" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12609"><a href="https://sunridgedental.ca/service/teeth-whitening-calgary/">Teeth Whitening</a></li>
+		<li id="menu-item-12608" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12608"><a href="https://sunridgedental.ca/service/dental-veneers-calgary/">Veneers</a></li>
+	</ul>
+</li>
+	<li id="menu-item-12585" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12585"><a href="https://sunridgedental.ca/service/emergency-dentistry-calgary/">Emergency Dentistry</a></li>
+	<li id="menu-item-12728" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12728"><a href="https://sunridgedental.ca/service/restorative-treatments/">Restorative Treatments</a>
+	<ul class="sub-menu">
+		<li id="menu-item-12732" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12732"><a href="https://sunridgedental.ca/service/dental-fillings-calgary/">Fillings</a></li>
+		<li id="menu-item-12586" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12586"><a href="https://sunridgedental.ca/service/dental-sealants-calgary/">Dental Sealants</a></li>
+		<li id="menu-item-12718" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12718"><a href="https://sunridgedental.ca/service/inlays-onlays-calgary/">Inlays &amp; Onlays</a></li>
+		<li id="menu-item-12584" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12584"><a href="https://sunridgedental.ca/service/root-canals-calgary/">Root Canals</a></li>
+		<li id="menu-item-12588" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12588"><a href="https://sunridgedental.ca/service/dental-crowns-calgary/">Dental Crowns</a></li>
+		<li id="menu-item-12613" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12613"><a href="https://sunridgedental.ca/service/dental-bridges-calgary/">Dental Bridges</a></li>
+		<li id="menu-item-12739" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12739"><a href="https://sunridgedental.ca/service/dentures-calgary/">Dentures</a></li>
+		<li id="menu-item-12612" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12612"><a href="https://sunridgedental.ca/service/dental-implants-calgary/">Dental Implants</a></li>
+		<li id="menu-item-13918" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-13918"><a href="https://sunridgedental.ca/service/gum-grafting/">Gum Grafting</a></li>
+	</ul>
+</li>
+	<li id="menu-item-12741" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12741"><a href="https://sunridgedental.ca/service/oral-surgery-calgary/">Oral Surgery</a></li>
+	<li id="menu-item-12582" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12582"><a href="https://sunridgedental.ca/service/tooth-extractions-calgary/">Extractions</a></li>
+	<li id="menu-item-12743" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12743"><a href="https://sunridgedental.ca/service/orthodontics/">Orthodontics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-12748" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12748"><a href="https://sunridgedental.ca/service/traditional-braces-calgary/">Traditional Braces</a></li>
+		<li id="menu-item-12610" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12610"><a href="https://sunridgedental.ca/service/invisalign-calgary/">Invisalign®</a></li>
+	</ul>
+</li>
+	<li id="menu-item-12755" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12755"><a href="https://sunridgedental.ca/service/oral-appliances/">Oral Appliances</a>
+	<ul class="sub-menu">
+		<li id="menu-item-12825" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12825"><a href="https://sunridgedental.ca/service/nightguards-calgary/">Nightguards</a></li>
+		<li id="menu-item-12766" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12766"><a href="https://sunridgedental.ca/service/sleep-apnea-treatment-calgary/">Sleep Apnea Treatment</a></li>
+	</ul>
+</li>
+	<li id="menu-item-12769" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12769"><a href="https://sunridgedental.ca/service/sedation-dentistry-calgary/">Sedation Dentistry</a></li>
+	<li id="menu-item-13917" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-13917"><a href="https://sunridgedental.ca/service/cbct-intraoral-scanner/">CBCT / Intraoral Scanner</a></li>
+	<li id="menu-item-13610" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13610"><a href="https://sunridgedental.ca/service/itero-scanner/">iTero Scanner</a></li>
+	<li id="menu-item-12932" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-12932"><a href="https://sunridgedental.ca/service/weekend-dentist-calgary/">Weekend Dentist</a></li>
+</ul>
+</li>
+<li id="menu-item-12537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12537"><a href="https://sunridgedental.ca/blog/">Blog</a></li>
+<li id="menu-item-8903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8903"><a href="https://sunridgedental.ca/contact-us/">Contact Us</a></li>
+</ul></div>
+                                        </div>
+
+                                    </nav>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+</header>
+                    <div id="container">
+                        
+
+
+
+				
+	<div class="innerbanner-CTA" style="background-image: url(https://sunridgedental.ca/wp-content/uploads/2020/12/hygiene-therapy.jpg) ;">
+	
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-lg-6 col-md-7 col-12">
+	        <!-- <figure class="img-fig-wrap"><img src="" alt="<?php// echo get_field('title'); ?>"> </figure> -->
+	      </div>
+	      <div class="col-lg-6 col-md-5 col-12">
+	        <div class="inbancaptext d-Flex">
+	          <div class="banner-text"><div class="h1"></div></div>
+	          	        </div>
+	      </div>
+	    </div>
+	  </div>  
+	</div>
+		<ul class="breadcrum-tab"><li class="breadcrumb-item" data-title="Home" data-href="https://sunridgedental.ca"><a href="https://sunridgedental.ca" title="Home">Home</a> / </li><li class="active breadcrumb-item" data-title="Hygiene Therapy" data-href="https://sunridgedental.ca/service/hygiene-therapy-calgary/" aria-current="page">Hygiene Therapy</li></ul>			
+		<section class="aboutcontent servicecontentopt2" style="background-color:#ffffff; ">
+			<div class="container">
+				<div class="row">
+						<div class="col-md-12">
+												<div class="page-header">
+														<h1>Dental Hygienist &amp; Hygiene Therapy in Calgary, AB</h1>
+						</div>
+																			
+						<div class="servicedecs">
+							<p>Dental hygiene or periodontal therapy is a very important part of your oral care routine and impacts your overall health. Cleaning that removes the buildup of plaque and tartar, which cause cavities, gum disease, and bone loss is critical. Current research shows periodontal diseases also put us at risk for serious illnesses such as diabetes, lung and heart diseases, and stroke. Dental hygiene is about both prevention and addressing current oral health concerns.</p>
+<h2>What to Expect at a Hygiene Visit</h2>
+<p>Your dental hygienist is a practiced, licensed, and trained professional whose expertise is periodontal therapy. During your visit, he or she will thoroughly clean your teeth and gums while providing educational support. Here’s what you can expect at your visit to Sunridge Dental Clinic:</p>
+<h2>Periodontal Evaluation</h2>
+<p>For all new patients and every 12-18 months for existing patients, our hygienists perform a periodontal evaluation. This diagnostic tool:</p>
+<ul>
+<li>Assesses the health of the mouth</li>
+<li>Allows the hygienist to identify the presence of disease</li>
+<li>Allows the hygienist to treatment plan the best care, tailored to the needs of the individual</li>
+<li>Provides critical supporting information to dentists</li>
+<li>Examines periodontal health on the basis of teeth, plaque, gums, bite, bone structure and levels, risk factors, disease potential, and disease management</li>
+</ul>
+<h2>Scaling and Root Planing</h2>
+<p>Scaling is non-surgical periodontal therapy performed either by hand or by ultrasonic Cavitron. Using precision dental tools, your hygienist will perform scaling and root planing to remove plaque and tartar both above and below the gumline.</p>
+<p>An initial visit at Sunridge Dental Clinic usually consists of 3 units of dental scaling. Scaling is measured in units of time, so 1 unit is equivalent to 15 minutes. Depending on how long it’s been since your last cleaning and how much buildup is present on the teeth and gums, more than 3 units of scaling may be necessary. If this is the case, and more time is required, your hygienist will arrange for additional visits and explain your periodontal care program. Remember that your scaling requirements are unique to you, and consistent, routine care is the best approach for a healthy smile.</p>
+<h2>Polish and Fluoride</h2>
+<p>At a 6 or 12 month interval and at the end of your cleaning visit, your hygienist will polish your teeth and provide a fluoride treatment. Polishing smooths the surfaces of your teeth, removing extrinsic stains and making it more difficult for plaque and tartar to accumulate. <a href="https://sunridgedental.ca/service/fluoride-treatment/">Fluoride</a> helps prevent tooth decay by making the teeth more resistant to risk factors.</p>
+<h2>Maintaining Your Smile</h2>
+<p><a href="https://sunridgedental.ca/meet-the-doctors/">Our dentists</a> in Calgary, AB, recommend a consistent home care routine complemented by regular visits to see us. An excellent toothbrush, like one offered by Philips Sonicare®, is a fantastic tool when caring for your teeth between hygiene appointments. Our team uses these brushes and loves them. Flossing manually with an easy glide wax or with an electric option like the Waterpik® water flosser will remove food and plaque that regular brushing leaves behind.</p>
+<p><a href="https://sunridgedental.ca/contact-us/">Speak with our team at Sunridge Dental Clinic</a> to find out more about which products might be right for you. We carry a range of options to suit your unique needs.</p>
+						</div>
+											</div>
+				</div>
+							</div>
+		</section>
+	
+								
+																											<div class="pageservextra-secion">
+				<div class="container">
+														</div>
+			</div>	
+									
+																			
+					<section class="aboutcontent hmserviceopt1 otherservicsection" style="background-color:#efefef; ">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+								<div class="hmaboutcontent">
+									<div class="hmtitle">
+										<h2>Other Services</h2>
+									</div>
+
+								</div>
+
+																										<div class="hmsevlistrowblock">
+										<div class="seviceserviceslider owl-carousel">
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/childrens-dentistry-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Children-dentistry.png);"></i>
+																<strong>Children's Dentistry</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/dental-bonding-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Dental-bonding.png);"></i>
+																<strong>Dental Bonding</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/dental-bridges-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Dental-bridges.png);"></i>
+																<strong>Dental Bridges</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/dental-crowns-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Dental-crown.png);"></i>
+																<strong>Dental Crowns</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/dental-implants-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Dental-Implants_1.png);"></i>
+																<strong>Dental Implants</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/dental-sealants-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Dental-Sealants.png);"></i>
+																<strong>Dental Sealants</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/emergency-dentistry-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Emergency-dentistry.png);"></i>
+																<strong>Emergency Dentistry</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/root-canals-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Endodontics.png);"></i>
+																<strong>Root Canals</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/dental-exams-and-cleanings-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Exam-Cleaning.png);"></i>
+																<strong>Exams &amp; Cleanings</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/tooth-extractions-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Extractions.png);"></i>
+																<strong>Extractions</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/fluoride-treatment-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Fluoride-treatment.png);"></i>
+																<strong>Fluoride Treatment</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/invisalign-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Invisalign.png);"></i>
+																<strong>Invisalign®</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/inlays-onlays-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Inlays-Onlays.png);"></i>
+																<strong>Inlays &amp; Onlays</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/oral-cancer-screenings-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Oral-Cancer-Screenings.png);"></i>
+																<strong>Oral Cancer Screenings</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/teeth-whitening-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Teeth-Whitening.png);"></i>
+																<strong>Teeth Whitening</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/dental-veneers-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/10/Veneers.png);"></i>
+																<strong>Veneers</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/silver-diamine-fluoride-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/Silver-Diamine-Fluoride-1.png);"></i>
+																<strong>Silver Diamine Fluoride</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/family-dentistry-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/family-dentistry.png);"></i>
+																<strong>Family Dentistry</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/teen-dentistry/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/teen-dentistry.png);"></i>
+																<strong>Teen Dentistry</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/adult-dentistry-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/adult-dentistry.png);"></i>
+																<strong>Adult Dentistry</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/senior-dentistry-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/senior-denisry.png);"></i>
+																<strong>Senior Dentistry</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/restorative-treatments-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/restorative-dentistry.png);"></i>
+																<strong>Restorative Treatments</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/dentures-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/dentures.png);"></i>
+																<strong>Dentures</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/dental-fillings-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/fillings.png);"></i>
+																<strong>Fillings</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/oral-surgery-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/oral-surgery.png);"></i>
+																<strong>Oral Surgery</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/orthodontics-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/orthodontics.png);"></i>
+																<strong>Orthodontics</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/oral-appliances-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/oral-appliances.png);"></i>
+																<strong>Oral Appliances</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/traditional-braces-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/Traditional-Braces-icon.png);"></i>
+																<strong>Traditional Braces</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/sleep-apnea-treatment-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/Sleep-Apnea-Treatment-icon.png);"></i>
+																<strong>Sleep Apnea Treatment</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/cosmetic-dentistry-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/cosmetic-dentistry.png);"></i>
+																<strong>Cosmetic Dentistry</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/nightguards-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/Nightguards-icon.png);"></i>
+																<strong>Nightguards</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/sedation-dentistry-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2020/12/sedation-dentistry.png);"></i>
+																<strong>Sedation Dentistry</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																																			
+																								
+																								<div class="col-md-3 col-sm-6 col-xs-12 item">
+        
+																																									
+													<div class="hmservicescol">
+														<div class="hmservicesmid">
+															<a href="https://sunridgedental.ca/service/weekend-dentist-calgary/" class="hmserviceslink">
+																<i class="hmservicon" style="background-image:url(https://sunridgedental.ca/wp-content/uploads/2021/02/Satuarday-dentist-1.png);"></i>
+																<strong>Saturday Dentist</strong>
+															</a>
+															
+														</div>
+													</div>
+													
+												</div>
+																								
+																					</div>
+									</div>
+
+							</div>
+
+						</div>
+						
+					</div>
+			</section>
+		
+	
+</div><!-- #content -->
+
+
+<style>
+	 .foottitle .h3 {
+    margin-top: 8px;
+    color: #fff;
+}
+	 .footer-inner {
+    background-color: #ffffff;
+    display: none;
+}
+
+h3.map-loc {
+    background-color: #91b7ac;
+    color: white;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+}
+    .container-nwloc {
+        margin: 40px auto;
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .loc-nw h3{
+        text-align: center !important;
+    }
+    .card-nwloc {
+        flex: 1 1 350px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .card-nwloc h4 {
+        background-color: #91b7ac;
+        color: white;
+        padding: 15px;
+        margin: 0;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .card-nwloc-content {
+        padding: 20px;
+    }
+
+    .card-nwloc-content p {
+        font-size: 16px;
+        color: #333;
+        margin: 10px 0;
+    }
+
+    .card-nwloc-content strong {
+        color: #91b7ac;
+    }
+
+    .map-card-nwloc iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+    }
+
+    .hours-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hours-list li {
+        margin: 8px 0;
+        font-size: 16px;
+        color: #555;
+    }
+
+    .address-nwloc, .contact-nwloc {
+        font-size: 16px;
+        color: #555;
+        margin: 15px 0;
+    }
+
+    .contact-nwloc a {
+        color: #c3c985;
+        text-decoration: none;
+    }
+
+    .contact-nwloc a:hover {
+        text-decoration: underline;
+    }
+  @media (max-width: 991px) {
+	 .prvt-ft{
+		     padding: 0;
+	 }
+		   .foottitle .h3 {
+				text-align: left;
+			}
+		.areaservlist, .foottitle.cenfoot {
+        text-align: left;
+    }
+		   .prvt-ft .col-sm-4 {
+        width: 100%;
+    }
+	 }
+    /* Media query for responsiveness */
+    @media (max-width: 767px) {
+        .container-nwloc {
+            flex-direction: column;
+            gap: 20px;
+			    flex-wrap: nowrap;
+        }
+
+        .card-nwloc {
+            flex: 1 1 100%;
+        }
+		        .foottitle .h3 {
+        text-align: center;
+    }
+
+		
+    }
+	
+	 
+</style>
+<section class="location loc-nw">
+    <div class="container">
+ 
+        <div class="hmtitle">
+
+							<h2 style="text-align:center;">Our Office</h2>
+
+						</div>
+        <div class="container-nwloc">
+            <!-- Location Card -->
+            <div class="card-nwloc map-card">
+                <h3 class="map-loc">Store Locator</h3>
+                <div class="card-nwloc-content">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1253.4462829316876!2d-113.98606078902435!3d51.07353324734409!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537164c5a00531a3%3A0x5faa8d8accbffd12!2sSunridge%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1728478011149!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Address and Contact Card -->
+            <div class="card-nwloc">
+                <h3 class="map-loc">Contact Us</h3>
+                <div class="card-nwloc-content">
+                    <p class="address-nwloc"><strong>Address:</strong><br>163 Sunridge Mall, 2525-36 St, NE, Calgary, AB T1Y 5T4</p>
+                    <p class="contact-nwloc"><strong>Phone:</strong> <a href="tel:+15873250431">(587) 325-0431</a></p>
+					 <p class="contact-nwloc"><strong>FAX:</strong> <a href="">403-293-2701</a></p>
+                    <p class="contact-nwloc"><strong>Email:</strong> <a href="mailto:info@sunridgedental.ca">info@sunridgedental.ca</a></p>
+					<p class="contact-nwloc">
+						After Hours Emergency Line for Current Patients: <a href="tel:587-433-3232">587-433-3232</a>
+					</p>
+					<div class="footbox">
+
+                                            <ul class="footsocial">
+
+                                                
+                                                    
+                                                        <li><a href="https://www.facebook.com/sunridgedental/" rel="noreferrer" target="_blank" title="Facebook">
+
+                                                                <i class="fab fa-facebook-f"></i></a></li>
+
+                                                    
+                                                        <li><a href="https://www.instagram.com/sunridge_dental_clinic/" rel="noreferrer" target="_blank" title="Instagram">
+
+                                                                <i class="fab fa-instagram"></i></a></li>
+
+                                                    
+                                                        <li><a href="https://www.linkedin.com/company/sunridge-dental-clinic-ca" rel="noreferrer" target="_blank" title="Linkedin">
+
+                                                                <i class="fab fa-linkedin-in"></i></a></li>
+
+                                                    
+                                                
+                                            </ul>
+
+                                        </div>
+                </div>
+            </div>
+
+            <!-- Working Hours Card -->
+            <div class="card-nwloc">
+                <h3 class="map-loc">Store Map</h3>
+                <div class="card-nwloc-content">
+                   <img src="https://sunridgedental.ca/wp-content/uploads/2022/11/11.png" alt="Map" width="640" height="404" class="alignnone size-full wp-image-13368" style="display:block;height:auto;margin:auto;margin-bottom:30px;">
+                </div>
+            </div>
+			<div class="card-nwloc">
+                <h3 class="map-loc">Working Hours</h3>
+                <div class="card-nwloc-content">
+                    <ul class="hours-list">
+                        <li><strong>Monday:</strong> 8:30 am - 8:00 pm</li>
+                        <li><strong>Tuesday:</strong> 8:30 am - 8:00 pm</li>
+                        <li><strong>Wednesday:</strong> 8:30 am - 8:00 pm</li>
+                        <li><strong>Thursday:</strong> 8:30 am - 8:00 pm</li>
+                        <li><strong>Friday:</strong> 8:30 am - 4:00 pm</li>
+                        <li><strong>Saturday:</strong> 8:30 am - 2:00 pm</li>
+                        <li><strong>Sunday:</strong> 9:00 am - 3:00 pm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer data-wpr-lazyrender="1" id="footer" class="footer-two">
+
+    
+        <div class="footform-section">
+
+            <div class="container">
+               <!--                                                             <div class="booktitle">
+                            <div class="footbooktitle"><h2></h2></div>
+                        </div>
+                                                                <div class="row">
+                                                    </div>
+                                                                <div class="footerbookform">
+                                                    </div>
+                                    -->
+            </div>
+
+        </div>
+
+    
+<div class="footerservice-section">
+<div class="container">
+<div class="hmtitle">
+
+</div>
+<div class="row">
+
+<div class="col-md-4 col-sm-12 col-xs-12">
+<div class="foottitle cenfoot">
+<div class="h3">Quick Links</div>
+</div>
+<ul class="areaservlist">
+<li><a href="https://sunridgedental.ca/">Home</a></li>
+<li><a href="https://sunridgedental.ca/meet-the-doctors/">Meet the Doctors</a></li>
+<li><a href="https://sunridgedental.ca/insurance-and-financing/">Insurance and Financing</a></li>
+<li><a href="https://sunridgedental.ca/blog/">Blogs</a></li>
+<li><a href="https://sunridgedental.ca/contact-us/">Contact Us</a></li>
+</ul>
+	
+
+<div class="foottitle cenfoot">
+<div class="h3">Services</div>
+</div>
+<div class="footservice-list footblock"><div class="h3" style="margin-top: 12px; color: #c3c985;"><a style="color: #c3c985;" href="#">Preventive Dentistry</a></div>	</div>
+	
+<ul>
+<li><a href="https://sunridgedental.ca/service/exams-cleanings/">Exams &amp; Cleanings</a></li>
+<li><a href="https://sunridgedental.ca/service/hygiene-therapy/">Hygiene Therapy</a></li>
+</ul>
+</div>
+
+<div class="prvt-ft col-md-8 col-sm-12 col-xs-12">
+
+
+
+<div class="footservice-list footblock">
+
+<div class="col-md-4 col-sm-4 col-xs-12">
+<ul>
+
+<li><a href="https://sunridgedental.ca/service/oral-cancer-screenings/">Oral Cancer Screenings</a></li>
+<li><a href="https://sunridgedental.ca/service/fluoride-treatment/">Fluoride Treatment</a></li>
+<li><a href="https://sunridgedental.ca/service/silver-diamine-fluoride/">Silver Diamine Fluoride</a></li>
+</ul>
+
+<div class="h3" style="margin-top: 12px;"><a href="https://sunridgedental.ca/service/family-dentistry/">Family Dentistry</a></div>
+<ul>
+<li><a href="https://sunridgedental.ca/service/childrens-dentistry/">Children’s Dentistry</a></li>
+<li><a href="https://sunridgedental.ca/service/teen-dentistry/">Teen Dentistry</a></li>
+<li><a href="https://sunridgedental.ca/service/adult-dentistry/">Adult Dentistry</a></li>
+<li><a href="https://sunridgedental.ca/service/senior-dentistry/">Senior Dentistry</a></li>
+</ul>
+
+<div class="h3" style="margin-top: 12px;"><a href="https://sunridgedental.ca/service/cosmetic-dentistry/">Cosmetic Dentistry</a></div>
+<ul>
+<li><a href="https://sunridgedental.ca/service/dental-bonding/">Dental Bonding</a></li>
+<li><a href="https://sunridgedental.ca/service/teeth-whitening/">Teeth Whitening</a></li>
+<li><a href="https://sunridgedental.ca/service/veneers/">Veneers</a></li>
+</ul>
+
+</div>
+
+<div class="col-md-4 col-sm-4 col-xs-12">
+
+<div class="h3"><a href="https://sunridgedental.ca/service/restorative-treatments/">Restorative Dentistry</a></div>
+
+<ul>
+<li><a href="https://sunridgedental.ca/service/fillings/">Fillings</a></li>
+<li><a href="https://sunridgedental.ca/service/dental-sealants/">Dental Sealants</a></li>
+<li><a href="https://sunridgedental.ca/service/inlays-onlays/">Inlays &amp; Onlays</a></li>
+<li><a href="https://sunridgedental.ca/service/root-canals/">Root Canals</a></li>
+<li><a href="https://sunridgedental.ca/service/dental-crowns/">Dental Crowns</a></li>
+<li><a href="https://sunridgedental.ca/service/dental-bridges/">Dental Bridges</a></li>
+<li><a href="https://sunridgedental.ca/service/dentures/">Dentures</a></li>
+<li><a href="https://sunridgedental.ca/service/dental-implants/">Dental Implants</a></li>
+</ul>
+
+<ul>
+<li><a href="https://sunridgedental.ca/service/traditional-braces/">Traditional Braces</a></li>
+<li><a href="https://sunridgedental.ca/service/invisalign/">Invisalign®</a></li>
+</ul>
+
+<div class="h3" style="margin-top: 12px;"><a href="https://sunridgedental.ca/service/oral-appliances/">Oral Appliances</a></div>
+
+<ul>
+<li><a href="https://sunridgedental.ca/service/nightguards/">Night Guards</a></li>
+
+</ul>
+
+</div>
+
+<div class="col-md-4 col-sm-4 col-xs-12">
+
+<ul>
+	<strong><li><a href="https://sunridgedental.ca/service/sleep-apnea-treatment/">Sleep Apnea Treatment</a></li></strong>
+<strong><li><a href="https://sunridgedental.ca/service/orthodontics/">Orthodontics</a></li></strong>
+<strong><li><a href="https://sunridgedental.ca/service/oral-surgery/">Oral Surgery</a></li></strong>
+<strong><li><a href="https://sunridgedental.ca/service/extractions/">Extractions</a></li></strong>
+<strong><li><a href="https://sunridgedental.ca/service/emergency-dentistry/">Emergency Dentistry</a></li></strong>
+<strong><li><a href="https://sunridgedental.ca/service/sedation-dentistry/">Sedation Dentistry</a></li></strong>
+<strong><li><a href="https://sunridgedental.ca/service/saturday-dentist/">Saturday Dentist</a></li></strong>
+</ul>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+            <!-- ======================= Single Location Start ============================= -->
+        <div class="footer-inner">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 footcol3">
+
+                        <div class="footmap">
+
+                            <img src="https://sunridgedental.ca/wp-content/uploads/2022/11/11.png" alt="Map" width="640" height="404" class="alignnone size-full wp-image-13368" style="display:block;height:auto;margin:auto;margin-bottom:30px;">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d313.3591684696793!2d-113.9859106!3d51.073888!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537164c5a00531a3%3A0x5faa8d8accbffd12!2sSunridge%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1609774677779!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-6 footcol1">
+
+                        <div class="footaddbox footblock">
+
+                            <div class="h3">Visit our Location</div>
+
+                            
+                            <div class="row">
+
+                                
+                                    <div class="col-md-6 col-sm-12 col-xs-12 footitem">
+
+                                        <div class="footadd">
+
+                                            <a href="https://www.google.com/maps/place/Sunridge+Dental+Clinic/@51.073888,-113.9859106,20z/data=!4m5!3m4!1s0x537164c5a00531a3:0x5faa8d8accbffd12!8m2!3d51.073888!4d-113.985637" rel="noreferrer" target="_blank">163 Sunridge Mall,<br>2525-36 St, NE<br>Calgary, AB T1Y 5T4</a>
+
+                                        </div>
+
+                                    </div>
+
+                                
+                                <div class="col-md-6 col-sm-12 col-xs-12 footitem1">
+
+                                    
+                                        <div class="footmail">
+
+                                            <a href="mailto:info@sunridgedental.ca">info@sunridgedental.ca</a>
+
+                                        </div>
+
+                                    
+                                    
+                                        <div class="footcall">
+
+                                            <span>Tel:</span> <a href="tel:+15873250431">(587) 325-0431</a>
+
+                                        </div>
+
+                                    
+                                    
+                                        <div class="footfax">
+
+                                            <span>Fax: 403-293-2701</span>
+
+                                        </div>
+
+                                    
+                                    <div class="footcall">
+                                    <!--<span>Current Patients Emergency Line:</span>-->
+										<span>After Hours Emergency Line for Current Patients:</span> <a href="tel:587-433-3232">587-433-3232</a>
+
+                                    </div>
+
+                                    
+                                        <div class="footbox">
+
+                                            <ul class="footsocial">
+
+                                                
+                                                    
+                                                        <li><a href="https://www.facebook.com/sunridgedental/" rel="noreferrer" target="_blank" title="Facebook">
+
+                                                                <i class="fab fa-facebook-f"></i></a></li>
+
+                                                    
+                                                        <li><a href="https://www.instagram.com/sunridge_dental_clinic/" rel="noreferrer" target="_blank" title="Instagram">
+
+                                                                <i class="fab fa-instagram"></i></a></li>
+
+                                                    
+                                                        <li><a href="https://www.linkedin.com/company/sunridge-dental-clinic-ca" rel="noreferrer" target="_blank" title="Linkedin">
+
+                                                                <i class="fab fa-linkedin-in"></i></a></li>
+
+                                                    
+                                                
+                                            </ul>
+
+                                        </div>
+
+                                    
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                    </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-6 footcol2">
+
+                            <div class="foodhour footblock">
+								<div class="hours_shortcode"><ul class="child_hours_ul"><li><span class="child_dayofweek_long"><time day="1" itemprop="weekDay">Monday:</time></span><span class="child_hours"><span class="child_hours"><time time="12:00 am" itemprop="startTime">12:00 am</time><span class="child_dash"> - </span><time time="12:00 am" itemprop="endTime">12:00 am</time></span></span></li><li><span class="child_dayofweek_long"><time day="2" itemprop="weekDay">Tuesday:</time></span><span class="child_hours"><time time="12:00 am" itemprop="startTime">12:00 am</time><span class="child_dash"> - </span><time time="12:00 am" itemprop="endTime">12:00 am</time></span></li><li><span class="child_dayofweek_long"><time day="3" itemprop="weekDay">Wednesday:</time></span><span class="child_hours"><time time="12:00 am" itemprop="startTime">12:00 am</time><span class="child_dash"> - </span><time time="12:00 am" itemprop="endTime">12:00 am</time></span></li><li><span class="child_dayofweek_long"><time day="4" itemprop="weekDay">Thursday:</time></span><span class="child_hours"><time time="12:00 am" itemprop="startTime">12:00 am</time><span class="child_dash"> - </span><time time="12:00 am" itemprop="endTime">12:00 am</time></span></li><li><span class="child_dayofweek_long"><time day="5" itemprop="weekDay">Friday:</time></span><span class="child_hours"><time time="12:00 am" itemprop="startTime">12:00 am</time><span class="child_dash"> - </span><time time="12:00 am" itemprop="endTime">12:00 am</time></span></li><li><span class="child_dayofweek_long"><time day="6" itemprop="weekEnd">Saturday:</time></span><span class="child_hours"><time time="12:00 am" itemprop="startTime">12:00 am</time><span class="child_dash"> - </span><time time="12:00 am" itemprop="endTime">12:00 am</time></span></li><li><span class="child_dayofweek_long"><time day="7" itemprop="weekEnd">Sunday:</time></span><span class="child_hours"><time time="12:00 am" itemprop="startTime">12:00 am</time><span class="child_dash"> - </span><time time="12:00 am" itemprop="endTime">12:00 am</time></span></li></ul></div>
+
+
+                            </div>				
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- ======================= Single Location Stop ============================= -->
+    
+            <!-- ======================= Multi Location Start ============================= -->
+
+        
+        
+
+        <!--    ======================= Multi Location Stop =============================-->
+    
+<!--    <div class="modal" id="myModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> 
+      <div class="modal-body">
+        <div class="md-cls-btn"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button></div>
+      <img src="https://sunridgedental.ca/wp-content/uploads/2023/03/Sunridge-Dental-Clinic-Popup.jpg" alt=""> 
+        <div class="modal-des">
+            <div class="modaldes-inner">
+                <p>Hello and thanks for writing!</p>
+                <p>I will be out of the office May 12 through June 2nd. <br> <strong>Emails will not be checked during this time.</strong> </p>
+                <p> <strong> Appointment requests, changes, or cancellations will not be accepted through email.</strong></p>
+                <p>If you require assistance, please phone <a href="tel:403-280-3232">403-280-3232</a> and <br> one of our administration team would be happy to help! You can also email <br> <a href="mailto:info@sunridgedental.ca">info@sunridgedental.ca</a> for any non-urgent <br> inquiries <i>(cancellations and changes must be done via phone).</i> </p>
+                <p>For more information about our practice, including regular hours of <br> operation, please visit us at <a href="www.sunridgedental.ca">www.sunridgedental.ca</a> </p>
+                <p>Thank you and my apologies for any inconvenience,</p>
+                <p>- Devan</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+</footer>
+</div><!-- #page -->
+
+
+
+    <div data-wpr-lazyrender="1" class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>©2026&nbsp;Dentist Calgary - Sunridgedental.ca. All Rights Reserved. | <a href="https://sunridgedental.ca/site-map/">Site Map</a> | <a href="https://sunridgedental.ca/privacy-policy/">Privacy Policy</a> | <a href="/terms-of-use/">Terms of Use</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+                            
+        <div class="mobilecallbtn mobiletwobtn">
+                            <a class="mobilecallnow" href="tel:+15873250431"><i class="fas fa-phone"></i> Call Now</a>
+                                        <a class="mobilebookbtn" href="">Request Now</a>
+                    </div>
+
+    
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/theme30/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+  
+<script type="text/rocketlazyloadscript">
+document.addEventListener( 'wpcf7submit', function( event ) {
+    var status = event.detail.status;  
+    console.log(status);  
+    //if( status === 'validation_failed'){
+        jQuery('.wpcf7-submit').val("SUBMIT");
+    //}    
+}, false );
+
+jQuery('.wpcf7-submit').on('click',function(){
+    jQuery(this).val("Submitting....");
+});
+
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    location = window.location.origin+'/thank-you/?lp=contact-us';
+}, false );
+</script>
+  
+		<!-- Google Tag Manager (noscript) snippet added by Site Kit -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8NJGFCT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
+		<script data-minify="1" type="text/javascript" src="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/plugins/divi-builder/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js?ver=1780887389" id="fitvids-js"></script>
+<script type="text/javascript" id="divi-builder-custom-script-js-extra">
+/* <![CDATA[ */
+var et_builder_utils_params = {"condition":{"diviTheme":false,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https://sunridgedental.ca/wp-admin/admin-ajax.php","images_uri":"https://sunridgedental.ca/wp-content/themes/theme30/images","builder_images_uri":"https://sunridgedental.ca/wp-content/plugins/divi-builder/includes/builder/images","et_frontend_nonce":"93c7e50f39","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"76c583a9d4","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"12699","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":"https://sunridgedental.ca/wp-content/plugins/divi-builder/includes/builder/frontend-builder/assets/vendors","accent_color":"#7EBEC5","waypoints_options":{"context":[".pum-overlay"]}};
+var et_pb_box_shadow_elements = [];
+//# sourceURL=divi-builder-custom-script-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://sunridgedental.ca/wp-content/plugins/divi-builder/js/scripts.min.js?ver=4.27.5" id="divi-builder-custom-script-js"></script>
+<script type="text/javascript" id="gforms_recaptcha_recaptcha-js-extra">
+/* <![CDATA[ */
+var gforms_recaptcha_recaptcha_strings = {"nonce":"86c2771ac6","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https://sunridgedental.ca/wp-content/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LcKfxwqAAAAAMVuOf9skGhUEZTWMaf87W7DbkeM"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6LcKfxwqAAAAAMVuOf9skGhUEZTWMaf87W7DbkeM&amp;ver=2.2.2" id="gforms_recaptcha_recaptcha-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://sunridgedental.ca/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.2.2" id="gforms_recaptcha_frontend-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="et-builder-cpt-modules-wrapper-js-extra">
+/* <![CDATA[ */
+var et_modules_wrapper = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+//# sourceURL=et-builder-cpt-modules-wrapper-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/plugins/divi-builder/includes/builder/scripts/cpt-modules-wrapper.js?ver=1780887389" id="et-builder-cpt-modules-wrapper-js"></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/plugins/divi-builder/core/admin/js/common.js?ver=1780887389" id="et-core-common-js"></script>
+
+
+
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-src="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/themes/theme30/js/functions.js?ver=1780887389"></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-src="https://sunridgedental.ca/wp-content/cache/min/1/wp-content/themes/theme30/js/general.js?ver=1780887389"></script>
+
+
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+function setCookie(cname, cvalue){
+var d = new Date();
+var minutes = 480;
+d.setTime(d.getTime() + (minutes * 60 * 1000));
+var expires = "expires="+ d.toUTCString();
+document.cookie = cname + "=" + cvalue + ";"+ expires +";path=/";
+}
+
+var vars = [], hash, gclid;
+var hashes = window.location.href;
+var decodedurl = decodeURIComponent(hashes);
+var newurl = decodedurl.slice(window.location.href.indexOf('?') + 1).split('&');
+for(var i = 0; i < newurl.length; i++)
+{
+  hash = newurl[i].split('=');
+  vars.push(hash[0]);
+  vars[hash[0]] = hash[1];
+}
+if(vars['gclid']){                  //checking if gclid parameter exists in URL
+gclid = vars['gclid'];           //storing GCLID value into a variable
+setCookie("gclid",gclid);    //setting cookie using the GCLID value
+}
+</script>
+
+
+
+
+
+<script type="text/rocketlazyloadscript">
+    
+jQuery(document).ready(function(){
+
+jQuery('h1 a').each(function(){
+ 
+  $(this).removeAttr('href');
+});
+jQuery('h2 a').each(function(){ 
+  $(this).removeAttr('href');
+});
+jQuery('h3 a').each(function(){
+  $(this).removeAttr('href');
+});
+jQuery('h4 a').each(function(){
+  $(this).removeAttr('href');
+});
+jQuery('h5 a').each(function(){
+  $(this).removeAttr('href');
+});
+jQuery('h6 a').each(function(){
+  $(this).removeAttr('href');
+});
+
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://www.schema.org",
+  "@type": "Dentist",
+  "name": "Sunridge Dental Clinic",
+  "url": "https://sunridgedental.ca",
+  "logo": "https://sunridgedental.ca/wp-content/uploads/2020/11/Logo.png",
+  "image": "https://sunridgedental.ca/wp-content/uploads/2021/02/Sunridge-Office-photos-15.jpg",
+  "description": "Sunridge Dental Clinic offers comprehensive dental care services, including general dentistry, cosmetic treatments, and emergency dental care, in a welcoming and modern environment in Calgary, AB.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "163 Sunridge Mall, 2525-36 St NE",
+    "addressLocality": "Calgary",
+    "addressRegion": "Alberta",
+    "postalCode": "T1Y5T4",
+    "addressCountry": "Canada"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "51.0738879",
+    "longitude": " -113.9856369"
+  },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Sunridge+Dental+Clinic&query_place_id=ChIJozEFoMVkcVMREv2_zIqNql8",
+  "openingHours": "Mo 8:30 -20:00  Tu 8:30 -20:00  We 8:30 -20:00  Th 8:30 -20:00 Fr 8:30 -16:00  Sa 8:30 -16:00  Su 9:00 - 15:00",
+
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1 (403) 280-3232",
+    "contactType": "customer service"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "ratingCount": "717",
+    "reviewCount": "717"
+    
+
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Doaa Abolaila"
+      },
+      "reviewBody": "I love every thing there. Super friendly professional receptionists dentists and hygienists. All the staff are amazing. My family and I love it there. My last cleaning experience with Kally was so easy.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Yazeed KM"
+      },
+      "reviewBody": "Would highly recommend Dr. Parmar for kids. Made my 5 year old son really comfortable before, during and after his first dental procedure.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      }
+    }
+  ]
+}
+</script>
+
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript"> 
+$(document).ready(function($) {
+    if ($('body').hasClass('error404')) {
+        $('title').text('Page Not Found - Sunridge Dental Clinic');
+        $('meta[name="robots"]').attr('content', 'noindex, nofollow');
+    }
+});
+</script>
+
+
+
+
+  <script type="application/ld+json">
+{
+	  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://sunridgedental.ca/",
+      "name": "Home"
+      
+    }
+  }
+
+   ,    
+  	{
+   "@type": "ListItem",
+   "position": 2,
+   "item": {
+       "@id": "https://sunridgedental.ca/service",
+           "name": "Service"
+    
+   }
+ }	
+
+ ,    
+  	{
+   "@type": "ListItem",
+   "position": 3,
+   "item": {
+       "@id": "https://sunridgedental.ca/service/hygiene-therapy-calgary",
+           "name": "Hygiene Therapy Calgary"
+    
+   }
+ }	
+
+    
+]
+}
+</script>
+
+
+
+<script id="" text="" charset="" type="text/javascript" src="https://oswidget.carecru.ca/widgets/3e99e670-4f67-41c6-8101-948ebfbfe76e/cc.js"></script><script id="" text="" charset="" type="text/javascript" src="https://next-api.patientprism.com/v1/snippet/9ed0cc69-d338-40e0-8bd7-c9ddf550653b"></script><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-qaq2i4y6f27q" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcKfxwqAAAAAMVuOf9skGhUEZTWMaf87W7DbkeM&amp;co=aHR0cHM6Ly9zdW5yaWRnZWRlbnRhbC5jYTo0NDM.&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=88b8zfx081h4"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><div class="CareCruModal"><div class="CareCruModalInner"><iframe width="100%" scrolling="no" src="https://oswidget.carecru.ca/widgets/3e99e670-4f67-41c6-8101-948ebfbfe76e/app/book?ref=" id="CareCruIframe" style="height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; overflow: hidden;" title="CareCru"></iframe></div></div><div class="CareCruFadeIn CareCruButton Book" data-rocket-onclick="this.rocketonclick(event)"><div class="CareCruButtonIcon"><svg class="CareCruButtonIconSVG" viewBox="0 0 184 167" xmlns="http://www.w3.org/2000/svg"><path d="M170.486 6.775c7.462 0 13.511 6.049 13.511 13.511v132.935c0 7.462-6.049 13.512-13.511 13.512H13.931c-7.461 0-13.51-6.05-13.51-13.512V20.284c0-7.461 6.048-13.509 13.509-13.509h22.038V1.954c0-.809.655-1.465 1.465-1.465h18.999c.809 0 1.465.656 1.465 1.465v4.821h66.853V1.954c0-.809.656-1.465 1.465-1.465h19.001c.81 0 1.465.656 1.465 1.465v4.821h23.805zm-3.843 147.071a3.611 3.611 0 0 0 3.609-3.613V44.279a3.61 3.61 0 0 0-3.609-3.613H18.374a3.61 3.61 0 0 0-3.609 3.613v105.954a3.611 3.611 0 0 0 3.609 3.613h148.269zm-40.331-72.672a3.358 3.358 0 0 1 0 4.745l-38.846 38.846c-.371.37-.811.608-1.275.769-1.004.739-2.403.698-3.311-.212l-24.406-24.404a2.569 2.569 0 0 1 0-3.631l7.598-7.597a2.567 2.567 0 0 1 3.631 0l15.19 15.19 30.19-30.189a3.355 3.355 0 0 1 4.746 0l6.483 6.483z" fill="#FFFFFE" fill-rule="evenodd"></path></svg></div><div><strong class="CareCruButtonIconBook">Book</strong> Online</div></div></body></html>
