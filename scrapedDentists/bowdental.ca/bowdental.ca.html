@@ -1,0 +1,544 @@
+<!DOCTYPE html><html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]--><!-- the "no-js" class is for Modernizr. --><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<title></title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="https://bowdental.ca/wp-content/themes/bowview/images/icon/favicon.ico">
+	<link rel="shortcut icon" type="image/png" href="https://bowdental.ca/wp-content/themes/bowview/images/icon/favicon.png">
+	<link rel="apple-touch-icon" href="https://bowdental.ca/wp-content/themes/bowview/images/icon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="https://bowdental.ca/wp-content/themes/bowview/images/icon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://bowdental.ca/wp-content/themes/bowview/images/icon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://bowdental.ca/wp-content/themes/bowview/images/icon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://bowdental.ca/wp-content/themes/bowview/images/icon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://bowdental.ca/wp-content/themes/bowview/images/icon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://bowdental.ca/wp-content/themes/bowview/images/icon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://bowdental.ca/wp-content/themes/bowview/images/icon/apple-touch-icon-152x152.png">
+
+	<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://bowdental.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbowdental.ca%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://bowdental.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbowdental.ca%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="fancyboxCSS-css" href="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/fancybox/jquery.fancybox.css?ver=1.0" media="all">
+<link rel="stylesheet" id="g-fonts-css" href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;ver=1" media="all">
+<link rel="stylesheet" id="owl-css-theme-css" href="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/owl-carousel/owl.theme.css?ver=1" media="all">
+<link rel="stylesheet" id="owl-css-base-css" href="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/owl-carousel/owl.carousel.css?ver=1" media="all">
+<link rel="stylesheet" id="style-css" href="https://bowdental.ca/wp-content/themes/bowview/css/style.css?ver=1" media="all">
+<link rel="stylesheet" id="easy_table_style-css" href="https://bowdental.ca/wp-content/plugins/easy-table/themes/default/style.css?ver=1.6" media="all">
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XQJPPGCS3J&amp;cx=c&amp;_slc=1"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script id="jquery-js" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js?ver=1.11.0"></script>
+<script id="ajax-load-js-extra">
+var ajax_load_object = {"ajaxurl":"https://bowdental.ca/wp-admin/admin-ajax.php","redirecturl":"https://bowdental.ca"};
+//# sourceURL=ajax-load-js-extra
+</script>
+<script id="ajax-load-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/ajax-load.js?ver=3b94929a02fecd4d23952569d44a40d1"></script>
+<script id="modernizr-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/modernizr.js?ver=1.0"></script>
+<script id="mobileMenu-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/jquery.sidr.min.js?ver=1.0"></script>
+<script id="validate-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/validate/jquery.validation.js?ver=1.0"></script>
+<script id="placeHolders-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/jquery.placeholders.js?ver=1.0"></script>
+<script id="cycle2-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/cycle2/jquery.cycle2.js?ver=1.0"></script>
+<link rel="https://api.w.org/" href="https://bowdental.ca/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://bowdental.ca/wp-json/wp/v2/pages/2"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bowdental.ca/xmlrpc.php?rsd">
+<link rel="canonical" href="https://bowdental.ca/">
+<link rel="shortlink" href="https://bowdental.ca/">
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+#custom-text h3 a {
+  color: #31c9c7 !important;
+  text-transform: none !important;
+font-family: "Dosis", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+  font-size: 32px !important;
+line-height: 120% !important;
+  font-weight: bold !important;
+}
+
+
+.columns.small-12.medium-4.large-4.align-right.number {
+  display: none;
+}
+
+</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+#custom-text h4 {
+  margin-top: 0;
+}
+#custom-text {
+  text-align: right;
+}
+
+.email-text {
+  color: #31c9c7 !important;
+  font-family: "Dosis", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+  font-size: 32px !important;
+  font-weight: normal !important;
+  line-height: 120% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+ font-weight: bold !important;
+}
+
+.email-text a {
+  color: #31c9c7 !important;
+	text-transform: none !important;
+}
+
+.email-text a:hover {
+  color: #31c9c7 !important;
+}
+
+@media (max-width: 768px) {
+#custom-text {
+  text-align: left !important;
+}
+}</style>
+<!-- end Simple Custom CSS and JS -->
+<script>window.jQuery || document.write('<script src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-61344264-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+<link rel="stylesheet" id="wpforms-modern-full-css" href="https://bowdental.ca/wp-content/plugins/wpforms-lite/assets/css/frontend/modern/wpforms-full.min.css?ver=1.10.2.1" media="all">
+<style id="wpforms-modern-full-inline-css">
+:root {
+				--wpforms-field-border-radius: 3px;
+--wpforms-field-border-style: solid;
+--wpforms-field-border-size: 1px;
+--wpforms-field-background-color: #ffffff;
+--wpforms-field-border-color: rgba( 0, 0, 0, 0.25 );
+--wpforms-field-border-color-spare: rgba( 0, 0, 0, 0.25 );
+--wpforms-field-text-color: rgba( 0, 0, 0, 0.7 );
+--wpforms-field-menu-color: #ffffff;
+--wpforms-label-color: rgba( 0, 0, 0, 0.85 );
+--wpforms-label-sublabel-color: rgba( 0, 0, 0, 0.55 );
+--wpforms-label-error-color: #d63637;
+--wpforms-button-border-radius: 3px;
+--wpforms-button-border-style: none;
+--wpforms-button-border-size: 1px;
+--wpforms-button-background-color: #066aab;
+--wpforms-button-border-color: #066aab;
+--wpforms-button-text-color: #ffffff;
+--wpforms-page-break-color: #066aab;
+--wpforms-background-image: none;
+--wpforms-background-position: center center;
+--wpforms-background-repeat: no-repeat;
+--wpforms-background-size: cover;
+--wpforms-background-width: 100px;
+--wpforms-background-height: 100px;
+--wpforms-background-color: rgba( 0, 0, 0, 0 );
+--wpforms-background-url: none;
+--wpforms-container-padding: 0px;
+--wpforms-container-border-style: none;
+--wpforms-container-border-width: 1px;
+--wpforms-container-border-color: #000000;
+--wpforms-container-border-radius: 3px;
+--wpforms-field-size-input-height: 43px;
+--wpforms-field-size-input-spacing: 15px;
+--wpforms-field-size-font-size: 16px;
+--wpforms-field-size-line-height: 19px;
+--wpforms-field-size-padding-h: 14px;
+--wpforms-field-size-checkbox-size: 16px;
+--wpforms-field-size-sublabel-spacing: 5px;
+--wpforms-field-size-icon-size: 1;
+--wpforms-label-size-font-size: 16px;
+--wpforms-label-size-line-height: 19px;
+--wpforms-label-size-sublabel-font-size: 14px;
+--wpforms-label-size-sublabel-line-height: 17px;
+--wpforms-button-size-font-size: 17px;
+--wpforms-button-size-height: 41px;
+--wpforms-button-size-padding-h: 15px;
+--wpforms-button-size-margin-top: 10px;
+--wpforms-container-shadow-size-box-shadow: none;
+			}
+/*# sourceURL=wpforms-modern-full-inline-css */
+</style>
+
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style><script src="https://bowdental.ca/wp-includes/js/wp-emoji-release.min.js?ver=3b94929a02fecd4d23952569d44a40d1" defer=""></script></head>
+
+<body class="home wp-singular page-template-default page page-id-2 wp-theme-bowview en unknown page-home" style="">
+
+<div class="site" id="site-wrapper" style="margin-bottom:-116px">
+	<div class="wrap-header">
+		<section class="wrapper main-header">
+			<div class="row">
+				<div class="columns small-6">
+					<a class="main-logo-link" href="https://bowdental.ca/">
+						<img class="main-logo" src="https://bowdental.ca/wp-content/themes/bowview/images/logo-x2.png" alt="Bow View Dental Cochrane">
+					</a>
+				</div>
+				<div class="columns small-4">
+					<a href="#" id="btn-mobile-nav" class="alignright inactive">
+						<img class="top" src="https://bowdental.ca/wp-content/themes/bowview/images/icon-menu.png" alt="Menu">
+					</a>
+				</div>
+			</div>
+		</section>
+		<div id="mobile-nav" class="sidr right"><div class="sidr-inner">
+			<nav class="mobile-nav">
+				<ul class="mobile-menu">
+					<div class="menu-body-menu-container"><ul id="menu-body-menu" class="menu"><li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="https://bowdental.ca/cochrane-dental-clinic/">Our Practice</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="https://bowdental.ca/cochrane-dentists/">Our Team</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="https://bowdental.ca/cochrane-dental-services/">Our Services</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="https://bowdental.ca/contact/">Contact Us</a></li>
+<li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193"><a href="https://bowdental.ca/blog/">Our Blog</a></li>
+</ul></div>				</ul>
+			</nav>
+		</div></div>
+		<script type="text/javascript">
+			var menuButtonName = $('#btn-mobile-nav');
+			menuButtonName.sidr({
+				name: 'mobile-nav',
+				source: '#mobile-nav',
+				renaming: false,
+				displace: true,
+				side: 'right',
+				onOpen: function () {
+					menuButtonName.toggleClass('inactive');
+					menuButtonName.toggleClass('active');
+				},
+				onClose: function () {
+					menuButtonName.toggleClass('active');
+					menuButtonName.toggleClass('inactive');
+				}
+			});
+		</script>
+	</div>
+
+			<div class="wrapper main-banner  js-banner small-hidden " data-cycle-fx="scrollHorz" data-cycle-timeout="4000" data-cycle-slides="&gt; div.slide" style="position: relative;"><div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden;"><div class="banner first-banner" style="background-image: url(&quot;https://bowdental.ca/wp-content/uploads/2015/02/bvd-home-1-ext-2.jpg&quot;); background-size: cover; background-position: center center; visibility: hidden;"><div class="row small-padding medium-padding" style="visibility: hidden;"><div class="columns small-12" style="visibility: hidden;"><div class="text-wrapper" style="visibility: hidden;"><span style="vertical-align: bottom; visibility: hidden;"><h1 style="visibility: hidden;">Caring, honest<br style="visibility: hidden;">
+oral health care</h1>
+</span></div></div></div></div></div>
+					<div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible;"><div class="banner first-banner" style="background-image:url(https://bowdental.ca/wp-content/uploads/2015/02/bvd-home-1-ext-2.jpg);background-size:cover;background-position:center;"><div class="row small-padding medium-padding"><div class="columns small-12"><div class="text-wrapper"><span style="vertical-align:bottom;"><h1>Caring, honest<br>
+oral health care</h1>
+</span></div></div></div></div></div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: hidden;"><div class="banner " style="background-image:url(https://bowdental.ca/wp-content/uploads/2015/02/bvd-banner-home-family1.jpg);background-size:cover;background-position:center;"><div class="row small-padding medium-padding"><div class="columns small-12"><div class="text-wrapper"><span style="vertical-align:bottom;"><h1>Healthy smiles,<br>
+happy families</h1>
+</span></div></div></div></div></div><div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden;"><div class="banner " style="background-image:url(https://bowdental.ca/wp-content/uploads/2015/02/bvd-banner-home-office1.jpg);background-size:cover;background-position:center;"><div class="row small-padding medium-padding"><div class="columns small-12"><div class="text-wrapper"><span style="vertical-align:bottom;"><h1>Your dental<br>
+office for life</h1>
+</span></div></div></div></div></div></div>
+		<div class="wrapper main-banner medium-hidden large-hidden ">
+			<div class="slide">
+				<div class="banner mobile-banner" style="background-image:url(https://bowdental.ca/wp-content/uploads/2015/02/j-2185-1.jpg);background-size:cover;background-position:center;">
+					<div class="row small-padding medium-padding">
+						<div class="columns small-12">
+							<div class="text-wrapper">
+								<span style="vertical-align:bottom;">
+									<h1>Caring, honest<br>
+oral health care</h1>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+					<script type="text/javascript">
+				(function ($) {
+
+					$('.js-banner').cycle();
+
+				}(jQuery));
+			</script>
+				<section class="wrapper body-nav-wrapper" style="top: 650px; z-index: 999; position: absolute;">
+		<div class="inner-wrapper">
+			<div class="row">
+				<nav class="columns small-12 main-menu">
+					<ul class="body-nav">
+												<style>
+						ul.body-nav li { width: 20% }	
+						</style>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page post-id-5"><a href="https://bowdental.ca/cochrane-dental-clinic/">Our Practice</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page post-id-8"><a href="https://bowdental.ca/cochrane-dentists/">Our Team</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page post-id-10"><a href="https://bowdental.ca/cochrane-dental-services/">Our Services</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page post-id-23"><a href="https://bowdental.ca/contact/">Contact Us</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page post-id-176"><a href="https://bowdental.ca/blog/">Our Blog</a></li>					</ul>
+				</nav>
+			</div>
+		</div>
+	</section>
+	<section class="wrapper section-1 content padding-top padding-bottom double-space">
+		<div class="row small-padding medium-padding">
+			<div class="columns small-12 medium-6 large-6 left-column">
+				<h2>Visit us and see what our patients are smiling about!</h2>
+			</div>
+			<div class="columns small-12 medium-12 large-12 mobile-spacer hidden-large hidden-medium" style="height:30px;">
+				&nbsp;<!-- Mobile Spacer -->
+			</div>
+			<div class="columns small-12 medium-6 large-6 right-column">
+				<p>Bow View Dental Care is the general dental practice of Dr. Chris Leong located in the beautiful town of Cochrane, Alberta.</p>
+<h3><a href="https://www.google.ca/maps/place/Bow+View+Dental+Care+-+Dr.+Chris+Leong/@51.184239,-114.475093,17z/data=!4m7!1m4!3m3!1s0x53713f7c8f809159:0xf90732a666530b76!2sBow+View+Dental+Care+-+Dr.+Chris+Leong!3b1!3m1!1s0x53713f7c8f809159:0xf90732a666530b76" class="cta pin">Bow View Dental Care<br>
+#15 – 312 5th Ave. West Cochrane</a></h3>
+<h3><a href="tel:4039810011" class="cta phone">403-981-0011</a></h3>
+			</div>
+		</div>
+	</section>
+
+	<section class="wrapper section-2 content bg-blue color-white link-blue-gray">
+		<div class="row bg-overlay-row small-padding medium-padding" style="background: url('https://bowdental.ca/wp-content/uploads/2015/02/bwd-mission.png') no-repeat center right; background-size: auto 100%;">
+			<div class="columns small-12 medium-6 large-6 left-column padding-top padding-bottom double-space">
+				<h2>Our mission</h2>
+<p>At Bow View Dental Care, our mission is to provide you with high quality, caring, and honest oral health care centered on your needs and interests as a patient. We want you to be well informed about your oral health and for you to be able to make treatment decisions based on your knowledge andconcerns. Our hope is that patients of Bow View Dental Care will have healthy smiles and desire for us to be their dentaloffice for life!</p>
+<h3><a title="Our Practice" href="https://bowdental.ca/cochrane-dental-clinic/">Discover our practice</a></h3>
+			</div>
+			<span class="bg-overlay bg-blue hidden-large hidden-medium">&nbsp;</span>
+		</div>
+	</section>
+
+	<section class="wrapper section-3 content padding-bottom padding-top">
+	<div class="row small-padding medium-padding">
+		<div class="columns small-12">
+							<div class="service-intro odd">
+					<div class="service-img" style="background: url('https://bowdental.ca/wp-content/uploads/2015/02/bvd-preventative.jpg') no-repeat center center; background-size: cover;">
+						<img style="width:100%;height:auto;" src="https://bowdental.ca/wp-content/themes/bowview/images/img-square.png" alt="Preventative Care">
+					</div>
+					<div class="service-content">
+						<h2>Preventative Care</h2>
+						<p>One of the best ways to avoid having to come to the dentist for major dental work is to come to see us routinely for care that helps you keep your teeth and smile healthy and problem free.</p>
+						<h3><a href="https://bowdental.ca/cochrane-dental-services/preventative-care/">Learn more about Preventative Care</a></h3>
+					</div>
+				</div>
+								<div class="service-intro even">
+					<div class="service-img" style="background: url('https://bowdental.ca/wp-content/uploads/2015/02/bowview-general.jpg') no-repeat center center; background-size: cover;">
+						<img style="width:100%;height:auto;" src="https://bowdental.ca/wp-content/themes/bowview/images/img-square.png" alt="General Dentistry">
+					</div>
+					<div class="service-content">
+						<h2>General Dentistry</h2>
+						<p>Even when we are doing our best to keep our mouths in good health with proper home care and regular dental visits, problems with our teeth can still arise, and Dr. Leong and his team are here to help you when you need it.</p>
+						<h3><a href="https://bowdental.ca/cochrane-dental-services/general-dentistry/">Learn more about General Dentistry</a></h3>
+					</div>
+				</div>
+								<div class="service-intro odd">
+					<div class="service-img" style="background: url('https://bowdental.ca/wp-content/uploads/2015/02/bowview-implant.jpg') no-repeat center center; background-size: cover;">
+						<img style="width:100%;height:auto;" src="https://bowdental.ca/wp-content/themes/bowview/images/img-square.png" alt="Dental Implants">
+					</div>
+					<div class="service-content">
+						<h2>Dental Implants</h2>
+						<p>Dental implants are natural-looking replacements for missing teeth that provide the same support and function as your natural tooth root would. They are the most advanced therapy available for replacement of lost teeth.</p>
+						<h3><a href="https://bowdental.ca/cochrane-dental-services/dental-implants/">Learn more about Dental Implants</a></h3>
+					</div>
+				</div>
+								<div class="service-intro even">
+					<div class="service-img" style="background: url('https://bowdental.ca/wp-content/uploads/2015/02/bvd-children1.jpg') no-repeat center center; background-size: cover;">
+						<img style="width:100%;height:auto;" src="https://bowdental.ca/wp-content/themes/bowview/images/img-square.png" alt="Children's Dentistry">
+					</div>
+					<div class="service-content">
+						<h2>Children's Dentistry</h2>
+						<p>At Bow View Dental Care we believe that coming to the dentist as a child should not be a fearful experience and we put a strong focus on developing caring and trusting relationships between your children and our team.</p>
+						<h3><a href="https://bowdental.ca/cochrane-dental-services/childrens-dentistry/">Learn more about Children's Dentistry</a></h3>
+					</div>
+				</div>
+						</div>
+	</div>
+</section>
+
+<div class="bottom-push" style="height: 116px;">&nbsp;</div>
+</div>
+
+	<section class="wrapper contact-section bg-blue color-white padding-top padding-bottom double-space xxxxx">
+		<div class="row small-padding medium-padding">
+			<div class="columns small-12 medium-8 large-8">
+				<h4>Book an appointment today,<br>
+We look forward to seeing your smile.</h4>
+			</div>
+			<div class="columns small-12 medium-4 large-4">
+				<h3><a href="tel:4039810011">403-981-0011</a></h3>
+			</div>
+			<div class="columns small-12 medium-12 large-12 mobile-spacer" style="height:30px;">
+				&nbsp;<!-- Mobile Spacer -->
+			</div>
+		</div>
+		<div class="row small-padding medium-padding">
+			<div class="columns small-12 medium-4 large-4">
+				<h3><div class="table-responsive">
+<table style="width:100%; " class="easy-table easy-table-default " border="0">
+<thead>
+<tr>
+<th>Monday</th>
+<th>closed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tuesday</td>
+<td>12-7</td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td>8-3</td>
+</tr>
+<tr>
+<td>Thursday</td>
+<td>8-3</td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>8-3</td>
+</tr>
+<tr>
+<td>Saturday</td>
+<td>closed</td>
+</tr>
+<tr>
+<td>Sunday</td>
+<td>closed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</h3>
+			</div>
+			<div class="columns small-12 medium-12 hidden-large hidden-medium mobile-spacer" style="height:30px;">
+				&nbsp;<!-- Mobile Spacer -->
+			</div>
+			<div class="columns small-12 medium-8 large-8 gr-form blue-form">
+				<style id="wpforms-css-vars-281">
+				#wpforms-281 {
+				--wpforms-container-padding: 0px;
+--wpforms-container-border-width: 1px;
+--wpforms-container-border-radius: 3px;
+--wpforms-background-color: rgba(0, 0, 0, 0);
+--wpforms-field-size-input-height: 43px;
+--wpforms-field-size-input-spacing: 15px;
+--wpforms-field-size-font-size: 16px;
+--wpforms-field-size-line-height: 19px;
+--wpforms-field-size-padding-h: 14px;
+--wpforms-field-size-checkbox-size: 16px;
+--wpforms-field-size-sublabel-spacing: 5px;
+--wpforms-field-size-icon-size: 1;
+--wpforms-label-size-font-size: 16px;
+--wpforms-label-size-line-height: 19px;
+--wpforms-label-size-sublabel-font-size: 14px;
+--wpforms-label-size-sublabel-line-height: 17px;
+--wpforms-button-size-font-size: 17px;
+--wpforms-button-size-height: 41px;
+--wpforms-button-size-padding-h: 15px;
+--wpforms-button-size-margin-top: 10px;
+--wpforms-container-shadow-size-box-shadow: none;
+			}
+			</style><div class="wpforms-container wpforms-container-full wpforms-render-modern" id="wpforms-281"><form id="wpforms-form-281" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="281" method="post" enctype="multipart/form-data" action="/" data-token="23146665052b242c8a1d07cca79a0b4a" data-token-time="1783044100" novalidate="novalidate"><noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript><div id="wpforms-error-noscript" style="display: none;">Please enable JavaScript in your browser to complete this form.</div><div class="wpforms-field-container"><div id="wpforms-281-field_0-container" class="wpforms-field wpforms-field-name" data-field-id="0"><fieldset><legend class="wpforms-field-label wpforms-label-hide" aria-hidden="false">Name <span class="wpforms-required-label" aria-hidden="true">*</span></legend><div class="wpforms-field-row wpforms-field-large"><div class="wpforms-field-row-block wpforms-first wpforms-one-half"><input type="text" id="wpforms-281-field_0" class="wpforms-field-name-first wpforms-field-required" name="wpforms[fields][0][first]" placeholder="First Name" aria-errormessage="wpforms-281-field_0-error" required=""><label for="wpforms-281-field_0" class="wpforms-field-sublabel after wpforms-sublabel-hide">First</label></div><div class="wpforms-field-row-block wpforms-one-half"><input type="text" id="wpforms-281-field_0-last" class="wpforms-field-name-last wpforms-field-required" name="wpforms[fields][0][last]" placeholder="Last Name" aria-errormessage="wpforms-281-field_0-last-error" required=""><label for="wpforms-281-field_0-last" class="wpforms-field-sublabel after wpforms-sublabel-hide">Last</label></div></div></fieldset></div><div id="wpforms-281-field_1-container" class="wpforms-field wpforms-field-email wpforms-one-half wpforms-first" data-field-id="1"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-281-field_1" aria-hidden="false">Email <span class="wpforms-required-label" aria-hidden="true">*</span></label><input type="email" id="wpforms-281-field_1" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][1]" placeholder="Email" spellcheck="false" aria-errormessage="wpforms-281-field_1-error" required=""></div><div id="wpforms-281-field_3-container" class="wpforms-field wpforms-field-text wpforms-one-half" data-field-id="3"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-281-field_3" aria-hidden="false">Telephone</label><input type="text" id="wpforms-281-field_3" class="wpforms-field-large" name="wpforms[fields][3]" placeholder="Telephone" aria-errormessage="wpforms-281-field_3-error"></div><div id="wpforms-281-field_2-container" class="wpforms-field wpforms-field-textarea" data-field-id="2"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-281-field_2" aria-hidden="false">Comment or Message</label><textarea id="wpforms-281-field_2" class="wpforms-field-medium" name="wpforms[fields][2]" placeholder="If you have any questions or wish to book an appointment, please leave us your details and we’ll get right back to you." aria-errormessage="wpforms-281-field_2-error"></textarea></div><div id="wpforms-281-field_4-container" class="wpforms-field wpforms-field-email" data-field-id="4"><label class="wpforms-field-label" for="wpforms-281-field_4">Email <span class="wpforms-required-label" aria-hidden="true">*</span></label><input type="email" id="wpforms-281-field_4" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][4]" spellcheck="false" aria-errormessage="wpforms-281-field_4-error" required=""></div></div><!-- .wpforms-field-container --><div class="wpforms-recaptcha-container wpforms-is-recaptcha wpforms-is-recaptcha-type-v3"><input type="hidden" name="wpforms[recaptcha]" value=""></div><div class="wpforms-submit-container"><input type="hidden" name="wpforms[id]" value="281"><input type="hidden" name="page_title" value="Home"><input type="hidden" name="page_url" value="https://bowdental.ca/"><input type="hidden" name="url_referer" value="https://bowdental.ca"><input type="hidden" name="page_id" value="2"><input type="hidden" name="wpforms[post_id]" value="2"><button type="submit" name="wpforms[submit]" id="wpforms-submit-281" class="wpforms-submit" data-alt-text="Sending..." data-submit-text="Send us your message" aria-live="assertive" value="wpforms-submit">Send us your message</button><img src="https://bowdental.ca/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg" class="wpforms-submit-spinner" style="display: none;" width="26" height="26" alt="Loading"></div></form></div>  <!-- .wpforms-container -->							</div>
+		</div>
+	</section>
+
+<section class="wrapper main-footer padding-top padding-bottom bg-dark-gray color-white" id="footer-wrapper">
+	<div class="row small-padding medium-padding">
+		<div class="columns small-12 medium-6 large-6 align-left">
+			<p>Bow View Dental Care<br>
+#15 – 312 5th Avenue West, Cochrane, Alberta</p>
+		</div>
+		<div class="columns small-12 medium-12 hidden-large hidden-medium mobile-spacer" style="height:30px;">
+			&nbsp;<!-- Mobile Spacer -->
+		</div>
+		<div class="columns small-12 medium-6 large-6 align-right">
+			<p>Bow View Dental Care © 2019</p>
+		</div>
+	</div>
+</section>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/bowview/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="owl-js-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/owl-carousel/owl.carousel.min.js?ver=1.0"></script>
+<script id="imagesloaded-js" src="https://bowdental.ca/wp-includes/js/imagesloaded.min.js?ver=5.0.0"></script>
+<script id="masonry-js" src="https://bowdental.ca/wp-includes/js/masonry.min.js?ver=4.2.2"></script>
+<script id="imagesLoad-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/jquery.imagesloaded.js?ver=1.0"></script>
+<script id="fancybox-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/fancybox/jquery.fancybox.pack.js?ver=1.0"></script>
+<script id="ScollToFixed-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/jquery.scrolltofixed.min.js?ver=1.0"></script>
+<script id="StickyKit-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/vendor/jquery.sticky-kit.min.js?ver=1.0"></script>
+<script id="siteJS-js" src="https://bowdental.ca/wp-content/themes/bowview/scripts/site_js.js?ver=1.0"></script>
+<script id="wpforms-validation-js" src="https://bowdental.ca/wp-content/plugins/wpforms-lite/assets/lib/jquery.validate.min.js?ver=1.21.0"></script>
+<script id="wpforms-mailcheck-js" src="https://bowdental.ca/wp-content/plugins/wpforms-lite/assets/lib/mailcheck.min.js?ver=1.1.2"></script>
+<script id="wpforms-punycode-js" src="https://bowdental.ca/wp-content/plugins/wpforms-lite/assets/lib/punycode.min.js?ver=1.0.0"></script>
+<script id="wpforms-generic-utils-js" src="https://bowdental.ca/wp-content/plugins/wpforms-lite/assets/js/share/utils.min.js?ver=1.10.2.1"></script>
+<script id="wpforms-js" src="https://bowdental.ca/wp-content/plugins/wpforms-lite/assets/js/frontend/wpforms.min.js?ver=1.10.2.1"></script>
+<script id="wpforms-modern-js" src="https://bowdental.ca/wp-content/plugins/wpforms-lite/assets/js/frontend/wpforms-modern.min.js?ver=1.10.2.1"></script>
+<script id="wpforms-recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6Lc4JRQqAAAAACKHW1mEaIaJvSTA9FpCx0W9svBc"></script>
+<script id="wpforms-recaptcha-js-after">
+var wpformsDispatchEvent = function (el, ev, custom) {
+				var e = document.createEvent(custom ? "CustomEvent" : "HTMLEvents");
+				custom ? e.initCustomEvent(ev, true, true, false) : e.initEvent(ev, true, true);
+				el.dispatchEvent(e);
+			};
+		var wpformsRecaptchaV3Execute = function ( callback ) {
+					grecaptcha.execute( "6Lc4JRQqAAAAACKHW1mEaIaJvSTA9FpCx0W9svBc", { action: "wpforms" } ).then( function ( token ) {
+						Array.prototype.forEach.call( document.getElementsByName( "wpforms[recaptcha]" ), function ( el ) {
+							el.value = token;
+						} );
+						if ( typeof callback === "function" ) {
+							return callback();
+						}
+					} );
+				}
+				grecaptcha.ready( function () {
+					wpformsDispatchEvent( document, "wpformsRecaptchaLoaded", true );
+				} );
+			
+//# sourceURL=wpforms-recaptcha-js-after
+</script>
+<script id="wpforms-address-field-js" src="https://bowdental.ca/wp-content/plugins/wpforms-lite/assets/js/frontend/fields/address.min.js?ver=1.10.2.1"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://bowdental.ca/wp-includes/js/wp-emoji-release.min.js?ver=3b94929a02fecd4d23952569d44a40d1"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://bowdental.ca/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpforms_settings = {"val_required":"This field is required.","val_email":"Please enter a valid email address.","val_email_suggestion":"Did you mean {suggestion}?","val_email_suggestion_title":"Click to accept this suggestion.","val_email_restricted":"This email address is not allowed.","val_number":"Please enter a valid number.","val_number_positive":"Please enter a valid positive number.","val_minimum_price":"Amount entered is less than the required minimum.","val_confirm":"Field values do not match.","val_checklimit":"You have exceeded the number of allowed selections: {#}.","val_limit_characters":"{count} of {limit} max characters.","val_limit_words":"{count} of {limit} max words.","val_min":"Please enter a value greater than or equal to {0}.","val_max":"Please enter a value less than or equal to {0}.","val_recaptcha_fail_msg":"Google reCAPTCHA verification failed, please try again later.","val_turnstile_fail_msg":"Cloudflare Turnstile verification failed, please try again later.","val_inputmask_incomplete":"Please fill out the field in required format.","uuid_cookie":"","locale":"en","country":"","country_list_label":"Country list","wpforms_plugin_url":"https:\/\/bowdental.ca\/wp-content\/plugins\/wpforms-lite\/","gdpr":"","ajaxurl":"https:\/\/bowdental.ca\/wp-admin\/admin-ajax.php","mailcheck_enabled":"1","mailcheck_domains":[],"mailcheck_toplevel_domains":["dev"],"is_ssl":"1","currency_code":"USD","currency_thousands":",","currency_decimals":"2","currency_decimal":".","currency_symbol":"$","currency_symbol_pos":"left","val_requiredpayment":"Payment is required.","val_creditcard":"Please enter a valid credit card number.","css_vars":["field-border-radius","field-border-style","field-border-size","field-background-color","field-border-color","field-text-color","field-menu-color","label-color","label-sublabel-color","label-error-color","button-border-radius","button-border-style","button-border-size","button-background-color","button-border-color","button-text-color","page-break-color","background-image","background-position","background-repeat","background-size","background-width","background-height","background-color","background-url","container-padding","container-border-style","container-border-width","container-border-color","container-border-radius","field-size-input-height","field-size-input-spacing","field-size-font-size","field-size-line-height","field-size-padding-h","field-size-checkbox-size","field-size-sublabel-spacing","field-size-icon-size","label-size-font-size","label-size-line-height","label-size-sublabel-font-size","label-size-sublabel-line-height","button-size-font-size","button-size-height","button-size-padding-h","button-size-margin-top","container-shadow-size-box-shadow"],"isModernMarkupEnabled":"1","formErrorMessagePrefix":"Form error message","errorMessagePrefix":"Error message","submitBtnDisabled":"Submit button is disabled during form submission.","readOnlyDisallowedFields":["captcha","map","content","divider","hidden","html","entry-preview","pagebreak","payment-total"],"error_updating_token":"Error updating token. Please try again or contact support if the issue persists.","network_error":"Network error or server is unreachable. Check your connection or try again later.","token_cache_lifetime":"86400","hn_data":[],"address_field":{"list_countries_without_states":["GB","DE","CH","NL"]}}
+/* ]]> */
+</script>
+<script type="text/javascript">
+	
+	// Google Tracking on outbound Telephone links.
+    $('a[href^="tel:"]').on('click',function(e){
+		ga('send', 'event', { eventCategory: 'Mobile Calls', eventAction: 'Call'});
+		return;
+	});
+
+    // Google Tracking on outbound Email Links
+	// $('a[href^="mailto:"]').on('click',function(e){
+	// 	ga('send', 'event', { eventCategory: 'Inquiries', eventAction: 'email'});
+	// 	return;
+	// });
+
+</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a15260dbefc6d130',t:'MTc4MzA0NDg4Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; visibility: hidden;"></iframe>
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-j7pgclmh0x9" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lc4JRQqAAAAACKHW1mEaIaJvSTA9FpCx0W9svBc&amp;co=aHR0cHM6Ly9ib3dkZW50YWwuY2E6NDQz&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=u5hjbk91nunh"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></body></html>

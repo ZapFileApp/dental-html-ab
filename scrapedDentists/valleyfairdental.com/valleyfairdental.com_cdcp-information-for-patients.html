@@ -1,0 +1,936 @@
+<!DOCTYPE html><html lang="en-US" class=" js_active  vc_desktop  vc_transform  vc_transform " style="scroll-behavior: auto; --bookingWidgetPrimaryColor: #b67132; --bookingWidgetPrimaryColorDarker: rgb(172,103,40);" data-uw-w-loader=""><head><style>@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");.CareCruModal{display:block;position:fixed;content:"";top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:-1;opacity:0;transition:opacity .2s,z-index 0s .2s;text-align:center;overflow:hidden;overflow-y:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;visibility:hidden}.CareCruModal.CareCruActive{z-index:999999;opacity:1;visibility:visible;transition:opacity .2s}.CareCruModal:before{overflow:hidden;width:0;height:100%;content:""}.CareCruModal:before,.CareCruModal>*{display:inline-block;vertical-align:middle}.CareCruModal>*{white-space:normal;text-align:left}.CareCruModalInner{position:relative;overflow:hidden;width:600px;height:100%;max-width:100%;overflow-y:auto;background:#fff;z-index:-1;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s,z-index 0s .2s}@media screen and (min-width:610px){.CareCruModalInner{height:650px}}.CareCruModalInner.CareCruActive{z-index:100;opacity:1;transform:scale(1);transition:opacity .2s,transform .2s}.CareCruButton{position:fixed;right:-160px;opacity:0;top:250px;min-width:157px;min-height:75px;cursor:pointer;display:flex;flex-direction:row;align-items:center;background-color:var(--bookingWidgetPrimaryColor);text-align:right;justify-content:center;padding:20px;color:#fff;box-sizing:border-box;z-index:9998;box-shadow:1px 2px 3px 0 hsla(0,0%,50.2%,.15);transition:all .2s ease-in;text-transform:uppercase;font-family:"Roboto"!important;font-size:19px;letter-spacing:0;line-height:19px;text-shadow:.5px .5px .5px rgba(0,0,0,.1);border-bottom-left-radius:999px;border-top-left-radius:999px}.CareCruButton.Request{font-size:15.5px}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;right:-160px}50%{opacity:0;right:-20px}to{opacity:1;right:0}}.CareCruButton .CareCruButtonIconBook{display:block;font-weight:600;font-size:25px;line-height:25px;color:#fff;font-family:"Roboto"!important}.CareCruButtonIcon{padding-right:.6rem;color:#fff;transition:all .2s ease-in;top:24px}.CareCruButtonIcon .CareCruButtonIconSVG{fill:currentColor;height:35px;transition:all .2s ease-in}.CareCruButton:hover{background:var(--bookingWidgetPrimaryColorDarker);box-shadow:1px 4px 5px 0 hsla(0,0%,50.2%,.25);transition:all .2s ease-in}.CareCruButton:hover .CareCruButtonIcon{transition:all .2s ease-in;border-color:var(--bookingWidgetPrimaryColorDarker)}.CareCruButton:hover .CareCruButtonIcon .CareCruButtonIconSVG{transition:all .2s ease-in;color:var(--bookingWidgetPrimaryColorDarker)}@media screen and (max-width:610px){.CareCruButton{top:auto;right:0;opacity:0;width:90%;left:5%;font-size:18px;justify-content:center;box-sizing:border-box;border-radius:9999px;padding:10px 0;text-align:center;min-height:auto}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;bottom:-3%}50%{opacity:0}to{opacity:1;bottom:2.5%}}.CareCruButton .CareCruButtonIconBook{display:inline;font-size:18px}.CareCruButtonIcon{display:none}}#CareCruIframe{z-index:101;position:absolute;top:0;left:0;width:1px;min-width:100%;height:100%;border:none;overflow:hidden}#hiddenCareCru{display:none}#locationWrapper .header{flex-flow:nowrap}#hiddenCareCru.active{display:block}.CareCruSpinner{font-family:"Roboto";margin:0 auto;text-align:center;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;font-weight:700;letter-spacing:.035em;z-index:102;position:relative;background:#fff;opacity:1}.CareCruSpinner,.CareCruSpinner.CareCruFadeOut{transition:opacity 1s cubic-bezier(.175,.885,.32,1.275)}.CareCruSpinner.CareCruFadeOut{opacity:0}.CareCruSpinner>div>div{width:18px;height:18px;background-color:var(--bookingWidgetPrimaryColor);border-radius:100%;display:inline-block;-webkit-animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both;animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both}.CareCruSpinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.CareCruSpinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}.CareCruSpinner>span{margin-top:12px}@-webkit-keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}
+/*# sourceMappingURL=widget.css.map */</style><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1, minimum-scale=1">
+		<link rel="profile" href="https://gmpg.org/xfn/11">
+		<link rel="pingback" href="https://valleyfairdental.com/xmlrpc.php">	
+				
+		 
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<div class="fit-vids-style" id="fit-vids-style" style="display: none;">­<style>.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></div><script src="https://canadiangovernmentdentalplan.ca/assets/cdcp-external.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-SFW5ZB8KSV&amp;cx=c&amp;_slc=1"></script><script async="" src="https://scripts.clarity.ms/0.8.66/clarity.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=AW-1035996087&amp;cx=c&amp;gtm=4e66u1"></script><script async="" src="https://www.clarity.ms/tag/o2iwtgg651?ref=gtm2"></script><script src="https://connect.facebook.net/signals/config/428532273972946?v=2.9.349&amp;r=stable&amp;domain=valleyfairdental.com&amp;hme=f29d86973612db0f0627890a64bdc8c47b471189050b33f2680b7d76997afc9a&amp;ex_m=107%2C208%2C158%2C22%2C73%2C74%2C149%2C69%2C68%2C11%2C167%2C93%2C16%2C141%2C130%2C39%2C76%2C81%2C137%2C163%2C169%2C8%2C4%2C5%2C7%2C6%2C3%2C94%2C104%2C170%2C175%2C222%2C30%2C75%2C234%2C233%2C232%2C23%2C33%2C55%2C106%2C61%2C10%2C64%2C100%2C101%2C102%2C108%2C133%2C31%2C29%2C135%2C136%2C132%2C131%2C159%2C77%2C162%2C160%2C161%2C50%2C60%2C126%2C15%2C166%2C45%2C279%2C280%2C278%2C26%2C27%2C28%2C48%2C150%2C78%2C115%2C18%2C20%2C44%2C40%2C42%2C41%2C86%2C95%2C99%2C113%2C148%2C151%2C46%2C114%2C24%2C21%2C122%2C70%2C36%2C153%2C152%2C154%2C145%2C143%2C25%2C35%2C59%2C112%2C165%2C71%2C17%2C156%2C117%2C84%2C67%2C19%2C88%2C89%2C119%2C87%2C139%2C138%2C142%2C164%2C34%2C293%2C309%2C215%2C204%2C62%2C205%2C203%2C312%2C303%2C52%2C216%2C110%2C134%2C83%2C124%2C54%2C47%2C49%2C116%2C123%2C129%2C128%2C58%2C65%2C63%2C155%2C79%2C80%2C118%2C37%2C32%2C53%2C56%2C103%2C168%2C1%2C127%2C14%2C125%2C12%2C2%2C57%2C96%2C66%2C121%2C92%2C91%2C171%2C172%2C97%2C98%2C9%2C105%2C51%2C146%2C90%2C82%2C72%2C120%2C109%2C43%2C147%2C0%2C85%2C140%2C144%2C157%2C38%2C111%2C13%2C173%2C196%2C190%2C194%2C195%2C193%2C188%2C199%2C191%2C192%2C218%2C189%2C187%2C294%2C202%2C201%2C200%2C238%2C209%2C185%2C186%2C184%2C332%2C324%2C325%2C316%2C321%2C318%2C320%2C319%2C317%2C326%2C328%2C323%2C329%2C322%2C327%2C315%2C197" async=""></script><script src="https://connect.facebook.net/signals/config/948088378569701?v=2.9.349&amp;r=stable&amp;domain=valleyfairdental.com&amp;hme=f29d86973612db0f0627890a64bdc8c47b471189050b33f2680b7d76997afc9a&amp;ex_m=107%2C208%2C158%2C22%2C73%2C74%2C149%2C69%2C68%2C11%2C167%2C93%2C16%2C141%2C130%2C39%2C76%2C81%2C137%2C163%2C169%2C8%2C4%2C5%2C7%2C6%2C3%2C94%2C104%2C170%2C175%2C222%2C30%2C75%2C234%2C233%2C232%2C23%2C33%2C55%2C106%2C61%2C10%2C64%2C100%2C101%2C102%2C108%2C133%2C31%2C29%2C135%2C136%2C132%2C131%2C159%2C77%2C162%2C160%2C161%2C50%2C60%2C126%2C15%2C166%2C45%2C279%2C280%2C278%2C26%2C27%2C28%2C48%2C150%2C78%2C115%2C18%2C20%2C44%2C40%2C42%2C41%2C86%2C95%2C99%2C113%2C148%2C151%2C46%2C114%2C24%2C21%2C122%2C70%2C36%2C153%2C152%2C154%2C145%2C143%2C25%2C35%2C59%2C112%2C165%2C71%2C17%2C156%2C117%2C84%2C67%2C19%2C88%2C89%2C119%2C87%2C139%2C138%2C142%2C164%2C34%2C293%2C309%2C215%2C204%2C62%2C205%2C203%2C312%2C303%2C52%2C216%2C110%2C134%2C83%2C124%2C54%2C47%2C49%2C116%2C123%2C129%2C128%2C58%2C65%2C63%2C155%2C79%2C80%2C118%2C37%2C32%2C53%2C56%2C103%2C168%2C1%2C127%2C14%2C125%2C12%2C2%2C57%2C96%2C66%2C121%2C92%2C91%2C171%2C172%2C97%2C98%2C9%2C105%2C51%2C146%2C90%2C82%2C72%2C120%2C109%2C43%2C147%2C0%2C85%2C140%2C144%2C157%2C38%2C111%2C13%2C173%2C196%2C190%2C194%2C195%2C193%2C188%2C199%2C191%2C192%2C218%2C189%2C187%2C294%2C202%2C201%2C200%2C238%2C209%2C185%2C186%2C184%2C332%2C324%2C325%2C316%2C321%2C318%2C320%2C319%2C317%2C326%2C328%2C323%2C329%2C322%2C327%2C315%2C197" async=""></script><script src="https://connect.facebook.net/signals/config/458076464376744?v=2.9.349&amp;r=stable&amp;domain=valleyfairdental.com&amp;hme=f29d86973612db0f0627890a64bdc8c47b471189050b33f2680b7d76997afc9a&amp;ex_m=107%2C208%2C158%2C22%2C73%2C74%2C149%2C69%2C68%2C11%2C167%2C93%2C16%2C141%2C130%2C39%2C76%2C81%2C137%2C163%2C169%2C8%2C4%2C5%2C7%2C6%2C3%2C94%2C104%2C170%2C175%2C222%2C30%2C75%2C234%2C233%2C232%2C23%2C33%2C55%2C106%2C61%2C10%2C64%2C100%2C101%2C102%2C108%2C133%2C31%2C29%2C135%2C136%2C132%2C131%2C159%2C77%2C162%2C160%2C161%2C50%2C60%2C126%2C15%2C166%2C45%2C279%2C280%2C278%2C26%2C27%2C28%2C48%2C150%2C78%2C115%2C18%2C20%2C44%2C40%2C42%2C41%2C86%2C95%2C99%2C113%2C148%2C151%2C46%2C114%2C24%2C21%2C122%2C70%2C36%2C153%2C152%2C154%2C145%2C143%2C25%2C35%2C59%2C112%2C165%2C71%2C17%2C156%2C117%2C84%2C67%2C19%2C88%2C89%2C119%2C87%2C139%2C138%2C142%2C164%2C34%2C293%2C309%2C215%2C204%2C62%2C205%2C203%2C312%2C303%2C52%2C216%2C110%2C134%2C83%2C124%2C54%2C47%2C49%2C116%2C123%2C129%2C128%2C58%2C65%2C63%2C155%2C79%2C80%2C118%2C37%2C32%2C53%2C56%2C103%2C168%2C1%2C127%2C14%2C125%2C12%2C2%2C57%2C96%2C66%2C121%2C92%2C91%2C171%2C172%2C97%2C98%2C9%2C105%2C51%2C146%2C90%2C82%2C72%2C120%2C109%2C43%2C147%2C0%2C85%2C140%2C144%2C157%2C38%2C111%2C13%2C173" async=""></script><script async="" src="//connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-PLQDNMMX24&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-827767304&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-N8DW5T"></script><script data-cfasync="false" data-pagespeed-no-defer="">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v27.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>CDCP Information for Patients</title>
+	<meta name="description" content="The Canadian Dental Care Plan (CDCP) is a federal initiative to provide comprehensive dental care services to eligible Canadian residents.">
+	<link rel="canonical" href="https://canadiangovernmentdentalplan.ca/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="CDCP Information for Patients">
+	<meta property="og:description" content="The Canadian Dental Care Plan (CDCP) is a federal initiative to provide comprehensive dental care services to eligible Canadian residents.">
+	<meta property="og:url" content="https://canadiangovernmentdentalplan.ca/">
+	<meta property="og:site_name" content="ValleyFair Dental Clinic">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="3 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/valleyfairdental.com\/cdcp-information-for-patients\/","url":"https:\/\/canadiangovernmentdentalplan.ca\/","name":"CDCP Information for Patients","isPartOf":{"@id":"https:\/\/valleyfairdental.com\/#website"},"datePublished":"2024-12-27T23:10:54+00:00","description":"The Canadian Dental Care Plan (CDCP) is a federal initiative to provide comprehensive dental care services to eligible Canadian residents.","breadcrumb":{"@id":"https:\/\/canadiangovernmentdentalplan.ca\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/canadiangovernmentdentalplan.ca\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/canadiangovernmentdentalplan.ca\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/valleyfairdental.com\/"},{"@type":"ListItem","position":2,"name":"CDCP Information for Patients"}]},{"@type":"WebSite","@id":"https:\/\/valleyfairdental.com\/#website","url":"https:\/\/valleyfairdental.com\/","name":"ValleyFair Dental Clinic","description":"Just another WordPress site","publisher":{"@id":"https:\/\/valleyfairdental.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/valleyfairdental.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/valleyfairdental.com\/#organization","name":"ValleyFair Dental Clinic","url":"https:\/\/valleyfairdental.com\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/valleyfairdental.com\/#\/schema\/logo\/image\/","url":"https:\/\/valleyfairdental.com\/wp-content\/uploads\/2020\/12\/logo-1.png","contentUrl":"https:\/\/valleyfairdental.com\/wp-content\/uploads\/2020\/12\/logo-1.png","width":370,"height":38,"caption":"ValleyFair Dental Clinic"},"image":{"@id":"https:\/\/valleyfairdental.com\/#\/schema\/logo\/image\/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//www.google.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="ValleyFair Dental Clinic » Feed" href="https://valleyfairdental.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="ValleyFair Dental Clinic » Comments Feed" href="https://valleyfairdental.com/comments/feed/">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css" type="text/css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="cip-child-css" href="https://valleyfairdental.com/wp-content/plugins/aow_cip/css/contentshare.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="my-plugin-style-css" href="https://valleyfairdental.com/wp-content/plugins/aow_cip%202/css/contentshare.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="aow_gf_failure_notification-css" href="https://valleyfairdental.com/wp-content/plugins/aow_gf_failure_notification/public/css/aow_gf_failure_notification-public.css?ver=1.3.0" type="text/css" media="all">
+<link rel="stylesheet" id="fancybox-for-wp-css" href="https://valleyfairdental.com/wp-content/plugins/fancybox-for-wordpress/assets/css/fancybox.css?ver=1.3.4" type="text/css" media="all">
+<link rel="stylesheet" id="hamburger.css-css" href="https://valleyfairdental.com/wp-content/plugins/wp-responsive-menu/assets/css/wpr-hamburger.css?ver=3.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="wprmenu.css-css" href="https://valleyfairdental.com/wp-content/plugins/wp-responsive-menu/assets/css/wprmenu.css?ver=3.2.2" type="text/css" media="all">
+<style id="wprmenu.css-inline-css" type="text/css">
+@media only screen and ( max-width: 992px ) {html body div.wprm-wrapper {overflow: scroll;}html body div.wprm-overlay{ background: rgb(0,0,0) }#wprmenu_bar {background-image: url();background-size: cover ;background-repeat: repeat;}#wprmenu_bar {background-color: #f8963f;}html body div#mg-wprm-wrap .wpr_submit .icon.icon-search {color: #ffffff;}#wprmenu_bar .menu_title,#wprmenu_bar .wprmenu_icon_menu,#wprmenu_bar .menu_title a {color: #ffffff;}#wprmenu_bar .menu_title a {font-size: 20px;font-weight: normal;}#mg-wprm-wrap li.menu-item a {font-size: 15px;text-transform: uppercase;font-weight: normal;}#mg-wprm-wrap li.menu-item-has-children ul.sub-menu a {font-size: 15px;text-transform: uppercase;font-weight: normal;}#mg-wprm-wrap li.current-menu-item > a {background: #f8963f;}#mg-wprm-wrap li.current-menu-item > a,#mg-wprm-wrap li.current-menu-item span.wprmenu_icon{color: #ffffff !important;}#mg-wprm-wrap {background-color: #f8963f;}.cbp-spmenu-push-toright,.cbp-spmenu-push-toright .mm-slideout {left: 80% ;}.cbp-spmenu-push-toleft {left: -80% ;}#mg-wprm-wrap.cbp-spmenu-right,#mg-wprm-wrap.cbp-spmenu-left,#mg-wprm-wrap.cbp-spmenu-right.custom,#mg-wprm-wrap.cbp-spmenu-left.custom,.cbp-spmenu-vertical {width: 80%;max-width: 400px;}#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item a,div#mg-wprm-wrap ul li span.wprmenu_icon {color: #ffffff;}#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item:valid ~ a{color: #ffffff;}#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item a:hover {background: #f8963f;color: #ffffff !important;}div#mg-wprm-wrap ul>li:hover>span.wprmenu_icon {color: #ffffff !important;}.wprmenu_bar .hamburger-inner,.wprmenu_bar .hamburger-inner::before,.wprmenu_bar .hamburger-inner::after {background: #ffffff;}.wprmenu_bar .hamburger:hover .hamburger-inner,.wprmenu_bar .hamburger:hover .hamburger-inner::before,.wprmenu_bar .hamburger:hover .hamburger-inner::after {background: #ffffff;}#wprmenu_menu.left {width:80%;left: -80%;right: auto;}#wprmenu_menu.right {width:80%;right: -80%;left: auto;}.wprmenu_bar .hamburger {float: right;}.wprmenu_bar #custom_menu_icon.hamburger {top: px;right: 0px;float: right;background-color: #cccccc;}html body div#wprmenu_bar {height : 42px;}#mg-wprm-wrap.cbp-spmenu-left,#mg-wprm-wrap.cbp-spmenu-right,#mg-widgetmenu-wrap.cbp-spmenu-widget-left,#mg-widgetmenu-wrap.cbp-spmenu-widget-right {top: 42px !important;}.wpr_custom_menu #custom_menu_icon {display: block;}html { padding-top: 42px !important; }#wprmenu_bar,#mg-wprm-wrap { display: block; }div#wpadminbar { position: fixed; }}
+/*# sourceURL=wprmenu.css-inline-css */
+</style>
+<link rel="stylesheet" id="wpr_icons-css" href="https://valleyfairdental.com/wp-content/plugins/wp-responsive-menu/inc/assets/icons/wpr-icons.css?ver=3.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="https://valleyfairdental.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=8.7.2" type="text/css" media="all">
+<link rel="stylesheet" id="style-main-css" href="https://valleyfairdental.com/wp-content/themes/dental/style.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="tpbc-style-css" href="https://valleyfairdental.com/wp-content/themes/dental-child/style.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="dental_main-css" href="https://valleyfairdental.com/wp-content/themes/dental/dental_main.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="tpbc-bootstrap-css" href="https://valleyfairdental.com/wp-content/themes/dental/assets/css/bootstrap/bootstrap.min.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="tpbc-bootstrap-reboot-css" href="https://valleyfairdental.com/wp-content/themes/dental/assets/css/bootstrap/bootstrap-reboot.min.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="tpbc-muli-css" href="https://fonts.googleapis.com/css?family=Muli%3A300%2C400%2C600%2C700&amp;ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="tpbc-bootstrapwp-css" href="https://valleyfairdental.com/wp-content/themes/dental/assets/css/bootstrap-wp.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="slick-css-css" href="https://valleyfairdental.com/wp-content/themes/dental/slick/slick.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="slick-theme-css-css" href="https://valleyfairdental.com/wp-content/themes/dental/slick/slick-theme.css?ver=6.9.4" type="text/css" media="all">
+<script type="text/javascript" src="https://valleyfairdental.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/aow_gf_failure_notification/public/js/aow_gf_failure_notification-public.js?ver=1.3.0" id="aow_gf_failure_notification-js"></script>
+<script type="text/javascript" id="breeze-prefetch-js-extra">
+/* <![CDATA[ */
+var breeze_prefetch = {"local_url":"https://valleyfairdental.com","ignore_remote_prefetch":"1","ignore_list":["wp-admin","wp-login.php"]};
+//# sourceURL=breeze-prefetch-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/breeze/assets/js/js-front-end/breeze-prefetch-links.min.js?ver=2.5.4" id="breeze-prefetch-js"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/fancybox-for-wordpress/assets/js/purify.min.js?ver=1.3.4" id="purify-js"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/fancybox-for-wordpress/assets/js/jquery.fancybox.js?ver=1.3.4" id="fancybox-for-wp-js"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/handl-utm-grabber/js/js.cookie.js?ver=6.9.4" id="js.cookie-js"></script>
+<script type="text/javascript" id="handl-utm-grabber-js-extra">
+/* <![CDATA[ */
+var handl_utm = [];
+//# sourceURL=handl-utm-grabber-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/handl-utm-grabber/js/handl-utm-grabber.js?ver=6.9.4" id="handl-utm-grabber-js"></script>
+<script type="text/javascript" id="wprmenu.js-js-extra">
+/* <![CDATA[ */
+var wprmenu = {"zooming":"","from_width":"992","push_width":"400","menu_width":"80","parent_click":"yes","swipe":"1","enable_overlay":"1","wprmenuDemoId":""};
+//# sourceURL=wprmenu.js-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/wp-responsive-menu/assets/js/wprmenu.js?ver=1782856159" id="wprmenu.js-js"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/themes/dental/assets/js/bootstrap/bootstrap.bundle.min.js?ver=6.9.4' async='async" id="tpbc-bootstrapjs-js"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/themes/dental/assets/js/bootstrap/popper.min.js?ver=6.9.4' async='async" id="tpbc-popperjs-js"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/themes/dental/assets/js/js_dental.js?ver=1.5.7' async='async" id="dental-js-js"></script>
+<script></script><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://valleyfairdental.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9.4">
+<link rel="shortlink" href="https://valleyfairdental.com/?p=3228">
+<script type="application/ld+json"> 
+	{
+	  "@context": "http://www.schema.org",
+	  "@type": "Dentist",
+	  "name": "Valley Fair Dental Clinic",
+	  "url": "https://valleyfairdental.com/",
+	  "logo": "",
+	  "image": "",
+	  "description": "Find ValleyFair Dental inside the ValleyFair Shopping Centre in Maple Ridge, conveniently located next to London Drugs just off Lougheed Highway. ValleyFair Dental offers a wide array of services for all your dental needs. Our professional team of dentists and hygienists is ready to work with you to build a comprehensive and personalized treatment plan, no matter your age or oral health needs. From state-of-the-art laser dentistry to conscious sedation, we make routine and restorative dental ...",
+	  "address": {
+		"@type": "PostalAddress",
+		"streetAddress": "180-22709 Lougheed Hwy",
+		"addressLocality": "Maple Ridge",
+		"addressRegion": "BC",
+		"postalCode": "V2X2V5",
+		"addressCountry": "CA"
+	  },
+	  "geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "49.21775900000001",
+		"longitude": "-122.59098"
+	  },
+	  "hasMap": "https://www.google.com/maps/search/?api=1&query=Valley+Fair+Dental+Clinic&query_place_id=ChIJGwIVrUZ_C0ER9lM4P9qQsuM",
+	  "openingHours": "Mo 8:00 am-17:00 pm Tu 8:00 am-20:00 pm We 8:00 am-20:00 pm Th 8:00 am-20:00 pm Fr 8:00 am-17:00 pm Sa 8:00 am-15:00 pm"
+	  ,
+	  "contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+1 (604) 463-7411",
+		"contactType": "customer service"
+	  }
+	  	}
+ 	</script>
+
+<!-- Fancybox for WordPress v3.3.7 -->
+<style type="text/css">
+	.fancybox-slide--image .fancybox-content{background-color: #FFFFFF}div.fancybox-caption{display:none !important;}
+	
+	img.fancybox-image{border-width:10px;border-color:#FFFFFF;border-style:solid;}
+	div.fancybox-bg{background-color:rgba(102,102,102,0.7);opacity:1 !important;}div.fancybox-content{border-color:#FFFFFF}
+	div#fancybox-title{background-color:#FFFFFF}
+	div.fancybox-content{background-color:#FFFFFF}
+	div#fancybox-title-inside{color:#333333}
+	
+	
+	
+	div.fancybox-caption p.caption-title{display:inline-block}
+	div.fancybox-caption p.caption-title{font-size:14px}
+	div.fancybox-caption p.caption-title{color:#333333}
+	div.fancybox-caption {color:#333333}div.fancybox-caption p.caption-title {background:#fff; width:auto;padding:10px 30px;}div.fancybox-content p.caption-title{color:#333333;margin: 0;padding: 5px 0;}body.fancybox-active .fancybox-container .fancybox-stage .fancybox-content .fancybox-close-small{display:block;}
+</style><script type="text/javascript">
+	jQuery(function () {
+
+		var mobileOnly = false;
+		
+		if (mobileOnly) {
+			return;
+		}
+
+		jQuery.fn.getTitle = function () { // Copy the title of every IMG tag and add it to its parent A so that fancybox can show titles
+			var arr = jQuery("a[data-fancybox]");jQuery.each(arr, function() {var title = jQuery(this).children("img").attr("title");if(title){jQuery(this).attr("title",title)}});		}
+
+		// Supported file extensions
+
+				var thumbnails = jQuery("a:has(img)").not(".nolightbox").not('.envira-gallery-link').not('.ngg-simplelightbox').filter(function () {
+			return /\.(jpe?g|png|gif|mp4|webp|bmp|pdf)(\?[^/]*)*$/i.test(jQuery(this).attr('href'))
+		});
+		
+
+		// Add data-type iframe for links that are not images or videos.
+		var iframeLinks = jQuery('.fancyboxforwp').filter(function () {
+			return !/\.(jpe?g|png|gif|mp4|webp|bmp|pdf)(\?[^/]*)*$/i.test(jQuery(this).attr('href'))
+		}).filter(function () {
+			return !/vimeo|youtube/i.test(jQuery(this).attr('href'))
+		});
+		iframeLinks.attr({"data-type": "iframe"}).getTitle();
+
+				// Gallery All
+		thumbnails.addClass("fancyboxforwp").attr("data-fancybox", "gallery").getTitle();
+		iframeLinks.attr({"data-fancybox": "gallery"}).getTitle();
+
+		// Gallery type NONE
+		
+		// Call fancybox and apply it on any link with a rel atribute that starts with "fancybox", with the options set on the admin panel
+		jQuery("a.fancyboxforwp").fancyboxforwp({
+			loop: true,
+			smallBtn: true,
+			zoomOpacity: "auto",
+			animationEffect: "fade",
+			animationDuration: 400,
+			transitionEffect: "fade",
+			transitionDuration: "600",
+			overlayShow: true,
+			overlayOpacity: "0.7",
+			titleShow: true,
+			titlePosition: "inside",
+			keyboard: true,
+			showCloseButton: true,
+			arrows: true,
+			clickContent:false,
+			clickSlide: "close",
+			mobile: {
+				clickContent: function (current, event) {
+					return current.type === "image" ? "toggleControls" : false;
+				},
+				clickSlide: function (current, event) {
+					return current.type === "image" ? "close" : "close";
+				},
+			},
+			wheel: false,
+			toolbar: true,
+			preventCaptionOverlap: true,
+			onInit: function() { },			onDeactivate
+	: function() { },		beforeClose: function() { },			afterShow: function(instance) { jQuery( ".fancybox-image" ).on("click", function( ){ ( instance.isScaledDown() ) ? instance.scaleToActual() : instance.scaleToFit() }) },				afterClose: function() { },					caption : function( instance, item ) {var title = "";if("undefined" != typeof jQuery(this).context ){var title = jQuery(this).context.title;} else { var title = ("undefined" != typeof jQuery(this).attr("title")) ? jQuery(this).attr("title") : false;}var caption = jQuery(this).data('caption') || '';if ( item.type === 'image' && title.length ) {caption = (caption.length ? caption + '<br />' : '') + '<p class="caption-title">'+jQuery("<div>").text(title).html()+'</p>' ;}if (typeof DOMPurify === "function" && caption.length) { return DOMPurify.sanitize(caption, {USE_PROFILES: {html: true}}); } else { return jQuery("<div>").text(caption).html(); }},
+		afterLoad : function( instance, current ) {var captionContent = current.opts.caption || '';var sanitizedCaptionString = '';if (typeof DOMPurify === 'function' && captionContent.length) {sanitizedCaptionString = DOMPurify.sanitize(captionContent, {USE_PROFILES: {html: true}});} else if (captionContent.length) { sanitizedCaptionString = jQuery("<div>").text(captionContent).html();}if (sanitizedCaptionString.length) { current.$content.append(jQuery('<div class=\"fancybox-custom-caption inside-caption\" style=\" position: absolute;left:0;right:0;color:#000;margin:0 auto;bottom:0;text-align:center;background-color:#FFFFFF \"></div>').html(sanitizedCaptionString)); }},
+			})
+		;
+
+			})
+</script>
+<!-- END Fancybox for WordPress -->
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to automatic -->
+<script data-cfasync="false" data-pagespeed-no-defer="">
+	var dataLayer_content = {"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"Site Admin"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer="">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N8DW5T');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<link rel="icon" href="https://valleyfairdental.com/wp-content/uploads/2021/01/favicon-50x50.png" sizes="32x32">
+<link rel="icon" href="https://valleyfairdental.com/wp-content/uploads/2021/01/favicon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://valleyfairdental.com/wp-content/uploads/2021/01/favicon.png">
+<meta name="msapplication-TileImage" content="https://valleyfairdental.com/wp-content/uploads/2021/01/favicon.png">
+		<style type="text/css" id="wp-custom-css">
+			.carecru-btn {margin-left: 20px auto !important;text-align: center;}
+.pum-theme-3096 .pum-content + .pum-close, .pum-theme-default-theme .pum-content + .pum-close {
+    right: -10px;
+    top: -25px;
+    padding: 0px 5px;
+}
+@media (min-width: 1300px)
+{
+.form-right-info {
+    width: 35%;
+    float: left;
+    padding: 0 30px !important;
+}
+.info--text:nth-child(1), .info--text:nth-child(2) {
+    margin-bottom: 10px !important;
+}
+	}
+.child_note {
+    display: block;
+}
+.hours_shortcode .child_hours_ul {
+    display: grid;
+}
+	
+.single-team-member .team-member .single-member-content h1{
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 700;
+    padding: 0 0 15px;
+}
+.single-member-content h2 .single-des{
+	    display: inline-block;
+    padding: 0 0 0 40px;
+    position: relative;
+}
+.single-member-content h2 .single-des:after{
+	position: absolute;
+    content: "";
+    border-bottom: solid 2px #000;
+    width: 15px;
+    left: 13px;
+    top: 19px;
+}
+.team-title{font-weight:700 !important}
+.type-post .single-post-thumb img{
+	width: 100%;
+    height: auto;
+}
+
+.footer-contact-info li.social-icon a {
+    background: inherit;
+    padding: 10px;
+    font-size: 28px;
+    color: #f8963f;}
+
+    .widget .footer-contact-info li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+    float: right;
+    padding: 7px 0;
+}
+
+.footer-contact-info li.social-icon {
+    display: flex;
+}
+@media only screen and (min-width:700px) and (max-width:768px){
+body .hours_shortcode .child_hours_ul li {
+    font-size: 9px;
+	}}
+
+@media(min-width: 768px){
+    .vc_tta-panels{
+        column-count: 2;
+    }
+}
+
+@media(max-width:767px) {
+    .column-break {
+        height : 0;
+    }
+}
+.column-break {
+        break-after: column;
+        opacity: 0;
+        height: 0;
+    }
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title>a {
+    color: #fff !important;
+    background: #f8963f;
+}
+.column-break .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left.vc_tta-panel-title>a {
+    height: 0px !important;
+    padding: 0px !important;
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-controls-icon::after, .vc_tta-color-grey.vc_tta-style-classic .vc_tta-controls-icon::before {
+    border-color: #fff !important;
+}
+.single-team-member .team-title {
+    margin-bottom: 25px;
+}		</style>
+		<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	
+				
+		
+
+	<script src="https://valleyfairdental.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4" defer=""></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/827767304/?random=1783044747687&amp;cv=11&amp;fst=1783044747687&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be66u1v9212480453z86931855za20gzb6931855zd6931855xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938465~115938468~118897921~118897931~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fvalleyfairdental.com%2Fcdcp-information-for-patients%2F&amp;rcb=11&amp;frm=0&amp;tiba=CDCP%20Information%20for%20Patients&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=492559373.1783044731&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/827767304/?random=1783044747725&amp;cv=11&amp;fst=1783044747725&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be66u1v9212480453z86931855za20gzb6931855zd6931855xea&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938465~115938468~118897921~118897931~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fvalleyfairdental.com%2Fcdcp-information-for-patients%2F&amp;rcb=11&amp;frm=0&amp;tiba=CDCP%20Information%20for%20Patients&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=492559373.1783044731&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;_tu=CA&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1035996087/?random=1783044748543&amp;cv=11&amp;fst=1783044748543&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be66u1v9211340363z86931855za20gzb6931855zd6931855xea&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938465~115938468~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fvalleyfairdental.com%2Fcdcp-information-for-patients%2F&amp;rcb=13&amp;frm=0&amp;tiba=CDCP%20Information%20for%20Patients&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=492559373.1783044731&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;_tu=CA&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script><link href="https://cdn.userway.org/styles/2026-06-09-08-22-25/widget_base.css?v=1780993345047" type="text/css" rel="stylesheet"><link rel="canonical" href="https://canadiangovernmentdentalplan.ca/cdcp-information-for-patients/"></head> 
+	<body class="wp-singular page-template-default page page-id-3228 wp-theme-dental wp-child-theme-dental-child wpb-js-composer js-comp-ver-8.7.2 vc_responsive">
+						<div class="uwy userway_p2" data-uw-feature-ignore="true" data-uw-rm-ignore="true" title="Accessibility Menu" style="background-color: transparent !important; overflow: initial !important;"><div class="userway_buttons_wrapper"><div class="ulsti hidden userway_dark" id="userwayLstIcon" aria-label="Translations Menu" role="button" tabindex="0" aria-haspopup="dialog" data-uw-s19-ignore="" title="Translations Menu" style="background: rgb(0, 115, 207) !important;"><span class="uiiw"></span><div class="ups"><img width="43" height="43" data-uw-rm-ignore="" class="si_w" aria-hidden="true" alt="Spinner: White decorative" src="https://cdn.userway.org/widgetapp/images/spin_wh.svg"></div><span class="usr lst-spacer"></span></div><div class="uai userway_dark" id="userwayAccessibilityIcon" aria-label="Accessibility Menu" role="button" tabindex="0" aria-haspopup="dialog" title="Accessibility Menu" style="background: rgb(0, 115, 207) !important;"><span class="uiiw"><img data-uw-rm-ignore="" class="ui_w" role="presentation" alt="" src="https://cdn.userway.org/widgetapp/images/body_wh.svg"></span><div class="ups"><img width="43" height="43" data-uw-rm-ignore="" class="si_w" aria-hidden="true" alt="Spinner: White decorative" src="https://cdn.userway.org/widgetapp/images/spin_wh.svg"></div><span class="usr"></span></div><div class="uwaw-dictionary-tooltip"></div></div><iframe class="uwif userway_p2" data-uw-ignore-translate="true" name="userway" title="UserWay Accessibility Menu" allow="clipboard-write" style="max-width: 100vw !important; visibility: visible !important; opacity: 1 !important; color-scheme: light !important;"></iframe></div><div class="uw-s10-bottom-ruler-guide"></div><div class="uw-s10-right-ruler-guide"></div><div class="uw-s10-left-ruler-guide"></div><div class="uw-s10-reading-guide"><div class="uw-s10-reading-guide__arrow"></div></div><div class="uw-s12-tooltip" aria-hidden="true"></div><div id="page" class="site page-cdcp-information-for-patients">
+						<header id="masthead" class="site-header header-transparent" role="banner">
+				 
+									<div class="top-header">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-3"><a class="navbar-brand header-image" href="https://valleyfairdental.com/" title="ValleyFair Dental Clinic" rel="home"><img src="https://valleyfairdental.com/wp-content/uploads/2020/12/logo-1.png" alt="ValleyFair Dental Clinic" border="0"></a></div>	
+								<div class="col-md-9"><aside id="custom_html-1" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><ul class="top-contact-info hide-tab">
+    <li><a href="https://www.google.com/maps?cid=16407335659502064630" target="_blank">180-22709 Lougheed Hwy, Maple Ridge, BC V2X 2V5</a></li>
+    <li><a href="tel:+12362047578">(236) 204-7578</a></li>
+    <li class="social-icon hide-tab"><a href="https://www.facebook.com/ValleyFairDental" target="_blank"><i class="ne-icon-fb-circle-icon"></i></a><a href="https://www.google.com/maps?cid=16407335659502064630" target="_blank"><i class="ne-icon-google-circle-icon"></i></a> <a href="https://www.linkedin.com/company/valleyfair-dental/" target="_blank"><i class="ne-icon-linkdin-circle-icon"></i></a><a href="https://www.youtube.com/user/ValleyFairDental" target="_blank"><i class="ne-icon-youtube-circle-icon"></i></a><a href="https://twitter.com/VFDental" target="_blank"><i class="ne-icon-twitter-circle-icon"></i></a><a href="https://www.instagram.com/valleyfair_dental/" target="_blank"><i class="ne-icon-instagram-circle-icon"></i></a></li>
+</ul>
+<div class="top-contact-info show991 show-mobile">
+    <div class="top100"><a href="https://www.google.com/maps/place/ValleyFair+Dental+Clinic/@49.2177475,-122.5931192,17z/data=!3m2!4b1!5s0x5485d35c77251583:0xb73905f644aa78f0!4m5!3m4!1s0x410b7f46ad15021b:0xe3b290da3f3853f6!8m2!3d49.2177475!4d-122.5909305" target="_blank">180-22709 Lougheed Hwy, Maple Ridge, BC</a></div>
+    <div class="top50"><a href="tel:+12362047578">(236) 204-7578</a></div>
+    <div class="top50"><a href="https://valleyfairdental.com/request-appointment/">Request Appointment</a></div>
+</div></div></aside></div>	
+							</div>
+						</div>
+					</div>
+				 
+			
+				<nav class="navbar navbar-expand-md navbar-light">                   	                          
+			
+					<div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul id="menu-menu-1" class="nav navbar-nav ml-auto"><li id="menu-item-2089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2089 nav-item"><a title="Home" href="https://valleyfairdental.com/" class="nav-link" data-ps2id-api="true">Home</a></li>
+<li id="menu-item-2080" class="abt-us menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children dropdown active menu-item-2080 nav-item"><a title="About" href="https://valleyfairdental.com/about-us/" class="nav-link" data-ps2id-api="true">About</a>
+<ul class="dropdown-menu" role="menu">
+	<li id="menu-item-2088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2088 nav-item"><a title="About us" href="https://valleyfairdental.com/about-us/" class="dropdown-item" data-ps2id-api="true">About us</a></li>
+	<li id="menu-item-1792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1792 nav-item"><a title="Our Team" href="https://valleyfairdental.com/our-team/" class="dropdown-item" data-ps2id-api="true">Our Team</a></li>
+	<li id="menu-item-3230" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3228 current_page_item active menu-item-3230 nav-item"><a title="CDCP Information for Patients" href="https://valleyfairdental.com/cdcp-information-for-patients/" class="dropdown-item" data-ps2id-api="true">CDCP Information for Patients</a></li>
+	<li id="menu-item-3086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3086 nav-item"><a title="Patient Financing" href="https://valleyfairdental.com/patient-financing/" class="dropdown-item" data-ps2id-api="true">Patient Financing</a></li>
+	<li id="menu-item-1822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822 nav-item"><a title="Blog" href="https://valleyfairdental.com/blog/" class="dropdown-item" data-ps2id-api="true">Blog</a></li>
+	<li id="menu-item-2094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2094 nav-item"><a title="Charity Photo Gallery" href="https://valleyfairdental.com/photo-gallery/" class="dropdown-item" data-ps2id-api="true">Charity Photo Gallery</a></li>
+	<li id="menu-item-2448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2448 nav-item"><a title="Practice Gallery" href="https://valleyfairdental.com/practice-gallery/" class="dropdown-item" data-ps2id-api="true">Practice Gallery</a></li>
+	<li id="menu-item-2095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2095 nav-item"><a title="Social Responsibility" href="https://valleyfairdental.com/social-responsibility/" class="dropdown-item" data-ps2id-api="true">Social Responsibility</a></li>
+</ul>
+<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span></li>
+<li id="menu-item-1733" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-1733 nav-item"><a title="Services &amp; Technology" href="https://valleyfairdental.com/service/our-services/" class="nav-link" data-ps2id-api="true">Services &amp; Technology</a>
+<ul class="dropdown-menu" role="menu">
+	<li id="menu-item-1747" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-1747 nav-item"><a title="Cosmetic Dentistry" href="https://valleyfairdental.com/service/cosmetic/" class="dropdown-item" data-ps2id-api="true">Cosmetic Dentistry</a>
+	<ul class="dropdown-menu" role="menu">
+		<li id="menu-item-1743" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1743 nav-item"><a title="Porcelain Veneers" href="https://valleyfairdental.com/service/porcelain-veneers/" class="dropdown-item" data-ps2id-api="true">Porcelain Veneers</a></li>
+		<li id="menu-item-1738" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1738 nav-item"><a title="Dental Crowns" href="https://valleyfairdental.com/service/dental-crowns/" class="dropdown-item" data-ps2id-api="true">Dental Crowns</a></li>
+	</ul>
+<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span></li>
+	<li id="menu-item-1748" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-1748 nav-item"><a title="Restorative Dentistry" href="https://valleyfairdental.com/service/restorations/" class="dropdown-item" data-ps2id-api="true">Restorative Dentistry</a>
+	<ul class="dropdown-menu" role="menu">
+		<li id="menu-item-1736" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1736 nav-item"><a title="Dental Bridges" href="https://valleyfairdental.com/service/dental-bridges/" class="dropdown-item" data-ps2id-api="true">Dental Bridges</a></li>
+		<li id="menu-item-1739" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1739 nav-item"><a title="Dental Implants" href="https://valleyfairdental.com/service/dental-implants/" class="dropdown-item" data-ps2id-api="true">Dental Implants</a></li>
+		<li id="menu-item-1734" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1734 nav-item"><a title="Composite Fillings" href="https://valleyfairdental.com/service/composite-fillings/" class="dropdown-item" data-ps2id-api="true">Composite Fillings</a></li>
+		<li id="menu-item-1740" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1740 nav-item"><a title="Dentures" href="https://valleyfairdental.com/service/dentures/" class="dropdown-item" data-ps2id-api="true">Dentures</a></li>
+		<li id="menu-item-2300" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2300 nav-item"><a title="Inlays &amp; Onlays" href="https://valleyfairdental.com/service/inlays-onlays/" class="dropdown-item" data-ps2id-api="true">Inlays &amp; Onlays</a></li>
+	</ul>
+<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span></li>
+	<li id="menu-item-1749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-1749 nav-item"><a title="Sedation Dentistry" href="#" class="dropdown-item __mPS2id" data-ps2id-api="true">Sedation Dentistry</a>
+	<ul class="dropdown-menu" role="menu">
+		<li id="menu-item-1735" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1735 nav-item"><a title="Conscious Sedation" href="https://valleyfairdental.com/service/conscious-sedation/" class="dropdown-item" data-ps2id-api="true">Conscious Sedation</a></li>
+	</ul>
+<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span></li>
+	<li id="menu-item-1750" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-1750 nav-item"><a title="General Dentistry" href="#" class="dropdown-item __mPS2id" data-ps2id-api="true">General Dentistry</a>
+	<ul class="dropdown-menu" role="menu">
+		<li id="menu-item-2326" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2326 nav-item"><a title="Dental Hygiene" href="https://valleyfairdental.com/service/dental-cleanings-and-check-ups/#dental-hygiene" class="dropdown-item __mPS2id" data-ps2id-api="true">Dental Hygiene</a></li>
+		<li id="menu-item-1745" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1745 nav-item"><a title="Teeth Whitening" href="https://valleyfairdental.com/service/teeth-whitening/" class="dropdown-item" data-ps2id-api="true">Teeth Whitening</a></li>
+		<li id="menu-item-1746" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1746 nav-item"><a title="Wisdom Tooth Extractions" href="https://valleyfairdental.com/service/wisdom-tooth-extractions/" class="dropdown-item" data-ps2id-api="true">Wisdom Tooth Extractions</a></li>
+		<li id="menu-item-1744" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1744 nav-item"><a title="Root Canal Therapy" href="https://valleyfairdental.com/service/root-canal-therapy/" class="dropdown-item" data-ps2id-api="true">Root Canal Therapy</a></li>
+		<li id="menu-item-2554" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2554 nav-item"><a title="Dental Cleaning &amp; Check-Ups" href="https://valleyfairdental.com/service/dental-cleanings-and-check-ups/" class="dropdown-item" data-ps2id-api="true">Dental Cleaning &amp; Check-Ups</a></li>
+		<li id="menu-item-2552" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2552 nav-item"><a title="Dental Sealants" href="https://valleyfairdental.com/service/dental-cleanings-and-check-ups/#dental-sealants" class="dropdown-item __mPS2id" data-ps2id-api="true">Dental Sealants</a></li>
+		<li id="menu-item-2553" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2553 nav-item"><a title="X-Rays" href="https://valleyfairdental.com/service/dental-cleanings-and-check-ups/#x-ray" class="dropdown-item __mPS2id" data-ps2id-api="true">X-Rays</a></li>
+		<li id="menu-item-2299" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2299 nav-item"><a title="Gum Grafting" href="https://valleyfairdental.com/service/gum-grafting/" class="dropdown-item" data-ps2id-api="true">Gum Grafting</a></li>
+	</ul>
+<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span></li>
+	<li id="menu-item-1751" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-1751 nav-item"><a title="Oral Surgery" href="#" class="dropdown-item __mPS2id" data-ps2id-api="true">Oral Surgery</a>
+	<ul class="dropdown-menu" role="menu">
+		<li id="menu-item-1742" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1742 nav-item"><a title="Laser Dentistry" href="https://valleyfairdental.com/service/laser-dentistry/" class="dropdown-item" data-ps2id-api="true">Laser Dentistry</a></li>
+		<li id="menu-item-1741" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1741 nav-item"><a title="Emergency Dentistry" href="https://valleyfairdental.com/service/emergency-dentistry/" class="dropdown-item" data-ps2id-api="true">Emergency Dentistry</a></li>
+	</ul>
+<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span></li>
+	<li id="menu-item-2068" class="tech-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-2068 nav-item"><a title="Technology" href="https://valleyfairdental.com/technology/" class="dropdown-item" data-ps2id-api="true">Technology</a>
+	<ul class="dropdown-menu" role="menu">
+		<li id="menu-item-2058" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2058 nav-item"><a title="Digital Radiography" href="https://valleyfairdental.com/technology/#Digital-Radiography" class="dropdown-item __mPS2id" data-ps2id-api="true">Digital Radiography</a></li>
+		<li id="menu-item-2070" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2070 nav-item"><a title="VELscope Oral Cancer Screening" href="https://valleyfairdental.com/technology/#VELscope" class="dropdown-item __mPS2id" data-ps2id-api="true">VELscope Oral Cancer Screening</a></li>
+		<li id="menu-item-2060" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2060 nav-item"><a title="Kavo Key 3 Laser" href="https://valleyfairdental.com/technology/#Kavo-Key-3-Laser" class="dropdown-item __mPS2id" data-ps2id-api="true">Kavo Key 3 Laser</a></li>
+		<li id="menu-item-2061" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2061 nav-item"><a title="Digital Communications" href="https://valleyfairdental.com/technology/#Digital-Communications" class="dropdown-item __mPS2id" data-ps2id-api="true">Digital Communications</a></li>
+		<li id="menu-item-2062" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2062 nav-item"><a title="Intraoral Camera" href="https://valleyfairdental.com/technology/#Intraoral-Camera" class="dropdown-item __mPS2id" data-ps2id-api="true">Intraoral Camera</a></li>
+		<li id="menu-item-2063" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2063 nav-item"><a title="iTero Scanner" href="https://valleyfairdental.com/technology/#iTero-Scanner" class="dropdown-item __mPS2id" data-ps2id-api="true">iTero Scanner</a></li>
+	</ul>
+<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span></li>
+	<li id="menu-item-2302" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2302 nav-item"><a title="Invisalign" href="https://valleyfairdental.com/service/invisalign/" class="dropdown-item" data-ps2id-api="true">Invisalign</a></li>
+	<li id="menu-item-2307" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-2307 nav-item"><a title="Dental Appliances" href="#" class="dropdown-item __mPS2id" data-ps2id-api="true">Dental Appliances</a>
+	<ul class="dropdown-menu" role="menu">
+		<li id="menu-item-2301" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2301 nav-item"><a title="Mouthguards" href="https://valleyfairdental.com/service/mouthguards/" class="dropdown-item" data-ps2id-api="true">Mouthguards</a></li>
+		<li id="menu-item-2543" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2543 nav-item"><a title="Night Guard" href="https://valleyfairdental.com/service/mouthguards/#nightguard" class="dropdown-item __mPS2id" data-ps2id-api="true">Night Guard</a></li>
+		<li id="menu-item-2546" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2546 nav-item"><a title="Sports Mouth Guards" href="https://valleyfairdental.com/service/mouthguards/#sports-mouth-guards" class="dropdown-item __mPS2id" data-ps2id-api="true">Sports Mouth Guards</a></li>
+		<li id="menu-item-2547" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2547 nav-item"><a title="Retainers" href="https://valleyfairdental.com/service/mouthguards/#retainers" class="dropdown-item __mPS2id" data-ps2id-api="true">Retainers</a></li>
+	</ul>
+<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span></li>
+</ul>
+<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span></li>
+<li id="menu-item-1804" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1804 nav-item"><a title="Contact" href="https://valleyfairdental.com/contact-us/" class="nav-link" data-ps2id-api="true">Contact</a>
+<ul class="dropdown-menu" role="menu">
+	<li id="menu-item-2099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2099 nav-item"><a title="Contact Us" href="https://valleyfairdental.com/contact-us/" class="dropdown-item" data-ps2id-api="true">Contact Us</a></li>
+	<li id="menu-item-2106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2106 nav-item"><a title="Emergency Dental" href="https://valleyfairdental.com/emergency-dental-services/" class="dropdown-item" data-ps2id-api="true">Emergency Dental</a></li>
+</ul>
+<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span></li>
+</ul></div>    
+				</nav>  
+			</header><!-- #masthead -->            
+
+			<div id="content" class="site-content">
+		 
+					<div class="header-banner" style="height:300px;">
+									<h1>CDCP Information for Patients</h1>
+							</div>
+		
+	
+ 
+		 
+				
+				<div class="container-fluid">
+			<div class="row"> 
+    <div id="primary" class="content-area col-md-12">
+        <main id="main" class="site-main" role="main">
+
+             
+                
+<article id="post-3228" class="post-3228 page type-page status-publish hentry">
+	<div class="entry-content">
+		<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element">
+		<div class="wpb_wrapper">
+			<div id="cdcp-intro"><em>The below information provides an overview of the CDCP program. Please visit the <a href="https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html" target="_blank" rel="noopener">government CDCP website</a> for more information, or <a href="/contact-us/">contact us</a> if you’d like to book an appointment.</em></div>
+<hr>
+<div id="cdcp-section-container"><h1>CDCP Information for Patients</h1><div><p>[et_pb_section fb_built=”1″ admin_label=”section” _builder_version=”4.16″ global_colors_info=”{}”][et_pb_row admin_label=”row” _builder_version=”4.16″ background_size=”initial” background_position=”top_left” background_repeat=”repeat” global_colors_info=”{}”][et_pb_column type=”4_4″ _builder_version=”4.16″ custom_padding=”|||” global_colors_info=”{}” custom_padding__hover=”|||”][et_pb_text admin_label=”Text” _builder_version=”4.27.6″ background_size=”initial” background_position=”top_left” background_repeat=”repeat” hover_enabled=”0″ global_colors_info=”{}” sticky_enabled=”0″]</p>
+<h2 class="cdcp" style="margin-top: 30px;">Understanding the Canadian Dental Care Plan</h2>
+<p>What is CDCP? The Canadian Dental Care Plan (CDCP) is a federally delivered public dental care initiative launched in December 2023. It aims to provide comprehensive dental care services to eligible Canadian residents, ensuring access to essential oral health care. This plan covers a wide range of services, from preventive care to more complex procedures, to maintain and improve the oral health of Canadians. Here, you will find detailed information about the CDCP and its benefits.</p>
+<h2 class="cdcp">What is CDCP and What Does it Offer?</h2>
+<h3 class="cdcp">Comprehensive Dental Coverage</h3>
+<p>The CDCP offers a robust range of dental services designed to keep your teeth and gums healthy. These services include:</p>
+<ul>
+<li><strong>Preventive Services:</strong> Regular check-ups, cleanings, fluoride treatments, and sealants to prevent oral health issues.</li>
+<li><strong>Diagnostic Services:</strong> Comprehensive examinations and X-rays to diagnose potential dental problems.</li>
+<li><strong>Restorative Services:</strong> Fillings, crowns, and other treatments to restore damaged teeth.</li>
+<li><strong>Endodontic Services:</strong> Root canal treatments to address issues within the tooth.</li>
+<li><strong>Prosthodontic Services:</strong> Dentures and partial dentures to replace missing teeth.</li>
+<li><strong>Periodontal Services:</strong> Deep scaling and other treatments for gum health.</li>
+<li><strong>Oral Surgery Services:</strong> Extractions and other surgical procedures as needed.</li>
+</ul>
+<p><em>(<a href="https://canadiangovernmentdentalplan.ca/what-is-cdcp/" target="_blank" rel="noopener">Source</a>)</em></p>
+<hr>
+<h3 class="cdcp">Who Qualifies for the CDCP?</h3>
+<h4 class="cdcp">Seniors Aged 65 and Above:</h4>
+<ul>
+<li>Eligibility: Canadian residents aged 65 and older.</li>
+<li>Application Start Date: Applications opened in December 2023.</li>
+</ul>
+<h4 class="cdcp">Adults with a Valid Disability Tax Credit Certificate:</h4>
+<ul>
+<li>Eligibility: Adults with a valid Disability Tax Credit certificate.</li>
+<li>Application Start Date: Applications started on June 27, 2024.</li>
+</ul>
+<h4 class="cdcp">Children Under the Age of 18:</h4>
+<ul>
+<li>Eligibility: Canadian residents under the age of 18.</li>
+<li>Application Start Date: Applications started on June 27, 2024.</li>
+</ul>
+<h4 class="cdcp">All Remaining Eligible Canadian Residents:</h4>
+<ul>
+<li>Eligibility: Applications will open in May 2025, with coverage starting as early as June 1, 2025.</li>
+<li>Application Start Date:
+<ul>
+<li>May 1, 2025: Ages 55 to 64</li>
+<li>May 15, 2025: Ages 18 to 34</li>
+<li>May 29, 2025: Ages 35 to 54.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="cdcp">CDCP Eligibility Criteria</h3>
+<p>Eligibility for the CDCP is based on several factors, including age, disability status, and income. Here’s a detailed breakdown of the criteria:</p>
+<h4 class="cdcp">Age Requirements:</h4>
+<ul>
+<li>Specific age groups have defined application start dates.</li>
+<li>Seniors (65+), children (under 18), and adults with specific conditions have priority phases.</li>
+<li>All Remaining Eligible Residents (Aged 18 to 64) may apply in May 2025, with coverage starting as early as June 1, 2025. See application process for details.</li>
+</ul>
+<h4 class="cdcp">Disability Status:</h4>
+<ul>
+<li>Adults with a valid Disability Tax Credit certificate are eligible.</li>
+<li>This includes conditions that significantly impair daily living activities.</li>
+</ul>
+<h4 class="cdcp">Income Limits:</h4>
+<ul>
+<li>The CDCP is designed to assist those with lower and moderate incomes.</li>
+<li>Detailed income limits and co-payment structures will be provided in the Cost section.</li>
+</ul>
+<p><em>(<a href="https://canadiangovernmentdentalplan.ca/cdcp-eligibility/" target="_blank" rel="noopener">Source</a>)</em></p>
+<hr>
+<h3 class="cdcp">Applying For The CDCP</h3>
+<p>Applying for the Canadian Dental Care Plan (CDCP) is a straightforward process designed to ensure that eligible Canadian residents can access essential dental care services. This section provides a detailed guide on how to apply, the necessary documentation, and tips to make your Canadian Dental Care Plan application process as smooth as possible.</p>
+<p><strong><a href="https://canadiangovernmentdentalplan.ca/how-to-apply/" target="_blank" rel="noopener"><u>Applying for the Canadian Dental Care Plan (CDCP)</u></a></strong> <em>(external link)</em></p>
+<h4 class="cdcp">Step-by-Step Guide to Applying for the CDCP</h4>
+<h5 class="cdcp">1. Check Eligibility</h5>
+<p>Before filling out your Canadian Dental Care Plan application, ensure that you meet the eligibility criteria for the CDCP. Refer to the Eligibility section to verify your qualification based on age, disability status, and income.</p>
+<h5 class="cdcp">2. Gather Required Documentation</h5>
+<p>To complete your Canadian Dental Care Plan application, you will need the following information for yourself and your spouse or common-law partner (if applicable):</p>
+<ul>
+<li>Social Insurance Number (SIN)</li>
+<li>Date of Birth</li>
+<li>Full Name</li>
+<li>Home and Mailing Address</li>
+<li>List of any dental coverage through government social programs (if applicable)</li>
+<li>Proof of tax filing for 2023 (Notice of Assessment)</li>
+</ul>
+<h5 class="cdcp">3. Application Process</h5>
+<p>Applications for the CDCP open in phases. Ensure you apply during the appropriate phase for your eligibility group:</p>
+<ul>
+<li>Seniors aged 65 and above: Applications opened in December 2023.</li>
+<li>Adults with a valid Disability Tax Credit certificate: Applications started on June 27, 2024.</li>
+<li>Children under the age of 18: Applications started on June 27, 2024.</li>
+<li>All remaining eligible Canadian residents (Aged 18 to 64): Applications will open in May 2025, with coverage starting as early as June 1, 2025.</li>
+<li>Key Dates to Apply for Ages 18 to 64:
+<ul>
+<li>May 1, 2025: Ages 55 to 64</li>
+<li>May 15, 2025: Ages 18 to 34</li>
+<li>May 29, 2025 Ages 35 to 54.</li>
+</ul>
+</li>
+</ul>
+<h5 class="cdcp">4. Apply Online</h5>
+<p>The easiest way to apply for the CDCP is through the online application portal:</p>
+<ul>
+<li>Visit the CDCP Online Application</li>
+<li>Follow the prompts to complete the application form</li>
+<li>Submit all required documentation and personal information</li>
+</ul>
+<h5 class="cdcp">5. Application Assistance</h5>
+<p>If you need help with your Canadian Dental Care Plan application, you can apply with the assistance of a trusted person or delegate. Here’s how:</p>
+<ul>
+<li>Trusted Person: A family member or friend can help you apply by entering your information on your behalf.</li>
+<li>Delegate:&nbsp;A legal representative or designated individual can complete the application for you.</li>
+</ul>
+<h3 class="cdcp">After You Apply</h3>
+<h4 class="cdcp">After submitting your application:</h4>
+<ul>
+<li>Enrolment Confirmation: You will receive a confirmation of your enrolment from Sun Life, the administrator of the CDCP.</li>
+<li>Welcome Package: Within three months, Sun Life will send you a welcome package that includes your member card and coverage start date.</li>
+</ul>
+<h4 class="cdcp">Important Tips for Applying:</h4>
+<p>Ensure all information is accurate and complete to avoid delays.</p>
+<ul>
+<li>Keep a copy of your submitted application and any correspondence.</li>
+<li>Check the CDCP website regularly for updates and additional information.</li>
+</ul>
+<p>(<a href="https://canadiangovernmentdentalplan.ca/how-to-apply/" target="_blank" rel="noopener">Source</a>)</p>
+<p>[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]</p>
+</div></div>
+<hr>
+<div id="cdcp-outro"><em>The above information provides an overview of the CDCP program. Please visit the <a href="https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html" target="_blank" rel="noopener">government CDCP website</a> for more information, or <a href="/contact-us/">contact us</a> if you’d like to book an appointment.</em></div>
+<p><script>
+    (function (w, d) {
+        var loader = function () {
+            var s = d.createElement("script"),
+                tag = d.getElementsByTagName("script")[0];
+            s.src = "https://canadiangovernmentdentalplan.ca/assets/cdcp-external.js";
+            tag.parentNode.insertBefore(s, tag);
+        };
+        if (w.addEventListener) {
+            w.addEventListener("load", loader, false);
+        } else if (w.attachEvent) {
+            w.attachEvent("onload", loader);
+        } else {
+            w.onload = loader;
+        }
+    })(window, document);
+</script></p>
+
+		</div>
+	</div>
+</div></div></div></div>
+</div>			</div><!-- .entry-content -->
+</article><!-- #post-## --> 
+            
+        </main><!-- #main -->
+    </div><!-- #primary -->
+ 
+            </div><!-- .row --> 
+        </div><!-- .container -->	
+		    </div><!-- #content -->
+		
+	
+				<div class="footer-map-section">	
+				<div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="footer-map-form">
+<div class="footer-map">
+	
+	
+    <iframe style="width: 100%; border: 0;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10424.375340724937!2d-122.5909305!3d49.2177475!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3b290da3f3853f6!2sValleyFair%20Dental%20Clinic%20-%20Dentist%20in%20Maple%20Ridge%2C%20BC!5e0!3m2!1sen!2sin!4v1609936457603!5m2!1sen!2sin"></iframe></div>
+<div class="form-right-info">
+    <div class="info--text icon--phone">
+        <h4>Phone</h4>
+        <a href="tel:+12362047578">(236) 204-7578</a>
+    </div>
+    <div class="info--text icon--email">
+        <h4>Email</h4>
+        <a href="mailto:info@valleyfairdental.com">info@valleyfairdental.com</a>
+    </div>
+    <div class="info--text icon--address">
+        <h4>Address</h4>
+        <a href="https://www.google.com/maps?cid=16407335659502064630" target="_blank">180-22709 Lougheed Hwy, <span class="db">Maple Ridge, BC V2X 2V5</span></a>
+    </div>
+    <div class="info--text icon--hours">
+        <h4>Hours of Operation</h4>
+        
+ <div class="hours_shortcode"><ul class="child_hours_ul"><li><span class="child_dayofweek_long"><time day="1" itemprop="weekDay">Monday:</time></span><span class="child_hours"><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="5:00 pm" itemprop="endTime">5:00 pm</time></span></span></li><li><span class="child_dayofweek_long"><time day="2" itemprop="weekDay">Tuesday:</time></span><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="8:00 pm" itemprop="endTime">8:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="3" itemprop="weekDay">Wednesday:</time></span><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="8:00 pm" itemprop="endTime">8:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="4" itemprop="weekDay">Thursday:</time></span><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="8:00 pm" itemprop="endTime">8:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="5" itemprop="weekDay">Friday:</time></span><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="5:00 pm" itemprop="endTime">5:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="6" itemprop="weekEnd">Saturday:</time></span><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="3:00 pm" itemprop="endTime">3:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="7" itemprop="weekEnd">Sunday:</time></span><span class="child_replace">Closed</span></li></ul></div> 
+    </div>
+    <div>
+    <ul class="footer-contact-info"><li class="social-icon hide-tab"><a href="https://www.facebook.com/ValleyFairDental" target="_blank"><i class="ne-icon-fb-circle-icon"></i></a><a href="https://www.google.com/maps?cid=16407335659502064630" target="_blank"><i class="ne-icon-google-circle-icon"></i></a> <a href="https://www.linkedin.com/company/valleyfair-dental/" target="_blank"><i class="ne-icon-linkdin-circle-icon"></i></a><a href="https://www.youtube.com/user/ValleyFairDental" target="_blank"><i class="ne-icon-youtube-circle-icon"></i></a><a href="https://twitter.com/VFDental" target="_blank"><i class="ne-icon-twitter-circle-icon"></i></a><a href="https://www.instagram.com/valleyfair_dental/" target="_blank"><i class="ne-icon-instagram-circle-icon"></i></a></li></ul>
+    </div>
+</div> 
+</div></div></div>			</div>
+	    <footer id="colophon" class="site-footer">
+		<div class="footer-middle">
+			<div class="container-fluid">
+			  <div class="site-footer-inner hidden-xs">
+				<div class="row">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-3"></div>
+					<div class="col-sm-3"></div>
+					<div class="col-sm-3"></div>
+				</div><!-- .site-footer-inner desktop-->
+			  </div><!-- .site-footer-inner desktop-->
+				
+			  <div class="site-footer-inner mobile-footer visible-xs">
+				 <div class="row">
+					<div class="col-sm-12">
+						<a class="btn btn-primary collapsed __mPS2id" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Contact Us</a>
+						<div class="collapse" id="collapseExample1"></div>
+					</div>
+					<div class="col-sm-12">
+						<a class="btn btn-primary collapsed accordion2 __mPS2id" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2"> </a>
+						<div class="collapse" id="collapseExample2"></div>	
+					</div> 
+					<div class="col-sm-12">
+						<a class="btn btn-primary collapsed accordion3 __mPS2id" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3"></a>
+						<div class="collapse" id="collapseExample3"></div>
+					</div>
+					<div class="col-sm-12">
+						<a class="btn btn-primary collapsed accordion4 __mPS2id" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"></a>
+						<div class="collapse" id="collapseExample4"></div>
+					</div>
+				 </div><!-- .row -->
+			  </div><!-- .site-footer-inner mobile-->
+			</div><!-- .container -->	
+		</div><!-- .footer-middle -->	
+		
+		<div class="footer-bottom">						
+			<div class="container-fluid">								
+				<div class="row">										
+					<div class="col-sm-12"> 														
+							<div class="footer-notification">								
+								<div id="nav_menu-1" class="widget widget_nav_menu"><div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-1793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1793"><a href="https://valleyfairdental.com/" data-ps2id-api="true">Home</a></li>
+<li id="menu-item-1795" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1795"><a href="https://valleyfairdental.com/our-team/" data-ps2id-api="true">Our Team</a></li>
+<li id="menu-item-1799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1799"><a href="https://valleyfairdental.com/blog/" data-ps2id-api="true">Blog</a></li>
+<li id="menu-item-1794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1794"><a href="https://valleyfairdental.com/contact-us/" data-ps2id-api="true">Contact Us</a></li>
+<li id="menu-item-3038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3038"><a href="https://valleyfairdental.com/privacy-policy/" data-ps2id-api="true">Privacy Policy</a></li>
+<li id="menu-item-3256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3256"><a href="https://valleyfairdental.com/terms-of-use/" data-ps2id-api="true">Terms of Use</a></li>
+</ul></div></div><div id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div>Ⓒ 2026 Copyright Valley Fair Dental. All Right Reserved</div>
+<div class="sticky-phone mobile-msg popup-content-bounce-in-up"><a href="tel:+12362047578" class="sticky-ph-no" target="blank"><span class="db-block">(236) 204-7578</span></a></div></div></div>			
+							</div>												
+						</div>					
+				</div><!-- .row -->			
+			</div><!-- .container -->        
+		</div><!-- .footer-bottom -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/dental-child/*","/wp-content/themes/dental/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+			<div class="wprm-wrapper">
+        
+        <!-- Overlay Starts here -->
+			 			   <div class="wprm-overlay"></div>
+			         <!-- Overlay Ends here -->
+			
+			         <div id="wprmenu_bar" class="wprmenu_bar normalslide left">
+  <div class="hamburger hamburger--slider" role="button" tabindex="0" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="mg-wprm-wrap">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </div>
+  <div class="menu_title">
+      <a href="#">
+      MENU    </a>
+      </div>
+</div>			 
+			<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left default " id="mg-wprm-wrap">
+				
+				
+				<ul id="wprmenu_menu_ul">
+  
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2089"><a href="https://valleyfairdental.com/" data-ps2id-api="true">Home</a></li>
+<li class="abt-us menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-2080 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://valleyfairdental.com/about-us/" data-ps2id-api="true" class="wprmenu_parent_item">About</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2088"><a href="https://valleyfairdental.com/about-us/" data-ps2id-api="true">About us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1792"><a href="https://valleyfairdental.com/our-team/" data-ps2id-api="true">Our Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3228 current_page_item menu-item-3230"><a href="https://valleyfairdental.com/cdcp-information-for-patients/" aria-current="page" data-ps2id-api="true">CDCP Information for Patients</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3086"><a href="https://valleyfairdental.com/patient-financing/" data-ps2id-api="true">Patient Financing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="https://valleyfairdental.com/blog/" data-ps2id-api="true">Blog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2094"><a href="https://valleyfairdental.com/photo-gallery/" data-ps2id-api="true">Charity Photo Gallery</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2448"><a href="https://valleyfairdental.com/practice-gallery/" data-ps2id-api="true">Practice Gallery</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2095"><a href="https://valleyfairdental.com/social-responsibility/" data-ps2id-api="true">Social Responsibility</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1733 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://valleyfairdental.com/service/our-services/" data-ps2id-api="true" class="wprmenu_parent_item">Services &amp; Technology</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1747 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://valleyfairdental.com/service/cosmetic/" data-ps2id-api="true" class="wprmenu_parent_item">Cosmetic Dentistry</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1743"><a href="https://valleyfairdental.com/service/porcelain-veneers/" data-ps2id-api="true">Porcelain Veneers</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1738"><a href="https://valleyfairdental.com/service/dental-crowns/" data-ps2id-api="true">Dental Crowns</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1748 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://valleyfairdental.com/service/restorations/" data-ps2id-api="true" class="wprmenu_parent_item">Restorative Dentistry</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1736"><a href="https://valleyfairdental.com/service/dental-bridges/" data-ps2id-api="true">Dental Bridges</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1739"><a href="https://valleyfairdental.com/service/dental-implants/" data-ps2id-api="true">Dental Implants</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1734"><a href="https://valleyfairdental.com/service/composite-fillings/" data-ps2id-api="true">Composite Fillings</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1740"><a href="https://valleyfairdental.com/service/dentures/" data-ps2id-api="true">Dentures</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2300"><a href="https://valleyfairdental.com/service/inlays-onlays/" data-ps2id-api="true">Inlays &amp; Onlays</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1749 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="#" data-ps2id-api="true" class="wprmenu_parent_item __mPS2id">Sedation Dentistry</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1735"><a href="https://valleyfairdental.com/service/conscious-sedation/" data-ps2id-api="true">Conscious Sedation</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1750 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="#" data-ps2id-api="true" class="wprmenu_parent_item __mPS2id">General Dentistry</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2326"><a href="https://valleyfairdental.com/service/dental-cleanings-and-check-ups/#dental-hygiene" data-ps2id-api="true" class="__mPS2id">Dental Hygiene</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1745"><a href="https://valleyfairdental.com/service/teeth-whitening/" data-ps2id-api="true">Teeth Whitening</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1746"><a href="https://valleyfairdental.com/service/wisdom-tooth-extractions/" data-ps2id-api="true">Wisdom Tooth Extractions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1744"><a href="https://valleyfairdental.com/service/root-canal-therapy/" data-ps2id-api="true">Root Canal Therapy</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2554"><a href="https://valleyfairdental.com/service/dental-cleanings-and-check-ups/" data-ps2id-api="true">Dental Cleaning &amp; Check-Ups</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2552"><a href="https://valleyfairdental.com/service/dental-cleanings-and-check-ups/#dental-sealants" data-ps2id-api="true" class="__mPS2id">Dental Sealants</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2553"><a href="https://valleyfairdental.com/service/dental-cleanings-and-check-ups/#x-ray" data-ps2id-api="true" class="__mPS2id">X-Rays</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2299"><a href="https://valleyfairdental.com/service/gum-grafting/" data-ps2id-api="true">Gum Grafting</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1751 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="#" data-ps2id-api="true" class="wprmenu_parent_item __mPS2id">Oral Surgery</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1742"><a href="https://valleyfairdental.com/service/laser-dentistry/" data-ps2id-api="true">Laser Dentistry</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-1741"><a href="https://valleyfairdental.com/service/emergency-dentistry/" data-ps2id-api="true">Emergency Dentistry</a></li>
+	</ul>
+</li>
+	<li class="tech-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2068 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://valleyfairdental.com/technology/" data-ps2id-api="true" class="wprmenu_parent_item">Technology</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2058"><a href="https://valleyfairdental.com/technology/#Digital-Radiography" data-ps2id-api="true" class="__mPS2id">Digital Radiography</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2070"><a href="https://valleyfairdental.com/technology/#VELscope" data-ps2id-api="true" class="__mPS2id">VELscope Oral Cancer Screening</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2060"><a href="https://valleyfairdental.com/technology/#Kavo-Key-3-Laser" data-ps2id-api="true" class="__mPS2id">Kavo Key 3 Laser</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2061"><a href="https://valleyfairdental.com/technology/#Digital-Communications" data-ps2id-api="true" class="__mPS2id">Digital Communications</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2062"><a href="https://valleyfairdental.com/technology/#Intraoral-Camera" data-ps2id-api="true" class="__mPS2id">Intraoral Camera</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2063"><a href="https://valleyfairdental.com/technology/#iTero-Scanner" data-ps2id-api="true" class="__mPS2id">iTero Scanner</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2302"><a href="https://valleyfairdental.com/service/invisalign/" data-ps2id-api="true">Invisalign</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2307 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="#" data-ps2id-api="true" class="wprmenu_parent_item __mPS2id">Dental Appliances</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2301"><a href="https://valleyfairdental.com/service/mouthguards/" data-ps2id-api="true">Mouthguards</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2543"><a href="https://valleyfairdental.com/service/mouthguards/#nightguard" data-ps2id-api="true" class="__mPS2id">Night Guard</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2546"><a href="https://valleyfairdental.com/service/mouthguards/#sports-mouth-guards" data-ps2id-api="true" class="__mPS2id">Sports Mouth Guards</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2547"><a href="https://valleyfairdental.com/service/mouthguards/#retainers" data-ps2id-api="true" class="__mPS2id">Retainers</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1804 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://valleyfairdental.com/contact-us/" data-ps2id-api="true" class="wprmenu_parent_item">Contact</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2099"><a href="https://valleyfairdental.com/contact-us/" data-ps2id-api="true">Contact Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2106"><a href="https://valleyfairdental.com/emergency-dental-services/" data-ps2id-api="true">Emergency Dental</a></li>
+</ul>
+</li>
+
+     
+</ul>
+				
+				</div>
+			</div>
+			    <style type="text/css">
+    /* WPR Custom CSS */
+.wprm-overlay.active{ display:none; } #wprmenu_bar .menu_title a{ top:0; color:#fff; }
+    </style>
+    <script type="text/javascript" id="page-scroll-to-id-plugin-script-js-extra">
+/* <![CDATA[ */
+var mPS2id_params = {"instances":{"mPS2id_instance_0":{"selector":"a[href*='#']:not([href='#'])","autoSelectorMenuLinks":"true","excludeSelector":"a[href^='#tab-'], a[href^='#tabs-'], a[data-toggle]:not([data-toggle='tooltip']), a[data-slide], a[data-vc-tabs], a[data-vc-accordion], a.screen-reader-text.skip-link","scrollSpeed":800,"autoScrollSpeed":"true","scrollEasing":"easeInOutQuint","scrollingEasing":"easeOutQuint","forceScrollEasing":"false","pageEndSmoothScroll":"true","stopScrollOnUserAction":"false","autoCorrectScroll":"false","autoCorrectScrollExtend":"false","layout":"vertical","offset":"110","dummyOffset":"false","highlightSelector":"","clickedClass":"mPS2id-clicked","targetClass":"mPS2id-target","highlightClass":"mPS2id-highlight","forceSingleHighlight":"false","keepHighlightUntilNext":"false","highlightByNextTarget":"false","appendHash":"false","scrollToHash":"true","scrollToHashForAll":"true","scrollToHashDelay":0,"scrollToHashUseElementData":"true","scrollToHashRemoveUrlHash":"false","disablePluginBelow":0,"adminDisplayWidgetsId":"true","adminTinyMCEbuttons":"true","unbindUnrelatedClickEvents":"false","unbindUnrelatedClickEventsSelector":"","normalizeAnchorPointTargets":"false","encodeLinks":"false"}},"total_instances":"1","shortcode_class":"_ps2id"};
+//# sourceURL=page-scroll-to-id-plugin-script-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/page-scroll-to-id/js/page-scroll-to-id.min.js?ver=1.7.9" id="page-scroll-to-id-plugin-script-js"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.3" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" id="gforms_recaptcha_recaptcha-js-extra">
+/* <![CDATA[ */
+var gforms_recaptcha_recaptcha_strings = {"nonce":"4e011a4109","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https://valleyfairdental.com/wp-content/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LfRAYMmAAAAAH12vqLD8_gCQZh0NrOffi-CIyt7"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6LfRAYMmAAAAAH12vqLD8_gCQZh0NrOffi-CIyt7&amp;ver=2.2.2" id="gforms_recaptcha_recaptcha-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.2.2" id="gforms_recaptcha_frontend-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://valleyfairdental.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=8.7.2" id="wpb_composer_front_js-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://valleyfairdental.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://valleyfairdental.com/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+<script></script>
+	
+
+
+
+
+		 
+<script>
+/* jQuery(document).ready(function($){
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash,
+        $target = $(target);
+
+        $('html, body').animate({
+			'scrollTop': $target.offset().top-140
+		}, 900, 'swing', function () {
+			window.location.hash = target;
+		});
+    });
+}); */
+</script>
+
+<script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "EHAt5TiNes");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><script data-account="EHAt5TiNes" src="https://cdn.userway.org/widget.js"></script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+<script type="text/javascript" src="//cdn.callrail.com/companies/737452458/81aa26fa2980482ed28c/12/swap.js"></script> <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;b1757d93f3db4ab389180cc9c36064f9&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+
+
+<div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","458076464376744");fbq("track","PageView");</script>
+<noscript></noscript>
+</div>
+<script type="text/javascript" id="" charset="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","948088378569701");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=948088378569701&amp;ev=PageView&amp;noscript=1"></noscript>
+<div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","428532273972946");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><script id="" text="" charset="" type="text/javascript" src="https://oswidget.carecru.ca/widgets/013edb96-7cba-4df8-99c2-5730199bacff/cc.js"></script><script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","o2iwtgg651");</script><script id="" text="" charset="" type="text/javascript" src="https://next-api.patientprism.com/v1/snippet/9ed0cc69-d338-40e0-8bd7-c9ddf550653b"></script><script src="https://cdn.userway.org/widgetapp/2026-06-09-08-22-25/widget_app_base_1780993345047.js" async="" id="a11yWidgetSrc" crossorigin="anonymous" integrity="sha256-elUiDlZQ7KB3gzFxrCiA2ABCTDxwVC55nwiRzU3Ugkc="></script><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-5roblc59ozvm" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfRAYMmAAAAAH12vqLD8_gCQZh0NrOffi-CIyt7&amp;co=aHR0cHM6Ly92YWxsZXlmYWlyZGVudGFsLmNvbTo0NDM.&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=8d2kfr154x59"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><div class="CareCruModal"><div class="CareCruModalInner"><iframe width="100%" scrolling="no" src="https://oswidget.carecru.ca/widgets/013edb96-7cba-4df8-99c2-5730199bacff/app/book?ref=" id="CareCruIframe" style="height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; overflow: hidden;" title="CareCru"></iframe></div></div><div class="CareCruFadeIn CareCruButton Book"><div class="CareCruButtonIcon"><svg class="CareCruButtonIconSVG" viewBox="0 0 184 167" xmlns="http://www.w3.org/2000/svg"><path d="M170.486 6.775c7.462 0 13.511 6.049 13.511 13.511v132.935c0 7.462-6.049 13.512-13.511 13.512H13.931c-7.461 0-13.51-6.05-13.51-13.512V20.284c0-7.461 6.048-13.509 13.509-13.509h22.038V1.954c0-.809.655-1.465 1.465-1.465h18.999c.809 0 1.465.656 1.465 1.465v4.821h66.853V1.954c0-.809.656-1.465 1.465-1.465h19.001c.81 0 1.465.656 1.465 1.465v4.821h23.805zm-3.843 147.071a3.611 3.611 0 0 0 3.609-3.613V44.279a3.61 3.61 0 0 0-3.609-3.613H18.374a3.61 3.61 0 0 0-3.609 3.613v105.954a3.611 3.611 0 0 0 3.609 3.613h148.269zm-40.331-72.672a3.358 3.358 0 0 1 0 4.745l-38.846 38.846c-.371.37-.811.608-1.275.769-1.004.739-2.403.698-3.311-.212l-24.406-24.404a2.569 2.569 0 0 1 0-3.631l7.598-7.597a2.567 2.567 0 0 1 3.631 0l15.19 15.19 30.19-30.189a3.355 3.355 0 0 1 4.746 0l6.483 6.483z" fill="#FFFFFE" fill-rule="evenodd"></path></svg></div><div><strong class="CareCruButtonIconBook">Book</strong> Online</div></div><script crossorigin="anonymous" integrity="sha256-D54btnHmAP+zTQ3UmPIA6BqfpsrDqwlmcYrqprO//iU=" src="https://cdn.userway.org/widgetapp/2026-06-09-08-22-25/remediation/remediation_1780993345047.js"></script></body></html>
