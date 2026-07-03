@@ -1,0 +1,152 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="csrf-token" content="fuaLTIHCOQf8fz9rveER6GAVf5mouWdu18lRZzT8">
+
+        <title id="title">
+                            Request Appointment 
+                    </title>
+
+        <script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script src="https://process.can1.intiveo.com/js/lib/jquery-1.11.2.min.js"></script>
+        <script src="https://process.can1.intiveo.com/js/lib/bootstrap.min.js"></script>
+        <script src="https://process.can1.intiveo.com/js/master.js"></script>
+
+        <link rel="stylesheet" href="https://process.can1.intiveo.com/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://process.can1.intiveo.com/css/app.css">
+        <link rel="shortcut icon" href="https://process.can1.intiveo.com/images/favicon.ico">
+            <link rel="stylesheet" href="https://process.can1.intiveo.com/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="https://process.can1.intiveo.com/css/patient-response.css">
+    <link rel="stylesheet" href="https://process.can1.intiveo.com/css/request.css">
+        
+        <!--[if lt IE 9]><link rel="stylesheet" href="https://process.can1.intiveo.com/css/style-ie.css" media="all" /><![endif]-->
+
+    </head>
+    <body>
+    	
+    	<div class="container">
+
+            
+                <div class="row margin-top-20">
+        <div class="col-xs-12 logo">
+                            <img id="logo" src="https://cdn.intiveo.com/storage/commercial/122395/RocqueNobert-final.jpg" alt="Dr. Nobert - Hillside Dental" class="img-fluid">
+                        <h2 class="visible-xs text-center">Dr. Nobert - Hillside Dental</h2>
+        </div>
+    </div>
+
+    <div class="row margin-top-20">
+        <div class="col-xs-12">
+            <h3>Request an appointment</h3>
+        </div>
+    </div>
+            
+        <!-- Form to Request Appt -->
+        <form action="/request/confirm" method="post">
+
+            <!-- Hidden field -->
+            <input type="hidden" name="_token" value="fuaLTIHCOQf8fz9rveER6GAVf5mouWdu18lRZzT8">
+            <input type="hidden" name="accountId" id="accountId" value="122395">
+            <input type="hidden" name="prefLang" id="prefLang" value="">
+            <p style="display:none" id="available_hours">{"Sunday":{"morning":"0","afternoon":"0","evening":"0"},"Monday":{"morning":"1","afternoon":"1","evening":"0"},"Tuesday":{"morning":"1","afternoon":"1","evening":"1"},"Wednesday":{"morning":"1","afternoon":"1","evening":"1"},"Thursday":{"morning":"1","afternoon":"1","evening":"1"},"Friday":{"morning":"1","afternoon":"0","evening":"0"},"Saturday":{"morning":"0","afternoon":"0","evening":"0"}}</p>
+
+            <!-- Patient Information -->
+            <label for="fname">First Name:</label><br>
+            <input type="text" class="form-control" name="fname" id="fname" required=""><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" class="form-control" name="lname" id="lname" required=""><br>
+            <label for="email">Email:</label><br>
+            <input type="email" class="form-control" name="email" id="email" required=""><br>
+            <label for="telephone">Telephone:</label><br>
+            <input type="text" class="form-control" name="telephone" id="telephone" required=""><br>
+
+            <h3>Time preference</h3>
+            <input type="checkbox" name="asap">
+            <label for="asap">I want an appointment as soon as possible.</label><br>
+
+            <div class="hide-on-asap">
+                <!-- Day Selection -->
+                <label>Choose a day</label>
+                <ul id="day-selection">
+                  
+                  <li class="btn btn-default">
+                    <input type="radio" value="monday" name="day" class="radio" id="monday">
+                    <label for="monday">Mon</label>
+                  </li>
+                  <li class="btn btn-default">
+                    <input type="radio" value="tuesday" name="day" class="radio" id="tuesday">
+                    <label for="tuesday">Tues</label>
+                  </li>
+                  <li class="btn btn-default">
+                    <input type="radio" value="wednesday" name="day" class="radio" id="wednesday">
+                    <label for="wednesday">Wed</label>
+                  </li>
+                  <li class="btn btn-default">
+                    <input type="radio" value="thursday" name="day" class="radio" id="thursday">
+                    <label for="thursday">Thur</label>
+                  </li>
+                  <li class="btn btn-default">
+                    <input type="radio" value="friday" name="day" class="radio" id="friday">
+                    <label for="friday">Fri</label>
+                  </li>
+                  
+                </ul>
+
+                <!-- Time Selection -->
+                <label>Choose a time</label>
+                <ul id="time-selection">
+                    <li class="btn btn-default">
+                        <input type="radio" value="morning" name="time" class="radio" id="morning">
+                        <label for="morning">Morning</label>
+                    </li>
+                    <li class="btn btn-default">
+                      <input type="radio" value="afternoon" name="time" class="radio" id="afternoon">
+                      <label for="afternoon">Afternoon</label>
+                    </li>
+                    <li class="btn btn-default">
+                        <input type="radio" value="evening" name="time" class="radio" id="evening">
+                        <label for="evening">Evening</label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Reason for booking -->
+            <div style="display:inline-block;width:100%;">
+                <label for="reason">Reason for booking</label>
+                <textarea class="reason form-control" name="reason" id="reason" required="" data-autosize-on="true" style="overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 70px;"></textarea>
+            </div>
+
+            <!-- Google reCaptcha -->
+            <div class="g-recaptcha" data-sitekey="6Lf1ktwUAAAAAIUWXP4TY5-apkCZMLmQdQLpzzuj"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-pi7smmb5qs2u" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lf1ktwUAAAAAIUWXP4TY5-apkCZMLmQdQLpzzuj&amp;co=aHR0cHM6Ly9wcm9jZXNzLmNhbjEuaW50aXZlby5jb206NDQz&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=3kp5j9qbatmc"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+
+            <!-- Request Button -->
+            <button type="submit" class="btn btn-primary">
+              <i class="fa fa-calendar" aria-hidden="true"></i> Request an appointment now
+            </button>
+        </form>
+        <p class="disclaimer"><b>This is not a reservation of an appointment but only an appointment request.</b><br><span style="font-size:0.95em">Someone on our side will contact you shortly to confirm your next appointment day and time.</span></p>
+            
+                        
+    	</div>
+
+        <div id="footer" class="container-fluid">
+    <div class="container" id="footer-inner-container">
+        <div class="row">
+            <div class="col-sm-4" id="footer_logo">
+                
+                
+            </div>
+            <div class="col-sm-8" id="footer_text">
+                © 2026 <a style="color:#ccc; text-decoration:underline;" href="https://intiveo.com">Intiveo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://process.can1.intiveo.com/js/lib/jquery.autosize.min.js"></script>
+    <script src="https://process.can1.intiveo.com/js/modules/request_appt.js"></script>
+    <script>autosize($('textarea'));</script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    
+
+<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" name="c-pi7smmb5qs2u" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;k=6Lf1ktwUAAAAAIUWXP4TY5-apkCZMLmQdQLpzzuj&amp;bft=0dAFcWeA52b5wrfnSjoCCY2vFZARAvnSsRlMqemfqKbGjPzJv73M2ULuELXWaiAUDOgGaRv7CYEKcRzcrENBsP3wfHBfU-QEx_Rw" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
