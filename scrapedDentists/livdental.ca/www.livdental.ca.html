@@ -1,0 +1,894 @@
+<!DOCTYPE html><html lang="en-US" class="js" data-uw-w-loader="" style="--bookingWidgetPrimaryColor: #202020; --bookingWidgetPrimaryColorDarker: rgb(22,22,22);"><head><style>@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");.CareCruModal{display:block;position:fixed;content:"";top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:-1;opacity:0;transition:opacity .2s,z-index 0s .2s;text-align:center;overflow:hidden;overflow-y:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;visibility:hidden}.CareCruModal.CareCruActive{z-index:999999;opacity:1;visibility:visible;transition:opacity .2s}.CareCruModal:before{overflow:hidden;width:0;height:100%;content:""}.CareCruModal:before,.CareCruModal>*{display:inline-block;vertical-align:middle}.CareCruModal>*{white-space:normal;text-align:left}.CareCruModalInner{position:relative;overflow:hidden;width:600px;height:100%;max-width:100%;overflow-y:auto;background:#fff;z-index:-1;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s,z-index 0s .2s}@media screen and (min-width:610px){.CareCruModalInner{height:650px}}.CareCruModalInner.CareCruActive{z-index:100;opacity:1;transform:scale(1);transition:opacity .2s,transform .2s}.CareCruButton{position:fixed;right:-160px;opacity:0;top:250px;min-width:157px;min-height:75px;cursor:pointer;display:flex;flex-direction:row;align-items:center;background-color:var(--bookingWidgetPrimaryColor);text-align:right;justify-content:center;padding:20px;color:#fff;box-sizing:border-box;z-index:9998;box-shadow:1px 2px 3px 0 hsla(0,0%,50.2%,.15);transition:all .2s ease-in;text-transform:uppercase;font-family:"Roboto"!important;font-size:19px;letter-spacing:0;line-height:19px;text-shadow:.5px .5px .5px rgba(0,0,0,.1);border-bottom-left-radius:999px;border-top-left-radius:999px}.CareCruButton.Request{font-size:15.5px}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;right:-160px}50%{opacity:0;right:-20px}to{opacity:1;right:0}}.CareCruButton .CareCruButtonIconBook{display:block;font-weight:600;font-size:25px;line-height:25px;color:#fff;font-family:"Roboto"!important}.CareCruButtonIcon{padding-right:.6rem;color:#fff;transition:all .2s ease-in;top:24px}.CareCruButtonIcon .CareCruButtonIconSVG{fill:currentColor;height:35px;transition:all .2s ease-in}.CareCruButton:hover{background:var(--bookingWidgetPrimaryColorDarker);box-shadow:1px 4px 5px 0 hsla(0,0%,50.2%,.25);transition:all .2s ease-in}.CareCruButton:hover .CareCruButtonIcon{transition:all .2s ease-in;border-color:var(--bookingWidgetPrimaryColorDarker)}.CareCruButton:hover .CareCruButtonIcon .CareCruButtonIconSVG{transition:all .2s ease-in;color:var(--bookingWidgetPrimaryColorDarker)}@media screen and (max-width:610px){.CareCruButton{top:auto;right:0;opacity:0;width:90%;left:5%;font-size:18px;justify-content:center;box-sizing:border-box;border-radius:9999px;padding:10px 0;text-align:center;min-height:auto}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;bottom:-3%}50%{opacity:0}to{opacity:1;bottom:2.5%}}.CareCruButton .CareCruButtonIconBook{display:inline;font-size:18px}.CareCruButtonIcon{display:none}}#CareCruIframe{z-index:101;position:absolute;top:0;left:0;width:1px;min-width:100%;height:100%;border:none;overflow:hidden}#hiddenCareCru{display:none}#locationWrapper .header{flex-flow:nowrap}#hiddenCareCru.active{display:block}.CareCruSpinner{font-family:"Roboto";margin:0 auto;text-align:center;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;font-weight:700;letter-spacing:.035em;z-index:102;position:relative;background:#fff;opacity:1}.CareCruSpinner,.CareCruSpinner.CareCruFadeOut{transition:opacity 1s cubic-bezier(.175,.885,.32,1.275)}.CareCruSpinner.CareCruFadeOut{opacity:0}.CareCruSpinner>div>div{width:18px;height:18px;background-color:var(--bookingWidgetPrimaryColor);border-radius:100%;display:inline-block;-webkit-animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both;animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both}.CareCruSpinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.CareCruSpinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}.CareCruSpinner>span{margin-top:12px}@-webkit-keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}
+/*# sourceMappingURL=widget.css.map */</style><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://www.livdental.ca/xmlrpc.php">
+
+	<script async="" src="//www.gstatic.com/call-tracking/call-tracking_9.js" nonce="null"></script><script type="text/javascript" async="" src="https://www.gstatic.com/wcm/loader.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-16607365276&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script src="https://connect.facebook.net/signals/config/1327014518515365?v=2.9.349&amp;r=stable&amp;domain=www.livdental.ca&amp;hme=f29d86973612db0f0627890a64bdc8c47b471189050b33f2680b7d76997afc9a&amp;ex_m=107%2C208%2C158%2C22%2C73%2C74%2C149%2C69%2C68%2C11%2C167%2C93%2C16%2C141%2C130%2C39%2C76%2C81%2C137%2C163%2C169%2C8%2C4%2C5%2C7%2C6%2C3%2C94%2C104%2C170%2C175%2C222%2C30%2C75%2C234%2C233%2C232%2C23%2C33%2C55%2C106%2C61%2C10%2C64%2C100%2C101%2C102%2C108%2C133%2C31%2C29%2C135%2C136%2C132%2C131%2C159%2C77%2C162%2C160%2C161%2C50%2C60%2C126%2C15%2C166%2C45%2C279%2C280%2C278%2C26%2C27%2C28%2C48%2C150%2C78%2C115%2C18%2C20%2C44%2C40%2C42%2C41%2C86%2C95%2C99%2C113%2C148%2C151%2C46%2C114%2C24%2C21%2C122%2C70%2C36%2C153%2C152%2C154%2C145%2C143%2C25%2C35%2C59%2C112%2C165%2C71%2C17%2C156%2C117%2C84%2C67%2C19%2C88%2C89%2C119%2C87%2C139%2C138%2C142%2C164%2C34%2C293%2C309%2C215%2C204%2C62%2C205%2C203%2C312%2C303%2C52%2C216%2C110%2C134%2C83%2C124%2C54%2C47%2C49%2C116%2C123%2C129%2C128%2C58%2C65%2C63%2C155%2C79%2C80%2C118%2C37%2C32%2C53%2C56%2C103%2C168%2C1%2C127%2C14%2C125%2C12%2C2%2C57%2C96%2C66%2C121%2C92%2C91%2C171%2C172%2C97%2C98%2C9%2C105%2C51%2C146%2C90%2C82%2C72%2C120%2C109%2C43%2C147%2C0%2C85%2C140%2C144%2C157%2C38%2C111%2C13%2C173" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-T8JS5N2Q"></script><script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Dentist Near Me in Camrose | LivDental</title>
+	<meta name="description" content="LivDental is a trusted dental clinic in Camrose offering comprehensive care, accepting CDCP, and welcoming new patients. Book today.">
+	<link rel="canonical" href="https://www.livdental.ca/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Dentist Near Me in Camrose | LivDental">
+	<meta property="og:description" content="LivDental is a trusted dental clinic in Camrose offering comprehensive care, accepting CDCP, and welcoming new patients. Book today.">
+	<meta property="og:url" content="https://www.livdental.ca/">
+	<meta property="og:site_name" content="LivDental">
+	<meta property="article:modified_time" content="2026-01-28T11:47:12+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.livdental.ca\/","url":"https:\/\/www.livdental.ca\/","name":"Dentist Near Me in Camrose | LivDental","isPartOf":{"@id":"https:\/\/www.livdental.ca\/#website"},"datePublished":"2024-09-23T12:54:58+00:00","dateModified":"2026-01-28T11:47:12+00:00","description":"LivDental is a trusted dental clinic in Camrose offering comprehensive care, accepting CDCP, and welcoming new patients. Book today.","breadcrumb":{"@id":"https:\/\/www.livdental.ca\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.livdental.ca\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/www.livdental.ca\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/www.livdental.ca\/#website","url":"https:\/\/www.livdental.ca\/","name":"LivDental","description":"Camrose Dentistry","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.livdental.ca\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//www.google.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="LivDental » Feed" href="https://www.livdental.ca/feed/">
+<link rel="alternate" type="application/rss+xml" title="LivDental » Comments Feed" href="https://www.livdental.ca/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.livdental.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.livdental.ca%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.livdental.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.livdental.ca%2F&amp;format=xml">
+<meta content="Divi Child v.1.0.0" name="generator">
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="cip-child-css" href="https://www.livdental.ca/wp-content/plugins/aow_cip/css/contentshare.css?ver=7.0" media="all">
+<link rel="stylesheet" id="my-plugin-style-css" href="https://www.livdental.ca/wp-content/plugins/aow_cip%202/css/contentshare.css?ver=7.0" media="all">
+<link rel="stylesheet" id="aow_gf_failure_notification-css" href="https://www.livdental.ca/wp-content/plugins/aow_gf_failure_notification/public/css/aow_gf_failure_notification-public.css?ver=1.3.0" media="all">
+<link rel="stylesheet" id="et-builder-googlefonts-cached-css" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic|Cabin:regular,500,600,700,italic,500italic,600italic,700italic&amp;subset=latin,latin-ext&amp;display=swap" media="all">
+<link rel="stylesheet" id="divi-style-parent-css" href="https://www.livdental.ca/wp-content/themes/Divi/style-static.min.css?ver=4.27.6" media="all">
+<link rel="stylesheet" id="divi-style-pum-css" href="https://www.livdental.ca/wp-content/themes/divi-child/style.css?ver=4.27.6" media="all">
+<script id="jquery-core-js" src="https://www.livdental.ca/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.livdental.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="aow_gf_failure_notification-js" src="https://www.livdental.ca/wp-content/plugins/aow_gf_failure_notification/public/js/aow_gf_failure_notification-public.js?ver=1.3.0"></script>
+<script id="js.cookie-js" src="https://www.livdental.ca/wp-content/plugins/handl-utm-grabber/js/js.cookie.js?ver=7.0"></script>
+<script id="handl-utm-grabber-js-extra">
+var handl_utm = [];
+//# sourceURL=handl-utm-grabber-js-extra
+</script>
+<script id="handl-utm-grabber-js" src="https://www.livdental.ca/wp-content/plugins/handl-utm-grabber/js/handl-utm-grabber.js?ver=7.0"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-PH3VXS7W" async=""></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.livdental.ca"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-PH3VXS7W");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+</script>
+<link rel="https://api.w.org/" href="https://www.livdental.ca/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.livdental.ca/wp-json/wp/v2/pages/586"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.livdental.ca/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 7.0">
+<link rel="shortlink" href="https://www.livdental.ca/">
+<script type="application/ld+json"> 
+	{
+	  "@context": "http://www.schema.org",
+	  "@type": "Dentist",
+	  "name": "LivDental",
+	  "url": "https://www.livdental.ca/",
+	  "logo": "https://v5.airtableusercontent.com/v3/u/53/53/1778032800000/SSNoF70yITB01G7c7YZGgA/UjUArUBtA1YKFTIYFjDIK_0gLNnQlUb9cnA8ihXvGiHhNQqRZfrIEjbtTYOJHQr1-dCWq0BLNQ4OLW-nRgOZgxoj1fc-QsOISEXfEVXXl4N0GgrxsbAQjgaMbJ74To_PW__I0kksW9PUz_cmaP_VCQ/e1aLidtyhjHuHgYm6ipK6wcSo54MYHoSIuf5nYKGCzs",
+	  "image": "",
+	  "description": "",
+	  "address": {
+		"@type": "PostalAddress",
+		"streetAddress": "4819 68 Street Unit 201",
+		"addressLocality": "Camrose",
+		"addressRegion": "AB",
+		"postalCode": "T4V5C1",
+		"addressCountry": "CA"
+	  },
+	  "geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "53.0191993",
+		"longitude": " -112.8578033"
+	  },
+	  "hasMap": "https://www.google.com/maps/search/?api=1&query=LivDental&query_place_id=ChIJPaf5Ttu7ClMR_4nVnWoYhKQ",
+	  "openingHours": "Mo 8:00 am-16:00 pm Tu 8:00 am-16:00 pm We 8:00 am-16:00 pm Th 8:00 am-16:00 pm Fr 8:00 am-15:00 pm"
+	  ,
+	  "contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+1 (780) 672-3033",
+		"contactType": "customer service"
+	  }
+	  	}
+ 	</script>
+<meta name="generator" content="Site Kit by Google 1.182.0"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!-- Google Tag Manager snippet added by Site Kit -->
+<script>
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-T8JS5N2Q' );
+			
+</script>
+
+<!-- End Google Tag Manager snippet added by Site Kit -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1327014518515365');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1327014518515365&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --><script>
+document.addEventListener("DOMContentLoaded", function() {
+    var links = document.getElementsByTagName("a");
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", function(event) {
+            // carecru change accepting-new-patients to onclick event
+            if (this.href.indexOf("/accepting-new-patients/") !== -1) {
+                // If it does, prevent the default link and swap with carecru onclick
+                event.preventDefault();
+                window.CareCru.open();
+            }
+        });
+    }
+});
+</script><link rel="icon" href="https://www.livdental.ca/wp-content/uploads/2024/09/Livdental-icon-150x150.png" sizes="32x32">
+<link rel="icon" href="https://www.livdental.ca/wp-content/uploads/2024/09/Livdental-icon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.livdental.ca/wp-content/uploads/2024/09/Livdental-icon.png">
+<meta name="msapplication-TileImage" content="https://www.livdental.ca/wp-content/uploads/2024/09/Livdental-icon.png">
+<link rel="stylesheet" id="et-core-unified-586-cached-inline-styles" href="https://www.livdental.ca/wp-content/et-cache/586/et-core-unified-586.min.css?ver=1780504478"><link rel="stylesheet" id="et-core-unified-deferred-586-cached-inline-styles" href="https://www.livdental.ca/wp-content/et-cache/586/et-core-unified-deferred-586.min.css?ver=1780504478"><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<style id="wp-block-social-links-inline-css">
+.wp-block-social-links{background:none;box-sizing:border-box;margin-left:0;padding-left:0;padding-right:0;text-indent:0}.wp-block-social-links .wp-social-link a,.wp-block-social-links .wp-social-link a:hover{border-bottom:0;box-shadow:none;text-decoration:none}.wp-block-social-links .wp-social-link svg{height:1em;width:1em}.wp-block-social-links .wp-social-link span:not(.screen-reader-text){font-size:.65em;margin-left:.5em;margin-right:.5em}.wp-block-social-links.has-small-icon-size{font-size:16px}.wp-block-social-links,.wp-block-social-links.has-normal-icon-size{font-size:24px}.wp-block-social-links.has-large-icon-size{font-size:36px}.wp-block-social-links.has-huge-icon-size{font-size:48px}.wp-block-social-links.aligncenter{display:flex;justify-content:center}.wp-block-social-links.alignright{justify-content:flex-end}.wp-block-social-link{border-radius:9999px;display:block}@media not (prefers-reduced-motion){.wp-block-social-link{transition:transform .1s ease}}.wp-block-social-link{height:auto}.wp-block-social-link a{align-items:center;display:flex;line-height:0}.wp-block-social-link:hover{transform:scale(1.1)}.wp-block-social-links .wp-block-social-link.wp-social-link{display:inline-block;margin:0;padding:0}.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor svg,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:active,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:hover,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:visited{fill:currentColor;color:currentColor}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link{background-color:#f0f0f0;color:#444}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-amazon{background-color:#f90;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bandcamp{background-color:#1ea0c3;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-behance{background-color:#0757fe;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bluesky{background-color:#0a7aff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-codepen{background-color:#1e1f26;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-deviantart{background-color:#02e49b;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-discord{background-color:#5865f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dribbble{background-color:#e94c89;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dropbox{background-color:#4280ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-etsy{background-color:#f45800;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-facebook{background-color:#0866ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-fivehundredpx{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-flickr{background-color:#0461dd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-foursquare{background-color:#e65678;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-github{background-color:#24292d;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-goodreads{background-color:#eceadd;color:#382110}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-google{background-color:#ea4434;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-gravatar{background-color:#1d4fc4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-instagram{background-color:#f00075;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-lastfm{background-color:#e21b24;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-linkedin{background-color:#0d66c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-mastodon{background-color:#3288d4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-medium{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-meetup{background-color:#f6405f;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-patreon{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pinterest{background-color:#e60122;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pocket{background-color:#ef4155;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-reddit{background-color:#ff4500;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-skype{background-color:#0478d7;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-snapchat{stroke:#000;background-color:#fefc00;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-soundcloud{background-color:#ff5600;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-spotify{background-color:#1bd760;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-telegram{background-color:#2aabee;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-threads{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tiktok{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tumblr{background-color:#011835;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitch{background-color:#6440a4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitter{background-color:#1da1f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vimeo{background-color:#1eb7ea;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vk{background-color:#4680c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-wordpress{background-color:#3499cd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-whatsapp{background-color:#25d366;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-x{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-yelp{background-color:#d32422;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-youtube{background-color:red;color:#fff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link{background:none}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link svg{height:1.25em;width:1.25em}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-amazon{color:#f90}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bandcamp{color:#1ea0c3}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-behance{color:#0757fe}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bluesky{color:#0a7aff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-codepen{color:#1e1f26}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-deviantart{color:#02e49b}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-discord{color:#5865f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dribbble{color:#e94c89}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dropbox{color:#4280ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-etsy{color:#f45800}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-facebook{color:#0866ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-fivehundredpx{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-flickr{color:#0461dd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-foursquare{color:#e65678}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-github{color:#24292d}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-goodreads{color:#382110}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-google{color:#ea4434}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-gravatar{color:#1d4fc4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-instagram{color:#f00075}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-lastfm{color:#e21b24}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-linkedin{color:#0d66c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-mastodon{color:#3288d4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-medium{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-meetup{color:#f6405f}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-patreon{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pinterest{color:#e60122}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pocket{color:#ef4155}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-reddit{color:#ff4500}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-skype{color:#0478d7}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-snapchat{stroke:#000;color:#fff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-soundcloud{color:#ff5600}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-spotify{color:#1bd760}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-telegram{color:#2aabee}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-threads{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tiktok{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tumblr{color:#011835}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitch{color:#6440a4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitter{color:#1da1f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vimeo{color:#1eb7ea}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vk{color:#4680c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-whatsapp{color:#25d366}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-wordpress{color:#3499cd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-x{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-yelp{color:#d32422}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-youtube{color:red}.wp-block-social-links.is-style-pill-shape .wp-social-link{width:auto}:root :where(.wp-block-social-links .wp-social-link a){padding:.25em}:root :where(.wp-block-social-links.is-style-logos-only .wp-social-link a){padding:0}:root :where(.wp-block-social-links.is-style-pill-shape .wp-social-link a){padding-left:.6666666667em;padding-right:.6666666667em}.wp-block-social-links:not(.has-icon-color):not(.has-icon-background-color) .wp-social-link-snapchat .wp-block-social-link-label{color:#000}
+/*# sourceURL=https://www.livdental.ca/wp-includes/blocks/social-links/style.min.css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6a47192e86b03*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+
+<script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16604624235/?random=1783044403632&amp;cv=11&amp;fst=1783044403632&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be66u1v9188068154z89178167895za20gzb9178167895zd9178167895xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938469~118826210~118897921~118897931~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fwww.livdental.ca%2F&amp;rcb=16&amp;frm=0&amp;tiba=Dentist%20Near%20Me%20in%20Camrose%20%7C%20LivDental&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=830065411.1783044402&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4" nonce="null"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16607365276/?random=1783044403722&amp;cv=11&amp;fst=1783044403722&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be66u1v9188068154z89178167895za20gzb9178167895zd9178167895xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938469~118826210~118897921~118897931~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fwww.livdental.ca%2F&amp;rcb=16&amp;frm=0&amp;tiba=Dentist%20Near%20Me%20in%20Camrose%20%7C%20LivDental&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=830065411.1783044402&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4" nonce="null"></script><link href="https://cdn.userway.org/styles/2026-06-09-08-22-25/widget_base.css?v=1780993345047" type="text/css" rel="stylesheet"></head>
+<body class="home wp-singular page-template-default page page-id-586 wp-theme-Divi wp-child-theme-divi-child et_button_no_icon et_pb_button_helper_class et_fixed_nav et_show_nav et_secondary_nav_enabled et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns3 et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db et_pb_recaptcha_enabled chrome" style="overflow-x: hidden;">
+	<div class="uwy userway_p2" data-uw-feature-ignore="true" data-uw-rm-ignore="true" title="Accessibility Menu" style="background-color: transparent !important; overflow: initial !important;"><div class="userway_buttons_wrapper"><div class="ulsti hidden userway_dark" id="userwayLstIcon" aria-label="Translations Menu" role="button" tabindex="0" aria-haspopup="dialog" data-uw-s19-ignore="" title="Translations Menu" style="background: rgb(0, 115, 207) !important;"><span class="uiiw"></span><div class="ups"><img width="43" height="43" data-uw-rm-ignore="" class="si_w" aria-hidden="true" alt="Spinner: White decorative" src="https://cdn.userway.org/widgetapp/images/spin_wh.svg"></div><span class="usr lst-spacer"></span></div><div class="uai userway_dark" id="userwayAccessibilityIcon" aria-label="Accessibility Menu" role="button" tabindex="0" aria-haspopup="dialog" title="Accessibility Menu" style="background: rgb(0, 115, 207) !important;"><span class="uiiw"><img data-uw-rm-ignore="" class="ui_w" role="presentation" alt="" src="https://cdn.userway.org/widgetapp/images/body_wh.svg"></span><div class="ups"><img width="43" height="43" data-uw-rm-ignore="" class="si_w" aria-hidden="true" alt="Spinner: White decorative" src="https://cdn.userway.org/widgetapp/images/spin_wh.svg"></div><span class="usr"></span></div><div class="uwaw-dictionary-tooltip"></div></div><iframe class="uwif userway_p2" data-uw-ignore-translate="true" name="userway" title="UserWay Accessibility Menu" allow="clipboard-write" style="max-width: 100vw !important; visibility: visible !important; opacity: 1 !important; color-scheme: light !important;"></iframe></div><div class="uw-s10-bottom-ruler-guide"></div><div class="uw-s10-right-ruler-guide"></div><div class="uw-s10-left-ruler-guide"></div><div class="uw-s10-reading-guide"><div class="uw-s10-reading-guide__arrow"></div></div><div class="uw-s12-tooltip" aria-hidden="true"></div><div id="page-container" style="padding-top: 144px; overflow-y: hidden;">
+
+					<div id="top-header">
+			<div class="container clearfix">
+        <div id="invisalign-provider" class="emergencies">
+                 <a href="/invisalign/"><img src="/wp-content/uploads/2024/09/invisalign-provider-Logo-transparent.png" alt="Invisalign Provider Logo"></a>
+
+                </div>
+			
+				<div id="et-secondary-menu">
+				<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-facebook">
+		<a href="https://www.facebook.com/livdentalcamrose" class="icon" target="new">
+			<span>Facebook</span>
+		</a>
+	</li>
+    
+    	<li class="et-social-icon et-social-instagram">
+		<a href="https://www.instagram.com/livdentalcamrose" class="icon" target="new">
+			<span>Instagram</span>
+		</a>
+	</li>
+    
+	<li class="et-social-icon">
+		<a href="https://maps.google.com/?cid=11854626965339605503" class="icon" target="new">
+			<i class="fa-brands fa-google"></i><span>Google</span>
+		</a>
+	</li>
+
+</ul><ul id="et-secondary-nav" class="menu"><li class="aow-top-menu-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-86"><a href="tel:+15877427122">CALL: (587) 742-7122</a></li>
+<li class="aow-top-menu-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-87"><a href="/accepting-new-patients/#form">REQUEST AN APPOINTMENT</a></li>
+</ul>				</div> <!-- #et-secondary-menu -->
+
+			</div> <!-- .container -->
+		</div> <!-- #top-header -->
+		
+	
+			<header id="main-header" data-height-onload="94" data-height-loaded="true" data-fixed-height-onload="94" style="top: 50px;">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="https://www.livdental.ca/">
+						<img src="https://www.livdental.ca/wp-content/uploads/2025/01/Livdental-logo-small.webp" alt="LivDental" id="logo" data-height-percentage="100" data-actual-width="228" data-actual-height="58">
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="80" data-fixed-height="70" style="padding-left: 214px;">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-891"><a href="https://www.livdental.ca/about-us/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-896"><a href="https://www.livdental.ca/about-us/">About Us</a></li>
+	<li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50"><a href="/about-us/#our-team">Our Team</a></li>
+	<li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a href="/about-us/#fees-insurance">Fees &amp; Insurance</a></li>
+	<li id="menu-item-1463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1463"><a href="https://www.livdental.ca/cdcp-information-for-patients/">CDCP Information for Patients</a></li>
+	<li id="menu-item-892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-892"><a href="https://www.livdental.ca/dental-appliances/">Dental Appliances</a></li>
+	<li id="menu-item-894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-894"><a href="https://www.livdental.ca/dental-technology/">Dental Technology</a></li>
+	<li id="menu-item-895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-895"><a href="https://www.livdental.ca/patient-financing/">Patient Financing</a></li>
+</ul>
+</li>
+<li id="menu-item-897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-897"><a href="https://www.livdental.ca/general-dentistry/">General Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="/general-dentistry/#oral-cancer-screening">Oral Cancer Screening</a></li>
+	<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="/general-dentistry/#dental-sealants">Dental Sealants</a></li>
+	<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="/general-dentistry/#digital-dental-x-rays">Digital Dental X-Rays</a></li>
+	<li id="menu-item-898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-898"><a href="https://www.livdental.ca/general-dentistry/root-canals/">Root Canals</a></li>
+	<li id="menu-item-899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-899"><a href="https://www.livdental.ca/general-dentistry/teeth-extractions/">Extractions</a></li>
+</ul>
+</li>
+<li id="menu-item-900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-900"><a href="https://www.livdental.ca/cosmetic-dentistry/">Cosmetic Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901"><a href="https://www.livdental.ca/cosmetic-dentistry/dental-crowns/">Dental Crowns</a></li>
+	<li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902"><a href="https://www.livdental.ca/cosmetic-dentistry/teeth-whitening/">Teeth Whitening</a></li>
+	<li id="menu-item-903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-903"><a href="https://www.livdental.ca/cosmetic-dentistry/veneers/">Veneers</a></li>
+	<li id="menu-item-905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-905"><a href="https://www.livdental.ca/orthodontics/">Orthodontics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-904"><a href="https://www.livdental.ca/invisalign-day-april-2026/">Invisalign</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-906 et-reverse-direction-nav"><a href="https://www.livdental.ca/restorative-dentistry/">Restorative Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-909"><a href="https://www.livdental.ca/restorative-dentistry/dental-implants/">Dental Implants</a></li>
+	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907"><a href="https://www.livdental.ca/restorative-dentistry/dental-bridges/">Dental Bridges</a></li>
+	<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="https://www.livdental.ca/restorative-dentistry/dental-fillings/">Dental Fillings</a></li>
+	<li id="menu-item-910" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-910"><a href="https://www.livdental.ca/sedation-dentistry/">Sedation Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-75" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="/sedation-dentistry/#nitrous-oxide-sedation-dentistry">Nitrous Oxide Sedation Dentistry</a></li>
+		<li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="/sedation-dentistry/#oral-sedation">Oral Sedation</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-914" class="c-sub menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-914"><a href="https://www.livdental.ca/contact-us/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-912"><a href="https://www.livdental.ca/contact-us/">Contact Us</a></li>
+	<li id="menu-item-913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-913"><a href="https://www.livdental.ca/emergency-dentistry/">Emergency Dentistry</a></li>
+	<li id="menu-item-911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-911"><a href="https://www.livdental.ca/accepting-new-patients/">Accepting New Patients</a></li>
+</ul>
+</li>
+</ul>						</nav>
+					
+					
+					
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				<ul id="mobile_menu" class="et_mobile_menu"><li id="menu-item-891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-891 et_first_mobile_item"><a href="https://www.livdental.ca/about-us/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-896"><a href="https://www.livdental.ca/about-us/">About Us</a></li>
+	<li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50"><a href="/about-us/#our-team">Our Team</a></li>
+	<li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a href="/about-us/#fees-insurance">Fees &amp; Insurance</a></li>
+	<li id="menu-item-1463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1463"><a href="https://www.livdental.ca/cdcp-information-for-patients/">CDCP Information for Patients</a></li>
+	<li id="menu-item-892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-892"><a href="https://www.livdental.ca/dental-appliances/">Dental Appliances</a></li>
+	<li id="menu-item-894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-894"><a href="https://www.livdental.ca/dental-technology/">Dental Technology</a></li>
+	<li id="menu-item-895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-895"><a href="https://www.livdental.ca/patient-financing/">Patient Financing</a></li>
+</ul>
+</li>
+<li id="menu-item-897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-897"><a href="https://www.livdental.ca/general-dentistry/">General Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="/general-dentistry/#oral-cancer-screening">Oral Cancer Screening</a></li>
+	<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="/general-dentistry/#dental-sealants">Dental Sealants</a></li>
+	<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="/general-dentistry/#digital-dental-x-rays">Digital Dental X-Rays</a></li>
+	<li id="menu-item-898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-898"><a href="https://www.livdental.ca/general-dentistry/root-canals/">Root Canals</a></li>
+	<li id="menu-item-899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-899"><a href="https://www.livdental.ca/general-dentistry/teeth-extractions/">Extractions</a></li>
+</ul>
+</li>
+<li id="menu-item-900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-900"><a href="https://www.livdental.ca/cosmetic-dentistry/">Cosmetic Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901"><a href="https://www.livdental.ca/cosmetic-dentistry/dental-crowns/">Dental Crowns</a></li>
+	<li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902"><a href="https://www.livdental.ca/cosmetic-dentistry/teeth-whitening/">Teeth Whitening</a></li>
+	<li id="menu-item-903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-903"><a href="https://www.livdental.ca/cosmetic-dentistry/veneers/">Veneers</a></li>
+	<li id="menu-item-905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-905"><a href="https://www.livdental.ca/orthodontics/">Orthodontics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-904"><a href="https://www.livdental.ca/invisalign-day-april-2026/">Invisalign</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-906"><a href="https://www.livdental.ca/restorative-dentistry/">Restorative Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-909"><a href="https://www.livdental.ca/restorative-dentistry/dental-implants/">Dental Implants</a></li>
+	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907"><a href="https://www.livdental.ca/restorative-dentistry/dental-bridges/">Dental Bridges</a></li>
+	<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a href="https://www.livdental.ca/restorative-dentistry/dental-fillings/">Dental Fillings</a></li>
+	<li id="menu-item-910" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-910"><a href="https://www.livdental.ca/sedation-dentistry/">Sedation Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-75" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="/sedation-dentistry/#nitrous-oxide-sedation-dentistry">Nitrous Oxide Sedation Dentistry</a></li>
+		<li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="/sedation-dentistry/#oral-sedation">Oral Sedation</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-914" class="c-sub menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-914"><a href="https://www.livdental.ca/contact-us/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-912"><a href="https://www.livdental.ca/contact-us/">Contact Us</a></li>
+	<li id="menu-item-913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-913"><a href="https://www.livdental.ca/emergency-dentistry/">Emergency Dentistry</a></li>
+	<li id="menu-item-911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-911"><a href="https://www.livdental.ca/accepting-new-patients/">Accepting New Patients</a></li>
+</ul>
+</li>
+<li class="aow-top-menu-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-86"><a href="tel:+15877427122">CALL: (587) 742-7122</a></li>
+<li class="aow-top-menu-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-87"><a href="/accepting-new-patients/#form">REQUEST AN APPOINTMENT</a></li>
+</ul></div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="https://www.livdental.ca/">
+					<input type="search" class="et-search-field" placeholder="Search …" value="" name="s" title="Search for:">					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+			<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-586" class="post-586 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0 btn-block">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h1>Accepting New Patients At Your Camrose Dental Clinic</h1></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 btn-block et_pb_bg_layout_light" href="https://www.livdental.ca/contact-us/">Contact Us</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_1 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_1 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child" data-animation-style="slideLeft" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0">
+				
+				
+				
+				
+				<a href="/cdcp-information-for-patients/"><span class="et_pb_image_wrap "><img decoding="async" src="https://assets.123dentist.com/cdcp/cdcp-banner-short-v1-text.jpg" alt="Canadian Dental Care Plan support banner" title=""></span></a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_2 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_3_5 et_pb_column_2 et_animated  et_pb_css_mix_blend_mode_passthrough" data-animation-style="slideLeft" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Accepting New Patients at LivDental – Your Camrose Dental Clinic</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>At LivDental, your Camrose dental clinic, we are focused on creating a welcoming experience for the whole family. Whether it’s your first time walking through our doors or you’re in for a routine oral exam, our team of dental professionals is ready to welcome you to our friendly and comfortable Camrose dental clinic.</p>
+<p>Our dental professionals are here to help you achieve your health and happiness goals with thoughtful customer service and robust dental treatment options.</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_2_5 et_pb_column_3 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child" data-animation-style="slideRight" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_1">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img fetchpriority="high" decoding="async" width="600" height="900" src="https://www.livdental.ca/wp-content/uploads/2024/10/liv-dental-exterior-shot.jpg" alt="Exterior of LIV Dental clinic" title="liv-dental-exterior-shot" srcset="https://www.livdental.ca/wp-content/uploads/2024/10/liv-dental-exterior-shot.jpg 600w, https://www.livdental.ca/wp-content/uploads/2024/10/liv-dental-exterior-shot-480x720.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 600px, 100vw" class="wp-image-1170"></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_3 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_2_5 et_pb_column_4 et_animated  et_pb_css_mix_blend_mode_passthrough" data-animation-style="slideLeft" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_2">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="600" height="900" src="https://www.livdental.ca/wp-content/uploads/2024/10/treatments-options-livdental.jpg" alt="clinic inside look" title="treatments-options-livdental" srcset="https://www.livdental.ca/wp-content/uploads/2024/10/treatments-options-livdental.jpg 600w, https://www.livdental.ca/wp-content/uploads/2024/10/treatments-options-livdental-480x720.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 600px, 100vw" class="wp-image-1171"></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_3_5 et_pb_column_5 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child" data-animation-style="slideRight" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Providing a Wide Variety of Treatment Options at your Camrose Dental Clinic</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Let LivDental be your new Camrose dental clinic! We <a href="https://www.livdental.ca/accepting-new-patients/">welcome new patients</a> of all ages at our convenient west-end location. We can care for your family’s dental and oral health needs right here in our offices, offering everything from dental appliances and restorations to orthodontic treatments.</p>
+<p>Maintaining your<a href="https://www.canada.ca/en/public-health/topics/oral-health.html"> oral health</a> is an essential part of taking care of your whole health. Regular oral examinations and proper oral care habits are essential for promoting a healthy lifestyle and overall well-being.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_4 reverse et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_3_5 et_pb_column_6 et_animated  et_pb_css_mix_blend_mode_passthrough" data-animation-style="slideLeft" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Your Family Friendly Dental Clinic Accepting New Patients</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>We are thrilled to serve the Camrose community with comprehensive and compassionate dental services. <a href="https://www.livdental.ca/about-us/#our-team">Our team</a> of dental professionals strives to make you feel welcome every time you enter our clinic. From our bright office to our friendly team to overhead TVs and free parking, you will feel right at home at LivDental, your Camrose dental clinic.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_1_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="/contact-us/">Contact Us</a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_2_5 et_pb_column_7 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child" data-animation-style="slideRight" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_3">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="600" height="900" src="https://www.livdental.ca/wp-content/uploads/2024/10/family-friendly-dental-clinic.jpg" alt="Family-friendly dental clinic" title="family-friendly-dental-clinic" srcset="https://www.livdental.ca/wp-content/uploads/2024/10/family-friendly-dental-clinic.jpg 600w, https://www.livdental.ca/wp-content/uploads/2024/10/family-friendly-dental-clinic-480x720.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 600px, 100vw" class="wp-image-1172"></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_2 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_5 et_animated et_pb_gutters1" data-animation-style="slideBottom" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_8 et_clickable  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_7 white et_clickable  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p class="divider-text">INVISALIGN</p>
+<p><a href="/invisalign/">Learn More</a></p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_9 et_clickable  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_8 white et_clickable  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p class="divider-text">CROWNS &amp; BRIDGES</p>
+<p><a href="/restorative-dentistry/dental-bridges/">Learn More</a></p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_10 et_clickable  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_9 white et_clickable  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p class="divider-text">COSMETIC DENTISTRY</p>
+<p><a href="/cosmetic-dentistry/">Learn More</a></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_6 reverse et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_3_5 et_pb_column_11 et_animated  et_pb_css_mix_blend_mode_passthrough" data-animation-style="slideLeft" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_10  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Calming &amp; Relaxed Environment at your Camrose Dental Clinic</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_11  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Whether your child is visiting the dentist for the first time or you have had decades of oral exams, your oral health matters at every stage of life. At LivDental, your Camrose dental clinic, we provide a range of dental services to meet the needs of your entire family while using dental technology to improve treatment and speed up wait times.</p>
+<p>Beautiful straight teeth are a dream that can come true at any age with Invisalign clear aligner treatment. This technology makes orthodontic treatment convenient, comfortable, and discreet. Plus, you maintain better oral health by removing your trays at meal times and brushing times.</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_2_5 et_pb_column_12 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child" data-animation-style="slideRight" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_4">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="600" height="900" src="https://www.livdental.ca/wp-content/uploads/2024/10/calm-environment-livdental.jpg" alt="Calm and relaxing dental clinic environment" title="calm-environment-livdental" srcset="https://www.livdental.ca/wp-content/uploads/2024/10/calm-environment-livdental.jpg 600w, https://www.livdental.ca/wp-content/uploads/2024/10/calm-environment-livdental-480x720.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 600px, 100vw" class="wp-image-1176"></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_7 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_2_5 et_pb_column_13 et_animated  et_pb_css_mix_blend_mode_passthrough" data-animation-style="slideLeft" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_5">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="600" height="900" src="https://www.livdental.ca/wp-content/uploads/2024/10/compassionate-dental-care-livdental.jpg" alt="X-ray room look" title="compassionate-dental-care-livdental" srcset="https://www.livdental.ca/wp-content/uploads/2024/10/compassionate-dental-care-livdental.jpg 600w, https://www.livdental.ca/wp-content/uploads/2024/10/compassionate-dental-care-livdental-480x720.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 600px, 100vw" class="wp-image-1177"></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_3_5 et_pb_column_14 et_animated  et_pb_css_mix_blend_mode_passthrough et-last-child" data-animation-style="slideRight" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_12  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Gentle And Compassionate Dental Care</h3></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_13  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Our <a href="https://maps.google.com/?cid=11854626965339605503" target="_blank" rel="noopener">conveniently located</a> Camrose dental clinic direct bills to most insurance plans for your convenience. Simply provide us with your insurance information on your first visit and keep us updated on any changes. This way, you’ll have peace of mind that your coverage is accurate and spend less time with paperwork.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_2_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_2 et_pb_bg_layout_light" href="/contact-us/">Contact Us</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_4 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_8 et_animated" data-animation-style="slide" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_14  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Take a Tour of Dental Clinic</h2></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_9 et_animated" data-animation-style="slideBottom" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_16  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_15 et_pb_text_align_left et_pb_bg_layout_light et_multi_view__hover_selector">
+				
+				
+				
+				
+				<div class="et_pb_text_inner" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;&lt;iframe width=\&quot;100%\&quot; height=\&quot;730\&quot; src=\&quot;https:\/\/my.matterport.com\/show\/?m=kxgAFZFA2rN\&quot; frameborder=\&quot;0\&quot; allowfullscreen=\&quot;\&quot; allow=\&quot;xr-spatial-tracking\&quot;&gt;&lt;\/iframe&gt;&quot;,&quot;tablet&quot;:&quot;&lt;iframe width=\&quot;100%\&quot; height=\&quot;530\&quot; src=\&quot;https:\/\/my.matterport.com\/show\/?m=kxgAFZFA2rN\&quot; frameborder=\&quot;0\&quot; allowfullscreen=\&quot;\&quot; allow=\&quot;xr-spatial-tracking\&quot;&gt;&lt;\/iframe&gt;&quot;,&quot;phone&quot;:&quot;&lt;iframe width=\&quot;100%\&quot; height=\&quot;330\&quot; src=\&quot;https:\/\/my.matterport.com\/show\/?m=kxgAFZFA2rN\&quot; frameborder=\&quot;0\&quot; allowfullscreen=\&quot;\&quot; allow=\&quot;xr-spatial-tracking\&quot;&gt;&lt;\/iframe&gt;&quot;}},&quot;slug&quot;:&quot;et_pb_text&quot;}" data-et-multi-view-load-tablet-hidden="true" data-et-multi-view-load-phone-hidden="true"><iframe width="100%" height="730" src="https://my.matterport.com/show/?m=kxgAFZFA2rN" frameborder="0" allowfullscreen="" allow="xr-spatial-tracking"></iframe></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_10 inline-btn et_animated" data-animation-style="slide" data-animation-repeat="" data-animation-duration="1000ms" data-animation-delay="0ms" data-animation-intensity="50%" data-animation-starting-opacity="0%" data-animation-speed-curve="ease-in-out">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_17  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_16  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Take Care Of Your Oral Health &amp; Book Your Dental Hygiene Appointment Today</h3></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_3_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_3 et_pb_bg_layout_light" href="/contact-us/">Contact Us</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+						</div>
+
+				
+				</article>
+
+			
+
+</div>
+
+
+			<footer id="main-footer">
+				
+<div class="container">
+	<div id="footer-widgets" class="clearfix">
+		<div class="footer-widget"><div id="nav_menu-3" class="fwidget et_pb_widget widget_nav_menu"><h4 class="title">USEFUL LINKS</h4><div class="menu-useful-links-container"><ul id="menu-useful-links" class="menu"><li id="menu-item-1189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1189"><a href="https://www.livdental.ca/invisalign-day-april-2026/">Invisalign</a></li>
+<li id="menu-item-1187" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1187"><a href="https://www.livdental.ca/cosmetic-dentistry/dental-crowns/">Dental Crowns</a></li>
+<li id="menu-item-1190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1190"><a href="https://www.livdental.ca/restorative-dentistry/dental-bridges/">Dental Bridges</a></li>
+<li id="menu-item-1188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1188"><a href="https://www.livdental.ca/emergency-dentistry/">Emergency Dentistry</a></li>
+<li id="menu-item-1191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1191"><a href="https://www.livdental.ca/sedation-dentistry/">Sedation Dentistry</a></li>
+<li id="menu-item-1192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1192"><a href="https://www.livdental.ca/dental-technology/">Dental Technology</a></li>
+<li id="menu-item-921" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-921"><a href="https://www.livdental.ca/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1784" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1784"><a href="https://www.livdental.ca/terms-of-use/">Terms of Use</a></li>
+</ul></div></div></div><div class="footer-widget"><div id="block-8" class="fwidget et_pb_widget widget_block"><h4>Contact Info</h4>
+<p class="dental">LivDental</p> 
+<p class="addr"><a href="https://maps.app.goo.gl/DSHird2KFzFTyor78">4819 68 St # 201<br> Camrose, AB, T4V 5C1</a></p></div><div id="block-9" class="fwidget et_pb_widget widget_block"><div class="foot_cont">
+<div class="foot_call">
+<a href="tel:+15877427122"><span><i class="fa-solid fa-phone"></i></span> (587) 742-7122</a>
+</div>
+<div class="foot_mail">
+<a href="mailto:office@livdental.ca"><span><i class="fa-regular fa-envelope"></i></span> office@livdental.ca</a>
+</div>
+</div></div><div id="block-12" class="fwidget et_pb_widget widget_block">
+<ul class="wp-block-social-links has-icon-color is-style-logos-only is-layout-flex wp-block-social-links-is-layout-flex"><li style="color:#565656" class="wp-social-link wp-social-link-facebook wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://www.facebook.com/livdentalcamrose" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Facebook</span></a></li>
+
+<li style="color:#565656" class="wp-social-link wp-social-link-instagram wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://www.instagram.com/livdentalcamrose" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Instagram</span></a></li>
+
+<li style="color:#565656" class="wp-social-link wp-social-link-google wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://maps.google.com/?cid=11854626965339605503" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12.02,10.18v3.72v0.01h5.51c-0.26,1.57-1.67,4.22-5.5,4.22c-3.31,0-6.01-2.75-6.01-6.12s2.7-6.12,6.01-6.12 c1.87,0,3.13,0.8,3.85,1.48l2.84-2.76C16.99,2.99,14.73,2,12.03,2c-5.52,0-10,4.48-10,10s4.48,10,10,10c5.77,0,9.6-4.06,9.6-9.77 c0-0.83-0.11-1.42-0.25-2.05H12.02z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Google</span></a></li></ul>
+</div></div><div class="footer-widget"><div id="block-10" class="fwidget et_pb_widget widget_block"><h4>Our Hours</h4>
+<div class="hours_shortcode"><ul class="child_hours_ul"><li><span class="child_dayofweek">Mon:</span><span class="child_hours"><span class="child_hours"><time time="8:00am" itemprop="startTime">8:00am</time><span class="child_dash"> - </span><time time="4:00pm" itemprop="endTime">4:00pm</time></span></span></li><li><span class="child_dayofweek"><time day="2" itemprop="weekDay">Tue:</time></span><span class="child_hours"><time time="8:00am" itemprop="startTime">8:00am</time><span class="child_dash"> - </span><time time="4:00pm" itemprop="endTime">4:00pm</time></span></li><li><span class="child_dayofweek"><time day="3" itemprop="weekDay">Wed:</time></span><span class="child_hours"><time time="8:00am" itemprop="startTime">8:00am</time><span class="child_dash"> - </span><time time="4:00pm" itemprop="endTime">4:00pm</time></span></li><li><span class="child_dayofweek"><time day="4" itemprop="weekDay">Thu:</time></span><span class="child_hours"><time time="8:00am" itemprop="startTime">8:00am</time><span class="child_dash"> - </span><time time="4:00pm" itemprop="endTime">4:00pm</time></span></li><li><span class="child_dayofweek"><time day="5" itemprop="weekDay">Fri:</time></span><span class="child_hours"><time time="8:00am" itemprop="startTime">8:00am</time><span class="child_dash"> - </span><time time="3:00pm" itemprop="endTime">3:00pm</time></span></li><li><span class="child_dayofweek"><time day="6" itemprop="weekEnd">Sat:</time></span><span class="child_replace">Closed</span></li><li><span class="child_dayofweek"><time day="7" itemprop="weekEnd">Sun:</time></span><span class="child_replace">Closed</span></li></ul></div></div></div>	</div>
+</div>
+
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<div id="footer-info">© Copyright LivDental.</div>					</div>	<!-- .container -->
+				</div>
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/divi-child/*","/wp-content/themes/Divi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+	<script type="text/javascript">
+				var et_animation_data = [{"class":"et_pb_column_1","style":"slideLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_2","style":"slideLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_3","style":"slideRight","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_4","style":"slideLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_5","style":"slideRight","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_6","style":"slideLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_7","style":"slideRight","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_5","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_11","style":"slideLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_12","style":"slideRight","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_13","style":"slideLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_14","style":"slideRight","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_8","style":"slide","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_9","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_10","style":"slide","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"}];
+					var et_link_options_data = [{"class":"et_pb_column_8","url":"\/invisalign\/","target":"_self"},{"class":"et_pb_text_7","url":"\/invisalign\/","target":"_self"},{"class":"et_pb_column_9","url":"\/restorative-dentistry\/dental-bridges\/","target":"_self"},{"class":"et_pb_text_8","url":"\/restorative-dentistry\/dental-bridges\/","target":"_self"},{"class":"et_pb_column_10","url":"\/cosmetic-dentistry\/","target":"_self"},{"class":"et_pb_text_9","url":"\/cosmetic-dentistry\/","target":"_self"}];
+			</script>
+			<!-- Google Tag Manager (noscript) snippet added by Site Kit -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8JS5N2Q" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
+		<script id="divi-custom-script-js-extra">
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https://www.livdental.ca/wp-admin/admin-ajax.php","images_uri":"https://www.livdental.ca/wp-content/themes/Divi/images","builder_images_uri":"https://www.livdental.ca/wp-content/themes/Divi/includes/builder/images","et_frontend_nonce":"6ab89534a2","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"79b4e0c4a8","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"586","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":"https://www.livdental.ca/wp-content/themes/Divi/includes/builder/frontend-builder/assets/vendors","accent_color":"#36789e","waypoints_options":{"context":[".pum-overlay"]}};
+var et_pb_box_shadow_elements = [];
+//# sourceURL=divi-custom-script-js-extra
+</script>
+<script id="divi-custom-script-js" src="https://www.livdental.ca/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.6"></script>
+<script id="gforms_recaptcha_recaptcha-js-extra">
+var gforms_recaptcha_recaptcha_strings = {"nonce":"e6c4c5c81b","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https://www.livdental.ca/wp-content/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6Lf5paQpAAAAAN0zs43n32tLtnn6VrsbLsEmk2aI"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+</script>
+<script data-wp-strategy="defer" defer="" id="gforms_recaptcha_recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6Lf5paQpAAAAAN0zs43n32tLtnn6VrsbLsEmk2aI&amp;ver=2.2.2"></script>
+<script data-wp-strategy="defer" defer="" id="gforms_recaptcha_frontend-js" src="https://www.livdental.ca/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.2.2"></script>
+<script id="et-core-common-js" src="https://www.livdental.ca/wp-content/themes/Divi/core/admin/js/common.js?ver=4.27.6"></script>
+<script id="jquery-ui-core-js" src="https://www.livdental.ca/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"></script>
+<script id="wp-hooks-js" src="https://www.livdental.ca/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="popup-maker-site-js-extra">
+var pum_vars = {"version":"1.22.0","pm_dir_url":"https://www.livdental.ca/wp-content/plugins/popup-maker/","ajaxurl":"https://www.livdental.ca/wp-admin/admin-ajax.php","restapi":"https://www.livdental.ca/wp-json/pum/v1","rest_nonce":null,"default_theme":"1557","debug_mode":"","disable_tracking":"","home_url":"/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","paramNames":{"popup_id":"pid","cta":"cta","notrack":"notrack"},"analytics_enabled":"1","analytics_route":"analytics","analytics_api":"https://www.livdental.ca/wp-json/pum/v1"};
+var pum_sub_vars = {"ajaxurl":"https://www.livdental.ca/wp-admin/admin-ajax.php","message_position":"top"};
+var pum_popups = [];
+//# sourceURL=popup-maker-site-js-extra
+</script>
+<script id="popup-maker-site-js" src="//www.livdental.ca/wp-content/uploads/pum/pum-site-scripts.js?defer&amp;generated=1772586900&amp;ver=1.22.0"></script>
+<script id="googlesitekit-events-provider-popup-maker-js" src="https://www.livdental.ca/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-popup-maker-7062bab628c801813984.js" defer=""></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://www.livdental.ca/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "EHAt5TiNes");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><script data-account="EHAt5TiNes" src="https://cdn.userway.org/widget.js"></script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;5f4800a3081a416686dfc081be8ba592&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+<script id="" text="" charset="" type="text/javascript" src="https://oswidget.carecru.ca/widgets/86867322-b75f-4612-8e27-365aba5eb0e1/cc.js"></script><script id="" text="" charset="" type="text/javascript" src="https://next-api.patientprism.com/v1/snippet/9ed0cc69-d338-40e0-8bd7-c9ddf550653b"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Dentist", "LocalBusiness", "Organization"],
+  "@id": "https://www.livdental.ca/#entity",
+  "name": "LivDental",
+  "url": "https://www.livdental.ca/",
+  "logo": "https://www.livdental.ca/wp-content/uploads/2025/01/Livdental-logo-small.webp",
+  "image": "https://www.livdental.ca/wp-content/uploads/2025/01/Livdental-logo-small.webp",
+  "description": "LivDental is a trusted dental clinic in Camrose, Alberta, providing comprehensive general, preventive, and restorative dentistry for patients of all ages. Our experienced dental team focuses on personalized treatment plans, modern dental technology, and patient comfort. Conveniently located in Camrose, LivDental is committed to delivering high-quality, compassionate dental care to help individuals and families maintain healthy, confident smiles for life.",
+  "priceRange": "$$",
+  "telephone": "+1-780-672-3033",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4819 68 St #201",
+    "addressLocality": "Camrose",
+    "addressRegion": "AB",
+    "postalCode": "T4V 5C1",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.01928,
+    "longitude": -112.83
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"],
+      "opens": "08:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday"],
+      "opens": "08:00",
+      "closes": "15:00"
+    }
+  ],
+  "hasMap": "https://maps.app.goo.gl/B3xUdvfDwUz9WjDf8",
+  "sameAs": [
+    "https://www.facebook.com/livdentalcamrose",
+    "https://www.instagram.com/livdentalcamrose/"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-780-672-3033",
+    "contactType": "appointments"
+  }
+}
+</script>
+
+<script src="https://cdn.userway.org/widgetapp/2026-06-09-08-22-25/widget_app_base_1780993345047.js" async="" id="a11yWidgetSrc" crossorigin="anonymous" integrity="sha256-elUiDlZQ7KB3gzFxrCiA2ABCTDxwVC55nwiRzU3Ugkc="></script><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-5mlrq2rw6c7v" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lf5paQpAAAAAN0zs43n32tLtnn6VrsbLsEmk2aI&amp;co=aHR0cHM6Ly93d3cubGl2ZGVudGFsLmNhOjQ0Mw..&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=1jtd1un72yy4"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><div class="CareCruModal"><div class="CareCruModalInner"><iframe width="100%" scrolling="no" src="https://oswidget.carecru.ca/widgets/86867322-b75f-4612-8e27-365aba5eb0e1/app/book?ref=" id="CareCruIframe" style="height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; overflow: hidden;" title="CareCru"></iframe></div></div><div class="CareCruFadeIn CareCruButton Book"><div class="CareCruButtonIcon"><svg class="CareCruButtonIconSVG" viewBox="0 0 184 167" xmlns="http://www.w3.org/2000/svg"><path d="M170.486 6.775c7.462 0 13.511 6.049 13.511 13.511v132.935c0 7.462-6.049 13.512-13.511 13.512H13.931c-7.461 0-13.51-6.05-13.51-13.512V20.284c0-7.461 6.048-13.509 13.509-13.509h22.038V1.954c0-.809.655-1.465 1.465-1.465h18.999c.809 0 1.465.656 1.465 1.465v4.821h66.853V1.954c0-.809.656-1.465 1.465-1.465h19.001c.81 0 1.465.656 1.465 1.465v4.821h23.805zm-3.843 147.071a3.611 3.611 0 0 0 3.609-3.613V44.279a3.61 3.61 0 0 0-3.609-3.613H18.374a3.61 3.61 0 0 0-3.609 3.613v105.954a3.611 3.611 0 0 0 3.609 3.613h148.269zm-40.331-72.672a3.358 3.358 0 0 1 0 4.745l-38.846 38.846c-.371.37-.811.608-1.275.769-1.004.739-2.403.698-3.311-.212l-24.406-24.404a2.569 2.569 0 0 1 0-3.631l7.598-7.597a2.567 2.567 0 0 1 3.631 0l15.19 15.19 30.19-30.189a3.355 3.355 0 0 1 4.746 0l6.483 6.483z" fill="#FFFFFE" fill-rule="evenodd"></path></svg></div><div><strong class="CareCruButtonIconBook">Book</strong> Online</div></div><script crossorigin="anonymous" integrity="sha256-D54btnHmAP+zTQ3UmPIA6BqfpsrDqwlmcYrqprO//iU=" src="https://cdn.userway.org/widgetapp/2026-06-09-08-22-25/remediation/remediation_1780993345047.js"></script></body></html>

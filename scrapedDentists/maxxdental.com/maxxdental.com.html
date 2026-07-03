@@ -1,0 +1,1875 @@
+<!DOCTYPE html><html lang="en-US" class=" no-touchevents js_active  vc_desktop  vc_transform  vc_transform " style="--bookingWidgetPrimaryColor: #867a74; --bookingWidgetPrimaryColorDarker: rgb(124,112,106);"><head><style>@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");.CareCruModal{display:block;position:fixed;content:"";top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:-1;opacity:0;transition:opacity .2s,z-index 0s .2s;text-align:center;overflow:hidden;overflow-y:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;visibility:hidden}.CareCruModal.CareCruActive{z-index:999999;opacity:1;visibility:visible;transition:opacity .2s}.CareCruModal:before{overflow:hidden;width:0;height:100%;content:""}.CareCruModal:before,.CareCruModal>*{display:inline-block;vertical-align:middle}.CareCruModal>*{white-space:normal;text-align:left}.CareCruModalInner{position:relative;overflow:hidden;width:600px;height:100%;max-width:100%;overflow-y:auto;background:#fff;z-index:-1;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s,z-index 0s .2s}@media screen and (min-width:610px){.CareCruModalInner{height:650px}}.CareCruModalInner.CareCruActive{z-index:100;opacity:1;transform:scale(1);transition:opacity .2s,transform .2s}.CareCruButton{position:fixed;right:-160px;opacity:0;top:250px;min-width:157px;min-height:75px;cursor:pointer;display:flex;flex-direction:row;align-items:center;background-color:var(--bookingWidgetPrimaryColor);text-align:right;justify-content:center;padding:20px;color:#fff;box-sizing:border-box;z-index:9998;box-shadow:1px 2px 3px 0 hsla(0,0%,50.2%,.15);transition:all .2s ease-in;text-transform:uppercase;font-family:"Roboto"!important;font-size:19px;letter-spacing:0;line-height:19px;text-shadow:.5px .5px .5px rgba(0,0,0,.1);border-bottom-left-radius:999px;border-top-left-radius:999px}.CareCruButton.Request{font-size:15.5px}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;right:-160px}50%{opacity:0;right:-20px}to{opacity:1;right:0}}.CareCruButton .CareCruButtonIconBook{display:block;font-weight:600;font-size:25px;line-height:25px;color:#fff;font-family:"Roboto"!important}.CareCruButtonIcon{padding-right:.6rem;color:#fff;transition:all .2s ease-in;top:24px}.CareCruButtonIcon .CareCruButtonIconSVG{fill:currentColor;height:35px;transition:all .2s ease-in}.CareCruButton:hover{background:var(--bookingWidgetPrimaryColorDarker);box-shadow:1px 4px 5px 0 hsla(0,0%,50.2%,.25);transition:all .2s ease-in}.CareCruButton:hover .CareCruButtonIcon{transition:all .2s ease-in;border-color:var(--bookingWidgetPrimaryColorDarker)}.CareCruButton:hover .CareCruButtonIcon .CareCruButtonIconSVG{transition:all .2s ease-in;color:var(--bookingWidgetPrimaryColorDarker)}@media screen and (max-width:610px){.CareCruButton{top:auto;right:0;opacity:0;width:90%;left:5%;font-size:18px;justify-content:center;box-sizing:border-box;border-radius:9999px;padding:10px 0;text-align:center;min-height:auto}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;bottom:-3%}50%{opacity:0}to{opacity:1;bottom:2.5%}}.CareCruButton .CareCruButtonIconBook{display:inline;font-size:18px}.CareCruButtonIcon{display:none}}#CareCruIframe{z-index:101;position:absolute;top:0;left:0;width:1px;min-width:100%;height:100%;border:none;overflow:hidden}#hiddenCareCru{display:none}#locationWrapper .header{flex-flow:nowrap}#hiddenCareCru.active{display:block}.CareCruSpinner{font-family:"Roboto";margin:0 auto;text-align:center;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;font-weight:700;letter-spacing:.035em;z-index:102;position:relative;background:#fff;opacity:1}.CareCruSpinner,.CareCruSpinner.CareCruFadeOut{transition:opacity 1s cubic-bezier(.175,.885,.32,1.275)}.CareCruSpinner.CareCruFadeOut{opacity:0}.CareCruSpinner>div>div{width:18px;height:18px;background-color:var(--bookingWidgetPrimaryColor);border-radius:100%;display:inline-block;-webkit-animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both;animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both}.CareCruSpinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.CareCruSpinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}.CareCruSpinner>span{margin-top:12px}@-webkit-keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}
+/*# sourceMappingURL=widget.css.map */</style><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+	<meta charset="UTF-8">
+<script async="" src="https://scripts.clarity.ms/0.8.66/clarity.js"></script><script async="" src="https://www.clarity.ms/tag/h9f74evj31?ref=gtm2"></script><script type="text/javascript" async="" src="https://bat.bing.com/bat.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-F9Q885MRST&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-RJ95K8D9EM&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-375974472&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-KMQ647T"></script><script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+	
+				<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		
+            
+            
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://maxxdental.com/xmlrpc.php">
+
+	
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer="">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v27.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Dentist Near Me in Fort McMurray | Maxx Dental Group</title>
+	<meta name="description" content="Trusted dentist in Fort McMurray delivering modern dental treatments in a comfortable setting. Choose Maxx Dental Group for quality care.">
+	<link rel="canonical" href="https://maxxdental.com/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Dentist Near Me in Fort McMurray | Maxx Dental Group">
+	<meta property="og:description" content="Trusted dentist in Fort McMurray delivering modern dental treatments in a comfortable setting. Choose Maxx Dental Group for quality care.">
+	<meta property="og:url" content="https://maxxdental.com/">
+	<meta property="og:site_name" content="Maxx Dental">
+	<meta property="article:publisher" content="https://www.facebook.com/maxxdentalgroup">
+	<meta property="article:modified_time" content="2026-06-22T17:38:19+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//www.google.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="Maxx Dental » Feed" href="https://maxxdental.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Maxx Dental » Comments Feed" href="https://maxxdental.com/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://maxxdental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmaxxdental.com%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://maxxdental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmaxxdental.com%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://maxxdental.com/wp-includes/blocks/paragraph/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="cip-child-css" href="https://maxxdental.com/wp-content/plugins/aow_cip/css/contentshare.css?ver=7.0" media="all">
+<link rel="stylesheet" id="my-plugin-style-css" href="https://maxxdental.com/wp-content/plugins/aow_cip%202/css/contentshare.css?ver=7.0" media="all">
+<link rel="stylesheet" id="aow_gf_failure_notification-css" href="https://maxxdental.com/wp-content/plugins/aow_gf_failure_notification/public/css/aow_gf_failure_notification-public.css?ver=1.3.0" media="all">
+<link rel="stylesheet" id="grw-public-main-css-css" href="https://maxxdental.com/wp-content/plugins/widget-google-reviews/assets/6.9.6/css/public-main.css" media="all">
+<link rel="stylesheet" id="mediaelement-css" href="https://maxxdental.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="https://maxxdental.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-default-style-css" href="https://maxxdental.com/wp-content/themes/bridge/style.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-qode-font_awesome-css" href="https://maxxdental.com/wp-content/themes/bridge/css/font-awesome/css/font-awesome.min.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-qode-font_elegant-css" href="https://maxxdental.com/wp-content/themes/bridge/css/elegant-icons/style.min.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-qode-linea_icons-css" href="https://maxxdental.com/wp-content/themes/bridge/css/linea-icons/style.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-qode-dripicons-css" href="https://maxxdental.com/wp-content/themes/bridge/css/dripicons/dripicons.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-qode-kiko-css" href="https://maxxdental.com/wp-content/themes/bridge/css/kiko/kiko-all.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-qode-font_awesome_5-css" href="https://maxxdental.com/wp-content/themes/bridge/css/font-awesome-5/css/font-awesome-5.min.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-stylesheet-css" href="https://maxxdental.com/wp-content/themes/bridge/css/stylesheet.min.css?ver=7.0" media="all">
+<style id="bridge-stylesheet-inline-css">
+ .page-id-1163 .content > .content_inner > .container, .page-id-1163 .content > .content_inner > .full_width { background-color: #fafafa;}
+
+  .page-id-1163.disabled_footer_top .footer_top_holder, .page-id-1163.disabled_footer_bottom .footer_bottom_holder { display: none;}
+
+
+/*# sourceURL=bridge-stylesheet-inline-css */
+</style>
+<link rel="stylesheet" id="bridge-print-css" href="https://maxxdental.com/wp-content/themes/bridge/css/print.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-style-dynamic-css" href="https://maxxdental.com/wp-content/themes/bridge/css/style_dynamic_callback.php?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-responsive-css" href="https://maxxdental.com/wp-content/themes/bridge/css/responsive.min.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bridge-style-dynamic-responsive-css" href="https://maxxdental.com/wp-content/themes/bridge/css/style_dynamic_responsive_callback.php?ver=7.0" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="https://maxxdental.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=8.7.3" media="all">
+<link rel="stylesheet" id="bridge-style-handle-google-fonts-css" href="https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic&amp;subset=latin%2Clatin-ext&amp;ver=1.0.0" media="all">
+<link rel="stylesheet" id="bridge-core-dashboard-style-css" href="https://maxxdental.com/wp-content/plugins/bridge-core/modules/core-dashboard/assets/css/core-dashboard.min.css?ver=7.0" media="all">
+<link rel="stylesheet" id="childstyle-css" href="https://maxxdental.com/wp-content/themes/bridge-child/style.css?ver=7.0" media="all">
+<script id="jquery-core-js" src="https://maxxdental.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://maxxdental.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="aow_gf_failure_notification-js" src="https://maxxdental.com/wp-content/plugins/aow_gf_failure_notification/public/js/aow_gf_failure_notification-public.js?ver=1.3.0"></script>
+<script id="js.cookie-js" src="https://maxxdental.com/wp-content/plugins/handl-utm-grabber/js/js.cookie.js?ver=7.0"></script>
+<script id="handl-utm-grabber-js-extra">
+var handl_utm = [];
+//# sourceURL=handl-utm-grabber-js-extra
+</script>
+<script id="handl-utm-grabber-js" src="https://maxxdental.com/wp-content/plugins/handl-utm-grabber/js/handl-utm-grabber.js?ver=7.0"></script>
+<script async="" id="tp-tools-js" src="//maxxdental.com/wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.29"></script>
+<script async="" id="revmin-js" src="//maxxdental.com/wp-content/plugins/revslider/sr6/assets/js/rs6.min.js?ver=6.7.35"></script>
+<script id="grw-public-main-js-js" defer="defer" src="https://maxxdental.com/wp-content/plugins/widget-google-reviews/assets/6.9.6/js/public-main.js"></script>
+<script></script><link rel="https://api.w.org/" href="https://maxxdental.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://maxxdental.com/wp-json/wp/v2/pages/1163"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://maxxdental.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 7.0">
+<link rel="shortlink" href="https://maxxdental.com/">
+<script type="application/ld+json"> 
+	{
+	  "@context": "http://www.schema.org",
+	  "@type": "Dentist",
+	  "name": "Maxx Dental Centre",
+	  "url": "https://maxxdental.com/",
+	  "logo": "",
+	  "image": "",
+	  "description": "Beautiful teeth can make a great difference in appearance and self confidence. Discover what Maxx Dental can do for your stained, chipped, missing or crooked teeth. Maxx Dental can handle all of your dentistry needs from implants to orthodontics. Our staff is committed to providing outstanding dental care for you and your family. As many others, you might be anxious to go to the dentist. Let us reassure you as we explain each step in the process of your customized dental plan. From oral surgery to cosmetic treatments, the dentists at Maxx Dental Group have the expertise for any procedure. Let us help you find your perfect smile. We have flexible hours to accommodate patients with emergencies. We have a gentle touch and caring approach to put children, and adults, at ease. Our Services: Cosmetic Dentistry Bridges Crowns Emergencies Implants Whitening Family Dentistry General Dentistry Oral Surgery Sedation Dentistry Orthodontics Treatment of Gum Disease Veneers Bleaching Laser Therapy Major Dental Insurance Give us a call today to schedule an appointment with one of our highly experienced and qualified dentists. We always welcome new patients and are open to serve you with convenient evening appointments. We have flexible schedules to accommodate emergency treatments.",
+	  "address": {
+		"@type": "PostalAddress",
+		"streetAddress": "331 Thickwood Blvd",
+		"addressLocality": "Fort McMurray",
+		"addressRegion": "AB",
+		"postalCode": "T9H4V2",
+		"addressCountry": "CA"
+	  },
+	  "geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "56.732944",
+		"longitude": " -111.42590410000003"
+	  },
+	  "hasMap": "https://www.google.com/maps/search/?api=1&query=Maxx+Dental+Centre&query_place_id=ChIJX8ZIXugIsFMREF2v8vbx1Rg",
+	  "openingHours": "Mo 7:00 am-16:30 pm Tu 7:00 am-17:00 pm We 7:00 am-19:00 pm Th 7:00 am-17:00 pm Fr 7:00 am-16:30 pm"
+	  ,
+	  "contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+1 (780) 743-4111",
+		"contactType": "customer service"
+	  }
+	  	}
+ 	</script>
+<meta name="ti-site-data" content="eyJyIjoiMTowITc6MCEzMDowIiwibyI6Imh0dHBzOlwvXC9tYXh4ZGVudGFsLmNvbT90aS1vbmxpbmUtdXNlcnMtZ29vZ2xlPTEmYW1wO3A9JTJGJmFtcDtfd3Bub25jZT1jMDUyNmM5ODcwIn0=">
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to automatic -->
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+	var dataLayer_content = {"pagePostType":"frontpage","pagePostType2":"single-page","pagePostAuthor":"Jade Burnside"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KMQ647T');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<style data-type="vc_custom-css">.icon-left .q_icon_with_title{
+     border-right: 1px dashed gray;
+}
+ .icon-left-no-border .q_icon_with_title{
+     border-right: none;
+}
+ .icon-left .section_inner_margin{
+     box-shadow: 0 0 35px 5px #dceff8;
+}
+ .icon-left .q_icon_with_title.small .icon_holder img{
+     width: auto;
+}
+ .icon-left .q_icon_with_title.small.custom_icon_image .icon_text_holder{
+     padding-left: 85px;
+}
+ .icon-left .q_icon_with_title {
+     border-right: 1px dashed #dedede;
+     padding-right: 50px;
+}
+ .icon-left .icon-left-no-border .q_icon_with_title{
+     border-right: none;
+}
+ .qode-advanced-pricing-list .qode-apl-item .qode-apl-item-top .qode-apl-item-price{
+     white-space: nowrap;
+}
+ .qode-advanced-pricing-list .qode-apl-item .qode-apl-item-top h5{
+     line-height: unset;
+}
+ .qode-advanced-pricing-list .qode-apl-item .qode-apl-item-top h6{
+     font-size: 16px;
+     font-weight: 500;
+     letter-spacing: 0.4px;
+}
+ .qode-advanced-pricing-list .qode-apl-item {
+     margin-bottom: 5px;
+}
+ .icon-small .q_icon_with_title.tiny .icon_holder img{
+     width: auto;
+}
+ .q_counter_holder p.counter_text {
+     letter-spacing:0;
+}
+ .side_menu_button>a.search_button{
+     border-left: 1px dashed #cccccc;
+     padding: 2px 12px 2px 18px;
+}
+ .icon-small .q_icon_with_title.tiny.custom_icon_image .icon_text_holder{
+     padding-left: 113px;
+}
+ .icon-small .q_icon_with_title .icon_holder{
+     margin-top: 20px;
+}
+ .q_team .q_team_text{
+     padding: 21px 16px 17px;
+}
+ .q_team .q_team_title_holder span{
+     font-weight: 500;
+     letter-spacing: 0.025em;
+}
+ .q_team .q_team_social_holder .q_social_icon_holder i.simple_social{
+     font-size: 20px;
+}
+ .q_team{
+     transition: box-shadow 0.3s ease;
+}
+ .q_team:hover{
+     box-shadow: 0 8px 29px 2px #93bfe866;
+}
+ .q_team .q_team_title_holder .q_team_name{
+     line-height: 22px;
+}
+ .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-submit{
+     margin-top: 13px;
+}
+ .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-date{
+     padding: 13px 14px 
+}
+ .q_icon_with_title:first-of-type .icon_holder{
+     margin-top: 6px;
+}
+ .q_icon_with_title.tiny .icon_holder img{
+     width: auto;
+}
+ .test-1 .q_icon_with_title.tiny.custom_icon_image .icon_text_holder{
+     padding-left: 65px;
+}
+ .test-2 .q_icon_with_title .icon_text_holder h5.icon_title{
+     line-height: 26px;
+}
+ .test-2 .q_icon_with_title.tiny.custom_icon_image .icon_text_holder{
+     padding-left: 60px;
+}
+ .test-2 .q_icon_with_title .icon_text_holder .icon_text_inner p{
+     letter-spacing: 0.025em;
+     font-weight: 500;
+}
+ .qode-advanced-pricing-list .qode-apl-item .qode-apl-item-top .qode-apl-line{
+     bottom: 12px;
+}
+.new-h2 h2, .new-h3 h3{
+	font-size:15px;
+}</style><meta name="generator" content="Powered by Slider Revolution 6.7.35 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+<link rel="icon" href="https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo-150x150.jpg" sizes="32x32">
+<link rel="icon" href="https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo.jpg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo.jpg">
+<meta name="msapplication-TileImage" content="https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo.jpg">
+<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+<style id="wp-custom-css">
+/*---Landing Page css Start*/
+/*---FZN(21-09-2022)---*/
+.page-id-1611 a.wp-google-url {
+    display: none !important;
+}
+.page-id-1611 .ups-section .section_inner_margin .ups-col-odd .vc-hoverbox-inner .vc-hoverbox-front {
+    background-color: #504A47;
+    background-image: none !important;
+}
+.page-id-1611 .ups-section .section_inner_margin .ups-col-even .vc-hoverbox-inner .vc-hoverbox-front{
+    background-color: #857b74;
+    background-image: none !important;
+}
+.page-id-1611 .ups-section .section_inner_margin .ups-col-odd .vc-hoverbox-inner .vc-hoverbox-back{
+    background-color: #857b74 !important;
+}
+.page-id-1611 .ups-section .section_inner_margin .ups-col-even .vc-hoverbox-inner .vc-hoverbox-back{
+    background-color: #504A47 !important;
+}
+.page-id-1611 .ups-section .section_inner_margin .ups-col-odd .vc-hoverbox-inner .vc-hoverbox-front h2{
+    color: #fff !important;
+    font-weight: 400;
+}
+.page-id-1611 .ups-section .section_inner_margin .ups-col-even .vc-hoverbox-inner .vc-hoverbox-front h2{
+    color: #fff !important;
+    font-weight: 400;
+}
+.page-id-1611 .ups-section .section_inner_margin .ups-col-odd .vc-hoverbox-inner .vc-hoverbox-back h2{
+    font-size: 22px !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+.page-id-1611 .ups-section .section_inner_margin .ups-col-even .vc-hoverbox-inner .vc-hoverbox-back h2{
+    font-size: 22px !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+.page-id-1611 .ups-section .section_inner_margin .ups-col-odd .vc-hoverbox-inner .vc-hoverbox-back p{
+    color: #fff !important;
+}
+.page-id-1611 .ups-section .section_inner_margin .ups-col-even .vc-hoverbox-inner .vc-hoverbox-back p{
+    color: #fff !important;
+}
+/*-----END-----*/
+.page-id-1611 h2.lp-h2-title{
+		font-size: 36px;
+    line-height: 50px;
+    color: #5e5249;
+    font-weight: 400;
+}
+.page-id-1611 .lp-hm-content {
+		font-size: 18px; 
+	line-height: 32px;
+}
+.page-id-1611 h1.lp-h1-title {
+    font-size: 40px;
+    line-height: 50px;
+    color: #5e5249;
+    font-weight: 400;
+}
+.page-id-1611 .page_header .main_menu {
+	display: none;
+}
+.page-id-1611 .footer_inner{
+    display: none;
+}
+.page-id-1611 .ft-add h5{
+    color: #fff !important;
+	line-height: 50px !important;
+}
+.page-id-1611 .ft-add a{
+    color: #fff !important;
+}
+.page-id-1611 .ft-add p{
+    color: #fff !important;
+}
+.page-id-1611 .ft-ph p{
+    color: #fff !important;
+}
+.page-id-1611 .ft-ph a{
+    color: #fff !important;
+}
+.page-id-1611 .ft-hours h5{
+    color: #fff !important;
+	line-height: 50px !important;
+}
+.page-id-1611 .ft-hours .child_hours_ul {
+    color: #fff !important;
+    line-height: 22px;
+}
+.page-id-1611 .header_inner .q_logo a{
+    pointer-events: none;
+}
+.page-id-1611 span.hd-add {
+    display: none;
+}
+.page-id-1611 span.hd-phn {
+    font-size: 22px;
+}
+.page-id-1611 .review-col .vc_column-inner .wp-google-place .wp-google-right .wp-google-name a{
+	pointer-events: none !important:
+}
+.page-id-1611 .gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    border-radius: 5px;
+}
+.page-id-1611 .gform_legacy_markup_wrapper .hidden_label input.large, .gform_legacy_markup_wrapper .hidden_label select.large, .gform_legacy_markup_wrapper .top_label input.large, .gform_legacy_markup_wrapper .top_label select.large {
+    border-radius: 5px;
+}
+.page-id-1611 .gform_legacy_markup_wrapper textarea.large {
+    height: 110px;
+    width: 100%;
+    border-radius: 5px;
+}
+/*---END---*/
+
+.masonry.blog_masonry_date_in_image.masonry_pagination {
+    margin-top: 25px;
+}
+.single-post .type-post .title-date{
+    font-size: 43px !important;
+    color: #bebebe;
+    font-weight: 300;
+}
+@media only screen and (min-width: 800px) {
+#popmake-684 {max-height: calc(100vh - 210px);overflow-y: auto;/*padding-right: 40px;*/}
+#popmake-684 .pum-close.popmake-close {right: 5px !important;}
+}
+#popmake-684.pum-container {padding: 0 !important;	}
+#popmake-684 img {width: 100%;}
+/* home form */
+#wpcf7-f478-p22-o1, #wpcf7-f478-p4-o1 {background-color: #ffffff !important;padding: 60px;display: inline-block;}
+.front-page-form {color:#ffffff;font-size:20px;}
+.front-page-hours {color:#ffffff;font-size:18px;font-weight:300}
+
+.front-page-hours .child_hours, .front-page-hours .child_replace{float:right;}
+.front-page-hours li {line-height:45px;}
+.post_text_inner h5.entry_title a, .post_text_inner h5.entry_title {line-height: 26px !important;}
+body.single-post .title h1, body.single-post .title.title_size_small h1 {font-size: 3rem;margin: 35px 0px 10px 0px !important;color: #333;display: block;}
+.blog_single.blog_holder {padding-top: 3rem !important;}
+body.single-post h2.entry_title {visibility: collapse;}
+body.single-post h2.entry_title>span {visibility: visible;}
+.title_subtitle_holder span.separator.small.left {display: none;height: 0px !important;}
+
+.hdr-title{z-index: 6;font-family: "Open Sans";height: auto;width: auto;color: rgb(255, 255, 255);text-decoration: none;white-space: nowrap;min-height: 0px;min-width: 0px;max-height: none;max-width: none;text-align: inherit;line-height: 22px;letter-spacing: 0px;font-weight: 400;font-size: 30px;transform-origin: 50% 50%;transform: translate(0px, 0px);opacity: 1;visibility: visible;}
+.type-post .post_content_holder a{font-weight:600;color: #0000ff;}
+.type-post h2{font-size:32px !important;}
+.post_author{display: none;}
+.q_icon_with_title .icon_with_title_link{margin: 5px 0 0 !important;color: #404549 !important;font-size: 16px;}
+
+@media (max-width: 1000px){
+.logo_wrapper {left: 22% !important;}	
+.mobile-top-bar{display:block; width:100%;text-align: center}
+span.mobile-add-btn, 
+span.mobile-ph-btn {display: inline-block;}
+
+.mobile-top-bar .mobile-ph-btn, 
+.mobile-top-bar .mobile-add-btn a {color: #fff;height: 35px !important;display: inline-block;line-height: 35px;}
+    
+.mobile-top-bar .mobile-add-btn a br {display: none;}
+.mobile-top-bar .mobile-add-btn a span {color: #fff !important;font-weight: 400;}
+.mobile-top-bar .mobile-add-btn a, 
+.mobile-top-bar .mobile-ph-btn {padding: 0 20px;}
+.mobile-top-bar .mobile-ph-btn {background: #857b74;color: #fff;}
+.mobile-top-bar .mobile-ph-btn span, 
+.mobile-top-bar .mobile-ph-btn span i {color: #fff !important;}
+.mobile-top-bar .mobile-ph-btn:hover,
+.mobile-top-bar .mobile-add-btn a:hover {background: #000;color: #fff;}
+.mobile-top-bar .mobile-add-btn a {background:#504a47;}
+}
+
+
+@media (max-width: 605px){
+  .mobile-top-bar .mobile-add-btn a span {font-size: 13px;}
+.mobile-top-bar .mobile-add-btn a,
+.mobile-top-bar .mobile-add-btn,
+.mobile-top-bar .mobile-ph-btn {padding: 0;width: 100%;}
+}
+@media (max-width: 379px){
+.mobile-top-bar .mobile-add-btn a span {font-size: 12px;}
+}
+@media (max-width: 350px){
+.mobile-top-bar .mobile-add-btn a span {font-size: 11px;}
+}
+@media (max-width: 320px){
+.mobile-top-bar .mobile-add-btn a span {font-size: 10px;}
+}
+@media (max-width: 291px){
+.mobile-top-bar .mobile-add-btn a span {font-size: 9px;}
+}
+
+
+
+@media all and (min-width:321px) and (max-width: 480px) {
+#mobile-menu-item-333:hover + a{
+	display: block;
+}
+	
+}
+nav.mobile_nav ul#menu-main-menu-1 li:hover .sub_menu{
+	display:block !important;
+}
+
+/*.section_inner_margin.clearfix {
+    background-color: #fff !important;
+}*/
+
+@media all and (min-width:270px) and (max-width: 280px) {
+.icon-small .q_icon_with_title.tiny.custom_icon_image .icon_text_holder{
+	padding-left: 0px !important;
+}
+a#schedule-an-appointment {
+    margin: 0px 0px 20px 18px !important;
+}
+		.vc_row.wpb_row.section.vc_row-fluid.icon-left.section-after-banner.vc_custom_1630060691064.grid_section {
+    padding-top: 100px;
+}
+		h1.hdr-title {
+    font-size: 8px !important;
+    padding: 10px 215px !important;
+}
+}
+@media all and (min-width:281px) and (max-width: 320px) {
+.icon-small .q_icon_with_title.tiny.custom_icon_image .icon_text_holder{
+	padding-left: 0px !important;
+}
+a#schedule-an-appointment {
+    margin: 0px 0px 20px 35px !important;
+}
+	.vc_row.wpb_row.section.vc_row-fluid.icon-left.section-after-banner.vc_custom_1630060691064.grid_section {
+    padding-top: 110px;
+}
+	rs-layer#slider-1-slide-1-layer-3 {
+    margin: 3px 185px !important;
+}
+		h1.hdr-title {
+    font-size: 10px !important;
+    padding: 10px 225px !important;
+}
+}
+@media all and (min-width:321px) and (max-width: 480px) {
+.icon-small .q_icon_with_title.tiny.custom_icon_image .icon_text_holder{
+	padding-left: 0px !important;
+}
+a#schedule-an-appointment {
+    margin: 0px 0px 20px 35px !important;
+}
+	.vc_row.wpb_row.section.vc_row-fluid.icon-left.section-after-banner.vc_custom_1630060691064.grid_section {
+    padding-top: 100px !important; 
+}
+	h1.hdr-title {
+    font-size: 10px !important;
+    padding: 10px 185px !important;
+}
+}
+@media all and (min-width:540px) and (max-width: 720px) {
+.icon-small .q_icon_with_title.tiny.custom_icon_image .icon_text_holder{
+	padding-left: 0px !important;
+}
+a#schedule-an-appointment {
+    margin: 0px 0px 20px 80px !important;
+}
+	.vc_row.wpb_row.section.vc_row-fluid.icon-left.section-after-banner.vc_custom_1630060691064.grid_section {
+    padding-top: 130px !important; 
+}
+	h1.hdr-title {
+    font-size: 22px !important;
+    padding: 10px 160px !important;
+}
+	.after-banner-section-1 .q_elements_item_inner {
+    padding: 35px 0px 60px 0px !important;
+}
+	.after-banner-section-2 .q_elements_item_inner{
+    padding: 35px 0px 60px 0px;!important;
+}
+
+}
+@media all and (min-width:768px) and (max-width: 840px) {
+	.icon-left .q_icon_with_title.small.custom_icon_image .icon_text_holder {
+    padding-left: 35px !important;
+}
+		h1.hdr-title {
+    font-size: 25px !important;
+    padding: 10px 100px !important;
+}
+
+}
+/*@media all and (min-width:321px) and (max-width: 480px) {
+	.Home-afterbanner-section.wpb_column.vc_column_container.vc_col-sm-4.vc_col-lg-4.vc_col-md-4.vc_col-has-fill {
+    height: 290px !important;
+}
+	.Home-afterbanner-section-2.wpb_column.vc_column_container.vc_col-sm-4.vc_col-lg-4.vc_col-md-4.vc_col-has-fill {
+    height: 250px !important;
+}
+	.icon-small .q_icon_with_title.tiny.custom_icon_image .icon_text_holder {
+    padding-left: 0px !important;
+}
+	a#schedule-an-appointment{
+		margin: 0px 0px 20px 30px !important;
+	}
+	
+}
+
+@media all and (min-width:0px) and (max-width: 320px) {
+	.Home-afterbanner-section.wpb_column.vc_column_container.vc_col-sm-4.vc_col-lg-4.vc_col-md-4.vc_col-has-fill {
+    height: 300px !important;
+		padding-left: 30px !important;
+}
+	.Home-afterbanner-section-2.wpb_column.vc_column_container.vc_col-sm-4.vc_col-lg-4.vc_col-md-4.vc_col-has-fill {
+    height: 250px !important;
+		padding-left: 30px;
+}
+	.Home-afterbanner-section-3.wpb_column.vc_column_container.vc_col-sm-4.vc_col-lg-4.vc_col-md-4.vc_col-has-fill {
+		padding-left: 30px;
+}
+	.icon-small .q_icon_with_title.tiny.custom_icon_image .icon_text_holder {
+    padding-left: 0px !important;
+}
+	a#schedule-an-appointment{
+		margin: 0px 0px 20px 30px !important;
+	}
+}*/
+.type-post .post_text_inner p{
+	text-align: justify;
+}
+
+.type-post .post_text_inner ul li{
+	text-align: justify;
+}
+/*@media all and (min-width:0px) and (max-width: 280px) {
+.textwidget.custom-html-widget iframe {
+    width: 21%;
+}
+}
+
+@media all and (min-width:281px) and (max-width: 320px) {
+.textwidget.custom-html-widget iframe {
+    width: 24.3%;
+}
+}
+
+@media all and (min-width:321px) and (max-width: 360px) {
+.textwidget.custom-html-widget iframe {
+    width: 27.5%;
+}
+}
+
+
+@media all and (min-width:326px) and (max-width: 380px) {
+.textwidget.custom-html-widget iframe {
+    width: 28.8%;
+}
+}
+
+@media all and (min-width:381px) and (max-width: 411px) {
+.textwidget.custom-html-widget iframe {
+    width: 31.6%;
+}
+}*/
+@media only screen and (min-device-width : 280px) and (max-device-width : 767px)
+{
+h2, .h2{
+    padding-top: 50px;
+}
+}
+
+/*-------28-01-2022-------*/
+@media screen and (max-width: 767px){
+.vc_custom_1637865793259 {
+    padding-left: 40px !important;
+}
+.qbutton.large {
+    padding: 0 2px !important;
+}
+}
+@media all and (min-width:768px) and (max-width: 1024px) {
+.vc_col-sm-4 {
+    width: 31.333333%;
+}
+.title_subtitle_holder_inner {
+    margin-left: -200px;
+}
+.column2.footer_col2{
+    display: none;
+}
+.four_columns>.column1>.column_inner {
+    padding: 0 15px 0 15px;
+}
+.column3 .footer_col3 .custom_html-4 iframe {
+    width: 480px !important;
+}
+}
+
+
+
+
+/*------16-02-2022------*/
+@media all and (min-width:0px) and (max-width: 280px) {
+.blog_holder.blog_pinterest, .blog_holder.masonry {
+    width: 23% !important;
+}
+}
+@media all and (min-width:281px) and (max-width: 375px) {
+.blog_holder.blog_pinterest, .blog_holder.masonry {
+    width: 30% !important;
+}
+}
+@media all and (min-width:376px) and (max-width: 399px) {
+.blog_holder.blog_pinterest, .blog_holder.masonry {
+    width: 32% !important;
+}
+}
+@media all and (min-width:400px) and (max-width: 415px) {
+.blog_holder.blog_pinterest, .blog_holder.masonry {
+    width: 34% !important;
+}
+}
+/*------21-02-2022------*/
+@media all and (min-width:0px) and (max-width: 767px) {
+.vc_custom_1637109243715 {
+    padding-left: 40px !important;
+}
+}
+
+body.single-post .title h1, body.single-post .title.title_size_small h1{
+    font-size: 2.3rem;
+}
+.single-post.type-post.post_text_inner h2{
+    font-size: 32px !important;
+}
+
+/*------23-03-2022------*/
+.blog .blog_masonry_date_in_image .type-post .post_image img {
+    max-height: 250px;
+    min-height: 250px;
+}
+.blog .blog_masonry_date_in_image .type-post .post_text h5 {
+    min-height: 55px;
+}
+.blog .blog_masonry_date_in_image .type-post .post_text p {
+    min-height: 160px;
+}
+.blog_single.blog_holder {
+    padding-top: 1rem !important;
+}
+body.single-post .title h1, body.single-post .title.title_size_small h1 {
+    margin: 10px 0px 10px 0px !important;
+}
+.title .title_holder {
+    padding-top: 65px !important;
+}
+.title.title_size_small.position_left {
+    height: 150px !important;
+}
+input#input_3_1,input#input_3_2,input#input_3_6,.ginput_container.ginput_container_date,textarea#input_3_5,select#input_3_9{
+	border:1px solid black;
+}
+
+/*----------------------*/
+@media all and (min-width:0px) and (max-width: 767px) {
+/*---Landing Page CSS---*/
+.vc_custom_1662726860333 {
+    padding-right: 50px !important;
+}
+.page-id-1611 .gform_legacy_markup_wrapper textarea.large {
+    width: 100%;
+}
+.page-id-1611 .vc_custom_1662726910221 {
+    padding-left: 0px !important;
+}
+.page-id-1611 .ft-detail {
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+.page-id-1611 h2, .page-id-1611  .h2 {
+    padding-top: 0px !important;
+}
+	.patients-welcome-section{
+    padding-bottom: 10px !important;
+}
+/*-----END-----*/
+}
+.wpb_single_image.vc_align_left {
+    text-align: center;
+}
+.vc_row.wpb_row.section.vc_row-fluid.vc_custom_1516097931599 {
+    margin-top: -110px !important;
+}
+.footer_top, .footer_top.footer_top_full {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+div#custom_html-2 {
+    display: none;
+}
+div#custom_html-6 {
+    display: none;
+}
+div#custom_html-7 {
+    display: none;
+}
+	div#custom_html-8{
+		display: none;
+}
+.column2.footer_col2 {
+    display: none;
+}
+div#custom_html-9 {
+    display: none;
+}
+}
+@media only screen and (min-width: 980px){
+.side_menu_button {
+    display: none !important;
+}
+}
+@media only screen and (min-width: 641px){
+.gform_legacy_markup_wrapper .hidden_label input.large, .gform_legacy_markup_wrapper .hidden_label select.large, .gform_legacy_markup_wrapper .top_label input.large, .gform_legacy_markup_wrapper .top_label select.large {
+    width: 95% !important;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 5px 4px;
+    letter-spacing: normal;
+}
+}
+
+/*14-03-2023*/
+.single-post .blog_single h2.entry_title {
+    height: 40px;
+}
+.single-post .blog_single .post_content_holder a {
+	color : #333;
+}
+.blog .title_outer {
+	margin-bottom : 50px;
+}
+.blog article .post_image img {
+		object-fit: cover;
+    width: 100%;
+    height: 337px;
+}
+.blog_holder article .post_text h2 .date {
+	display: block;
+  font-size: 18px;
+}
+.blog article .post_content_holder a {
+	color: #857a74;
+}
+.blog article .post_content_holder .post_more a:hover {
+	background-color: #e7e6e4;
+   border-color: #e7e6e4;
+}
+
+/*------Blog inner Page CSS-----*/
+.single-post .title .title_holder {
+    padding-top: 100px !important;
+}
+.single-post .title .title_holder h1{
+    font-size: 33px !important;
+}
+
+.single-post .container .container_inner {
+    padding-top: 25px;
+}
+.single-post .type-post .post_content_holder .post_image img {
+    width: 100%;
+    height: 550px;
+	  object-fit: cover;
+}
+.single-post .title.title_size_small.position_left {
+    height: auto !important;
+}
+.single-post .title .title_holder {
+    padding-top: 125px !important;
+    height: auto !important;
+}
+.single-post .container_inner.default_template_holder {
+    padding-top: 0 !important;
+}
+/*------Blog inner Page CSS END-----*/
+
+.side_menu_button {
+	display: none;
+}
+
+.postid-2127 ul, ol {
+    margin-bottom: 15px;
+}
+.type-post h2.extra-head-font{
+	  font-size: 19px !important;
+}
+.type-post h2{
+	margin-bottom:5px;
+}
+.extra-head-font-detail h2{
+	 font-size: 19px;
+   line-height: 1.375em;
+   font-weight: 400;
+   color: #303030;
+	 text-transform:capitalize;
+}
+.extra-head-inner-detail h2{
+	 font-size: 19px;
+   line-height: 1.375em;
+   color: #303030;
+	 text-transform:uppercase;
+}
+.extra-head-font{
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    color: #303030;
+}
+
+.contact-add-detail h3{   
+    font-size: 13px;
+    line-height: 1.538461538461538em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #303030;
+}
+.e-font-size h2{
+	font-size: 19px;
+	font-weight: 400;
+	color: #303030;
+	letter-spacing: 0px;
+}
+.pera-head-main {
+    font-size: 17px;
+    line-height: 1.304347826086957em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.doc-name-font h3{
+    font-size: 15px;
+    line-height: 1.571428571428571em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #303030;
+}
+
+@media (min-width:1240px){
+	.container_inner{width: 1200px;}
+}
+@media (max-width:768px){
+.mobile_menu_button {
+    float: right !important;
+}
+	.logo_wrapper {
+    position: static !important;
+}
+	.q_logo a {
+    left: 0 !important;
+}
+}
+
+@media (max-width:1000px){
+	.single-post .title .title_holder {
+    padding-top: 0px !important;
+}
+	.single-post .title .title_holder h1 {
+    font-size: 24px !important;
+}
+	.single-post h2 {
+    font-size: 20px !important;
+}
+	.single-post .type-post .post_content_holder .post_image img {
+    width: 100%;
+    height: auto !important;
+	  object-fit: cover;
+}
+}
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+    .single-post h2{
+        padding-top: 20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+	.footer_col3 .textwidget iframe {
+    width: 100% !important;
+}
+}
+</style>
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1716896556238{margin-right: -50px !important;margin-left: -50px !important;}.vc_custom_1603215071697{background-image: url(https://maxxdental.com/wp-content/uploads/2020/10/0130b-Family-Dentist-in-Fort-McMurray.jpg?id=787) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1516097931599{padding-top: 100px !important;}.vc_custom_1516097931599{padding-top: 100px !important;}.vc_custom_1615851733948{padding-top: 100px !important;padding-right: 40px !important;padding-bottom: 50px !important;padding-left: 40px !important;background-color: #ffffff !important;}.vc_custom_1602699835648{background-color: #857b74 !important;}.vc_custom_1524722613895{margin: 20px !important;}.vc_custom_1630064784213{margin-top: -28% !important;background-color: #ffffff !important;}.vc_custom_1630064770810{margin-top: -28% !important;background-color: #ffffff !important;}.vc_custom_1516618215108{margin-top: -28% !important;background-color: #ffffff !important;}.vc_custom_1516617487323{padding-top: 105px !important;padding-bottom: 85px !important;}.vc_custom_1516617400892{padding-right: 11px !important;padding-left: 11px !important;}.vc_custom_1516617408604{padding-right: 11px !important;padding-left: 11px !important;}.vc_custom_1516617342907{padding-right: 11px !important;padding-left: 11px !important;}.vc_custom_1516633499463{margin-top: -23px !important;}.vc_custom_1516633587194{margin-top: -22px !important;}.vc_custom_1516096645716{padding-top: 125px !important;padding-bottom: 125px !important;}.vc_custom_1615851821605{background-color: #857b74 !important;}.vc_custom_1615912814311{background-color: #857b74 !important;}.vc_custom_1668429260246{background-color: #857b74 !important;}.vc_custom_1516187767105{margin-top: -20px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><meta name="contactorganization" content="Maxx Dental Group">
+<meta name="contactstreetaddress" content="201 Thickwood Blvd B">
+<meta name="contactcity" content="Fort McMurray">
+<meta name="contactcountry" content="Canada">
+<meta name="contactzipcode" content="T9H5A9">
+<meta name="contactphonenumber" content="+17807434111">
+<meta name="geo.region" content="CA-AB">
+<meta name="geo.placename" content="Fort McMurray">
+<meta name="geo.position" content="56.73299190; -111.42583390">
+<meta name="ICBM" content="56.73299190, -111.42583390">	
+<link rel="stylesheet" id="gform_basic-css" href="https://maxxdental.com/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css?ver=2.10.5" media="all">
+<link rel="stylesheet" id="gform_theme_components-css" href="https://maxxdental.com/wp-content/plugins/gravityforms/assets/css/dist/theme-components.min.css?ver=2.10.5" media="all">
+<link rel="stylesheet" id="gform_theme-css" href="https://maxxdental.com/wp-content/plugins/gravityforms/assets/css/dist/theme.min.css?ver=2.10.5" media="all">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="//maxxdental.com/wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=6.7.35" media="all">
+<style id="rs-plugin-settings-inline-css">
+#rs-demo-id {}
+/*# sourceURL=rs-plugin-settings-inline-css */
+</style>
+
+<style type="text/css">@media only screen and (min-width: 1024px) and (max-width: 1280px) {.q_elements_item_content.q_elements_holder_custom_116193 { padding: 17px 0px 48px 15px !important; } }@media only screen and (min-width: 768px) and (max-width: 1024px) {.q_elements_item_content.q_elements_holder_custom_116193 { padding: 0px 0px 30px 15px !important; } }@media only screen and (min-width: 680px) and (max-width: 768px) {.q_elements_item_content.q_elements_holder_custom_116193 { padding: 0px 0px 30px 0px !important; } }@media only screen and (max-width: 480px) {.q_elements_item_content.q_elements_holder_custom_116193 { padding: 35px 0px 100px 45px !important; } }</style><style type="text/css">@media only screen and (min-width: 1024px) and (max-width: 1280px) {.q_elements_item_content.q_elements_holder_custom_306774 { padding: 17px 0px 48px 15px !important; } }@media only screen and (min-width: 768px) and (max-width: 1024px) {.q_elements_item_content.q_elements_holder_custom_306774 { padding: 0px 0px 30px 15px !important; } }@media only screen and (min-width: 680px) and (max-width: 768px) {.q_elements_item_content.q_elements_holder_custom_306774 { padding: 0px 0px 30px 0px !important; } }@media only screen and (max-width: 480px) {.q_elements_item_content.q_elements_holder_custom_306774 { padding: 35px 0px 100px 45px !important; } }</style><style type="text/css">@media only screen and (min-width: 1024px) and (max-width: 1280px) {.q_elements_item_content.q_elements_holder_custom_863961 { padding: 17px 0px 48px 15px !important; } }@media only screen and (min-width: 768px) and (max-width: 1024px) {.q_elements_item_content.q_elements_holder_custom_863961 { padding: 0px 0px 30px 15px !important; } }@media only screen and (min-width: 680px) and (max-width: 768px) {.q_elements_item_content.q_elements_holder_custom_863961 { padding: 0px 0px 30px 0px !important; } }@media only screen and (max-width: 480px) {.q_elements_item_content.q_elements_holder_custom_863961 { padding: 35px 0px 100px 45px !important; } }</style><script src="https://bat.bing.com/p/action/56343867.js" type="text/javascript" async="" data-ueto="ueto_4e0451552e"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/375974472/?random=1783044593291&amp;cv=11&amp;fst=1783044593291&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be66u1v9212302873z8832773629za20gzb832773629zd832773629xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115616985~115938465~115938469~119027224~119318177~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fmaxxdental.com%2F&amp;rcb=15&amp;frm=0&amp;tiba=Dentist%20Near%20Me%20in%20Fort%20McMurray%20%7C%20Maxx%20Dental%20Group&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=348062661.1783044592&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;gap.plf=5&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script></head>
+
+<body class="home wp-singular page-template page-template-full_width page-template-full_width-php page page-id-1163 wp-theme-bridge wp-child-theme-bridge-child bridge-core-3.3.3 qode-title-hidden side_area_uncovered_from_content qode-smooth-scroll-enabled qode-child-theme-ver-1.0.0 qode-theme-ver-30.8.8.9 qode-theme-bridge qode_header_in_grid wpb-js-composer js-comp-ver-8.7.3 vc_responsive rs-safari qode-chrome">
+
+
+
+<!-- GTM Container placement set to automatic -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMQ647T" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<section class="side_menu right " style="overflow-y: hidden; outline: none;" tabindex="0">
+				<a href="#" target="_self" class="close_side_menu ">
+					</a>
+		</section>
+
+<div class="wrapper">
+	<div class="wrapper_inner">
+
+    
+		<!-- Google Analytics start -->
+				<!-- Google Analytics end -->
+
+		
+	<header class=" scroll_header_top_area  regular page_header">
+    <div class="header_inner clearfix">
+                <div class="header_top_bottom_holder">
+            
+            <div class="header_bottom clearfix" style="">
+                                <div class="container">
+                    <div class="container_inner clearfix">
+                                                    
+                            <div class="header_inner_left">
+                                									<div class="mobile_menu_button">
+		<span>
+			<i class="qode_icon_font_awesome fa fa-bars "></i>		</span>
+	</div>
+                                <div class="logo_wrapper">
+	<div class="q_logo">
+		<a itemprop="url" href="https://maxxdental.com/">
+             <img itemprop="image" class="normal" src="https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo.jpg" alt="Logo"> 			 <img itemprop="image" class="light" src="https://maxxdental.com/wp-content/themes/bridge/img/logo_white.png" alt="Logo"> 			 <img itemprop="image" class="dark" src="https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo.jpg" alt="Logo"> 			 <img itemprop="image" class="sticky" src="https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo.jpg" alt="Logo"> 			 <img itemprop="image" class="mobile" src="https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo.jpg" alt="Logo"> 					</a>
+	</div>
+	</div>                                                            </div>
+                                                                    <div class="header_inner_right">
+                                        <div class="side_menu_button_wrapper right">
+                                                                                            <div class="header_bottom_right_widget_holder"><div class="widget_text header_bottom_widget widget_custom_html"><div class="textwidget custom-html-widget"><span class="hd-phn" style="font-family:Roboto; font-weight:600; color:#2f3231"><i style="transform: rotate(80deg) !important;" class="qodef-icon-dripicons dripicon dripicons-phone qode_icon_element fa fa-phone" aria-hidden="true"></i>&nbsp;<a href="tel:+15873158822" title="Call us today"><span style="color:#857b74;">(587) 315-8822</span></a></span>
+<br>
+<span class="hd-add" style="font-family:Roboto; font-weight:600; color:#2f3231"><a href="https://www.google.com/maps?cid=1789602469885467920" target="_blank" rel="noopener"><span style="color:#857b74;"><i style="" class="qodef-icon-dripicons dripicon dripicons-map qode_icon_element fa fa-phone" aria-hidden="true"></i>&nbsp; 331 Thickwood Blvd<br>
+Fort McMurray, AB Canada T9H 4V2</span></a></span></div></div></div>
+                                                                                                                                    <div class="side_menu_button">
+                                                                                                                                                
+	<a class="side_menu_button_link normal " href="javascript:void(0)">
+		<i class="qode_icon_font_awesome fa fa-bars "></i>	</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                
+                                <nav class="main_menu drop_down right">
+                                    <ul id="menu-main-menu" class=""><li id="nav-menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub narrow"><a href="https://maxxdental.com/services/" class=" no_link" style="cursor: default;" onclick="JavaScript: return false;"><i class="menu_icon blank fa"></i><span>Services</span><span class="plus"></span></a>
+<div class="second" style="height: 0px;"><div class="inner"><ul>
+	<li id="nav-menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/services/emergency-services/" class=""><i class="menu_icon blank fa"></i><span>Emergency Dentist</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/services/cosmetic-injectables/" class=""><i class="menu_icon blank fa"></i><span>Cosmetic Injectables®</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/services/sedation-dentistry/" class=""><i class="menu_icon blank fa"></i><span>Sedation Dentistry</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/services/cosmetic-dentistry/" class=""><i class="menu_icon blank fa"></i><span>Cosmetic Dentistry</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/services/invisalign/" class=""><i class="menu_icon blank fa"></i><span>Invisalign®</span><span class="plus"></span></a></li>
+</ul></div></div>
+</li>
+<li id="nav-menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub narrow"><a href="https://maxxdental.com/meet-our-dentists/" class=""><i class="menu_icon blank fa"></i><span>Meet Our Team</span><span class="plus"></span></a>
+<div class="second" style="height: 0px;"><div class="inner"><ul>
+	<li id="nav-menu-item-1365" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="/meet-our-dentists/" class=""><i class="menu_icon blank fa"></i><span>Dentists</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-1366" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="/meet-our-dentists/#hygienists" class=""><i class="menu_icon blank fa"></i><span>Hygienists</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-1367" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="/meet-our-dentists/#dental-assistants" class=""><i class="menu_icon blank fa"></i><span>Dental Assistants</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-1368" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="/meet-our-dentists/#administration" class=""><i class="menu_icon blank fa"></i><span>Administration</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/patient-financing/" class=""><i class="menu_icon blank fa"></i><span>Patient Financing</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-721" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/safety-protocols/" class=""><i class="menu_icon blank fa"></i><span>Safety Protocols</span><span class="plus"></span></a></li>
+</ul></div></div>
+</li>
+<li id="nav-menu-item-410" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="https://maxxdental.com/dental-education/" class=""><i class="menu_icon blank fa"></i><span>DENTAL EDUCATION</span><span class="plus"></span></a></li>
+<li id="nav-menu-item-995" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="https://maxxdental.com/blog/" class=""><i class="menu_icon blank fa"></i><span>Blog</span><span class="plus"></span></a></li>
+<li id="nav-menu-item-337" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="https://maxxdental.com/contact/" class=""><i class="menu_icon blank fa"></i><span>Contact</span><span class="plus"></span></a></li>
+</ul>                                </nav>
+                                							    <nav class="mobile_menu">
+	<ul id="menu-main-menu-1" class=""><li id="mobile-menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub"><h3><span>Services</span></h3><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+<ul class="sub_menu">
+	<li id="mobile-menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/services/emergency-services/" class=""><span>Emergency Dentist</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/services/cosmetic-injectables/" class=""><span>Cosmetic Injectables®</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/services/sedation-dentistry/" class=""><span>Sedation Dentistry</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/services/cosmetic-dentistry/" class=""><span>Cosmetic Dentistry</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/services/invisalign/" class=""><span>Invisalign®</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+</ul>
+</li>
+<li id="mobile-menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub"><a href="https://maxxdental.com/meet-our-dentists/" class=""><span>Meet Our Team</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+<ul class="sub_menu">
+	<li id="mobile-menu-item-1365" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="/meet-our-dentists/" class=""><span>Dentists</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-1366" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="/meet-our-dentists/#hygienists" class=""><span>Hygienists</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-1367" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="/meet-our-dentists/#dental-assistants" class=""><span>Dental Assistants</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-1368" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="/meet-our-dentists/#administration" class=""><span>Administration</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-2051" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/patient-financing/" class=""><span>Patient Financing</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-721" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/safety-protocols/" class=""><span>Safety Protocols</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+</ul>
+</li>
+<li id="mobile-menu-item-410" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/dental-education/" class=""><span>DENTAL EDUCATION</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+<li id="mobile-menu-item-995" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/blog/" class=""><span>Blog</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+<li id="mobile-menu-item-337" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://maxxdental.com/contact/" class=""><span>Contact</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+</ul></nav>                                                                                        </div>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+</header>	<a id="back_to_top" href="#">
+        <span class="fa-stack">
+            <i class="qode_icon_font_awesome fa fa-arrow-up "></i>        </span>
+	</a>
+	
+	
+    
+    	
+    
+    <div class="content content_top_margin_none has_slider">
+        <div class="content_inner  ">
+    							<div class="q_slider"><div class="q_slider_inner">
+			
+			<!-- START Home page 1 REVOLUTION SLIDER 6.7.35 -->
+			<rs-fullwidth-wrap id="rev_slider_1_1_forcefullwidth" style="margin-top:0px;margin-bottom:0px;"><rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="visibility: visible; background: transparent; padding: 0px; margin: 0px auto; height: 800px; display: block; width: 1280px; position: absolute; overflow: visible; left: 0px;"><rs-module id="rev_slider_1_1" style="height: 800px; width: 1280px; max-height: 800px;" data-version="6.7.35" data-idcheck="true" class="revslider-initialised rev_redraw_on_blurfocus" data-slideactive="rs-1">
+					
+				<rs-loader class="spinner0 " style="display: none;"><div class="dot1"></div><div class="dot2"></div><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></rs-loader><rs-progress style="visibility:hidden;"><rs-progress-bar style="background: rgba(255, 255, 255, 0.5);"></rs-progress-bar></rs-progress><rs-slides style="overflow: hidden; position: absolute; visibility: visible; max-height: none; height: 100%; width: 100%;">
+						<rs-slide style="position: absolute; display: block; overflow: hidden; height: 100%; width: 100%; z-index: 20; opacity: 1; visibility: inherit;" data-key="rs-1" data-title="Slide" data-anim="adpr:false;" data-in="o:0;" data-out="a:false;" data-originalindex="1" data-origindex="0" data-description="" data-sba="" data-scroll-based="false" data-owidth="1920" data-oheight="865" data-rspausetimeronce="0" data-isactiveslide="true"><rs-sbg-px><rs-sbg-wrap data-key="rs-1" data-owidth="1920" data-oheight="865"><!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img src="//maxxdental.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//maxxdental.com/wp-content/uploads/2018/04/home-banner-03.jpg" data-no-retina="">--><rs-sbg data-lazyload="//maxxdental.com/wp-content/uploads/2018/04/home-banner-03.jpg" class="" data-bgcolor="transparent" style="width: 100%; height: 100%;" data-src-rs-ref="//maxxdental.com/wp-content/uploads/2018/04/home-banner-03.jpg"><canvas style="width: 100%; height: 100%; background-color: transparent; opacity: 1; filter: none;" width="1280" height="800"></canvas></rs-sbg></rs-sbg-wrap></rs-sbg-px>
+							
+<!--
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 108px; top: 338px; z-index: 5; visibility: visible; perspective: 601px;"><rs-layer id="slider-1-slide-1-layer-2" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;xo:-298px;y:338px;" data-text="s:84;l:22;fw:300;a:inherit;" data-dim="w:468px;h:23px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 5; font-family: &quot;Open Sans&quot;; color: rgb(255, 255, 255); text-decoration: none; white-space: nowrap; width: 468px; height: 23px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: inherit; line-height: 22px; letter-spacing: 0px; font-weight: 300; font-size: 84px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">Maxx Dental 
+							</rs-layer></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 115px; top: 496px; z-index: 6; visibility: visible; perspective: 601px;"><rs-layer id="slider-1-slide-1-layer-3" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;xo:-264px;y:c;yo:109px;" data-text="s:30;l:22;a:inherit;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 6; font-family: &quot;Open Sans&quot;; height: auto; width: auto; color: rgb(255, 255, 255); text-decoration: none; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: inherit; line-height: 22px; letter-spacing: 0px; font-weight: 400; font-size: 30px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><h1 class="hdr-title" data-stylerecorder="true" style="text-align: left; line-height: 25px; letter-spacing: 0px; font-weight: 400;">Your Family Dentist in Fort McMurray</h1> 
+							</rs-layer></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 108px; top: 418px; z-index: 7; visibility: visible; perspective: 601px;"><rs-layer id="slider-1-slide-1-layer-4" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;xo:-298px;y:418px;" data-text="s:84;l:22;fw:300;a:inherit;" data-dim="w:468px;h:23px;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 7; font-family: &quot;Open Sans&quot;; color: rgb(255, 255, 255); text-decoration: none; white-space: nowrap; width: 468px; height: 23px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: inherit; line-height: 22px; letter-spacing: 0px; font-weight: 300; font-size: 84px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">Group 
+							</rs-layer></rs-layer-wrap><!--
+
+							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 113px; top: 273px; z-index: 8; visibility: visible; perspective: 601px;"><rs-layer id="slider-1-slide-1-layer-5" data-type="text" data-color="#b7d5ff" data-rsp_ch="on" data-xy="x:c;xo:-441px;y:c;yo:-116px;" data-text="s:20;l:22;a:inherit;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 8; font-family: &quot;Open Sans&quot;; height: auto; width: auto; color: rgb(183, 213, 255); text-decoration: none; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: inherit; line-height: 22px; letter-spacing: 0px; font-weight: 400; font-size: 20px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">WELCOME TO THE 
+							</rs-layer></rs-layer-wrap><!--
+-->					</rs-slide>
+					</rs-slides></rs-module>
+				
+				<script>
+					setREVStartSize({c: 'rev_slider_1_1',rl:[1240,1024,778,480],el:[800],gw:[1240],gh:[800],type:'standard',justify:'',layout:'fullwidth',mh:"0"});if (window.RS_MODULES!==undefined && window.RS_MODULES.modules!==undefined && window.RS_MODULES.modules["revslider11"]!==undefined) {window.RS_MODULES.modules["revslider11"].once = false;window.revapi1 = undefined;if (window.RS_MODULES.checkMinimal!==undefined) window.RS_MODULES.checkMinimal()}
+				</script>
+			</rs-module-wrap><rs-fw-forcer style="height:800px"></rs-fw-forcer></rs-fullwidth-wrap>
+			<!-- END REVOLUTION SLIDER -->
+			</div></div>
+			<div class="full_width" style="background-color:#fafafa">
+	<div class="full_width_inner">
+										<div class="wpb-content-wrapper"><div class="vc_row wpb_row section vc_row-fluid  icon-left section-after-banner extra-head-font-detail vc_custom_1716896556238 grid_section" style=" text-align:left;"><div class=" section_inner clearfix"><div class="section_inner_margin clearfix"><div class="after-banner-section-1 wpb_column vc_column_container vc_col-sm-4 vc_col-lg-4 vc_col-md-4 vc_col-has-fill"><div class="vc_column-inner vc_custom_1630064784213"><div class="wpb_wrapper"><div class="q_elements_holder one_column responsive_mode_from_768"><div class="q_elements_item " data-1024-1280="17px 0px 48px 15px" data-768-1024="0px 0px 30px 15px" data-600-768="0px 0px 30px 0px" data-480="35px 0px 100px 45px" data-animation="no" data-item-class="q_elements_holder_custom_116193"><div class="q_elements_item_inner"><div class="q_elements_item_content q_elements_holder_custom_116193" style="padding:35px 0px 60px 45px"><div class="q_icon_with_title small custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="https://maxxdental.com/wp-content/uploads/2020/10/icon-10.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h2 class="icon_title" style="">Cosmetic Injectables</h2><p style="">Contact us to see if you may be a candidate for cosmetic injectables.</p><a itemprop="url" class="icon_with_title_link" href="https://maxxdental.com/services/cosmetic-injectables/" target="_self" style="">Read More</a></div></div></div></div></div></div></div></div></div></div><div class="after-banner-section-2 wpb_column vc_column_container vc_col-sm-4 vc_col-lg-4 vc_col-md-4 vc_col-has-fill"><div class="vc_column-inner vc_custom_1630064770810"><div class="wpb_wrapper"><div class="q_elements_holder one_column responsive_mode_from_768"><div class="q_elements_item " data-1024-1280="17px 0px 48px 15px" data-768-1024="0px 0px 30px 15px" data-600-768="0px 0px 30px 0px" data-480="35px 0px 100px 45px" data-animation="no" data-item-class="q_elements_holder_custom_306774"><div class="q_elements_item_inner"><div class="q_elements_item_content q_elements_holder_custom_306774" style="padding:28px 0px 60px 45px"><div class="q_icon_with_title small custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="https://maxxdental.com/wp-content/uploads/2020/10/icon-11.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h2 class="icon_title" style="">Invisalign<sup>®</sup></h2><p style="">Ask at your next appointment if Invisalign<sup>®</sup> therapy is right for you.</p><a itemprop="url" class="icon_with_title_link" href="https://maxxdental.com/services/invisalign/" target="_self" style="">Read More</a></div></div></div></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4 vc_col-lg-4 vc_col-md-4 vc_col-has-fill"><div class="vc_column-inner vc_custom_1516618215108"><div class="wpb_wrapper"><div class="q_elements_holder one_column responsive_mode_from_768"><div class="q_elements_item icon-left-no-border" data-1024-1280="17px 0px 48px 15px" data-768-1024="0px 0px 30px 15px" data-600-768="0px 0px 30px 0px" data-480="35px 0px 100px 45px" data-animation="no" data-item-class="q_elements_holder_custom_863961"><div class="q_elements_item_inner"><div class="q_elements_item_content q_elements_holder_custom_863961" style="padding:35px 0px 60px 45px"><div class="q_icon_with_title small custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="https://maxxdental.com/wp-content/uploads/2020/10/icon-12.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h2 class="icon_title" style="">Our Dental Services</h2><p style="">We offer both preventative and restorative treatments.</p><a itemprop="url" class="icon_with_title_link" href="https://maxxdental.com/services/" target="_self" style="">Read More</a></div></div></div></div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row section vc_row-fluid " style=" text-align:left;"><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row section vc_row-fluid vc_inner  vc_custom_1516617487323 grid_section" style=" text-align:left;"><div class=" section_inner clearfix"><div class="section_inner_margin clearfix"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-4 vc_col-md-6"><div class="vc_column-inner vc_custom_1516617400892"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1800" height="1201" src="https://maxxdental.com/wp-content/uploads/2020/10/0131-Dentist-in-Fort-McMurray.jpg" class="vc_single_image-img attachment-full" alt="Smiling dentist with patient" title="0131-Dentist-in-Fort-McMurray" srcset="https://maxxdental.com/wp-content/uploads/2020/10/0131-Dentist-in-Fort-McMurray.jpg 1800w, https://maxxdental.com/wp-content/uploads/2020/10/0131-Dentist-in-Fort-McMurray-300x200.jpg 300w, https://maxxdental.com/wp-content/uploads/2020/10/0131-Dentist-in-Fort-McMurray-1024x683.jpg 1024w, https://maxxdental.com/wp-content/uploads/2020/10/0131-Dentist-in-Fort-McMurray-768x512.jpg 768w, https://maxxdental.com/wp-content/uploads/2020/10/0131-Dentist-in-Fort-McMurray-1536x1025.jpg 1536w, https://maxxdental.com/wp-content/uploads/2020/10/0131-Dentist-in-Fort-McMurray-700x467.jpg 700w" sizes="(max-width: 1800px) 100vw, 1800px"></div>
+		</div>
+	</div>
+<div class="vc_empty_space" style="height: 23px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2 class="headline extra-head-font">WE WORK AROUND YOUR BUSY SCHEDULE</h2>
+
+		</div>
+	</div><div class="vc_empty_space" style="height: 5px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Give us a call today to request an appointment with one of our registered dental hygienists.</p>
+
+		</div>
+	</div><div class="vc_empty_space" style="height: 30px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-4 vc_col-md-6"><div class="vc_column-inner vc_custom_1516617408604"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1200" height="800" src="https://maxxdental.com/wp-content/uploads/2024/03/0135-Dentists-in-Fort-McMurray.jpg" class="vc_single_image-img attachment-full" alt="Dentists at Maxx Dental in Fort McMurray" title="0135-Dentists-in-Fort-McMurray" srcset="https://maxxdental.com/wp-content/uploads/2024/03/0135-Dentists-in-Fort-McMurray.jpg 1200w, https://maxxdental.com/wp-content/uploads/2024/03/0135-Dentists-in-Fort-McMurray-300x200.jpg 300w, https://maxxdental.com/wp-content/uploads/2024/03/0135-Dentists-in-Fort-McMurray-1024x683.jpg 1024w, https://maxxdental.com/wp-content/uploads/2024/03/0135-Dentists-in-Fort-McMurray-768x512.jpg 768w, https://maxxdental.com/wp-content/uploads/2024/03/0135-Dentists-in-Fort-McMurray-700x467.jpg 700w" sizes="(max-width: 1200px) 100vw, 1200px"></div>
+		</div>
+	</div>
+<div class="vc_empty_space" style="height: 23px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2 class="extra-head-font">PART OF OUR FORT MCMURRAY COMMUNITY</h2>
+
+		</div>
+	</div><div class="vc_empty_space" style="height: 5px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>At Maxx Dental Group, we are proud to support local community organizations and sports teams.</p>
+<ul>
+<li>Fort McMurray Oil Barons (Junior Hockey League)</li>
+<li>Keyano Huskies (college athletics teams)</li>
+</ul>
+
+		</div>
+	</div><div class="vc_empty_space" style="height: 30px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-4 vc_col-md-12"><div class="vc_column-inner vc_custom_1516617342907"><div class="wpb_wrapper"><div class="q_elements_holder one_column responsive_mode_from_768"><div class="q_elements_item " data-animation="no" data-item-class="q_elements_holder_custom_865298" style="background-color:#857b74;"><div class="q_elements_item_inner"><div class="q_elements_item_content q_elements_holder_custom_865298" style="padding:0px 30px 30px 30px"><div class="vc_empty_space" style="height: 32px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="vc_empty_space  vc_custom_1516633499463" style="height: 1px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2 style="text-align: center;"><span style="color: #d7d2ce;"><em><span style="font-size: 18px; font-weight: 400; text-transform: uppercase;">Always there to care.</span></em></span></h2>
+
+		</div>
+	</div><div class="vc_empty_space  vc_custom_1516633587194" style="height: 1px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div>
+	<div class="wpb_text_column wpb_content_element  front-page-hours">
+		<div class="wpb_wrapper">
+			<div class="hours_shortcode"><ul class="child_hours_ul"><li><span class="child_dayofweek_long"><time day="1" itemprop="weekDay">Monday:</time></span><span class="child_hours"><span class="child_hours"><time time="7:00 am" itemprop="startTime">7:00 am</time><span class="child_dash"> - </span><time time="4:30 pm" itemprop="endTime">4:30 pm</time></span></span></li><li><span class="child_dayofweek_long"><time day="2" itemprop="weekDay">Tuesday:</time></span><span class="child_hours"><time time="7:00 am" itemprop="startTime">7:00 am</time><span class="child_dash"> - </span><time time="5:00 pm" itemprop="endTime">5:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="3" itemprop="weekDay">Wednesday:</time></span><span class="child_hours"><time time="7:00 am" itemprop="startTime">7:00 am</time><span class="child_dash"> - </span><time time="7:00 pm" itemprop="endTime">7:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="4" itemprop="weekDay">Thursday:</time></span><span class="child_hours"><time time="7:00 am" itemprop="startTime">7:00 am</time><span class="child_dash"> - </span><time time="5:00 pm" itemprop="endTime">5:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="5" itemprop="weekDay">Friday:</time></span><span class="child_hours"><time time="7:00 am" itemprop="startTime">7:00 am</time><span class="child_dash"> - </span><time time="4:30 pm" itemprop="endTime">4:30 pm</time></span></li><li><span class="child_dayofweek_long"><time day="6" itemprop="weekEnd">Saturday:</time></span><span class="child_replace">Closed</span></li><li><span class="child_dayofweek_long"><time day="7" itemprop="weekEnd">Sunday:</time></span><span class="child_replace">Closed</span></li></ul></div>
+
+		</div>
+	</div></div></div></div></div><div class="vc_empty_space" style="height: 30px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><a id="contact-us-today" itemprop="url" href="/contact/" target="_self" data-hover-background-color="#504a47" data-hover-color="#ffffff" class="qbutton  big_large_full_width center default" style="color: #ffffff; margin: 0 auto; border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px; background-color:#857b74;">Contact Us Today</a></div></div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row section vc_row-fluid  vc_custom_1603215071697" style=" text-align:left;"><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row section vc_row-fluid vc_inner  icon-small vc_custom_1516096645716 grid_section" style=" text-align:left;"><div class=" section_inner clearfix"><div class="section_inner_margin clearfix"><div class="new-h2 extra-head-inner-detail wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-8"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="q_icon_with_title tiny custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h2 class="icon_title" style="">YOUR FAMILY DENTIST IN FORT MCMURRAY</h2><p style="">You can stop looking for the right dentist for your children, your parents and yourself. All you need is Maxx Dental Group! Beautiful teeth can make a great difference in comfort and self-confidence. Discover what Maxx Dental can do for your stained, chipped, missing or crooked teeth by visiting our family dentist in Fort McMurray. Our dentist near you can handle all of your dentistry needs from sedation to cosmetic treatments. Our staff is committed to providing dental care for you and your family. Like many others, you might be anxious to go to the dentist. That’s why we make time to educate you about any dental procedures you require, and our dentist near you will explain each step in the process of your customized dental plan.</p></div></div></div><div class="vc_empty_space" style="height: 12px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="q_icon_with_title tiny custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h2 class="icon_title" style="">REQUEST AN APPOINTMENT</h2><p style="">We always welcome new patients and are open to serve you with convenient evening appointments. We have flexible schedules to accommodate emergency treatments. Whatever your dental needs, you can come see the team at Maxx Dental Group. If you’re a long-time patient or you’re in search of a new dentist, contact us today in Fort McMurray to book your appointment with a dentist near you.</p></div></div></div><a id="schedule-an-appointment" itemprop="url" href="/contact/" target="_self" data-hover-background-color="#504a47" data-hover-color="#ffffff" class="qbutton  medium center default" style="color: #ffffff; margin: 0px 0px 20px 110px; border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px; background-color:#857b74;">Request An Appointment</a><div class="vc_empty_space" style="height: 12px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="q_icon_with_title tiny custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h2 class="icon_title" style="">PART OF OUR COMMUNITY</h2><p style="">At Maxx Dental Group, we are proud to support local community organizations and sports teams. These include:  Fort McMurray Oil Barons (Junior Hockey League)  Keyano Huskies (college athletics teams)</p></div></div></div><div class="vc_empty_space" style="height: 12px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="q_icon_with_title tiny custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h2 class="icon_title" style="">PROFESSIONAL ASSOCIATIONS</h2><p style="">In order to provide our clients with professional, up-to-date dental care, Maxx Dental Group maintains numerous associations and affiliations. Please see our professional associations and affiliations below.</p></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			
+		<figure class="vc_figure">
+			<a href="/patient-financing/" target="_self"><div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" itemprop="image" class="vc_single_image-img" src="https://assets.123dentist.com/lendcare/patient-financing-learn-more-short.png"></div></a></figure>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div><div class="vc_row wpb_row section vc_row-fluid  vc_custom_1516097931599" style=" text-align:left;"><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 40px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div></div></div></div><div class="vc_row wpb_row section vc_row-fluid  vc_custom_1516097931599" style=" text-align:left;"><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2 style="text-align: center;">MEET OUR DENTISTS NEAR YOU</h2>
+
+		</div>
+	</div><div class="vc_empty_space" style="height: 13px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div></div></div></div><div class="vc_row wpb_row section vc_row-fluid  new-h3 grid_section" style=" text-align:left;"><div class=" section_inner clearfix"><div class="section_inner_margin clearfix"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="q_team"><div class="q_team_inner"><div class="q_team_image"><img decoding="async" itemprop="image" src="https://maxxdental.com/wp-content/uploads/2021/11/Dr.-McCoy.jpg" alt="Dr. McCoy"><div class="q_team_description_wrapper"><div class="q_team_description"><div class="q_team_description_inner"><p>Dr. Brad McCoy, DDS has been practising dentistry for over a decade in Fort McMurray. He has a special focus on orthodontics and dental implant surgery. (services provided by general dentists)</p></div></div></div></div><div class="q_team_text"><div class="q_team_text_inner"><div class="q_team_title_holder"><h3 class="q_team_name" style="color: #000000">Dr. Brad McCoy, DDS</h3><span style="color: #00a0f0">Dentist</span></div><div class="separator small center"></div></div><div class="q_team_social_holder"></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="q_team"><div class="q_team_inner"><div class="q_team_image"><img decoding="async" itemprop="image" src="https://maxxdental.com/wp-content/uploads/2024/03/dr-gregory-paul.jpg" alt="dr-gregory-paul"><div class="q_team_description_wrapper"><div class="q_team_description"><div class="q_team_description_inner"><p>Dr Gregory Paul was raised in the nation’s capital and is the oldest of three siblings. He first took an interest in dentistry at a young age while observing at his father’s prosthodontics practice.</p></div></div></div></div><div class="q_team_text"><div class="q_team_text_inner"><div class="q_team_title_holder"><h3 class="q_team_name" style="color: #000000">Dr. Gregory Paul, DDS</h3><span style="color: #00a0f0">Dentist</span></div><div class="separator small center"></div></div><div class="q_team_social_holder"></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="q_team"><div class="q_team_inner"><div class="q_team_image"><img decoding="async" itemprop="image" src="https://maxxdental.com/wp-content/uploads/2021/11/Dr.-Brake.jpg" alt="Dr. Brake"><div class="q_team_description_wrapper"><div class="q_team_description"><div class="q_team_description_inner"><p>Dr. Athenie Brake, DDS graduated from Dalhousie University in Halifax, NS, with both science and dental degrees. She obtained a Bachelor of Science in biology in 1994 and a Doctor of Dental Surgery in 1998. (services provided by general dentists)</p></div></div></div></div><div class="q_team_text"><div class="q_team_text_inner"><div class="q_team_title_holder"><h3 class="q_team_name" style="color: #000000">Dr. Athenie Brake, DDS</h3><span style="color: #00a0f0">Dentist</span></div><div class="separator small center"></div></div><div class="q_team_social_holder"></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="q_team"><div class="q_team_inner"><div class="q_team_image"><img decoding="async" itemprop="image" src="https://maxxdental.com/wp-content/uploads/2026/06/Dr.-Daniel-Petten.jpg" alt="Dr. Daniel Petten"><div class="q_team_description_wrapper"><div class="q_team_description"><div class="q_team_description_inner"><p>Dr. Daniel Petten was born in Newfoundland and moved to Fort McMurray with his family before his first birthday. Having been raised in Fort McMurray and calling it home for 29 years, he is proud to call Fort McMurray home.</p></div></div></div></div><div class="q_team_text"><div class="q_team_text_inner"><div class="q_team_title_holder"><h3 class="q_team_name" style="color: #000000">Dr. Daniel Petten, DDS</h3><span style="color: #00a0f0">Dentist</span></div><div class="separator small center"></div></div><div class="q_team_social_holder"></div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row section vc_row-fluid  new-h3 grid_section" style=" text-align:left;"><div class=" section_inner clearfix"><div class="section_inner_margin clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2 style="text-align: center;">See Our Office</h2>
+
+		</div>
+	</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<a class="qode-prettyphoto qode-single-image-pretty-photo" data-rel="prettyPhoto[rel-1163-2289836471]" href="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-reception1-1024x701.png" target="_self" rel="prettyPhoto[rel-1163-2289836471]"><div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="300" height="205" src="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-reception1-300x205.png" class="vc_single_image-img attachment-medium" alt="" title="ab-0075-reception1" srcset="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-reception1-300x205.png 300w, https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-reception1-1024x701.png 1024w, https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-reception1-768x525.png 768w, https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-reception1-700x479.png 700w, https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-reception1.png 1200w" sizes="(max-width: 300px) 100vw, 300px"></div></a>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<a class="qode-prettyphoto qode-single-image-pretty-photo" data-rel="prettyPhoto[rel-1163-1655016593]" href="https://maxxdental.com/wp-content/uploads/2026/04/ab-0027-office.jpg" target="_self" rel="prettyPhoto[rel-1163-1655016593]"><div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="300" height="205" src="https://maxxdental.com/wp-content/uploads/2026/04/ab-0027-office.jpg" class="vc_single_image-img attachment-medium" alt="" title="Clinic Photos - Maxx 3"></div></a>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<a class="qode-prettyphoto qode-single-image-pretty-photo" data-rel="prettyPhoto[rel-1163-2628266908]" href="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-reception.jpg" target="_self" rel="prettyPhoto[rel-1163-2628266908]"><div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="300" height="205" src="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-reception.jpg" class="vc_single_image-img attachment-medium" alt="" title="Clinic Photos - Maxx 2"></div></a>
+		</div>
+	</div>
+</div></div></div></div></div></div><div class="vc_row wpb_row section vc_row-fluid  new-h3 grid_section" style=" text-align:left;"><div class=" section_inner clearfix"><div class="section_inner_margin clearfix"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<a class="qode-prettyphoto qode-single-image-pretty-photo" data-rel="prettyPhoto[rel-1163-2340020649]" href="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-operatory.jpg" target="_self" rel="prettyPhoto[rel-1163-2340020649]"><div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="300" height="205" src="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-operatory.jpg" class="vc_single_image-img attachment-medium" alt="" title="Clinic Photos - Maxx 6"></div></a>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<a class="qode-prettyphoto qode-single-image-pretty-photo" data-rel="prettyPhoto[rel-1163-501977460]" href="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-office2.jpg" target="_self" rel="prettyPhoto[rel-1163-501977460]"><div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="300" height="205" src="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-office2.jpg" class="vc_single_image-img attachment-medium" alt="" title="Clinic Photos - Maxx 5"></div></a>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<a class="qode-prettyphoto qode-single-image-pretty-photo" data-rel="prettyPhoto[rel-1163-2562058286]" href="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-office-3.jpg" target="_self" rel="prettyPhoto[rel-1163-2562058286]"><div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="300" height="205" src="https://maxxdental.com/wp-content/uploads/2026/04/ab-0075-office-3.jpg" class="vc_single_image-img attachment-medium" alt="" title="Clinic Photos - Maxx 4"></div></a>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div></div><div class="vc_row wpb_row section vc_row-fluid  vc_custom_1615851733948" style="background-color:#ffffff; text-align:center;"><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill"><div class="vc_column-inner vc_custom_1615851821605"><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 1px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div>
+	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1615912814311 front-page-form">
+		<div class="wpb_wrapper">
+			<h2 style="text-align:center;color:#ffffff;">Contact Us</h2>
+		</div>
+	</div>
+
+	<div class="wpb_raw_code wpb_raw_html wpb_content_element vc_custom_1668429260246 front-page-form">
+		<div class="wpb_wrapper">
+			
+                <div class="gf_browser_chrome gform_wrapper gravity-theme gform-theme--no-framework" data-form-theme="gravity-theme" data-form-index="0" id="gform_wrapper_13">
+                        <div class="gform_heading">
+							<p class="gform_required_legend">"<span class="gfield_required gfield_required_asterisk">*</span>" indicates required fields</p>
+                        </div><form method="post" enctype="multipart/form-data" id="gform_13" action="/" data-formid="13" novalidate=""><div class="gf_invisible ginput_recaptchav3" data-sitekey="6LcQ9isdAAAAAAyHr9hnKVwcObsKHfZbbAAWxaJ-" data-tabindex="0"><input id="input_d7f451ce59dd53dc14dadd02108e6e79" class="gfield_recaptcha_response" type="hidden" name="input_d7f451ce59dd53dc14dadd02108e6e79" value=""></div> 
+ <input type="hidden" class="gforms-pum" value="{&quot;closepopup&quot;:false,&quot;closedelay&quot;:0,&quot;openpopup&quot;:false,&quot;openpopup_id&quot;:0}">
+                        <div class="gform-body gform_body"><div id="gform_fields_13" class="gform_fields top_label form_sublabel_below description_below validation_below"><div id="field_13_11" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"><label class="gfield_label gform-field-label" for="input_13_11">Phone</label><div class="ginput_container"><input name="input_11" id="input_13_11" type="text" value="" autocomplete="new-password"></div><div class="gfield_description" id="gfield_description_13_11">This field is for validation purposes and should be left unchanged.</div></div><div id="field_13_7" class="gfield gfield--type-text gfield--input-type-text gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"><label class="gfield_label gform-field-label" for="input_13_7">Name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class="ginput_container ginput_container_text"><input name="input_7" id="input_13_7" type="text" value="" class="large" placeholder="Name" aria-required="true" aria-invalid="false" data-admin-label="Name"></div></div><div id="field_13_4" class="gfield gfield--type-phone gfield--input-type-phone gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"><label class="gfield_label gform-field-label" for="input_13_4">Phone Number<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class="ginput_container ginput_container_phone"><input name="input_4" id="input_13_4" type="tel" value="" class="large" placeholder="Phone Number" aria-required="true" aria-invalid="false" data-admin-label="Phone Number"></div></div><div id="field_13_2" class="gfield gfield--type-email gfield--input-type-email field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"><label class="gfield_label gform-field-label" for="input_13_2">Email</label><div class="ginput_container ginput_container_email">
+                            <input name="input_2" id="input_13_2" type="email" value="" class="large" placeholder="Email" aria-invalid="false" data-admin-label="Email">
+                        </div></div><div id="field_13_9" class="gfield gfield--type-select gfield--input-type-select gfield--width-full field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"><label class="gfield_label gform-field-label screen-reader-text" for="input_13_9"></label><div class="ginput_container ginput_container_select"><select name="input_9" id="input_13_9" class="large gfield_select" aria-invalid="false" data-admin-label=""><option value="I'm not a patient of the practice">I'm not a patient of the practice</option><option value="I'm already a patient of the practice">I'm already a patient of the practice</option></select></div></div><div id="field_13_10" class="gfield gfield--type-select gfield--input-type-select gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><label class="gfield_label gform-field-label screen-reader-text" for="input_13_10"></label><div class="ginput_container ginput_container_select"><select name="input_10" id="input_13_10" class="large gfield_select" aria-invalid="false" data-admin-label=""><option value="I'm interested in Invisalign Adult for me">I'm interested in Invisalign Adult for me</option><option value="I'm interested in Invisalign Teen for my child">I'm interested in Invisalign Teen for my child</option></select></div></div></div></div>
+        <div class="gform-footer gform_footer top_label"> <input type="submit" id="gform_submit_button_13" class="gform_button button" onclick="gform.submission.handleButtonClick(this);" data-submission-type="submit" value="Submit"> 
+            <input type="hidden" class="gform_hidden" name="gform_submission_method" data-js="gform_submission_method_13" value="postback">
+            <input type="hidden" class="gform_hidden" name="gform_theme" data-js="gform_theme_13" id="gform_theme_13" value="gravity-theme">
+            <input type="hidden" class="gform_hidden" name="gform_style_settings" data-js="gform_style_settings_13" id="gform_style_settings_13" value="[]">
+            <input type="hidden" class="gform_hidden" name="is_submit_13" value="1">
+            <input type="hidden" class="gform_hidden" name="gform_submit" value="13">
+            
+            <input type="hidden" class="gform_hidden" name="gform_currency" data-currency="CAD" value="E5RdL42zmmjP2kvdqrA8yB+nkMOZWHUa15j5pfItN8hqBoLALo1/Xge3yLpXtEYhZRGkoeHi5FvrTw0ETUbz78HG5RRObQSBKUlX5BgD7lSbw3w=">
+            <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+            <input type="hidden" class="gform_hidden" name="state_13" value="WyJbXSIsImY1YzIyNDgwNjQwNzZjNmIwYzJjNzZmZTQyYTNiMzA3Il0=">
+            <input type="hidden" autocomplete="off" class="gform_hidden" name="gform_target_page_number_13" id="gform_target_page_number_13" value="0">
+            <input type="hidden" autocomplete="off" class="gform_hidden" name="gform_source_page_number_13" id="gform_source_page_number_13" value="1">
+            <input type="hidden" name="gform_field_values" value="">
+            
+        </div>
+                        <p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>Δ<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="1783044591270"><script>
+document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );
+</script>
+</p></form>
+                        </div><script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 13, 'https://maxxdental.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_13').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_13');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_13').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_13').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_13').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_13').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_13').val();gformInitSpinner( 13, 'https://maxxdental.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [13, current_page]);window['gf_submitting_13'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_13').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [13]);window['gf_submitting_13'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_13').text());}else{jQuery('#gform_13').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "13", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_13" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_13";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_13" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 13, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+
+		</div>
+	</div>
+<div class="vc_empty_space" style="height: 35px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space  vc_custom_1516187767105" style="height: 1px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2 style="text-align: center;"><span style="color: #373737;">PATIENT ONLINE REVIEWS</span></h2>
+
+		</div>
+	</div><div class="vc_empty_space" style="height: 35px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="q_elements_holder one_column responsive_mode_from_768"><div class="q_elements_item test-1" data-animation="no" data-item-class="q_elements_holder_custom_614237"><div class="q_elements_item_inner"><div class="q_elements_item_content q_elements_holder_custom_614237"><div class="q_icon_with_title tiny custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="https://maxxdental.com/wp-content/uploads/2018/04/quotes2.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h5 class="icon_title" style=""></h5><p style="">Always happy! Best dentist and staff I've ever gone too! Love the work Dr McCoy does and my cleanings from Brittany! Recommend all my family and friends everytime! Thank you!!</p></div></div></div></div></div></div></div><div class="vc_empty_space" style="height: 2px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="q_elements_holder one_column responsive_mode_from_768"><div class="q_elements_item test-2" data-animation="no" data-item-class="q_elements_holder_custom_903647"><div class="q_elements_item_inner"><div class="q_elements_item_content q_elements_holder_custom_903647" style="padding:0 0 0 62px"><div class="q_icon_with_title tiny custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="https://maxxdental.com/wp-content/uploads/2018/04/5-star.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h5 class="icon_title" style="">Megan Kavanaugh</h5><p style="color: #00a0f0">Patient</p></div></div></div></div></div></div></div>
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"></div>
+		</div>
+	</div>
+<div class="vc_empty_space" style="height: 35px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="q_elements_holder one_column responsive_mode_from_768"><div class="q_elements_item test-1" data-animation="no" data-item-class="q_elements_holder_custom_362125"><div class="q_elements_item_inner"><div class="q_elements_item_content q_elements_holder_custom_362125"><div class="q_icon_with_title tiny custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="https://maxxdental.com/wp-content/uploads/2018/04/quotes2.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h5 class="icon_title" style=""></h5><p style="">Amazing dental office great experience and everyone was fantastic with the kids will be going back regularly and recommending this office to friends and family ????</p></div></div></div></div></div></div></div><div class="vc_empty_space" style="height: 2px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="q_elements_holder one_column responsive_mode_from_768"><div class="q_elements_item test-2" data-animation="no" data-item-class="q_elements_holder_custom_766899"><div class="q_elements_item_inner"><div class="q_elements_item_content q_elements_holder_custom_766899" style="padding:0 0 0 62px"><div class="q_icon_with_title tiny custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="https://maxxdental.com/wp-content/uploads/2018/04/5-star.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h5 class="icon_title" style="">Stacey Sparling</h5><p style="color: #00a0f0">Patient</p></div></div></div></div></div></div></div>
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"></div>
+		</div>
+	</div>
+<div class="vc_empty_space" style="height: 35px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="q_elements_holder one_column responsive_mode_from_768"><div class="q_elements_item test-1" data-animation="no" data-item-class="q_elements_holder_custom_395267"><div class="q_elements_item_inner"><div class="q_elements_item_content q_elements_holder_custom_395267"><div class="q_icon_with_title tiny custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="https://maxxdental.com/wp-content/uploads/2018/04/quotes2.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h5 class="icon_title" style=""></h5><p style="">Amazing experience.</p></div></div></div></div></div></div></div><div class="vc_empty_space" style="height: 2px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="q_elements_holder one_column responsive_mode_from_768"><div class="q_elements_item test-2" data-animation="no" data-item-class="q_elements_holder_custom_774716"><div class="q_elements_item_inner"><div class="q_elements_item_content q_elements_holder_custom_774716" style="padding:0 0 0 62px"><div class="q_icon_with_title tiny custom_icon_image "><div class="icon_holder " style=" "><img decoding="async" src="https://maxxdental.com/wp-content/uploads/2018/04/5-star.png" alt=""></div><div class="icon_text_holder" style=""><div class="icon_text_inner" style=""><h5 class="icon_title" style="">Simon White</h5><p style="color: #00a0f0">Patient</p></div></div></div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row section vc_row-fluid  vc_custom_1602699835648 grid_section" style=" text-align:center;"><div class=" section_inner clearfix"><div class="section_inner_margin clearfix"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="313" height="190" src="https://maxxdental.com/wp-content/uploads/2018/04/botox-banner.png" class="vc_single_image-img attachment-full" alt="Botox treatments offered at Maxx Dental" title="botox-banner" srcset="https://maxxdental.com/wp-content/uploads/2018/04/botox-banner.png 313w, https://maxxdental.com/wp-content/uploads/2018/04/botox-banner-300x182.png 300w" sizes="(max-width: 313px) 100vw, 313px"></div>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 32px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="vc_empty_space" style="height: 12px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h3 id="m4968" style="text-align: left;"><span style="color: #ffffff;">NEW PATIENTS NOW WELCOME</span></h3>
+<p id="m3006" class="module text" style="text-align: left;"><span style="color: #ffffff;">If you’re looking for a dentist in Fort McMurray, contact </span></p>
+<p class="module text" style="text-align: left;"><span style="color: #ffffff;">Maxx Dental Group!</span></p>
+
+		</div>
+	</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 32px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><div class="vc_empty_space" style="height: 32px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div><a itemprop="url" href="https://maxxdental.com/contact/" target="_self" class="qbutton  default" style="color: #ffffff; border-color: #ffffff; ">REQUEST AN APPOINTMENT</a></div></div></div></div></div></div><div class="vc_row wpb_row section vc_row-fluid  vc_custom_1524722613895 grid_section" style=" text-align:left;"><div class=" section_inner clearfix"><div class="section_inner_margin clearfix"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="150" height="65" src="https://maxxdental.com/wp-content/uploads/2018/04/DOCS-logo-1-150x65.png" class="vc_single_image-img attachment-thumbnail" alt="" title="DOCS-logo"></div>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="150" height="64" src="https://maxxdental.com/wp-content/uploads/2018/03/NobelBiocare_logo_tcm260-22286-150x64.jpeg" class="vc_single_image-img attachment-thumbnail" alt="" title="NobelBiocare_logo_tcm260-22286" srcset="https://maxxdental.com/wp-content/uploads/2018/03/NobelBiocare_logo_tcm260-22286-150x64.jpeg 150w, https://maxxdental.com/wp-content/uploads/2018/03/NobelBiocare_logo_tcm260-22286.jpeg 152w" sizes="(max-width: 150px) 100vw, 150px"></div>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="150" height="69" src="https://maxxdental.com/wp-content/uploads/2018/03/Unice-150x69.png" class="vc_single_image-img attachment-thumbnail" alt="" title="Unice"></div>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="150" height="65" src="https://maxxdental.com/wp-content/uploads/2018/03/download-150x65.png" class="vc_single_image-img attachment-thumbnail" alt="" title="download"></div>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="150" height="49" src="https://maxxdental.com/wp-content/uploads/2018/03/Velscope-150x49.jpeg" class="vc_single_image-img attachment-thumbnail" alt="" title="Velscope"></div>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="150" height="65" src="https://maxxdental.com/wp-content/uploads/2018/04/oil-barons-logo-150x65.png" class="vc_single_image-img attachment-thumbnail" alt="" title="oil-barons-logo"></div>
+		</div>
+	</div>
+</div></div></div></div></div></div>
+</div>										 
+												</div>
+	</div>
+				
+	</div>
+</div>
+
+
+
+	<footer>
+		<div class="footer_inner clearfix">
+				<div class="footer_top_holder">
+            			<div class="footer_top">
+								<div class="container">
+					<div class="container_inner">
+																	<div class="four_columns clearfix">
+								<div class="column1 footer_col1">
+									<div class="column_inner">
+										<div id="media_image-2" class="widget widget_media_image"><img width="366" height="186" src="https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo-white.png" class="image wp-image-741  attachment-full size-full" alt="Maxx Dental logo Fort McMurray" style="max-width: 100%; height: auto;" decoding="async" srcset="https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo-white.png 366w, https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo-white-300x152.png 300w" sizes="(max-width: 366px) 100vw, 366px"></div><div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="vc_empty_space" style="height: 25px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div><div id="text-2" class="widget widget_text"><h5>INFORMATION</h5>			<div class="textwidget"><p class="footertext"><a href="https://maps.app.goo.gl/8uxnxetsUY49AzR96" target="_blank" rel="noopener">331 Thickwood Blvd<br>
+Fort McMurray,&nbsp;AB&nbsp;Canada<br>
+T9H 4V2</a></p>
+</div>
+		</div><div id="custom_html-6" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="vc_empty_space" style="height: 25px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div><div id="text-8" class="widget widget_text">			<div class="textwidget"><p>Phone:&nbsp;<a href="tel:+15873158822" data-global="phone" data-track-event="click" data-track-action="phone_link">(587) 315-8822</a></p>
+</div>
+		</div><div id="custom_html-7" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="vc_empty_space" style="height: 25px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div><div id="text-9" class="widget widget_text">			<div class="textwidget"><p>Email:&nbsp;<a href="mailto:office@maxxdental.com" data-track-event="click" data-track-action="email_link">office@maxxdental.com</a></p>
+</div>
+		</div><div id="block-2" class="widget widget_block widget_text">
+<p class="wp-block-paragraph"><a href="/privacy-policy/">Privacy Policy</a></p>
+</div><div id="block-3" class="widget widget_block widget_text">
+<p class="wp-block-paragraph"><a href="https://maxxdental.com/terms-of-use/" data-type="page" data-id="2312">Terms of Use</a></p>
+</div><div id="custom_html-8" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="vc_empty_space" style="height: 50px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div><div id="text-10" class="widget widget_text"><h5>HOURS</h5>			<div class="textwidget"><div class="hours_shortcode"><ul class="child_hours_ul"><li><span class="child_dayofweek_long"><time day="1" itemprop="weekDay">Monday:</time></span><span class="child_hours"><span class="child_hours"><time time="7:00 am" itemprop="startTime">7:00 am</time><span class="child_dash"> - </span><time time="4:30 pm" itemprop="endTime">4:30 pm</time></span></span></li><li><span class="child_dayofweek_long"><time day="2" itemprop="weekDay">Tuesday:</time></span><span class="child_hours"><time time="7:00 am" itemprop="startTime">7:00 am</time><span class="child_dash"> - </span><time time="5:00 pm" itemprop="endTime">5:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="3" itemprop="weekDay">Wednesday:</time></span><span class="child_hours"><time time="7:00 am" itemprop="startTime">7:00 am</time><span class="child_dash"> - </span><time time="7:00 pm" itemprop="endTime">7:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="4" itemprop="weekDay">Thursday:</time></span><span class="child_hours"><time time="7:00 am" itemprop="startTime">7:00 am</time><span class="child_dash"> - </span><time time="5:00 pm" itemprop="endTime">5:00 pm</time></span></li><li><span class="child_dayofweek_long"><time day="5" itemprop="weekDay">Friday:</time></span><span class="child_hours"><time time="7:00 am" itemprop="startTime">7:00 am</time><span class="child_dash"> - </span><time time="4:30 pm" itemprop="endTime">4:30 pm</time></span></li><li><span class="child_dayofweek_long"><time day="6" itemprop="weekEnd">Saturday:</time></span><span class="child_replace">Closed</span></li><li><span class="child_dayofweek_long"><time day="7" itemprop="weekEnd">Sunday:</time></span><span class="child_replace">Closed</span></li></ul></div>
+</div>
+		</div>									</div>
+								</div>
+								<div class="column2 footer_col2">
+									<div class="column_inner">
+										<div id="custom_html-5" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="vc_empty_space" style="height: 25px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div>									</div>
+								</div>
+								<div class="column3 footer_col3">
+									<div class="column_inner">
+										<div id="custom_html-4" class="widget_text widget widget_custom_html"><h5>OUR LOCATION</h5><div class="textwidget custom-html-widget"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2188.5835354015517!2d-111.4280927840312!3d56.732943980826846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x18d5f1f6f2af5d10!2sMaxx+Dental+Group!5e0!3m2!1sen!2sca!4v1523057564641" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe></div></div><div id="text-11" class="widget widget_text"><h5>SERVICE AREA</h5>			<div class="textwidget"><p>&nbsp;</p>
+<p>Fort McMurray</p>
+<div class="module text">
+<p class="footertext">Surrounding area</p>
+</div>
+</div>
+		</div><div id="custom_html-9" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="vc_empty_space" style="height: 5px">
+	<span class="vc_empty_space_inner">
+		<span class="empty_space_image"></span>
+	</span>
+</div></div></div>									</div>
+								</div>
+								<div class="column4 footer_col4">
+									<div class="column_inner">
+																			</div>
+								</div>
+							</div>
+															</div>
+				</div>
+							</div>
+					</div>
+							<div class="footer_bottom_holder">
+                									<div class="footer_bottom">
+							<div class="textwidget"><p style="background-color: #857b74;">Copyright © 2026 Maxx Dental Group</p>
+</div>
+					</div>
+								</div>
+				</div>
+	</footer>
+		
+</div>
+</div>
+
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = false;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/bridge-child/*","/wp-content/themes/bridge/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script src="https://scripts.mymarketingreports.com/dni.1.0.0.min.js?nt_id=10140141"></script>
+<script type="text/html" id="wpb-modifications"> window.wpbCustomElement = 1; </script><link href="//fonts.googleapis.com/css?family=Open+Sans:300%2C400%7CRoboto:400&amp;display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css">
+
+<script>
+		if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
+</script>
+<script id="gtm4wp-form-move-tracker-js" src="https://maxxdental.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.3"></script>
+<script id="jquery-ui-core-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-accordion-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/accordion.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-menu-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.3"></script>
+<script id="wp-dom-ready-js" src="https://maxxdental.com/wp-includes/js/dist/dom-ready.min.js?ver=a06281ae5cf5500e9317"></script>
+<script id="wp-hooks-js" src="https://maxxdental.com/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="https://maxxdental.com/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wp-a11y-js" src="https://maxxdental.com/wp-includes/js/dist/a11y.min.js?ver=af934e5259bc51b8718e"></script>
+<script id="jquery-ui-autocomplete-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-controlgroup-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/controlgroup.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-checkboxradio-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/checkboxradio.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-button-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/button.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-datepicker-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-datepicker-js-after">
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+</script>
+<script id="jquery-ui-mouse-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-resizable-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-draggable-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-dialog-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/dialog.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-droppable-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/droppable.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-progressbar-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/progressbar.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-selectable-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/selectable.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-sortable-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-slider-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/slider.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-spinner-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/spinner.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-tooltip-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/tooltip.min.js?ver=1.13.3"></script>
+<script id="jquery-ui-tabs-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-core-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-blind-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-blind.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-bounce-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-bounce.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-clip-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-clip.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-drop-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-drop.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-explode-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-explode.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-fade-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-fade.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-fold-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-fold.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-highlight-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-highlight.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-pulsate-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-pulsate.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-size-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-size.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-scale-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-scale.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-shake-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-shake.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-slide-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-slide.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-transfer-js" src="https://maxxdental.com/wp-includes/js/jquery/ui/effect-transfer.min.js?ver=1.13.3"></script>
+<script id="doubleTapToGo-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/doubletaptogo.js?ver=7.0"></script>
+<script id="modernizr-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/modernizr.min.js?ver=7.0"></script>
+<script id="appear-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/jquery.appear.js?ver=7.0"></script>
+<script id="hoverIntent-js" src="https://maxxdental.com/wp-includes/js/hoverIntent.min.js?ver=1.10.2"></script>
+<script id="prettyphoto-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/jquery.prettyPhoto.js?ver=7.0"></script>
+<script id="mediaelement-core-js-before">
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https://get.adobe.com/flashplayer/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+//# sourceURL=mediaelement-core-js-before
+</script>
+<script id="mediaelement-core-js" src="https://maxxdental.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17"></script>
+<script id="mediaelement-migrate-js" src="https://maxxdental.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=7.0"></script>
+<script id="mediaelement-js-extra">
+var _wpmejsSettings = {"pluginPath":"/wp-includes/js/mediaelement/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+//# sourceURL=mediaelement-js-extra
+</script>
+<script id="wp-mediaelement-js" src="https://maxxdental.com/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=7.0"></script>
+<script id="waitforimages-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/jquery.waitforimages.js?ver=7.0"></script>
+<script id="jquery-form-js" src="https://maxxdental.com/wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0"></script>
+<script id="waypoints-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/waypoints.min.js?ver=7.0"></script>
+<script id="easing-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/jquery.easing.1.3.js?ver=7.0"></script>
+<script id="mousewheel-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/jquery.mousewheel.min.js?ver=7.0"></script>
+<script id="isotope-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/jquery.isotope.min.js?ver=7.0"></script>
+<script id="skrollr-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/skrollr.js?ver=7.0"></script>
+<script id="TweenLite-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/TweenLite.min.js?ver=7.0"></script>
+<script id="ScrollToPlugin-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/ScrollToPlugin.min.js?ver=7.0"></script>
+<script id="smoothPageScroll-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/smoothPageScroll.min.js?ver=7.0"></script>
+<script id="bridge-default-dynamic-js" src="https://maxxdental.com/wp-content/themes/bridge/js/default_dynamic_callback.php?ver=7.0"></script>
+<script id="bridge-default-js-extra">
+var QodeAdminAjax = {"ajaxurl":"https://maxxdental.com/wp-admin/admin-ajax.php"};
+var qodeGlobalVars = {"vars":{"qodeAddingToCartLabel":"Adding to Cart...","page_scroll_amount_for_sticky":"","commentSentLabel":"Comment has been sent!"}};
+//# sourceURL=bridge-default-js-extra
+</script>
+<script id="bridge-default-js" src="https://maxxdental.com/wp-content/themes/bridge/js/default.min.js?ver=7.0"></script>
+<script async="" data-wp-strategy="async" fetchpriority="low" id="comment-reply-js" src="https://maxxdental.com/wp-includes/js/comment-reply.min.js?ver=7.0"></script>
+<script id="wpb_composer_front_js-js" src="https://maxxdental.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=8.7.3"></script>
+<script id="niceScroll-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/jquery.nicescroll.min.js?ver=7.0"></script>
+<script id="qode-nice-scroll-js" src="https://maxxdental.com/wp-content/plugins/bridge-core/modules/shortcodes/assets/js/nice-scroll-part.min.js?ver=7.0"></script>
+<script id="qode-like-js-extra">
+var qodeLike = {"ajaxurl":"https://maxxdental.com/wp-admin/admin-ajax.php"};
+//# sourceURL=qode-like-js-extra
+</script>
+<script id="qode-like-js" src="https://maxxdental.com/wp-content/themes/bridge/js/plugins/qode-like.min.js?ver=7.0"></script>
+<script id="gforms_recaptcha_recaptcha-js-extra">
+var gforms_recaptcha_recaptcha_strings = {"nonce":"f33d1e0f6a","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https://maxxdental.com/wp-content/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"1","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LcQ9isdAAAAAAyHr9hnKVwcObsKHfZbbAAWxaJ-"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+</script>
+<script data-wp-strategy="defer" defer="" id="gforms_recaptcha_recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6LcQ9isdAAAAAAyHr9hnKVwcObsKHfZbbAAWxaJ-&amp;ver=2.2.2"></script>
+<script data-wp-strategy="defer" defer="" id="gforms_recaptcha_frontend-js" src="https://maxxdental.com/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.2.2"></script>
+<script id="gform_json-js" defer="defer" src="https://maxxdental.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.10.5"></script>
+<script id="gform_gravityforms-js-extra">
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","file_uploaded":"File uploaded","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://maxxdental.com/wp-content/plugins/gravityforms/images"}};
+var gf_global = {"gf_currency_config":{"name":"Canadian Dollar","symbol_left":"$","symbol_right":"CAD","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"CAD"},"base_url":"https://maxxdental.com/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://maxxdental.com/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"100d632ad87d80f76589933c742321e8","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+//# sourceURL=gform_gravityforms-js-extra
+</script>
+<script id="gform_gravityforms-js" defer="defer" src="https://maxxdental.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.10.5"></script>
+<script id="gform_masked_input-js" defer="defer" src="https://maxxdental.com/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.10.5"></script>
+<script id="gform_placeholder-js" defer="defer" src="https://maxxdental.com/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.10.5"></script>
+<script id="gform_gravityforms_utils-js" defer="defer" src="https://maxxdental.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=3f278756f0a3032bed328ff6a9f6c01d"></script>
+<script id="gform_gravityforms_theme_vendors-js" defer="defer" src="https://maxxdental.com/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=7c651d0ba638ce98b9c65141edddd567"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"100d632ad87d80f76589933c742321e8"},"ajax":{"ajaxurl":"https://maxxdental.com/wp-admin/admin-ajax.php","ajax_submission_nonce":"fc547be09e","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again.","error_403":"The request was blocked (403 error) for unknown security reasons. Remove any code-like text (scripts or DB queries) and try again."}}}},"hmr_dev":"","public_path":"https://maxxdental.com/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"dae6e0b20a"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+</script>
+<script id="gform_gravityforms_theme-js" defer="defer" src="https://maxxdental.com/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=301fdc9aa6144168f3b854c4c2c8f6d3"></script>
+<script defer="" id="akismet-frontend-js" src="https://maxxdental.com/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1778615591"></script>
+<script></script><script id="rs-initialisation-scripts">
+		var	tpj = jQuery;
+
+		var	revapi1;
+
+		if(window.RS_MODULES === undefined) window.RS_MODULES = {};
+		if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
+		RS_MODULES.modules["revslider11"] = {once: RS_MODULES.modules["revslider11"]!==undefined ? RS_MODULES.modules["revslider11"].once : undefined, init:function() {
+			window.revapi1 = window.revapi1===undefined || window.revapi1===null || window.revapi1.length===0  ? document.getElementById("rev_slider_1_1") : window.revapi1;
+			if(window.revapi1 === null || window.revapi1 === undefined || window.revapi1.length==0) { window.revapi1initTry = window.revapi1initTry ===undefined ? 0 : window.revapi1initTry+1; if (window.revapi1initTry<20) requestAnimationFrame(function() {RS_MODULES.modules["revslider11"].init()}); return;}
+			window.revapi1 = jQuery(window.revapi1);
+			if(window.revapi1.revolution==undefined){ revslider_showDoubleJqueryError("rev_slider_1_1"); return;}
+			revapi1.revolutionInit({
+					revapi:"revapi1",
+					DPR:"dpr",
+					sliderLayout:"fullwidth",
+					visibilityLevels:"1240,1024,778,480",
+					gridwidth:1240,
+					gridheight:800,
+					lazyType:"smart",
+					spinner:"spinner0",
+					perspective:600,
+					perspectiveType:"local",
+					editorheight:"800,768,960,720",
+					responsiveLevels:"1240,1024,778,480",
+					progressBar:{disableProgressBar:true},
+					navigation: {
+						onHoverStop:false
+					},
+					viewPort: {
+						global:true,
+						globalDist:"-200px",
+						enable:false,
+						visible_area:"20%"
+					},
+					fallbacks: {
+						allowHTML5AutoPlayOnAndroid:true
+					},
+			});
+			
+		}} // End of RevInitScript
+
+		if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
+	</script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 13) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }jQuery('#input_13_4').mask('(999) 999-9999').bind('keypress', function(e){if(e.which == 13){jQuery(this).blur();} } );} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "13", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_13" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_13";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_13" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 13, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+
+
+
+
+<p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" hidden="">Notifications</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div><div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 0px; z-index: 90; cursor: default; position: fixed; top: 0px; left: 1550px; height: 720px; opacity: 1; display: none;"><div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 0px; height: 0px; background-color: transparent; border: 0px; background-clip: padding-box; border-radius: 0px;"></div></div><script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","h9f74evj31");</script><script id="" text="" charset="" type="text/javascript" src="https://oswidget.carecru.ca/widgets/158488ab-df03-4181-8cd4-50660f6779bc/cc.js"></script><script id="" text="" charset="" type="text/javascript" src="https://next-api.patientprism.com/v1/snippet/9ed0cc69-d338-40e0-8bd7-c9ddf550653b"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Dentist", "LocalBusiness", "Organization"],
+  "@id": "https://maxxdental.com/#entity",
+  "name": "Maxx Dental Group",
+  "url": "https://maxxdental.com/",
+  "logo": "https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo.jpg",
+  "image": "https://maxxdental.com/wp-content/uploads/2020/10/Maxx-Dental-logo.jpg",
+  "description": "Maxx Dental Group is a full-service dental clinic located in Fort McMurray, Alberta, providing comprehensive general, cosmetic, orthodontic, emergency, and implant dentistry for patients of all ages. With a patient-first approach, experienced dentists, and modern dental technology, the clinic focuses on relieving pain, restoring function, and enhancing smiles. Conveniently located on Thickwood Boulevard, Maxx Dental Group is committed to long-term oral health, comfort, and confident smiles in a welcoming and professional environment.",
+  "priceRange": "$$",
+  "telephone": "+1-587-315-8822",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "331 Thickwood Blvd",
+    "addressLocality": "Fort McMurray",
+    "addressRegion": "AB",
+    "postalCode": "T9H 4V2",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 56.7288,
+    "longitude": -111.4426
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Friday"],
+      "opens": "07:00",
+      "closes": "16:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Thursday"],
+      "opens": "07:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Wednesday"],
+      "opens": "07:00",
+      "closes": "19:00"
+    }
+  ],
+  "hasMap": "https://maps.app.goo.gl/DGbv6gbguHbCJymm9",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-587-315-8822",
+    "contactType": "appointments"
+  }
+}
+</script>
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden; visibility: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-h5xstwcptpxe" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcQ9isdAAAAAAyHr9hnKVwcObsKHfZbbAAWxaJ-&amp;co=aHR0cHM6Ly9tYXh4ZGVudGFsLmNvbTo0NDM.&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=vhuoi9e1v5rq"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><div id="batBeacon363319458254" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img id="batBeacon993346253383" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=56343867&amp;tm=gtm002&amp;Ver=2&amp;mid=2b175ba8-43b2-467e-9db8-16dd493394cd&amp;bo=1&amp;sid=47a61ec0768411f1a50b9511fd10df2d&amp;vid=47a60e50768411f1a341f3c9360373f6&amp;vids=1&amp;msclkid=N&amp;uach=pv%3D10.0&amp;pi=0&amp;lg=en-US&amp;sw=1280&amp;sh=720&amp;sc=24&amp;nwd=1&amp;tl=Dentist%20Near%20Me%20in%20Fort%20McMurray%20%7C%20Maxx%20Dental%20Group&amp;p=https%3A%2F%2Fmaxxdental.com%2F&amp;r=&amp;lt=3507&amp;evt=pageLoad&amp;sv=2&amp;cdb=AQAQ&amp;rn=937376" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div><div class="CareCruModal"><div class="CareCruModalInner"><iframe width="100%" scrolling="no" src="https://oswidget.carecru.ca/widgets/158488ab-df03-4181-8cd4-50660f6779bc/app/book?ref=" id="CareCruIframe" style="height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; overflow: hidden;" title="CareCru"></iframe></div></div><div class="CareCruFadeIn CareCruButton Book"><div class="CareCruButtonIcon"><svg class="CareCruButtonIconSVG" viewBox="0 0 184 167" xmlns="http://www.w3.org/2000/svg"><path d="M170.486 6.775c7.462 0 13.511 6.049 13.511 13.511v132.935c0 7.462-6.049 13.512-13.511 13.512H13.931c-7.461 0-13.51-6.05-13.51-13.512V20.284c0-7.461 6.048-13.509 13.509-13.509h22.038V1.954c0-.809.655-1.465 1.465-1.465h18.999c.809 0 1.465.656 1.465 1.465v4.821h66.853V1.954c0-.809.656-1.465 1.465-1.465h19.001c.81 0 1.465.656 1.465 1.465v4.821h23.805zm-3.843 147.071a3.611 3.611 0 0 0 3.609-3.613V44.279a3.61 3.61 0 0 0-3.609-3.613H18.374a3.61 3.61 0 0 0-3.609 3.613v105.954a3.611 3.611 0 0 0 3.609 3.613h148.269zm-40.331-72.672a3.358 3.358 0 0 1 0 4.745l-38.846 38.846c-.371.37-.811.608-1.275.769-1.004.739-2.403.698-3.311-.212l-24.406-24.404a2.569 2.569 0 0 1 0-3.631l7.598-7.597a2.567 2.567 0 0 1 3.631 0l15.19 15.19 30.19-30.189a3.355 3.355 0 0 1 4.746 0l6.483 6.483z" fill="#FFFFFE" fill-rule="evenodd"></path></svg></div><div><strong class="CareCruButtonIconBook">Book</strong> Online</div></div></body></html>
