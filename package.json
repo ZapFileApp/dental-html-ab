@@ -1,0 +1,12 @@
+{
+  "name": "dental-html-ab",
+  "version": "1.0.0",
+  "main": "scrape.js",
+  "scripts": {
+    "scrape": "node scrape.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.59.1"
+  }
+}

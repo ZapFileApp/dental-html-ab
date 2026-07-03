@@ -1,0 +1,52 @@
+name: Crawl Dentist Websites
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        batch: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: Run crawler
+        run: node scrape.js
+        env:
+          BATCH_NUM: ${{ matrix.batch }}
+
+      - name: Commit, push, and merge results
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git checkout -b results/batch-${{ matrix.batch }}
+          git add scrapedDentists/ failures/
+          if git diff --cached --quiet; then
+            echo "Nothing to commit, skipping PR"
+            exit 0
+          fi
+          git commit -m "results: batch ${{ matrix.batch }}"
+          git push origin results/batch-${{ matrix.batch }} --force
+          gh pr create \
+            --title "results: batch ${{ matrix.batch }}" \
+            --body "Auto-generated crawl results for batch ${{ matrix.batch }}" \
+            --base main \
+            --head results/batch-${{ matrix.batch }} || true
+          gh pr merge results/batch-${{ matrix.batch }} --merge --delete-branch
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
