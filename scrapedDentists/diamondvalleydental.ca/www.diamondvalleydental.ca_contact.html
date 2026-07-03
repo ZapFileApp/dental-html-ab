@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v4.16.19"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta name="theme-color" content="#ad9885"><link rel="alternate" type="application/rss+xml" title="Diamond Valley Dental Blog" href="/rss.xml"><title>Contact — Diamond Valley Dental</title><meta name="description" content="Family, cosmetic, and restorative dentistry in Diamond Valley, Alberta. Modern technology, sedation options, and a comfortable, welcoming team led by Dr. Brock Hall and Dr. Marnus Grobbelaar."><link rel="canonical" href="https://diamondvalleydental.ca/contact/"><meta property="og:type" content="website"><meta property="og:title" content="Contact — Diamond Valley Dental"><meta property="og:description" content="Family, cosmetic, and restorative dentistry in Diamond Valley, Alberta. Modern technology, sedation options, and a comfortable, welcoming team led by Dr. Brock Hall and Dr. Marnus Grobbelaar."><meta property="og:url" content="https://diamondvalleydental.ca/contact/"><meta property="og:image" content="https://diamondvalleydental.ca/og-default.jpg"><meta property="og:site_name" content="Diamond Valley Dental"><meta property="og:locale" content="en_CA"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Contact — Diamond Valley Dental"><meta name="twitter:description" content="Family, cosmetic, and restorative dentistry in Diamond Valley, Alberta. Modern technology, sedation options, and a comfortable, welcoming team led by Dr. Brock Hall and Dr. Marnus Grobbelaar."><meta name="twitter:image" content="https://diamondvalleydental.ca/og-default.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","@id":"https://diamondvalleydental.ca/#clinic","name":"Diamond Valley Dental","description":"Family, cosmetic, and restorative dentistry in Diamond Valley, Alberta. Modern technology, sedation options, and a comfortable, welcoming team led by Dr. Brock Hall and Dr. Marnus Grobbelaar.","url":"https://diamondvalleydental.ca","telephone":"+1-403-933-2225","email":"admin@diamondvalleydental.ca","image":"https://diamondvalleydental.ca/og-default.jpg","logo":"https://diamondvalleydental.ca/logo.png","address":{"@type":"PostalAddress","streetAddress":"402 Centre Ave W, Suite 18","addressLocality":"Diamond Valley","addressRegion":"AB","postalCode":"T0L 0H0","addressCountry":"CA"},"geo":{"@type":"GeoCoordinates","latitude":50.7011,"longitude":-114.2364},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"09:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday"],"opens":"08:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"07:00","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"07:00","closes":"14:00"}],"areaServed":{"@type":"City","name":"Diamond Valley"},"priceRange":"$$","sameAs":["https://www.facebook.com/DiamondValleyDental","https://g.page/r/Ca0PV6K-mLYQEAE/review"],"aggregateRating":{"@type":"AggregateRating","ratingValue":4.9,"reviewCount":190,"bestRating":5,"worstRating":1}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://diamondvalleydental.ca/#website","url":"https://diamondvalleydental.ca","name":"Diamond Valley Dental","publisher":{"@id":"https://diamondvalleydental.ca/#clinic"},"inLanguage":"en-CA"}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D8NE8ZC6JE"></script><script>(function(){const ga = "G-D8NE8ZC6JE";
+const ads = "";
+const hasGa = true;
+const hasAds = false;
+const bookingUrl = "https://akitu.io/qCHot";
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      if (hasGa) gtag('config', ga, { anonymize_ip: true });
+      if (hasAds) gtag('config', ads);
+
+      // Auto-bind conversion events on any "Schedule Appointment" CTA and phone-tap link.
+      // Fires GA4 events that can be imported as Google Ads conversions after marking
+      // them as Conversions in GA4 → Admin → Events.
+      (function () {
+        function bind() {
+          if (!window.gtag) return;
+          var seen = new WeakSet();
+
+          // Match any link to the booking portal — selector derived from site.bookingUrl
+          // so URL changes only require one edit (in src/lib/site.ts).
+          var bookingSelector = 'a[href="' + bookingUrl + '"]';
+          document.querySelectorAll(bookingSelector).forEach(function (el) {
+            if (seen.has(el)) return;
+            seen.add(el);
+            el.addEventListener('click', function () {
+              try {
+                window.gtag('event', 'schedule_appointment_click', {
+                  event_category: 'engagement',
+                  event_label: el.textContent ? el.textContent.trim() : 'Schedule Appointment',
+                  link_location: location.pathname,
+                });
+              } catch (e) {}
+            });
+          });
+
+          document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
+            if (seen.has(el)) return;
+            seen.add(el);
+            el.addEventListener('click', function () {
+              try {
+                window.gtag('event', 'phone_tap', {
+                  event_category: 'engagement',
+                  event_label: el.getAttribute('href').replace('tel:', ''),
+                  link_location: location.pathname,
+                });
+              } catch (e) {}
+            });
+          });
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', bind);
+        } else {
+          bind();
+        }
+      })();
+    })();</script><link rel="stylesheet" href="/_astro/about.CWyXvF-D.css">
+<link rel="stylesheet" href="/_astro/contact.DuPYSQ6R.css"></head> <body> <header class="nav" data-astro-cid-dmqpwcec=""> <div class="nav__inner container" data-astro-cid-dmqpwcec=""> <a class="nav__brand" href="/" aria-label="Diamond Valley Dental — Home" data-astro-cid-dmqpwcec=""> <img class="nav__logo" src="/logo-white.png" alt="Diamond Valley Dental" width="320" height="126" data-astro-cid-dmqpwcec=""> </a> <nav class="nav__links" aria-label="Primary" data-astro-cid-dmqpwcec=""> <a href="/" class="nav__link " data-astro-cid-dmqpwcec="">Home</a><a href="/about" class="nav__link " data-astro-cid-dmqpwcec="">About</a><a href="/services" class="nav__link " data-astro-cid-dmqpwcec="">Services</a><a href="/patient-info" class="nav__link " data-astro-cid-dmqpwcec="">Patient Info</a><a href="/contact" class="nav__link is-active" data-astro-cid-dmqpwcec="">Contact</a> </nav> <div class="nav__cta" data-astro-cid-dmqpwcec=""> <a href="https://akitu.io/qCHot" target="_blank" rel="noopener" class="btn btn--white nav__cta-btn" data-astro-cid-dmqpwcec="">Schedule Appointment</a> <a href="tel:+14039332225" class="btn btn--white nav__cta-btn" data-astro-cid-dmqpwcec="">403-933-2225</a> </div> <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-astro-cid-dmqpwcec=""> <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" data-astro-cid-dmqpwcec=""> <path class="nav__toggle-open" fill="currentColor" d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z" data-astro-cid-dmqpwcec=""></path> <path class="nav__toggle-close" fill="currentColor" d="M6.4 5L12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4 6.4 5Z" style="display:none" data-astro-cid-dmqpwcec=""></path> </svg> </button> </div> <div class="nav__mobile" id="mobile-menu" hidden="" data-astro-cid-dmqpwcec=""> <nav aria-label="Mobile" data-astro-cid-dmqpwcec=""> <a href="/" class="nav__mobile-link " data-astro-cid-dmqpwcec="">Home</a><a href="/about" class="nav__mobile-link " data-astro-cid-dmqpwcec="">About</a><a href="/services" class="nav__mobile-link " data-astro-cid-dmqpwcec="">Services</a><a href="/patient-info" class="nav__mobile-link " data-astro-cid-dmqpwcec="">Patient Info</a><a href="/contact" class="nav__mobile-link is-active" data-astro-cid-dmqpwcec="">Contact</a> </nav> <div class="nav__mobile-cta" data-astro-cid-dmqpwcec=""> <a href="https://akitu.io/qCHot" target="_blank" rel="noopener" class="btn btn--white" data-astro-cid-dmqpwcec="">Schedule Appointment</a> <a href="tel:+14039332225" class="btn btn--white" data-astro-cid-dmqpwcec="">Call 403-933-2225</a> </div> </div> </header> <script>
+  (function(){
+    var btn = document.getElementById('nav-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+    var openIcon = btn.querySelector('.nav__toggle-open');
+    var closeIcon = btn.querySelector('.nav__toggle-close');
+    function setOpen(open){
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      menu.hidden = !open;
+      if (openIcon) openIcon.style.display = open ? 'none' : '';
+      if (closeIcon) closeIcon.style.display = open ? '' : 'none';
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+    }
+    btn.addEventListener('click', function(){
+      setOpen(menu.hidden);
+    });
+    // Close when a link is clicked (single-page navigation isn't used, but
+    // helps in case it's added later and is a nicer UX).
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ setOpen(false); });
+    });
+    // Close on Escape
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && !menu.hidden) setOpen(false);
+    });
+  })();
+</script>  <main>  <section class="section section--cream page-header" data-astro-cid-uw5kdbxl=""> <div class="container" data-astro-cid-uw5kdbxl=""> <p class="eyebrow" data-astro-cid-uw5kdbxl="">Contact</p> <h1 data-astro-cid-uw5kdbxl="">We'd love to hear from you.</h1> <p class="lead" data-astro-cid-uw5kdbxl="">
+Call, email, or stop by the clinic in Diamond Valley. We'll help you
+        find a time that works.
+</p> </div> </section> <section class="section" data-astro-cid-uw5kdbxl=""> <div class="container contact-grid" data-astro-cid-uw5kdbxl=""> <div class="contact-cards" data-astro-cid-uw5kdbxl=""> <div class="contact-card" data-astro-cid-uw5kdbxl=""> <h3 data-astro-cid-uw5kdbxl="">Phone</h3> <p data-astro-cid-uw5kdbxl=""><a href="tel:+14039332225" data-astro-cid-uw5kdbxl="">403-933-2225</a></p> </div> <div class="contact-card" data-astro-cid-uw5kdbxl=""> <h3 data-astro-cid-uw5kdbxl="">Email</h3> <p data-astro-cid-uw5kdbxl=""><a href="mailto:admin@diamondvalleydental.ca" data-astro-cid-uw5kdbxl="">admin@diamondvalleydental.ca</a></p> </div> <div class="contact-card" data-astro-cid-uw5kdbxl=""> <h3 data-astro-cid-uw5kdbxl="">Address</h3> <p data-astro-cid-uw5kdbxl="">
+402 Centre Ave W<br data-astro-cid-uw5kdbxl="">
+Suite 18<br data-astro-cid-uw5kdbxl="">
+Diamond Valley, AB&nbsp;&nbsp;T0L 0H0
+</p> </div> <div class="contact-card" data-astro-cid-uw5kdbxl=""> <h3 data-astro-cid-uw5kdbxl="">Hours</h3> <dl class="hours-grid" data-astro-cid-uw5kdbxl=""> <dt data-astro-cid-uw5kdbxl="">Monday</dt><dd data-astro-cid-uw5kdbxl="">9:00 AM – 5:00 PM</dd> <dt data-astro-cid-uw5kdbxl="">Tuesday</dt><dd data-astro-cid-uw5kdbxl="">8:00 AM – 4:00 PM</dd> <dt data-astro-cid-uw5kdbxl="">Wednesday</dt><dd data-astro-cid-uw5kdbxl="">8:00 AM – 4:00 PM</dd> <dt data-astro-cid-uw5kdbxl="">Thursday</dt><dd data-astro-cid-uw5kdbxl="">7:00 AM – 3:00 PM</dd> <dt data-astro-cid-uw5kdbxl="">Friday</dt><dd data-astro-cid-uw5kdbxl="">7:00 AM – 2:00 PM</dd> <dt data-astro-cid-uw5kdbxl="">Sat – Sun</dt><dd data-astro-cid-uw5kdbxl="">Closed</dd> </dl> </div> </div> <div class="contact-map" data-astro-cid-uw5kdbxl=""> <iframe title="Map to Diamond Valley Dental" src="https://www.google.com/maps?q=402%20Centre%20Ave%20W%2C%20Diamond%20Valley%2C%20AB%20T0L%200H0&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-astro-cid-uw5kdbxl=""></iframe> </div> </div> </section> <section class="section section--cream" data-astro-cid-uw5kdbxl=""> <div class="container contact-form-wrap" data-astro-cid-uw5kdbxl=""> <p class="eyebrow" data-astro-cid-uw5kdbxl="">Send us a message</p> <h2 data-astro-cid-uw5kdbxl="">Drop us a line.</h2> <p class="contact-form-intro" data-astro-cid-uw5kdbxl="">
+For non-urgent questions or to introduce yourself before a first visit.
+        We reply within a business day.
+</p>  <form id="contact-form" class="contact-form" novalidate="" data-astro-cid-uw5kdbxl=""> <div class="contact-form__row" data-astro-cid-uw5kdbxl=""> <label data-astro-cid-uw5kdbxl=""> <span data-astro-cid-uw5kdbxl="">Your name</span> <input type="text" name="name" required="" autocomplete="name" data-astro-cid-uw5kdbxl=""> </label> <label data-astro-cid-uw5kdbxl=""> <span data-astro-cid-uw5kdbxl="">Email</span> <input type="email" name="email" required="" autocomplete="email" data-astro-cid-uw5kdbxl=""> </label> </div> <label data-astro-cid-uw5kdbxl=""> <span data-astro-cid-uw5kdbxl="">Phone <em data-astro-cid-uw5kdbxl="">(optional)</em></span> <input type="tel" name="phone" autocomplete="tel" data-astro-cid-uw5kdbxl=""> </label> <label data-astro-cid-uw5kdbxl=""> <span data-astro-cid-uw5kdbxl="">Message</span> <textarea name="message" required="" rows="6" maxlength="5000" data-astro-cid-uw5kdbxl=""></textarea> </label>  <label class="contact-form__honeypot" aria-hidden="true" data-astro-cid-uw5kdbxl="">
+Website
+<input type="text" name="website" tabindex="-1" autocomplete="off" data-astro-cid-uw5kdbxl=""> </label> <div class="cf-turnstile" data-sitekey="0x4AAAAAADgYq_4w1b1AKWCl" data-theme="light" data-astro-cid-uw5kdbxl=""><div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-06lp2_response"></div></div> <div class="contact-form__actions" data-astro-cid-uw5kdbxl=""> <button type="submit" class="btn btn--primary" data-astro-cid-uw5kdbxl="">Send message</button> <span class="contact-form__status" id="contact-form-status" role="status" aria-live="polite" data-astro-cid-uw5kdbxl=""></span> </div> </form> <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async="" defer=""></script> </div> </section> <script>(function(){const workerUrl = "https://dvd-contact-form.brock-f26.workers.dev";
+
+      (function () {
+        var form = document.getElementById('contact-form');
+        var status = document.getElementById('contact-form-status');
+        if (!form || !status) return;
+
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          var btn = form.querySelector('button[type="submit"]');
+          var data = Object.fromEntries(new FormData(form).entries());
+
+          status.textContent = '';
+          status.className = 'contact-form__status';
+          btn.disabled = true;
+          btn.textContent = 'Sending…';
+
+          try {
+            var res = await fetch(workerUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data),
+            });
+            var body = await res.json().catch(function () { return {}; });
+            if (res.ok && body.ok) {
+              form.reset();
+              status.textContent = 'Thanks, we got it. We’ll reply within a business day.';
+              status.className = 'contact-form__status is-ok';
+              if (window.gtag) window.gtag('event', 'contact_form_submit', { event_category: 'engagement' });
+            } else {
+              status.textContent = body.error || 'Something went wrong. Please call us or email admin@diamondvalleydental.ca.';
+              status.className = 'contact-form__status is-err';
+            }
+          } catch (err) {
+            status.textContent = 'Network error, please call us or email admin@diamondvalleydental.ca.';
+            status.className = 'contact-form__status is-err';
+          } finally {
+            btn.disabled = false;
+            btn.textContent = 'Send message';
+            // Turnstile tokens are one-time use, reset so the user can submit again.
+            if (window.turnstile && typeof window.turnstile.reset === 'function') {
+              try { window.turnstile.reset(); } catch (e) {}
+            }
+          }
+        });
+      })();
+    })();</script><section class="section section--dark cta" data-astro-cid-uw5kdbxl=""> <div class="container cta__inner" data-astro-cid-uw5kdbxl=""> <div data-astro-cid-uw5kdbxl=""> <p class="eyebrow eyebrow--on-dark" data-astro-cid-uw5kdbxl="">Want to schedule an appointment?</p> <h2 data-astro-cid-uw5kdbxl="">Book online any time.</h2> <p data-astro-cid-uw5kdbxl="">New patients welcome. Same-day emergency appointments available.</p> </div> <div class="cta__buttons" data-astro-cid-uw5kdbxl=""> <a href="https://akitu.io/qCHot" target="_blank" rel="noopener" class="btn btn--primary" data-astro-cid-uw5kdbxl="">Schedule Appointment</a> <a href="tel:+14039332225" class="btn btn--stone" data-astro-cid-uw5kdbxl="">Call 403-933-2225</a> </div> </div> </section>  </main> <footer class="footer" data-astro-cid-sz7xmlte=""> <div class="container footer__inner" data-astro-cid-sz7xmlte=""> <div class="footer__col" data-astro-cid-sz7xmlte=""> <a href="/" class="footer__brand" aria-label="Diamond Valley Dental — Home" data-astro-cid-sz7xmlte=""> <img src="/logo-white.png" alt="Diamond Valley Dental" width="320" height="126" data-astro-cid-sz7xmlte=""> </a> <p data-astro-cid-sz7xmlte="">Your Diamond Valley Dentist</p> <p data-astro-cid-sz7xmlte=""> <a href="tel:+14039332225" data-astro-cid-sz7xmlte="">403-933-2225</a><br data-astro-cid-sz7xmlte=""> <a href="mailto:admin@diamondvalleydental.ca" data-astro-cid-sz7xmlte="">admin@diamondvalleydental.ca</a> </p> <ul class="footer__social" aria-label="Social media" data-astro-cid-sz7xmlte=""> <li data-astro-cid-sz7xmlte=""> <a href="https://www.facebook.com/DiamondValleyDental" target="_blank" rel="noopener" aria-label="Diamond Valley Dental on Facebook" data-astro-cid-sz7xmlte=""> <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" data-astro-cid-sz7xmlte=""> <path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.6c0-.9.3-1.6 1.6-1.6h1.6V4.1c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.7H7.5V14h2.8v8h3.2Z" data-astro-cid-sz7xmlte=""></path> </svg> </a> </li> </ul> </div> <div class="footer__col" data-astro-cid-sz7xmlte=""> <h4 data-astro-cid-sz7xmlte="">Visit</h4> <dl class="footer__hours" data-astro-cid-sz7xmlte=""> <dt data-astro-cid-sz7xmlte="">Monday</dt><dd data-astro-cid-sz7xmlte="">9AM – 5PM</dd> <dt data-astro-cid-sz7xmlte="">Tuesday</dt><dd data-astro-cid-sz7xmlte="">8AM – 4PM</dd> <dt data-astro-cid-sz7xmlte="">Wednesday</dt><dd data-astro-cid-sz7xmlte="">8AM – 4PM</dd> <dt data-astro-cid-sz7xmlte="">Thursday</dt><dd data-astro-cid-sz7xmlte="">7AM – 3PM</dd> <dt data-astro-cid-sz7xmlte="">Friday</dt><dd data-astro-cid-sz7xmlte="">7AM – 2PM</dd> </dl> <p class="footer__address" data-astro-cid-sz7xmlte="">
+402 Centre Ave W<br data-astro-cid-sz7xmlte="">
+Suite 18<br data-astro-cid-sz7xmlte="">
+Diamond Valley, AB&nbsp;&nbsp;T0L 0H0
+</p> </div> <div class="footer__col" data-astro-cid-sz7xmlte=""> <h4 data-astro-cid-sz7xmlte="">Explore</h4> <ul data-astro-cid-sz7xmlte=""> <li data-astro-cid-sz7xmlte=""><a href="/about" data-astro-cid-sz7xmlte="">About</a></li> <li data-astro-cid-sz7xmlte=""><a href="/services" data-astro-cid-sz7xmlte="">Services</a></li> <li data-astro-cid-sz7xmlte=""><a href="/patient-info" data-astro-cid-sz7xmlte="">Patient Info</a></li> <li data-astro-cid-sz7xmlte=""><a href="/contact" data-astro-cid-sz7xmlte="">Contact</a></li> <li data-astro-cid-sz7xmlte=""><a href="/blog" data-astro-cid-sz7xmlte="">Blog</a></li> <li data-astro-cid-sz7xmlte=""><a href="/careers" data-astro-cid-sz7xmlte="">Careers</a></li> </ul> </div> <div class="footer__col footer__cta" data-astro-cid-sz7xmlte=""> <a href="https://akitu.io/qCHot" target="_blank" rel="noopener" class="btn btn--white" data-astro-cid-sz7xmlte="">Schedule Appointment</a> </div> </div> <div class="footer__base container" data-astro-cid-sz7xmlte=""> <span data-astro-cid-sz7xmlte="">© 2026 Diamond Valley Dental</span> <span data-astro-cid-sz7xmlte="">Diamond Valley, Alberta</span> </div> </footer>  <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;a6c8d028324348638367dd4dffea9c72&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+ </body></html>

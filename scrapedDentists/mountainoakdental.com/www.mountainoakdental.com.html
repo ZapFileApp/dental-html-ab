@@ -1,0 +1,1179 @@
+<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.4",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),o([])},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();</script>
+
+<meta name="twitter:widgets:csp" content="on">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://mountainoakdental.com/xmlrpc.php">
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="preload" href="https://i1.wp.com/mountainoakdental.com/wp-content/uploads/2020/08/mtn-oak-1-TRANSPARENT.png" as="image"><link rel="preload" href="https://i1.wp.com/mountainoakdental.com/wp-content/uploads/2020/06/group-smile.jpg" as="image"><link rel="preload" href="https://mountainoakdental.com/wp-content/themes/kallyas/template_helpers/icons/kl-social-icons/kl-social-icons.woff" as="font" crossorigin=""><link rel="preload" href="https://mountainoakdental.com/wp-content/themes/kallyas/template_helpers/icons/glyphicons_halflingsregular/glyphicons_halflingsregular.woff" as="font" crossorigin=""><link rel="preload" href="https://mountainoakdental.com/wp-content/themes/kallyas/template_helpers/icons/glyphicons_halflingsregular/glyphicons_halflingsregular.woff2" as="font" crossorigin=""><style>.home .kl-iosslider {background:url(https://i1.wp.com/mountainoakdental.com/wp-content/uploads/2020/06/group-smile.jpg) center/cover no-repeat !important;}</style><style>.zn-bgSource-image {background-image: url() !important;}</style>
+            <script data-no-defer="1" data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer="" data-cookieconsent="ignore">
+                var ctPublicFunctions = {"_ajax_nonce":"88b55c546f","_rest_nonce":"e313bbbd6c","_ajax_url":"\/wp-admin\/admin-ajax.php","_rest_url":"https:\/\/mountainoakdental.com\/wp-json\/","data__cookies_type":"native","data__ajax_type":"rest","bot_detector_enabled":false,"data__frontend_data_log_enabled":1,"cookiePrefix":"","wprocket_detected":true,"host_url":"mountainoakdental.com","text__ee_click_to_select":"Click to select the whole data","text__ee_original_email":"The complete one is","text__ee_got_it":"Got it","text__ee_blocked":"Blocked","text__ee_cannot_connect":"Cannot connect","text__ee_cannot_decode":"Can not decode email. Unknown reason","text__ee_email_decoder":"CleanTalk email decoder","text__ee_wait_for_decoding":"The magic is on the way!","text__ee_decoding_process":"Please wait a few seconds while we decode the contact data."}
+            </script>
+        
+            <script data-no-defer="1" data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer="" data-cookieconsent="ignore">
+                var ctPublic = {"_ajax_nonce":"88b55c546f","settings__forms__check_internal":"0","settings__forms__check_external":"0","settings__forms__force_protection":0,"settings__forms__search_test":"1","settings__forms__wc_add_to_cart":"1","bot_detector_enabled":false,"settings__sfw__anti_crawler":0,"blog_home":"https:\/\/mountainoakdental.com\/","pixel__setting":"0","pixel__enabled":false,"pixel__url":null,"data__email_check_before_post":"1","data__email_check_exist_post":0,"data__cookies_type":"native","data__key_is_ok":true,"data__visible_fields_required":true,"wl_brandname":"Anti-Spam by CleanTalk","wl_brandname_short":"CleanTalk","ct_checkjs_key":"74635360f8009560b16b8a6edf6f7d777720be4e75dfc86c5e2b3fb8256b547e","emailEncoderPassKey":"dc2b77bb0766b4cd0824bec623851607","bot_detector_forms_excluded":"W10=","advancedCacheExists":true,"varnishCacheExists":false,"wc_ajax_add_to_cart":true}
+            </script>
+        		<style>html.sdui-panel-open body:not(.wp-admin){margin-right:400px}html.sdui-panel-open #wpcontent,html.sdui-panel-open #wpfooter{margin-right:400px}html.sdui-panel-open body:not(.wp-admin):not(.block-editor-page) header.wp-block-template-part{right:400px}#sdui-panel-placeholder{display:none;position:fixed;right:0;top:var(--wp-admin--admin-bar--height,32px);width:400px;height:calc(100dvh - var(--wp-admin--admin-bar--height,32px));background:linear-gradient(135deg,#1a1230 0%,#110c1d 100%);z-index:99999}html.sdui-panel-open #sdui-panel-placeholder{display:block}@media(max-width:768px){html.sdui-panel-open body:not(.wp-admin),html.sdui-panel-open #wpcontent,html.sdui-panel-open #wpfooter{margin-right:0}html.sdui-panel-open #sdui-panel-placeholder{display:none}}</style>
+		<script type="rocketlazyloadscript">try{if(!document.documentElement.classList.contains('sdui-panel-open')&&localStorage.getItem('site-designer-ui-panel-open')==='true'){document.documentElement.classList.add('sdui-panel-open');document.cookie='sdui_panel_open=1;path=/;max-age=31536000;SameSite=Lax;Secure';document.addEventListener('DOMContentLoaded',function(){if(!document.getElementById('sdui-panel-placeholder')){var p=document.createElement('div');p.id='sdui-panel-placeholder';document.body.appendChild(p)}})}}catch(e){}</script>
+		
+	<!-- This site is optimized with the Yoast SEO plugin v27.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>General &amp; Family Dentistry in Okotoks - Mountain Oak Dental</title>
+<link data-rocket-prefetch="" href="https://i1.wp.com" rel="dns-prefetch"><link rel="preload" data-rocket-preload="" as="image" href="https://i1.wp.com/mountainoakdental.com/wp-content/uploads/2020/06/group-smile.jpg" fetchpriority="high">
+	<meta name="description" content="At Mountain Oak Dental, we are proud to provide optimal dental care to our local community of Okotoks and beyond. Located across from Costco.">
+	<link rel="canonical" href="https://mountainoakdental.com/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="General &amp; Family Dentistry in Okotoks - Mountain Oak Dental">
+	<meta property="og:description" content="At Mountain Oak Dental, we are proud to provide optimal dental care to our local community of Okotoks and beyond. Located across from Costco.">
+	<meta property="og:url" content="https://mountainoakdental.com/">
+	<meta property="og:site_name" content="Mountain Oak Dental">
+	<meta property="article:modified_time" content="2025-07-09T17:33:32+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/mountainoakdental.com\/","url":"https:\/\/mountainoakdental.com\/","name":"General &amp; Family Dentistry in Okotoks - Mountain Oak Dental","isPartOf":{"@id":"https:\/\/mountainoakdental.com\/#website"},"datePublished":"2015-08-24T14:19:22+00:00","dateModified":"2025-07-09T17:33:32+00:00","description":"At Mountain Oak Dental, we are proud to provide optimal dental care to our local community of Okotoks and beyond. Located across from Costco.","breadcrumb":{"@id":"https:\/\/mountainoakdental.com\/#breadcrumb"},"inLanguage":"en-CA","potentialAction":[{"@type":"ReadAction","target":["https:\/\/mountainoakdental.com\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/mountainoakdental.com\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/mountainoakdental.com\/#website","url":"https:\/\/mountainoakdental.com\/","name":"Mountain Oak Dental","description":"General &amp; Family Dentistry in Okotoks","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/mountainoakdental.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-CA"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//c0.wp.com">
+<link rel="dns-prefetch" href="//www.google.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Mountain Oak Dental » Feed" href="https://mountainoakdental.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Mountain Oak Dental » Comments Feed" href="https://mountainoakdental.com/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://mountainoakdental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmountainoakdental.com%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://mountainoakdental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmountainoakdental.com%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="cleantalk-public-css-css" href="https://mountainoakdental.com/wp-content/plugins/cleantalk-spam-protect/css/cleantalk-public.min.css?ver=6.82_1782392731" type="text/css" media="all">
+<link rel="stylesheet" id="cleantalk-email-decoder-css-css" href="https://mountainoakdental.com/wp-content/plugins/cleantalk-spam-protect/css/cleantalk-email-decoder.min.css?ver=6.82_1782392731" type="text/css" media="all">
+<link rel="stylesheet" id="wp-components-css" href="https://mountainoakdental.com/wp-includes/css/dist/components/style.min.css?ver=6.9.4" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="godaddy-styles-css" href="https://mountainoakdental.com/wp-content/cache/min/1/wp-content/mu-plugins/vendor/wpex/godaddy-launch/includes/Dependencies/GoDaddy/Styles/build/latest.css?ver=1760124776" type="text/css" media="all">
+<link rel="stylesheet" id="kallyas-styles-css" href="https://mountainoakdental.com/wp-content/themes/kallyas/style.css?ver=4.19.7" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="th-bootstrap-styles-css" href="https://mountainoakdental.com/wp-content/cache/min/1/wp-content/themes/kallyas/css/bootstrap.min.css?ver=1760124776" type="text/css" media="all">
+<link rel="stylesheet" id="th-theme-template-styles-css" href="https://mountainoakdental.com/wp-content/themes/kallyas/css/template.min.css?ver=4.19.7" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="zion-frontend-css" href="https://mountainoakdental.com/wp-content/cache/min/1/wp-content/themes/kallyas/framework/zion-builder/assets/css/znb_frontend.css?ver=1760124776" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="3183-layout.css-css" href="https://mountainoakdental.com/wp-content/cache/min/1/wp-content/uploads/zion-builder/cache/3183-layout.css?ver=1760124947" type="text/css" media="all">
+<link rel="stylesheet" id="th-theme-print-stylesheet-css" href="https://mountainoakdental.com/wp-content/themes/kallyas/css/print.css?ver=4.19.7" type="text/css" media="print">
+<link data-minify="1" rel="stylesheet" id="th-theme-options-styles-css" href="https://mountainoakdental.com/wp-content/cache/min/1/wp-content/uploads/zn_dynamic.css?ver=1760124776" type="text/css" media="all">
+<script type="text/javascript" src="https://mountainoakdental.com/wp-content/plugins/cleantalk-spam-protect/js/apbct-public-bundle_gathering.min.js?ver=6.82_1782392731" id="apbct-public-bundle_gathering.min-js-js" data-rocket-defer="" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://mountainoakdental.com/wp-content/cache/min/1/c/5.2.4/wp-includes/js/jquery/jquery.js?ver=1760124776" id="jquery-js"></script>
+<script type="text/javascript" id="kl-recaptcha-js-extra">
+/* <![CDATA[ */
+var zn_contact_form = {"captcha_not_filled":"Please complete the Captcha validation"};
+//# sourceURL=kl-recaptcha-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.google.com/recaptcha/api.js?onload=kallyasOnloadCallback&amp;ver=1" id="kl-recaptcha-js"></script>
+<link rel="https://api.w.org/" href="https://mountainoakdental.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://mountainoakdental.com/wp-json/wp/v2/pages/3183"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mountainoakdental.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9.4">
+<link rel="shortlink" href="https://mountainoakdental.com/">
+		<meta name="theme-color" content="#000000">
+				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<!--[if lte IE 8]>
+		<script type="text/javascript">var \$buoop = {
+				vs: {i: 10, f: 25, o: 12.1, s: 7, n: 9}
+			};
+
+			\$buoop.ol = window.onload;
+
+			window.onload = function () {
+				try {
+					if (\$buoop.ol) {
+						\$buoop.ol()
+					}
+				}
+				catch (e) {
+				}
+
+				var e = document.createElement("script");
+				e.setAttribute("type", "text/javascript");
+				e.setAttribute("src", "https://browser-update.org/update.js");
+				document.body.appendChild(e);
+			};</script>
+		<![endif]-->
+
+		<!-- for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+	<!-- Fallback for animating in viewport -->
+	<noscript>
+		<style type="text/css" media="screen">
+			.zn-animateInViewport {visibility: visible;}
+		</style>
+	</noscript>
+	<meta name="generator" content="Powered by Slider Revolution 6.7.15 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+<!-- Generated inline styles --><style type="text/css" id="zn-inline-styles">/* Add negative top margin to Action Box */
+.eluid91fd4acb {margin-top:-25px;}</style><link rel="icon" href="https://mountainoakdental.com/wp-content/uploads/2021/06/cropped-tooth-icon1-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://mountainoakdental.com/wp-content/uploads/2021/06/cropped-tooth-icon1-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://mountainoakdental.com/wp-content/uploads/2021/06/cropped-tooth-icon1-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://mountainoakdental.com/wp-content/uploads/2021/06/cropped-tooth-icon1-1-270x270.png">
+<style id="wp-site-designer-contrast-fallback"> body .wp-site-blocks .wp-block-designsetgo-section.has-white-background-color{background-color:var(--wp--preset--color--white) !important;color:var(--wp--preset--color--black) !important;--dsgo-text-color:var(--wp--preset--color--black);} body .wp-site-blocks .wp-block-designsetgo-section.has-black-background-color{background-color:var(--wp--preset--color--black) !important;color:var(--wp--preset--color--white) !important;--dsgo-text-color:var(--wp--preset--color--white);} body .wp-site-blocks .wp-block-designsetgo-section[class*="-background-color"] h1,body .wp-site-blocks .wp-block-designsetgo-section[class*="-background-color"] h2,body .wp-site-blocks .wp-block-designsetgo-section[class*="-background-color"] h3,body .wp-site-blocks .wp-block-designsetgo-section[class*="-background-color"] h4,body .wp-site-blocks .wp-block-designsetgo-section[class*="-background-color"] h5,body .wp-site-blocks .wp-block-designsetgo-section[class*="-background-color"] h6,body .wp-site-blocks .wp-block-designsetgo-section[class*="-background-color"] p,body .wp-site-blocks .wp-block-designsetgo-section[class*="-background-color"] a:where(:not(.wp-element-button)),body .wp-site-blocks .wp-block-designsetgo-section[class*="-background-color"] .wp-element-caption{color:var(--dsgo-text-color,inherit) !important;} body .wp-site-blocks .wp-block-group.has-white-background-color{background-color:var(--wp--preset--color--white) !important;color:var(--wp--preset--color--black) !important;--dsgo-text-color:var(--wp--preset--color--black);} body .wp-site-blocks .wp-block-group.has-black-background-color{background-color:var(--wp--preset--color--black) !important;color:var(--wp--preset--color--white) !important;--dsgo-text-color:var(--wp--preset--color--white);} body .wp-site-blocks .wp-block-group[class*="-background-color"] h1,body .wp-site-blocks .wp-block-group[class*="-background-color"] h2,body .wp-site-blocks .wp-block-group[class*="-background-color"] h3,body .wp-site-blocks .wp-block-group[class*="-background-color"] h4,body .wp-site-blocks .wp-block-group[class*="-background-color"] h5,body .wp-site-blocks .wp-block-group[class*="-background-color"] h6,body .wp-site-blocks .wp-block-group[class*="-background-color"] p,body .wp-site-blocks .wp-block-group[class*="-background-color"] a:where(:not(.wp-element-button)),body .wp-site-blocks .wp-block-group[class*="-background-color"] .wp-element-caption{color:var(--dsgo-text-color,inherit) !important;} body .wp-site-blocks .wp-block-column.has-white-background-color{background-color:var(--wp--preset--color--white) !important;color:var(--wp--preset--color--black) !important;--dsgo-text-color:var(--wp--preset--color--black);} body .wp-site-blocks .wp-block-column.has-black-background-color{background-color:var(--wp--preset--color--black) !important;color:var(--wp--preset--color--white) !important;--dsgo-text-color:var(--wp--preset--color--white);} body .wp-site-blocks .wp-block-column[class*="-background-color"] h1,body .wp-site-blocks .wp-block-column[class*="-background-color"] h2,body .wp-site-blocks .wp-block-column[class*="-background-color"] h3,body .wp-site-blocks .wp-block-column[class*="-background-color"] h4,body .wp-site-blocks .wp-block-column[class*="-background-color"] h5,body .wp-site-blocks .wp-block-column[class*="-background-color"] h6,body .wp-site-blocks .wp-block-column[class*="-background-color"] p,body .wp-site-blocks .wp-block-column[class*="-background-color"] a:where(:not(.wp-element-button)),body .wp-site-blocks .wp-block-column[class*="-background-color"] .wp-element-caption{color:var(--dsgo-text-color,inherit) !important;} .wp-block-group:not([class*="-background-color"]),.wp-block-column:not([class*="-background-color"]),.wp-block-columns:not([class*="-background-color"]){--dsgo-text-color:initial;} :is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column).has-background:not([class*="-background-color"]):not(.has-text-color):not(.is-style-footer-section):not(.is-style-header-section),.wp-block-cover:not(.has-text-color){color:var(--wp--preset--color--white) !important;--dsgo-text-color:var(--wp--preset--color--white);} body .wp-site-blocks :is(:is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column).has-background:not([class*="-background-color"]):not(.has-text-color):not(.is-style-footer-section):not(.is-style-header-section),.wp-block-cover) h1:not(.has-text-color),body .wp-site-blocks :is(:is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column).has-background:not([class*="-background-color"]):not(.has-text-color):not(.is-style-footer-section):not(.is-style-header-section),.wp-block-cover) h2:not(.has-text-color),body .wp-site-blocks :is(:is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column).has-background:not([class*="-background-color"]):not(.has-text-color):not(.is-style-footer-section):not(.is-style-header-section),.wp-block-cover) h3:not(.has-text-color),body .wp-site-blocks :is(:is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column).has-background:not([class*="-background-color"]):not(.has-text-color):not(.is-style-footer-section):not(.is-style-header-section),.wp-block-cover) h4:not(.has-text-color),body .wp-site-blocks :is(:is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column).has-background:not([class*="-background-color"]):not(.has-text-color):not(.is-style-footer-section):not(.is-style-header-section),.wp-block-cover) h5:not(.has-text-color),body .wp-site-blocks :is(:is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column).has-background:not([class*="-background-color"]):not(.has-text-color):not(.is-style-footer-section):not(.is-style-header-section),.wp-block-cover) h6:not(.has-text-color),body .wp-site-blocks :is(:is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column).has-background:not([class*="-background-color"]):not(.has-text-color):not(.is-style-footer-section):not(.is-style-header-section),.wp-block-cover) p:not(.has-text-color),body .wp-site-blocks :is(:is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column).has-background:not([class*="-background-color"]):not(.has-text-color):not(.is-style-footer-section):not(.is-style-header-section),.wp-block-cover) a:where(:not(.wp-element-button)):not(.has-text-color),body .wp-site-blocks :is(:is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column).has-background:not([class*="-background-color"]):not(.has-text-color):not(.is-style-footer-section):not(.is-style-header-section),.wp-block-cover) .wp-element-caption:not(.has-text-color){color:var(--dsgo-text-color,inherit) !important;} body .wp-site-blocks :is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column):is([class*="-background-color"],[data-dsgo-inline-bg]) .wp-block-button[class*="is-style-outline"] .wp-element-button{color:var(--dsgo-text-color,inherit) !important;border-color:currentColor !important;}body .wp-site-blocks :is(.wp-block-designsetgo-section,.wp-block-group,.wp-block-column):is([class*="-background-color"],[data-dsgo-inline-bg]) .wp-block-button[class*="is-style-outline"] .wp-element-button:hover{opacity:0.75;} body .wp-site-blocks [data-dsgo-inline-bg] h1:not(.has-text-color),body .wp-site-blocks [data-dsgo-inline-bg] h2:not(.has-text-color),body .wp-site-blocks [data-dsgo-inline-bg] h3:not(.has-text-color),body .wp-site-blocks [data-dsgo-inline-bg] h4:not(.has-text-color),body .wp-site-blocks [data-dsgo-inline-bg] h5:not(.has-text-color),body .wp-site-blocks [data-dsgo-inline-bg] h6:not(.has-text-color),body .wp-site-blocks [data-dsgo-inline-bg] p:not(.has-text-color),body .wp-site-blocks [data-dsgo-inline-bg] a:where(:not(.wp-element-button)):not(.has-text-color),body .wp-site-blocks [data-dsgo-inline-bg] .wp-element-caption:not(.has-text-color){color:var(--dsgo-text-color,inherit) !important;} :is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]),.has-background:is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]),.has-text-color:is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]){background-color:var(--wp--preset--color--accent-5) !important;color:var(--wp--preset--color--contrast) !important;} body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]) h1,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]) h2,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]) h3,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]) h4,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]) h5,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]) h6,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]) p,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]) a:where(:not(.wp-element-button)),body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-1:not([class*="-background-color"]) .wp-element-caption{color:var(--wp--preset--color--contrast);} :is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]),.has-background:is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]),.has-text-color:is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]){background-color:var(--wp--preset--color--accent-2) !important;color:var(--wp--preset--color--contrast) !important;} body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]) h1,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]) h2,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]) h3,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]) h4,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]) h5,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]) h6,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]) p,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]) a:where(:not(.wp-element-button)),body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-2:not([class*="-background-color"]) .wp-element-caption{color:var(--wp--preset--color--contrast);} :is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]),.has-background:is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]),.has-text-color:is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]){background-color:var(--wp--preset--color--accent-1) !important;color:var(--wp--preset--color--contrast) !important;} body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]) h1,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]) h2,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]) h3,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]) h4,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]) h5,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]) h6,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]) p,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]) a:where(:not(.wp-element-button)),body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-3:not([class*="-background-color"]) .wp-element-caption{color:var(--wp--preset--color--contrast);} :is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]),.has-background:is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]),.has-text-color:is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]){background-color:var(--wp--preset--color--accent-3) !important;color:var(--wp--preset--color--accent-2) !important;} body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]) h1,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]) h2,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]) h3,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]) h4,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]) h5,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]) h6,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]) p,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]) a:where(:not(.wp-element-button)),body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-4:not([class*="-background-color"]) .wp-element-caption{color:var(--wp--preset--color--accent-2);} :is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]),.has-background:is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]),.has-text-color:is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]){background-color:var(--wp--preset--color--contrast) !important;color:var(--wp--preset--color--base) !important;} body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]) h1,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]) h2,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]) h3,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]) h4,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]) h5,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]) h6,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]) p,body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]) a:where(:not(.wp-element-button)),body .wp-site-blocks :is(.wp-block-group,.wp-block-column).is-style-section-5:not([class*="-background-color"]) .wp-element-caption{color:var(--wp--preset--color--base);}   body .wp-site-blocks input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="image"]):not([type="hidden"]),body .wp-site-blocks textarea,body .wp-site-blocks select{background-color:var(--wp--preset--color--base);color:var(--wp--preset--color--contrast);border:1px solid color-mix(in srgb, var(--wp--preset--color--contrast) 30%, transparent);} .wp-site-blocks input[type="submit"]:not(.wp-element-button),.wp-site-blocks button[type="submit"]:not(.wp-element-button){background-color:var(--wp--preset--color--accent-2);color:var(--wp--preset--color--base);border-width:0;padding:12px 30px;font-family:inherit;font-size:var(--wp--preset--font-size--medium, 1rem);line-height:inherit;cursor:pointer;}</style>
+<script type="rocketlazyloadscript">function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+		<style id="site-designer-logo-constraints">
+			.wp-block-site-logo img {
+				max-width: 180px;
+				max-height: 80px;
+				width: auto !important;
+				height: auto !important;
+				object-fit: contain;
+			}
+		</style>
+		<link data-minify="1" rel="stylesheet" id="rs-plugin-settings-css" href="https://mountainoakdental.com/wp-content/cache/min/1/wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=1760124776" type="text/css" media="all">
+<style id="rs-plugin-settings-inline-css" type="text/css">
+#rs-demo-id {}
+/*# sourceURL=rs-plugin-settings-inline-css */
+</style>
+
+<meta name="generator" content="WP Rocket 3.20.2" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_preconnect_external_domains wpr_oci wpr_minify_css wpr_mobile"><link href="https://www.google.com" rel="preconnect"></head>
+
+<body class="home wp-singular page-template-default page page-id-3183 wp-theme-kallyas res1170 kl-skin--light" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+
+
+<div class="login_register_stuff"></div><!-- end login register stuff -->		<div id="fb-root"></div>
+		<script type="rocketlazyloadscript">(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
+
+<div id="page_wrapper">
+
+<header id="header" class="site-header  style4 cta_button   header--fixed  headerstyle-xs--image_color  sticky-resize headerstyle--image_color site-header--absolute nav-th--light siteheader-classic siteheader-classic-normal sheader-sh--dark">
+		<div class="site-header-wrapper sticky-top-area">
+
+		<div class="kl-top-header site-header-main-wrapper clearfix   sh--dark">
+
+			<div class="container siteheader-container header--oldstyles">
+
+				<div class="fxb-row fxb-row-col-sm">
+
+										<div class="fxb-col fxb fxb-center-x fxb-center-y fxb-basis-auto fxb-grow-0">
+								<div id="logo-container" class="logo-container   logosize--yes zn-original-logo">
+			<!-- Logo -->
+			<h1 class="site-logo logo " id="logo"><a href="https://mountainoakdental.com/" class="site-logo-anch"><img class="logo-img site-logo-img" src="https://mountainoakdental.com/wp-content/uploads/2021/01/mtn-oak-1-TRANSPARENT.png" alt="Mountain Oak Dental" title="General &amp; Family Dentistry in Okotoks" data-mobile-logo="https://mountainoakdental.com/wp-content/uploads/2021/01/mtn-oak-1-TRANSPARENT.png"></a></h1>			<!-- InfoCard -->
+					</div>
+
+							</div>
+					
+					<div class="fxb-col fxb-basis-auto">
+
+						
+
+	<div class="separator site-header-separator visible-xs"></div>
+	<div class="fxb-row site-header-row site-header-top ">
+
+		<div class="fxb-col fxb fxb-start-x fxb-center-y fxb-basis-auto site-header-col-left site-header-top-left">
+								</div>
+
+		<div class="fxb-col fxb fxb-end-x fxb-center-y fxb-basis-auto site-header-col-right site-header-top-right">
+						<div class="sh-component kl-header-toptext kl-font-alt">QUESTIONS? CALL: <a href="#" class="fw-bold">403-982-2242</a></div><ul class="sh-component social-icons sc--colored topnav navRight topnav-no-hdnav"><li class="topnav-li social-icons-li"><a href="https://www.facebook.com/mountainoakdental/" data-zniconfam="kl-social-icons" data-zn_icon="" target="_self" class="topnav-item social-icons-item scheader-icon-ue83f" title="Facebook"></a></li><li class="topnav-li social-icons-li"><a href="https://www.instagram.com/mountainoakdental/" data-zniconfam="kl-social-icons" data-zn_icon="" target="_blank" class="topnav-item social-icons-item scheader-icon-ue859" title="Instagram"></a></li></ul>		</div>
+
+	</div><!-- /.site-header-top -->
+
+	<div class="separator site-header-separator visible-xs"></div>
+
+
+<div class="fxb-row site-header-row site-header-main ">
+
+	<div class="fxb-col fxb fxb-start-x fxb-center-y fxb-basis-auto site-header-col-left site-header-main-left">
+			</div>
+
+	<div class="fxb-col fxb fxb-center-x fxb-center-y fxb-basis-auto site-header-col-center site-header-main-center">
+			</div>
+
+	<div class="fxb-col fxb fxb-end-x fxb-center-y fxb-basis-auto site-header-col-right site-header-main-right">
+
+		<div class="fxb-col fxb fxb-end-x fxb-center-y fxb-basis-auto site-header-main-right-top">
+								<div class="sh-component main-menu-wrapper" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+
+					<div class="zn-res-menuwrapper">
+			<a href="#" class="zn-res-trigger zn-menuBurger zn-menuBurger--3--s zn-menuBurger--anim1 " id="zn-res-trigger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div><!-- end responsive menu -->
+		<div id="main-menu" class="main-nav mainnav--sidepanel mainnav--active-uline mainnav--pointer-dash nav-mm--light zn_mega_wrapper "><ul id="menu-mod-main-menu" class="main-menu main-menu-nav zn_mega_menu "><li id="menu-item-3621" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3183 current_page_item menu-item-3621 menu-item-mega-parent menu-item-has-children active  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="https://mountainoakdental.com/" class=" main-menu-link main-menu-link-top"><span>Home</span></a></li>
+<li id="menu-item-2651" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2651  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#" class=" main-menu-link main-menu-link-top"><span>Our Practice</span></a>
+<ul class="sub-menu clearfix">
+	<li id="menu-item-2652" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2652  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/about-us/" class=" main-menu-link main-menu-link-sub"><span>ABOUT US</span></a></li>
+	<li id="menu-item-2655" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2655  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/dr-puneet-khaira/" class=" main-menu-link main-menu-link-sub"><span>OUR TEAM</span></a></li>
+	<li id="menu-item-4232" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4232  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/testimonials/" class=" main-menu-link main-menu-link-sub"><span>TESTIMONIALS</span></a></li>
+</ul>
+</li>
+<li id="menu-item-3835" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3835  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#" class=" main-menu-link main-menu-link-top"><span>Services</span></a>
+<ul class="sub-menu clearfix">
+	<li id="menu-item-3841" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3841  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="#" class=" main-menu-link main-menu-link-sub"><span>COSMETIC</span></a>
+	<ul class="sub-menu clearfix">
+		<li id="menu-item-4264" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4264  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/bonding-white-fillings/" class=" main-menu-link main-menu-link-sub"><span>BONDING &amp; WHITE FILLINGS</span></a></li>
+		<li id="menu-item-4263" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4263  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/inlays-onlays/" class=" main-menu-link main-menu-link-sub"><span>INLAYS &amp; ONLAYS</span></a></li>
+		<li id="menu-item-4260" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4260  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/teeth-whitening/" class=" main-menu-link main-menu-link-sub"><span>TEETH WHITENING</span></a></li>
+		<li id="menu-item-4261" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4261  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/veneers/" class=" main-menu-link main-menu-link-sub"><span>VENEERS</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-2629" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2629  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/https-www-appledentalgroup-ca-dental-hygiene/" class=" main-menu-link main-menu-link-sub"><span>DENTAL HYGIENE</span></a></li>
+	<li id="menu-item-3895" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3895  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="#" class=" main-menu-link main-menu-link-sub"><span>ENDODONTICS</span></a>
+	<ul class="sub-menu clearfix">
+		<li id="menu-item-4275" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4275  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/apicoectomy/" class=" main-menu-link main-menu-link-sub"><span>APICOECTOMY</span></a></li>
+		<li id="menu-item-4277" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4277  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/microscopic-endo/" class=" main-menu-link main-menu-link-sub"><span>MICROSCOPIC ENDO</span></a></li>
+		<li id="menu-item-4273" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4273  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/root-canal/" class=" main-menu-link main-menu-link-sub"><span>ROOT CANAL</span></a></li>
+		<li id="menu-item-4279" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4279  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/retreatment/" class=" main-menu-link main-menu-link-sub"><span>ROOT CANAL RETREATMENT</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-3839" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3839  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="#" class=" main-menu-link main-menu-link-sub"><span>IMPLANTS</span></a>
+	<ul class="sub-menu clearfix">
+		<li id="menu-item-3884" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-3884  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a rel="DENTAL IMPLANTS" href="https://mountainoakdental.com/dental-implants/" class=" main-menu-link main-menu-link-sub"><span>DENTAL IMPLANTS</span></a></li>
+		<li id="menu-item-4248" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4248  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/dental-implant-faq/" class=" main-menu-link main-menu-link-sub"><span>DENTAL IMPLANT F.A.Q.</span></a></li>
+		<li id="menu-item-4482" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4482  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/mini-implants-4/" class=" main-menu-link main-menu-link-sub"><span>MINI IMPLANTS</span></a></li>
+		<li id="menu-item-4239" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4239  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/osstell/" class=" main-menu-link main-menu-link-sub"><span>OSSTELL</span></a></li>
+		<li id="menu-item-4413" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4413  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/simplant/" class=" main-menu-link main-menu-link-sub"><span>SIMPLANT</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-4386" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4386  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="#" class=" main-menu-link main-menu-link-sub"><span>ORAL SURGERY</span></a>
+	<ul class="sub-menu clearfix">
+		<li id="menu-item-4481" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4481  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/bone-grafting-3/" class=" main-menu-link main-menu-link-sub"><span>BONE GRAFTING</span></a></li>
+		<li id="menu-item-4370" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4370  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/extraction-site-preservation/" class=" main-menu-link main-menu-link-sub"><span>EXTRACTION SITE PRESERVATION</span></a></li>
+		<li id="menu-item-4372" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4372  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/facial-trauma/" class=" main-menu-link main-menu-link-sub"><span>FACIAL TRAUMA</span></a></li>
+		<li id="menu-item-4374" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4374  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/oral-pathology/" class=" main-menu-link main-menu-link-sub"><span>ORAL PATHOLOGY</span></a></li>
+		<li id="menu-item-4378" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4378  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/wisdom-teeth/" class=" main-menu-link main-menu-link-sub"><span>WISDOM TEETH</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-4403" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4403  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="#" class=" main-menu-link main-menu-link-sub"><span>ORTHODONTICS</span></a>
+	<ul class="sub-menu clearfix">
+		<li id="menu-item-4387" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4387  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/clear-braces/" class=" main-menu-link main-menu-link-sub"><span>CLEAR BRACES</span></a></li>
+		<li id="menu-item-4389" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4389  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/invisalign/" class=" main-menu-link main-menu-link-sub"><span>INVISALIGN</span></a></li>
+		<li id="menu-item-4399" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4399  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/traditional-braces/" class=" main-menu-link main-menu-link-sub"><span>TRADITIONAL BRACES</span></a></li>
+		<li id="menu-item-4397" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4397  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/night-guards/" class=" main-menu-link main-menu-link-sub"><span>NIGHT GUARDS</span></a></li>
+		<li id="menu-item-4401" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4401  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/tmj/" class=" main-menu-link main-menu-link-sub"><span>TMJ</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-4336" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4336  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="#" class=" main-menu-link main-menu-link-sub"><span>PEDIATRIC</span></a>
+	<ul class="sub-menu clearfix">
+		<li id="menu-item-4337" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4337  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/mouthguards/" class=" main-menu-link main-menu-link-sub"><span>MOUTHGUARDS</span></a></li>
+		<li id="menu-item-4338" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4338  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/sealants/" class=" main-menu-link main-menu-link-sub"><span>SEALANTS</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-4339" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4339  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="#" class=" main-menu-link main-menu-link-sub"><span>PERIODONTICS</span></a>
+	<ul class="sub-menu clearfix">
+		<li id="menu-item-4340" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4340  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/arestin/" class=" main-menu-link main-menu-link-sub"><span>ARESTIN</span></a></li>
+		<li id="menu-item-4341" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4341  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/biopsy/" class=" main-menu-link main-menu-link-sub"><span>ORAL CANCER SCREENING</span></a></li>
+		<li id="menu-item-4343" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4343  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/canine-exposure/" class=" main-menu-link main-menu-link-sub"><span>CANINE EXPOSURE</span></a></li>
+		<li id="menu-item-4350" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4350  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/crown-lengthening/" class=" main-menu-link main-menu-link-sub"><span>CROWN LENGTHENING</span></a></li>
+		<li id="menu-item-4362" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4362  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/frenectomy/" class=" main-menu-link main-menu-link-sub"><span>FRENECTOMY</span></a></li>
+		<li id="menu-item-4719" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4719  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="#" class=" main-menu-link main-menu-link-sub"><span>GUM DISEASE &amp; GRAFTING</span></a>
+		<ul class="sub-menu clearfix">
+			<li id="menu-item-4342" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4342  main-menu-item-sub main-menu-item-sub-sub menu-item-odd menu-item-depth-3"><a href="https://mountainoakdental.com/bone-grafting/" class=" main-menu-link main-menu-link-sub"><span>BONE GRAFTING</span></a></li>
+			<li id="menu-item-5352" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-5352  main-menu-item-sub main-menu-item-sub-sub menu-item-odd menu-item-depth-3"><a href="https://mountainoakdental.com/gum-disease/" class=" main-menu-link main-menu-link-sub"><span>GUM DISEASE</span></a></li>
+			<li id="menu-item-4361" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4361  main-menu-item-sub main-menu-item-sub-sub menu-item-odd menu-item-depth-3"><a href="https://mountainoakdental.com/gum-grafting/" class=" main-menu-link main-menu-link-sub"><span>TISSUE GRAFTING</span></a></li>
+			<li id="menu-item-4353" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4353  main-menu-item-sub main-menu-item-sub-sub menu-item-odd menu-item-depth-3"><a href="https://mountainoakdental.com/osseous-surgery/" class=" main-menu-link main-menu-link-sub"><span>OSSEOUS SURGERY</span></a></li>
+			<li id="menu-item-4358" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4358  main-menu-item-sub main-menu-item-sub-sub menu-item-odd menu-item-depth-3"><a href="https://mountainoakdental.com/osseous-grafting/" class=" main-menu-link main-menu-link-sub"><span>OSSEOUS GRAFTING</span></a></li>
+		</ul>
+</li>
+		<li id="menu-item-4359" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4359  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/periodontal-splinting/" class=" main-menu-link main-menu-link-sub"><span>PERIODONTAL SPLINTING</span></a></li>
+		<li id="menu-item-4357" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4357  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/cosmetic-periodontal-surgery/" class=" main-menu-link main-menu-link-sub"><span>COSMETIC PERIODONTAL SURGERY</span></a></li>
+		<li id="menu-item-4355" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4355  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/scaling-and-root-planing/" class=" main-menu-link main-menu-link-sub"><span>SCALING AND ROOT PLANING</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-4711" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4711  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/pinhole-surgery/" class=" main-menu-link main-menu-link-sub"><span>PINHOLE SURGERY</span></a></li>
+	<li id="menu-item-4332" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4332  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="#" class=" main-menu-link main-menu-link-sub"><span>RESTORATIVE</span></a>
+	<ul class="sub-menu clearfix">
+		<li id="menu-item-4749" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4749  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/bonding-white-fillings/" class=" main-menu-link main-menu-link-sub"><span>BONDING &amp; WHITE FILLINGS</span></a></li>
+		<li id="menu-item-4334" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4334  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/crowns-bridges/" class=" main-menu-link main-menu-link-sub"><span>CROWNS &amp; BRIDGES</span></a></li>
+		<li id="menu-item-4335" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4335  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/dentures/" class=" main-menu-link main-menu-link-sub"><span>DENTURES</span></a></li>
+		<li id="menu-item-4750" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4750  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/inlays-onlays/" class=" main-menu-link main-menu-link-sub"><span>INLAYS &amp; ONLAYS</span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-4376" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4376  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/sleep-apnea/" class=" main-menu-link main-menu-link-sub"><span>SLEEP APNEA</span></a></li>
+</ul>
+</li>
+<li id="menu-item-4404" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4404  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#" class=" main-menu-link main-menu-link-top"><span>Technology</span></a>
+<ul class="sub-menu clearfix">
+	<li id="menu-item-4415" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4415  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/cerec/" class=" main-menu-link main-menu-link-sub"><span>CEREC</span></a></li>
+	<li id="menu-item-4230" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4230  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/cone-beam-ct-scanner/" class=" main-menu-link main-menu-link-sub"><span>CONE BEAM CT SCANNER</span></a></li>
+	<li id="menu-item-4417" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4417  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/digital-x-ray/" class=" main-menu-link main-menu-link-sub"><span>DIGITAL X-RAY</span></a></li>
+	<li id="menu-item-4419" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4419  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/electric-handpieces/" class=" main-menu-link main-menu-link-sub"><span>ELECTRIC HANDPIECES</span></a></li>
+	<li id="menu-item-4421" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4421  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/intraoral-camera/" class=" main-menu-link main-menu-link-sub"><span>INTRAORAL CAMERA</span></a></li>
+	<li id="menu-item-4425" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4425  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/panorex/" class=" main-menu-link main-menu-link-sub"><span>PANOREX</span></a></li>
+	<li id="menu-item-4427" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4427  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/rotary-endodontics/" class=" main-menu-link main-menu-link-sub"><span>ROTARY ENDODONTICS</span></a></li>
+	<li id="menu-item-4483" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4483  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="#" class=" main-menu-link main-menu-link-sub"><span>SEDATION</span></a>
+	<ul class="sub-menu clearfix">
+		<li id="menu-item-4431" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4431  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/anxiolysis/" class=" main-menu-link main-menu-link-sub"><span>ANXIOLYSIS</span></a></li>
+		<li id="menu-item-4433" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4433  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/sedation-faqs/" class=" main-menu-link main-menu-link-sub"><span>SEDATION FAQ’S</span></a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-4470" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4470  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="#" class=" main-menu-link main-menu-link-top"><span>Resources</span></a>
+<ul class="sub-menu clearfix">
+	<li id="menu-item-4445" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4445  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/new-patient-form/" class=" main-menu-link main-menu-link-sub"><span>NEW PATIENT FORM</span></a></li>
+	<li id="menu-item-4449" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4449  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/post-op-instructions/" class=" main-menu-link main-menu-link-sub"><span>POST-OP INSTRUCTIONS</span></a></li>
+	<li id="menu-item-4451" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4451  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="https://mountainoakdental.com/surgical-instructions/" class=" main-menu-link main-menu-link-sub"><span>SURGICAL INSTRUCTIONS</span></a></li>
+	<li id="menu-item-5012" class="main-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5012  main-menu-item-sub  menu-item-odd menu-item-depth-1"><a href="#" class=" main-menu-link main-menu-link-sub"><span>PATIENT EDUCATION</span></a>
+	<ul class="sub-menu clearfix">
+		<li id="menu-item-4459" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4459  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/dental-problems/" class=" main-menu-link main-menu-link-sub"><span>DENTAL PROBLEMS</span></a></li>
+		<li id="menu-item-4461" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4461  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/pain-management/" class=" main-menu-link main-menu-link-sub"><span>PAIN MANAGEMENT</span></a></li>
+		<li id="menu-item-4463" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4463  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/patient-information/" class=" main-menu-link main-menu-link-sub"><span>PATIENT INFORMATION</span></a></li>
+		<li id="menu-item-4457" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4457  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/tooth-care/" class=" main-menu-link main-menu-link-sub"><span>TOOTH CARE</span></a></li>
+		<li id="menu-item-4465" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-4465  main-menu-item-sub main-menu-item-sub-sub menu-item-even menu-item-depth-2"><a href="https://mountainoakdental.com/links/" class=" main-menu-link main-menu-link-sub"><span>LINKS</span></a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-2653" class="main-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-2653  main-menu-item-top  menu-item-even menu-item-depth-0"><a href="https://mountainoakdental.com/contact-us/" class=" main-menu-link main-menu-link-top"><span>Contact Us</span></a></li>
+</ul></div>		</div>
+		<!-- end main_menu -->
+		<span>403-982-2242</span>		</div>
+
+		
+	</div>
+
+</div><!-- /.site-header-main -->
+
+
+					</div>
+				</div>
+							</div><!-- /.siteheader-container -->
+		</div><!-- /.site-header-main-wrapper -->
+
+	</div><!-- /.site-header-wrapper -->
+	</header>
+<div class="zn_pb_wrapper clearfix zn_sortable_content" data-droplevel="0"><div class="kl-slideshow iosslider-slideshow uh_zn_def_header_style zn_dummy_value kl-slider-fullscreen  eluida87a01a4 hidden-zn_dummy_value hidden-zn_dummy_value hidden-zn_dummy_value hidden-zn_dummy_value ">
+
+	<div class="kl-loader">
+		<svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+			<path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+			s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+			c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path>
+			<path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+			C22.32,8.481,24.301,9.057,26.013,10.047z">
+				<animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite"></animateTransform>
+			</path>
+		</svg>
+	</div>
+
+	<div class="bgback"></div>
+	<div class="th-sparkles"></div>
+
+
+<div class="iosSlider kl-slideshow-inner">
+
+	<div class="kl-iosslider js-ios-slick" data-slick="{&quot;infinite&quot;:false,&quot;slidesToShow&quot;:1,&quot;slidesToScroll&quot;:1,&quot;autoplay&quot;:true,&quot;autoplaySpeed&quot;:&quot;10000&quot;,&quot;easing&quot;:&quot;easeOutExpo&quot;,&quot;dragging&quot;:true,&quot;loadingContainer&quot;:&quot;.eluida87a01a4&quot;,&quot;arrows&quot;:true,&quot;appendArrows&quot;:&quot;.eluida87a01a4 .iosSliderNav&quot;,&quot;prevArrow&quot;:&quot;.eluida87a01a4 .znSlickNav-prev&quot;,&quot;nextArrow&quot;:&quot;.eluida87a01a4 .znSlickNav-next&quot;,&quot;dots&quot;:true,&quot;appendDots&quot;:&quot;.eluida87a01a4 .kl-ios-selectors-block&quot;}">
+
+		<div class="item iosslider__item"><img class="slide-item-bg cover-fit-img vertical-pos--center" src="https://mountainoakdental.com/wp-content/uploads/2020/05/family-smile.jpg" alt="" title="Happy family having fun times at home"><div class="kl-slide-overlay" style="background:rgba(0,0,0,0); background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%); background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%); background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%); background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%); "></div><div class="container  kl-iosslide-caption kl-ioscaption--style4 s4ext fromright klios-alignleft kl-caption-posv-bottom"><h2 class="main_title has_titlebig  " itemprop="headline"><span><strong> WE'RE ALWAYS ACCEPTING NEW PATIENTS <strong> </strong></strong></span></h2><h3 class="title_big" itemprop="alternativeHeadline"><strong><strong><stronger> WE ACCEPT THE (CDCP) PLAN &amp; FOLLOW THE ALBERTA DENTAL FEE GUIDE <stronger> </stronger></stronger></strong></strong></h3><strong><strong><a href="#" class="more " target="_self" itemprop="url"></a><h4 class="title_small" itemprop="alternativeHeadline"><strong> GENERAL &amp; FAMILY DENTISTRY <strong></strong></strong></h4></strong></strong></div></div><!-- end item --></div></div><!-- end iosSlider --><strong><strong><strong>				<a class="tonext-btn js-tonext-btn " href="#" data-endof=".kl-slideshow">
+			<span class="mouse-anim-icon"></span>
+		</a>
+		
+		
+		
+		<div class="zn_header_bottom_style"></div>		<!-- header bottom style -->
+
+	</strong></strong></strong></div><strong><strong><strong>
+	<!-- end kl-slideshow -->
+
+			<section class="zn_section eluide3b7aab4     section-sidemargins    section--no " id="eluide3b7aab4">
+
+			
+			<div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
+
+				<div class="row ">
+					
+		<div class="eluid433d6915            col-md-12 col-sm-12   znColumnElement" id="eluid433d6915">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid433d6915 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="action_box eluid91fd4acb  actionbox--light style3" data-arrowpos="center"><div class="action_box_inner action_box-inner"><div class="action_box_content action_box-content"><div class="ac-content-text action_box-text"><h4 class="text action_box-title" itemprop="headline"><span class="fw-thin">PROVIDING THE <span class="fw-semibold">CONFIDENCE YOU NEED</span> TO MAKE A BRILLIANT FIRST IMPRESSION.</span></h4><h5 class="ac-subtitle action_box-subtitle">It is our mission to provide you with affordable, high-quality treatment. Invest in you... Invest in your smile!
+
+</h5></div><div class="ac-buttons action_box-buttons"><a href="https://mountainoakdental.com/contact-us/" class="btn ac-btn action_box-button action_box-button-first btn-lined" title="Pages – Contact Us" target="_self" itemprop="url">CONTACT US </a></div></div></div></div>				</div>
+			</div>
+
+			
+		</div>
+	
+				</div>
+			</div>
+
+					</section>
+
+
+				<section class="zn_section eluid09defe66     section-sidemargins    section--no " id="eluid09defe66">
+
+			
+			<div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
+
+				<div class="row ">
+					
+		<div class="eluid1f283e03            col-md-12 col-sm-12   znColumnElement" id="eluid1f283e03">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid1f283e03 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="kl-title-block clearfix tbk--text- tbk--center text-center tbk-symbol--  tbk-icon-pos--after-title eluid2ed53a24 "><h3 class="tbk__title" itemprop="headline">OK, SO WHY MOUNTAIN OAK DENTAL?</h3><h4 class="tbk__subtitle" itemprop="alternativeHeadline">Well, lots of reasons, but most importantly because..</h4></div>				</div>
+			</div>
+
+			
+		</div>
+	
+				</div>
+			</div>
+
+					</section>
+
+
+				<section class="zn_section eluidd5927e1b     section-sidemargins    zn_section--relative section--no " id="eluidd5927e1b">
+
+			<div class="zn-bgSource "><div class="zn-bgSource-overlay" style="background-color:rgba(255,255,255,0.6)"></div></div>
+			<div class="zn_section_size full_width zn-section-height--auto zn-section-content_algn--top ">
+
+				<div class="row ">
+					
+		<div class="eluid552752fe  col-lg-offset-1 col-md-offset-1 col-sm-offset-1        col-md-10 col-sm-10   znColumnElement" id="eluid552752fe">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid552752fe znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					
+        <div class="zn_custom_container eluida493fd7c  smart-cnt--default   clearfix">
+						
+			<div class="row zn_col_container-smart_container gutter-md">
+			
+		<div class="eluid6e30b380            col-md-3 col-sm-3   znColumnElement" id="eluid6e30b380">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid6e30b380 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="kl-iconbox eluid7f220864 hidden-zn_dummy_value hidden-zn_dummy_value hidden-zn_dummy_value hidden-zn_dummy_value   kl-iconbox--type-icon kl-iconbox--sh kl-iconbox--sh-circle kl-iconbox--fleft kl-iconbox--align-left text-left kl-iconbox--theme-light element-scheme--light" id="eluid7f220864">
+	<div class="kl-iconbox__inner clearfix">
+
+		
+				<div class="kl-iconbox__icon-wrapper ">
+			<span class="kl-iconbox__icon kl-iconbox__icon--" data-zniconfam="glyphicons_halflingsregular" data-zn_icon=""></span>		</div><!-- /.kl-iconbox__icon-wrapper -->
+		
+		
+		<div class="kl-iconbox__content-wrapper">
+
+			
+			<div class="kl-iconbox__el-wrapper kl-iconbox__title-wrapper">
+				<h3 class="kl-iconbox__title element-scheme__hdg1" itemprop="headline">ACCEPTING CDCP</h3>
+			</div>
+						<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
+				<p class="kl-iconbox__desc">The Canadian Dental Care Plan (CDCP) supports Canadians who do not have access to dental insurance. </p>			</div>
+			
+			
+		</div><!-- /.kl-iconbox__content-wrapper -->
+
+	</div>
+</div>
+
+				</div>
+			</div>
+
+			
+		</div>
+	
+		<div class="eluid275db0ce            col-md-3 col-sm-3   znColumnElement" id="eluid275db0ce">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid275db0ce znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="kl-iconbox eluid2c513217   kl-iconbox--type-icon kl-iconbox--sh kl-iconbox--sh-circle kl-iconbox--fleft kl-iconbox--align-left text-left kl-iconbox--theme-light element-scheme--light" id="eluid2c513217">
+	<div class="kl-iconbox__inner clearfix">
+
+		
+				<div class="kl-iconbox__icon-wrapper ">
+			<span class="kl-iconbox__icon kl-iconbox__icon--" data-zniconfam="glyphicons_halflingsregular" data-zn_icon=""></span>		</div><!-- /.kl-iconbox__icon-wrapper -->
+		
+		
+		<div class="kl-iconbox__content-wrapper">
+
+			
+			<div class="kl-iconbox__el-wrapper kl-iconbox__title-wrapper">
+				<h3 class="kl-iconbox__title element-scheme__hdg1" itemprop="headline">Excellent Service </h3>
+			</div>
+						<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
+				<p class="kl-iconbox__desc">We deliver exceptional dental care to our patients with kindness and compassion to improve dental health.</p>			</div>
+			
+			
+		</div><!-- /.kl-iconbox__content-wrapper -->
+
+	</div>
+</div>
+
+				</div>
+			</div>
+
+			
+		</div>
+	
+		<div class="eluid82f98c7f            col-md-3 col-sm-3   znColumnElement" id="eluid82f98c7f">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid82f98c7f znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="kl-iconbox eluidd1002949   kl-iconbox--type-icon kl-iconbox--sh kl-iconbox--sh-circle kl-iconbox--fleft kl-iconbox--align-left text-left kl-iconbox--theme-light element-scheme--light" id="eluidd1002949">
+	<div class="kl-iconbox__inner clearfix">
+
+		
+				<div class="kl-iconbox__icon-wrapper ">
+			<span class="kl-iconbox__icon kl-iconbox__icon--" data-zniconfam="glyphicons_halflingsregular" data-zn_icon=""></span>		</div><!-- /.kl-iconbox__icon-wrapper -->
+		
+		
+		<div class="kl-iconbox__content-wrapper">
+
+			
+			<div class="kl-iconbox__el-wrapper kl-iconbox__title-wrapper">
+				<h3 class="kl-iconbox__title element-scheme__hdg1" itemprop="headline">Modern Dentistry</h3>
+			</div>
+						<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
+				<p class="kl-iconbox__desc">Offering a full range of dental services using the latest technology and advanced techniques available.</p>			</div>
+			
+			
+		</div><!-- /.kl-iconbox__content-wrapper -->
+
+	</div>
+</div>
+
+				</div>
+			</div>
+
+			
+		</div>
+	
+		<div class="eluid74d7b11a            col-md-3 col-sm-3   znColumnElement" id="eluid74d7b11a">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid74d7b11a znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="kl-iconbox eluid6c76b6a7   kl-iconbox--type-icon kl-iconbox--sh kl-iconbox--sh-circle kl-iconbox--fleft kl-iconbox--align-left text-left kl-iconbox--theme-light element-scheme--light" id="eluid6c76b6a7">
+	<div class="kl-iconbox__inner clearfix">
+
+		
+				<div class="kl-iconbox__icon-wrapper ">
+			<span class="kl-iconbox__icon kl-iconbox__icon--" data-zniconfam="glyphicons_halflingsregular" data-zn_icon=""></span>		</div><!-- /.kl-iconbox__icon-wrapper -->
+		
+		
+		<div class="kl-iconbox__content-wrapper">
+
+			
+			<div class="kl-iconbox__el-wrapper kl-iconbox__title-wrapper">
+				<h3 class="kl-iconbox__title element-scheme__hdg1" itemprop="headline">Alberta Dental Fee Guide</h3>
+			</div>
+						<div class=" kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
+				<p class="kl-iconbox__desc">Our clinic follows the Alberta Dental 2023 Fee Guide. Options for every budget. Your smile is priceless. We'll help keep it that way. </p>			</div>
+			
+			
+		</div><!-- /.kl-iconbox__content-wrapper -->
+
+	</div>
+</div>
+
+				</div>
+			</div>
+
+			
+		</div>
+	        </div>
+				        </div><!-- /.zn_custom_container -->
+
+
+						</div>
+			</div>
+
+			
+		</div>
+	
+				</div>
+			</div>
+
+					</section>
+
+
+				<section class="zn_section eluid631417c6     section-sidemargins    section--no " id="eluid631417c6">
+
+			
+			<div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
+
+				<div class="row ">
+					
+		<div class="eluidfae0a288            col-md-4 col-sm-4   znColumnElement" id="eluidfae0a288">
+
+			
+			<div class="znColumnElement-innerWrapper-eluidfae0a288 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="image-boxes image-boxes--4 kl-title_style_left eluiddda1b169   image-boxes-cover-fit-img  imgboxes_style4"><div class="imgboxes-wrapper image-boxes-holder   "><div class="image-boxes-img-wrapper"><img src="https://mountainoakdental.com/wp-content/uploads/2020/04/apple-dental-1-e1592206799483.jpg" alt="" title="" class="img-responsive imgbox_image image-boxes-img cover-fit-img"></div><span class="imgboxes-border-helper image-boxes-border-helper"></span><h3 class="m_title m_title_ext text-custom imgboxes-title image-boxes-title" itemprop="headline"><span>GENERAL &amp; FAMILY DENTISTRY</span></h3></div><div class="image-boxes-text"><p>From regularly scheduled teeth cleanings and dental exams, to new patient consultations regarding eating and drinking habits; our comprehensive Dental Care services are a proactive approach to maintaining good oral health.</p></div></div>				</div>
+			</div>
+
+			
+		</div>
+	
+		<div class="eluida1366778            col-md-4 col-sm-4   znColumnElement" id="eluida1366778">
+
+			
+			<div class="znColumnElement-innerWrapper-eluida1366778 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="image-boxes image-boxes--4 kl-title_style_left eluid3806fc67   image-boxes-cover-fit-img  imgboxes_style4"><div class="imgboxes-wrapper image-boxes-holder   "><div class="image-boxes-img-wrapper"><img src="https://mountainoakdental.com/wp-content/uploads/2020/05/dental-veneers.png" alt="" title="dental veneers" class="img-responsive imgbox_image image-boxes-img cover-fit-img"></div><span class="imgboxes-border-helper image-boxes-border-helper"></span><h3 class="m_title m_title_ext text-custom imgboxes-title image-boxes-title" itemprop="headline"><span>COSMETIC DENTISTRY</span></h3></div><div class="image-boxes-text"><p>There are many reasons people choose cosmetic dental procedures to enhance their smile; from repairing defects such as crooked teeth or a malformed bite to treating dental injuries, missing teeth, cracked teeth and more. </p></div></div>				</div>
+			</div>
+
+			
+		</div>
+	
+		<div class="eluidba62844c            col-md-4 col-sm-4   znColumnElement" id="eluidba62844c">
+
+			
+			<div class="znColumnElement-innerWrapper-eluidba62844c znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="image-boxes image-boxes--4 kl-title_style_left eluid3e112a5a   image-boxes-cover-fit-img  imgboxes_style4"><div class="imgboxes-wrapper image-boxes-holder   "><div class="image-boxes-img-wrapper"><img src="https://mountainoakdental.com/wp-content/uploads/2020/04/teeth-cleaning-e1592206938264.jpg" alt="" title="" class="img-responsive imgbox_image image-boxes-img cover-fit-img"></div><span class="imgboxes-border-helper image-boxes-border-helper"></span><h3 class="m_title m_title_ext text-custom imgboxes-title image-boxes-title" itemprop="headline"><span>PREVENTATIVE DENTISTRY</span></h3></div><div class="image-boxes-text"><p>The goal of preventive dentistry is to maintain the health of the mouth and avoid future dental complications such as enamel wear, cavities, and disease. Avoiding these dental problems will prevent the need for extensive and emergency dental care in the future. </p></div></div>				</div>
+			</div>
+
+			
+		</div>
+	
+				</div>
+			</div>
+
+					</section>
+
+
+				<section class="zn_section eluid8667125f     section-sidemargins    section--no " id="eluid8667125f">
+
+			
+			<div class="zn_section_size full_width zn-section-height--auto zn-section-content_algn--top ">
+
+				<div class="row ">
+					
+		<div class="eluidacc50d40            col-md-2 col-sm-2   znColumnElement" id="eluidacc50d40">
+
+			
+			<div class="znColumnElement-innerWrapper-eluidacc50d40 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-center znColumnElement-innerWrapper--halign-center ">
+
+				<div class="znColumnElement-innerContent">									</div>
+			</div>
+
+			
+		</div>
+	
+		<div class="eluidf6d75f70            col-md-9 col-sm-9   znColumnElement" id="eluidf6d75f70">
+
+			
+			<div class="znColumnElement-innerWrapper-eluidf6d75f70 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-center ">
+
+				<div class="znColumnElement-innerContent">					<div class="kl-title-block clearfix tbk--text-light tbk--left text-left tbk-symbol--line tbk--colored tbk-icon-pos--after-title eluid96abeda4 "><h1 class="tbk__title" itemprop="headline">OPTIMAL CARE  •  BEAUTIFUL SMILES  </h1><span class="tbk__symbol "><span></span></span></div><div class="zn_text_box eluid72d4f515  zn_text_box-light element-scheme--light"><p><span class="zn-fontweight" style="font-family: 'Open Sans'; font-weight: 400;">At Mountain Oak Dental, we deliver exceptional dental care to our patients with kindness and compassion, using the latest technology &amp; advanced techniques to improve dental health. This in turn contributes to the over all well-being and lifestyle of our patients. Our Dental practice in Okotoks is proud to provide dental care to our local community and beyond.</span></p>
+<p><span class="zn-fontweight" style="font-family: 'Open Sans'; font-weight: 400;">We provide a full range of services including: fillings, crowns, bridges, preventative care, root canal treatment, extractions, orthodontics, implants, dentures, cosmetic services, teeth whitening, sleep apnea appliances, sports guards, and more. We provide a balance of delivering exceptional dentistry while ensuring each patient feels comfortable and at ease in our Okotoks dental practice. </span></p>
+<p><span class="zn-fontweight" style="font-family: 'Open Sans'; font-weight: 400;"><span style="font-family: 'Open Sans';"><span style="color: #535353;">We're Always A</span>ccepting <span style="color: #535353;">N</span>ew <span style="color: #535353;">P</span>atients! Contact us today at <a class="piwik_ignore" href="tel: 4039822242">(403) 982-2242&nbsp;</a>for a complimentary consultation.</span></span></p>
+</div>				</div>
+			</div>
+
+			
+		</div>
+	
+		<div class="eluided648f0d            col-md-2 col-sm-2   znColumnElement" id="eluided648f0d">
+
+			
+			<div class="znColumnElement-innerWrapper-eluided648f0d znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-center znColumnElement-innerWrapper--halign-center ">
+
+				<div class="znColumnElement-innerContent">									</div>
+			</div>
+
+			
+		</div>
+	
+				</div>
+			</div>
+
+					</section>
+
+
+			<div class="media-container eluid1d1a787e mountain media-container--type-btn kl-overlay-none  ">
+
+		<div class="zn-bgSource "><div class="zn-bgSource-image" style="background-image:url(https://mountainoakdental.com/wp-content/uploads/2020/04/wellness.jpg);background-repeat:no-repeat;background-position:center center;background-size:cover;background-attachment:scroll"></div><div class="zn-bgSource-overlay" style="background: -webkit-linear-gradient(top,  rgba(53,53,53,0.11) 0%,rgba(53,53,53,0.1) 100%); background: linear-gradient(to bottom,  rgba(53,53,53,0.11) 0%,rgba(53,53,53,0.1) 100%); "></div></div>		<a class="media-container__link media-container__link--btn media-container__link--style-borderanim2  kl-font-alt" href="" data-lightbox="iframe">
+			
+
+				<div class="borderanim2-svg">
+				  <svg height="70" width="400" xmlns="http://www.w3.org/2000/svg">
+					<rect class="borderanim2-svg__shape" height="70" width="400"></rect>
+				  </svg>
+				  <span class="media-container__text">MOUNTAIN OAK DENTAL</span>
+				</div>		</a>
+		
+	</div>
+		<section class="zn_section eluidee1f044a     section-sidemargins    section--no " id="eluidee1f044a">
+
+			
+			<div class="zn_section_size full_width zn-section-height--auto zn-section-content_algn--middle ">
+
+				<div class="row ">
+					
+		<div class="eluid6e4e80dc            col-md-2 col-sm-2   znColumnElement" id="eluid6e4e80dc">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid6e4e80dc znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-center znColumnElement-innerWrapper--halign-center ">
+
+				<div class="znColumnElement-innerContent">									</div>
+			</div>
+
+			
+		</div>
+	
+		<div class="eluid29717196            col-md-8 col-sm-8   znColumnElement" id="eluid29717196">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid29717196 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-center znColumnElement-innerWrapper--halign-center ">
+
+				<div class="znColumnElement-innerContent">					<div class="kl-title-block clearfix tbk--text- tbk--left text-left tbk-symbol--line tbk--colored tbk-icon-pos--after-title eluid8d5e6d3b "><h3 class="tbk__title" itemprop="headline">What you can expect from your first visit as a new patient at Mountain Oak Dental?</h3><span class="tbk__symbol "><span></span></span></div><div class="zn_text_box eluid1847a45e  zn_text_box-light element-scheme--light"><p class="western"><span class="zn-fontweight" style="color: #535452; font-weight: 400;">You can expect to be greeted politely and warmly by our reception staff.</span></p>
+<p class="western"><span class="zn-fontweight" style="color: #535252; font-weight: 400;">We respect your time and offer convenient appointment times and we make every effort to be on time and available for you during your scheduled appointment time.&nbsp;</span><span class="zn-fontweight" style="color: #535252; font-weight: 400;">Our welcoming reception staff will help you fill out forms for your medical and dental history, which is used to design a thorough treatment plan.&nbsp;</span><span class="zn-fontweight" style="color: #535252; font-weight: 400;">We are here to listen to your concerns regarding your dental health.</span></p>
+<p class="western"><span class="zn-fontweight" style="color: #535252; font-weight: 400;">Our experienced team will take a detailed record of your current dental condition using high quality low-dose digital X-rays, including intra-oral photos of your teeth and gums. This allows our clinical team to establish a baseline measurement for your oral health. We develop a comprehensive treatment plan to address your dental concerns which is directed by you and formed based on your unique needs and desires.</span></p>
+<p class="western"><span class="zn-fontweight" style="color: #535252; font-weight: 400;">After a thorough review of your dental concerns, we can design an in-depth treatment plan to help you achieve your desires for your dental health. Our clinical team and treatment coordinators work together and will help answer any questions you may have. We will also help submit any necessary treatment to your insurance provider on your behalf.</span></p>
+</div>				</div>
+			</div>
+
+			
+		</div>
+	
+		<div class="eluidf2577607            col-md-2 col-sm-2   znColumnElement" id="eluidf2577607">
+
+			
+			<div class="znColumnElement-innerWrapper-eluidf2577607 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-center znColumnElement-innerWrapper--halign-center ">
+
+				<div class="znColumnElement-innerContent">									</div>
+			</div>
+
+			
+		</div>
+	
+				</div>
+			</div>
+
+					</section>
+
+
+				<section class="zn_section eluidf3608cd8     section-sidemargins    zn_section--relative section--no " id="eluidf3608cd8">
+
+			<div class="zn-bgSource "><div class="zn-bgSource-overlayGloss"></div></div>
+			<div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
+
+				<div class="row ">
+					
+		<div class="eluid874b92a1            col-md-12 col-sm-12   znColumnElement" id="eluid874b92a1">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid874b92a1 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-top znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="kl-title-block clearfix tbk--text-light tbk--center text-center tbk-symbol--line  tbk-icon-pos--after-title eluide82ea897 "><h3 class="tbk__title" itemprop="headline">OUR BELOVED GOOGLE REVIEWS </h3><span class="tbk__symbol "><span></span></span></div>
+<div class="testimonials-partners eluid046edef1  testimonials-partners--light element-scheme--light">
+
+	
+	<div class="ts-pt-testimonials clearfix">
+
+				<div class="ts-pt-testimonials__item ts-pt-testimonials__item--size-2 ts-pt-testimonials__item--normal" style="margin-top:20px; ">
+
+			<div class="ts-pt-testimonials__text">It's been a really great experience so far at Mountain Oak Dental! All of the staff is extremely friendly. I couldn't ask for better quality of service from both of my visits so far. I highly recommend this office if you're looking for top-notch dentistry!</div>
+			<div class="ts-pt-testimonials__infos ts-pt-testimonials__infos--noimg">
+
+				
+									<h4 class="ts-pt-testimonials__name" itemprop="headline">JUSTIN</h4>
+				
+									<div class="ts-pt-testimonials__position">PATIENT</div>
+				
+								<div class="ts-pt-testimonials__stars ts-pt-testimonials__stars--5">
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+				</div>
+				
+			</div><!-- /.ts-pt-testimonials__infos -->
+
+			
+		</div><!-- /.ts-pt-testimonials__item -->
+				<div class="ts-pt-testimonials__item ts-pt-testimonials__item--size-1 ts-pt-testimonials__item--normal" style=" ">
+
+			<div class="ts-pt-testimonials__text">I had to call around on a Saturday morning to find someone to take me in last minute with an emergency. Mountain Oak immediately made some room for me to come in right away. The clinic is beautiful and the staff were really friendly. They were able to help me when I was in a lot of pain and I am so grateful. They also follow the fee quidelines, which was an added bonus not to have to pay over and above my insurance coverage, even on an emergency visit. 
+Highly recommend this place. 
+Thank you for everything!
+</div>
+			<div class="ts-pt-testimonials__infos ts-pt-testimonials__infos--noimg">
+
+				
+									<h4 class="ts-pt-testimonials__name" itemprop="headline">TIM</h4>
+				
+									<div class="ts-pt-testimonials__position">PATIENT</div>
+				
+								<div class="ts-pt-testimonials__stars ts-pt-testimonials__stars--5">
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+				</div>
+				
+			</div><!-- /.ts-pt-testimonials__infos -->
+
+			
+		</div><!-- /.ts-pt-testimonials__item -->
+				<div class="ts-pt-testimonials__item ts-pt-testimonials__item--size-1 ts-pt-testimonials__item--reversed" style=" ">
+
+			
+			<div class="ts-pt-testimonials__infos ts-pt-testimonials__infos--noimg">
+
+				
+									<h4 class="ts-pt-testimonials__name" itemprop="headline">DANA REIMER</h4>
+				
+									<div class="ts-pt-testimonials__position">PATIENT</div>
+				
+								<div class="ts-pt-testimonials__stars ts-pt-testimonials__stars--5">
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+					<span class="glyphicon glyphicon-star"></span>
+				</div>
+				
+			</div><!-- /.ts-pt-testimonials__infos -->
+
+			<div class="ts-pt-testimonials__text">I've been to Mountain Oak now for a cleaning and 5 fillings (completed in two appointments) and I have absolutely nothing but positive things to say about them. The office is warm and inviting and all of the staff is so kind and caring. I would absolutely recommend Mountain Oak Dental to anyone looking to switch, you won't be disappointed!</div>
+		</div><!-- /.ts-pt-testimonials__item -->
+		
+	</div><!-- /.ts-pt-testimonials -->
+
+	
+	
+	
+</div><!-- /.testimonials-partners -->
+
+
+				</div>
+			</div>
+
+			
+		</div>
+	
+				</div>
+			</div>
+
+					</section>
+
+
+				<section class="zn_section eluid93bb3bba     section-sidemargins    section--no " id="eluid93bb3bba">
+
+			
+			<div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
+
+				<div class="row ">
+					
+		<div class="eluid5ff7e00c            col-md-12 col-sm-12   znColumnElement" id="eluid5ff7e00c">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid5ff7e00c znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-bottom znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="kl-title-block clearfix tbk--text- tbk--left text-left tbk-symbol-- tbk--colored tbk-icon-pos--after-title eluid6b4cf250 "><h3 class="tbk__title" itemprop="headline">WE'RE ALWAYS ACCEPTING NEW PATIENTS...</h3><h4 class="tbk__subtitle" itemprop="alternativeHeadline">We'll do everything we can to ensure you have an optimal dental experience.</h4></div>				</div>
+			</div>
+
+			
+		</div>
+	
+				</div>
+			</div>
+
+					</section>
+
+
+				<section class="zn_section eluida357b549     section-sidemargins    zn_section--relative section--skewed " id="eluida357b549">
+
+			<div class="zn-bgSource "><div class="zn-bgSource-overlay" style="background: -webkit-linear-gradient(left, rgba(255,255,255,0.8) 0%,rgba(244,244,244,0.05) 100%); background: linear-gradient(to right, rgba(255,255,255,0.8) 0%,rgba(244,244,244,0.05) 100%); "></div><div class="zn-bgSource-overlayGloss"></div></div>
+			<div class="zn_section_size container zn-section-height--auto zn-section-content_algn--top ">
+
+				<div class="row ">
+					
+		<div class="eluid67a98292            col-md-8 col-sm-8   znColumnElement" id="eluid67a98292">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid67a98292 znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-center znColumnElement-innerWrapper--halign-left ">
+
+				<div class="znColumnElement-innerContent">					<div class="kl-title-block clearfix tbk--text- tbk--center text-center tbk-symbol--  tbk-icon-pos--after-title eluid844e81ad "><h3 class="tbk__title" itemprop="headline">CONTACT US </h3><h4 class="tbk__subtitle" itemprop="alternativeHeadline">Please complete this form and we'll get back to you as soon as possible!</h4></div>
+		<div class="zn_contact_form_container contactForm cf-elm eluid97efe1ef hidden-zn_dummy_value hidden-zn_dummy_value hidden-zn_dummy_value hidden-zn_dummy_value  cf--light element-scheme--light  ">
+						<form action="#" id="form_eluid97efe1ef" method="post" class="zn_contact_form contact_form cf-elm-form row " data-redirect=""><div class="col-sm-6  kl-fancy-form zn_form_field zn_cf_text"><input type="text" name="zn_form_field_name1_0" id="zn_form_field_name1_0" placeholder="Please enter your name" value="" class="zn_form_input zn-field-text form-control  kl-fancy-form-input zn_validate_not_empty "><label for="zn_form_field_name1_0" class="control-label kl-font-alt kl-fancy-form-label">NAME</label></div><div class="col-sm-6  kl-fancy-form zn_form_field zn_cf_text"><input type="text" name="zn_form_field_phone_1_1" id="zn_form_field_phone_1_1" placeholder="Please enter your phone numebr " value="" class="zn_form_input zn-field-text form-control  kl-fancy-form-input zn_validate_is_numeric "><label for="zn_form_field_phone_1_1" class="control-label kl-font-alt kl-fancy-form-label">PHONE </label></div><div class="col-sm-12  kl-fancy-form zn_form_field zn_cf_text"><input type="text" name="zn_form_field_email1_2" id="zn_form_field_email1_2" placeholder="Please type your email address" value="" class="zn_form_input zn-field-text form-control  kl-fancy-form-input zn_validate_not_empty "><label for="zn_form_field_email1_2" class="control-label kl-font-alt kl-fancy-form-label">Email</label></div><div class="col-sm-6  kl-fancy-form zn_form_field zn_cf_select"><label class="control-label kl-font-alt kl-fancy-form-label">NEEDED SERVICES</label><select name="zn_form_field_needed_services1_3" id="zn_form_field_needed_services1_3" class="zn_form_input form-control form-control--light kl-fancy-form-select zn_validate_not_empty"><option value="book">Appointment Request</option><option value="question">General Question</option><option value="change">Change to Existing Appointment</option><option value="patient">New Patient Exam</option></select></div><div class="col-sm-6  kl-fancy-form zn_form_field zn_cf_select"><label class="control-label kl-font-alt kl-fancy-form-label">HOW DID YOU FIND US</label><select name="zn_form_field_how_did_you_find_us1_4" id="zn_form_field_how_did_you_find_us1_4" class="zn_form_input form-control form-control--light kl-fancy-form-select zn_validate_is_letters_ws"><option value="online">Google</option><option value="patient">Referral</option><option value="location">Drive By</option><option value="media">Advertisement</option><option value=""></option></select></div><div class="col-sm-12  kl-fancy-form zn_form_field zn_cf_textarea"><textarea name="zn_form_field_message1_5" class="zn_form_input form-control  kl-fancy-form-textarea zn_validate_not_empty " id="zn_form_field_message1_5" placeholder="Please add any details you think it would be useful for us to make a correct estimation." cols="40" rows="6"></textarea><label for="zn_form_field_message1_5" class="control-label kl-font-alt kl-fancy-form-label">Message</label></div><div class="col-sm-12  kl-fancy-form zn_form_field zn_cf_captcha"><span class="kl-recaptcha" data-colorscheme="light" data-sitekey="6Lccw1orAAAAAMHcAuwPLG6L6RGXyfk30B4e3Bho" id="zn_recaptcha_1"></span></div><div class="col-sm-12  kl-fancy-form zn_form_field zn_cf_hidden"><input type="hidden" name="zn_pb_form_submit_1" id="zn_pb_form_submit_1" value="1" class="zn_form_input zn_validate_none"></div><div class="col-sm-12"><div class="zn_contact_ajax_response titleColor" id="zn_form_id1"></div><div class="zn_submit_container text-left"><button class="zn_contact_submit btn btn-fullcolor btn--rounded  " type="submit">SEND NOW!</button></div></div><input type="hidden" id="apbct_visible_fields_0" name="apbct_visible_fields" value="eyIwIjp7InZpc2libGVfZmllbGRzIjoiem5fZm9ybV9maWVsZF9uYW1lMV8wIHpuX2Zvcm1fZmllbGRfcGhvbmVfMV8xIHpuX2Zvcm1fZmllbGRfZW1haWwxXzIgem5fZm9ybV9maWVsZF9uZWVkZWRfc2VydmljZXMxXzMgem5fZm9ybV9maWVsZF9ob3dfZGlkX3lvdV9maW5kX3VzMV80IHpuX2Zvcm1fZmllbGRfbWVzc2FnZTFfNSIsInZpc2libGVfZmllbGRzX2NvdW50Ijo2LCJpbnZpc2libGVfZmllbGRzIjoiem5fcGJfZm9ybV9zdWJtaXRfMSIsImludmlzaWJsZV9maWVsZHNfY291bnQiOjF9fQ=="></form>
+		</div>
+
+						</div>
+			</div>
+
+			
+		</div>
+	
+		<div class="eluid622eba1a            col-md-4 col-sm-4   znColumnElement" id="eluid622eba1a">
+
+			
+			<div class="znColumnElement-innerWrapper-eluid622eba1a znColumnElement-innerWrapper znColumnElement-innerWrapper--valign-center znColumnElement-innerWrapper--halign-right ">
+
+				<div class="znColumnElement-innerContent">								<div class="eluid48865e03  infobox2--light element-scheme--light ib2-style3 ib2-custom infobox2-container">
+				<div class="ib2-inner infobox2-inner">
+					<h4 class="ib2-info-message infobox2-message text-custom-before">HOURS OF OPERATION</h4><div class="ib2-content"><h3 class="ib2-content--title infobox2-title" itemprop="headline">Our Regular Schedule </h3><div class="ib2-content--text infobox2-text"><h5></h5>
+<h5 style="text-align: left;">MON&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8:00am - 7:00pm</h5>
+<h5 style="text-align: left;">TUES&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8:00am - 4:00pm</h5>
+<h5 style="text-align: left;">WED &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8:00am - 4:00pm</h5>
+<h5 style="text-align: left;">THURS&nbsp; &nbsp; &nbsp; &nbsp;8:00am - 7:00pm</h5>
+<h5 style="text-align: left;">FRI&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8:00am - 4:00pm</h5>
+<h5 style="text-align: left;">SAT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8:00am - 2:00pm</h5>
+<h5 style="text-align: left;">SUN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Closed</h5>
+</div></div>				</div>
+			</div>
+						</div>
+			</div>
+
+			
+		</div>
+	
+				</div>
+			</div>
+
+					</section>
+
+
+		</strong></strong></strong></div><strong><strong><strong>	<footer id="footer" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
+		<div class="container">
+			<div class="row"><div class="col-sm-4"><div id="text-3" class="widget widget_text">			<div class="textwidget"><p><a href="https://mountainoakdental.com/terms-conditions/">Terms &amp; Conditions</a> | <a href="https://mountainoakdental.com/privacy-policy-2/">Privacy Policy</a></p>
+<p>&nbsp;</p>
+</div>
+		</div></div><div class="col-sm-4"><div id="text-12" class="widget widget_text">			<div class="textwidget"><p>All Services are Provided by a General Dentist.</p>
+</div>
+		</div></div><div class="col-sm-4"><div id="text-7" class="widget widget_text"><h3 class="widgettitle title m_title m_title_ext text-custom">Website Developed By</h3>			<div class="textwidget"><p><a href="http://www.hgsocial.ca"><img loading="lazy" decoding="async" class="wp-image-4877 aligncenter" src="https://mountainoakdental.com/wp-content/uploads/2020/05/hgsocialwhitefontredback-300x156.png" alt="" width="77" height="40" srcset="https://mountainoakdental.com/wp-content/uploads/2020/05/hgsocialwhitefontredback-300x156.png 300w, https://mountainoakdental.com/wp-content/uploads/2020/05/hgsocialwhitefontredback-1024x533.png 1024w, https://mountainoakdental.com/wp-content/uploads/2020/05/hgsocialwhitefontredback-768x400.png 768w, https://mountainoakdental.com/wp-content/uploads/2020/05/hgsocialwhitefontredback-280x146.png 280w, https://mountainoakdental.com/wp-content/uploads/2020/05/hgsocialwhitefontredback-600x312.png 600w, https://mountainoakdental.com/wp-content/uploads/2020/05/hgsocialwhitefontredback.png 1099w" sizes="auto, (max-width: 77px) 100vw, 77px"></a></p>
+</div>
+		</div></div></div><!-- end row -->
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="bottom site-footer-bottom clearfix">
+
+						
+						<ul class="social-icons sc--colored clearfix"><li class="social-icons-li title">GET SOCIAL</li><li class="social-icons-li"><a data-zniconfam="kl-social-icons" data-zn_icon="" href="https://www.facebook.com/Mountainoakdental" target="_blank" title="Like us on Facebook!" class="social-icons-item scfooter-icon-ue83f"></a></li><li class="social-icons-li"><a data-zniconfam="kl-social-icons" data-zn_icon="" href="https://www.instagram.com/mountainoakdental/" target="_self" title="instagram" class="social-icons-item scfooter-icon-ue859"></a></li></ul>
+						
+							<div class="copyright footer-copyright">
+								<p class="footer-copyright-text">© Copyright 2026 All Rights Reserved. Mountain Oak Dental | 403.982-2242</p>							</div><!-- end copyright -->
+											</div>
+					<!-- end bottom -->
+				</div>
+			</div>
+			<!-- end row -->
+		</div>
+	</footer>
+</strong></strong></strong></div><!-- end page_wrapper --><strong><strong><strong>
+
+<a href="#" id="totop" class="u-trans-all-2s js-scroll-event" data-forch="300" data-visibleclass="on--totop">TOP</a>
+
+
+<script type="rocketlazyloadscript">
+jQuery(function ($) {
+setTimeout(function() { 
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBzP1nsvyocGOgBJFL6WwhJDO5ujz6IhCM&ver=4.18.1';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+}, 5000);
+});
+</script> 
+
+<script type="rocketlazyloadscript">
+jQuery(function ($) {
+setTimeout(function() { 
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://mountainoakdental.com/wp-content/themes/kallyas/pagebuilder/elements/google_map/assets/markerclusterer.js?ver=4.17.5';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+}, 5500);
+});
+</script> 
+
+<script type="text/javascript" id="zn_gmap-js-extra">
+/* <![CDATA[ */
+var ZnGoogleMapConfig = {"assets_url":"https:\/\/mountainoakdental.com\/wp-content\/themes\/kallyas\/pagebuilder\/elements\/google_map\/assets\/m"};
+/* ]]> */
+</script>
+
+<script type="rocketlazyloadscript">
+jQuery(function ($) {
+setTimeout(function() { 
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://mountainoakdental.com/wp-content/themes/kallyas/pagebuilder/elements/google_map/assets/gmaps.js?ver=4.17.5';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+}, 6000);
+});
+</script> 
+
+<script type="rocketlazyloadscript">
+jQuery(function ($) {
+setTimeout(function() {
+    var css = document.createElement('style');
+    css.type = 'text/css';
+
+    var styles = '.zn-bgSource-image{background-image:url(https://i1.wp.com/mountainoakdental.com/wp-content/uploads/2020/04/wellness.jpg)!important}';
+
+    if (css.styleSheet) css.styleSheet.cssText = styles;
+    else css.appendChild(document.createTextNode(styles));
+
+    document.getElementsByTagName("head")[0].appendChild(css);
+}, 5000);
+});
+</script> 
+
+<script type="rocketlazyloadscript">				
+                    document.addEventListener('DOMContentLoaded', function () {
+                        setTimeout(function(){
+                            if( document.querySelectorAll('[name^=ct_checkjs]').length > 0 ) {
+                                if (typeof apbct_public_sendREST === 'function' && typeof apbct_js_keys__set_input_value === 'function') {
+                                    apbct_public_sendREST(
+                                    'js_keys__get',
+                                    { callback: apbct_js_keys__set_input_value })
+                                }
+                            }
+                        },0)					    
+                    })				
+                </script>
+		<script type="rocketlazyloadscript">
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/kallyas/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://mountainoakdental.com/wp-content/cache/min/1/wp-content/plugins/coblocks/dist/js/coblocks-animation.js?ver=1760124777" id="coblocks-animation-js" data-rocket-defer="" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://mountainoakdental.com/wp-content/themes/kallyas/js/plugins.min.js?ver=4.19.7" id="kallyas_vendors-js" data-rocket-defer="" defer=""></script>
+<script type="text/javascript" id="zn-script-js-extra">
+/* <![CDATA[ */
+var zn_do_login = {"ajaxurl":"/wp-admin/admin-ajax.php","add_to_cart_text":"Item Added to cart!"};
+var ZnThemeAjax = {"ajaxurl":"/wp-admin/admin-ajax.php","zn_back_text":"Back","zn_color_theme":"light","res_menu_trigger":"992","top_offset_tolerance":"","logout_url":"https://mountainoakdental.com/wp-login.php?action=logout&redirect_to=https%3A%2F%2Fmountainoakdental.com&_wpnonce=9b5fab739d"};
+//# sourceURL=zn-script-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://mountainoakdental.com/wp-content/themes/kallyas/js/znscript.min.js?ver=4.19.7" id="zn-script-js" data-rocket-defer="" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://mountainoakdental.com/wp-content/themes/kallyas/addons/slick/slick.min.js?ver=4.19.7" id="slick-js" data-rocket-defer="" defer=""></script>
+<script type="text/javascript" id="zion-frontend-js-js-extra">
+/* <![CDATA[ */
+var ZionBuilderFrontend = {"allow_video_on_mobile":""};
+//# sourceURL=zion-frontend-js-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://mountainoakdental.com/wp-content/cache/min/1/wp-content/themes/kallyas/framework/zion-builder/dist/znpb_frontend.js?ver=1760124777" id="zion-frontend-js-js" data-rocket-defer="" defer=""></script>
+<!-- Zn Framework inline JavaScript--><script type="rocketlazyloadscript" data-rocket-type="text/javascript">jQuery(document).ready(function($) {
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBJ10R0KLD">
+</script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YBJ10R0KLD');
+</script>
+});<script type="rocketlazyloadscript">let images=[...document.querySelectorAll("img[data-src]")];const interactSettings={root:document.querySelector(".center"),rootMargin:"0px 0px 200px 0px"};function onIntersection(t){t.forEach(t=>{t.isIntersecting&&(observer.unobserve(t.target),t.target.src=t.target.dataset.src,t.target.dataset&&t.target.dataset.srcset&&(t.target.srcset=t.target.dataset.srcset),t.target.onload=(()=>t.target.classList.add("loaded")))})}let observer=new IntersectionObserver(onIntersection,interactSettings);images.forEach(t=>observer.observe(t));</script><svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+
+  <symbol id="icon-znb_close-thin" viewBox="0 0 100 100">
+   <path d="m87.801 12.801c-1-1-2.6016-1-3.5 0l-33.801 33.699-34.699-34.801c-1-1-2.6016-1-3.5 0-1 1-1 2.6016 0 3.5l34.699 34.801-34.801 34.801c-1 1-1 2.6016 0 3.5 0.5 0.5 1.1016 0.69922 1.8008 0.69922s1.3008-0.19922 1.8008-0.69922l34.801-34.801 33.699 33.699c0.5 0.5 1.1016 0.69922 1.8008 0.69922 0.69922 0 1.3008-0.19922 1.8008-0.69922 1-1 1-2.6016 0-3.5l-33.801-33.699 33.699-33.699c0.89844-1 0.89844-2.6016 0-3.5z"></path>
+  </symbol>
+
+
+  <symbol id="icon-znb_play" viewBox="0 0 22 28">
+   <path d="M21.625 14.484l-20.75 11.531c-0.484 0.266-0.875 0.031-0.875-0.516v-23c0-0.547 0.391-0.781 0.875-0.516l20.75 11.531c0.484 0.266 0.484 0.703 0 0.969z"></path>
+  </symbol>
+
+ </defs>
+</svg>
+		<script type="rocketlazyloadscript">'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),
+                _trfd.push({'tccl.baseHost':'secureserver.net'}),
+                _trfd.push({'ap':'wpaas_v2'},
+                    {'server':'5abdf933daa6'},
+                    {'pod':'c23-prod-p3-us-west-2'},
+                                        {'xid':'45627231'},
+                    {'wp':'6.9.4'},
+                    {'php':'8.2.30'},
+                    {'loggedin':'0'},
+                    {'cdn':'1'},
+                    {'builder':''},
+                    {'theme':'kallyas'},
+                    {'wds':'0'},
+                    {'wp_alloptions_count':'651'},
+                    {'wp_alloptions_bytes':'252704'},
+                    {'gdl_coming_soon_page':'0'}
+                    , {'appid':'525286'}                 );
+            var trafficScript = document.createElement('script'); trafficScript.src = 'https://img1.wsimg.com/signals/js/clients/scc-c2/scc-c2.min.js'; window.document.head.appendChild(trafficScript);</script>
+		<script type="rocketlazyloadscript">window.addEventListener('click', function (elem) { var _elem$target, _elem$target$dataset, _window, _window$_trfq; return (elem === null || elem === void 0 ? void 0 : (_elem$target = elem.target) === null || _elem$target === void 0 ? void 0 : (_elem$target$dataset = _elem$target.dataset) === null || _elem$target$dataset === void 0 ? void 0 : _elem$target$dataset.eid) && ((_window = window) === null || _window === void 0 ? void 0 : (_window$_trfq = _window._trfq) === null || _window$_trfq === void 0 ? void 0 : _window$_trfq.push(["cmdLogEvent", "click", elem.target.dataset.eid]));});</script>
+		<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://mountainoakdental.com/wp-content/cache/min/1/traffic-assets/js/tccl-tti.min.js?ver=1760124777" onload="window.tti.calculateTTI()" data-rocket-defer="" defer=""></script>
+		
+
+
+</strong></strong></strong></body></html>
