@@ -1,0 +1,2617 @@
+<!DOCTYPE html><html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#"><head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.4",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),o([])},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();</script><!-- <meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Cache-Control" content="no-cache"> -->        
+ 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noodp">
+  <meta name="distribution" content="global">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tour Our Office | Meadows View Dental SE Calgary</title>
+<link data-rocket-prefetch="" href="https://static.adit.com" rel="dns-prefetch">
+<link crossorigin="" data-rocket-preload="" as="font" href="https://www.meadowsviewdental.com/wp-content/themes/theme40/fonts/dmsans-regular-webfont.woff2" rel="preload">
+<link crossorigin="" data-rocket-preload="" as="font" href="https://www.meadowsviewdental.com/wp-content/themes/theme40/fonts/fa-solid-900.woff2" rel="preload">
+<link crossorigin="" data-rocket-preload="" as="font" href="https://www.meadowsviewdental.com/wp-content/themes/theme40/fonts/fa-brands-400.woff2" rel="preload">
+<link crossorigin="" data-rocket-preload="" as="font" href="https://www.meadowsviewdental.com/wp-content/themes/theme40/fonts/dmsans-bold-webfont.woff2" rel="preload">
+<link crossorigin="" data-rocket-preload="" as="font" href="https://www.meadowsviewdental.com/wp-content/themes/theme40/fonts/KaiseiDecol-Bold.woff2" rel="preload"><link rel="preload" data-rocket-preload="" as="image" href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery24-416x278.webp" fetchpriority="high">
+
+		<!-- All in One SEO 4.9.3 - aioseo.com -->
+	<meta name="description" content="Visit our dentistry at Meadows View Dental SE Calgary Join us on a virtual tour and see why our patients love visiting our office. Book Your Appointment Today!">
+	<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<link rel="canonical" href="https://www.meadowsviewdental.com/tour-our-office/">
+	<meta name="generator" content="All in One SEO (AIOSEO) 4.9.3">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="Meadows View Dental">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Tour Our Office | Meadows View Dental SE Calgary">
+		<meta property="og:description" content="Visit our dentistry at Meadows View Dental SE Calgary Join us on a virtual tour and see why our patients love visiting our office. Book Your Appointment Today!">
+		<meta property="og:url" content="https://www.meadowsviewdental.com/tour-our-office/">
+		<meta property="og:image" content="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/We-are-accepting-CDCP.jpg">
+		<meta property="og:image:secure_url" content="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/We-are-accepting-CDCP.jpg">
+		<meta property="og:image:width" content="1140">
+		<meta property="og:image:height" content="700">
+		<meta property="article:published_time" content="2022-01-28T14:23:44+00:00">
+		<meta property="article:modified_time" content="2025-10-29T06:32:12+00:00">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Tour Our Office | Meadows View Dental SE Calgary">
+		<meta name="twitter:description" content="Visit our dentistry at Meadows View Dental SE Calgary Join us on a virtual tour and see why our patients love visiting our office. Book Your Appointment Today!">
+		<meta name="twitter:image" content="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/We-are-accepting-CDCP.jpg">
+		<!-- All in One SEO -->
+
+
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.meadowsviewdental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.meadowsviewdental.com%2Ftour-our-office%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.meadowsviewdental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.meadowsviewdental.com%2Ftour-our-office%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link data-minify="1" rel="stylesheet" id="wpgs-styles1-css" href="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/plugins/gspeech/includes/css/gspeech.css?ver=1781846033" media="all">
+<link data-minify="1" rel="stylesheet" id="wpgs-styles2-css" href="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/plugins/gspeech/includes/css/the-tooltip.css?ver=1781846033" media="all">
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel="stylesheet" id="wpah-front-styles-css" href="https://www.meadowsviewdental.com/wp-content/plugins/wp-accessibility-helper/assets/css/wp-accessibility-helper.min.css?ver=0.5.9.4" media="all">
+<link data-minify="1" rel="stylesheet" id="theme40-style-css" href="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/themes/theme40/style.css?ver=1781846033" media="all">
+<link rel="stylesheet" id="theme40-bootstrap-min-css-css" href="https://www.meadowsviewdental.com/wp-content/themes/theme40/css/bootstrap.min.css?ver=6.9" media="all">
+<link data-minify="1" rel="stylesheet" id="theme40-aos-css-css" href="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/themes/theme40/css/aos.css?ver=1781846033" media="all">
+<link data-minify="1" rel="stylesheet" id="theme40-style-css-css" href="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/themes/theme40/css/style.css?ver=1781846033" media="all">
+<link data-minify="1" rel="stylesheet" id="theme40-responsive-css-css" href="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/themes/theme40/css/responsive.css?ver=1781846033" media="all">
+<style id="rocket-lazyload-inline-css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.meadowsviewdental.com/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+/*# sourceURL=rocket-lazyload-inline-css */
+</style>
+<script src="https://www.meadowsviewdental.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://www.meadowsviewdental.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/plugins/gspeech/includes/js/color.js?ver=1781846033" id="wpgs-script1-js"></script>
+<script src="https://www.meadowsviewdental.com/wp-content/plugins/gspeech/includes/js/jQueryRotate.2.1.js?ver=3.19.3" id="wpgs-script2-js"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/plugins/gspeech/includes/js/easing.js?ver=1781846033" id="wpgs-script3-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://www.meadowsviewdental.com/wp-content/plugins/gspeech/includes/js/mediaelement-and-player.min.js?ver=3.19.3" id="wpgs-script4-js"></script>
+<link rel="https://api.w.org/" href="https://www.meadowsviewdental.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.meadowsviewdental.com/wp-json/wp/v2/pages/877"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.meadowsviewdental.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9">
+<link rel="shortlink" href="https://www.meadowsviewdental.com/?p=877">
+<link rel="icon" href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/Meadows-View-Dental-favicon.png" sizes="32x32">
+<link rel="icon" href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/Meadows-View-Dental-favicon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/Meadows-View-Dental-favicon.png">
+<meta name="msapplication-TileImage" content="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/Meadows-View-Dental-favicon.png">
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>  <!-- Google Tag Manager -->
+<!-- Google tag (gtag.js) --> <script type="rocketlazyloadscript" async="" data-rocket-src="https://www.googletagmanager.com/gtag/js?id=AW-622414874"></script> <script type="rocketlazyloadscript"> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-622414874'); </script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager -->
+<script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KCP2NW6');</script>
+<!-- End Google Tag Manager -->  <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "Meadows View Dental",
+  "url": "https://www.meadowsviewdental.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Meadows View Dental",
+  "url": "https://www.meadowsviewdental.com/",
+  "logo": "https://www.meadowsviewdental.com/wp-content/uploads/2025/10/Meadows-View-Dental.webp",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+14038000041",
+    "contactType": "customer service",
+    "areaServed": "US",
+    "availableLanguage": "en"
+  },
+  "sameAs": [
+    "https://www.facebook.com/MeadowsViewDental",
+    "https://www.instagram.com/meadowsviewdental/",
+    "https://www.youtube.com/@meadowsviewdental7403",
+    "https://www.linkedin.com/company/meadows-view-dental"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Meadows View Dental",
+  "image": "https://www.meadowsviewdental.com/wp-content/uploads/2025/10/Meadows-View-Dental.webp",
+  "@id": "https://www.meadowsviewdental.com/",
+  "url": "https://www.meadowsviewdental.com/",
+  "telephone": "403 800-0041",
+  "priceRange": "$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": " 8400 Blackfoot Trl SE #120",
+    "addressLocality": "Calgary",
+    "addressRegion": "AB",
+    "postalCode": "T2J 7E1",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.9777928,
+    "longitude": -114.0494859
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Monday",
+    "opens": "09:00",
+    "closes": "17:00"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Tuesday",
+    "opens": "11:00",
+    "closes": "19:00"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Wednesday",
+    "opens": "09:00",
+    "closes": "17:00"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Thursday",
+    "opens": "12:00",
+    "closes": "20:00"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Friday",
+    "opens": "09:00",
+    "closes": "16:00"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Saturday",
+    "opens": "09:00",
+    "closes": "16:00"
+  }] 
+}
+</script>
+
+
+<script type="rocketlazyloadscript">
+  var $=jQuery;
+</script>
+
+<link data-minify="1" type="text/css" href="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/themes/theme40/css/color/custom-styles.css?ver=1781846033" rel="stylesheet">
+<script src="https://www.meadowsviewdental.com/wp-content/themes/theme40/js/bannerowlcarousel.js"></script>
+
+ <style type="text/css">
+   #header .header-top { background-color: #fff; }
+#header .header-contact-info a span { color: #324376; }
+#header .header-contact-info .address a:hover span, #header .header-contact-info .contact-info a:hover span { color: #f7882f; }
+#header .header-contact-info .address i, .header-contact-info .contact-info i { background: #324376; color: #fff; }
+#header .social-media a { background: #324376; }
+#header .social-media a i { color:#fff; }
+#header .social-media a:hover, #header .social-media a:focus { background: #f7882f; } 
+#header .header-btn .btn { background: #324376; }
+#header .header-btn .btn:hover { background: #f7882f; }
+#header .header-btn .btn.eme-btn { margin-right: 10px; background: #f7882f; line-height: normal; }
+#header .header-btn .btn.eme-btn:hover { background: #324376; }
+.eme-btn .content { display:block; margin-left: 10px; margin-bottom:0; }
+.eme-btn .content p { color: #fff; margin:0; line-height: 1; font-size:16px;}
+.eme-btn .content hr { margin: 3px 0; opacity:1; }
+.eme-btn .content .small { color: #fff; line-height:1; font-size:12px;}
+#container { padding-top:229px; }
+.promo-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    min-height:65px;
+}
+.header-promo .item:nth-child(odd) .promo-box { background-color: #324376; }
+.header-promo .item:nth-child(even) .promo-box { background-color: #f7882f; }
+.promo-box a { color: #fff; }
+.promo-box p { font-size:14px; color:#fff; margin: 0; }
+.header-promo .item { margin-bottom:10px; padding: 0 5px; }
+.header-promo .row { margin: 0 -5px; }
+.header-promo .item:nth-child(odd) .promo-box a:hover { color: #f7882f; }
+.header-promo .item:nth-child(even) .promo-box a:hover { color: #324376; }
+.subtitleformnote {
+  font-size: 14px;
+  font-weight: 400;
+  color: #E60000;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.hmbookappbox .main-title, .hmbookappbox .main-title h2.hm-extra-title { margin-bottom:20px; }
+body .aawformblock  .aawfieldselect .heapBox .holder[rel]:not([rel=""]) {color: #ffffff;}
+body .aawformblock .aawfieldselect .heapBox .holder[rel=""] { color: transparent !important; }
+body .aawformblock  .aawfieldselect .heapBox .holder {color: transparent;}
+.aawformblock .aawfieldcol>label { display: block; text-align:left; }
+.hmbookform .aawformradiocol input[type="radio"]:checked+label { background: #324376; }
+.hmbookform .aawform-btn button:hover, .footerbookform .aawform-btn button:hover { background: #324376; }
+.ui-datepicker-trigger:after, .heapBox .handler:before { color: #000; }
+.hmbookform .aawformradiocol label { color: #000; }
+.about-area a { color: #fff; }
+.about-area a:hover { color: #f7882f; }
+.hm-about-content h2 { color: #fff; }
+.hm-services .tabs .tab-link img { max-width: 100px; }
+.about-area { align-items:center; }
+.bottom-desc { margin-top: 2rem; }
+.bottom-desc p, .bottom-desc h2 { color: #fff; }
+.about-ytvideo { text-align:center; margin:2rem 0; }
+.hm-two-section:before, .hm-two-section { background: #f7882f; }
+.hm-promotions .hm-promo-section, .hm-promotions .hm-promo-section:after { background: #f7882f; }
+.hmpromoplanlist .hm-plan-content h3 { font-size: 22px; }
+.hm-promotions { margin-top:100px; }
+.hm-team-content .btn { background: #324376; }
+.hm-team-content .btn:hover { background: #f7882f; }
+.hm-clients .item img { max-width: 200px; }
+.footer-bookappform .main-title { margin-bottom: 20px; }
+.footerbookform .subtitleformnote { text-align: left; color: #fff; }
+.footer-contact-row .item i { color: #324376; }
+.footer-contact-row .item a { color: #000; }
+.footer-contact-row .row > div:last-child .item a { font-size:16px; }
+.footer-contact-row .item p { color: #000; }
+.copyright { color: #000; }
+.copyright a, .copyright a:focus { color: #000; font-weight: 600; }
+.copyright a:hover { color: #324376; }
+.about-area .bottom-desc .btn:hover { background: #fff; }
+.foothinbanner { background-color: #f7882f; padding: 20px 0; }
+.foothinbanner p { text-align:center; color:#fff; margin-bottom:0; }
+.owl-carousel .owl-nav [class*='owl-'] { color: #324376; background: #fff; }
+.hmbookform .aawfieldcol input, .hmbookform .aawfieldcol input:focus, .hmbookform .aawfieldcol textarea, .hmbookform .aawfieldcol textarea:focus, .hmbookform .aawfieldcol select { background-color: #ededed; }
+.heapBox .holder { background: #ededed; }
+.hmbookform .aawformradiocol label { background: #ededed; }
+.nearby-location iframe { width:100%; max-width:100%; }
+.our-location {
+  text-align: center;
+}
+.our-location ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 18px;
+    border-left: 1px solid #000;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.our-location ul li:first-child {
+    border: none;
+}
+#wrapper {
+    overflow-x: hidden;
+}
+.our-location ul li a { color: #000; }
+.our-location ul li a:hover { color: #324376; }
+.mfp-image-holder .mfp-close:hover, button.mfp-close:hover, button.mfp-arrow:hover { background: transparent; } 
+.inner-main-content h2, .inner-main-content h3 { color: #324376; }
+.inner-main-content ul { margin-bottom:1rem; }
+.first-visit-main a, .first-visit-main a:focus, .blog-detail a, .blog-detail a:focus { font-weight: 600; color: #324376; }
+.first-visit-main a:hover, .blog-detail a:hover{ font-weight: 600; color: #f7882f; }
+.first-visit-box, .finance-ins-box { display:none; }
+.patientform-btnrow .item { margin-top:1rem; }
+.patientform-btnrow .item>a {
+    height: auto;
+    display: block;
+    padding: 16px 10px;
+    line-height: 1;
+}
+.blog-pagination .button { color: #fff; }
+.blog-pagination .button:hover { background: #324376; color: #fff;  }
+.promotions-plan-section .plan-box .plan-content h3 { font-size: 22px; }
+.hmpromoplanlist .hm-plan-box { background: #fff; }
+.ui-datepicker-trigger { border:0; }
+.page-id-891 .footer-contact-row, .page-id-893 .footer-contact-row { padding-top:0; }
+.servicesextrasec {
+    padding: 40px 0;
+    background: #324376;
+}
+.serrequestinner {
+    text-align: center;
+}
+.requesticon i {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.serrequesttitle h2 { color: #fff; margin:0; }
+.serrequestinner p {
+    color: #fff;
+    margin: 0;
+    padding: 20px 0;
+}
+.serrequestbtn .btn:hover { background: #fff; color: #f7882f; }
+.thankyoublock {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.page-template-template-thankyou .our-location {
+	padding-top: 0 !important;
+}
+#banner-slider .owl-nav {
+	position: absolute;
+	left: 62px;
+	bottom: 80px;
+	right: unset;
+	top: unset;
+	display: flex;
+	gap: 20px;
+}
+
+#banner-slider.owl-carousel .owl-nav [class*="owl-"] i {
+	font-size: 20px;
+	background: #324376;
+	color: #fff;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	font-weight: 100;
+}
+#banner-slider.owl-carousel .owl-nav .owl-prev i::before, #banner-slider.owl-carousel .owl-nav .owl-next i::before {
+	content: '\f078';
+	font-family: "Font Awesome 5 free";
+	font-weight: 600;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+#banner-slider.owl-carousel .owl-nav .owl-next i::before {
+	transform: rotate(-90deg);
+}
+#banner-slider.owl-carousel .owl-nav [class*="owl-"] {
+	background: transparent;
+	box-shadow: unset;
+	width: auto;
+	height: auto;
+	font-size: 30px;
+	font-weight: 100;
+	position: relative;
+	top: unset;
+	bottom: unset;
+	left: unset;
+	right: unset;
+	margin: 0;
+}
+#banner-slider.owl-carousel .owl-nav [class*="owl-"] i:hover {
+	background: #f7882f;
+}
+#banner-slider.owl-carousel .owl-dots .owl-dot span {
+	background: transparent;
+	border: 1px solid #324376;
+}
+#banner-slider.owl-carousel .owl-dots .owl-dot.active span, #banner-slider.owl-carousel .owl-dots .owl-dot:hover span {
+	background: #324376;
+}
+.reviews { display:block; }
+.reviews ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 5px;
+	color: #f7882f;
+}
+.reviews strong {
+	text-align: left !important;
+}
+.banner .banner-info .reviews .bannerreview {
+	font-size: 18px;
+}
+.banner .item.banner-info.banneritem9 .banner-main {
+	position: relative;
+	top: -50px;
+}
+.bottom-desc h2 {
+	font-family: 'Kaisei Decol';
+	margin-bottom: 30px;
+}
+.hmpromoplanlist.owl-carousel .owl-dots .owl-dot span {
+	background: transparent;
+	border: 1px solid #fff;
+}
+.hmpromoplanlist.owl-carousel .owl-dots .owl-dot.active span, .hmpromoplanlist.owl-carousel .owl-dots .owl-dot:hover span {
+	background: #fff;
+}
+.hmpromoplanlist.owl-carousel .owl-dots {
+	margin-top: 20px;
+	max-width: 500px;
+}
+.gallery-slider .owl-dots {
+	margin-top: 20px;
+}
+.gallery-slider.owl-carousel .owl-dots .owl-dot span {
+  background: transparent;
+  border: 1px solid #324376;
+}
+.gallery-slider.owl-carousel .owl-dots .owl-dot.active span, .gallery-slider.owl-carousel .owl-dots .owl-dot:hover span {
+  background: #324376;
+}
+.hmpartnerlogolist.owl-carousel .owl-dots .owl-dot span {
+  background: transparent;
+  border: 1px solid #324376;
+}
+.hmpartnerlogolist.owl-carousel .owl-dots .owl-dot.active span, .hmpartnerlogolist.owl-carousel .owl-dots .owl-dot:hover span {
+  background: #324376;
+}
+.hmpartnerlogolist .owl-dots {
+	margin-top: 20px;
+}
+.why_choose_inner_main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+} 
+.why_choose_inner_main .item { width: 25%; padding: 0 15px; text-align:center; }
+body button , body .btn, body .button{
+border-radius: 5px;
+}
+.hm-services .slick-prev, .hm-services .slick-next {
+	top: -65px;
+}
+.hm-meet-the-team .team-row:hover .team-pic::after {
+	border-radius: 15px;
+}
+.hmpromoplanlist.owl-carousel .owl-nav {
+	top: -40px;
+}
+.hmpromoplanlist.owl-carousel .owl-nav [class*="owl-"]:hover {
+	color: #fff;
+	background: #324376;
+}
+.reviframefoot img {
+	margin-top: 0;
+}
+.footerbookform .aawform-btn button:hover {
+  background: #fff;
+  color: #f7882f;
+}
+.hm-meet-the-team .hm-team-content {
+	background: #fff;
+}
+.hm-meet-the-team .hm-team-content .name-designation span {
+	font-weight: 600 !important;
+	color: #565656;
+}
+.hm-meet-the-team .hm-team-content .name-designation span span {
+	font-weight: normal !important;
+	color: #565656;
+}
+.inner-main-content h2, .inner-main-content h3 {
+	color: #F7882F;
+	font-size: 28px;
+}
+.gallery-slider.owl-carousel .owl-nav {
+	top: -50px;
+}
+.hmpartnerlogolist.owl-carousel .owl-nav {
+	top: -50px;
+}
+button.close_container {
+	background: #324376 !important;
+	color: #fff !important;
+}
+button.close_container:hover, button.close_container:focus {
+	background: #f7882f !important;
+	color: #fff !important;
+}
+.slick-dots li {
+	width: auto;
+	height: auto;
+}
+.slick-dots {
+	bottom: -15px;
+	display: flex;
+	justify-content: center;
+}
+.slick-dots li button {
+	background: transparent;
+	border: 1px solid #324376;
+	width: 12px;
+	height: 12px;
+}
+.slick-active button {
+	background: #324376 !important;
+}
+.hm-about-content p a, .bottom-desc p a {
+	color: #f7882f;
+}
+.hm-about-content p a:hover, .bottom-desc p a:hover {
+	color: #fff;
+}
+.hmservicelist .owl-dots {
+	margin-top: 20px;
+}
+.hmservicelist.owl-carousel .owl-dots .owl-dot span {
+	background-color: transparent;
+	border: 1px solid #324376;
+}
+.hmservicelist.owl-carousel .owl-dots .owl-dot.active span, .hmservicelist.owl-carousel .owl-dots .owl-dot:hover span {
+	background-color: #324376;
+}
+.hm-gallery-section .owl-carousel .owl-nav [class*='owl-'] {
+    color: #fff;
+    background: #f7882f;
+}
+.hm-gallery-section .owl-carousel .owl-nav [class*='owl-']:hover {
+    background-color: #324376;
+    color: #ffffff;
+}
+.awfpaymentfield .ui-datepicker-trigger:after {
+  visibility: hidden !important;
+}
+.awfpaymentfield .ui-datepicker-trigger span:before {
+    top: 6px !important;
+}
+.hmbookform .aawfieldcol input, .hmbookform .aawfieldcol input:focus, .hmbookform .aawfieldcol textarea, .hmbookform .aawfieldcol textarea:focus, .hmbookform .aawfieldcol select { color: #000; }
+.hmbanner-slider.owl-carousel {display: block;}
+.hmbanner-slider.owl-carousel:after {content: "";display: block;clear: both;}
+.hmbanner-slider.owl-carousel .item {background-color: #324376;}
+.hmbanner-slider.owl-carousel > .item {display: none;}
+.about-ytvideo iframe { width:100%; max-width:560px; }
+.about-ytvideo {max-width: 560px;margin-left: auto;margin-right: auto;}
+.accordionrow p {margin-bottom: 0px;}
+.accordion .acclink:hover {color: #324376;font-weight: 400;}
+.eme-btn .content p  {color: #373737; }
+.eme-btn .content .small {color: #373737; }
+.header-promo .item:nth-child(2n) .promo-box a, .header-promo .item:nth-child(2n) .promo-box p{color: #373737; }
+.hm-service-content a{color: #373737; }
+.hmbookform .aawform-btn button {color: #373737; }
+.about-area a {color: #373737; }
+.hm-blogs .hm-blog-inner .btn {color: #373737; }
+.foothinbanner p {color: #373737; }
+.mobilefootcall.mobiletwobtn a  {color: #373737; }
+.hm-about-content p a, .bottom-desc p a {font-weight: bold;}
+
+#access_container {visibility: hidden;}
+#access_container[aria-hidden="false"] {visibility: visible;}
+
+
+.white-div_accessibility_color .hm-services .container, .white-div_accessibility_color .hm-services .row, .white-div_accessibility_color .hm-services .col-md-12, .white-div_accessibility_color .hm-services .main-title,
+.white-div_accessibility_color .hm-services h2, .white-div_accessibility_color .hm-services .tab-main, .white-div_accessibility_color .hm-services .hmtabservicefour, .white-div_accessibility_color .hm-services .slick-list,
+.white-div_accessibility_color .hm-services .slick-list, .white-div_accessibility_color .hm-services .slick-track, .white-div_accessibility_color .hm-services .item { background-color: transparent !important;}
+
+.white-div_accessibility_color .bookappfooter .container, .white-div_accessibility_color .bookappfooter .row, .white-div_accessibility_color .bookappfooter .col-md-12,
+.white-div_accessibility_color .bookappfooter .footer-bookappform, .white-div_accessibility_color .bookappfooter .main-title, .white-div_accessibility_color .bookappfooter h2,
+.white-div_accessibility_color .bookappfooter .footerbookform, .white-div_accessibility_color .bookappfooter .footer-hours, .white-div_accessibility_color .bookappfooter .main-title, 
+.white-div_accessibility_color .bookappfooter ul, .white-div_accessibility_color .bookappfooter ul li, .white-div_accessibility_color .bookappfooter ul li div{ background-color: transparent !important; color: #fff !important;}
+
+.white-div_accessibility_color .hm-blogs {
+	background: #d3d3d3 !important;
+} 
+
+.white-div_accessibility_color .hm-blogs .container, .white-div_accessibility_color .hm-blogs .row, .white-div_accessibility_color .hm-blogs .col-md-12, .white-div_accessibility_color .hm-blogs .main-title,
+.white-div_accessibility_color .hm-blogs .main-title h2, .white-div_accessibility_color .hm-blogs .hm-blog-box, .white-div_accessibility_color .hm-blogs .hm-blog-box-pic{ background-color: transparent !important;}
+
+.black-div_accessibility_color .hm-services .container, .black-div_accessibility_color .hm-services .row, .black-div_accessibility_color .hm-services .col-md-12, .black-div_accessibility_color .hm-services .main-title,
+.black-div_accessibility_color .hm-services h2, .black-div_accessibility_color .hm-services .tab-main, .black-div_accessibility_color .hm-services .hmtabservicefour, .black-div_accessibility_color .hm-services .slick-list,
+.black-div_accessibility_color .hm-services .slick-list, .black-div_accessibility_color .hm-services .slick-track, .black-div_accessibility_color .hm-services .item { background-color: transparent !important;}
+
+.black-div_accessibility_color .bookappfooter .container, .black-div_accessibility_color .bookappfooter .row, .black-div_accessibility_color .bookappfooter .col-md-12,
+.black-div_accessibility_color .bookappfooter .footer-bookappform, .black-div_accessibility_color .bookappfooter .main-title, .black-div_accessibility_color .bookappfooter h2,
+.black-div_accessibility_color .bookappfooter .footerbookform, .black-div_accessibility_color .bookappfooter .footer-hours, .black-div_accessibility_color .bookappfooter .main-title, 
+.black-div_accessibility_color .bookappfooter ul, .black-div_accessibility_color .bookappfooter ul li, .black-div_accessibility_color .bookappfooter ul li div{ background-color: transparent !important; color: #fff !important;}
+
+.black-div_accessibility_color .hm-blogs {
+	background: #d3d3d3 !important;
+} 
+
+.black-div_accessibility_color .hm-blogs .container, .black-div_accessibility_color .hm-blogs .row, .black-div_accessibility_color .hm-blogs .col-md-12, .black-div_accessibility_color .hm-blogs .main-title,
+.black-div_accessibility_color .hm-blogs .main-title h2, .black-div_accessibility_color .hm-blogs .hm-blog-box, .black-div_accessibility_color .hm-blogs .hm-blog-box-pic{ background-color: transparent !important;}
+
+.white-div_accessibility_color .bottom-desc h2, .black-div_accessibility_color .bottom-desc h2  { background-color: transparent !important;}
+.white-div_accessibility_color .footerbookform .subtitleformnote, .white-div_accessibility_color .footerbookform form, .white-div_accessibility_color .footerbookform .aawformblock,
+.white-div_accessibility_color .footerbookform .aawfieldgroup, .white-div_accessibility_color .footerbookform .aawfieldcol, .white-div_accessibility_color .footerbookform label { background-color: transparent !important;}  
+
+.black-div_accessibility_color .bottom-desc h2, .black-div_accessibility_color .bottom-desc h2  { background-color: transparent !important;}
+.black-div_accessibility_color .footerbookform .subtitleformnote, .black-div_accessibility_color .footerbookform form, .black-div_accessibility_color .footerbookform .aawformblock,
+.black-div_accessibility_color .footerbookform .aawfieldgroup, .black-div_accessibility_color .footerbookform .aawfieldcol, .black-div_accessibility_color .footerbookform label { background-color: transparent !important; color:#fff !impoortant;} 
+ 
+.white-div_accessibility_color .hm-promotions, .black-div_accessibility_color .hm-promotions {
+	background-color: transparent !important;
+} 
+.black-div_accessibility_color .bottom-desc h2, .black-div_accessibility_color .bottom-desc h2  { background-color: transparent !important;}
+.black-div_accessibility_color .footerbookform .subtitleformnote, .black-div_accessibility_color .footerbookform form, .black-div_accessibility_color .footerbookform .aawformblock,
+.black-div_accessibility_color .footerbookform .aawfieldgroup, .black-div_accessibility_color .footerbookform .aawfieldcol, .black-div_accessibility_color .footerbookform label { background-color: transparent !important; color:#fff !impoortant;} 
+
+.black-div_accessibility_color .footerbookform .aawform-group.aawform-btn, .white-div_accessibility_color .footerbookform .aawform-group.aawform-btn, .black-div_accessibility_color .footerbookform aditappform, .black-div_accessibility_color .footerbookform aditappform { background-color:transparent !important;}
+
+.eme-btn:hover .content .small {
+	color: #fff;
+} 
+.eme-btn:hover .content p { 
+color: #fff;
+}
+.hm-blogs .hm-blog-inner .btn:hover{color:#fff;}
+ .aawform-btn button:hover {color:#fff;}
+
+.banneritem1 .banner-text h2 {font-size: 45px; } 
+.bannerpromo-text span {display: block; color: #324376; font-weight: 600; margin: 0 0 15px; } 
+.pricedate-flex {display: flex; gap: 40px; } 
+.pricedate-flex strong {display: block; color: #f7882f; margin: 0 0 2px; } 
+.pricedate-flex i {color: #324376; font-size: 17px; display: block; }
+#custompopup .modal-body {padding: 0; } 
+#custompopup .close {position: absolute; top: -10px; right: -10px; width: 35px; height: 35px; border-radius: 50%; border: 2px solid #fff; font-size: 28px; line-height: 1; } 
+#custompopup .modal-dialog {max-width: 800px; }
+ .home-slider  {display: block;}
+ .home-slider :after {content: "";display: block;clear: both;}
+ .home-slider  > .item {background-color: #324376;display: none;}
+ .home-slider  > .item:first-child {display: block;}
+
+.advantagessetion .hm-advantages .main-title h2 {
+	color: #324376;
+}
+.advantagessetion .hm-advantages .main-title p {
+	color: #324376;
+}
+.advantagessetion .hmadvantagebox {
+	background: #324376;
+	padding: 30px;
+	text-align: center;
+	border-radius: 6px;
+}
+.advantagessetion .hm-advantages .item .adv-icon {
+	background: transparent;
+	margin: auto;
+}
+
+.advantagessetion .hmadvantagebox {
+	padding: 30px 20px;
+        height: 500px;
+}
+.advantagessetion .hm-advantages .item h3 {
+	height: 55px;
+}
+.advantagessetion {
+	padding-bottom: 100px;
+}
+.serviceflex {
+    display: flex;
+}
+.serviceleft {
+    width: 70%;
+    padding-right: 60px;
+}
+.serviceright {
+    width: 30%;
+}
+.servicedocbox {
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.servicegreybox {
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 15px;
+}
+.servicedocbox h3 {
+    font-family: 'Kaisei Decol';
+}
+.servicedocbox h2 {
+    color: #324376;
+   font-family: 'Kaisei Decol';
+}
+.serviceright span {
+    color: #F7882F;
+    font-family: 'Kaisei Decol';
+}
+.servicecoustom p {
+    line-height: 1.7;
+    font-weight: 400;
+}
+.servicesmaalimag img {
+    border-radius: 15px;
+}
+.serviceleft h2 {
+    margin: 20px 0px;
+}
+.cusservicefull h2 {
+    margin: 20px 0px;
+}
+.servicegreybox ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+.servicegreybox ul li {
+    width: 50%;
+    position: relative;
+   padding-left: 35px;
+}
+.servicegreybox ul li:before {
+    content: "";
+    position: absolute;
+    background: url(https://www.meadowsviewdental.com/wp-content/uploads/2026/02/Group.png);
+    height: 18px;
+    width: 18px;
+    background-size: cover;
+    right: 10px;
+    left: 0px;
+    top: 5px;
+}
+.servicefulllcta {color: #fff;padding: 40px 0px;margin-inline: calc(50% - 50vw);text-align: center;background: #f7882f; margin-top: 40px;}
+.servicefulllcta h2 {
+    color: #fff;
+}
+.postid-3506 .inner-main-content.service-section.ptb-100, .postid-3508 .inner-main-content.service-section.ptb-100, .postid-3500 .inner-main-content.service-section.ptb-100  {
+    padding-bottom: 0;
+}
+.postid-3506 .servicesmaalimag img {
+	height: 355px;
+	object-fit: cover;
+}
+.postid-3508 .servicegreybox p {
+	font-size: 19px;
+}
+.postid-3508 .servicesmaalimag img {
+	height: 385px;
+	object-fit: cover;
+}
+.page-id-3751 .adv-technology.ptb-100 {padding-bottom: 10px; }
+.page-id-3751 .faqspage-section.ptb-100 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.blogafterfaq{
+margin-top:15px;
+}
+.blogafterfaq p:empty {
+  display: none;
+}
+.nearbybox-section {padding: 50px 0; } 
+.nearbybox-section .main-title h2, .nearbyfull-section .main-title h2 {color: #f7882f; } 
+.nearbybox-content {padding: 40px 30px; background-color: #F6F6F6; position: relative; border-radius: 15px; min-height: 281px; } 
+.nearbybox-content .number {position: absolute; top: -25px; left: 30px; width: 50px; height: 50px; line-height: 50px; background-color: #324376; text-align: center; color: #fff; border-radius: 50%; } 
+.nearbybox-content p {margin: 0; }
+.nearbyfull-section {padding: 50px 0; } 
+.nearbyfull-content {padding-top: 40px; text-align: center; }
+.row.nearby-row1 {align-items: center;}
+
+.nearby-section1 .row.nearby-row1 {
+	flex-direction: row-reverse;
+}
+p:empty {
+	display: none;
+}
+.nearbydrsec {
+	background: #f6f6f5;
+	padding: 60px;
+	border-radius: 15px;
+}
+.nearbydrsec .row {
+	align-items: center;
+}
+.nearbyfull-section.nearbyfulldr-section {
+	padding-top: 0;
+}
+.nearbooksec {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	background: #324376;
+	padding: 60px 0;
+	text-align: center;
+	color: #fff;
+}
+.nearbooksec .main-title h2 {
+	color: #fff;
+}
+.extracontentsection.newnearloc.no-banner {
+	padding-bottom: 0 !important;
+}
+.nearby-section1.nearby-section2 .main-title h2 {
+	color: #f7882f;
+}
+
+.nearbybox-section .main-title {
+	margin-bottom: 60px;
+}
+
+.page-id-3428 .nearbybox-section, .page-id-3418 .nearbybox-section, .page-id-3426 .nearbybox-section, .page-id-3422 .nearbybox-section, .page-id-3430 .nearbybox-section, .page-id-3424 .nearbybox-section, .page-id-3420 .nearbybox-section {padding-bottom: 0 !important;}
+.extracontentsection.direct-insurance-billing h1 {
+    margin: 45px 0;
+}
+.page-id-3829 h2, .page-id-3865 h2 {
+    color: #f7882f;
+}
+.page-id-3829 .extracontentsection {
+    padding: 45px 0;
+}
+.extracontentsection.direct-insurance-billing .extraseccontent p, .extracontentsection.why-choose .extraseccontent .col-md-8 {
+    padding-left: 45px;
+}
+.extracontentsection.what-is-direct-insurance-billing .extraseccontent p, .extracontentsection.insurance-typically-covers .extraseccontent p {
+    padding-right: 35px;
+}
+.extracontentsection.how-direct-insurance-billing .extraseccontent .col-md-12 {
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    padding: 45px;
+}
+.page-id-3829 .extracontentsection ul li {
+    margin-bottom: 10px;
+}
+.extracontentsection.plans-we-accept ul {
+    overflow: hidden;
+}
+.extracontentsection.plans-we-accept ul li {
+    width: 50%;
+    float: left;
+    padding-right: 25px;
+}
+.extracontentsection.accepting-insurances-slider.hm-clients .main-title h2 {
+    color: #324376;
+}
+.page-id-3829 .inner-main-content.faqspage-section h2 {
+    color: #324376;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.page-id-3865 .extracontentsection.alberta-dental-fee-guide h1 {
+    line-height: 1.6;
+}
+.page-id-3865 .extracontentsection {
+    padding: 25px 0;
+}
+.page-id-3865 .extracontentsection h2 {
+    font-family: 'Kaisei Decol';
+}
+.page-id-3865 .faqspage-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.extracontentsection.what-is-the-alberta, .extracontentsection.how-meadows-view, .extracontentsection.insurance-coverage {
+    margin: 0 40px;
+}
+.row.what-is-the-alberta {
+    padding: 0 40px;
+}
+.page-id-3865 .extracontentsection h2, .how-meadows-view .icons-section .item h3, .page-id-3865 .extracontentsection p, .page-id-3865 .extracontentsection ul li, .how-meadows-view .icons-section .item img, .dental-services-guided .row {
+    margin-bottom: 25px;
+}
+.row.what-is-the-alberta ul, .extracontentsection.why-transparent-dental ul, .extracontentsection.insurance-coverage ul {
+    list-style: none;
+    padding: 0;
+}
+.row.what-is-the-alberta ul li i, .extracontentsection.why-transparent-dental ul li i, .extracontentsection.insurance-coverage ul li i {
+    margin-right: 25px;
+    color: #324376;
+}
+.page-id-3865 .extracontentsection ul li {
+    display: flex;
+    align-items: center;
+}
+.how-meadows-view, .extracontentsection.insurance-coverage {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.how-meadows-view .icons-section .item {
+    background-color: #324376;
+    min-height: 259px;
+    padding: 25px;
+    margin: 0 12.5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+.how-meadows-view .icons-section .item h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.dental-services-guided .row {
+    row-gap: 25px;
+}
+.servcontent-box {
+    background-color: #324376;
+    color: #fff;
+    padding: 25px 10px;
+    align-content: center;
+}
+.servcontent-box h3 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+.servcontent-box p, .how-meadows-view .icons-section .item p, .extracontentsection.book-a-consultation p {
+    margin-bottom: 0 !important;
+}
+.extracontentsection.book-a-consultation, .extracontentsection.book-a-consultation h2 {
+    color: #fff;
+}
+.page-id-3865 .accordion .acclink:after {
+    content: "\2b";
+    font-size: 38px;
+    color: #324376;
+}
+.page-id-3865 .accordion .acclink.active:after {
+    font-size: 22px;
+    content: "\f068";
+    border-color: #f7882f;
+    color: #f7882f;
+}
+.dental-services-guided .item {
+    margin: 0 12.5px;
+}
+.extracontentsection.book-a-consultation {
+    padding: 80px 0;
+}
+.extracontentsection.canadian-dental-care-plan h2, .extracontentsection.canadian-dental-care-plan p, .extracontentsection.canadian-dental-care-plan ul li {
+    margin-bottom: 15px;
+}
+.page-id-3895 .inner-middle-area h1 {
+    text-align: left;
+}
+.page-id-3895 .inner-middle-area h2 {
+    color: #f7882f;
+}
+.extracontentsection.canadian-dental-care-plan ul {
+    list-style: none;
+    padding: 0;
+}
+.extracontentsection.canadian-dental-care-plan ul li i {
+    margin-right: 25px;
+    color: #324376;
+}
+.extracontentsection.canadian-dental-care-plan ul li {
+    display: flex;
+    align-items: center;
+}
+.page-id-3895 .faqspage-section, .extracontentsection.book-an-appointment {
+    padding-top: 0;
+}
+.page-id-3895 .faqspage-section h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #324376;
+    font-size: 34px;
+}
+.extracontentsection.book-an-appointment.no-banner {
+    padding-bottom: 0;
+}
+.single-service .hm-promotions,.single-post .hm-promotions {
+    margin-top: 0px;
+}
+.single-service .hm-promotions:before,.single-post .hm-promotions:before {
+    background: #f7882f;
+}
+.single-post .hmbookappbox.text-center.ptb-100 {
+    padding-bottom: 0px;
+}
+.single-post .hmbookform .aawform-btn button {
+    color: #fff;
+}
+.hm-promotion-main .plan-bg img {max-width: 650px;} </style>
+ <style type="text/css">
+   @media only screen and (max-width: 1399.98px) and (min-width: 992px){
+.nearby-section1 .row.nearby-row1 {
+	flex-direction: row-reverse;
+	align-items: unset;
+	display: block;
+}
+.nearby-section1 .row.nearby-row1 .col-lg-6:nth-child(1) {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+.nearby-section1 .row.nearby-row1 .col-lg-6:nth-child(2) {
+	float: none;
+	width: 100%;
+}
+}
+
+@media only screen and (max-width: 1199.98px) and (min-width: 992px){
+.slick-dots {
+	bottom: 0px;
+}
+#container > .banner {height: 600px;}
+.banner .banner-info {height: 600px;}
+#banner-slider {height: 600px;}
+}
+
+@media only screen and (max-width: 1679.98px) {
+.hm-promotions { margin-top:80px; }
+.advantagessetion {padding-bottom: 80px;}
+}
+
+@media only screen and (max-width: 1399.98px) {
+.hm-promotion-main .plan-bg img {max-width: 500px;}
+.dental-services-guided .item .servcontent-box {
+    min-height: 133px;
+}
+.nearbybox-content {min-height: 332px;}
+.postid-3508 .servicegreybox p {
+	font-size: 18px;
+}
+.postid-3508 .servicesmaalimag img {
+	height: 375px;
+	object-fit: cover;
+}
+.postid-3506 .servicesmaalimag img {
+	height: 400px;
+	object-fit: cover;
+}
+.banneritem1 .banner-text h2 {font-size: 42px;}
+.promo-box a { font-size: 17px; }
+.promo-box p { font-size: 12px; }
+.hm-promotions { margin-top:60px; }
+.footer-contact-row .row > div:last-child .item a { font-size: 14px; }
+#header .header-contact-info a span { font-size:16px; }
+#header .header-btn .btn { font-size:16px; }
+.header-contact-info .address a, .header-contact-info .contact-info a { padding: 0 15px 0 0; }
+.banner .banner-text {
+	max-width: 600px;
+	padding-left: 40px;
+}
+.servicedocbox {
+    padding: 15px;
+}
+#banner-slider.owl-carousel .owl-dots {
+	left: 40px;
+}
+#banner-slider .owl-nav {
+	left: 40px;
+}
+.inner-main-content h2, .inner-main-content h3 {
+	font-size: 26px;
+}
+.advantagessetion {padding-bottom: 60px;}
+.advantagessetion .hmadvantagebox {
+	height: 570px;
+}
+}
+@media only  screen and (max-width: 1239.98px) {
+.how-meadows-view .icons-section .item {
+    min-height: 284px;
+}
+}
+@media only  screen and (max-width: 1199.98px) {
+.hm-promotion-main .plan-bg img {max-width: 360px;}
+.how-meadows-view .icons-section .item, .dental-services-guided .item {
+    margin: auto;
+}
+.dental-services-guided .item .servcontent-box {
+    min-height: 161px;
+}
+.how-meadows-view .icons-section .item {
+    min-height: 359px;
+}
+.page-id-3829 .extracontentsection {
+    padding: 25px 0;
+}
+.nearbooksec {
+	padding: 50px 0;
+}
+.nearbydrsec {
+	padding: 50px;
+}
+.nearbybox-content {min-height: 382px;}
+.postid-3508 .servicesmaalimag img {
+	height: 532px;
+	object-fit: cover;
+}
+.postid-3506 .servicesmaalimag img {
+	height: 595px;
+	object-fit: cover;
+}
+.banneritem1 .banner-text h2 {font-size: 35px;}
+.footer-contact-row .row > div:nth-child(2), .footer-contact-row .row > div:nth-child(3)  { width:21%; }
+.footer-contact-row .row > div:last-child  { width:33%; }
+.hm-promotions .hm-promotion-main .plan-bg img { max-width: 360px; }
+.hm-teastimonial { padding: 30px 0; }
+.hm-teastimonial .row > div > div > img { position:relative; bottom:-34px; } 
+#container { padding-top:233px; }
+.promo-box a { font-size: 14px; }
+.promo-box p { font-size: 10px; }
+.hm-promotions { margin-top:40px; }
+.footer-contact-row .row > div:last-child .item a { font-size: 16px; }
+#header .header-contact-info { width: calc(100% - 410px); }
+.hmpromoplanlist.owl-carousel .owl-nav {
+	top: -50px;
+}
+.banner .item.banner-info.banneritem7 .banner-text , .banner .item.banner-info.banneritem8 .banner-text {
+max-width: 400px;
+}
+.inner-main-content h2, .inner-main-content h3 {font-size: 24px;}
+.banneritem1 .banner-text {max-width: 500px;}
+.advantagessetion {padding-bottom: 50px;}
+.hmadvantageslider.owl-carousel .owl-dots {
+	margin-top: 20px;
+}
+.advantagessetion .hmadvantagebox {
+	height: 530px;
+}
+}
+
+@media only screen and (min-width: 992px) {
+.extracontentsection.insurance-coverage img {
+    height: 440px;
+    object-fit: contain;
+    object-position: right;
+}
+.page-id-3865 .extracontentsection.why-transparent-dental ul {
+    max-width: 890px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.page-id-3865 .extracontentsection.why-transparent-dental ul li {
+    width: 50%;
+    float: left;
+}
+.row.what-is-the-alberta img {
+    height: 560px;
+    object-fit: contain;
+    object-position: right;
+}
+.extracontentsection.accepting-insurances-slider.hm-clients .main-title h2 {
+    text-align: left;
+}
+#nav li.full-megamenu ul li.megamenu-title > a {
+	color: #324376;
+}
+#nav li.full-megamenu ul li.megamenu-title > a:hover {
+	color: #ffffff;
+}
+}
+
+@media only screen and (max-width: 991.98px) {
+.extracontentsection.book-a-consultation {
+    padding: 40px 0;
+}
+.icons-section .row {
+    justify-content: center;
+    row-gap: 25px;
+}
+.page-id-3865 .extracontentsection.why-transparent-dental ul {
+    max-width: max-content;
+    margin: auto;
+}
+.extracontentsection.what-is-the-alberta, .extracontentsection.how-meadows-view, .extracontentsection.insurance-coverage {
+    margin: 0;
+}
+.extracontentsection.direct-insurance-billing .extraseccontent p, .extracontentsection.why-choose .extraseccontent .col-md-8 {
+    padding-left: 0;
+}
+.extracontentsection.what-is-direct-insurance-billing .extraseccontent p, .extracontentsection.insurance-typically-covers .extraseccontent p {
+    padding-right: 0;
+}
+.page-id-3829 .extraseccontent .col-md-12 {
+    text-align: center;
+}
+.page-id-3829 .extracontentsection ul li {
+    text-align: left;
+}
+.page-id-3829 .extracontentsection .row {
+    row-gap: 25px;
+}
+.nearbybox-section .main-title {
+	margin-bottom: 10px;
+}
+.nearbooksec {
+	padding: 40px 0;
+}
+.nearbydrsec {
+	padding: 40px;
+}
+.nearbydrsec .row .col-md-3, .nearbydrsec .row .col-md-9 {
+	width: 100%;
+	text-align: center;
+}
+.nearbydrsec .row .col-md-3 {
+	padding-bottom: 30px;
+}
+.nearbyfull-content {
+	padding-top: 30px;
+}
+.nearbyfull-section {
+	padding: 40px 0;
+}
+.nearbybox-content .number {
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.nearbybox-content {min-height: auto; margin-top: 40px; } 
+.nearbybox-content .number {top: -20px; width: 40px; height: 40px; line-height: 40px; } 
+.nearbybox-section {padding: 40px 0;}
+.nearbybox-section .main-title {
+	margin-bottom: 0;
+}
+.nearby-rightimg {
+	max-width: 500px;
+	margin: 0 auto 20px;
+}
+.postid-3508 .servicesmaalimag img {
+	height: auto;
+	object-fit: cover;
+}
+.postid-3506 .servicesmaalimag img {
+	height: auto;
+	object-fit: cover;
+}
+#custompopup .modal-dialog {max-width: 700px;}
+.footer-contact-row .row > div:nth-child(2), .footer-contact-row .row > div:nth-child(3)  { width:50%; }
+.footer-contact-row .row > div:last-child  { width:50%; }
+.hm-teastimonial { padding: 30px 0 0; }
+.hm-teastimonial .row > div > div > img { position:relative; bottom:0; } 
+.gallery-slider .owl-dots { display:none; }
+.slick-dots {display: none !important;}
+.hmpartnerlogolist .owl-dots {display: none !important;}
+.hmpartnerlogolist.owl-carousel .owl-nav {position: relative;}
+.hmpartnerlogoslider.owl-carousel .owl-nav [class*="owl-"] {background: #324376;color: #fff;}
+.hmpartnerlogoslider.owl-carousel .owl-nav [class*="owl-"]:hover {background: #f7882f;}
+.hmpartnerlogolist.owl-carousel {margin-bottom: 0 !important;}
+.footerbookform .subtitleformnote {text-align: center;}
+.why_choose_inner_main .item { width: 50%; margin-top:15px; } 
+.hmpromoplanlist.owl-carousel .owl-dots {display: none !important;}
+.bottom-desc h2 {margin-bottom: 20px;  font-size: 22px;}
+#banner-slider.owl-carousel .owl-dots {display: none !important;}
+#banner-slider .owl-nav {bottom: 30px;gap: 15px;}
+.banner .item.banner-info.banneritem9 .banner-main {position: relative;top: -30px;}
+.banner .banner-info .reviews .bannerreview {font-size: 16px;line-height: 23px;}
+.slick-slider {
+    margin-bottom: 0;
+}
+.serviceleft {
+    width: 100%;
+    padding: 0;
+}
+.serviceright {
+    width: 100%;
+}
+.serviceflex {
+    flex-wrap: wrap;
+}
+.servicesmaalimag {
+    text-align: center;
+}
+.bottom-desc { margin-top:0; }
+#container { padding-top:0; }
+.header-promo .item:nth-child(3) { order: 4; }
+.header-promo .item:nth-child(4) { order: 3; }
+.promo-box a { font-size: 16px; }
+.promo-box p { font-size: 14px; }
+.promo-box { flex-flow:column; }
+.footer-contact-row .row > div:last-child .item a { font-size: 18px; }
+.hmteamreview-section { background: #f7882f; }
+.hm-promotions { background: #f7882f; }
+
+.hm-services .slick-prev, .hm-services .slick-next {
+	top: auto;
+}
+.hmpromoplanlist.owl-carousel .owl-nav {
+	top: auto;
+}
+.hm-meet-the-team .main-title h2 {
+	text-align: center;
+}
+.team-row-slider {
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	max-width: fit-content;
+	margin: auto;
+}
+.banner .item.banner-info.banneritem3 .banner-text, .banner .item.banner-info.banneritem5 .banner-text , .banner .item.banner-info.banneritem7 .banner-text, .banner .item.banner-info.banneritem8 .banner-text {
+	max-width: 350px;
+}
+.hm-about-us .about-area img {
+	object-position: top;
+}
+.gallery-slider.owl-carousel .owl-nav {
+	top: auto;
+}
+.hmpartnerlogolist.owl-carousel .owl-nav {
+	top: auto;
+}
+.banneritem1 .banner-text {max-width: 450px;}
+.banneritem1 .banner-text h2 {font-size: 34px;}
+.pricedate-flex {gap: 20px;}
+.advantagessetion {padding-bottom: 40px;}
+
+.advantagessetion .hmadvantagebox {
+	height: 470px;
+}
+}
+
+@media only screen and (max-width: 767.98px) {
+.page-id-3895 .faqspage-section h2 {
+    font-size: 24px;
+}
+.row.what-is-the-alberta {
+    padding: 0 25px;
+}
+.how-meadows-view, .extracontentsection.insurance-coverage {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row.what-is-the-alberta, .extracontentsection.insurance-coverage .extraseccontent .row {
+    flex-direction: column-reverse;
+    row-gap: 25px;
+}
+.dental-services-guided .item .servcontent-box {
+    min-height: auto;
+    max-width: 437px;
+    margin: auto;
+}
+.how-meadows-view .icons-section .item {
+    max-width: 360px;
+    min-height: auto;
+}
+.row.what-is-the-alberta img, .extracontentsection.insurance-coverage img {
+    max-width: 480px;
+    width: 245px;
+}
+.row.what-is-the-alberta ul, .extracontentsection.insurance-coverage ul {
+    max-width: max-content;
+    margin: auto;
+}
+.row.what-is-the-alberta h2, .row.what-is-the-alberta .col-sm-12.col-md-6, .extracontentsection.insurance-coverage h2, .extracontentsection.insurance-coverage .col-sm-12.col-md-6 {
+    text-align: center;
+}
+.extracontentsection.plans-we-accept ul li {
+    width: 100%;
+}
+.nearbooksec {
+	padding: 30px 0;
+}
+.nearbydrsec .row .col-md-3 {
+	padding-bottom: 20px;
+}
+.nearbydrsec {
+	padding: 30px 15px;
+}
+.nearbyfull-content {
+	padding-top: 20px;
+}
+.nearbyfull-section {
+	padding: 30px 0;
+}
+.nearbybox-section {padding: 30px 0;}
+#custompopup .modal-dialog {padding: 0 15px;}
+.banner .banner-info { background-position: right center; }
+.about-ytvideo iframe {width: 100%;}
+.bottom-desc h2 {margin-bottom: 20px;  font-size: 20px;}
+.banner .item.banner-info.banneritem9 .banner-main {position: unset;top: unset;}
+.reviews b {text-align: center !important;color: #fff;}
+.reviews ul {justify-content: center;}
+.banner .banner-info .reviews .bannerreview {font-size: 14px;line-height: 20px;}
+#banner-slider.owl-carousel .owl-nav [class*="owl-"] i {font-size: 15px;background: #fff;color: #324376;width: 25px;height: 25px;}
+#banner-slider .owl-nav {position: relative;bottom: 35px;left: 0;width: 100%;text-align: center;justify-content: center;gap: 12px;}
+.banner .banner-text {padding: 15px 10px 40px;}
+#header .header-contact-info { width: 100%;  }
+.promo-box p { font-size: 12px; }
+.hm-promotions { margin-top:30px; }
+.footer-contact-row .row > div:last-child .item a { font-size: 13px; }
+.banner .item>img {
+    object-position: 100%;
+}
+.banner .item.banner-info.banneritem3 .banner-text , .banner .item.banner-info.banneritem3 .banner-text, .banner .item.banner-info.banneritem5 .banner-text , .banner .item.banner-info.banneritem7 .banner-text, .banner .item.banner-info.banneritem8 .banner-text {
+	max-width: 100%;
+}
+.inner-main-content h2, .inner-main-content h3 {
+	font-size: 22px;
+}
+.servicegreybox ul li {
+    width: 100%;
+}
+.servicegreybox {
+    padding: 15px;
+}
+.blog-pagination .page-numbers {
+	padding: 5px 10px;
+	margin: 5px 0;
+}
+.banneritem1 .banner-text {max-width: 100%;}
+.banneritem1 .banner-text h2 {font-size: 26px;}
+.bannerpromo-text span {color: #fff; margin: 6px 0; } 
+.pricedate-flex {justify-content: center; gap: 10px;} 
+.pricedate-flex strong, .pricedate-flex i {color: #fff; }
+
+.advantagessetion {padding-bottom: 30px;}
+
+.advantagessetion .hmadvantagebox {
+	height: 500px;
+}
+}
+
+@media screen and (max-width: 575.98px) {
+.extracontentsection.how-direct-insurance-billing .extraseccontent .col-md-12 {
+    padding: 45px 0;
+}
+.page-id-3865 .extracontentsection ul li {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+}
+.nearbybox-content {padding: 30px 20px; }
+#custompopup .modal-dialog {padding: 0 10px;}
+.header-promo .item:nth-child(3) { order: 3; }
+.header-promo .item:nth-child(4) { order: 4; }
+.why_choose_inner_main .item { width:100%; }
+.footer-contact-row .row > div:nth-child(2), .footer-contact-row .row > div:nth-child(3)  { width:100%; }
+.footer-contact-row .row > div:last-child  { width:100%; }
+.banner .item>img {
+    height: 350px;
+}
+.copyright a {
+    margin: 0px 15px;
+}
+.hm-services .tabs .tab-link img {
+    height: 100px;
+}
+.advantagessetion .hmadvantagebox {
+	height: 410px;
+}
+}
+
+@media screen and (max-width: 479.98px) {
+.extracontentsection.newnearloc.no-banner h2 {
+	font-size: 22px;
+}
+.banner .banner-info .reviews .bannerreview {font-size: 12px;line-height: 18px;}
+}
+
+@media screen and (max-width: 400.98px) {
+.extracontentsection.newnearloc.no-banner h2 {
+	font-size: 20px;
+}
+} </style>
+<style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.20.3" data-wpr-features="wpr_delay_js wpr_minify_js wpr_lazyload_images wpr_lazyload_iframes wpr_preconnect_external_domains wpr_auto_preload_fonts wpr_automatic_lazy_rendering wpr_oci wpr_image_dimensions wpr_cache_webp wpr_minify_css wpr_preload_links wpr_desktop"><link href="https://www.googletagmanager.com" rel="preconnect"><link href="https://maps.googleapis.com" rel="preconnect"><link href="https://webform.adit.com" rel="preconnect"></head>
+<body class="wp-singular page-template page-template-template-parts page-template-default-template page-template-template-partsdefault-template-php page page-id-877 wp-theme-theme40  theme40 unknown wp-accessibility-helper accessibility-contrast_mode_on wah_fstype_script accessibility-underline-setup accessibility-location-left">
+      <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCP2NW6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->    <div id="wrapper">
+    <!-- Header Area -->
+        <header id="header">
+
+                      <div class="header-top">
+         <div class="container">
+          <div class="row">
+           <div class="col-md-12 top-header">
+                        <div class="header-contact-info">
+                            <div class="address">
+                <a href="https://www.google.com/maps/place/Meadows+View+Dental/@50.9777928,-114.0494859,17z/data=!4m12!1m6!3m5!1s0x537171fd70810a5d:0x831ff7cd0f7c77c4!2sMeadows+View+Dental!8m2!3d50.9777894!4d-114.0472972!3m4!1s0x537171fd70810a5d:0x831ff7cd0f7c77c4!8m2!3d50.9777894!4d-114.0472972?hl=en" class="icon-box" target="_blank"><i class="fas fa-map-marker-alt"></i><span>120-8400 Blackfoot Trail, SE Calgary, AB, T2J 7E1</span>
+                </a>
+              </div>
+                                    <div class="contact-info">
+              <a href="tel:403-764-9722" class="icon-box"><i class="fas fa-phone-alt"></i><span>403-764-9722</span></a>
+            </div>
+                              <ul class="social-media">
+            <li><a href="https://www.linkedin.com/company/meadows-view-dental" target="_blank" title="linkedin"> <i class="fab fa-linkedin-in"></i></a></li><li><a href="https://www.facebook.com/MeadowsViewDental" target="_blank" title="facebook"> <i class="fab fa-facebook-f"></i></a></li><li><a href="https://www.instagram.com/meadowsviewdental/" target="_blank" title="instagram"> <i class="fab fa-instagram"></i></a></li><li><a href="https://www.youtube.com/@meadowsviewdental7403" target="_blank" title="youtube"> <i class="fab fa-youtube"></i></a></li>         </ul>
+            </div>
+          <div class="header-btn"> 
+   <a href="tel:403-764-9722" class="btn eme-btn"><span class="image"><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/Icon.png" width="29" height="33" alt="Dental Emergency"></span><div class="content"><p>Dental Emergency</p><hr><p class="small">Call Now</p></div></a> 
+          <a class="btn" href="https://www.meadowsviewdental.com/book-an-appointment/">Book Appointment</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+ <div class="row">
+  <div class="col-md-12">
+    <div class="header-main">
+             <div class="logo">
+        <a href="https://www.meadowsviewdental.com/" title="Meadows View Dental">
+          <img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/Meadows-View-Dental.webp" height="49" width="226" alt="Meadows View Dental">
+        </a>
+      </div>
+         <div class="header-menu">
+    
+    <nav id="mainNav" class="mainNavigation" aria-label="Main Navigation">
+      <a class="menu-icon" href="#" title="Menu"><i class="fa fa-bars"></i><span>Menu</span></a>
+      <div class="menuPart cf">
+       <div class="menu-top-menu-container"><ul id="nav" class="cf"><li id="menu-item-904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-904"><a href="https://www.meadowsviewdental.com/">Home</a></li>
+<li id="menu-item-905" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-905"><a href="#">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-1115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1115"><a href="https://www.meadowsviewdental.com/meet-the-team/">Meet The Team</a></li>
+	<li id="menu-item-914" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-877 current_page_item menu-item-914"><a href="https://www.meadowsviewdental.com/tour-our-office/" aria-current="page">Tour Our Office</a></li>
+	<li id="menu-item-3484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3484"><a href="https://www.meadowsviewdental.com/our-events/">Our Events</a></li>
+	<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907"><a href="https://www.meadowsviewdental.com/advance-technology/">Advance Technology</a></li>
+	<li id="menu-item-3483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3483"><a href="https://www.meadowsviewdental.com/amenities/">Amenities</a></li>
+</ul>
+</li>
+<li id="menu-item-1535" class="full-megamenu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1535"><a href="#">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-3547" class="megamenu-title menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-3547"><a href="https://www.meadowsviewdental.com/service/general-dentistry/">General Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3545" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3545"><a href="https://www.meadowsviewdental.com/service/family-dentistry/">Family Dentistry</a></li>
+		<li id="menu-item-3543" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3543"><a href="https://www.meadowsviewdental.com/service/exams-cleanings/">Exams &amp; Cleanings</a></li>
+		<li id="menu-item-3557" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3557"><a href="https://www.meadowsviewdental.com/service/sealants/">Sealants</a></li>
+		<li id="menu-item-3558" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3558"><a href="https://www.meadowsviewdental.com/service/sedation-dentistry/">Sedation Dentistry</a></li>
+		<li id="menu-item-3548" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3548"><a href="https://www.meadowsviewdental.com/service/guards-bite-appliances/">Guards &amp; Bite Appliances</a></li>
+		<li id="menu-item-3552" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3552"><a href="https://www.meadowsviewdental.com/service/oral-cancer-screenings/">Oral Cancer Screenings</a></li>
+		<li id="menu-item-3542" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3542"><a href="https://www.meadowsviewdental.com/service/emergency-dentistry/">Emergency Dentistry</a></li>
+		<li id="menu-item-3562" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3562"><a href="https://www.meadowsviewdental.com/service/wisdom-teeth-removal/">Wisdom Teeth Removal</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3539" class="megamenu-title menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-3539"><a href="https://www.meadowsviewdental.com/service/cosmetic-dentistry/">Cosmetic Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3561" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3561"><a href="https://www.meadowsviewdental.com/service/veneers/">Veneers</a></li>
+		<li id="menu-item-3538" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3538"><a href="https://www.meadowsviewdental.com/service/contouring-bonding/">Contouring &amp; Bonding</a></li>
+		<li id="menu-item-3559" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3559"><a href="https://www.meadowsviewdental.com/service/teeth-whitening/">Teeth Whitening</a></li>
+		<li id="menu-item-3551" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3551"><a href="https://www.meadowsviewdental.com/service/invisalign/">Invisalign</a></li>
+		<li id="menu-item-3563" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3563"><a href="https://www.meadowsviewdental.com/service/zoom-whitening/">ZOOM! Whitening</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3554" class="megamenu-title menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-3554"><a href="https://www.meadowsviewdental.com/service/restorative-dentistry/">Restorative Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3549" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3549"><a href="https://www.meadowsviewdental.com/service/implants/">Implants</a></li>
+		<li id="menu-item-3541" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3541"><a href="https://www.meadowsviewdental.com/service/dentures/">Dentures</a></li>
+		<li id="menu-item-3546" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3546"><a href="https://www.meadowsviewdental.com/service/fillings/">Fillings</a></li>
+		<li id="menu-item-3540" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3540"><a href="https://www.meadowsviewdental.com/service/crowns/">Crowns</a></li>
+		<li id="menu-item-3550" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3550"><a href="https://www.meadowsviewdental.com/service/inlays-onlays/">Inlays &amp; Onlays</a></li>
+		<li id="menu-item-3537" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3537"><a href="https://www.meadowsviewdental.com/service/bridges/">Bridges</a></li>
+		<li id="menu-item-3555" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3555"><a href="https://www.meadowsviewdental.com/service/root-canal-therapy/">Root Canal Therapy</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3553" class="megamenu-title menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-3553"><a href="https://www.meadowsviewdental.com/service/periodontics-dentistry/">Periodontics Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3544" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3544"><a href="https://www.meadowsviewdental.com/service/extractions/">Extractions</a></li>
+		<li id="menu-item-3556" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3556"><a href="https://www.meadowsviewdental.com/service/scaling-and-root-planing/">Scaling and Root Planing</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3560" class="megamenu-title menu-item menu-item-type-post_type menu-item-object-service menu-item-3560"><a href="https://www.meadowsviewdental.com/service/tmj-treatment/">TMJ Treatment</a></li>
+</ul>
+</li>
+<li id="menu-item-1473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1473"><a href="#">Patients</a>
+<ul class="sub-menu">
+	<li id="menu-item-913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-913"><a href="https://www.meadowsviewdental.com/first-dental-visit-process/">First Dental Visit Process</a></li>
+	<li id="menu-item-1073" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1073"><a href="https://www.meadowsviewdental.com/insurance-financing/">Insurance &amp; Financing</a></li>
+	<li id="menu-item-3862" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3862"><a href="https://www.meadowsviewdental.com/direct-insurance-billing/">Direct Insurance Billing</a></li>
+	<li id="menu-item-3894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3894"><a href="https://www.meadowsviewdental.com/alberta-dental-fee-guide/">Alberta Dental Fee Guide</a></li>
+	<li id="menu-item-3902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3902"><a href="https://www.meadowsviewdental.com/canadian-dental-care-plan/">Canadian Dental Care Plan (CDCP)</a></li>
+	<li id="menu-item-3482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3482"><a href="https://www.meadowsviewdental.com/patient-forms/">Patient Forms</a></li>
+	<li id="menu-item-915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-915"><a href="https://www.meadowsviewdental.com/blog/">Blog</a></li>
+	<li id="menu-item-1661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1661"><a href="https://www.meadowsviewdental.com/faqs/">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-911"><a href="https://www.meadowsviewdental.com/specials/">Specials</a></li>
+<li id="menu-item-916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-916"><a href="https://www.meadowsviewdental.com/contact-us/">Contact Us</a></li>
+</ul></div>     </div>
+   </nav>
+ </div>
+</div>
+</div>
+</div>
+</div> 
+<div class="header-promo">
+  <div class="container">
+    <div class="row">
+      <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div class="promo-box">
+          <span><a href="https://www.meadowsviewdental.com/book-an-appointment/">FREE Electric Toothbrush</a></span>
+          <p>(New Patient Exam and X-rays &amp; cleaning)</p>
+        </div>
+      </div>
+      <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div class="promo-box">
+          <span><a href="https://www.meadowsviewdental.com/book-an-appointment/">FREE Whitening Kit</a></span>
+          <p>(Alternative offer for new patients)</p>
+        </div>
+      </div>
+      <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div class="promo-box">
+          <span><a href="https://www.meadowsviewdental.com/book-an-appointment/">Now Offering Zoom Whitening!</a></span>
+        </div>
+      </div>
+      <div class="item col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div class="promo-box">
+          <span><a href="https://www.meadowsviewdental.com/book-an-appointment/">FREE Parking</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+<!-- End Header -->
+<!-- Content Area -->
+<main id="container">
+  <div class="inner-main">
+<div class="inner-middle-area">
+                  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="inner-main-content gallery-main ptb-100">
+                    <div class="inner-title">
+                         
+            <h1>Tour Our Office</h1>
+                                              </div>
+                                                  <div class="gallery-section">
+            <div class="row">
+                                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery24.webp">
+                  <img fetchpriority="high" src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery24-416x278.webp" alt="tour our dental office" width="416" height="278">
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery25.webp">
+                  <img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery25-416x278.webp" alt="tour our dental clinic" width="416" height="278">
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery26.webp">
+                  <img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery26-416x278.webp" alt="patient undergoing treatment" width="416" height="278">
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery27.webp">
+                  <img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery27-416x278.webp" alt="tour dental clinic" width="416" height="278">
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery28.webp">
+                  <img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery28-416x278.webp" alt="tour our dental office" width="416" height="278">
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery4.webp">
+                  <img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery4-416x278.webp" alt="dental clinic tour" width="416" height="278">
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery5.webp">
+                  <img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery5-416x278.webp" alt="tour our clinic" width="416" height="278">
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery7.webp">
+                  <img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery7-416x278.webp" alt="tour our clinic" width="416" height="278">
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery.webp">
+                  <img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery-416x278.webp" alt="Tour our office" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery-416x278.webp" data-ll-status="loaded" class="entered lazyloaded"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery-416x278.webp" alt="Tour our office" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="Tour our office" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery-416x278.webp" alt="Tour our office" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery11.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="dental clinic tour" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery11-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery11-416x278.webp" alt="dental clinic tour" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery12.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="our dental euipment" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery12-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery12-416x278.webp" alt="our dental euipment" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery13.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="dental euipment" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery13-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery13-416x278.webp" alt="dental euipment" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery16.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="dental treatment" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery16-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery16-416x278.webp" alt="dental treatment" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery17.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="Tour our office" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery17-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery17-416x278.webp" alt="Tour our office" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery18.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="dental clinic tour" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery18-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery18-416x278.webp" alt="dental clinic tour" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery19.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="Tour our office" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery19-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery19-416x278.webp" alt="Tour our office" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery20.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="tour dental clinic" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery20-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery20-416x278.webp" alt="tour dental clinic" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery22.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="tour our clinic" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery22-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery22-416x278.webp" alt="tour our clinic" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery23.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="tour our office" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery23-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery23-416x278.webp" alt="tour our office" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery8.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="dental office view" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery8-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery8-416x278.webp" alt="dental office view" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery6.jpg">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="dental clinic tour" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery6-416x278.jpg"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery6-416x278.jpg" alt="dental clinic tour" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery21.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="dental clinic view" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery21-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery21-416x278.webp" alt="dental clinic view" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery14.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="dental clinic tour" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery14-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery14-416x278.webp" alt="dental clinic tour" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery3.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="tour our office" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery3-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery3-416x278.webp" alt="tour our office" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery2.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="tour our office" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery2-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery2-416x278.webp" alt="tour our office" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery15.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="our office tour" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery15-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery15-416x278.webp" alt="our office tour" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery10.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="dental clinic tour" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery10-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery10-416x278.webp" alt="dental clinic tour" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="media-thumb mfpgallery">                     
+                  <a href="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery9.webp">
+                  <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20416%20278'%3E%3C/svg%3E" alt="dental office view" width="416" height="278" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery9-416x278.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/gallery9-416x278.webp" alt="dental office view" width="416" height="278"></noscript>
+                  </a>
+                </div>
+              </div>
+                                                      </div>
+          </div>
+                            </div>
+      </div>
+    </div>
+  </div>
+                    </div>
+  </div>
+</main></div>
+
+<footer data-wpr-lazyrender="1">
+  <div class="our-location ptb-100">
+     <div class="container">
+        <div class="main-title">
+              <h2 data-aos="fade-down" class="hm-extra-title aos-init aos-animate">Services Area</h2>
+          </div>
+          <ul>
+        <li><a href="https://www.meadowsviewdental.com/dentist-near-acadia/">Acadia</a></li>
+        <li><a href="https://www.meadowsviewdental.com/dentist-near-riverbend/">Riverbend</a></li>
+        <li><a href="https://www.meadowsviewdental.com/dentist-near-fairview/">Fairview</a></li>
+        <li><a href="https://www.meadowsviewdental.com/dentist-near-ogden/">Ogden</a></li>
+        <li><a href="https://www.meadowsviewdental.com/dentist-near-kingsland/">Kingsland</a></li>
+        <li><a href="https://www.meadowsviewdental.com/dentist-near-willow-park/">Willow Park</a></li>
+        <li><a href="https://www.meadowsviewdental.com/dentist-near-maple-ridge/">Maple Ridge</a></li>
+        <li><a href="https://www.meadowsviewdental.com/dentist-near-haysboro/">Haysboro</a></li>
+          </ul>
+     </div>
+  </div>
+    
+    <div class="bookrowfooter">
+                  <div data-bg="https://www.meadowsviewdental.com/wp-content/uploads/2025/10/Book-An-Appointment-BG.jpg" class="bookappfooter ptb-100 rocket-lazyload" style="">
+  <div class="container">
+    <div class="row">     
+                      <div class="col-lg-7 col-md-12">
+                        <div class="footer-bookappform">
+                            <div class="main-title">
+                 
+                <h2>Book An Appointment</h2>
+                                              </div>
+                            <div class="footerbookform">
+                <div class="row">
+                                                      <span class="subtitleformnote">* Fields with asterisks are required.</span>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi5TAg-C-ZMhS72S9eEsS5Waw8UYmE0Vo&amp;sensor=false&amp;ver=3.0.0&amp;sensor=false"></script><aditappform id="aditAppWebForm_0b56ec4b-7630-4334-89e6-c0a3774d22f4"></aditappform><script type="rocketlazyloadscript" data-rocket-type="text/javascript" defer="" data-rocket-src="//webform.adit.com/webform/embed/0b56ec4b-7630-4334-89e6-c0a3774d22f4" data-role="form"></script>                                  </div>
+              </div>
+            </div>
+          </div>
+          
+                              <div class="col-lg-5 col-md-12">
+            <div class="footer-hours">
+                
+              <div class="main-title">
+                                <h2>Working Hours</h2>
+                                              </div>
+                                          <ul>
+                   
+                <li>
+                  <div class="day">Monday</div>
+                  <div class="time">10 AM - 5 PM* </div>
+                </li>
+                   
+                <li>
+                  <div class="day">(For Appointment Booking Only)</div>
+                  <div class="time"></div>
+                </li>
+                   
+                <li>
+                  <div class="day">Tuesday</div>
+                  <div class="time">11 AM - 7 PM </div>
+                </li>
+                   
+                <li>
+                  <div class="day">Wednesday</div>
+                  <div class="time">9 AM  - 4 PM </div>
+                </li>
+                   
+                <li>
+                  <div class="day">Thursday</div>
+                  <div class="time">12 AM - 8 PM </div>
+                </li>
+                   
+                <li>
+                  <div class="day">Friday</div>
+                  <div class="time">9 AM  - 4 PM </div>
+                </li>
+                   
+                <li>
+                  <div class="day">Saturday</div>
+                  <div class="time">9 AM  - 4 PM </div>
+                </li>
+                   
+                <li>
+                  <div class="day">Sunday</div>
+                  <div class="time">Closed</div>
+                </li>
+                                              </ul>
+                          </div>
+          </div>
+                    
+        </div>
+      </div>
+    </div>    
+  </div>
+  
+      <div class="footer-contact-row ptb-100">
+    <div class="container">
+      <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div class="item footaddresscol">
+            <div class="icon-box">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="icon-addr-box">
+              <a href="https://www.google.com/maps/place/Meadows+View+Dental/@50.9777928,-114.0494859,17z/data=!4m12!1m6!3m5!1s0x537171fd70810a5d:0x831ff7cd0f7c77c4!2sMeadows+View+Dental!8m2!3d50.9777894!4d-114.0472972!3m4!1s0x537171fd70810a5d:0x831ff7cd0f7c77c4!8m2!3d50.9777894!4d-114.0472972?hl=en" target="blank">120-8400 Blackfoot Trail, SE Calgary, AB, T2J 7E1</a>
+            </div>
+          </div>
+        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div class="item">
+            <div class="icon-box">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <a href="tel:403-764-9722">403-764-9722</a>
+          </div>
+        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div class="item">
+            <div class="icon-box">
+              <i class="fas fa-fax"></i>
+            </div>
+            <p>403-764-9721</p>
+          </div>
+        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div class="item">
+            <div class="icon-box">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </div>
+            <a href="mailto:info@meadowsviewdental.com">info@meadowsviewdental.com</a>
+          </div>
+        </div>
+              </div>
+    </div>
+  </div>
+    
+  <div class="footer-bottom">
+      
+  <div class="footer-links">
+  <div class="container">
+  <div class="row">
+
+
+      <div class="col-xl-6 col-lg-12 col-md-12">
+      <div class="footer-menu">
+      <div class="row">
+       
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 ftrmenu-col">
+                                              <h3>Useful Links</h3>
+                                    <div class="menu-about-us-menu-container"><ul id="menu-about-us-menu" class="footer-menu"><li id="menu-item-1349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1349"><a href="https://www.meadowsviewdental.com/meet-the-team/">Meet The Team</a></li>
+<li id="menu-item-930" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-877 current_page_item menu-item-930"><a href="https://www.meadowsviewdental.com/tour-our-office/" aria-current="page">Tour Our Office</a></li>
+<li id="menu-item-3624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3624"><a href="https://www.meadowsviewdental.com/our-events/">Our Events</a></li>
+<li id="menu-item-3623" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3623"><a href="https://www.meadowsviewdental.com/insurance-financing/">Insurance &amp; Financing</a></li>
+<li id="menu-item-3621" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3621"><a href="https://www.meadowsviewdental.com/advance-technology/">Advance Technology</a></li>
+<li id="menu-item-3625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3625"><a href="https://www.meadowsviewdental.com/patient-forms/">Patient Forms</a></li>
+<li id="menu-item-929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-929"><a href="https://www.meadowsviewdental.com/blog/">Blog</a></li>
+<li id="menu-item-3626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3626"><a href="https://www.meadowsviewdental.com/specials/">Specials</a></li>
+<li id="menu-item-3622" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3622"><a href="https://www.meadowsviewdental.com/contact-us/">Contact Us</a></li>
+</ul></div>
+                                                <ul class="footer-social-media">
+              <li><a href="https://www.linkedin.com/company/meadows-view-dental" target="_blank" title="linkedin"> <i class="fab fa-linkedin-in"></i></a></li><li><a href="https://www.facebook.com/MeadowsViewDental" target="_blank" title="facebook"> <i class="fab fa-facebook-f"></i></a></li><li><a href="https://www.instagram.com/meadowsviewdental/" target="_blank" title="instagram"> <i class="fab fa-instagram"></i></a></li><li><a href="https://www.youtube.com/@meadowsviewdental7403" target="_blank" title="youtube"> <i class="fab fa-youtube"></i></a></li>            </ul>
+                      </div>
+          
+
+                              <div class="col-lg-8 col-md-12 col-sm-12 ftrservicemenucol">
+                                        <h3>Our Services</h3>
+                                          <div class="menu-services-menu-container"><ul id="menu-services-menu" class="footer-service-menu"><li id="menu-item-3594" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3594"><a href="https://www.meadowsviewdental.com/service/bridges/">Bridges</a></li>
+<li id="menu-item-3595" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3595"><a href="https://www.meadowsviewdental.com/service/contouring-bonding/">Contouring &amp; Bonding</a></li>
+<li id="menu-item-3596" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3596"><a href="https://www.meadowsviewdental.com/service/cosmetic-dentistry/">Cosmetic Dentistry</a></li>
+<li id="menu-item-3597" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3597"><a href="https://www.meadowsviewdental.com/service/crowns/">Crowns</a></li>
+<li id="menu-item-3598" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3598"><a href="https://www.meadowsviewdental.com/service/dentures/">Dentures</a></li>
+<li id="menu-item-3599" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3599"><a href="https://www.meadowsviewdental.com/service/emergency-dentistry/">Emergency Dentistry</a></li>
+<li id="menu-item-3600" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3600"><a href="https://www.meadowsviewdental.com/service/exams-cleanings/">Exams &amp; Cleanings</a></li>
+<li id="menu-item-3601" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3601"><a href="https://www.meadowsviewdental.com/service/extractions/">Extractions</a></li>
+<li id="menu-item-3602" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3602"><a href="https://www.meadowsviewdental.com/service/family-dentistry/">Family Dentistry</a></li>
+<li id="menu-item-3603" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3603"><a href="https://www.meadowsviewdental.com/service/fillings/">Fillings</a></li>
+<li id="menu-item-3604" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3604"><a href="https://www.meadowsviewdental.com/service/general-dentistry/">General Dentistry</a></li>
+<li id="menu-item-3606" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3606"><a href="https://www.meadowsviewdental.com/service/implants/">Implants</a></li>
+<li id="menu-item-3607" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3607"><a href="https://www.meadowsviewdental.com/service/inlays-onlays/">Inlays &amp; Onlays</a></li>
+<li id="menu-item-3608" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3608"><a href="https://www.meadowsviewdental.com/service/invisalign/">Invisalign</a></li>
+<li id="menu-item-3609" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3609"><a href="https://www.meadowsviewdental.com/service/oral-cancer-screenings/">Oral Cancer Screenings</a></li>
+<li id="menu-item-3610" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3610"><a href="https://www.meadowsviewdental.com/service/periodontics-dentistry/">Periodontics Dentistry</a></li>
+<li id="menu-item-3611" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3611"><a href="https://www.meadowsviewdental.com/service/restorative-dentistry/">Restorative Dentistry</a></li>
+<li id="menu-item-3612" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3612"><a href="https://www.meadowsviewdental.com/service/root-canal-therapy/">Root Canal Therapy</a></li>
+<li id="menu-item-3613" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3613"><a href="https://www.meadowsviewdental.com/service/scaling-and-root-planing/">Scaling and Root Planing</a></li>
+<li id="menu-item-3614" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3614"><a href="https://www.meadowsviewdental.com/service/sealants/">Sealants</a></li>
+<li id="menu-item-3615" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3615"><a href="https://www.meadowsviewdental.com/service/sedation-dentistry/">Sedation Dentistry</a></li>
+<li id="menu-item-3616" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3616"><a href="https://www.meadowsviewdental.com/service/teeth-whitening/">Teeth Whitening</a></li>
+<li id="menu-item-3617" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3617"><a href="https://www.meadowsviewdental.com/service/tmj-treatment/">TMJ Treatment</a></li>
+<li id="menu-item-3618" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3618"><a href="https://www.meadowsviewdental.com/service/veneers/">Veneers</a></li>
+<li id="menu-item-3619" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3619"><a href="https://www.meadowsviewdental.com/service/wisdom-teeth-removal/">Wisdom Teeth Removal</a></li>
+<li id="menu-item-3620" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3620"><a href="https://www.meadowsviewdental.com/service/zoom-whitening/">ZOOM! Whitening</a></li>
+<li id="menu-item-3605" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3605"><a href="https://www.meadowsviewdental.com/service/guards-bite-appliances/">Guards &amp; Bite Appliances</a></li>
+</ul></div>
+                          </div>
+            
+
+          </div>
+        </div>
+      </div>
+      
+                  <div class="col-xl-6 col-lg-12 col-md-12">
+                  <div class="footer-map">
+            <iframe title="Meadows View Dental Map" src="about:blank" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.0756245646176!2d-114.04948588482262!3d50.97779275710832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537171fd70810a5d%3A0x831ff7cd0f7c77c4!2sMeadows%20View%20Dental!5e0!3m2!1sen!2sin!4v1616683048622!5m2!1sen!2sin"></iframe><noscript><iframe title="Meadows View Dental Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.0756245646176!2d-114.04948588482262!3d50.97779275710832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537171fd70810a5d%3A0x831ff7cd0f7c77c4!2sMeadows%20View%20Dental!5e0!3m2!1sen!2sin!4v1616683048622!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></noscript>          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+    
+    <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="copyright">
+            ©2026&nbsp;Meadows View Dental | <a href="https://www.meadowsviewdental.com/privacy-policy/">Privacy Policy</a> | Web Design, Digital Marketing &amp; SEO By <a class="aditlink" href="https://adit.com" target="_blank" title="Adit" rel="nofollow">Adit</a>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="foothinbanner">
+    <div class="container">
+      <p>All services are performed by a general dentist!</p>
+    </div>
+  </div>
+
+  </div>
+  
+  </footer>
+
+  
+    
+        <div class="mobilefootcall  mobiletwobtn">
+        <a class="mobilecallnow" href="tel:403-764-9722"><i class="fas fa-phone-alt"></i>
+    Call Now    </a>
+              <a class="mobilebookbtn" href="https://www.meadowsviewdental.com/book-an-appointment/">
+        Book Now      </a>
+      </div>
+  
+  
+  
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/theme40/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+
+<div id="wp_access_helper_container" class="accessability_container dark_theme">
+	<!-- WP Accessibility Helper (WAH) - https://wordpress.org/plugins/wp-accessibility-helper/ -->
+	<!-- Official plugin website - https://accessibility-helper.co.il -->
+		<button type="button" class="wahout aicon_link" accesskey="z" aria-label="Accessibility Helper sidebar" title="Accessibility Helper sidebar">
+		<img width="48" height="48" src="https://www.meadowsviewdental.com/wp-content/plugins/wp-accessibility-helper/assets/images/accessibility-48.jpg" alt="Accessibility" class="aicon_image">
+	</button>
+
+
+	<div id="access_container" aria-hidden="true">
+		<button tabindex="-1" type="button" class="close_container wahout" accesskey="x" aria-label="Close" title="Close">
+			Close		</button>
+
+		<div class="access_container_inner">
+			<div class="a_module wah_font_resize">
+
+            <div class="a_module_title">Font Resize</div>
+
+            <div class="a_module_exe font_resizer">
+
+                <button type="button" class="wah-action-button smaller wahout" title="smaller font size" aria-label="smaller font size">A-</button>
+
+                <button type="button" class="wah-action-button larger wahout" title="larger font size" aria-label="larger font size">A+</button><button type="button" class="wah-action-button wah-font-reset wahout" title="Reset font size" aria-label="Reset font size">Reset font size</button>
+
+            </div>
+
+        </div><div class="a_module wah_keyboard_navigation">
+
+            <div class="a_module_exe">
+
+                <button type="button" class="wah-action-button wahout wah-call-keyboard-navigation" aria-label="Keyboard navigation" title="Keyboard navigation">Keyboard navigation</button>
+
+            </div>
+
+        </div><div class="a_module wah_readable_fonts">
+
+            <div class="a_module_exe readable_fonts">
+
+                <button type="button" class="wah-action-button wahout wah-call-readable-fonts" aria-label="Readable Font" title="Readable Font">Readable Font</button>
+
+            </div>
+
+        </div>
+			<div class="a_module">
+
+				<div class="a_module_title">Contrast</div>
+
+				<div class="a_module_exe">
+
+					<button type="button" id="contrast_trigger" class="contrast_trigger wah-action-button wahout wah-call-contrast-trigger">
+
+						Choose color
+					</button>
+
+					<div class="color_selector" aria-hidden="true">
+
+						
+							
+								<button type="button" class="convar wahout wahcolor" style="background:#FFFFFF !important" data-bgcolor="#FFFFFF" data-color="#000000" title="White">
+
+									<span class="wah-screen-reader-text">White</span>
+
+								</button>
+
+							
+								<button type="button" class="convar wahout wahcolor" style="background:#000000 !important" data-bgcolor="#000000" data-color="#FFFFFF" title="Black">
+
+									<span class="wah-screen-reader-text">Black</span>
+
+								</button>
+
+							
+						
+					</div>
+
+				</div>
+
+			</div>
+
+		<div class="a_module wah_underline_links">
+
+            <div class="a_module_exe">
+
+                <button type="button" class="wah-action-button wahout wah-call-underline-links" aria-label="Underline links" title="Underline links">Underline links</button>
+
+            </div>
+
+        </div><div class="a_module wah_highlight_links">
+
+            <div class="a_module_exe">
+
+                <button type="button" class="wah-action-button wahout wah-call-highlight-links" aria-label="Highlight Links" title="Highlight Links">Highlight Links</button>
+
+            </div>
+
+        </div><div class="a_module wah_clear_cookies">
+
+            <div class="a_module_exe">
+
+                <button type="button" class="wah-action-button wahout wah-call-clear-cookies" aria-label="Reset" title="Reset">Reset</button>
+
+            </div>
+
+        </div><div class="a_module wah_greyscale">
+
+            <div class="a_module_exe">
+
+                <button type="button" id="greyscale" class="greyscale wah-action-button wahout wah-call-greyscale" aria-label="Images Greyscale" title="Images Greyscale">Images Greyscale</button>
+
+            </div>
+
+        </div><div class="a_module wah_invert">
+
+            <div class="a_module_exe">
+
+                <button type="button" class="wah-action-button wahout wah-call-invert" aria-label="Invert Colors" title="Invert Colors">Invert Colors</button>
+
+            </div>
+
+        </div>			
+	<button type="button" title="Close sidebar" class="wah-skip close-wah-sidebar">
+
+		Close
+	</button>
+
+			</div>
+	</div>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+	<style media="screen" type="text/css">
+
+
+
+		body #wp_access_helper_container button.aicon_link {
+
+
+
+			
+
+
+				top:146px !important;
+
+
+
+			
+
+
+			
+
+
+			
+
+
+			
+
+
+		}
+
+
+
+	</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<div class="wah-free-credits">
+
+		<div class="wah-free-credits-inner">
+
+			<a href="https://accessibility-helper.co.il/" target="_blank" title="Accessibility by WP Accessibility Helper Team">Accessibility by WAH</a>
+
+		</div>
+
+	</div>
+
+		<!-- WP Accessibility Helper. Created by Alex Volkov. -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <nav class="wah-skiplinks-menu">
+
+
+
+
+
+
+
+
+
+
+    <!-- WP Accessibility Helper - Skiplinks Menu -->
+
+
+
+
+
+
+
+
+
+
+    <ul id="menu-top-menu" class="wah-skipper"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-904"><a href="https://www.meadowsviewdental.com/">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-905"><a href="#">About</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1115"><a href="https://www.meadowsviewdental.com/meet-the-team/">Meet The Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-877 current_page_item menu-item-914"><a href="https://www.meadowsviewdental.com/tour-our-office/" aria-current="page">Tour Our Office</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3484"><a href="https://www.meadowsviewdental.com/our-events/">Our Events</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907"><a href="https://www.meadowsviewdental.com/advance-technology/">Advance Technology</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3483"><a href="https://www.meadowsviewdental.com/amenities/">Amenities</a></li>
+</ul>
+</li>
+<li class="full-megamenu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1535"><a href="#">Services</a>
+<ul class="sub-menu">
+	<li class="megamenu-title menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-3547"><a href="https://www.meadowsviewdental.com/service/general-dentistry/">General Dentistry</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3545"><a href="https://www.meadowsviewdental.com/service/family-dentistry/">Family Dentistry</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3543"><a href="https://www.meadowsviewdental.com/service/exams-cleanings/">Exams &amp; Cleanings</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3557"><a href="https://www.meadowsviewdental.com/service/sealants/">Sealants</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3558"><a href="https://www.meadowsviewdental.com/service/sedation-dentistry/">Sedation Dentistry</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3548"><a href="https://www.meadowsviewdental.com/service/guards-bite-appliances/">Guards &amp; Bite Appliances</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3552"><a href="https://www.meadowsviewdental.com/service/oral-cancer-screenings/">Oral Cancer Screenings</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3542"><a href="https://www.meadowsviewdental.com/service/emergency-dentistry/">Emergency Dentistry</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3562"><a href="https://www.meadowsviewdental.com/service/wisdom-teeth-removal/">Wisdom Teeth Removal</a></li>
+	</ul>
+</li>
+	<li class="megamenu-title menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-3539"><a href="https://www.meadowsviewdental.com/service/cosmetic-dentistry/">Cosmetic Dentistry</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3561"><a href="https://www.meadowsviewdental.com/service/veneers/">Veneers</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3538"><a href="https://www.meadowsviewdental.com/service/contouring-bonding/">Contouring &amp; Bonding</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3559"><a href="https://www.meadowsviewdental.com/service/teeth-whitening/">Teeth Whitening</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3551"><a href="https://www.meadowsviewdental.com/service/invisalign/">Invisalign</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3563"><a href="https://www.meadowsviewdental.com/service/zoom-whitening/">ZOOM! Whitening</a></li>
+	</ul>
+</li>
+	<li class="megamenu-title menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-3554"><a href="https://www.meadowsviewdental.com/service/restorative-dentistry/">Restorative Dentistry</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3549"><a href="https://www.meadowsviewdental.com/service/implants/">Implants</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3541"><a href="https://www.meadowsviewdental.com/service/dentures/">Dentures</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3546"><a href="https://www.meadowsviewdental.com/service/fillings/">Fillings</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3540"><a href="https://www.meadowsviewdental.com/service/crowns/">Crowns</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3550"><a href="https://www.meadowsviewdental.com/service/inlays-onlays/">Inlays &amp; Onlays</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3537"><a href="https://www.meadowsviewdental.com/service/bridges/">Bridges</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3555"><a href="https://www.meadowsviewdental.com/service/root-canal-therapy/">Root Canal Therapy</a></li>
+	</ul>
+</li>
+	<li class="megamenu-title menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-3553"><a href="https://www.meadowsviewdental.com/service/periodontics-dentistry/">Periodontics Dentistry</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3544"><a href="https://www.meadowsviewdental.com/service/extractions/">Extractions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3556"><a href="https://www.meadowsviewdental.com/service/scaling-and-root-planing/">Scaling and Root Planing</a></li>
+	</ul>
+</li>
+	<li class="megamenu-title menu-item menu-item-type-post_type menu-item-object-service menu-item-3560"><a href="https://www.meadowsviewdental.com/service/tmj-treatment/">TMJ Treatment</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1473"><a href="#">Patients</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-913"><a href="https://www.meadowsviewdental.com/first-dental-visit-process/">First Dental Visit Process</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1073"><a href="https://www.meadowsviewdental.com/insurance-financing/">Insurance &amp; Financing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3862"><a href="https://www.meadowsviewdental.com/direct-insurance-billing/">Direct Insurance Billing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3894"><a href="https://www.meadowsviewdental.com/alberta-dental-fee-guide/">Alberta Dental Fee Guide</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3902"><a href="https://www.meadowsviewdental.com/canadian-dental-care-plan/">Canadian Dental Care Plan (CDCP)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3482"><a href="https://www.meadowsviewdental.com/patient-forms/">Patient Forms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-915"><a href="https://www.meadowsviewdental.com/blog/">Blog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1661"><a href="https://www.meadowsviewdental.com/faqs/">FAQs</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-911"><a href="https://www.meadowsviewdental.com/specials/">Specials</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-916"><a href="https://www.meadowsviewdental.com/contact-us/">Contact Us</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+    <!-- WP Accessibility Helper - Skiplinks Menu -->
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="rocketlazyloadscript" data-rocket-src="https://www.meadowsviewdental.com/wp-content/plugins/wp-accessibility-helper/assets/js/wp-accessibility-helper.min.js?ver=1.0.0" id="wp-accessibility-helper-js"></script>
+<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.meadowsviewdental.com","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://www.meadowsviewdental.com/wp-content/themes/theme40/js/bootstrap.min.js" id="theme40-bootstrap-min-js-js"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/themes/theme40/js/functions.js?ver=1781846033" id="theme40-functions-js-js"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.meadowsviewdental.com/wp-content/cache/min/1/wp-content/themes/theme40/js/general.js?ver=1781846033" id="theme40-general-js-js"></script>
+<script src="https://www.meadowsviewdental.com/wp-content/themes/theme40/js/aos.js" id="theme40-aos-js-js"></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://www.meadowsviewdental.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img data-lazy-src="https://i.ytimg.com/vi_webp/ID/hqdefault.webp" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi_webp/ID/hqdefault.webp" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="Play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=["Pozative Reviews- Meadows View Dental South East Calgary","https:\/\/www.meadowsviewdental.com\/wp-content\/uploads\/2026\/01\/Banner.webp"];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi_webp/ID/hqdefault.webp'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script><script src="https://static.adit.com/js/locations/6a04fedd-ca00-4834-a692-3935aa4a4bb5/aditapp_number_change.js"></script>
+
+<!-- Modal Popup -->
+<div class="modal" id="custompopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="popup-image">
+        <a href="tel:403-764-9722">
+      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201080%20600'%3E%3C/svg%3E" width="1080" height="600" alt="Smile Brighter for Less" data-lazy-src="https://www.meadowsviewdental.com/wp-content/uploads/2026/05/Popup.webp"><noscript><img src="https://www.meadowsviewdental.com/wp-content/uploads/2026/05/Popup.webp" width="1080" height="600" alt="Smile Brighter for Less"></noscript>
+      </a>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script type="rocketlazyloadscript">
+document.addEventListener("DOMContentLoaded", function() {
+ var hasSeenPopup = sessionStorage.getItem("hasSeenCustomPopup");
+
+ if (!hasSeenPopup) {
+     jQuery('#custompopup').modal('show');
+   sessionStorage.setItem("hasSeenCustomPopup", "true");
+ }
+
+ jQuery('#custompopup .close').on('click', function() {
+   jQuery('#custompopup').modal('hide');
+   sessionStorage.setItem("hasSeenCustomPopup", "true");
+ });
+});
+</script>
+<!-- Modal Popup End -->
+
+
+<script type="rocketlazyloadscript">
+
+  $('.a_module .a_module_title').attr({'aria-label':'Contrast title','role':'button'});
+$('.a_module.wah_font_resize .a_module_title').attr({'aria-label':'Font resize title','role':'button'});
+$('.wah-free-credits a').attr({'aria-label':'Accessibility by WAH credits','role':'button'});
+$('.wah-skiplinks-menu ul').attr({'role':'menu'});
+$('.wah-skiplinks-menu ul li').attr({'role':'none'});
+$('.wah-skiplinks-menu ul li a').attr({'role':'menuitem'});
+$('footer').attr({'aria-label':'Footer Section'});
+$('.ui-datepicker-trigger').attr({'aria-label':'Open calendar'});
+
+</script>
+
+
+	        <span id="sexy_tooltip_title"><span class="the-tooltip top left dark-midnight-blue"><span class="tooltip_inner">Click to listen highlighted text!</span></span></span>
+	        <div id="sound_container" class="sound_div sound_div_basic size_1 speaker_32" title="" style=""><div id="sound_text"></div>
+	        </div><div id="sound_audio"></div>
+	        <script type="text/javascript">
+	        	var players = new Array(),
+	            	blink_timer = new Array(),
+	            	rotate_timer = new Array(),
+	            	lang_identifier = "en",
+	            	selected_txt = "",
+	            	sound_container_clicked = false,
+	            	sound_container_visible = true,
+	            	blinking_enable = true,
+	            	basic_plg_enable = true,
+	            	pro_container_clicked = false,
+	            	streamerphp_folder = "https://www.meadowsviewdental.com/wp-content/plugins/gspeech/",
+	            	translation_tool = "g",
+	            	//translation_audio_type = 'audio/x-wav',
+	            	translation_audio_type = 'audio/mpeg',
+	            	speech_text_length = "100",
+	            	blink_start_enable_pro = true,
+	            	createtriggerspeechcount = 0,
+					speechtimeoutfinal = 0,
+					speechtxt = "",
+	            	userRegistered = "0",
+	            	gspeech_bcp = ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
+			    	gspeech_cp = ["#111111","#3284c7","#fc0000","#0d7300","#ea7d00"],
+			    	gspeech_bca = ["#545454","#3284c7","#ff3333","#0f8901","#ea7d00"],
+			    	gspeech_ca = ["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],
+			    	gspeech_spop = ["90","80","90","90","70"],
+			    	gspeech_spoa = ["100","100","100","100","100"],
+			    	gspeech_animation_time = ["400","300","400","400","400"];
+	        </script>
+	        <script type="text/javascript" src="https://www.meadowsviewdental.com/wp-content/plugins/gspeech/includes/js/gspeech_pro.js?ver=3.19.3"></script>
+	        <script src="https://www.meadowsviewdental.com/wp-content/plugins/gspeech/includes/js/gspeech.js?ver=3.19.3"></script>
+	        <!--[if (gte IE 6)&(lte IE 8)]>
+			<script defer src="https://www.meadowsviewdental.com/wp-content/plugins/gspeech/includes/js/nwmatcher-1.2.4-min.js"></script>
+			<script defer src="https://www.meadowsviewdental.com/wp-content/plugins/gspeech/includes/js/selectivizr-min.js"></script>
+			<![endif]-->
+	        <style type="text/css">.gspeech_style_,.gspeech_style_1{background-color:#ffffff;color:#111111;}.gspeech_style_2{background-color:#ffffff;color:#3284c7;}.gspeech_style_3{background-color:#ffffff;color:#fc0000;}.gspeech_style_4{background-color:#ffffff;color:#0d7300;}.gspeech_style_5{background-color:#ffffff;color:#ea7d00;}</style>
+	        <style type="text/css">.gspeech_style_.active,.gspeech_style_1.active{background-color:#545454 !important;color:#ffffff !important;.gspeech_style_2.active{background-color:#3284c7 !important;color:#ffffff !important;.gspeech_style_3.active{background-color:#ff3333 !important;color:#ffffff !important;.gspeech_style_4.active{background-color:#0f8901 !important;color:#ffffff !important;.gspeech_style_5.active{background-color:#ea7d00 !important;color:#ffffff !important;</style>
+	        <style type="text/css">.sound_div_,.sound_div_1{opacity:0.9;filter: alpha(opacity = 90)}.sound_div_2{opacity:0.8;filter: alpha(opacity = 80)}.sound_div_3{opacity:0.9;filter: alpha(opacity = 90)}.sound_div_4{opacity:0.9;filter: alpha(opacity = 90)}.sound_div_5{opacity:0.7;filter: alpha(opacity = 70)}</style>
+	        <style type="text/css">
+	           ::selection {
+					background: #3284c7;
+					color: #ffffff;
+				}
+				::-moz-selection {
+					background: #3284c7;
+					color: #ffffff;
+				}
+	        </style>
+		
+
+</body></html>

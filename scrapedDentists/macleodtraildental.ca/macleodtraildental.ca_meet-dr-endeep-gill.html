@@ -1,0 +1,1996 @@
+<!DOCTYPE html><html lang="en-CA"><head>
+    <style>
+    html { font-size: 18px } body { font-family: "Source Sans Pro",sans-serif; color: #301C39; background-color: white; line-height: 1.6 } h1,h2,h3,h4,h5,h6 { font-weight: 400; margin-bottom: 1rem } h1 a,h2 a,h3 a,h4 a,h5 a,h6 a { border-bottom: 0 !important } h1 { font-size: 2rem; font-weight: 300; line-height: 2.66rem } h2 { font-size: 1.77rem; line-height: 2.44rem } h3 { font-size: 1.55rem; line-height: 2.22rem } h4 { font-size: 1.33rem; line-height: 2rem } h5 { font-size: 1.11rem; font-weight: 700; line-height: 1.66rem } .caption-text { font-size: .88rem; line-height: 1.33rem } a { color: #301C39; transition: .3s } p { line-height: 1.55rem; margin-bottom: 1.5rem } img { width: 100%; height: auto; max-width: 100% } .site-header { position: fixed; background-color: #fff; width: 100%; z-index: 60; top: 0; transition: .8s } .site-header .row { position: relative } .site-header .menu-col { text-align: right } .site-header .navbar { transition: 0.5s } .site-header.scrolling-down { top: -100% } .site-header.scrolling-down .navbar-top { opacity: 0; z-index: -1 } .site-header.scrolling-down .navbar-brand { margin-right: 0 } .site-header.scrolling-down .menu-main-menu-container { padding-top: 1.7rem } #page-wrapper { padding-top: 77px } .admin-bar .site-header,.admin-bar #page-wrapper { top: 46px } .main-nav>ul,.children { list-style: none } .navbar-top { display: none } .main-bar-row { align-items: center; width: 110% } .navbar { padding-top: .55rem; padding-bottom: .55rem; padding-left: 0; padding-right: 0 } .navbar .navbar-brand { position: relative; z-index: 98 } .navbar a { color: #301C39 } .navbar-toggler { position: relative; margin-right: 0; padding: 0; top: .4rem; width: 40px; height: 35px; z-index: 100 } .navbar-toggler span,.navbar-toggler:after,.navbar-toggler:before { background-color: #1853A3; border-radius: 4px; position: absolute; top: 12px; left: auto; right: 0; height: 6px; width: 40px; margin-top: -2px; transition: all .2s linear } .navbar-toggler:before,.navbar-toggler:after,.navbar-toggler span { content: '' } .navbar-toggler:before,.navbar-toggler:after { top: -0 } .navbar-toggler:after { top: 24px } .menu-main-menu-container { display: none } .menu-mobile-menu-container { position: fixed; background-color: #1853A3; visibility: hidden; opacity: 0; padding-top: 6.5rem; display: block; width: 100%; height: 100%; left: 0; bottom: 0; text-align: center; text-transform: uppercase; z-index: 100; transition-property: opacity, visibility; transition-duration: .4s, .4s; overflow-y: scroll } .menu-mobile-menu-container ul { padding: 0; margin: 0 } .menu-mobile-menu-container li { margin-bottom: 1rem } .menu-mobile-menu-container li a { font-size: .9rem; line-height: 1.35rem; font-weight: bold; color: white } .menu-mobile-menu-container li .sub-menu { max-height: 0px; overflow: hidden; transition: .3s } .menu-mobile-menu-container li .sub-menu li { margin-bottom: 0 } .menu-mobile-menu-container li .sub-menu li a { color: #fff; font-weight: 400 } .menu-mobile-menu-container li.menu-item-has-children { position: relative } .menu-mobile-menu-container li.menu-item-has-children>a { position: relative; display: inline-block } .menu-mobile-menu-container li.menu-item-has-children>a .submenu-toggle { display: inline-block; text-align: center; margin-left: .3rem } .menu-mobile-menu-container li.nav-button { position: fixed; bottom: 0; width: 100%; margin: 0; background-color: #fff } .menu-mobile-menu-container li.nav-button a { display: block; padding: .5rem 0; color: #301C39 }.home-page-banner { position: relative; overflow: hidden } .home-page-banner .image-block .image-wrap { position: relative; left: 50%; transform: translateX(-50%); margin-top: -3rem; height: 400px; width: 400px; overflow: hidden; border-radius: 50% } .home-page-banner .image-block .image-wrap img { position: relative; left: 50%; transform: translateX(-50%); width: 160%; max-width: none } .home-page-banner .content-container { padding: 1rem 0 2.5rem; text-align: center }.container { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto } .row { display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px } .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col,.col-auto,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm,.col-sm-auto,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-md,.col-md-auto,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg,.col-lg-auto,.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl,.col-xl-auto { position: relative; width: 100%; padding-right: 15px; padding-left: 15px }
+    .menu-mobile-menu-container.show {visibility: visible;opacity: 1;padding-bottom: 2.3rem;}.menu-mobile-menu-container.show .nav-link {color: $white;}.menu-mobile-menu-container.show .nav-link:hover { color: white; }.menu-mobile-menu-container.show .nav-link ~ .close {opacity: 1;}.menu-mobile-menu-container.show .nav-link ~ .close:hover { opacity: 1!important; }
+    @media(min-width:992px){html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}article,footer,header,main,nav,section{display:block}a{background-color:transparent}strong{font-weight:bold}h1{font-size:2em;margin:0.67em 0}img{border:0}svg:not(:root){overflow:hidden}button,input,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,input[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="radio"]{box-sizing:border-box;padding:0}textarea{overflow:auto}.bg-dark{background-color:#1853A3 !important}@media (min-width:992px){.d-lg-none{display:none !important}}.align-items-center{align-items:center !important}.mb-0{margin-bottom:0 !important}.m-auto{margin:auto !important}.mx-auto{margin-right:auto !important}.mx-auto{margin-left:auto !important}.text-center{text-align:center !important}.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem}@media (prefers-reduced-motion:reduce){}.btn-link{font-weight:400;color:#007bff;text-decoration:none}.card{position:relative;display:flex;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,0.125);border-radius:.25rem}.card-body{flex:1 1 auto;min-height:1px;padding:1.25rem}.card-header{padding:.75rem 1.25rem;margin-bottom:0;background-color:rgba(0,0,0,0.03);border-bottom:1px solid rgba(0,0,0,0.125)}.card-header:first-child{border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0}.accordion>.card{overflow:hidden}.accordion>.card:not(:last-of-type){border-bottom:0;border-bottom-right-radius:0;border-bottom-left-radius:0}.accordion>.card:not(:first-of-type){border-top-left-radius:0;border-top-right-radius:0}.accordion>.card>.card-header{border-radius:0;margin-bottom:-1px}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.row{display:flex;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-3,.col-4,.col-9,.col-10,.col-12,.col-md-3,.col-md-4,.col-md-5,.col-md-7,.col-md-8,.col-md-10,.col-lg-3,.col-lg-6,.col-lg-8,.col-lg-9,.col-lg-10{position:relative;width:100%;padding-right:15px;padding-left:15px}.col-3{flex:0 0 25%;max-width:25%}.col-4{flex:0 0 33.33333%;max-width:33.33333%}.col-9{flex:0 0 75%;max-width:75%}.col-10{flex:0 0 83.33333%;max-width:83.33333%}.col-12{flex:0 0 100%;max-width:100%}@media (min-width:768px){.col-md-3{flex:0 0 25%;max-width:25%}.col-md-4{flex:0 0 33.33333%;max-width:33.33333%}.col-md-5{flex:0 0 41.66667%;max-width:41.66667%}.col-md-7{flex:0 0 58.33333%;max-width:58.33333%}.col-md-8{flex:0 0 66.66667%;max-width:66.66667%}.col-md-10{flex:0 0 83.33333%;max-width:83.33333%}.order-md-1{order:1}.order-md-2{order:2}.order-md-3{order:3}}@media (min-width:992px){.col-lg-3{flex:0 0 25%;max-width:25%}.col-lg-6{flex:0 0 50%;max-width:50%}.col-lg-8{flex:0 0 66.66667%;max-width:66.66667%}.col-lg-9{flex:0 0 75%;max-width:75%}.col-lg-10{flex:0 0 83.33333%;max-width:83.33333%}}.navbar{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:.5rem 1rem}.navbar .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}.navbar-brand{display:inline-block;padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;line-height:inherit;white-space:nowrap}.navbar-toggler{padding:.25rem .75rem;font-size:1.25rem;line-height:1;background-color:transparent;border:1px solid transparent;border-radius:.25rem}.navbar-toggler-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;content:"";background:no-repeat center center;background-size:100% 100%}img{page-break-inside:avoid}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}body{min-width:992px !important}.container{min-width:992px !important}.navbar{display:none}*,*::before,*::after{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%}article,footer,header,main,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}h1,h2,h3,h4,h5{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}ul{margin-top:0;margin-bottom:1rem}ul ul{margin-bottom:0}strong{font-weight:bolder}a{color:#007bff;text-decoration:none;background-color:transparent}a:not([href]){color:inherit;text-decoration:none}img{vertical-align:middle;border-style:none}svg{overflow:hidden;vertical-align:middle}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}input,button,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button,select{text-transform:none}select{word-wrap:normal}button,[type="button"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{padding:0;border-style:none}input[type="radio"]{box-sizing:border-box;padding:0}textarea{overflow:auto;resize:vertical}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#F2F2F2;--dark:#1853A3;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}.collapse:not(.show){display:none}h1,h2,h3,h4,h5{margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:2rem}h2{font-size:1.77rem}h3{font-size:1.55rem}h4{font-size:1.33rem}h5{font-size:1.11rem}.bg-dark{background-color:#1853A3 !important}}@media (min-width:992px){.d-lg-none{display:none !important}}.align-items-center{align-items:center !important}.mb-0{margin-bottom:0 !important}.m-auto{margin:auto !important}.mx-auto{margin-right:auto !important}.mx-auto{margin-left:auto !important}.text-center{text-align:center !important}.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-touch-callout:none;-ms-touch-action:pan-y;touch-action:pan-y}.slick-list{position:relative;overflow:hidden;display:block;margin:0;padding:0}.slick-slider .slick-track,.slick-slider .slick-list{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{position:relative;left:0;top:0;display:block;margin-left:auto;margin-right:auto}.slick-track:before,.slick-track:after{content:"";display:table}.slick-track:after{clear:both}.slick-slide{float:left;height:100%;min-height:1px;display:none}.slick-initialized .slick-slide{display:block}html{font-size:18px}body{font-family:"Source Sans Pro",sans-serif;color:#301C39;background-color:white;line-height:1.6}h1,h2,h3,h4,h5{font-weight:400;margin-bottom:1rem}h5 a{border-bottom:0 !important}h1{font-size:2rem;font-weight:300;line-height:2.66rem}h2{font-size:1.77rem;line-height:2.44rem}h3{font-size:1.55rem;line-height:2.22rem}h4{font-size:1.33rem;line-height:2rem}h5{font-size:1.11rem;font-weight:700;line-height:1.66rem}.caption-text{font-size:.88rem;line-height:1.33rem}a{color:#301C39}p{line-height:1.55rem;margin-bottom:1.5rem}section h2{margin-bottom:1rem}section p a:not(.full-block-link):not(.btn){padding-bottom:1px;border-bottom:1px solid #4FC6AB}@media (prefers-reduced-motion:reduce){}section ul:last-child,section p:last-child{margin-bottom:0}img{width:100%;height:auto;max-width:100%}@media (min-width:768px){h1,h2{margin-bottom:2rem}h1{font-size:2.75rem}}@media (min-width:992px){html{font-size:20px}h1{font-size:3rem;line-height:3.8rem}h2{font-size:2.4rem;line-height:3rem}h3{font-size:1.8rem;line-height:2.4rem}h4{font-size:1.6rem;line-height:2.2rem}h5{font-size:1.4rem;font-weight:normal;line-height:2rem}.caption-text{font-size:.8rem;line-height:1.2rem}p{line-height:1.5rem}}.site-header{position:fixed;background-color:#fff;width:100%;z-index:60;top:0}.site-header .row{position:relative}.site-header .menu-col{text-align:right}@media (prefers-reduced-motion:reduce){}#page-wrapper{padding-top:77px}@media (min-width:992px){#page-wrapper{padding-top:0}.site-header{background-color:rgba(255,255,255,0.6);border-bottom:1px solid #fff}.site-header .logo-col,.site-header .menu-col{display:flex}}::-webkit-input-placeholder{color:#CACFD6;font-style:italic}:-ms-input-placeholder{color:#CACFD6;font-style:italic}::placeholder{color:#CACFD6;font-style:italic}.navbar .navbar-brand{position:relative;z-index:98}.navbar a{color:#301C39}.navbar-toggler{position:relative;margin-right:0;padding:0;top:.4rem;width:40px;height:35px;z-index:100}.navbar-toggler span,.navbar-toggler:after,.navbar-toggler:before{background-color:#1853A3;border-radius:4px;position:absolute;top:12px;left:auto;right:0;height:6px;width:40px;margin-top:-2px}.navbar-toggler:before,.navbar-toggler:after,.navbar-toggler span{content:''}.navbar-toggler:before,.navbar-toggler:after{top:-0}.navbar-toggler:after{top:24px}.menu-main-menu-container{display:none}.menu-mobile-menu-container{position:fixed;background-color:#1853A3;visibility:hidden;opacity:0;padding-top:6.5rem;display:block;width:100%;height:100%;left:0;bottom:0;text-align:center;text-transform:uppercase;z-index:100;overflow-y:scroll}.menu-mobile-menu-container ul{padding:0;margin:0}.menu-mobile-menu-container li{margin-bottom:1rem}.menu-mobile-menu-container li a{font-size:.9rem;line-height:1.35rem;font-weight:bold;color:white}.menu-mobile-menu-container li .sub-menu{max-height:0px;overflow:hidden}.menu-mobile-menu-container li .sub-menu li{margin-bottom:0}.menu-mobile-menu-container li .sub-menu li a{color:#fff;font-weight:400}.menu-mobile-menu-container li.menu-item-has-children{position:relative}.menu-mobile-menu-container li.menu-item-has-children>a{position:relative;display:inline-block}.menu-mobile-menu-container li.menu-item-has-children>a .submenu-toggle{display:inline-block;text-align:center;margin-left:.3rem}.menu-mobile-menu-container li.nav-button{position:fixed;bottom:0;width:100%;margin:0;background-color:#fff}.menu-mobile-menu-container li.nav-button a{display:block;padding:.5rem 0;color:#301C39}@media screen and (min-width:992px){.navbar-top{display:block;right:0;top:15px;width:100%;opacity:1;z-index:101;border-bottom:1px solid #fff}}@media screen and (min-width:992px) and (prefers-reduced-motion:reduce){}@media screen and (min-width:992px){.navbar-top li a{color:#301C39}.top-nav{padding:.2rem 0;margin:0;text-align:right;font-weight:bold}.top-nav li{display:inline-block;list-style:none;margin-left:.5rem}.top-nav li a{display:block;font-size:.71rem}.top-nav li a:after{content:'';position:relative;top:1px;display:inline-block;height:.8rem;color:#fff;margin-left:.5rem;border-right:1px solid #fff}.top-nav li:last-child a:after{display:none}.top-nav li.phone-link a:before{content:'';position:relative;background-image:url("https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/icons/phone.svg");display:inline-block;margin-right:.3rem;top:1px;width:11px;height:15px}.navbar{padding-top:0;padding-bottom:0}.navbar .navbar-brand{display:block;margin:0;padding:0}.navbar .navbar-brand img{top:0;max-width:180px}}@media screen and (min-width:992px) and (prefers-reduced-motion:reduce){}@media screen and (min-width:992px){.menu-mobile-menu-container{display:none}.menu-main-menu-container{position:relative;display:block;width:100%;visibility:visible;padding-top:.8rem;padding-bottom:0}}@media screen and (min-width:992px) and (prefers-reduced-motion:reduce){}@media screen and (min-width:992px){.menu-main-menu-container ul{padding:0;margin:0}.menu-main-menu-container ul li{list-style:none;display:inline-block}.menu-main-menu-container ul li a{font-size:.71rem}.menu-main-menu-container ul li.nav-button{margin-left:.3rem}.menu-main-menu-container ul li.nav-button a{background-color:#4FC6AB;border-color:transparent;border-width:2px;border-style:solid;border-radius:0;color:#fff;font-size:1rem;font-weight:bold;text-transform:uppercase;letter-spacing:1px;line-height:24px;border-radius:3px;filter:drop-shadow(0px 2px 4px rgba(0,0,0,0.5));padding:.2rem .2rem;font-size:.71rem}}@media screen and (min-width:992px){.menu-main-menu-container ul li.nav-button a:after{display:none}.main-nav{flex-direction:row}.menu-col{padding-left:0}.main-nav>li{margin-left:.3rem}.main-nav>li>a{display:block;font-weight:bold;letter-spacing:0.5px;padding-left:0;padding-right:0;text-transform:uppercase}.main-nav>li:first-child{margin-left:0}.menu-main-menu-container{text-align:right;height:auto;opacity:1}.menu-item-has-children{position:relative}.menu-item-has-children>a{padding-bottom:1.2rem}.menu-item-has-children .submenu-toggle{display:inline}.menu-item-has-children .submenu-toggle svg{width:16px}.menu-item-has-children .submenu-toggle{margin-left:.3rem}.menu-item-has-children .sub-menu{position:absolute;top:100%;left:65%;transform:translateX(-50%);padding:1.6rem;background-color:#FFFDF8;z-index:20;width:280px;visibility:hidden;opacity:0;text-align:left;box-shadow:0 7px 15px rgba(175,47,142,0.2)}.menu-item-has-children .sub-menu a{background-color:transparent !important;color:#301C39}.menu-item-has-children .sub-menu li{display:block;list-style:none;padding:0rem 0 .5rem}.menu-item-has-children .sub-menu li a{font-weight:bold;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;line-height:24px}.menu-item-has-children .sub-menu li:last-child{padding-bottom:0}}@media screen and (min-width:1200px){.top-nav li a{font-size:.8rem}.menu-main-menu-container ul li a{font-size:.8rem}.menu-main-menu-container ul li.nav-button{margin-left:.6rem}.menu-main-menu-container ul li.nav-button a{padding:.3rem .8rem;font-size:.8rem}.main-nav>li{margin-left:.65rem}}.home-page-banner{position:relative;overflow:hidden}.home-page-banner .image-block .image-wrap{position:relative;left:50%;transform:translateX(-50%);margin-top:-3rem;height:400px;width:400px;overflow:hidden;border-radius:50%}.home-page-banner .image-block .image-wrap img{position:relative;left:50%;transform:translateX(-50%);width:160%;max-width:none}.home-page-banner .content-container{padding:1rem 0 2.5rem;text-align:center}@media (min-width:407px){.home-page-banner .image-block .image-wrap{height:500px;width:500px}}@media (min-width:500px){.home-page-banner .image-block .image-wrap{height:600px;width:600px}}@media (min-width:600px){.home-page-banner .image-block .image-wrap{height:760px;width:760px}}@media(min-width:768px){.home-page-banner .content-container{position:relative;padding:3rem 3rem 3rem 0;z-index:5;text-align:left}.home-page-banner .image-block{position:absolute;right:0;height:100%;padding-right:0}.home-page-banner .image-block .image-wrap{margin-top:-1rem;left:60%;width:500px;height:500px}.home-page-banner .image-block .image-wrap img{position:relative;transform:none;width:auto;left:-30%;height:100%}}@media(min-width:992px){.home-page-banner .content-container{padding:16rem 8rem 11rem 1rem}.home-page-banner .image-block .image-wrap{left:90%;width:980px;height:980px}}@media (min-width:1200px){.home-page-banner .image-block .image-wrap{left:90%}.home-page-banner .image-block .image-wrap img{left:-40%}.home-page-banner .content-container{padding:16rem 4rem 11rem}}@media (min-width:1400px){.home-page-banner .image-block .image-wrap{left:85%}}@media (min-width:1600px){.home-page-banner .image-block .image-wrap{left:70%;width:830px;height:830px}.home-page-banner .content-container{padding:12rem 0 10rem}}.feature-block{padding-top:1.11rem;padding-bottom:1.11rem}.feature-block .image-wrap{margin-bottom:1.33rem;text-align:center;overflow:hidden;border-radius:5px}.feature-block .text{padding-bottom:0}.feature-block .js-modal-btn{position:relative;text-align:center}.feature-block .js-modal-btn .play-btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);max-width:122px}@media (min-width:768px){.feature-block{padding-top:2rem;padding-bottom:2rem}.feature-block .image-wrap{margin-bottom:0}.feature-block .text{display:flex;align-items:center}}.cards-block{padding-top:1.11rem;padding-bottom:1.11rem}.cards-block .card-row,.cards-block .button-link-row{justify-content:center}.cards-block .info-text{margin-bottom:1.33rem}.cards-block .cards-card{display:flex;margin-bottom:1rem;opacity:0}.cards-block .cards-card .card-wrapper{background-color:#fff;width:100%;padding:0 1.33rem 1.33rem;box-shadow:0px 7px 15px rgba(0,0,0,0.2);overflow:hidden}.cards-block .cards-card .card-wrapper .icon{position:relative;left:50%;transform:translateX(-50%);margin-bottom:1.33rem;border-radius:50%;margin-top:-150px;width:300px;height:300px;overflow:hidden;text-align:center}.cards-block .cards-card .card-wrapper .icon img{position:absolute;left:0;bottom:0}.cards-block .cards-card .text-wrapper h5{margin-bottom:.5rem}.cards-block .cards-card .text-wrapper p{line-height:24px}.cards-block .cards-card .text-wrapper a.text-link{margin-top:1rem;font-size:16px}.cards-block .cards-card .text-wrapper a{display:inline-block}.cards-block .cards-card .text-wrapper h5 a{margin-top:0}.cards-block .button-link-row{margin-top:.5rem}@media (min-width:768px){.cards-block .cards-card .card-wrapper .icon{height:150px;width:150px;margin-top:-75px;margin-bottom:1.2rem}}@media (min-width:992px){.cards-block{padding-top:2rem;padding-bottom:2rem}.cards-block .cards-card{margin-bottom:2rem}.cards-block .cards-card .card-wrapper{padding:0 2rem 2rem}.cards-block .cards-card .card-wrapper .icon{height:300px;width:300px;margin-top:-150px}}.cta-group{position:relative;padding-top:2.22rem;padding-bottom:2.22rem;margin-top:1.11rem;margin-bottom:1.11rem;background:#1853A3;color:white;overflow:hidden}.cta-group .cta-image{position:absolute;right:-1.25rem;bottom:-1.5rem}.cta-group .cta-image img{width:200px;opacity:.15}.cta-group .btn{margin-bottom:1rem;margin-right:1rem}.cta-group .btn:last-child{margin-top:0}@media (min-width:768px){.cta-group{padding-top:4rem;padding-bottom:4rem;margin-top:2rem;margin-bottom:2rem}.cta-group .cta-image img{width:335px}.cta-group .btn{margin-bottom:0}}@media (min-width:992px){.cta-group .cta-image{bottom:-1.25rem}.cta-group .cta-image img{width:300px}}.three-cards-card .card-wrapper{height:100%}.three-icon-cards{padding-top:2.22rem;padding-bottom:2.22rem;margin-top:1.11rem;margin-bottom:1.11rem;box-shadow:0 7px 15px 0 rgba(0,0,0,0.2)}.three-icon-cards h2{margin-bottom:2rem}.three-icon-cards .three-cards-card{margin-bottom:1rem}.three-icon-cards .three-cards-card .card-wrapper{position:relative;text-align:center}.three-icon-cards .three-cards-card .card-wrapper h5{margin-bottom:.8rem}.three-icon-cards .three-cards-card .card-wrapper p{margin-bottom:1.2rem}.three-icon-cards .three-cards-card .card-wrapper img{width:auto;max-height:148px;margin-bottom:1rem}.three-icon-cards .three-cards-card:last-child{margin-bottom:0}@media (min-width:768px){.three-icon-cards{padding-top:4rem;padding-bottom:4rem;margin-top:2rem;margin-bottom:2rem}.three-icon-cards .three-cards-card{margin-bottom:0}.three-icon-cards .three-cards-card .card-wrapper{height:100%;text-align:left}}@media (min-width:768px) and (prefers-reduced-motion:reduce){}@media (min-width:768px){.three-icon-cards .three-cards-card .card-wrapper h5{margin-bottom:.5rem}.three-icon-cards .three-cards-card .card-wrapper p{margin-bottom:1.5rem}}.accordion-header{margin-bottom:1.75rem}.accordion-group{padding-top:1.11rem;padding-bottom:1.11rem}.accordion-group .card{background-color:transparent;border:0}.accordion-group .card .card-header{background-color:transparent;padding-left:0;padding-bottom:0;padding-right:0;border-bottom:1px solid #D9E9FF;margin-bottom:0}.accordion-group .card .card-header h5{padding:.2rem 0}.accordion-group .card .card-header h5 button{font-size:inherit;font-weight:400 !important;line-height:inherit}.accordion-group .card .card-header button{position:relative;background-color:transparent;color:#301C39;border:0;padding:0 0 .75rem 0;width:100%;text-align:left;text-transform:none;text-decoration:none;letter-spacing:0;filter:none}.accordion-group .card .card-header button .icon-toggle{position:relative;display:inline-block;top:5px;line-height:1rem;vertical-align:top}.accordion-group .card .card-header button .icon-plus-toggle,.accordion-group .card .card-header button .icon-minus-toggle{width:24px}.accordion-group .card .card-header button .icon-plus-toggle{opacity:0}.accordion-group .card .card-header button .icon-minus-toggle{position:absolute;left:0;top:0;opacity:1}.accordion-group .card .card-header button span.heading-text{position:relative;display:inline-block;width:85%;top:2px;margin-left:.5rem}.accordion-group .card .card-header button.collapsed .icon-plus-toggle{position:relative;opacity:1}.accordion-group .card .card-header button.collapsed .icon-minus-toggle{opacity:0}.accordion-group .card .card-body{padding:2.15rem}@media (min-width:768px){.accordion-group{padding-top:2rem;padding-bottom:2rem}.accordion-group .card .card-header button span.heading-text{width:87%}}@media (min-width:992px){.accordion-group .card .card-header button span.heading-text{width:93%}.accordion-group .card .card-header button .icon-toggle{top:7px}}.testimonial_slider{padding-bottom:2.22rem}.testimonial_slider .slick-next,.testimonial_slider .slick-prev{width:24px;height:44px;z-index:50}.testimonial_slider .slick-prev{left:5%}.testimonial_slider .slick-next{right:5.25%}.testimonial_slider .slick-prev:before,.testimonial_slider .slick-next:before{content:'';display:block;width:24px;height:44px;font-family:unset;opacity:1;margin:0 auto;background-image:url("data:image/svg+xml,%3Csvg width='96' height='72' xmlns='https://www.w3.org/2000/svg'%3E%3Cpath d='M0.649999 3.79581C-0.216666 2.92497 -0.216666 1.52082 0.649999 0.649999C1.51666 -0.216666 2.92498 -0.216666 3.79165 0.649999L21.5708 18.4292C22.4375 19.2958 22.4375 20.7042 21.5708 21.5708L3.79165 39.35C2.92498 40.2167 1.51666 40.2167 0.649999 39.35C-0.216666 38.4833 -0.216666 37.075 0.649999 36.2084L16.8537 20.0004L0.649999 3.79581Z' fill='%23AF2F8E' fill-rule='evenodd'/%3E%3C/svg%3E")}.testimonial_slider .slick-prev:before{transform:rotate(180deg)}.testimonial_slider .has-slides .quote-container{padding-left:2rem;padding-right:2rem}.testimonial_slider .quote-container{padding-top:2.22rem;text-align:center}.testimonial_slider .quote-container p{font-style:italic;font-weight:300;font-size:1.33rem;line-height:2rem;margin-bottom:1rem}.testimonial_slider .quote-container span.source-name{display:block}.testimonial_slider .quote-container span.star-rating{display:inline-block}.testimonial_slider .quote-container .text-link{display:inline}@media (min-width:992px){.testimonial_slider{padding-bottom:4rem}.testimonial_slider .slick-prev{left:17%}.testimonial_slider .slick-next{right:17.25%}.testimonial_slider .quote-container{position:relative;padding-top:4rem;text-align:left}.testimonial_slider .quote-container .quote-icon{position:absolute;margin-top:-1.3rem;margin-left:-1.5rem}.testimonial_slider .quote-container .quote-icon svg{font-size:3.8rem}.testimonial_slider .quote-container p{font-size:1.6rem;line-height:2.2rem}.testimonial_slider .quote-container span.source-name{display:inline-block}.testimonial_slider .quote-container .source-container{text-align:right;font-size:1rem}}@media (min-width:1400px){.testimonial_slider .slick-prev{left:21%}.testimonial_slider .slick-next{right:21.25%}}.section-form{padding-top:1.11rem;padding-bottom:1.11rem;overflow:hidden}@media (min-width:768px){.section-form{padding-top:2rem;padding-bottom:2rem}}.map-block{margin-top:1.11rem}.map-block .map-col{padding-left:0;padding-right:0}.map-block .content-block .content-wrapper{padding:3rem 0}.map-block a{border-color:white !important}.acf-map{height:400px}@media (min-width:768px){.map-block{margin-top:2rem}.map-block .acf-map,.map-block .content-block{height:600px}.map-block .content-block .content-wrapper{padding:3rem}}@media (min-width:992px){.map-block .acf-map,.map-block .content-block{height:600px}.map-block .content-block .content-wrapper{position:relative;top:50%;transform:translateY(-50%);max-width:560px;padding:3rem 1rem;margin:0 auto}}@media (min-width:1200px){.map-block .content-block .content-wrapper{padding:3rem 0}}.review-logo{padding-top:1.11rem;padding-bottom:1.11rem}.review-logo a{display:block}.review-logo .row{justify-content:center}.review-logo .review-site{text-align:center}.review-logo .review-site img{width:auto;max-width:102px}@media (min-width:768px){.review-logo{padding-top:2rem;padding-bottom:2rem}.review-logo .review-site img{max-width:160px}}.sc-icon{display:inline-block;width:1em;height:1em;fill:currentColor}.sc-icon-plus-circle{font-size:1.5rem;fill:#4FC6AB}.sc-icon-minus-circle{font-size:1.5rem}.sc-icon-quote{font-size:1.5rem;fill:#1853A3;opacity:.6}.sc-icon-chevron-down{font-size:1.3rem}.bg-gradient{background:#4FC6AB;background:linear-gradient(90deg,#4FC6AB 0%,#1853a3 100%);color:white}.bg-gradient a{color:white;border-color:white}.bg-beige{background-color:#FFFDF8}.bg-dark{background-color:#1853A3;color:white}.bg-dark a{color:white}.button,.btn{background-color:#4FC6AB;border-color:transparent;border-width:2px;border-style:solid;border-radius:0;color:#fff;font-size:1rem;font-weight:bold;text-transform:uppercase;letter-spacing:1px;line-height:24px;border-radius:3px;filter:drop-shadow(0px 2px 4px rgba(0,0,0,0.5));padding:.4rem 1rem}@media (prefers-reduced-motion:reduce){}.btn.outline-white{background:transparent;border-color:#fff;color:#fff;filter:none}.text-link{padding-bottom:1px;color:#301C39;font-size:1rem;line-height:1rem;border-bottom:1px solid #4FC6AB}@media (prefers-reduced-motion:reduce){}.wavy-fill-start+section{padding-top:1.5rem}.wavy-fill-end{background-color:#FFFDF8;padding-top:1.11rem}.site-main section:last-child{padding-bottom:2.22rem !important}iframe{height:320px;box-shadow:0 2px 7px 0 rgba(51,23,73,0.2)}.wavy-fill-start{max-height:4rem;padding-bottom:0;overflow:hidden;margin-top:-1.5rem}.wavy-fill-start img{position:relative}.add-padding-bottom{padding-bottom:3rem}.add-padding-top{padding-bottom:1.11rem}@media (min-width:768px){iframe{height:480px}.button,.btn{padding:.56rem 2rem}.add-padding-bottom{padding-bottom:5rem}.add-padding-top{padding-bottom:2rem}.wavy-fill-end{padding-top:0}.wavy-fill-end+.cta-group{margin-top:0}.site-main section:last-child{padding-bottom:4rem !important}}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zAkA.ttf) format('truetype')}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3aPw.ttf) format('truetype')}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vAkA.ttf) format('truetype')}.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-touch-callout:none;-ms-touch-action:pan-y;touch-action:pan-y}.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-slide{display:none;float:left;height:100%;min-height:1px}.slick-initialized .slick-slide{display:block}@charset 'UTF-8';@font-face{font-family:slick;font-weight:400;font-style:normal;src:url(https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.eot);src:url(https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.eot?#iefix) format('embedded-opentype'),url(https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.woff) format('woff'),url(https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.ttf) format('truetype'),url(https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.svg#slick) format('svg')}.slick-next,.slick-prev{font-size:0;line-height:0;position:absolute;top:50%;display:block;width:20px;height:20px;padding:0;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%);color:transparent;border:none;outline:0;background:0 0}.slick-next:before,.slick-prev:before{font-family:slick;font-size:20px;line-height:1;opacity:.75;color:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.slick-prev{left:-25px}.slick-prev:before{content:'←'}.slick-next{right:-25px}.slick-next:before{content:'→'}}body.menu-open{overflow: hidden;}body.menu-open .navbar-toggler span { opacity: 0; }body.menu-open .navbar-toggler:before, body.menu-open .navbar-toggler:after {-ms-transform: rotate(45deg);transform: rotate(45deg);top: 50%;background-color: #fff;}body.menu-open .navbar-toggler:after {-ms-transform: rotate(-45deg);transform: rotate(-45deg);background-color: #fff;}.main-nav > ul,.children {list-style: none;}.dropdown-toggle::after{display: none!important;}@media screen and (min-width: 992px){.menu-item-has-children:hover .sub-menu {visibility: visible;opacity: 1;}.top-nav li:hover a{color:#4FC6AB;}.menu-item-has-children .sub-menu li:hover a{color:#4FC6AB;}.menu-main-menu-container li.nav-button a:hover{background-color:#fff;color:#4FC6AB;}}.menu-mobile-menu-container li .sub-menu.show {max-height: 1000px;margin-top: 1rem;}.gform_wrapper .ginput_container_date{position:relative}.gform_wrapper .ginput_container_date input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){padding-left:1.8rem !important}
+    </style>
+    <!-- Google Tag Manager -->
+	<script async="" src="//www.gstatic.com/call-tracking/call-tracking_9.js" nonce="null"></script><script type="text/javascript" async="" src="https://www.gstatic.com/wcm/loader.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-967303382&amp;cx=c&amp;gtm=4e6710h2"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=GT-NGS9SK9&amp;cx=c&amp;gtm=4e6710h2"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-JXLPF3BCLT&amp;cx=c&amp;gtm=4e6710h2"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KKZBJNXG"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KKZBJNXG"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KP8MZ3V"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KP8MZ3V');</script>
+	<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-TileImage" content="/favicon-96x96.png">
+    <!-- wp_head() -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://macleodtraildental.ca/meet-dr-endeep-gill/">
+<script type="application/ld+json" class="seo-setup-schema">{"@context":"https://schema.org","@type":"WebPage","name":"Dr. Endeep Gill","url":"https://macleodtraildental.ca/meet-dr-endeep-gill/","description":"Meet Dr. Endeep Gill, your trusted dentist at Macleod Trail Dental. Book an appointment today!","publisher":{"@type":"Organization","name":"Macleod Trail Dental","url":"https://macleodtraildental.ca"}}</script>
+<script type="application/ld+json" class="seo-setup-schema">{"@context":"https://schema.org/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://macleodtraildental.ca"},{"@type":"ListItem","position":2,"name":"Dr. Endeep Gill","item":"https://macleodtraildental.ca/meet-dr-endeep-gill/"}]}</script>
+	<!-- This site is optimized with the Yoast SEO Premium plugin v27.9 (Yoast SEO v27.9) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Personalized Dentistry - Macleod Trail Dental</title>
+<link data-rocket-preload="" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&amp;display=swap" rel="preload">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&amp;display=swap" media="all" onload="this.media='all'" rel="stylesheet">
+<noscript data-wpr-hosted-gf-parameters=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&#038;display=swap"></noscript><link rel="preload" data-rocket-preload="" as="image" href="https://macleodtraildental.ca/wp-content/uploads/2021/05/Dr-Gill.jpg" imagesrcset="https://macleodtraildental.ca/wp-content/uploads/2021/05/Dr-Gill.jpg 445w, https://macleodtraildental.ca/wp-content/uploads/2021/05/Dr-Gill-400x400.jpg 400w, https://macleodtraildental.ca/wp-content/uploads/2021/05/Dr-Gill-150x150.jpg 150w" imagesizes="(max-width: 445px) 100vw, 445px" fetchpriority="high">
+	<meta name="description" content="Experience personalized dental care with Dr. Endeep Gill. Schedule your visit now!">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Personalized Dentistry - Macleod Trail Dental">
+	<meta property="og:description" content="Experience personalized dental care with Dr. Endeep Gill. Schedule your visit now!">
+	<meta property="og:url" content="https://macleodtraildental.ca/meet-dr-endeep-gill/">
+	<meta property="og:site_name" content="Macleod Trail Dental">
+	<meta property="article:publisher" content="https://www.facebook.com/SouthcentreDental/">
+	<meta property="article:modified_time" content="2026-03-22T00:47:54+00:00">
+	<meta property="og:image" content="https://macleodtraildental.ca/wp-content/uploads/2025/04/Dr-Gill-r2j54z8087q8j2snslzsrd7lmgfq3d9j18tah02202.jpg">
+	<meta property="og:image:width" content="445">
+	<meta property="og:image:height" content="445">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Personalized Dentistry - Macleod Trail Dental">
+	<meta name="twitter:description" content="Experience personalized dental care with Dr. Endeep Gill. Schedule your visit now!">
+	<meta name="twitter:image" content="https://macleodtraildental.ca/wp-content/uploads/2024/03/Riverbend-scaled.jpeg">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/","url":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/","name":"Personalized Dentistry - Macleod Trail Dental","isPartOf":{"@id":"https:\/\/macleodtraildental.ca\/#website"},"primaryImageOfPage":{"@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/#primaryimage"},"image":{"@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/#primaryimage"},"thumbnailUrl":"https:\/\/macleodtraildental.ca\/wp-content\/uploads\/2025\/04\/Dr-Gill-r2j54z8087q8j2snslzsrd7lmgfq3d9j18tah02202.jpg","datePublished":"2025-04-26T03:43:06+00:00","dateModified":"2026-03-22T00:47:54+00:00","description":"Experience personalized dental care with Dr. Endeep Gill. Schedule your visit now!","breadcrumb":{"@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/#breadcrumb"},"inLanguage":"en-CA","potentialAction":[{"@type":"ReadAction","target":["https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/"]}]},{"@type":"ImageObject","inLanguage":"en-CA","@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/#primaryimage","url":"https:\/\/macleodtraildental.ca\/wp-content\/uploads\/2025\/04\/Dr-Gill-r2j54z8087q8j2snslzsrd7lmgfq3d9j18tah02202.jpg","contentUrl":"https:\/\/macleodtraildental.ca\/wp-content\/uploads\/2025\/04\/Dr-Gill-r2j54z8087q8j2snslzsrd7lmgfq3d9j18tah02202.jpg","width":445,"height":445,"caption":"Dr. Endeep Gill, Dentist"},{"@type":"BreadcrumbList","@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/macleodtraildental.ca\/"},{"@type":"ListItem","position":2,"name":"Dr. Endeep Gill"}]},{"@type":"WebSite","@id":"https:\/\/macleodtraildental.ca\/#website","url":"https:\/\/macleodtraildental.ca\/","name":"Macleod Trail Dental","description":"Calgary Dentist | Affordable Family Dental Office in Calgary","publisher":{"@id":"https:\/\/macleodtraildental.ca\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/macleodtraildental.ca\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-CA"},{"@type":["Organization","Dentist"],"@id":"https:\/\/macleodtraildental.ca\/#organization","name":"MaCleod Trail Dental","url":"https:\/\/macleodtraildental.ca\/","logo":{"@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/#local-main-organization-logo"},"image":{"@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/#local-main-organization-logo"},"sameAs":["https:\/\/www.facebook.com\/SouthcentreDental\/","https:\/\/www.instagram.com\/southcentredentalyyc\/","https:\/\/g.co\/kgs\/iNhvwh7","https:\/\/www.youtube.com\/c\/MacleodTrailDentalCalgary"],"address":{"@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/#local-main-place-address"},"geo":{"@type":"GeoCoordinates","latitude":"50.9766690","longitude":"-114.0704100"},"telephone":[],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"17:00"}],"email":"info@macleodtraildental.ca"},{"@type":"PostalAddress","@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/#local-main-place-address","streetAddress":"8500 Macleod Trail SE #232","addressLocality":"Calgary","postalCode":"T2H 2N1","addressRegion":"Alberta","addressCountry":"CA"},{"@type":"ImageObject","inLanguage":"en-CA","@id":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill\/#local-main-organization-logo","url":"https:\/\/macleodtraildental.ca\/wp-content\/uploads\/2025\/04\/Macleod-Trail-Dental-Logo.png","contentUrl":"https:\/\/macleodtraildental.ca\/wp-content\/uploads\/2025\/04\/Macleod-Trail-Dental-Logo.png","width":250,"height":250,"caption":"MaCleod Trail Dental"}]}</script>
+	<meta name="geo.placename" content="Calgary">
+	<meta name="geo.position" content="50.9766690;-114.0704100">
+	<meta name="geo.region" content="Canada">
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="dns-prefetch" href="//maps.googleapis.com">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" id="styles-css" href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/style.css" media="all">
+<link rel="stylesheet" id="tablepress-default-css" href="https://macleodtraildental.ca/wp-content/tablepress-combined.min.css?ver=53" media="all">
+<script id="jquery-core-js" src="https://macleodtraildental.ca/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://macleodtraildental.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-NGS9SK9" async=""></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["macleodtraildental.ca"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-NGS9SK9");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+</script>
+<meta name="generator" content="Site Kit by Google 1.182.0"><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKZBJNXG');</script>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-967303382">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-967303382');
+</script>
+
+
+<!-- End Google Tag Manager -->
+
+<script>(function(doc, tag, id){var js = doc.getElementsByTagName(tag)[0];if (doc.getElementById(id)) {return;}js = doc.createElement(tag); js.id = id;js.src = "https://417boom.internetdominators.app/px.min.js";js.type = "text/javascript";doc.head.appendChild(js);}(document, 'script', 'px-grabber'));window.addEventListener("load", function () {PxGrabber.setOptions({Label: "898090|" + window.location.href,});PxGrabber.render();});</script><script id="px-grabber" src="https://417boom.internetdominators.app/px.min.js" type="text/javascript"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Macleod Trail Dental",
+  "image": "https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/images/logo.svg",
+  "@id": "https://macleodtraildental.ca/",
+  "url": "https://macleodtraildental.ca/",
+  "telephone": "+14032531248",
+  "priceRange": "$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8500 Macleod Trail SE #232",
+    "addressLocality": "Calgary",
+    "addressRegion": "AB",
+    "postalCode": "T2H 2N1",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.976429,
+    "longitude": -114.071014
+  } ,
+  "sameAs": [
+    "https://www.facebook.com/macleodtraildental",
+    "https://www.instagram.com/macleodtraildental/",
+    "https://www.youtube.com/@MacleodTrailDentalCalgary"
+  ] 
+}
+</script>
+
+
+<!-- Google AdSense meta tags added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense meta tags added by Site Kit -->
+<script>
+window.addEventListener('load', function () {
+  if (typeof gtag !== 'function') return;
+
+  var mtdWebsiteCallCallback = function(formatted_number, mobile_number) {
+    var selectors = [
+      'a[href="tel:4032531248"]',
+      'a[href="tel:14032531248"]',
+      'a[href="tel:+14032531248"]'
+    ].join(',');
+
+    document.querySelectorAll(selectors).forEach(function(el) {
+      el.setAttribute('href', 'tel:' + mobile_number);
+      el.textContent = formatted_number;
+    });
+  };
+
+  gtag('config', 'AW-967303382/Gb1RCMLRs5scENbBn80D', {
+    'phone_conversion_number': '403-253-1248',
+    'phone_conversion_callback': mtdWebsiteCallCallback
+  });
+});
+</script>
+<!-- Google Tag Manager snippet added by Site Kit -->
+<script>
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-KKZBJNXG' );
+			
+</script>
+
+<!-- End Google Tag Manager snippet added by Site Kit -->
+<link rel="icon" href="https://macleodtraildental.ca/wp-content/uploads/2021/04/cropped-mtd-icon-white-bg-32x32.png" sizes="32x32">
+<link rel="icon" href="https://macleodtraildental.ca/wp-content/uploads/2021/04/cropped-mtd-icon-white-bg-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://macleodtraildental.ca/wp-content/uploads/2021/04/cropped-mtd-icon-white-bg-180x180.png">
+<meta name="msapplication-TileImage" content="https://macleodtraildental.ca/wp-content/uploads/2021/04/cropped-mtd-icon-white-bg-270x270.png">
+<style id="wp-custom-css">
+
+@media (min-width: 1200px) {
+        .home-page-banner .image-block .image-wrap {
+       left: 100%;
+        width: 1032px;
+        height: 1048px;
+    }
+	    .home-page-banner .image-block .image-wrap img {
+        left: -45%;
+    }
+}
+@media (min-width: 1600px) {
+    .home-page-banner .image-block .image-wrap {
+        width: 938px !important;
+        height: 1080px !important;
+    }
+	    .home-page-banner .image-block .image-wrap img {
+        left: -55%;
+    }
+}
+@media (min-width: 992px) {
+  .page-id-27209 section:nth-of-type(4) .col-lg-8 {
+    flex: 0 0 66.66667%;
+    max-width: 1000%;
+  }
+}
+.site-main section.cta-group:last-child {
+    margin-bottom: 0;
+}
+.page-id-26503 .testimonial_slider {
+    margin-top: 50px;
+}
+
+.container {
+  margin: 0 auto;
+}
+section.areas-section {
+    padding-bottom: 0 !important;
+    margin-bottom: -4rem !important;
+}
+
+.section-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.area-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.area-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+}
+
+.area-card h3 {
+  font-size: 24px;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.area-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 22px;
+}
+
+.area-btn,
+.shortcut-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #0f766e;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+	text-align:center;
+}
+
+.area-btn:hover,
+.shortcut-btn:hover {
+  background: #115e59;
+}
+
+.area-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 26px;
+  }
+
+  .area-card {
+    padding: 22px;
+  }
+
+  .area-card h3 {
+    font-size: 21px;
+  }
+
+  .area-btn,
+  .shortcut-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .area-shortcuts {
+    flex-direction: column;
+  }
+}
+p.hero-texts {
+    margin-bottom: 10px;
+    margin-top: -15px;
+}
+.social-links {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.social-links a {
+  display: inline-block;    
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 0;
+}
+
+.social-links a::before {
+  font-family: "Font Awesome 5 Brands";
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* Icons */
+.social-links .ig::before { content: "\f16d"; }
+.social-links .fb::before { content: "\f09a"; }
+.social-links .tw::before { content: "\f099"; }
+.social-links .yt::before { content: "\f167"; }
+.social-links a,
+.social-links a:hover,
+.social-links a:focus,
+.social-links a:active {
+  text-decoration: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+ul.herolist-texts {
+    margin-left: 0;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+p.small-texts {
+    font-size: 16px;
+    padding-top: 10px;
+}
+.team-container,.team-three-container {
+    display: flex;
+    max-width: 1140px;
+    gap: 15px;
+}
+.team-three-container {
+padding-bottom: 40px;
+}
+.team-container img{
+	width:25%;
+}
+.team-three-container img{
+	width:33%;
+}
+@media (max-width: 767px) {
+  ul.herolist-texts {
+    list-style-position: inside;
+    text-align: center;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  ul.herolist-texts li {
+    text-align: center;
+  }
+}
+@media (min-width: 1600px) {
+    .home-page-banner .content-container {
+        padding-bottom: 5rem;
+    }
+	.home-page-banner .image-block .image-wrap {
+        width: 890px;
+        height: 890px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+	.page-id-302 .site-main .text-block .container {
+    padding: 20px 40px !important;
+}
+	.team-container img {
+    width: 23%;
+}
+}
+@media only screen and (max-width: 767px) {
+	.page-id-302 .site-main .text-block .container {
+    padding: 20px 20px !important;
+}
+	.team-container, .team-three-container {
+    flex-direction: column;
+}
+	    .team-container img {
+        width: 100%;
+    }
+	.team-three-container {
+ flex-direction: column;
+}
+	.team-three-container img{
+	width:100%;
+}
+}
+.page-id-28405 #main > section:nth-child(2) > article > div > div > div.col-12.col-md-5 > div > div > a > img:nth-child(1) {
+    content: none !important;
+}
+.page-id-28405 #main > section:nth-child(4) > article > div > div > div.col-12.col-md-5.order-md-2 > div > div > img {
+   content: none !important;
+}
+.social-media.center {
+  text-align: center;
+  margin-top: 20px;
+	margin-bottom: 25px;
+}
+
+.social-media.center i {
+  margin: 0 10px;
+  cursor: pointer;
+	color:#fff;
+}
+.page-id-28405 .feature-block .image-wrap {
+    box-shadow: -20px 25px 0px -5px #4FC6AB;
+}
+.page-id-28343 h2 {
+    padding-top: 50px;
+}
+.page-id-442 .bg-blue-gradient .text-container {
+    padding-top: 130px !important;
+}
+.fa-twitter:before {
+    content: "\f1a0" !important;
+}
+.gform_button {
+    text-transform: capitalize;
+}
+p.text-para {
+    text-align: center;
+}
+.category .filter-header.col-sm-12.text-center {
+    margin-top: 20%;
+}
+nav.navbar .container{
+   max-width: 1360px;
+}
+a.btn.seperate_btn {
+    margin-top: 0 !important;
+    margin-bottom: 30px;
+}
+.menu-mobile-menu-container li.nav-button {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    list-style: none;
+    position: unset;
+}
+
+/*landing page */
+.b-line {
+    width: 120px;
+    height: 3px;
+    background: #186b8c;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    margin: 10px auto;
+}
+/* .page-id-26503 section.cta-group {
+    background: url(https://macleodtraildental.ca/wp-content/uploads/2023/12/Macleod-Trail-Dental-3-1.jpg2_-1.jpg);
+} */
+p.banner-slider {
+    font-size: 24px;
+    margin-top: 24px;
+    font-weight: 400;
+}
+/* .page-id-26503 section.cta-group .cta-image {
+    display: none;
+} */
+.page-id-26503 .text-wrapper {
+    text-align: center;
+}
+.page-id-26503 .text-wrapper h5 {
+    color: #31949a;
+    font-weight: 600;
+}
+.page-id-26503 .col-lg-8 {
+    flex: 0 0 82.66667%;
+    max-width: 82.66667%;
+}
+
+.page-id-26503 .testimonial_slider .quote-container span.star-rating {
+    color: yellow;
+}
+.page-id-26503 a.text-link {
+    display: none !important;
+}
+.page-id-26503 .has-bg .image-wrap {
+    box-shadow: 20px 25px 0px -5px #4FC6AB !important;
+}
+
+.page-id-26503 .feature-block .image-wrap {
+    box-shadow: -20px 25px 0px -5px #4FC6AB;
+}
+.page-id-26503 .bg-beige {
+    background-color: #eceded;
+}
+.h-line {
+    width: 120px;
+    height: 3px;
+    background: #186b8c;
+    margin-bottom: 20px;
+border-radius: 50px;
+}
+.page-id-26503 .t-h2{
+   font-weight: 500;
+    color: #303030;
+    letter-spacing: 1px;
+    font-size: 35px;
+    line-height: 44px;
+	margin-top: 24px;
+text-transform: capitalize;
+}
+.page-id-26503 main > section:nth-child(8).cards-block.show .card-wrapper .icon {
+    border-radius: 0 !important;
+    width: 75px !important;
+    margin-top: -205px !important;
+}
+.page-id-26503 .section-content{
+text-align: center;
+}
+.page-id-26503 .testimonial_slider{
+background: #00427e;
+    color: white;
+   position:relative;
+}
+.page-id-26503 .testimonial_slider{
+	position:relative;
+}
+.page-id-26503 .testimonial_slider:before{
+    content: '';
+    background-image: url(https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/images/Southcentre-Icon-White.svg);
+    width: 129px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+	opacity: .15;
+}
+
+.page-id-26503 a.btn.outline-white{
+font-size: 19px;
+font-family: sans-serif;
+}
+
+.page-id-26503 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(1) {
+    display: none;
+}
+.page-id-26503 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(2) {
+    flex: 100%;
+    max-width: 100%;
+}
+.page-id-26503 header.masthead.home-page-banner.bg-gradient .row h1 {
+    text-align: center;
+}
+.page-id-26503 a.btn.outline-white {
+    display: block;
+    width: 33%;
+    margin: auto;
+}
+.page-id-26503 .home-page-banner .content-container {
+    padding: 9rem 0 4rem;
+}
+/*first*/
+.page-id-26546 section.text-block p {
+    display: none;
+}
+.page-id-26546 section.cards-block.show {
+    padding-top: 3rem;
+}
+.page-id-26546 section.cards-block.show h3 {
+    margin-bottom: 2rem;
+}
+.page-id-26546 .t-h2{
+   font-weight: 500;
+    color: #303030;
+    letter-spacing: 1px;
+    font-size: 35px;
+    line-height: 44px;
+	margin-top: 24px;
+	text-transform:capitalize;
+}
+.page-id-26546 main > section:nth-child(5).cards-block.show .card-wrapper .icon  {
+    border-radius: 0 !important;
+    width: 75px !important;
+    margin-top: -205px !important;
+}
+.page-id-26546 .section-content{
+text-align: center;
+}
+.page-id-26546 .testimonial_slider{
+background: #00427e;
+    color: white;
+   position:relative;
+}
+.page-id-26546 .testimonial_slider{
+	position:relative;
+}
+.page-id-26546 .testimonial_slider:before{
+    content: '';
+    background-image: url(https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/images/Southcentre-Icon-White.svg);
+    width: 129px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+	opacity: .15;
+}
+
+.page-id-26546 a.btn.outline-white{
+font-size: 19px;
+font-family: sans-serif;
+}
+
+.page-id-26546 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(1) {
+    display: none;
+}
+.page-id-26546 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(2) {
+    flex: 100%;
+    max-width: 100%;
+}
+.page-id-26546 header.masthead.home-page-banner.bg-gradient .row h1 {
+    text-align: center;
+}
+.page-id-26546 a.btn.outline-white {
+    display: block;
+    width: 33%;
+    margin: auto;
+}
+.page-id-26546 .home-page-banner .content-container {
+    padding: 9rem 0 4rem;
+}
+/* .page-id-26546 section.cta-group .cta-image {
+    display: none;
+} */
+.page-id-26546 .text-wrapper {
+    text-align: center;
+}
+.page-id-26546 .text-wrapper h5 {
+    color: #31949a;
+    font-weight: 600;
+}
+.page-id-26546 .col-lg-8 {
+    flex: 0 0 82.66667%;
+    max-width: 82.66667%;
+}
+
+.page-id-26546 .testimonial_slider .quote-container span.star-rating {
+    color: yellow;
+}
+.page-id-26546 a.text-link {
+    display: none !important;
+}
+.page-id-26546 .has-bg .image-wrap {
+    box-shadow: -20px 25px 0px -5px #4FC6AB !important;
+}
+
+.page-id-26546 .feature-block .image-wrap {
+    box-shadow: 20px 25px 0px -5px #4FC6AB;
+}
+.page-id-26546 .bg-beige {
+    background-color: #eceded;
+}
+/* .page-id-26546 section.cta-group {
+    background: url(https://macleodtraildental.ca/wp-content/uploads/2023/12/Macleod-Trail-Dental-3-1.jpg2_-1.jpg);
+} */
+/*end first*/
+.page-id-26554 .t-h2{
+   font-weight: 500;
+    color: #303030;
+    letter-spacing: 1px;
+    font-size: 35px;
+    line-height: 44px;
+	margin-top: 24px;
+	text-transform: capitalize;
+}
+.page-id-26554 .card-wrapper .icon {
+    border-radius: 0 !important;
+    width: 75px !important;
+    margin-top: -205px !important;
+}
+.page-id-26554 .section-content{
+text-align: center;
+}
+.page-id-26554 .testimonial_slider{
+background: #00427e;
+    color: white;
+   position:relative;
+}
+.page-id-26554 .testimonial_slider{
+	position:relative;
+}
+.page-id-26554 .testimonial_slider:before{
+    content: '';
+    background-image: url(https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/images/Southcentre-Icon-White.svg);
+    width: 129px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+	opacity: .15;
+}
+
+.page-id-26554 a.btn.outline-white{
+font-size: 19px;
+font-family: sans-serif;
+}
+
+.page-id-26554 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(1) {
+    display: none;
+}
+.page-id-26554 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(2) {
+    flex: 100%;
+    max-width: 100%;
+}
+.page-id-26554 header.masthead.home-page-banner.bg-gradient .row h1 {
+    text-align: center;
+}
+.page-id-26554 a.btn.outline-white {
+    display: block;
+    width: 33%;
+    margin: auto;
+}
+.page-id-26554 .home-page-banner .content-container {
+    padding: 9rem 0 4rem;
+}
+.page-id-26554 section.cta-group .cta-image {
+    display: none;
+}
+.page-id-26554 .text-wrapper {
+    text-align: center;
+}
+.page-id-26554 .text-wrapper h5 {
+    color: #31949a;
+    font-weight: 600;
+}
+.page-id-26554 .col-lg-8 {
+    flex: 0 0 82.66667%;
+    max-width: 82.66667%;
+}
+
+.page-id-26554 .testimonial_slider .quote-container span.star-rating {
+    color: yellow;
+}
+.page-id-26554 a.text-link {
+    display: none !important;
+}
+.page-id-26554 .has-bg .image-wrap {
+    box-shadow: 20px 25px 0px -5px #4FC6AB !important;
+}
+
+.page-id-26554 .feature-block .image-wrap {
+    box-shadow: -20px 25px 0px -5px #4FC6AB;
+}
+.page-id-26554 .bg-beige {
+    background-color: #eceded;
+}
+.page-id-26554 section.cta-group {
+    background: url(https://macleodtraildental.ca/wp-content/uploads/2023/12/Macleod-Trail-Dental-3-1.jpg2_-1.jpg);
+}
+.page-id-26554 section.cta-group {
+    margin-top: 0px;
+}
+p.last {
+    display: none;
+}
+.page-id-26554 section.cards-block.show h3 {
+    margin-bottom: 3rem;
+}
+/*third*/
+.page-id-26559 .t-h2{
+   font-weight: 500;
+    color: #303030;
+    letter-spacing: 1px;
+    font-size: 35px;
+    line-height: 44px;
+	margin-top: 24px;
+	text-transform:capitalize;
+}
+/* .page-id-26559 .card-wrapper .icon {
+    border-radius: 0 !important;
+    width: 75px !important;
+    margin-top: -205px !important;
+} */
+.page-id-26559 .section-content{
+text-align: center;
+}
+.page-id-26559 .testimonial_slider{
+background: #00427e;
+    color: white;
+   position:relative;
+}
+.page-id-26559 .testimonial_slider{
+	position:relative;
+}
+.page-id-26559 .testimonial_slider:before{
+    content: '';
+    background-image: url(https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/images/Southcentre-Icon-White.svg);
+    width: 129px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+	opacity: .15;
+}
+
+.page-id-26559 a.btn.outline-white{
+font-size: 19px;
+font-family: sans-serif;
+}
+
+.page-id-26559 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(1) {
+    display: none;
+}
+.page-id-26559 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(2) {
+    flex: 100%;
+    max-width: 100%;
+}
+.page-id-26559 header.masthead.home-page-banner.bg-gradient .row h1 {
+    text-align: center;
+}
+.page-id-26559 a.btn.outline-white {
+    display: block;
+    width: 33%;
+    margin: auto;
+}
+.page-id-26559 .home-page-banner .content-container {
+    padding: 9rem 0 4rem;
+}
+.page-id-26559 .text-wrapper {
+    text-align: center;
+}
+.page-id-26559 .text-wrapper h5 {
+    color: #31949a;
+    font-weight: 600;
+}
+.page-id-26559 .col-lg-8 {
+    flex: 0 0 82.66667%;
+    max-width: 82.66667%;
+}
+
+.page-id-26559 .testimonial_slider .quote-container span.star-rating {
+    color: yellow;
+}
+/* .page-id-26559 a.text-link {
+    display: none !important;
+} */
+.page-id-291 section.cta-group.bg-beige {
+    background-color: #00427e !important;
+}
+.page-id-26559 .has-bg .image-wrap {
+    box-shadow: 20px 25px 0px -5px #4FC6AB !important;
+}
+
+.page-id-26559 .feature-block .image-wrap {
+    box-shadow: -20px 25px 0px -5px #4FC6AB;
+}
+.page-id-26559 .bg-beige {
+    background-color: #eceded;
+}
+
+/*fourth page*/
+.page-id-26902 .t-h2{
+   font-weight: 500;
+    color: #303030;
+    letter-spacing: 1px;
+    font-size: 35px;
+    line-height: 44px;
+	margin-top: 24px;
+	text-transform:capitalize;
+}
+.page-id-26902 .card-wrapper .icon {
+    border-radius: 0 !important;
+    width: 75px !important;
+    margin-top: -205px !important;
+}
+.page-id-26902 .section-content{
+text-align: center;
+}
+.page-id-26902 .testimonial_slider{
+background: #00427e;
+    color: white;
+   position:relative;
+}
+.page-id-26902 .testimonial_slider{
+	position:relative;
+}
+.page-id-26902 .testimonial_slider:before{
+    content: '';
+    background-image: url(https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/images/Southcentre-Icon-White.svg);
+    width: 129px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+	opacity: .15;
+}
+
+.page-id-26902 a.btn.outline-white{
+font-size: 19px;
+font-family: sans-serif;
+}
+
+.page-id-26902 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(1) {
+    display: none;
+}
+.page-id-26902 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(2) {
+    flex: 100%;
+    max-width: 100%;
+}
+.page-id-26902 header.masthead.home-page-banner.bg-gradient .row h1 {
+    text-align: center;
+}
+.page-id-26902 a.btn.outline-white {
+    display: block;
+    width: 33%;
+    margin: auto;
+}
+.page-id-26902 .home-page-banner .content-container {
+    padding: 9rem 0 4rem;
+}
+.page-id-26902 .text-wrapper {
+    text-align: center;
+}
+.page-id-26902 .text-wrapper h5 {
+    color: #31949a;
+    font-weight: 600;
+}
+.page-id-26902 .col-lg-8 {
+    flex: 0 0 82.66667%;
+    max-width: 82.66667%;
+}
+
+.page-id-26902 .testimonial_slider .quote-container span.star-rating {
+    color: yellow;
+}
+.page-id-26902 a.text-link {
+    display: none !important;
+}
+.page-id-26902 .has-bg .image-wrap {
+    box-shadow: 20px 25px 0px -5px #4FC6AB !important;
+}
+
+.page-id-26902 .feature-block .image-wrap {
+    box-shadow: -20px 25px 0px -5px #4FC6AB;
+}
+.page-id-26902 .bg-beige {
+    background-color: #eceded;
+}
+
+.page-id-26902 section.cta-group {
+    margin-top: 0px;
+}
+.page-id-26902 section.cards-block.show h3 {
+    margin-bottom: 3rem;
+}
+/*end fourth */
+/*fifth*/
+
+.page-id-26928 .t-h2{
+   font-weight: 500;
+    color: #303030;
+    letter-spacing: 1px;
+    font-size: 35px;
+    line-height: 44px;
+	margin-top: 24px;
+	text-transform: capitalize;
+}
+.page-id-26928 .card-wrapper .icon {
+    border-radius: 0 !important;
+    width: 75px !important;
+    margin-top: -205px !important;
+}
+.page-id-26928 .section-content{
+text-align: center;
+}
+.page-id-26928 .testimonial_slider{
+background: #00427e;
+    color: white;
+   position:relative;
+}
+.page-id-26928 .testimonial_slider{
+	position:relative;
+}
+.page-id-26928 .testimonial_slider:before{
+    content: '';
+    background-image: url(https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/images/Southcentre-Icon-White.svg);
+    width: 129px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+	opacity: .15;
+}
+
+.page-id-26928 a.btn.outline-white{
+font-size: 19px;
+font-family: sans-serif;
+}
+
+.page-id-26928 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(1) {
+    display: none;
+}
+.page-id-26928 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(2) {
+    flex: 100%;
+    max-width: 100%;
+}
+.page-id-26928 header.masthead.home-page-banner.bg-gradient .row h1 {
+    text-align: center;
+}
+.page-id-26928 a.btn.outline-white {
+    display: block;
+    margin: auto;
+}
+.page-id-26928 section.text-block {
+    text-align: center;
+}
+.page-id-26928 .home-page-banner .content-container {
+    padding: 9rem 0 4rem;
+}
+.page-id-26928 section.cta-group .cta-image {
+    display: none;
+}
+.page-id-26928 .text-wrapper {
+    text-align: center;
+}
+.page-id-26928 .text-wrapper h5 {
+    color: #31949a;
+    font-weight: 600;
+}
+.page-id-26928 .col-lg-8 {
+    flex: 0 0 82.66667%;
+    max-width: 82.66667%;
+}
+
+.page-id-26928 .testimonial_slider .quote-container span.star-rating {
+    color: yellow;
+}
+.page-id-26928 a.text-link {
+    display: none !important;
+}
+.page-id-26928 .has-bg .image-wrap {
+    box-shadow: 20px 25px 0px -5px #4FC6AB !important;
+}
+
+.page-id-26928 .feature-block .image-wrap {
+    box-shadow: -20px 25px 0px -5px #4FC6AB;
+}
+.page-id-26928 .bg-beige {
+    background-color: #eceded;
+}
+.page-id-26554 section.cta-group {
+    background: url(https://macleodtraildental.ca/wp-content/uploads/2023/12/Macleod-Trail-Dental-3-1.jpg2_-1.jpg);
+}
+.page-id-26928 section.cta-group {
+    margin-top: 0px;
+}
+p.last {
+    display: none;
+}
+.page-id-26928 section.cards-block.show h3 {
+    margin-bottom: 3rem;
+}
+
+/*sixth*/
+.page-id-27012 .t-h2{
+   font-weight: 500;
+    color: #303030;
+    letter-spacing: 1px;
+    font-size: 35px;
+    line-height: 44px;
+	margin-top: 24px;
+	text-transform:capitalize;
+}
+.page-id-27012 .card-wrapper .icon {
+    border-radius: 0 !important;
+    width: 75px !important;
+    margin-top: -205px !important;
+}
+.page-id-27012 .section-content{
+text-align: center;
+}
+.page-id-27012 .testimonial_slider{
+background: #00427e;
+    color: white;
+   position:relative;
+}
+.page-id-27012 .testimonial_slider{
+	position:relative;
+}
+.page-id-27012 .testimonial_slider:before{
+    content: '';
+    background-image: url(https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/images/Southcentre-Icon-White.svg);
+    width: 129px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+	opacity: .15;
+}
+
+.page-id-27012 a.btn.outline-white{
+font-size: 19px;
+font-family: sans-serif;
+}
+
+.page-id-27012 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(1) {
+    display: none;
+}
+.page-id-27012 header.masthead.home-page-banner.bg-gradient .row > div:nth-child(2) {
+    flex: 100%;
+    max-width: 100%;
+}
+.page-id-27012 header.masthead.home-page-banner.bg-gradient .row h1 {
+    text-align: center;
+}
+.page-id-27012 a.btn.outline-white {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+.page-id-27012 .home-page-banner .content-container {
+    padding: 9rem 0 4rem;
+}
+.page-id-27012 .text-wrapper {
+    text-align: center;
+}
+.page-id-27012 .text-wrapper h5 {
+    color: #31949a;
+    font-weight: 600;
+}
+.page-id-27012 .col-lg-8 {
+    flex: 0 0 82.66667%;
+    max-width: 82.66667%;
+}
+
+.page-id-27012 .testimonial_slider .quote-container span.star-rating {
+    color: yellow;
+}
+.page-id-27012 a.text-link {
+    display: none !important;
+}
+.page-id-27012 .has-bg .image-wrap {
+    box-shadow: 20px 25px 0px -5px #4FC6AB !important;
+}
+
+.page-id-27012 .feature-block .image-wrap {
+    box-shadow: -20px 25px 0px -5px #4FC6AB;
+}
+.page-id-27012 .bg-beige {
+    background-color: #eceded;
+}
+p.faq-para {
+    font-size: 18px;
+    margin-top: 25px;
+}
+.page-id-27012 .testimonial_slider {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.page-id-27012 section.text-block {
+    text-align: center;
+}
+/*end*/
+@media (min-width: 768px){
+.page-id-26546 .feature-block {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+	.page-id-27012 .feature-block .image-wrap img:not(.play-btn) {
+        height: fit-content;
+    }
+	.page-id-27012 .feature-block .image-wrap {
+       height: fit-content;
+    }
+	section.sitemap-wrapper {
+    margin-top: 30;
+}
+}
+@media only screen and (max-width: 1199px) {
+	.page-id-26503 a.btn.outline-white {
+    width: 40%;
+}
+		.page-id-26546 a.btn.outline-white {
+    width: 40%;
+}
+	.page-id-26559 a.btn.outline-white {
+    width: 40%;
+}
+		.page-id-26554 a.btn.outline-white {
+    width: 40%;
+}
+	.page-id-26902 a.btn.outline-white {
+    width: 40%;
+}
+	.page-id-26928 a.btn.outline-white {
+    width: 40%;
+}
+}
+@media only screen and (max-width: 991px) {
+	.page-id-26503 a.btn.outline-white {
+    width: 54%;
+}
+	.page-id-26503 .home-page-banner .content-container {
+    padding: 5rem 0 4rem;
+}
+	.page-id-26546 a.btn.outline-white {
+    width: 54%;
+}
+	.page-id-26546 .home-page-banner .content-container {
+    padding: 5rem 0 4rem;
+}
+	
+		.page-id-26559 a.btn.outline-white {
+    width: 54%;
+}
+	.page-id-26559 .home-page-banner .content-container {
+    padding: 5rem 0 4rem;
+}
+	
+	.page-id-26554 a.btn.outline-white {
+    width: 54%;
+}
+	.page-id-26554 .home-page-banner .content-container {
+    padding: 5rem 0 4rem;
+}
+	
+	.page-id-26902 a.btn.outline-white {
+    width: 54%;
+}
+	.page-id-26902 .home-page-banner .content-container {
+    padding: 5rem 0 4rem;
+}
+	
+	.page-id-26928 a.btn.outline-white {
+    width: 54%;
+}
+	.page-id-26928 .home-page-banner .content-container {
+    padding: 5rem 0 4rem;
+}
+	.page-id-27012 .home-page-banner .content-container {
+    padding: 5rem 0 4rem;
+}
+}
+@media only screen and (max-width: 767px) {
+	.page-id-26503 a.btn.outline-white {
+    width: 70%;
+}
+	.page-id-26503 .home-page-banner .content-container {
+    padding: 3rem 0 4rem;
+}
+	
+		.page-id-26546 a.btn.outline-white {
+    width: 70%;
+}
+	.page-id-26546 .home-page-banner .content-container {
+    padding: 3rem 0 4rem;
+}
+	.page-id-26559 a.btn.outline-white {
+    width: 70%;
+}
+	.page-id-26559 .home-page-banner .content-container {
+    padding: 3rem 0 4rem;
+}
+	
+		.page-id-26554 a.btn.outline-white {
+    width: 70%;
+}
+	.page-id-26554 .home-page-banner .content-container {
+    padding: 3rem 0 4rem;
+}
+	
+	.page-id-26902 a.btn.outline-white {
+    width: 70%;
+}
+	.page-id-26902 .home-page-banner .content-container {
+    padding: 3rem 0 4rem;
+}
+	
+	.page-id-26928 a.btn.outline-white {
+    width: 70%;
+}
+	.page-id-26928 .home-page-banner .content-container {
+    padding: 3rem 0 4rem;
+}
+	.page-id-27012 .home-page-banner .content-container {
+    padding: 3rem 0 4rem;
+}
+}
+@media only screen and (max-width: 445px) {
+	.page-id-26503 a.btn.outline-white {
+    width: 85%;
+}
+	.page-id-26546 a.btn.outline-white {
+    width: 85%;
+}
+	.page-id-26559 a.btn.outline-white {
+    width: 85%;
+}
+	.page-id-26554 a.btn.outline-white {
+    width: 85%;
+}
+	.page-id-26902 a.btn.outline-white {
+    width: 85%;
+}
+	.page-id-26928 a.btn.outline-white {
+    width: 85%;
+}
+}
+@media only screen and (max-width: 372px) {
+.page-id-26503 a.btn.outline-white {
+    font-size: 16px;
+}
+	.page-id-26546 a.btn.outline-white {
+    font-size: 16px;
+}
+	.page-id-26559 a.btn.outline-white {
+    font-size: 16px;
+}
+		.page-id-26554 a.btn.outline-white {
+    font-size: 16px;
+}
+	.page-id-26902 a.btn.outline-white {
+    font-size: 16px;
+}
+	.page-id-26928 a.btn.outline-white {
+    font-size: 16px;
+}
+	.page-id-27012 a.btn.outline-white {
+    font-size: 16px;
+}
+}
+
+.sub-menu .sub-menu {
+    top: 0px;
+    left: auto !important;
+    left: 100% !important;
+    transform: translateX(0);
+    margin-left: 0;
+    margin-right: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .menu-item-has-children:hover > .sub-menu {
+    visibility: visible !important;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+.sub-menu {
+  visibility: hidden !important;
+  opacity: 0;
+  pointer-events: none;
+ 
+}
+.page-id-27209 section p a:not(.full-block-link):not(.btn),.page-id-26826 section p a:not(.full-block-link):not(.btn)  {
+    padding-bottom: 1px;
+    border-bottom: 1px solid #4FC6AB;
+    transition: 0.3s;
+    background-color: #50c6ab;
+    padding: 10px;
+    display: block;
+    color: #fff;
+    border-radius: 3px;
+}
+
+@media (min-width: 992px) {
+    .page-id-27321 .col-lg-8 {
+        flex: 5 0 66.66667%;
+        max-width: 100% !important;
+    }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gallery-img-container {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.gallery-img-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+.menu-item-has-children .sub-menu:hover .sub-menu {
+    z-index: 0;
+    visibility: hidden  !important;
+    opacity: 0 !important;
+}
+.menu-item-has-children:hover > .sub-menu:hover  .sub-menu {
+    visibility: hidden !important;
+    opacity: 0;
+    pointer-events: unset !important;
+}
+.menu-item-has-children:hover > .sub-menu li:hover ul.sub-menu {
+    visibility: visible !important;
+    opacity: 3 !important;
+    pointer-events: fill !important;
+}
+.menu-mobile-menu-container li .sub-menu.show {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto;
+    overflow: visible !important;
+}
+.MUMDEGAjuD3w1jMyDMMgNNjEMwNDZ2Qtheme--light {
+	display: none!important;
+}
+.menu-item-has-children .sub-menu a:hover {
+    color: #53C7AD!important;
+}
+.menu-item-has-children .sub-menu a {
+    color: #301C39 !important;
+}
+.menu-mobile-menu-container li .sub-menu li a {
+    color: #fff;
+    font-weight: 400;
+    color: #fff !important;
+}
+
+section.sitemap-wrapper {
+    margin-top: 160px;
+}
+.sitemap-wrapper li {
+    list-style: none;
+}
+.sitemap-wrapper {
+    margin: auto;
+    padding: 30px 0;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+  .sitemap-wrapper a {
+    color: #301C39;
+    text-decoration: none;
+  }
+  .sitemap-wrapper a:hover {
+    text-decoration: underline;
+  }
+.page-id-27165 .col-12.col-lg-8.mx-auto{
+		max-width: 100% !important;
+    flex: 100%;
+}
+/* WPPS-162765-VB start */
+
+#main > section:nth-child(2) > article > div > div > div.col-12.col-md-5 > div > div > a > img:nth-child(1){
+	content: url("https://macleodtraildental.ca/wp-content/uploads/2025/05/optimized-01.jpg");
+}
+#main > section:nth-child(3) > article > div > div > div.col-12.col-md-5.order-md-2 > div > div > img{
+		content: url("https://macleodtraildental.ca/wp-content/uploads/2025/05/optimized-02.jpg");
+}
+#main > section:nth-child(4) > article > div > div > div.col-12.col-md-5.order-md-2 > div > div > img{
+	content: url("https://macleodtraildental.ca/wp-content/uploads/2025/05/optimized-03.jpg");
+}
+/* WPPS-162765-VB end */
+
+.custom-social-media {
+  display: flex;
+  gap: 15px; 
+  align-items: center;
+	padding-top: 20px;
+}
+
+.custom-social-media a {
+  color: #fff;
+  font-size: 1.35rem
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.custom-social-media a:hover {
+  color: #4FC6AB;
+}
+.gfield--type-captcha iframe {
+    height: 77px !important;
+}
+.page-id-302 .site-main .text-block .container {
+  max-width: 100% !important;
+	padding: 20px 100px;
+}
+@media (min-width: 1200px) {
+   .page-id-302 .site-main .text-block .container {
+  max-width: 100% !important;
+	padding: 20px 100px;
+}
+}
+
+@media (min-width: 768px) {
+    .page-id-20937 .feature-block .image-wrap img:not(.play-btn) {
+        height: 100% !important;
+    }
+}
+.opening-hours.contact {
+    margin-top: -32px !important;
+}
+p.opening-hours-title {
+    font-weight: 800;
+		font-size: 19px !important;
+}
+.opening-hours.contact .contact-note {
+    font-size: 14px;
+}
+.opening-hours.contact p{
+	font-size:16px;
+}
+.page-id-442 .opening-hours {
+    display: none;
+}
+.opening-hours.contact{
+	 display: block !important;
+}
+
+/* Responsive Fix */
+@media (max-width: 767px) {
+.page-id-459 .feature-block .image-wrap {
+    display: none !important;
+}
+	.inner-page-banner .text-container {
+    padding-top: 3.66rem;
+    padding-bottom: 3.66rem;
+}
+	input#gform_submit_button_17 {
+    margin-top: 25px !important;
+}
+	.page-id-27012 .col-12.col-lg-10.mx-auto.text-center {
+    text-align: left !important;
+}
+	.page-id-449 td.column-2 {
+    min-width: 120px;
+}
+	.page-id-26546 .col-12.col-md-7.text.order-md-1 {
+    padding: 40px 15px !important;
+}
+	.page-id-20937 .col-12.col-md-5.order-md-2 .image-wrap {
+    display:none !important;
+}
+}
+
+.get_direction_link a{
+	background-color:none !important;
+}
+
+@media (min-width: 768px) {
+    .home .map-block .acf-map,
+    .home .map-block .content-block {
+        min-height: 745px !important;
+    }
+}
+@media (min-width: 1200px) {
+    .home-page-banner .content-container {
+        padding: 8rem 0rem 5rem !important;
+    }
+}
+</style>
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" id="slick-css-css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css?ver=7.0" media="all">
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" id="slick-theme-css-css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css?ver=7.0" media="all">
+
+<meta name="generator" content="WP Rocket 3.22.0.3" data-wpr-features="wpr_oci wpr_cdn wpr_preload_links wpr_desktop"><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/967303382/?random=1783044473018&amp;cv=11&amp;fst=1783044473018&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be66u1v9205666607za200zb845164203zd845164203xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938465~115938468~118897920~118897930~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fmacleodtraildental.ca%2Fmeet-dr-endeep-gill%2F&amp;rcb=4&amp;frm=0&amp;tiba=Personalized%20Dentistry%20-%20Macleod%20Trail%20Dental&amp;did=dZTNiMT&amp;gdid=dZTNiMT&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1502454875.1783044427&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script></head>
+
+<body class="wp-singular page-template-default page page-id-27314 wp-theme-macleodtrail_wp_redev">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP8MZ3V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+    <nav class="navbar-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="menu-top-menu-container"><ul id="menu-top-menu" class="top-nav"><li id="menu-item-474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-474"><a href="https://macleodtraildental.ca/contact-macleod-trail-dental/">CONTACT US</a></li>
+<li id="menu-item-406" class="phone-link menu-item menu-item-type-custom menu-item-object-custom menu-item-406"><a href="tel:4032531248">403-253-1248</a></li>
+</ul></div>                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="row main-bar-row">
+                <div class="col-9 col-lg-3 logo-col">
+                    <a class="navbar-brand" rel="home" href="https://macleodtraildental.ca/" title="Macleod Trail Dental" itemprop="url">
+                        <img width="208" height="46" src="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/images/logo.svg" alt="Macleod Trail Dental">
+                    </a>
+                </div>
+
+                <div class="col-3 col-lg-9 menu-col">
+                    <div class="menu-main-menu-container"><ul id="menu-main-menu" class="main-nav align-center mx-auto"><li id="menu-item-30138" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30138"><a href="/">New Patients<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-27334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27334"><a href="https://macleodtraildental.ca/office-tour/">Office Tour</a></li>
+	<li id="menu-item-27338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27338"><a href="https://macleodtraildental.ca/dentist-reviews/">Online Reviews</a></li>
+	<li id="menu-item-27543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27543"><a href="https://macleodtraildental.ca/forms/">Forms</a></li>
+	<li id="menu-item-27298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27298"><a href="https://macleodtraildental.ca/areas-we-serve/">Areas We Serve</a></li>
+	<li id="menu-item-27358" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27358"><a href="https://macleodtraildental.ca/dental-financing/">Dental Financing</a></li>
+	<li id="menu-item-21057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21057"><a href="https://macleodtraildental.ca/direct-insurance-billing/">Direct Insurance Billing</a></li>
+	<li id="menu-item-28283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28283"><a href="https://macleodtraildental.ca/canadian-dental-care-plan/">Canadian Dental Care Plan (CDCP)</a></li>
+</ul>
+</li>
+<li id="menu-item-475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-475"><a href="https://macleodtraildental.ca/dental-services/">Dental Services<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-27199" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27199"><a href="https://macleodtraildental.ca/general-dentistry-calgary/">General Services<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="https://macleodtraildental.ca/teeth-cleaning/">Teeth Cleaning</a></li>
+		<li id="menu-item-26527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26527"><a href="https://macleodtraildental.ca/childrens-dentist-in-calgary/">Children’s Dentistry</a></li>
+		<li id="menu-item-21005" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21005"><a href="https://macleodtraildental.ca/senior-dental-care/">Seniors Dental Care</a></li>
+		<li id="menu-item-27357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27357"><a href="https://macleodtraildental.ca/oral-pathology/">Oral Pathology</a></li>
+		<li id="menu-item-27346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27346"><a href="https://macleodtraildental.ca/root-canals-calgary/">Root Canals</a></li>
+	</ul>
+</li>
+	<li id="menu-item-27356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27356"><a href="https://macleodtraildental.ca/restorative-dentistry/">Restorative<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-27347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27347"><a href="https://macleodtraildental.ca/dental-crowns-calgary/">Dental Crown</a></li>
+		<li id="menu-item-27345" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27345"><a href="https://macleodtraildental.ca/dental-fillings-calgary/">Dental Fillings</a></li>
+		<li id="menu-item-27348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27348"><a href="https://macleodtraildental.ca/dental-bonding-calgary/">Dental Bonding</a></li>
+		<li id="menu-item-27409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27409"><a href="https://macleodtraildental.ca/dental-bridges/">Dental Bridges</a></li>
+	</ul>
+</li>
+	<li id="menu-item-486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-486"><a href="https://macleodtraildental.ca/cosmetic-dentistry/">Cosmetic Dentistry<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-26687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26687"><a href="https://macleodtraildental.ca/full-mouth-reconstruction/">Smile Makeover</a></li>
+		<li id="menu-item-488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-488"><a href="https://macleodtraildental.ca/teeth-whitening/">Teeth Whitening</a></li>
+		<li id="menu-item-491" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-491"><a href="https://macleodtraildental.ca/dental-implants/">Dental Implants</a></li>
+		<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="https://macleodtraildental.ca/porcelain-veneers-calgary/">Veneers</a></li>
+		<li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="https://macleodtraildental.ca/invisalign/">Invisalign / Clear Braces</a></li>
+	</ul>
+</li>
+	<li id="menu-item-476" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-476"><a href="https://macleodtraildental.ca/specialty-dentistry/">Specialty Dentistry<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-28416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28416"><a href="https://macleodtraildental.ca/sleep-apnea-treatment/">Sleep Apnea</a></li>
+		<li id="menu-item-492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a href="https://macleodtraildental.ca/tmj-treatment/">TMJ Treatment</a></li>
+		<li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="https://macleodtraildental.ca/wisdom-teeth-removal/">Wisdom Teeth Removal</a></li>
+		<li id="menu-item-482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-482"><a href="https://macleodtraildental.ca/sedation-dentistry/">Sedation Dentistry</a></li>
+	</ul>
+</li>
+	<li id="menu-item-27361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27361"><a href="https://macleodtraildental.ca/other-services/">Other Services<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="https://macleodtraildental.ca/custom-sports-mouth-guard/">Sports Mouthguards</a></li>
+		<li id="menu-item-485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-485"><a href="https://macleodtraildental.ca/night-guard-for-teeth-grinding/">Teeth Grinding</a></li>
+	</ul>
+</li>
+	<li id="menu-item-481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-481"><a href="https://macleodtraildental.ca/emergency-dentist/">Emergency Dentistry</a></li>
+</ul>
+</li>
+<li id="menu-item-27204" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-27204"><a href="https://macleodtraildental.ca/our-dental-team/">Our Team<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-27342" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27342"><a href="https://macleodtraildental.ca/our-dental-team/">Our Team</a></li>
+	<li id="menu-item-27313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27313"><a href="https://macleodtraildental.ca/meet-dr-jennifer-silver/">Dr. Jennifer Silver</a></li>
+	<li id="menu-item-27315" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-27314 current_page_item menu-item-27315"><a href="https://macleodtraildental.ca/meet-dr-endeep-gill/" aria-current="page">Dr. Endeep Gill</a></li>
+	<li id="menu-item-27201" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27201"><a href="https://macleodtraildental.ca/ewart-dental-history/">Dr. Ewart Legacy</a></li>
+	<li id="menu-item-27205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27205"><a href="https://macleodtraildental.ca/dental-hygienist/">Dental Hygienist</a></li>
+</ul>
+</li>
+<li id="menu-item-408" class="nav-button menu-item menu-item-type-custom menu-item-object-custom menu-item-408"><a href="https://macleodtraildental.ca/contact-macleod-trail-dental/?appointment=yes">Book Now</a></li>
+</ul></div>
+                    <div class="menu-mobile-menu-container navbar-mobile"><ul id="menu-main-menu-1" class="main-nav align-center mx-auto d-lg-none"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30138"><a href="/">New Patients<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27334"><a href="https://macleodtraildental.ca/office-tour/">Office Tour</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27338"><a href="https://macleodtraildental.ca/dentist-reviews/">Online Reviews</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27543"><a href="https://macleodtraildental.ca/forms/">Forms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27298"><a href="https://macleodtraildental.ca/areas-we-serve/">Areas We Serve</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27358"><a href="https://macleodtraildental.ca/dental-financing/">Dental Financing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21057"><a href="https://macleodtraildental.ca/direct-insurance-billing/">Direct Insurance Billing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28283"><a href="https://macleodtraildental.ca/canadian-dental-care-plan/">Canadian Dental Care Plan (CDCP)</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-475"><a href="https://macleodtraildental.ca/dental-services/">Dental Services<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27199"><a href="https://macleodtraildental.ca/general-dentistry-calgary/">General Services<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="https://macleodtraildental.ca/teeth-cleaning/">Teeth Cleaning</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26527"><a href="https://macleodtraildental.ca/childrens-dentist-in-calgary/">Children’s Dentistry</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21005"><a href="https://macleodtraildental.ca/senior-dental-care/">Seniors Dental Care</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27357"><a href="https://macleodtraildental.ca/oral-pathology/">Oral Pathology</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27346"><a href="https://macleodtraildental.ca/root-canals-calgary/">Root Canals</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27356"><a href="https://macleodtraildental.ca/restorative-dentistry/">Restorative<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27347"><a href="https://macleodtraildental.ca/dental-crowns-calgary/">Dental Crown</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27345"><a href="https://macleodtraildental.ca/dental-fillings-calgary/">Dental Fillings</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27348"><a href="https://macleodtraildental.ca/dental-bonding-calgary/">Dental Bonding</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27409"><a href="https://macleodtraildental.ca/dental-bridges/">Dental Bridges</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-486"><a href="https://macleodtraildental.ca/cosmetic-dentistry/">Cosmetic Dentistry<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26687"><a href="https://macleodtraildental.ca/full-mouth-reconstruction/">Smile Makeover</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-488"><a href="https://macleodtraildental.ca/teeth-whitening/">Teeth Whitening</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-491"><a href="https://macleodtraildental.ca/dental-implants/">Dental Implants</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="https://macleodtraildental.ca/porcelain-veneers-calgary/">Veneers</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="https://macleodtraildental.ca/invisalign/">Invisalign / Clear Braces</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-476"><a href="https://macleodtraildental.ca/specialty-dentistry/">Specialty Dentistry<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28416"><a href="https://macleodtraildental.ca/sleep-apnea-treatment/">Sleep Apnea</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a href="https://macleodtraildental.ca/tmj-treatment/">TMJ Treatment</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="https://macleodtraildental.ca/wisdom-teeth-removal/">Wisdom Teeth Removal</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-482"><a href="https://macleodtraildental.ca/sedation-dentistry/">Sedation Dentistry</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27361"><a href="https://macleodtraildental.ca/other-services/">Other Services<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="https://macleodtraildental.ca/custom-sports-mouth-guard/">Sports Mouthguards</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-485"><a href="https://macleodtraildental.ca/night-guard-for-teeth-grinding/">Teeth Grinding</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-481"><a href="https://macleodtraildental.ca/emergency-dentist/">Emergency Dentistry</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-27204"><a href="https://macleodtraildental.ca/our-dental-team/">Our Team<span class="submenu-toggle"><svg class="sc-icon sc-icon-chevron-down"><use xlink:href="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/sprite/sprite.svg#chevron-down"></use></svg></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27342"><a href="https://macleodtraildental.ca/our-dental-team/">Our Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27313"><a href="https://macleodtraildental.ca/meet-dr-jennifer-silver/">Dr. Jennifer Silver</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-27314 current_page_item menu-item-27315"><a href="https://macleodtraildental.ca/meet-dr-endeep-gill/" aria-current="page">Dr. Endeep Gill</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27201"><a href="https://macleodtraildental.ca/ewart-dental-history/">Dr. Ewart Legacy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27205"><a href="https://macleodtraildental.ca/dental-hygienist/">Dental Hygienist</a></li>
+</ul>
+</li>
+<li class="nav-button menu-item menu-item-type-custom menu-item-object-custom menu-item-408"><a href="https://macleodtraildental.ca/contact-macleod-trail-dental/?appointment=yes">Book Now</a></li>
+</ul></div>
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNavDropdownMobile" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="wrapper" id="page-wrapper">
+	<div id="content" tabindex="-1">
+		<main class="site-main" id="main">
+
+            
+<header class="tests masthead header inner-page-banner bg-purple-gradient">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-12 col-lg-11 mx-auto text-center">
+        <div class="text-container">
+
+                      <h1>Dr. Endeep Gill</h1>
+          
+          
+                      <a class="btn outline-white" href="https://macleodtraildental.ca/contact-macleod-trail-dental/">Book Your Consult</a>          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="feature-block ">
+    <!-- [begin] Featured Block — Reusable -->
+    <article class="align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5 ">
+                    <div class="image-wrap">
+                        <div class="icons-image">
+                                                            <img fetchpriority="high" width="1000" height="1000" src="https://macleodtraildental.ca/wp-content/uploads/2021/05/Dr-Gill.jpg" srcset="https://macleodtraildental.ca/wp-content/uploads/2021/05/Dr-Gill.jpg 445w, https://macleodtraildental.ca/wp-content/uploads/2021/05/Dr-Gill-400x400.jpg 400w, https://macleodtraildental.ca/wp-content/uploads/2021/05/Dr-Gill-150x150.jpg 150w" sizes="(max-width: 445px) 100vw, 445px" alt="">                                                    </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-7 text ">
+                    <div>
+                        <h3>Meet Dr. Endeep Gill</h3>
+<p>Dr. Endeep Gill grew up in Calgary and received her doctor of dental surgery from the University of Alberta.Dr. Gill performs all aspects of dentistry and loves working with patients of all ages. She is compassionate and takes time to understand patient values and needs. She has performed volunteer dentistry in both Canada and abroad. Her favourite volunteer experience was a mission trip in Guatemala where she joined a team of physicians, nurses, dentists, and dental hygienists. She provided free dental care to hundreds of locals at various villages throughout Chisec. She also completed a dental exchange program in Germany as part of her education. Dr. Gill highly values the importance of lifelong learning.</p>
+<p>Apart from enjoying her career as a dentist, Dr. Gill spends her time trying out new restaurants, travelling, and spending time with her family.</p>
+                                            </div>
+                </div>
+            </div><!-- .row -->
+        </div>
+    </article>
+</section>
+<section class="cta-group ">
+	<!-- [begin] CTA Group — Reusable -->
+	<div class="cta-image">
+		<img width="1000" height="1000" src="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/assets/images/Southcentre-Icon-White.svg" sizes="(max-width: 0) 100vw, 0" alt="">
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-10 mx-auto text-center">
+				<h2>Ready for a perfect smile?</h2>
+				<p>Contact our team today to book your dental appointment!</p>
+										<a class="btn" href="https://macleodtraildental.ca/contact-macleod-trail-dental/">Book Now</a>							</div>
+		</div>
+	</div>
+</section>
+                    </main><!-- #main -->
+	</div><!-- #content -->
+</div><!-- #single-wrapper -->
+
+
+<footer class="footer bg-gradient">
+    <div class="container">
+        <div class="row footer-box">
+            <div class="col-12 col-md-4 order-md-3 text-center footer-col">
+                <div class="footer-title text-center">Contact Info</div>
+                <p>Our dental clinic is conveniently located in Heritage Square in the Acadia neighbourhood just across the street from the Fairview area.</p>
+
+                <p><strong>Address</strong><br>
+                8500 Macleod Trail SE #232, Calgary, AB T2H 2N1</p>
+    
+                <p><strong>Phone</strong><br>
+                <a href="tel:4032531248">403-253-1248</a></p>
+
+                <p><strong>Email</strong><br>
+                <a href="mailto:info@macleodtraildental.ca">info@macleodtraildental.ca</a></p>
+            </div>
+
+            <div class="col-12 col-md-4 order-md-2 footer-col">
+                <div class="footer-title text-center">Opening Hours</div>
+                <div class="text-center"><p><strong>Sunday</strong> Closed</p>
+<p><strong>Monday</strong> 7:30 AM – 5:00 PM</p>
+<p><strong>Tuesday</strong> 7:30 AM – 8:00 PM</p>
+<p><strong>Wednesday</strong> 7:30 AM – 8:00 PM</p>
+<p><strong>Thursday</strong> 7:30 AM – 5:00 PM</p>
+<p><strong>Friday</strong> 7:30 AM – 5:00 PM</p>
+<p><strong>Saturday</strong> Closed</p>
+</div>
+            </div>
+
+            <div class="col-12 col-md-4 order-md-1 footer-col">
+                <div class="footer-title text-center">Featured Services</div>
+                <div class="text-center">
+                    <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="footer-nav"><li id="menu-item-28280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-28280"><a href="https://macleodtraildental.ca/">Dentist Calgary</a></li>
+<li id="menu-item-524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-524"><a href="https://macleodtraildental.ca/cosmetic-dentistry/">Cosmetic Dentistry</a></li>
+<li id="menu-item-519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="https://macleodtraildental.ca/tmj-treatment/">TMJ Treatment</a></li>
+<li id="menu-item-28284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28284"><a href="https://macleodtraildental.ca/dental-implants/">Dental Implants</a></li>
+<li id="menu-item-28285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28285"><a href="https://macleodtraildental.ca/full-mouth-reconstruction/">Smile Makeover</a></li>
+<li id="menu-item-27193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27193"><a href="https://macleodtraildental.ca/invisalign/">Invisalign Dentistry</a></li>
+<li id="menu-item-27195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27195"><a href="https://macleodtraildental.ca/teeth-whitening/">Teeth Whitening</a></li>
+<li id="menu-item-27192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27192"><a href="https://macleodtraildental.ca/emergency-dentist/">Emergency Dentistry</a></li>
+</ul></div>                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="caption-text">
+                    Copyright © 2026 Macleod Trail Dental. All Rights Reserved.
+                    <div class="menu-footer-bottom-menu-container"><ul id="menu-footer-bottom-menu" class="footer-bottom-nav"><li id="menu-item-29109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29109"><a href="https://macleodtraildental.ca/meet-dr-jennifer-silver/">Dr. Jennifer Silver</a></li>
+<li id="menu-item-29110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29110"><a href="https://macleodtraildental.ca/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="https://macleodtraildental.ca/terms-and-conditions/">Terms and Conditions</a></li>
+<li id="menu-item-28912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28912"><a target="_blank" href="https://macleodtraildental.ca/sitemap_index.xml">Sitemap</a></li>
+</ul></div>                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/macleodtrail_wp_redev/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script>
+function mtdReportConversion(url, sendTo) {
+  var done = false;
+
+  var callback = function() {
+    if (done) return;
+    done = true;
+    if (url) {
+      window.location = url;
+    }
+  };
+
+  gtag('event', 'conversion', {
+    'send_to': sendTo,
+    'value': 1.0,
+    'currency': 'CAD',
+    'event_callback': callback
+  });
+
+  setTimeout(callback, 800);
+  return false;
+}
+
+document.addEventListener('click', function(e) {
+  var telLink = e.target.closest('a[href^="tel:"]');
+  if (telLink) {
+    e.preventDefault();
+    mtdReportConversion(
+      telLink.getAttribute('href'),
+      'AW-967303382/M3rcCMzUnpscENbBn80D'
+    );
+    return;
+  }
+
+  var mailLink = e.target.closest('a[href^="mailto:"]');
+  if (mailLink) {
+    e.preventDefault();
+    mtdReportConversion(
+      mailLink.getAttribute('href'),
+      'AW-967303382/2JTrCKfBt5scENbBn80D'
+    );
+  }
+}, true);
+</script>		<!-- Google Tag Manager (noscript) snippet added by Site Kit -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKZBJNXG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
+		<script id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://macleodtraildental.ca","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script id="slick-js-js" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script id="kpbt_app-js-extra">
+var kpa = {"nonce":"0e666d12a7","ajax_url":"https://macleodtraildental.ca/wp-admin/admin-ajax.php","template_url":"https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev"};
+//# sourceURL=kpbt_app-js-extra
+</script>
+<script id="kpbt_app-js" src="https://macleodtraildental.ca/wp-content/themes/macleodtrail_wp_redev/main.min.js?ver=1753694175"></script>
+<script id="google-maps-js" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsQAPkGulLSg0CnoNfcf6DbRDsbqkTX44"></script>
+
+<script>var rocket_beacon_data = {"ajax_url":"https:\/\/macleodtraildental.ca\/wp-admin\/admin-ajax.php","nonce":"f3b9395e5a","url":"https:\/\/macleodtraildental.ca\/meet-dr-endeep-gill","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src="https://macleodtraildental.ca/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js" async="" beacon-completed="true"></script>
+
+
+<script type="text/javascript" id="" charset="">(function(){var u=!0,l=2592E5;if(window.Storage){var c=JSON.parse(localStorage.getItem("_tab_ids"))||[],d=sessionStorage.getItem("_tab_id"),a=JSON.parse(sessionStorage.getItem("_nav_path")),e=document.location.href,f=!1,v=document.location.origin,r,n,m,g,t=function(b){return 0===l?b:b.filter(function(h){try{return m=parseInt(h.split("_")[1],10),m>(new Date).getTime()}catch(p){return!1}})};var q=function(b){if(0===l)return b;try{g=b.split("_");m=parseInt(g[1],10);if(m>(new Date).getTime())return b;
+g=g[0]+"_"+((new Date).getTime()+l);sessionStorage.setItem("_tab_id",g);return g}catch(h){return b}};var w=function(){if(!1===u)return"BACK/FORWARD";if(2>a.length)return"FORWARD";r=a[a.length-2];n=a[a.length-1];return r===e||n===e?"BACK":"FORWARD"},x=function(){c=JSON.parse(localStorage.getItem("_tab_ids"))||[];d=sessionStorage.getItem("_tab_id");c=t(c);if(c.length&&null!==d){var b=c.indexOf(d);-1<b&&c.splice(b,1);localStorage.setItem("_tab_ids",JSON.stringify(c))}},y=function(){var b=(new Date).getTime();
+"undefined"!==typeof performance&&"function"===typeof performance.now&&(b+=performance.now());return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(h){var p=(b+16*Math.random())%16|0;b=Math.floor(b/16);return("x"===h?p:p&3|8).toString(16)})+(0<l?"_"+((new Date).getTime()+l):"")},z=function(b,h){return!(!0===h&&0!==b&&255!==b)};null===d?(d=y(),f=!0,sessionStorage.setItem("_tab_id",d)):d=q(d);c=t(c);-1===c.indexOf(d)&&(c.push(d),localStorage.setItem("_tab_ids",JSON.stringify(c)));q=
+c.length;if(window.PerformanceNavigation){a=a||[];var A=window.performance.navigation.redirectCount;if(z(window.performance.navigation.type,f))switch(window.performance.navigation.type){case 0:var k="NAVIGATE";a.push(e);break;case 1:k="RELOAD";0!==a.length&&a[a.length-1]===e||a.push(e);break;case 2:k=w();"FORWARD"===k?-1<document.referrer.indexOf(v)&&a.push(e):"BACK"===k?n!==e&&a.pop():a.push(e);break;default:k="OTHER",a.push(e)}else a.push(e);sessionStorage.setItem("_nav_path",JSON.stringify(a))}window.addEventListener("beforeunload",
+x);f={tabCount:q,redirectCount:A,navigationType:k,newTab:!0===f?"New":"Existing",tabId:d.replace(/_.+/,"")};window.google_tag_manager[google_tag_manager["rm"]["45164203"](4)].dataLayer.set("browsingBehavior",f);window.dataLayer.push({event:"custom.navigation",browsingBehavior:f})}})();</script></body></html>
