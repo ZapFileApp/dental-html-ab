@@ -1,0 +1,1080 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.4 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Dr. Scott Townsend - DDS | Glenmore Family Dental Centre</title>
+<link data-rocket-prefetch="" href="https://fonts.googleapis.com" rel="dns-prefetch">
+<link data-rocket-prefetch="" href="https://cdn.callrail.com" rel="dns-prefetch">
+<link data-rocket-prefetch="" href="https://www.google.com" rel="dns-prefetch">
+<link data-rocket-preload="" as="style" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="preload">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" media="all" onload="this.media='all'" rel="stylesheet">
+<noscript data-wpr-hosted-gf-parameters=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&#038;family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&#038;family=Poppins:wght@300;400;500;600;700&#038;display=swap"></noscript>
+<link rel="preload" data-rocket-preload="" as="image" href="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2025/03/dr-townsend.jpg" imagesrcset="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2025/03/dr-townsend.jpg 500w, https://www.glenmorefamilydentalcare.com/wp-content/uploads/2025/03/dr-townsend-300x300.jpg 300w, https://www.glenmorefamilydentalcare.com/wp-content/uploads/2025/03/dr-townsend-150x150.jpg 150w" imagesizes="(max-width: 500px) 100vw, 500px" fetchpriority="high">
+	<meta name="description" content="Meet Dr. Scott Townsend: dedicated dentist for your healthy smile. Experience personalized care for confidence and excellence.">
+	<link rel="canonical" href="https://www.glenmorefamilydentalcare.com/team-member/dr-scott-townsend/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Dr. Scott Townsend - DDS | Glenmore Family Dental Centre">
+	<meta property="og:description" content="Meet Dr. Scott Townsend: dedicated dentist for your healthy smile. Experience personalized care for confidence and excellence.">
+	<meta property="og:url" content="https://www.glenmorefamilydentalcare.com/team-member/dr-scott-townsend/">
+	<meta property="og:site_name" content="Glenmore Family Dental Care">
+	<meta property="article:modified_time" content="2025-03-12T08:08:18+00:00">
+	<meta property="og:image" content="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2025/03/dr-townsend.jpg">
+	<meta property="og:image:width" content="500">
+	<meta property="og:image:height" content="500">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="1 minute">
+	<!-- / Yoast SEO plugin. -->
+
+
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="Glenmore Family Dental Care » Feed" href="https://www.glenmorefamilydentalcare.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Glenmore Family Dental Care » Comments Feed" href="https://www.glenmorefamilydentalcare.com/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.glenmorefamilydentalcare.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.glenmorefamilydentalcare.com%2Fteam-member%2Fdr-scott-townsend%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.glenmorefamilydentalcare.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.glenmorefamilydentalcare.com%2Fteam-member%2Fdr-scott-townsend%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link data-minify="1" rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1782304951" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" media="all">
+<link data-minify="1" rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/plugins/wpcf7-redirect/build/assets/frontend-script.css?ver=1782304951" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" media="all">
+<link data-minify="1" rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/themes/dentalmnv/style.css?ver=1782304951" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" media="all">
+<link data-minify="1" rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/cache/background-css/1/www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/themes/dentalmnv/css/custom.css?ver=1782304951&amp;wpr_t=1783015635" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" media="all">
+<link rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/plugins/date-time-picker-field/assets/js/vendor/datetimepicker/jquery.datetimepicker.min.css?ver=efb825c05b8ebd45f88974aa0501aae5" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" media="all">
+<script type="text/rocketlazyloadscript" id="jquery-core-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script type="text/rocketlazyloadscript" id="jquery-migrate-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="https://api.w.org/" href="https://www.glenmorefamilydentalcare.com/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.glenmorefamilydentalcare.com/xmlrpc.php?rsd">
+
+<link rel="shortlink" href="https://www.glenmorefamilydentalcare.com/?p=565">
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<link rel="icon" href="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2023/10/glenmore-family-dental-fav.png" sizes="32x32">
+<link rel="icon" href="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2023/10/glenmore-family-dental-fav.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2023/10/glenmore-family-dental-fav.png">
+<meta name="msapplication-TileImage" content="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2023/10/glenmore-family-dental-fav.png">
+<style id="wp-custom-css">
+ .publish-date {
+        background-color: #0e1037;
+        color: #ffffff;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+        cursor: default;
+        display: inline-block;
+        margin-bottom:10px;
+    }   
+
+.logo {
+    width: 280px !important;
+}
+
+a.cdcp-banner {
+    background-color: #27a7c0 !important;
+    padding: 5px;
+    display: block!important;
+    text-decoration: none!important;
+    font-weight: normal!important;
+	pointer-events: none !important;
+}
+.cdcp-banner {
+	/*background-color: #27a7c0 !important;*/
+	background-color: #0e1037 !important;
+	padding: 10px 20px;
+	display: flex !important;
+	text-decoration: none !important;
+	font-weight: normal !important;
+	text-align: center;
+	color: #fff;
+	justify-content: space-between;
+	align-items: center;
+}
+.cdcp-banner .cts-cdcp-item {
+	background-color: var(--primary-color);
+}
+.cdcp-banner .cts-cdcp-item a {
+  padding: 7px 20px;
+	display: inline-block;
+}
+.cdcp-banner .loading-text {
+    font-weight: 700;
+    color: #fff;
+    animation: blinkerHold 1.5s 
+linear infinite;
+}
+@keyframes blinkerHold {
+	0%, 70%, 100% {
+		opacity: 1;
+	}
+	85%, 95% {
+		opacity: 0;
+	}
+}
+.cdcp-banner .cts-firstwrapper {
+	display: flex;
+}
+.cdcp-banner .cts-firstwrapper a {
+	margin-right: 5px;
+}
+.cdcp-banner .cts-firstwrapper svg {
+	height: auto;
+  width: 1em;
+}
+.cdcp-banner .cts-cdcp-item:hover {
+	background-color: #FFF;
+}
+.cdcp-banner .cts-cdcp-item:hover a , .cdcp-banner .cts-cdcp-item:hover a span {
+	color: var(--primary-color);
+}
+/*.cdcp-banner p {
+    margin-bottom: 0px!important;
+    color: #fff!important;
+    text-align: center!important;
+    padding: 5px 0;
+}*/
+.cdcp-banner a {
+	color: #fff;
+	font-weight: 600;
+}
+.cdcp-banner a:hover {
+	color: var(--primary-color);
+}
+@media(max-width:767px) {
+	.cdcp-banner {
+		flex-direction: column;
+		gap: 8px;
+	}
+	.cdcp-banner , .cdcp-banner a {
+		font-size: 12px;
+	}
+}
+@media(min-width:768px) and (max-width:991px) {
+	.cdcp-banner , .cdcp-banner a {
+		font-size: 12px;
+	}
+}
+
+.single-services h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: normal;
+    font-weight: 500;
+    line-height: 1.2;
+}
+/* .single-services .type-services .entry-content .py-5 {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+}
+.single-services .type-services .entry-content {
+    padding-bottom: 1rem;
+} */
+
+.req-app-page-form {
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+.req-app-page-form .submit-btn-home {
+	grid-column: span 3;
+}
+.req-app-page-form .wpcf7 form.invalid .wpcf7-response-output,.req-app-page-form .wpcf7 form.unaccepted .wpcf7-response-output,.req-app-page-form .wpcf7 form.payment-required .wpcf7-response-output {
+	border-color: #ffb900;
+	text-align: center;
+	color: #fff;
+}
+.req-app-page-form .wpcf7-not-valid-tip{
+	color: #fff;
+}
+.page-id-1448 .inner-page-banner{
+	margin-bottom: 0;
+}
+
+
+@media (max-width: 767px){
+	.req-app-page-form .submit-btn-home,.req-app-page-form .textarea-home{
+	grid-column: span 2;
+}
+	.services-slider1{
+		max-width: 80%;
+	}
+	.service-slide-inner h4{
+		text-align: center;
+	}
+	.services-slider1 .slick-slide img{
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
+@media (max-width: 520px){
+	.req-app-page-form .submit-btn-home, .req-app-page-form .textarea-home {
+	grid-column: span 1;
+}
+	.whychooes-box-section .vc_col-sm-3{text-align: center;}
+	.why-chooes-section h3.vc_custom_heading {
+	text-align: center !important;
+}
+	.why-chooes-section .wpb_single_image.vc_align_left{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.services-slider1 button.slick-prev.slick-arrow::before {
+	top: 154px;
+	}
+	 button.slick-next.slick-arrow::before {
+		 right: -10px;}
+	.home-services .comman-heading {
+	text-align: center !important;
+}
+	.why-chooes-section h2.vc_custom_heading {
+	font-size: 26px;
+}
+}
+
+/* Commented by vikash for home tab section */
+.custom-home-tab {
+	padding-left: 40px;
+    margin-top: 50px;
+}
+.custom-home-tab .vc_column-inner{
+    padding: 0 !important;
+}
+.custom-home-tab .vc_row {
+	margin: 0;
+}
+
+.custom-home-tab .left.vc_col-sm-6 {
+    padding-top: 30px;
+}
+.custom-home-tab .font-h2{
+    font-size: 26px;
+    color: #333333;
+    line-height: 1.3;
+    margin-top: 0; font-weight: 500;
+}
+.custom-home-tab p{
+    font-size: 16px;
+    line-height: normal;
+    color: #333333 !important;
+    font-weight: 400;
+    font-family: "Poppins";
+}
+.custom-home-tab .secondary-button.learn-more-btn a {
+	padding: 15px 30px !important;
+}
+.custom-home-tab .learn-more-btn a:hover {
+	background-color: #000 !important;
+}
+.custom-home-tab .vc_tta-panel-body {
+	padding: 0 !important;
+}
+.custom-home-tab .vc_tta-panels{
+    background-color: transparent !important;
+}
+.custom-home-tab .tab-inner .vc_col-sm-8 {
+    padding-right: 8%;
+    padding-top: 20px;
+}
+.custom-home-tab .tab-inner .vc_col-sm-4 {
+}
+.custom-home-tab .wpb_single_image .vc_figure,.custom-home-tab .wpb_single_image .vc_single_image-wrapper,.custom-home-tab .wpb_single_image img,
+.custom-home-tab .tab-inner .vc_col-sm-4 > .vc_column-inner > .wpb_wrapper{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.custom-home-tab .tab-inner .vc_col-sm-4 > .vc_column-inner, .custom-home-tab .vc_col-sm-4 .wpb_single_image.vc_align_left{
+	height: 100%;
+	display: flex;
+}
+.custom-home-tab .absolute-content {
+	position: absolute;
+	top: 40%;
+	right: 5%;
+	transform: translateY(-50%);
+	width: 260px;
+    z-index: 1;
+}
+.custom-home-tab .absolute-content li {
+	border-bottom: 1px solid #333;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 18px 0;
+	margin: 0;
+  list-style: none;
+}
+.custom-home-tab .absolute-content ul{
+	margin: 0;
+}
+.custom-home-tab .absolute-content li:last-child{
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.custom-home-tab .tab-inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+.custom-home-tab .tab-inner .right::before {
+	box-shadow: 20px 0px 60px 110px #fff;
+	content: '';
+	position: absolute;
+	height: 100%;
+	left: -40px;
+}
+.custom-home-tab ul.vc_tta-tabs-list li a {
+	background-color: var(--primary-color) !important;
+	color: #fff !important;
+    padding: 14px 35px !important;
+    font-size: 16px !important;
+    border-radius: 0 !important;
+}
+.custom-home-tab li.vc_tta-tab.vc_active{
+    position: relative;
+}
+.custom-home-tab li.vc_tta-tab.vc_active::after {
+	content: '▴';
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	bottom: -14px;
+	font-size: 26px;
+	opacity: 1; color: #fff
+}
+.custom-home-tab ul.vc_tta-tabs-list {
+    border-radius: 7px;
+    display: inline-block !important;
+}
+
+.custom-home-tab .secondary-button.learn-more-btn a:hover {
+    background: var(--primary-color) !important;
+}
+@media (min-width: 1921px){
+    .custom-home-tab,.custom-home-tab .wpb_single_image img{height: 600px;}
+
+}
+@media (max-width: 1600px){
+    .custom-home-tab .tab-inner .vc_col-sm-8 {padding-right: 10%;padding-top: 40px;}
+    .custom-home-tab .absolute-content li {font-size: 15px;padding: 15px 0;}
+    .custom-home-tab .absolute-content {right: 0%;width: 180px;}
+    .custom-home-tab p {font-size: 15px;}
+	.custom-home-tab .tab-inner .right::before {
+		left: -30px;
+		box-shadow: 20px 0px 60px 90px #fff;
+	}
+}
+
+@media (max-width: 1366px){
+    .custom-home-tab .tab-inner .vc_col-sm-8 {padding-right: 10%;padding-top: 30px;}
+    .custom-home-tab ul.vc_tta-tabs-list li a{padding: 10px 22px !important;font-size: 15px !important;}
+}
+@media (max-width: 1190px){
+    .custom-home-tab {padding-left: 20px;}
+    .custom-home-tab .tab-inner .right::before {box-shadow: 20px 0px 50px 110px #fff;left: -30px;}
+}
+@media (max-width: 1024px){
+    .custom-home-tab .tab-inner .vc_col-sm-4 {width: 100%;margin-top: 30px;}
+    .custom-home-tab .tab-inner .vc_col-sm-8 {padding-right: 20px;width: 100%;}
+    .custom-home-tab .absolute-content {right: 30px;width: 230px;}
+    .custom-home-tab .tab-inner .right::before {display: none;}
+}
+@media (max-width: 767px){
+    .custom-home-tab {padding-left: 15px;padding-right: 15px;}
+    .custom-home-tab .tab-inner .vc_col-sm-8 {padding-right: 0;padding-top: 20px;}
+    .custom-home-tab .vc_tta-panel-body {background-color: transparent !important;}
+    .custom-home-tab .absolute-content {right: auto;width: 500px;position: relative;top: 0;transform: unset;margin-top: 20px;}
+    .custom-home-tab .font-h2 {font-size: 20px;}
+    .custom-home-tab .tab-inner .vc_col-sm-4{margin-bottom: 20px;}
+    .custom-home-tab .vc_tta-panel .vc_tta-panel-heading a{font-weight: 500 !important;border-radius: 0 !important;}
+}
+
+.row.no_blog {
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+/*************/
+body.single-post h2 {
+    font-size: 2rem;
+	    font-weight: 500;
+}
+
+body.single-post h3 {
+    font-size: 1.8rem;
+	    font-weight: 500;
+}
+
+body.single-post h4 {
+    font-size: 1.6rem;
+	    font-weight: 500;
+}
+
+body.blog .featuredImg {
+    background-size: cover !important;
+    height: 300px;
+    width: 100%;
+    display: block;
+}
+
+h2 span.db {
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+.blog #load-more-button{
+	display: none;
+}
+
+/* ST START */
+
+.single-post.single .col-8  a:hover{color: #191970;}
+
+.contact-page-form input, 
+.contact-page-form optgroup, 
+.contact-page-form select, 
+.contact-page-form textarea{font-size: 14px !important;}
+
+select:focus-visible{outline: none;}
+
+@media(max-width: 1366px){
+	.main-navigation .menu-item-has-children ul li a{font-size: 13px;}
+}
+
+@media(max-width: 991px){
+	.recent-post-title {
+    font-size: 16px !important;}
+}
+
+@media(max-width:767px) {
+	.grecaptcha-badge{
+		opacity:0;
+		visibility:hidden;
+	}
+	
+	.home .imagine-btn .vc_btn3{padding: 10px 25px!important;}
+}
+
+@media(max-width: 440px){
+	.mobile-header a{font-size: 10px;padding: 10px;}
+	
+	body.blog .featuredImg{height: 175px;}
+}
+
+@media(max-width: 360px){
+	.con-page-form-sec .vc_col-sm-6 span, .con-page-form-sec .vc_col-sm-6 p {font-size: 11px;}
+	
+	.banner .absolute-content {
+    height: 320px;}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
+	.home .service-slide-inner .title{min-height: 60px;}
+	
+	.contact-page-details .content, .contact-page-details .content a {font-size: 14px;}
+	
+	.contact-page-details .vc_col-sm-4 .vc_column-inner{padding: 40px 20px!important;}
+	
+	.contact-page-details .vc_custom_heading{font-size: 24px;}
+}
+
+@media only screen and (min-width: 521px) and (max-width: 992px)  {
+	.home-appointment-form .col-4.right{justify-content: center;text-align: center;}
+}
+
+@media only screen and (min-width: 851px) and (max-width: 1190px)  {
+		.map-top .buttons a{padding: 16px 20px;font-size: 12px;}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1190px)  {
+	.con-page-form-sec .vc_col-sm-6:first-child {width: 40%;}
+	
+	.con-page-form-sec .vc_col-sm-6 span, .con-page-form-sec .vc_col-sm-6 p {font-size: 12px;}
+	
+	.con-page-form-sec .vc_col-sm-6:last-child {width: 60%;
+    padding-left: 30px;}
+	
+	.page-id-47 .con-page-social {
+		max-width: 50%;}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1440px)  {
+	.home .service-slide-inner .title{font-size: 14px;}
+}
+
+/* ST END */
+/* POP UP css*/
+
+#cddp-pop {
+  z-index: 22222222;
+  position: relative;
+}
+#cddp-pop .overlay {
+opacity: 0;
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 1;
+ background-color: rgba(0, 0, 0, 0.7);
+}
+#cddp-pop button#close-modal-btn {
+  display: inline-block;
+  float: right;
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  outline: none;
+  border: none;
+}
+#cddp-pop .modal {
+max-width: 650px;
+height: 650px;
+margin: auto;
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+background-image: var(--wpr-bg-1812d91e-7f14-4e32-8e90-c9d0ab32a094);
+background-size: 100%;
+background-repeat: no-repeat;
+display: block;
+  overflow: visible;
+
+}
+#cddp-pop .modal a{
+display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#cddp-pop .show-modal {
+opacity: 1;
+animation: show 0.7s;
+}
+
+@keyframes show {
+from {
+  opacity: 0;
+  transform: scale(10);    
+}
+to {
+  opacity: 1;
+  transform: scale(1);
+}
+}
+
+#cddp-pop .hide-modal {
+opacity: 0;
+animation: hidecdcp 0.7s;
+visibility: hidden;
+transition: visibility 0.7s;
+}
+@media (max-width:767px){
+	#cddp-pop .modal {
+		top:-50%;
+		left: 50%;
+		transform: translate(-50%,50%);
+		width: 95%
+	}
+}
+
+@keyframes hidecdcp {
+from {
+  opacity: 1;
+  transform: scale(1);
+}
+to {
+  opacity: 0;
+  transform: scale(3);
+}
+}
+/* mobile sticky header */
+.container.mob-head {
+    display: block;
+	  margin-top: 10px;
+}
+
+
+
+
+
+
+.surrounding-location a:hover {
+    color: #000 !important;
+}
+
+
+.footer-social svg.ionicon.loc {
+    color: #ffffff !important;
+    fill: #fff !important;
+    /* top: -24px !important; */
+    /* bottom: 60px !important; */
+    margin-top: 0px;
+}
+</style>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script type="text/rocketlazyloadscript">
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script>	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<meta name="geo.region" content="CA-AB">
+<meta name="geo.placename" content="4000 Glenmore Ct SE #140, Calgary, AB T2C 5R8">
+<meta name="geo.position" content="50.980034,-113.9944935">
+<meta name="ICBM" content="50.980034,-113.9944935">
+<meta name="classification" content="Dentist in Se Calgary, Dentist Near Me, Dentist Foothills, Dentist Lynnwood, Dentist Riverbend, Dentist Quarry Park, Dental Clinic Se Calgary, Dental Clinic Near Me">
+<meta name="language" content="English">
+<meta name="GOOGLEBOT" content="index, follow">
+<meta name="Search Engine" content="https://www.google.com"> 
+<meta name="OWNER" content="Glenmore Family Denta Care"> 
+<meta name="author" content="Dr. Khaled Barakat"> 
+<meta name="copyright" content="Glenmore Family Denta Care"> 
+<meta name="expires" content="Never">
+<meta name="RATING" content="General"> 
+<meta name="REVISIT-AFTER" content="1 day">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	
+	
+	<link data-minify="1" rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css?ver=1782304951" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')">
+	<link data-minify="1" rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/ajax/libs/slick-carousel/1.8.1/slick.min.css?ver=1782304951" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')">
+	<link data-minify="1" rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/cache/background-css/1/www.glenmorefamilydentalcare.com/wp-content/cache/min/1/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css?ver=1782304951&amp;wpr_t=1783015635" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')">
+	
+	<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/ajax/libs/jquery/3.7.0/jquery.min.js?ver=1782304951"></script>
+	<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js?ver=1782304951"></script>
+	<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/ajax/libs/slick-carousel/1.8.1/slick.min.js?ver=1782304951"></script>
+	<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/themes/dentalmnv/js/custom.js?ver=1782304951"></script>
+
+	
+<!-- Google Tag Manager -->
+<script type="text/rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WTMDFH4K');</script>
+<!-- End Google Tag Manager -->
+
+	
+<style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.banner .slick-list .slick-slide:before{--wpr-bg-bb96c829-76f8-4acd-ab14-f1839be5fbf2: url('https://www.glenmorefamilydentalcare.com/wp-content/uploads/2023/10/banner-bg-img.png');}.welcome-dentist-section{--wpr-bg-6f27500c-ff63-4612-8cb4-63e9c8ec2180: url('https://www.glenmorefamilydentalcare.com/wp-content/uploads/2023/10/welcome-bg.png');}.meet-our-dentist{--wpr-bg-d8be881d-cddf-456c-9082-15e526225af8: url('https://www.glenmorefamilydentalcare.com/wp-content/uploads/2023/10/banner-bg-img.png');}.custom-staff-list .slick-prev::before{--wpr-bg-cdb5e092-01d7-4fcb-87a6-a6cb472167e9: url('https://www.glenmorefamilydentalcare.com/wp-content/themes/dentalmnv/images/icon-left.png');}.custom-staff-list button.slick-next.slick-arrow::before{--wpr-bg-9d58ec08-4633-482d-a446-dee8cf15aa88: url('https://www.glenmorefamilydentalcare.com/wp-content/themes/dentalmnv/images/icon-right.png');}.services-slider1 button.slick-prev.slick-arrow:before{--wpr-bg-8a268670-b141-46a4-aa08-3776ba01a20a: url('https://www.glenmorefamilydentalcare.com/wp-content/themes/dentalmnv/images/icon-left.png');}button.slick-next.slick-arrow:before{--wpr-bg-c1b70560-9dbd-48c6-b9d0-86a75fb2b58f: url('https://www.glenmorefamilydentalcare.com/wp-content/themes/dentalmnv/images/icon-right.png');}.slick-loading .slick-list{--wpr-bg-ba0de9a4-c8de-4c0d-a5b9-b560a4dfd1b4: url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/ajax-loader.gif');}#cddp-pop .modal{--wpr-bg-1812d91e-7f14-4e32-8e90-c9d0ab32a094: url('https://www.glenmorefamilydentalcare.com/wp-content/uploads/2024/12/glenmore-dental-Christmas-popup.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".banner .slick-list .slick-slide","style":".banner .slick-list .slick-slide:before{--wpr-bg-bb96c829-76f8-4acd-ab14-f1839be5fbf2: url('https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/uploads\/2023\/10\/banner-bg-img.png');}","hash":"bb96c829-76f8-4acd-ab14-f1839be5fbf2","url":"https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/uploads\/2023\/10\/banner-bg-img.png"},{"selector":".welcome-dentist-section","style":".welcome-dentist-section{--wpr-bg-6f27500c-ff63-4612-8cb4-63e9c8ec2180: url('https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/uploads\/2023\/10\/welcome-bg.png');}","hash":"6f27500c-ff63-4612-8cb4-63e9c8ec2180","url":"https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/uploads\/2023\/10\/welcome-bg.png"},{"selector":".meet-our-dentist","style":".meet-our-dentist{--wpr-bg-d8be881d-cddf-456c-9082-15e526225af8: url('https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/uploads\/2023\/10\/banner-bg-img.png');}","hash":"d8be881d-cddf-456c-9082-15e526225af8","url":"https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/uploads\/2023\/10\/banner-bg-img.png"},{"selector":".custom-staff-list .slick-prev","style":".custom-staff-list .slick-prev::before{--wpr-bg-cdb5e092-01d7-4fcb-87a6-a6cb472167e9: url('https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/themes\/dentalmnv\/images\/icon-left.png');}","hash":"cdb5e092-01d7-4fcb-87a6-a6cb472167e9","url":"https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/themes\/dentalmnv\/images\/icon-left.png"},{"selector":".custom-staff-list button.slick-next.slick-arrow","style":".custom-staff-list button.slick-next.slick-arrow::before{--wpr-bg-9d58ec08-4633-482d-a446-dee8cf15aa88: url('https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/themes\/dentalmnv\/images\/icon-right.png');}","hash":"9d58ec08-4633-482d-a446-dee8cf15aa88","url":"https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/themes\/dentalmnv\/images\/icon-right.png"},{"selector":".services-slider1 button.slick-prev.slick-arrow","style":".services-slider1 button.slick-prev.slick-arrow:before{--wpr-bg-8a268670-b141-46a4-aa08-3776ba01a20a: url('https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/themes\/dentalmnv\/images\/icon-left.png');}","hash":"8a268670-b141-46a4-aa08-3776ba01a20a","url":"https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/themes\/dentalmnv\/images\/icon-left.png"},{"selector":"button.slick-next.slick-arrow","style":"button.slick-next.slick-arrow:before{--wpr-bg-c1b70560-9dbd-48c6-b9d0-86a75fb2b58f: url('https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/themes\/dentalmnv\/images\/icon-right.png');}","hash":"c1b70560-9dbd-48c6-b9d0-86a75fb2b58f","url":"https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/themes\/dentalmnv\/images\/icon-right.png"},{"selector":".slick-loading .slick-list","style":".slick-loading .slick-list{--wpr-bg-ba0de9a4-c8de-4c0d-a5b9-b560a4dfd1b4: url('https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/slick-carousel\/1.8.1\/ajax-loader.gif');}","hash":"ba0de9a4-c8de-4c0d-a5b9-b560a4dfd1b4","url":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/slick-carousel\/1.8.1\/ajax-loader.gif"},{"selector":"#cddp-pop .modal","style":"#cddp-pop .modal{--wpr-bg-1812d91e-7f14-4e32-8e90-c9d0ab32a094: url('https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/uploads\/2024\/12\/glenmore-dental-Christmas-popup.png');}","hash":"1812d91e-7f14-4e32-8e90-c9d0ab32a094","url":"https:\/\/www.glenmorefamilydentalcare.com\/wp-content\/uploads\/2024\/12\/glenmore-dental-Christmas-popup.png"}]; const rocket_excluded_pairs = [];</script><meta name="generator" content="WP Rocket 3.21.1" data-wpr-features="wpr_lazyload_css_bg_img wpr_delay_js wpr_minify_js wpr_async_css wpr_lazyload_images wpr_lazyload_iframes wpr_preconnect_external_domains wpr_oci wpr_image_dimensions wpr_minify_css wpr_preload_links wpr_desktop"><link href="https://cdn.callrail.com" rel="preconnect"><link href="https://www.google.com" rel="preconnect"></head>
+
+<body class="wp-singular team-member-template-default single single-team-member postid-565 wp-theme-dentalmnv wpb-js-composer js-comp-ver-6.2.0 vc_responsive">
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTMDFH4K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="page" class="site">
+	
+	<header id="masthead" class="site-header">
+		
+		<div class="top-bar">
+		     <div class="cdcp-banner">
+		       
+		            
+		            	<div class="cts-firstwrapper">
+		            		<a href="/free-exam-for-new-patient/"> Free Exams </a> for New Patients.
+		            		<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 100 100" y="0" x="0" id="Layer_1" preserveAspectRatio="xMidYMid" height="200" width="200"><style> @keyframes animate{0.00%{animation-timing-function:cubic-bezier(0.47,0.22,0.79,0.52);transform:translate(0.00px,0.00px) rotate(0.00deg) scale(1.00,1.00) skew(0deg,0.00deg);opacity:1.00}50.00%{animation-timing-function:cubic-bezier(0.22,0.49,0.52,0.79);transform:translate(0.00px,0.00px) rotate(0.00deg);opacity:0.50}100.00%{animation-timing-function:cubic-bezier(0.22,0.49,0.52,0.79);transform:translate(0.00px,0.00px) rotate(0.00deg);opacity:0.00}}</style><g class="ldl-scale" style="transform-origin: 50% 50%; transform: rotate(0deg) scale(0.8, 0.8);"><g class="ldl-ani"><g class="ldl-layer"><g class="ldl-ani" style="transform-box: view-box; opacity: 1; transform-origin: 50px 50px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); animation: 1s linear -0.75s infinite normal forwards running animate;"><path fill="#FFFFFF" d="M74.07 50c0 .53-.213 1.061-.638 1.451L47.59 84.612v5.916c0 1.713 2.036 2.608 3.298 1.451l33.877-40.528c.425-.39.638-.92.638-1.451 0-.53-.213-1.061-.638-1.451L50.888 8.021c-1.262-1.157-3.298-.262-3.298 1.451v5.916l25.842 33.161c.425.39.638.921.638 1.451z" id="XMLID_854_" style="stroke-width: 1;fill: #FFF;"></path></g></g><g class="ldl-layer"><g class="ldl-ani" style="transform-box: view-box; opacity: 1; transform-origin: 50px 50px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); animation: 1s linear -1s infinite normal forwards running animate;"><path fill="#FFF" d="M41.077 50c0 .53-.213 1.061-.638 1.451L14.597 84.612v5.916c0 1.713 2.036 2.608 3.298 1.451l33.877-40.528c.425-.39.638-.92.638-1.451 0-.53-.213-1.061-.638-1.451L17.895 8.021c-1.262-1.157-3.298-.262-3.298 1.451v5.916l25.842 33.161c.425.39.638.921.638 1.451z" id="XMLID_853_" style="stroke-width: 1;fill: #fff;"></path></g></g></g></g></svg>
+		            	</div>
+		            	<div class="cts-cdcp-item">
+		            		<a href="/canadian-dental-care-plan/">We Accept the <span class="loading-text">CDCP</span></a>
+		            	</div>
+		            	<div>
+		            		<span class="cts-mobblock">We follow the ADA <a href="/alberta-dental-fee-guide/"> fee guide </a>and sometimes less</span>
+		            	</div>
+		           	
+		        
+		    </div>
+		</div>
+		
+		<div class="container">
+			<div class="site-branding">
+										<div class="logo">
+							<a href="https://www.glenmorefamilydentalcare.com">
+								<img width="357" height="69" src="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2023/10/glenmore-family-dental-logo.png" alt="Glenmore Family Dental">
+							</a>
+						</div>
+								</div><!-- .site-branding -->
+			<nav id="site-navigation" class="main-navigation">
+				<div class="container">
+					<div class="menu-header-top-container"><ul id="primary-menu" class="menu"><li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-49"><a href="https://www.glenmorefamilydentalcare.com/">Home</a></li>
+<li id="menu-item-1999" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1999"><a href="#">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-1676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1676"><a href="https://www.glenmorefamilydentalcare.com/our-team/">Our Team</a></li>
+	<li id="menu-item-2671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2671"><a href="https://www.glenmorefamilydentalcare.com/canadian-dental-care-plan/">Canadian Dental Care Plan</a></li>
+	<li id="menu-item-3138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3138"><a href="https://www.glenmorefamilydentalcare.com/dentist-near-me/">Dentist Near You</a></li>
+</ul>
+</li>
+<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-55"><a href="#">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-1857" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1857"><a href="#">General Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1863" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1863"><a href="https://www.glenmorefamilydentalcare.com/service/dental-cleanings-exams-se-calgary/">Dental Cleanings &amp; Exams</a></li>
+		<li id="menu-item-1868" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1868"><a href="https://www.glenmorefamilydentalcare.com/service/family-dentistry-se-calgary/">Family Dentistry</a></li>
+		<li id="menu-item-1872" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1872"><a href="https://www.glenmorefamilydentalcare.com/service/sedation-dentistry-se-calgary/">Sedation Dentistry</a></li>
+		<li id="menu-item-1865" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1865"><a href="https://www.glenmorefamilydentalcare.com/service/emergency-dentist-se-calgary/">Emergency Dentist</a></li>
+		<li id="menu-item-1870" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1870"><a href="https://www.glenmorefamilydentalcare.com/service/laser-hygiene-cleaning-se-calgary/">Laser Hygiene Cleaning</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1858" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1858"><a href="#">Cosmetic Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1874" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1874"><a href="https://www.glenmorefamilydentalcare.com/service/teeth-whitening-se-calgary/">Teeth Whitening</a></li>
+		<li id="menu-item-1867" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1867"><a href="https://www.glenmorefamilydentalcare.com/service/dental-veneers-se-calgary/">Dental Veneers</a></li>
+		<li id="menu-item-1864" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1864"><a href="https://www.glenmorefamilydentalcare.com/service/dental-crowns-se-calgary/">Dental Crowns</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1860" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1860"><a href="#">Dental Appliances</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1871" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1871"><a href="https://www.glenmorefamilydentalcare.com/service/mouthguards-se-calgary/">Mouthguards</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1944" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1944"><a href="#">Restorative Dentistry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1866" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1866"><a href="https://www.glenmorefamilydentalcare.com/service/dental-implants-se-calgary/">Dental Implants</a></li>
+		<li id="menu-item-1862" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1862"><a href="https://www.glenmorefamilydentalcare.com/service/dental-bridges-se-calgary/">Dental Bridges</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-2577" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2577"><a href="#">Patient Info</a>
+<ul class="sub-menu">
+	<li id="menu-item-2578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2578"><a href="https://www.glenmorefamilydentalcare.com/free-exam-for-new-patient/">Free Exam for New Patient</a></li>
+	<li id="menu-item-2669" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2669"><a href="https://www.glenmorefamilydentalcare.com/alberta-dental-fee-guide/">Alberta Dental Fee Guide</a></li>
+</ul>
+</li>
+<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="https://www.glenmorefamilydentalcare.com/contact/">Contact</a></li>
+<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1919"><a href="https://www.glenmorefamilydentalcare.com/blog/">Blog</a></li>
+</ul></div>				</div>
+			</nav>
+			<div class="header-right-details">
+				<div class="header-social">
+											<ul>
+															<li>
+																				<a href="https://www.google.com/maps?cid=5904983653781097991" target="_blank" title="Map">
+																									<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+														<path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path>
+														<circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></circle>
+													</svg>
+																																			</a>
+																	</li>
+															<li>
+																				<a href="tel:4032795171" target="_self" title="(403) 279-5171">
+																																					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+														<path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
+													</svg>
+																							</a>
+																	</li>
+													</ul>
+									</div>
+				<div class="header-appointment-button">
+												<a href="https://www.glenmorefamilydentalcare.com/book-an-appointment/" class="main-button" target="_self">Request Appointment</a>
+										</div>
+			</div>
+			<button type="button" class="mobile-button">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+		<div class="mobile-header">
+		<div class="container mob-head">
+				
+							<div class="address">
+										<a class="mob-address" href="https://www.google.com/maps?cid=5904983653781097991" target="_blank">
+						140-4000 Glenmore Court SE Calgary, AB T2C 5R8					</a>
+				</div>
+						<div class="mob-bottom-buttons">
+														<a class="mob-num" href="tel:4032795171" target="_self">
+						(403) 279-5171					</a>
+																		<a class="mob-appointment" href="https://www.glenmorefamilydentalcare.com/book-an-appointment/" target="_self">
+						Request Appointment 					</a>
+							</div>
+		</div>
+	</div>
+	</header><div id="primary" class="content-area service-single portfolio-single col-md-12">
+	<main id="primary" class="site-main" role="main">
+					<article id="post-565" class="post-565 team-member type-team-member status-publish has-post-thumbnail hentry team-member-category-staff">
+				<div class="inner-page-banner">
+					<h1 class="entry-title">Dr. Scott Townsend - <span class="team-degination">DDS</span></h1>
+				</div>
+				<div class="entry-content" itemprop="text">
+					<div class="container">
+												<div class="team-member-outer">
+							<div class="left-image">
+								<img width="500" height="500" src="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2025/03/dr-townsend.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Dr. Townsend dentist at Glenmore Family Dental Care Calgary" decoding="async" fetchpriority="high" srcset="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2025/03/dr-townsend.jpg 500w, https://www.glenmorefamilydentalcare.com/wp-content/uploads/2025/03/dr-townsend-300x300.jpg 300w, https://www.glenmorefamilydentalcare.com/wp-content/uploads/2025/03/dr-townsend-150x150.jpg 150w" sizes="(max-width: 500px) 100vw, 500px">							</div>
+							<div class="team-content">
+								<!-- <h3 class="member-title"></h3> -->
+								<div class="team-long-dis">
+									<p>Dr. Townsend brings a lot of experience to our clinic. He has over the years developed a special interest in surgical treatments and dental implant placement.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- .entry-content -->
+			</article><!-- #post-## -->
+			</main><!-- #main -->
+</div><!-- #primary -->
+<div class="map">
+		<div class="footer-map">
+		<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.9597167937663!2d-113.9949066!3d50.9799352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41718575a6a637b5%3A0x51f2b758e01c4e07!2sGlenmore%20Family%20Dental%20Care%20-%20SE%20Calgary!5e0!3m2!1sen!2sca!4v1704369191419!5m2!1sen!2sca" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.9597167937663!2d-113.9949066!3d50.9799352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41718575a6a637b5%3A0x51f2b758e01c4e07!2sGlenmore%20Family%20Dental%20Care%20-%20SE%20Calgary!5e0!3m2!1sen!2sca!4v1704369191419!5m2!1sen!2sca" data-ll-status="loaded" class="entered lazyloaded"></iframe><noscript><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.9597167937663!2d-113.9949066!3d50.9799352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41718575a6a637b5%3A0x51f2b758e01c4e07!2sGlenmore%20Family%20Dental%20Care%20-%20SE%20Calgary!5e0!3m2!1sen!2sca!4v1704369191419!5m2!1sen!2sca" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></noscript></p>
+	</div>
+</div>
+<div class="map-top">
+	<div class="container">
+		<div class="map-inner">
+			<div class="col-9">
+									<h3 class="font-h3">Prioritize Your Oral <b>Health Today.</b></h3>
+													<div class="content"><p>Call our office at <a href="tel:4032795171">(403) 279-5171</a> to schedule your next appointment.</p>
+</div>
+							</div>
+			<div class="col-3">
+				<div class="buttons">
+										<a class="primary-button" href="https://www.glenmorefamilydentalcare.com/book-an-appointment/" target="_self">Request Appointment</a>
+															<a class="secondary-button ml-15" href="https://www.glenmorefamilydentalcare.com/contact/" target="_self">Contact Us</a>
+									</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<footer id="colophon" class="site-footer">
+	<div class="container">
+		<div class="footer-1 footer_widgets">
+											<div class="logo">
+						<a href="https://www.glenmorefamilydentalcare.com">
+							<img width="357" height="69" src="https://www.glenmorefamilydentalcare.com/wp-content/uploads/2023/10/glenmore-family-dental-logo.png" alt="Glenmore Family Dental">
+						</a>
+					</div>
+										<div class="footer-social">
+															<ul>
+													<li>
+																		<a href="https://www.facebook.com/glenmorefamilydentalcarecalgary" target="_blank" title="">
+																							<svg width="20px" height="25px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+													
+													<desc>Created with Sketch.</desc>
+													<defs></defs>
+													<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill="#1c5097">
+															<g id="icons" transform="translate(56.000000, 160.000000)">
+																<path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" id="facebook-[#176]"></path>
+															</g>
+														</g>
+													</g>
+												</svg>
+																																											</a>
+															</li>
+													<li>
+																		<a href="https://www.instagram.com/glenmorefamilydentalcare/" target="_blank" title="">
+																																													<svg width="25px" height="25px" viewBox="0 0 24 24" fill="#1c5097" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#1c5097"></path>
+													<path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#1c5097"></path>
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#1c5097"></path>
+												</svg>
+																					</a>
+															</li>
+													<li>
+																		<a href="https://www.google.com/maps?cid=5904983653781097991" target="_blank" title="">
+																																		<svg xmlns="http://www.w3.org/2000/svg" class="ionicon loc" viewBox="0 0 512 512">
+														<path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path>
+														<circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></circle>
+													</svg>
+																																</a>
+															</li>
+												</ul>
+									</div>
+		</div>
+		<div class="cus-footer">
+							<h4 class="title">Quick Links</h4>
+						<div class="menu-footer-about-menu-container"><ul id="footer-about-menu" class="menu"><li id="menu-item-1940" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1940"><a href="https://www.glenmorefamilydentalcare.com/our-team/">Our Team</a></li>
+<li id="menu-item-538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-538"><a href="https://www.glenmorefamilydentalcare.com/contact/">Contact</a></li>
+<li id="menu-item-1941" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1941"><a href="https://www.glenmorefamilydentalcare.com/blog/">Blog</a></li>
+<li id="menu-item-1942" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1942"><a href="https://www.glenmorefamilydentalcare.com/book-an-appointment/">Appointment</a></li>
+</ul></div>								
+		</div>
+		<div class="footer-2 footer_widgets">
+							<h4 class="title">Contact </h4>
+										<ul class="contact-details">
+									<li>
+														<a href="tel:4032795171" target="_self" title="(403) 279-5171">
+																			<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path></svg>
+																																				(403) 279-5171								</a>
+											</li>
+									<li>
+														<a href="mailto:info@gfdc.ca" target="_self" title="info@gfdc.ca">
+																												<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></rect><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M112 160l144 112 144-112"></path></svg>
+																											info@gfdc.ca								</a>
+											</li>
+									<li>
+														<a href="https://www.google.com/maps?cid=5904983653781097991" target="_blank" title="4000 Glenmore Ct SE #140, Calgary, AB T2C 5R8, Canada">
+																																					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></circle></svg>
+																		4000 Glenmore Ct SE #140, Calgary, AB T2C 5R8, Canada								</a>
+											</li>
+								</ul>
+						</div>
+		<div class="footer-3 footer_widgets">
+							<h4 class="title">Hours of Operation</h4>
+										<ul class="hours">
+									<li><span>Monday:</span> <span class="time">10:30am – 7:00pm</span></li>
+									<li><span>Tuesday:</span> <span class="time">10:30am – 7:00pm</span></li>
+									<li><span>Wednesday:</span> <span class="time">10:30am – 7:00pm</span></li>
+									<li><span>Thursday:</span> <span class="time">8:00am – 3:30pm</span></li>
+									<li><span>Friday:</span> <span class="time">8:00am – 3:30pm</span></li>
+									<li><span>Sat - Sun:</span> <span class="time">CLOSED</span></li>
+								</ul>
+					</div>
+	</div>
+</footer><!-- #colophon -->
+	<div class="copyright-bar">
+		<div class="container">
+			© <script type="text/rocketlazyloadscript">document.write(new Date().getFullYear())</script> - Glenmore Family Dental Care		</div>
+	</div>
+</div><!-- #page -->
+
+    <script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="//cdn.callrail.com/companies/535736499/6f1b08bac45983613672/12/swap.js"></script><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/dentalmnv/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/rocketlazyloadscript" id="wp-hooks-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script type="text/rocketlazyloadscript" id="wp-i18n-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script type="text/rocketlazyloadscript" id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="swv-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1782304951"></script>
+<script type="text/rocketlazyloadscript" id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.glenmorefamilydentalcare.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="contact-form-7-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1782304951"></script>
+<script id="wpcf7-redirect-script-js-extra">
+var wpcf7r = {"ajax_url":"https://www.glenmorefamilydentalcare.com/wp-admin/admin-ajax.php"};
+//# sourceURL=wpcf7-redirect-script-js-extra
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="wpcf7-redirect-script-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/plugins/wpcf7-redirect/build/assets/frontend-script.js?ver=1782304951"></script>
+<script type="text/rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.glenmorefamilydentalcare.com","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script type="text/rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script id="rocket_lazyload_css-js-extra">
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+</script>
+<script id="rocket_lazyload_css-js-after">
+!function o(n,c,a){function u(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(s)return s(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return u(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var s="function"==typeof require&&require,e=0;e<a.length;e++)u(a[e]);return u}({1:[function(e,t,r){"use strict";{const c="undefined"==typeof rocket_pairs?[]:rocket_pairs,a=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var o=rocket_lazyload_css_data.threshold||300;const u=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&c.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,a.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{u.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:o+"px"});function n(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&c.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(u.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}n(),function(){const r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}}()(document.querySelector("body"),n)}},{}]},{},[1]);
+//# sourceURL=rocket_lazyload_css-js-after
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="dentalmnv-navigation-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/themes/dentalmnv/js/navigation.js?ver=1782304951"></script>
+<script id="load-more-js-extra">
+var loadmore = {"ajax_url":"https://www.glenmorefamilydentalcare.com/wp-admin/admin-ajax.php","posts_per_page":"9"};
+//# sourceURL=load-more-js-extra
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="load-more-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/themes/dentalmnv/js/load-more.js?ver=1782304951"></script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="dtp-moment-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/plugins/date-time-picker-field/assets/js/vendor/moment/moment.js?ver=1782304951"></script>
+<script type="text/rocketlazyloadscript" id="dtpicker-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/plugins/date-time-picker-field/assets/js/vendor/datetimepicker/jquery.datetimepicker.full.min.js?ver=efb825c05b8ebd45f88974aa0501aae5"></script>
+<script id="dtpicker-build-js-extra">
+var datepickeropts = {"selector":".DatePicker","datepicker":"on","timepicker":"off","picker_type":"datepicker","inline":"off","placeholder":"on","preventkeyboard":"off","locale":"en","theme":"default","load":"full","minDate":"on","min_date":"","max_date":"","days_offset":"0","dateformat":"DD-MM-YYYY","step":"60","minTime":"00:00","maxTime":"23:59","offset":"0","hourformat":"hh:mm A","disabled_calendar_days":"","disabled_days":"","allowed_times":"","sunday_times":"","monday_times":"","tuesday_times":"","wednesday_times":"","thursday_times":"","friday_times":"","saturday_times":"","dayOfWeekStart":"1","i18n":{"en":{"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"dayOfWeekShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayOfWeek":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"format":"DD-MM-YYYY","clean_format":"d-m-Y","value":"","timezone":"","utc_offset":"+0","now":"02-07-2026"};
+//# sourceURL=dtpicker-build-js-extra
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="dtpicker-build-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/plugins/date-time-picker-field/assets/js/dtpicker.js?ver=1782304951"></script>
+<script type="text/rocketlazyloadscript" id="google-recaptcha-js" data-rocket-src="https://www.google.com/recaptcha/api.js?render=6LckETYpAAAAAFiGIpjYGQpl2YuTLH9yeRZAqlMH&amp;ver=3.0"></script>
+<script type="text/rocketlazyloadscript" id="wp-polyfill-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"></script>
+<script type="text/rocketlazyloadscript" id="wpcf7-recaptcha-js-before">
+var wpcf7_recaptcha = {
+    "sitekey": "6LckETYpAAAAAFiGIpjYGQpl2YuTLH9yeRZAqlMH",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+//# sourceURL=wpcf7-recaptcha-js-before
+</script>
+<script type="text/rocketlazyloadscript" data-minify="1" id="wpcf7-recaptcha-js" data-rocket-src="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=1782304951"></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://www.glenmorefamilydentalcare.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
+<!-- overlay start -->
+<div class="bgOverlay"></div>
+    <!-- overlay close -->
+    	
+
+			
+<script>"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link data-minify="1" rel='stylesheet' id='contact-form-7-css' href='https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1782304951' media='all' /><link data-minify="1" rel='stylesheet' id='wpcf7-redirect-script-frontend-css' href='https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/plugins/wpcf7-redirect/build/assets/frontend-script.css?ver=1782304951' media='all' /><link data-minify="1" rel='stylesheet' id='dentalmnv-style-css' href='https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/themes/dentalmnv/style.css?ver=1782304951' media='all' /><link data-minify="1" rel='stylesheet' id='custom-style-css' href='https://www.glenmorefamilydentalcare.com/wp-content/cache/background-css/1/www.glenmorefamilydentalcare.com/wp-content/cache/min/1/wp-content/themes/dentalmnv/css/custom.css?ver=1782304951&wpr_t=1783015635' media='all' /><link rel='stylesheet' id='dtpicker-css' href='https://www.glenmorefamilydentalcare.com/wp-content/plugins/date-time-picker-field/assets/js/vendor/datetimepicker/jquery.datetimepicker.min.css?ver=efb825c05b8ebd45f88974aa0501aae5' media='all' /><link data-minify="1" rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css?ver=1782304951"><link data-minify="1" rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/cache/min/1/ajax/libs/slick-carousel/1.8.1/slick.min.css?ver=1782304951"><link data-minify="1" rel="stylesheet" href="https://www.glenmorefamilydentalcare.com/wp-content/cache/background-css/1/www.glenmorefamilydentalcare.com/wp-content/cache/min/1/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css?ver=1782304951&wpr_t=1783015635"></noscript><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;c2061b3dbd044ea79ede7c3e26b397ac&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+</body></html>

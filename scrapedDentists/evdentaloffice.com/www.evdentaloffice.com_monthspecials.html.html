@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head>
+<meta name="robots" content="index, follow"><meta name="description" content="Evergreen neighborhood, San Jose, CA General Dentist "><meta name="keywords" content="Dentist,Evergreen,San Jose ,General Dentist,95135,US graduate,TUFTS University,30 Years experience"><meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="PRAGMA" content="NO-CACHE">
+<script language="javascript">
+//-- These colors are used in design templates
+
+var col_primary="#ffffff";
+var col_secondary="#33cccc";
+var col_tertiary="#33cccc";
+var col_background="#ffffff";
+
+</script>
+
+
+<script language="JavaScript" src="../scripts/ic_globals_published.js"></script><script language="JavaScript" src="scripts/user.js"></script><script language="JavaScript" src="scripts/photoalbum.js"></script>
+<title>Dentist</title>
+<link rel="stylesheet" media="screen" href="scripts/template.css"><link rel="stylesheet" media="all" href="scripts/website.css"><link rel="stylesheet" media="print" href="scripts/print.css"><link rel="stylesheet" media="all" href="scripts/9custom.css"><link rel="stylesheet" media="all" href="scripts/icwebsiteelement.css">
+<style type="text/css">
+* html #layout_shadow_left {
+    background-image:none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src=images/shadow-left.png);
+}
+* html #layout_shadow_right {
+    background-image:none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src=images/shadow-right.png);
+}
+* html #content #slogan {
+    background-image:none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src=images/slogan-background.png);
+}
+* html #nav-left #inner #nav-left-topper {
+    background-image:none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src=images/nav-left-top-mask.png);
+}
+* html #nav-right #inner #nav-left-topper {
+    background-image:none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src=images/nav-right-top-mask.png);
+}
+</style>
+</head>
+<body id="wide" class="background" onload="processMenus();sizeColumns();">
+<div id="printwrap">
+	<div id="layout_shadow_left">&nbsp;</div>
+	<div id="nav-left">
+		<div id="inner" class="tertiary">
+			<div id="nav-left-topper" class="tertiary"></div>
+			<div id="headertop">
+				<div id="title">
+					<h1 id="website-title">Evergreen Valley Dental Office</h1>
+				</div>
+			</div>
+			<div id="navcontainer" class="primary">
+				<div id="nav-wrapper" class="primary">
+					<div><a href="home.html" class="tertiary" target="_self" id="sublink2"><h3>Home</h3></a></div>
+<div><a href="staff.html" class="tertiary" target="_self" id="sublink3"><h3>Staff</h3></a></div>
+<div><a href="services.html" class="tertiary" target="_self" id="sublink4"><h3>Services</h3></a></div>
+<div><a href="monthspecials.html" class="tertiary" target="_self" id="sublink5"><h3>Month Specials</h3></a></div>
+<div><a href="contactus.html" class="tertiary" target="_self" id="sublink6"><h3>Contact Us</h3></a></div>
+
+				</div>
+			</div>
+		</div>
+		<div id="content" class="primary">
+			<div id="slogan" class="secondary">
+				<h2 id="website-slogan">Let us help you smile more often!</h2>	
+				<div class="accent"></div>
+			</div>
+			<div class="clearer"></div>
+	      	<table id="content-table" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td id="content-table-main" align="left" valign="top">
+						Sorry, we do not have any special at this moment.
+					</td>
+				</tr>
+			</tbody></table>
+	  	</div>
+		<div class="clearer"></div>
+		<!-- <div class="clearer"></div> -->
+		<div id="footer"></div>
+		<div id="bottom-of-page"></div>
+	</div>
+	<div id="layout_shadow_right">&nbsp;</div>
+</div> 
+
+<script language="javaScript">
+// Column Height Script
+function pngHeight() {
+
+	if (document.getElementById('nav-left') || document.getElementById('nav-right')) {
+		//var pngH = document.getElementById('bottom-of-page').offsetTop;
+		var pngNavHeight=document.getElementById('navcontainer').clientHeight;
+		var pngH = 50;
+	if (document.getElementById('column1') == null) //checking for Hidden pages.
+	{
+		pngH = pngNavHeight + 205;
+		document.getElementById('navcontainer').style.height=pngNavHeight;
+		document.getElementById('content').style.height=pngH;
+	} else {
+		var pngColHeight1=document.getElementById('column1').clientHeight;
+		var pngColHeight2=document.getElementById('column2').clientHeight;
+		var pngColHeight3=document.getElementById('column3').clientHeight;
+		var othFootHeight=40;
+		if(document.getElementById('other_footer')) {
+			othFootHeight=document.getElementById('other_footer').clientHeight;
+		}
+		pngColHeight=pngColHeight1;
+		if(pngColHeight<pngColHeight2) pngColHeight=pngColHeight2;
+		if(pngColHeight<pngColHeight3) pngColHeight=pngColHeight3;
+		
+		pngColHeight=pngColHeight + othFootHeight;
+
+		if (pngNavHeight<pngColHeight) pngNavHeight=pngColHeight + 29;
+		if (pngColHeight<pngNavHeight) pngColHeight=pngNavHeight - 29;
+		
+		pngH = pngColHeight + 234;
+		
+		if (document.all) {
+			document.getElementById('layout_shadow_left').style.height=pngH;
+			document.getElementById('layout_shadow_right').style.height=pngH;
+			document.getElementById('navcontainer').style.height=pngNavHeight;
+			document.getElementById('content').style.height=pngH;
+			} else {
+			document.getElementById('layout_shadow_left').style.height=pngH + "px";
+			document.getElementById('layout_shadow_right').style.height=pngH + "px";
+			document.getElementById('navcontainer').style.height=pngNavHeight + "px";
+			document.getElementById('content').style.height=pngH + "px";
+			}
+		}
+	}
+}
+var oldhandler = window.onload;
+window.onload = (typeof oldhandler == "function")
+    ? function() { oldhandler(); pngHeight(); } : pngHeight;
+</script>
+
+
+</body></html>
