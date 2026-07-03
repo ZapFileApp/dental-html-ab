@@ -1,0 +1,704 @@
+<!DOCTYPE html><html lang="en-US" style="--bookingWidgetPrimaryColor: #6ec3a1; --bookingWidgetPrimaryColorDarker: rgb(100,185,151);"><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><style>@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");.CareCruModal{display:block;position:fixed;content:"";top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:-1;opacity:0;transition:opacity .2s,z-index 0s .2s;text-align:center;overflow:hidden;overflow-y:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;visibility:hidden}.CareCruModal.CareCruActive{z-index:999999;opacity:1;visibility:visible;transition:opacity .2s}.CareCruModal:before{overflow:hidden;width:0;height:100%;content:""}.CareCruModal:before,.CareCruModal>*{display:inline-block;vertical-align:middle}.CareCruModal>*{white-space:normal;text-align:left}.CareCruModalInner{position:relative;overflow:hidden;width:600px;height:100%;max-width:100%;overflow-y:auto;background:#fff;z-index:-1;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s,z-index 0s .2s}@media screen and (min-width:610px){.CareCruModalInner{height:650px}}.CareCruModalInner.CareCruActive{z-index:100;opacity:1;transform:scale(1);transition:opacity .2s,transform .2s}.CareCruButton{position:fixed;right:-160px;opacity:0;top:250px;min-width:157px;min-height:75px;cursor:pointer;display:flex;flex-direction:row;align-items:center;background-color:var(--bookingWidgetPrimaryColor);text-align:right;justify-content:center;padding:20px;color:#fff;box-sizing:border-box;z-index:9998;box-shadow:1px 2px 3px 0 hsla(0,0%,50.2%,.15);transition:all .2s ease-in;text-transform:uppercase;font-family:"Roboto"!important;font-size:19px;letter-spacing:0;line-height:19px;text-shadow:.5px .5px .5px rgba(0,0,0,.1);border-bottom-left-radius:999px;border-top-left-radius:999px}.CareCruButton.Request{font-size:15.5px}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;right:-160px}50%{opacity:0;right:-20px}to{opacity:1;right:0}}.CareCruButton .CareCruButtonIconBook{display:block;font-weight:600;font-size:25px;line-height:25px;color:#fff;font-family:"Roboto"!important}.CareCruButtonIcon{padding-right:.6rem;color:#fff;transition:all .2s ease-in;top:24px}.CareCruButtonIcon .CareCruButtonIconSVG{fill:currentColor;height:35px;transition:all .2s ease-in}.CareCruButton:hover{background:var(--bookingWidgetPrimaryColorDarker);box-shadow:1px 4px 5px 0 hsla(0,0%,50.2%,.25);transition:all .2s ease-in}.CareCruButton:hover .CareCruButtonIcon{transition:all .2s ease-in;border-color:var(--bookingWidgetPrimaryColorDarker)}.CareCruButton:hover .CareCruButtonIcon .CareCruButtonIconSVG{transition:all .2s ease-in;color:var(--bookingWidgetPrimaryColorDarker)}@media screen and (max-width:610px){.CareCruButton{top:auto;right:0;opacity:0;width:90%;left:5%;font-size:18px;justify-content:center;box-sizing:border-box;border-radius:9999px;padding:10px 0;text-align:center;min-height:auto}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;bottom:-3%}50%{opacity:0}to{opacity:1;bottom:2.5%}}.CareCruButton .CareCruButtonIconBook{display:inline;font-size:18px}.CareCruButtonIcon{display:none}}#CareCruIframe{z-index:101;position:absolute;top:0;left:0;width:1px;min-width:100%;height:100%;border:none;overflow:hidden}#hiddenCareCru{display:none}#locationWrapper .header{flex-flow:nowrap}#hiddenCareCru.active{display:block}.CareCruSpinner{font-family:"Roboto";margin:0 auto;text-align:center;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;font-weight:700;letter-spacing:.035em;z-index:102;position:relative;background:#fff;opacity:1}.CareCruSpinner,.CareCruSpinner.CareCruFadeOut{transition:opacity 1s cubic-bezier(.175,.885,.32,1.275)}.CareCruSpinner.CareCruFadeOut{opacity:0}.CareCruSpinner>div>div{width:18px;height:18px;background-color:var(--bookingWidgetPrimaryColor);border-radius:100%;display:inline-block;-webkit-animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both;animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both}.CareCruSpinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.CareCruSpinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}.CareCruSpinner>span{margin-top:12px}@-webkit-keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}
+/*# sourceMappingURL=widget.css.map */</style><meta charset="UTF-8"><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-HCP01FZ1QV&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-16487034579&amp;cx=c&amp;gtm=4e66u1"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5MCLMS3"></script><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+	
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://villagemalldentist.ca/xmlrpc.php">
+
+	<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+	
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+// Fetch cookie data function start
+function getCookie(cname) { 
+var name = cname + "=";
+var ca = document.cookie.split(';');
+for(var i = 0; i < ca.length; i++) {
+var c = ca[i];
+while (c.charAt(0) == ' ') {
+c = c.substring(1);
+}
+if (c.indexOf(name) == 0) {
+return c.substring(name.length, c.length);
+}
+}
+return "";
+}
+// Fetch cookie data function ends
+// Setting cookie value start
+function set_cookie(){ // cookie set function start
+	var cname="cpc";
+	var cvalue="1";
+	var d = new Date();
+	var minutes = 60;
+	d.setTime(d.getTime() + (minutes * 60 * 1000));
+	var expires = "expires="+ d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";"+ expires +";path=/";
+	}
+// Setting cookie value ends
+
+
+var url=window.top.location.href;
+// if the url contains vsrefdom=cpc-google
+if( url.indexOf('vsrefdom=cpc-google') != -1 || getCookie("cpc")=="1" )
+{
+if(getCookie("cpc")=="1")
+{
+}else{
+set_cookie();
+}
+
+
+// Replace phone numbers in the content section
+$('span,p,h1,h2,h3,h4,h5,h6,h7,strong,a,b').each(function(){                            
+   var replaced = jQuery(this).html().replace("(403) 347-6306","(888) 342-8920").replace("403-347-6306","888-342-8920").replace("4033476306","8883428920");
+   
+   $(this).html(replaced);                                                              
+   });
+
+
+
+
+ 
+
+
+// For Tel Click to Call
+var ph = document.querySelectorAll('a[href="tel:4033476306"]');
+ph.forEach(function(e){
+   e.setAttribute('href','tel:8883428920');
+});
+
+// Start Google Number Replacer
+ var script = document.createElement("script");
+ script.src="https://www.googletagmanager.com/gtag/js?id=AW-16487034579";                        
+ document.body.appendChild(script); 
+
+
+ window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16487034579');
+
+
+  gtag('config', 'AW-16487034579/ycRJCJ2j5p0ZENPd0LU9', {
+    'phone_conversion_number': '(888) 342-8920'
+  });
+
+// End Google Number Replacer
+} //if condition end 
+
+
+});
+</script>
+	
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer="">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Your Dentist Near Me | Contact Us | Village Mall Dental Red Deer</title>
+<link data-rocket-preload="" as="style" href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;subset=latin%2Clatin-ext&amp;display=swap" rel="preload">
+<link href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;subset=latin%2Clatin-ext&amp;display=swap" media="all" onload="this.media='all'" rel="stylesheet">
+<noscript data-wpr-hosted-gf-parameters=""><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;subset=latin%2Clatin-ext&#038;display=swap"></noscript>
+	<meta name="description" content="Village Mall Dental is home to your dentist near me in Red Deer who can help you with your smile. Request your appointment today!">
+	<link rel="canonical" href="https://villagemalldentist.ca/doctor-referral/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Your Dentist Near Me | Contact Us | Village Mall Dental Red Deer">
+	<meta property="og:description" content="Village Mall Dental is home to your dentist near me in Red Deer who can help you with your smile. Request your appointment today!">
+	<meta property="og:url" content="https://villagemalldentist.ca/doctor-referral/">
+	<meta property="og:site_name" content="Village Mall Dentists">
+	<meta property="article:publisher" content="https://www.facebook.com/ApplewayDentalClinics">
+	<meta property="article:modified_time" content="2025-07-30T16:34:36+00:00">
+	<meta property="og:image" content="https://villagemalldentist.ca/wp-content/uploads/2023/04/village-mall-logo.png">
+	<meta property="og:image:width" content="226">
+	<meta property="og:image:height" content="150">
+	<meta property="og:image:type" content="image/png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="2 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/villagemalldentist.ca\/doctor-referral\/","url":"https:\/\/villagemalldentist.ca\/doctor-referral\/","name":"Your Dentist Near Me | Contact Us | Village Mall Dental Red Deer","isPartOf":{"@id":"https:\/\/villagemalldentist.ca\/#website"},"datePublished":"2025-07-30T16:34:33+00:00","dateModified":"2025-07-30T16:34:36+00:00","description":"Village Mall Dental is home to your dentist near me in Red Deer who can help you with your smile. Request your appointment today!","breadcrumb":{"@id":"https:\/\/villagemalldentist.ca\/doctor-referral\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/villagemalldentist.ca\/doctor-referral\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/villagemalldentist.ca\/doctor-referral\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/villagemalldentist.ca\/"},{"@type":"ListItem","position":2,"name":"Doctor Referral"}]},{"@type":"WebSite","@id":"https:\/\/villagemalldentist.ca\/#website","url":"https:\/\/villagemalldentist.ca\/","name":"Village Mall Dentists","description":"","publisher":{"@id":"https:\/\/villagemalldentist.ca\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/villagemalldentist.ca\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/villagemalldentist.ca\/#organization","name":"Village Mall Dentists","url":"https:\/\/villagemalldentist.ca\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/villagemalldentist.ca\/#\/schema\/logo\/image\/","url":"https:\/\/villagemalldentist.ca\/wp-content\/uploads\/2023\/04\/village-mall-logo.png","contentUrl":"https:\/\/villagemalldentist.ca\/wp-content\/uploads\/2023\/04\/village-mall-logo.png","width":226,"height":150,"caption":"Village Mall Dentists"},"image":{"@id":"https:\/\/villagemalldentist.ca\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/ApplewayDentalClinics","https:\/\/www.instagram.com\/villagemalldentist"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//www.google.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="Village Mall Dentists » Feed" href="https://villagemalldentist.ca/feed/">
+<link rel="alternate" type="application/rss+xml" title="Village Mall Dentists » Comments Feed" href="https://villagemalldentist.ca/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://villagemalldentist.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvillagemalldentist.ca%2Fdoctor-referral%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://villagemalldentist.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvillagemalldentist.ca%2Fdoctor-referral%2F&amp;format=xml">
+<meta content="Divi Child v.1.0.0" name="generator">
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link data-minify="1" rel="stylesheet" id="cip-child-css" href="https://villagemalldentist.ca/wp-content/cache/min/1/wp-content/plugins/aow_cip/css/contentshare.css?ver=1780897537" media="all">
+<link data-minify="1" rel="stylesheet" id="my-plugin-style-css" href="https://villagemalldentist.ca/wp-content/cache/min/1/wp-content/plugins/aow_cip%202/css/contentshare.css?ver=1780897537" media="all">
+<link rel="stylesheet" id="aow_gf_failure_notification-css" href="https://villagemalldentist.ca/wp-content/plugins/aow_gf_failure_notification/public/css/aow_gf_failure_notification-public.css?ver=1.3.0" media="all">
+
+<link data-minify="1" rel="stylesheet" id="divi-style-parent-css" href="https://villagemalldentist.ca/wp-content/cache/min/1/wp-content/themes/Divi/style-static.min.css?ver=1780897537" media="all">
+<link rel="stylesheet" id="divi-style-pum-css" href="https://villagemalldentist.ca/wp-content/themes/divi-child/style.css?ver=4.27.6" media="all">
+<script id="jquery-core-js" src="https://villagemalldentist.ca/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://villagemalldentist.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script type="text/rocketlazyloadscript" id="aow_gf_failure_notification-js" data-rocket-src="https://villagemalldentist.ca/wp-content/plugins/aow_gf_failure_notification/public/js/aow_gf_failure_notification-public.js?ver=1.3.0"></script>
+<link rel="https://api.w.org/" href="https://villagemalldentist.ca/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://villagemalldentist.ca/wp-json/wp/v2/pages/711"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://villagemalldentist.ca/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 7.0">
+<link rel="shortlink" href="https://villagemalldentist.ca/?p=711">
+<script type="application/ld+json"> 
+	{
+	  "@context": "http://www.schema.org",
+	  "@type": "Dentist",
+	  "name": "Village Mall Dental",
+	  "url": "https://villagemalldentist.ca",
+	  "logo": "https://v5.airtableusercontent.com/v3/u/53/53/1778032800000/e5WhkoVM5VL8jH31TFO_8Q/bTjVkXRiR9iBQOsCiRkuEudSn2jN2h-AeqdwSelntUqMOvKfjyUEgL-q5sk12OITxbNSZZHYJVNC4LxZXz6kOdNPFgEjvMRSrXPVi0uBxSO3MoxmYTHR_aNfaKQzQshtpstT4UGi3BWlkA9cW3PvZw/o39h8Xb3swCo_N8KDGGmAEJFWoDddqWbp34_A4O3hn4",
+	  "image": "",
+	  "description": "Village Mall Dental is home to your Red Deer dentist who is here for you. We provide a wide range of dental services knowing that every patient is different and might have different needs. Providing you with comfort and professional care are our top priorities. Our multilingual practice means we can offer you dental treatment in English, Spanish, or Arabic.",
+	  "address": {
+		"@type": "PostalAddress",
+		"streetAddress": "6320 Gaetz Ave Unit 14",
+		"addressLocality": "Red Deer",
+		"addressRegion": "AB",
+		"postalCode": "T4N4C6",
+		"addressCountry": "CA"
+	  },
+	  "geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "52.2857782",
+		"longitude": " -113.8162782"
+	  },
+	  "hasMap": "https://www.google.com/maps/search/?api=1&query=Village+Mall+Dental&query_place_id=ChIJizB7Z0pUdFMR0UyRhfjznqA",
+	  "openingHours": "Mo 9:00 am-16:00 pm Tu 9:00 am-16:00 pm We 9:00 am-16:00 pm Th 9:00 am-17:00 pm Fr 9:00 am-16:00 pm Sa 9:00 am-16:00 pm"
+	  ,
+	  "contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+1 (403) 347-6306",
+		"contactType": "customer service"
+	  }
+	  	}
+ 	</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to automatic -->
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+	var dataLayer_content = {"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"Site Admin"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5MCLMS3');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><link rel="icon" href="https://villagemalldentist.ca/wp-content/uploads/2023/09/village-mall-favicon.png" sizes="32x32">
+<link rel="icon" href="https://villagemalldentist.ca/wp-content/uploads/2023/09/village-mall-favicon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://villagemalldentist.ca/wp-content/uploads/2023/09/village-mall-favicon.png">
+<meta name="msapplication-TileImage" content="https://villagemalldentist.ca/wp-content/uploads/2023/09/village-mall-favicon.png">
+<link rel="stylesheet" id="et-core-unified-711-cached-inline-styles" href="https://villagemalldentist.ca/wp-content/et-cache/711/et-core-unified-711.min.css?ver=1778328206"><link rel="stylesheet" id="et-core-unified-deferred-711-cached-inline-styles" href="https://villagemalldentist.ca/wp-content/et-cache/711/et-core-unified-deferred-711.min.css?ver=1778328206"><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6a3f1d4e507aa*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+
+<meta name="generator" content="WP Rocket 3.21.3" data-wpr-features="wpr_delay_js wpr_lazyload_images wpr_lazyload_iframes wpr_minify_css wpr_desktop"><link href="https://hushforms.com" rel="preconnect"><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16487034579/?random=1783044831775&amp;cv=11&amp;fst=1783044831775&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be66u1v9213138261z89123300816za20gzb9123300816zd9123300816xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938469~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fvillagemalldentist.ca%2Fdoctor-referral%2F&amp;rcb=13&amp;frm=0&amp;tiba=Your%20Dentist%20Near%20Me%20%7C%20Contact%20Us%20%7C%20Village%20Mall%20Dental%20Red%20Deer&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=459667954.1783044784&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script></head>
+<body class="wp-singular page-template-default page page-id-711 wp-theme-Divi wp-child-theme-divi-child et_button_no_icon et_pb_button_helper_class et_fixed_nav et_show_nav et_secondary_nav_enabled et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns3 et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db et_pb_recaptcha_enabled" style="overflow-x: hidden;">
+	<div data-rocket-location-hash="775329b08c0e284f257a34d6fe14bc45" id="page-container" style="padding-top: 181px; overflow-y: hidden;">
+
+					<div data-rocket-location-hash="c68c91df0b93303ce6315bab08157419" id="top-header">
+			<div data-rocket-location-hash="26589e74b59a5f33c7f83a78383938a1" class="container clearfix">
+                <div id="invisalign-provider">
+                
+<a href="/invisalign/"><img src="https://www.123dentist.com/wp-content/uploads/2020/12/invisalign-provider-Logo-transparent-white.png" alt="Invisalign Provider Logo White" data-lazy-src="https://www.123dentist.com/wp-content/uploads/2020/12/invisalign-provider-Logo-transparent-white.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img src="https://www.123dentist.com/wp-content/uploads/2020/12/invisalign-provider-Logo-transparent-white.png" alt="Invisalign Provider Logo White"></noscript></a>
+                </div>
+
+			
+				<div id="et-secondary-menu">
+				<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-facebook">
+		<a href="https://www.facebook.com/VillageMallDental" class="icon" target="new">
+			<span>Facebook</span>
+		</a>
+	</li>
+    
+    	<li class="et-social-icon et-social-instagram">
+		<a href="https://www.instagram.com/villagemalldentist" class="icon" target="new">
+			<span>Instagram</span>
+		</a>
+	</li>
+    
+	<li class="et-social-icon et-social-google-plus">
+		<a href="https://maps.google.com/?cid=11573956341107084497" class="icon" target="new">
+			<span>Google</span>
+		</a>
+	</li>
+
+</ul><ul id="et-secondary-nav" class="menu"><li class="aow-top-menu-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a href="tel:+15878573799">CALL: (587) 857-3799</a></li>
+</ul>				</div> <!-- #et-secondary-menu -->
+
+			</div> <!-- .container -->
+		</div> <!-- #top-header -->
+		
+	
+			<header data-rocket-location-hash="6e7a68072e410d6de410ecdad24c916a" id="main-header" data-height-onload="134" data-height-loaded="true" data-fixed-height-onload="134" style="top: 47px;">
+			<div data-rocket-location-hash="5ce87fc0ef4e91275851c9c3ce1fd1b5" class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="https://villagemalldentist.ca/">
+						<img src="https://villagemalldentist.ca/wp-content/uploads/2023/04/village-mall-logo.png" alt="Village Mall Dentists" id="logo" data-height-percentage="100" data-actual-width="226" data-actual-height="150">
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="120" data-fixed-height="80" style="padding-left: 231px;">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-80"><a href="https://villagemalldentist.ca/about-us/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161"><a href="https://villagemalldentist.ca/about-us/">About Us</a></li>
+	<li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157"><a href="/about-us/#meet-our-team">Meet Our Team</a></li>
+	<li id="menu-item-638" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-638"><a href="/about-us/#see-our-office">See Our Office</a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="https://villagemalldentist.ca/cdcp-information-for-patients/">CDCP Information for Patients</a></li>
+	<li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158"><a href="/about-us/#fees-and-insurance">Fees &amp; Insurance</a></li>
+	<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="https://villagemalldentist.ca/dental-appliances/">Dental Appliances</a></li>
+	<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="https://villagemalldentist.ca/dental-technology/">Dental Technology</a></li>
+</ul>
+</li>
+<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-84"><a href="https://villagemalldentist.ca/general-dentistry/">General Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-202" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-202"><a href="https://villagemalldentist.ca/general-dentistry/#gum-grafting">Gum Grafting</a></li>
+	<li id="menu-item-203" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-203"><a href="https://villagemalldentist.ca/general-dentistry/#oral-cancer">Oral Cancer Screening</a></li>
+	<li id="menu-item-204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-204"><a href="https://villagemalldentist.ca/general-dentistry/#dental-sealants">Dental Sealants</a></li>
+	<li id="menu-item-205" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-205"><a href="https://villagemalldentist.ca/general-dentistry/#dental-xrays">Dental Xrays</a></li>
+	<li id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211"><a href="https://villagemalldentist.ca/general-dentistry/root-canals/">Root Canals</a></li>
+	<li id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a href="https://villagemalldentist.ca/general-dentistry/teeth-extractions/">Teeth Extractions</a></li>
+</ul>
+</li>
+<li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-83"><a href="https://villagemalldentist.ca/cosmetic-dentistry/">Cosmetic Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-282"><a href="https://villagemalldentist.ca/cosmetic-dentistry/orthodontics/">Orthodontics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-286"><a href="https://villagemalldentist.ca/invisalign/">Invisalign</a></li>
+	</ul>
+</li>
+	<li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href="https://villagemalldentist.ca/cosmetic-dentistry/dental-crowns/">Dental Crowns</a></li>
+	<li id="menu-item-241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-241"><a href="https://villagemalldentist.ca/cosmetic-dentistry/teeth-whitening/">Teeth Whitening</a></li>
+</ul>
+</li>
+<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-283"><a href="https://villagemalldentist.ca/restorative-dentistry/">Restorative Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="https://villagemalldentist.ca/restorative-dentistry/dental-implants/">Dental Implants</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="https://villagemalldentist.ca/restorative-dentistry/all-on-4-dental-implants/">All-on-4 Dental Implants</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="https://villagemalldentist.ca/restorative-dentistry/dental-bridges/">Dental Bridges</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="https://villagemalldentist.ca/restorative-dentistry/dental-fillings/">Dental Fillings</a></li>
+	<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-348"><a href="https://villagemalldentist.ca/restorative-dentistry/dentures/">Dentures</a></li>
+	<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="https://villagemalldentist.ca/sedation-dentistry/">Sedation Dentistry</a></li>
+</ul>
+</li>
+<li id="menu-item-82" class="c-sub menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-82"><a href="https://villagemalldentist.ca/contact-us/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-380" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-380"><a href="https://villagemalldentist.ca/contact-us/">Contact Us</a></li>
+	<li id="menu-item-670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-670"><a href="https://villagemalldentist.ca/refer-a-friend/">Refer a Friend</a></li>
+	<li id="menu-item-379" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-379"><a href="/contact-us/#our-location">Our Location</a></li>
+	<li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="https://villagemalldentist.ca/emergency-dentistry/">Emergency Dentistry</a></li>
+	<li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-711 current_page_item menu-item-716"><a href="https://villagemalldentist.ca/doctor-referral/" aria-current="page">Doctor Referral</a></li>
+</ul>
+</li>
+</ul>						</nav>
+					
+					
+					
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				<ul id="mobile_menu" class="et_mobile_menu"><li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-80 et_first_mobile_item"><a href="https://villagemalldentist.ca/about-us/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161"><a href="https://villagemalldentist.ca/about-us/">About Us</a></li>
+	<li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157"><a href="/about-us/#meet-our-team">Meet Our Team</a></li>
+	<li id="menu-item-638" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-638"><a href="/about-us/#see-our-office">See Our Office</a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="https://villagemalldentist.ca/cdcp-information-for-patients/">CDCP Information for Patients</a></li>
+	<li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158"><a href="/about-us/#fees-and-insurance">Fees &amp; Insurance</a></li>
+	<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="https://villagemalldentist.ca/dental-appliances/">Dental Appliances</a></li>
+	<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="https://villagemalldentist.ca/dental-technology/">Dental Technology</a></li>
+</ul>
+</li>
+<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-84"><a href="https://villagemalldentist.ca/general-dentistry/">General Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-202" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-202"><a href="https://villagemalldentist.ca/general-dentistry/#gum-grafting">Gum Grafting</a></li>
+	<li id="menu-item-203" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-203"><a href="https://villagemalldentist.ca/general-dentistry/#oral-cancer">Oral Cancer Screening</a></li>
+	<li id="menu-item-204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-204"><a href="https://villagemalldentist.ca/general-dentistry/#dental-sealants">Dental Sealants</a></li>
+	<li id="menu-item-205" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-205"><a href="https://villagemalldentist.ca/general-dentistry/#dental-xrays">Dental Xrays</a></li>
+	<li id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211"><a href="https://villagemalldentist.ca/general-dentistry/root-canals/">Root Canals</a></li>
+	<li id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a href="https://villagemalldentist.ca/general-dentistry/teeth-extractions/">Teeth Extractions</a></li>
+</ul>
+</li>
+<li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-83"><a href="https://villagemalldentist.ca/cosmetic-dentistry/">Cosmetic Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-282"><a href="https://villagemalldentist.ca/cosmetic-dentistry/orthodontics/">Orthodontics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-286"><a href="https://villagemalldentist.ca/invisalign/">Invisalign</a></li>
+	</ul>
+</li>
+	<li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href="https://villagemalldentist.ca/cosmetic-dentistry/dental-crowns/">Dental Crowns</a></li>
+	<li id="menu-item-241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-241"><a href="https://villagemalldentist.ca/cosmetic-dentistry/teeth-whitening/">Teeth Whitening</a></li>
+</ul>
+</li>
+<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-283"><a href="https://villagemalldentist.ca/restorative-dentistry/">Restorative Dentistry</a>
+<ul class="sub-menu">
+	<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="https://villagemalldentist.ca/restorative-dentistry/dental-implants/">Dental Implants</a></li>
+	<li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-351"><a href="https://villagemalldentist.ca/restorative-dentistry/all-on-4-dental-implants/">All-on-4 Dental Implants</a></li>
+	<li id="menu-item-350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="https://villagemalldentist.ca/restorative-dentistry/dental-bridges/">Dental Bridges</a></li>
+	<li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="https://villagemalldentist.ca/restorative-dentistry/dental-fillings/">Dental Fillings</a></li>
+	<li id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-348"><a href="https://villagemalldentist.ca/restorative-dentistry/dentures/">Dentures</a></li>
+	<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="https://villagemalldentist.ca/sedation-dentistry/">Sedation Dentistry</a></li>
+</ul>
+</li>
+<li id="menu-item-82" class="c-sub menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-82"><a href="https://villagemalldentist.ca/contact-us/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-380" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-380"><a href="https://villagemalldentist.ca/contact-us/">Contact Us</a></li>
+	<li id="menu-item-670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-670"><a href="https://villagemalldentist.ca/refer-a-friend/">Refer a Friend</a></li>
+	<li id="menu-item-379" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-379"><a href="/contact-us/#our-location">Our Location</a></li>
+	<li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="https://villagemalldentist.ca/emergency-dentistry/">Emergency Dentistry</a></li>
+	<li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-711 current_page_item menu-item-716"><a href="https://villagemalldentist.ca/doctor-referral/" aria-current="page">Doctor Referral</a></li>
+</ul>
+</li>
+<li class="aow-top-menu-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a href="tel:+15878573799">CALL: (587) 857-3799</a></li>
+</ul></div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div data-rocket-location-hash="9e849b9e79ff19d8a767b7ae3330f1d3" class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="https://villagemalldentist.ca/">
+					<input type="search" class="et-search-field" placeholder="Search …" value="" name="s" title="Search for:">					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+			<div data-rocket-location-hash="f4387b02af1409bd47303e6ed5c48a83" id="et-main-area">
+	
+<div data-rocket-location-hash="8a18f7f5895499b1fef7290ea3e469f1" id="main-content">
+
+
+			
+				<article id="post-711" class="post-711 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 et_animated et_pb_with_background et_section_regular et_is_animating fade" style="animation-duration: 1000ms; animation-delay: 0ms; opacity: 0; animation-timing-function: ease-in-out;">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0 aow-btn-inline-3">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_right et_pb_text_align_center-phone et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p class="aow-subheading">Village Mall Dental</p>
+<h1>Doctor Referral</h1></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_phone_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="tel:+15878573799">CALL: (587) 857-3799</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_1 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1 reverse">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_2 et_animated et_pb_css_mix_blend_mode_passthrough et-last-child et_is_animating slideLeft" style="animation-duration: 1000ms; animation-delay: 0ms; opacity: 0; animation-timing-function: ease-in-out; transform: translate3d(-100%, 0px, 0px);">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><div data-secure-form="villagemalldental-1"></div>
+<p><script type="text/rocketlazyloadscript" data-rocket-src="https://hushforms.com/f/public/javascript/embed-hush-form.js"></script></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="our-location" class="et_pb_section et_pb_section_3 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_2 et_had_animation" style="">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3>Convenient Location with Free Parking</h3></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2440.6652947858934!2d-113.8162782!3d52.285778199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5374544a677b308b%3A0xa09ef3f885914cd1!2sAppleway%20Dental%20Clinic%20At%20Village%20Mall%20(North)!5e0!3m2!1sen!2sca!4v1694535968738!5m2!1sen!2sca" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2440.6652947858934!2d-113.8162782!3d52.285778199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5374544a677b308b%3A0xa09ef3f885914cd1!2sAppleway%20Dental%20Clinic%20At%20Village%20Mall%20(North)!5e0!3m2!1sen!2sca!4v1694535968738!5m2!1sen!2sca" data-ll-status="loaded" class="entered lazyloaded"></iframe><noscript><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2440.6652947858934!2d-113.8162782!3d52.285778199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5374544a677b308b%3A0xa09ef3f885914cd1!2sAppleway%20Dental%20Clinic%20At%20Village%20Mall%20(North)!5e0!3m2!1sen!2sca!4v1694535968738!5m2!1sen!2sca" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></noscript><br>
+<small>*Please note that the reviews link shown will take you to an independent third-party website not endorsed by or affiliated with our dental practice.</small></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_5 et_pb_with_background et_pb_fullwidth_section et_section_regular section_has_divider et_pb_bottom_divider">
+				
+				
+				
+				
+				
+				
+				<section class="et_pb_module et_pb_fullwidth_header et_pb_fullwidth_header_0 et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_fullwidth_header_container center">
+					<div class="header-content-container center">
+					<div class="header-content">
+						
+						
+						
+						<div class="et_pb_header_content_wrapper"><p class="aow-subheading">Village Mall Dental</p>
+<h2>Accepting New Patients</h2>
+<p>&nbsp;</p></div>
+						<a class="et_pb_button et_pb_more_button et_pb_button_one" href="tel:+15878573799">Call (587) 857-3799</a><a class="et_pb_button et_pb_more_button et_pb_button_two" href="/accepting-new-patients/">Request an Appointment</a>
+					</div>
+				</div>
+					
+				</div>
+				<div class="et_pb_fullwidth_header_overlay"></div>
+				<div class="et_pb_fullwidth_header_scroll"></div>
+			</section>
+				
+				<div class="et_pb_bottom_inside_divider" style=""></div>
+			</div>		</div>
+	</div>
+						</div>
+
+				
+				</article>
+
+			
+
+</div>
+
+
+			<footer data-rocket-location-hash="155604a850859755a30af4fa58d7687e" id="main-footer">
+				
+<div class="container">
+	<div id="footer-widgets" class="clearfix">
+		<div class="footer-widget"><div id="nav_menu-2" class="fwidget et_pb_widget widget_nav_menu"><h4 class="title">Useful Links</h4><div class="menu-useful-links-container"><ul id="menu-useful-links" class="menu"><li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="https://villagemalldentist.ca/about-us/">About Us</a></li>
+<li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a href="https://villagemalldentist.ca/general-dentistry/">General Dentistry</a></li>
+<li id="menu-item-100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-100"><a href="https://villagemalldentist.ca/cosmetic-dentistry/">Cosmetic Dentistry</a></li>
+<li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="https://villagemalldentist.ca/restorative-dentistry/">Restorative Dentistry</a></li>
+<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="https://villagemalldentist.ca/emergency-dentistry/">Emergency Dentistry</a></li>
+<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="https://villagemalldentist.ca/sedation-dentistry/">Sedation Dentistry</a></li>
+<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="https://villagemalldentist.ca/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-832" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832"><a href="https://villagemalldentist.ca/terms-of-use/">Terms of Use</a></li>
+</ul></div></div></div><div class="footer-widget"><div id="block-3" class="fwidget et_pb_widget widget_block"><h4 class="widgettitle">Contact Info</h4>
+<p><strong>Village Mall Dental</strong></p>
+<p>6320 Gaetz Ave, #14<br>
+Red Deer, AB, T4N 4C6</p>
+<p><a href="tel:+15878573799"><i class="fa-solid fa-phone"></i>(587) 857-3799</a><br>
+<a href="mailto: info@villagemalldentist.ca"><i class="fa-regular fa-envelope"></i>info@villagemalldentist.ca </a></p>
+<br>
+<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-facebook">
+		<a href="https://www.facebook.com/VillageMallDental" class="icon" target="new">
+			<span>Facebook</span>
+		</a>
+	</li>
+<li class="et-social-icon et-social-instagram">
+		<a href="https://www.instagram.com/villagemalldentist" class="icon" target="new">
+			<span>Instagram</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-google-plus">
+		<a href="https://maps.google.com/?cid=11573956341107084497" class="icon" target="new">
+			<span>Google</span>
+		</a>
+	</li>
+
+</ul></div></div><div class="footer-widget"><div id="block-4" class="fwidget et_pb_widget widget_block"><h4 class="widgettitle">Our Hours</h4>
+<div class="hours_shortcode"><ul class="child_hours_ul"><li><span class="child_dayofweek">Mon:</span><span class="child_hours"><span class="child_hours"><time time="9:00 am" itemprop="startTime">9:00 am</time><span class="child_dash"> - </span><time time="4:00 pm" itemprop="endTime">4:00 pm</time></span></span></li><li><span class="child_dayofweek"><time day="2" itemprop="weekDay">Tue:</time></span><span class="child_hours"><time time="9:00 am" itemprop="startTime">9:00 am</time><span class="child_dash"> - </span><time time="4:00 pm" itemprop="endTime">4:00 pm</time></span></li><li><span class="child_dayofweek"><time day="3" itemprop="weekDay">Wed:</time></span><span class="child_hours"><time time="9:00 am" itemprop="startTime">9:00 am</time><span class="child_dash"> - </span><time time="4:00 pm" itemprop="endTime">4:00 pm</time></span></li><li><span class="child_dayofweek"><time day="4" itemprop="weekDay">Thu:</time></span><span class="child_hours"><time time="9:00 am" itemprop="startTime">9:00 am</time><span class="child_dash"> - </span><time time="5:00 pm" itemprop="endTime">5:00 pm</time></span></li><li><span class="child_dayofweek"><time day="5" itemprop="weekDay">Fri:</time></span><span class="child_hours"><time time="9:00 am" itemprop="startTime">9:00 am</time><span class="child_dash"> - </span><time time="4:00 pm" itemprop="endTime">4:00 pm</time></span></li><li><span class="child_dayofweek"><time day="6" itemprop="weekEnd">Sat:</time></span><span class="child_hours"><time time="9:00 am" itemprop="startTime">9:00 am</time><span class="child_dash"> - </span><time time="4:00 pm" itemprop="endTime">4:00 pm</time></span></li><li><span class="child_dayofweek"><time day="7" itemprop="weekEnd">Sun:</time></span><span class="child_replace">Closed</span></li></ul></div></div></div>	</div>
+</div>
+
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<div id="footer-info">© Copyright Village Mall Dental.</div>					</div>
+				</div>
+			</footer>
+		</div>
+
+
+	</div>
+
+	<script id="" text="" charset="" type="text/javascript" src="https://oswidget.carecru.ca/widgets/bd36a454-2de1-46ae-99f8-6367b7eb4f43/cc.js"></script><script id="" text="" charset="" type="text/javascript" src="https://next-api.patientprism.com/v1/snippet/9ed0cc69-d338-40e0-8bd7-c9ddf550653b"></script><div class="CareCruModal"><div class="CareCruModalInner"><iframe width="100%" scrolling="no" src="https://oswidget.carecru.ca/widgets/bd36a454-2de1-46ae-99f8-6367b7eb4f43/app/book?ref=" id="CareCruIframe" style="height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; overflow: hidden;" title="CareCru"></iframe></div></div><div class="CareCruFadeIn CareCruButton Book" data-rocket-onclick="this.rocketonclick(event)"><div class="CareCruButtonIcon"><svg class="CareCruButtonIconSVG" viewBox="0 0 184 167" xmlns="http://www.w3.org/2000/svg"><path d="M170.486 6.775c7.462 0 13.511 6.049 13.511 13.511v132.935c0 7.462-6.049 13.512-13.511 13.512H13.931c-7.461 0-13.51-6.05-13.51-13.512V20.284c0-7.461 6.048-13.509 13.509-13.509h22.038V1.954c0-.809.655-1.465 1.465-1.465h18.999c.809 0 1.465.656 1.465 1.465v4.821h66.853V1.954c0-.809.656-1.465 1.465-1.465h19.001c.81 0 1.465.656 1.465 1.465v4.821h23.805zm-3.843 147.071a3.611 3.611 0 0 0 3.609-3.613V44.279a3.61 3.61 0 0 0-3.609-3.613H18.374a3.61 3.61 0 0 0-3.609 3.613v105.954a3.611 3.611 0 0 0 3.609 3.613h148.269zm-40.331-72.672a3.358 3.358 0 0 1 0 4.745l-38.846 38.846c-.371.37-.811.608-1.275.769-1.004.739-2.403.698-3.311-.212l-24.406-24.404a2.569 2.569 0 0 1 0-3.631l7.598-7.597a2.567 2.567 0 0 1 3.631 0l15.19 15.19 30.19-30.189a3.355 3.355 0 0 1 4.746 0l6.483 6.483z" fill="#FFFFFE" fill-rule="evenodd"></path></svg></div><div><strong class="CareCruButtonIconBook">Book</strong> Online</div></div><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/divi-child/*","/wp-content/themes/Divi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+	<script type="text/javascript">
+				var et_animation_data = [{"class":"et_pb_section_0","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_column_2","style":"slideLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_2","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"}];
+				</script>
+	<script id="divi-custom-script-js-extra">
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https://villagemalldentist.ca/wp-admin/admin-ajax.php","images_uri":"https://villagemalldentist.ca/wp-content/themes/Divi/images","builder_images_uri":"https://villagemalldentist.ca/wp-content/themes/Divi/includes/builder/images","et_frontend_nonce":"09bdb5b8ff","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"f91142344b","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"711","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":"https://villagemalldentist.ca/wp-content/themes/Divi/includes/builder/frontend-builder/assets/vendors","accent_color":"#6fc3a1","waypoints_options":{"context":[".pum-overlay"]}};
+var et_pb_box_shadow_elements = [];
+//# sourceURL=divi-custom-script-js-extra
+</script>
+<script id="divi-custom-script-js" src="https://villagemalldentist.ca/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.6"></script>
+<script id="gforms_recaptcha_recaptcha-js-extra">
+var gforms_recaptcha_recaptcha_strings = {"nonce":"41502443f8","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https://villagemalldentist.ca/wp-content/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LeG4fAnAAAAAKCrXSHHH8pWu6jg_8IBwmNcvFLj"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+</script>
+<script data-wp-strategy="defer" defer="" id="gforms_recaptcha_recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6LeG4fAnAAAAAKCrXSHHH8pWu6jg_8IBwmNcvFLj&amp;ver=2.2.2"></script>
+<script data-wp-strategy="defer" defer="" id="gforms_recaptcha_frontend-js" src="https://villagemalldentist.ca/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.2.2"></script>
+<script type="text/rocketlazyloadscript" id="et-core-common-js" data-rocket-src="https://villagemalldentist.ca/wp-content/themes/Divi/core/admin/js/common.js?ver=4.27.6"></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://villagemalldentist.ca/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script type="text/rocketlazyloadscript">(function(d){var s = d.createElement("script");s.setAttribute("data-account", "EHAt5TiNes");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+function setCookie(cname, cvalue){
+var d = new Date();
+var minutes = 480;
+d.setTime(d.getTime() + (minutes * 60 * 1000));
+var expires = "expires="+ d.toUTCString();
+document.cookie = cname + "=" + cvalue + ";"+ expires +";path=/";
+}
+
+var vars = [], hash, gclid;
+var hashes = window.location.href;
+var decodedurl = decodeURIComponent(hashes);
+var newurl = decodedurl.slice(window.location.href.indexOf('?') + 1).split('&');
+for(var i = 0; i < newurl.length; i++)
+{
+  hash = newurl[i].split('=');
+  vars.push(hash[0]);
+  vars[hash[0]] = hash[1];
+}
+if(vars['gclid']){                  //checking if gclid parameter exists in URL
+gclid = vars['gclid'];           //storing GCLID value into a variable
+setCookie("gclid",gclid);    //setting cookie using the GCLID value
+}
+</script>
+
+
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+jQuery(document).ready(function(){
+//fetch cookie data function start
+function getCookie1(cname) { 
+var name = cname + "=";
+var ca = document.cookie.split(';');
+for(var i = 0; i < ca.length; i++) {
+var c = ca[i];
+while (c.charAt(0) == ' ') {
+c = c.substring(1);
+}
+if (c.indexOf(name) == 0) {
+return c.substring(name.length, c.length);
+}
+}
+return "";
+}
+
+
+var url=window.top.location.href;
+if( url.indexOf('vsrefdom=cpc-google') != -1 || getCookie1("cpc")=="1" )
+{
+if(getCookie1("cpc")=="1")
+{
+}else{
+set_cookie1();
+}
+}
+
+
+// If the url doesn't contain 
+if( getCookie1("cpc")!="1" )
+{
+var script1 = document.createElement("script");
+script1.type="text/javascript"; 
+script1.innerHTML="unq_id = 'CLU_671';";
+document.body.appendChild(script1);  
+
+
+} //if condition end 
+
+
+function set_cookie1(){ // cookie set function start
+var cname="cpc";
+var cvalue="1";
+var d = new Date();
+var minutes = 60;
+d.setTime(d.getTime() + (minutes * 60 * 1000));
+var expires = "expires="+ d.toUTCString();
+document.cookie = cname + "=" + cvalue + ";"+ expires +";path=/";
+}
+});
+</script>
+
+<script>var rocket_beacon_data = {"ajax_url":"https:\/\/villagemalldentist.ca\/wp-admin\/admin-ajax.php","nonce":"23d19f2a10","url":"https:\/\/villagemalldentist.ca\/doctor-referral","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src="https://villagemalldentist.ca/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js" async="" beacon-completed="true"></script><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;38a86d54bb0848588adcf927f15cceac&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-1zheudtzs1vf" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeG4fAnAAAAAKCrXSHHH8pWu6jg_8IBwmNcvFLj&amp;co=aHR0cHM6Ly92aWxsYWdlbWFsbGRlbnRpc3QuY2E6NDQz&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=jhhfcpou0sv6"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></body></html>
