@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v4.16.19"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta name="theme-color" content="#ad9885"><link rel="alternate" type="application/rss+xml" title="Fish Creek Dental Blog" href="/rss.xml"><title>Patient Info — Fish Creek Dental</title><meta name="description" content="What to expect at your first visit to Fish Creek Dental in South Calgary — including new patient forms, insurance direct billing, and how to prepare."><link rel="canonical" href="https://fishcreekdental.com/patient-info/"><meta property="og:type" content="website"><meta property="og:title" content="Patient Info — Fish Creek Dental"><meta property="og:description" content="What to expect at your first visit to Fish Creek Dental in South Calgary — including new patient forms, insurance direct billing, and how to prepare."><meta property="og:url" content="https://fishcreekdental.com/patient-info/"><meta property="og:image" content="https://fishcreekdental.com/og-default.jpg"><meta property="og:site_name" content="Fish Creek Dental"><meta property="og:locale" content="en_CA"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Patient Info — Fish Creek Dental"><meta name="twitter:description" content="What to expect at your first visit to Fish Creek Dental in South Calgary — including new patient forms, insurance direct billing, and how to prepare."><meta name="twitter:image" content="https://fishcreekdental.com/og-default.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","@id":"https://fishcreekdental.com/#clinic","name":"Fish Creek Dental","description":"Family, cosmetic, and restorative dentistry in southwest Calgary. Modern technology, sedation options, and a comfortable, welcoming team led by Dr. Brock Hall.","url":"https://fishcreekdental.com","telephone":"+1-403-271-2221","email":"admin@fishcreekdental.com","image":"https://fishcreekdental.com/og-default.jpg","logo":"https://fishcreekdental.com/logo.png","address":{"@type":"PostalAddress","streetAddress":"380 Canyon Meadows Drive SE, Suite 3212","addressLocality":"Calgary","addressRegion":"AB","postalCode":"T2J 7C3","addressCountry":"CA"},"geo":{"@type":"GeoCoordinates","latitude":50.929,"longitude":-114.064},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"07:00","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"07:00","closes":"14:00"}],"areaServed":{"@type":"City","name":"Calgary"},"priceRange":"$$","sameAs":["https://www.facebook.com/fishcreekdentalclinic/"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://fishcreekdental.com/#website","url":"https://fishcreekdental.com","name":"Fish Creek Dental","publisher":{"@id":"https://fishcreekdental.com/#clinic"},"inLanguage":"en-CA"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What should I bring to my first visit?","acceptedAnswer":{"@type":"Answer","text":"A list of any medications and dosages you take — including vitamins and supplements — plus your insurance information if you have coverage. We handle the rest."}},{"@type":"Question","name":"What happens at a first appointment?","acceptedAnswer":{"@type":"Answer","text":"Your first visit includes a conversation about what brought you in, a full-mouth series of x-rays, a comprehensive oral exam of your teeth, gums, mouth, and jaw, and an oral cancer screening. We'll discuss any findings before you leave."}},{"@type":"Question","name":"Do you direct-bill insurance?","acceptedAnswer":{"@type":"Answer","text":"Yes — we direct-bill most major insurance companies. Bring your benefits card or send us your provider info ahead of time and we'll handle the rest."}},{"@type":"Question","name":"What are your office hours?","acceptedAnswer":{"@type":"Answer","text":"Monday through Thursday from 7:00 AM to 3:00 PM, and Friday from 7:00 AM to 2:00 PM. We are closed Saturday and Sunday."}},{"@type":"Question","name":"Do you accept dental emergencies?","acceptedAnswer":{"@type":"Answer","text":"Yes — call us at 403-271-2221 and we will do our best to see you the same day. Same-day emergency appointments are available throughout the week."}}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fishcreekdental.com/"},{"@type":"ListItem","position":2,"name":"Patient Info","item":"https://fishcreekdental.com/patient-info"}]}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZSZXCG7THH"></script><script>(function(){const ga = "G-ZSZXCG7THH";
+const ads = "";
+const hasGa = true;
+const hasAds = false;
+const bookingUrl = "https://akitu.io/kgWzb";
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      if (hasGa) gtag('config', ga, { anonymize_ip: true });
+      if (hasAds) gtag('config', ads);
+
+      // Auto-bind conversion events on any "Schedule Appointment" CTA and phone-tap link.
+      // Fires GA4 events that can be imported as Google Ads conversions after marking
+      // them as Conversions in GA4 → Admin → Events.
+      (function () {
+        function bind() {
+          if (!window.gtag) return;
+          var seen = new WeakSet();
+
+          // Match any link to the booking portal — selector derived from site.bookingUrl
+          // so URL changes only require one edit (in src/lib/site.ts).
+          var bookingSelector = 'a[href="' + bookingUrl + '"]';
+          document.querySelectorAll(bookingSelector).forEach(function (el) {
+            if (seen.has(el)) return;
+            seen.add(el);
+            el.addEventListener('click', function () {
+              try {
+                window.gtag('event', 'schedule_appointment_click', {
+                  event_category: 'engagement',
+                  event_label: el.textContent ? el.textContent.trim() : 'Schedule Appointment',
+                  link_location: location.pathname,
+                });
+              } catch (e) {}
+            });
+          });
+
+          document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
+            if (seen.has(el)) return;
+            seen.add(el);
+            el.addEventListener('click', function () {
+              try {
+                window.gtag('event', 'phone_tap', {
+                  event_category: 'engagement',
+                  event_label: el.getAttribute('href').replace('tel:', ''),
+                  link_location: location.pathname,
+                });
+              } catch (e) {}
+            });
+          });
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', bind);
+        } else {
+          bind();
+        }
+      })();
+    })();</script><link rel="stylesheet" href="/_astro/about.DUwt8AzJ.css">
+<style>.page-header[data-astro-cid-6wxqmesk]{padding-top:6rem;padding-bottom:3rem}.page-header[data-astro-cid-6wxqmesk] .lead[data-astro-cid-6wxqmesk]{font-size:1.2rem;color:var(--color-text-muted);max-width:760px}.info-grid[data-astro-cid-6wxqmesk]{display:grid;grid-template-columns:1.6fr 1fr;gap:3rem;align-items:start}.info[data-astro-cid-6wxqmesk] h2[data-astro-cid-6wxqmesk]{margin-bottom:1rem}.info[data-astro-cid-6wxqmesk] h3[data-astro-cid-6wxqmesk]{margin-top:1.75rem;color:var(--color-accent)}.info[data-astro-cid-6wxqmesk] p[data-astro-cid-6wxqmesk]{color:var(--color-text-muted)}.info-side[data-astro-cid-6wxqmesk]{display:grid;gap:1rem}.info-card[data-astro-cid-6wxqmesk]{background:var(--color-cream);border-left:3px solid var(--color-primary);border-radius:0 var(--radius-card) var(--radius-card) 0;padding:1.25rem 1.5rem}.info-card[data-astro-cid-6wxqmesk] h3[data-astro-cid-6wxqmesk]{margin:0 0 .5rem;color:var(--color-primary);font-family:var(--font-heading);font-size:.85rem;text-transform:uppercase;letter-spacing:.18em}.info-card[data-astro-cid-6wxqmesk] p[data-astro-cid-6wxqmesk]{margin:0;color:var(--color-dark)}.insurance[data-astro-cid-6wxqmesk]{max-width:760px}.insurance[data-astro-cid-6wxqmesk] p[data-astro-cid-6wxqmesk]{font-size:1.1rem;color:var(--color-dark)}.cta__inner[data-astro-cid-6wxqmesk]{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}.cta__buttons[data-astro-cid-6wxqmesk]{display:flex;gap:.75rem;flex-wrap:wrap}.faqs[data-astro-cid-6wxqmesk]{max-width:800px}.faqs[data-astro-cid-6wxqmesk] dl[data-astro-cid-6wxqmesk]{margin-top:1.5rem}.faqs[data-astro-cid-6wxqmesk] dt[data-astro-cid-6wxqmesk]{font-family:var(--font-heading);font-weight:700;font-size:1.1rem;margin-top:1.5rem;color:var(--color-dark)}.faqs[data-astro-cid-6wxqmesk] dt[data-astro-cid-6wxqmesk]:first-child{margin-top:0}.faqs[data-astro-cid-6wxqmesk] dd[data-astro-cid-6wxqmesk]{margin:.4rem 0 0;color:var(--color-text-muted)}@media (max-width: 900px){.info-grid[data-astro-cid-6wxqmesk]{grid-template-columns:1fr}}
+</style></head> <body> <header class="nav" data-astro-cid-dmqpwcec=""> <div class="nav__inner container" data-astro-cid-dmqpwcec=""> <a class="nav__brand" href="/" aria-label="Fish Creek Dental — Home" data-astro-cid-dmqpwcec=""> <img class="nav__logo" src="/logo.png" alt="Fish Creek Dental" width="320" height="126" data-astro-cid-dmqpwcec=""> </a> <nav class="nav__links" aria-label="Primary" data-astro-cid-dmqpwcec=""> <a href="/" class="nav__link " data-astro-cid-dmqpwcec="">Home</a><a href="/about" class="nav__link " data-astro-cid-dmqpwcec="">About</a><a href="/services" class="nav__link " data-astro-cid-dmqpwcec="">Services</a><a href="/patient-info" class="nav__link is-active" data-astro-cid-dmqpwcec="">Patient Info</a><a href="/contact" class="nav__link " data-astro-cid-dmqpwcec="">Contact</a> </nav> <div class="nav__cta" data-astro-cid-dmqpwcec=""> <a href="https://akitu.io/kgWzb" target="_blank" rel="noopener" class="btn btn--white nav__cta-btn" data-astro-cid-dmqpwcec="">Schedule Appointment</a> <a href="tel:+14032712221" class="btn btn--white nav__cta-btn" data-astro-cid-dmqpwcec="">403-271-2221</a> </div> <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-astro-cid-dmqpwcec=""> <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" data-astro-cid-dmqpwcec=""> <path class="nav__toggle-open" fill="currentColor" d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z" data-astro-cid-dmqpwcec=""></path> <path class="nav__toggle-close" fill="currentColor" d="M6.4 5L12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4 6.4 5Z" style="display:none" data-astro-cid-dmqpwcec=""></path> </svg> </button> </div> <div class="nav__mobile" id="mobile-menu" hidden="" data-astro-cid-dmqpwcec=""> <nav aria-label="Mobile" data-astro-cid-dmqpwcec=""> <a href="/" class="nav__mobile-link " data-astro-cid-dmqpwcec="">Home</a><a href="/about" class="nav__mobile-link " data-astro-cid-dmqpwcec="">About</a><a href="/services" class="nav__mobile-link " data-astro-cid-dmqpwcec="">Services</a><a href="/patient-info" class="nav__mobile-link is-active" data-astro-cid-dmqpwcec="">Patient Info</a><a href="/contact" class="nav__mobile-link " data-astro-cid-dmqpwcec="">Contact</a> </nav> <div class="nav__mobile-cta" data-astro-cid-dmqpwcec=""> <a href="https://akitu.io/kgWzb" target="_blank" rel="noopener" class="btn btn--white" data-astro-cid-dmqpwcec="">Schedule Appointment</a> <a href="tel:+14032712221" class="btn btn--white" data-astro-cid-dmqpwcec="">Call 403-271-2221</a> </div> </div> </header> <script>
+  (function(){
+    var btn = document.getElementById('nav-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+    var openIcon = btn.querySelector('.nav__toggle-open');
+    var closeIcon = btn.querySelector('.nav__toggle-close');
+    function setOpen(open){
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      menu.hidden = !open;
+      if (openIcon) openIcon.style.display = open ? 'none' : '';
+      if (closeIcon) closeIcon.style.display = open ? '' : 'none';
+      document.documentElement.style.overflow = open ? 'hidden' : '';
+    }
+    btn.addEventListener('click', function(){
+      setOpen(menu.hidden);
+    });
+    // Close when a link is clicked (single-page navigation isn't used, but
+    // helps in case it's added later and is a nicer UX).
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ setOpen(false); });
+    });
+    // Close on Escape
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && !menu.hidden) setOpen(false);
+    });
+  })();
+</script>  <main>  <section class="section section--cream page-header" data-astro-cid-6wxqmesk=""> <div class="container" data-astro-cid-6wxqmesk=""> <p class="eyebrow" data-astro-cid-6wxqmesk="">Patient Info</p> <h1 data-astro-cid-6wxqmesk="">Everything you need before your first visit.</h1> <p class="lead" data-astro-cid-6wxqmesk="">
+Whether you're brand new to the practice or returning after a long break,
+        here's what to expect — and how to make your visit as smooth as possible.
+</p> </div> </section> <section class="section" data-astro-cid-6wxqmesk=""> <div class="container info-grid" data-astro-cid-6wxqmesk=""> <article class="info" data-astro-cid-6wxqmesk=""> <h2 data-astro-cid-6wxqmesk="">Your first visit</h2> <p data-astro-cid-6wxqmesk="">
+Your initial appointment is about getting to know each other. We encourage
+          you to ask questions, express your concerns, and share anything you want
+          us to know — that way we can tailor your care from day one.
+</p> <h3 data-astro-cid-6wxqmesk="">Medical history review</h3> <p data-astro-cid-6wxqmesk="">
+Please bring a list of any medications and dosages you take —
+          including vitamins and supplements. These can influence our treatment
+          recommendations.
+</p> <h3 data-astro-cid-6wxqmesk="">Clinical examination</h3> <p data-astro-cid-6wxqmesk="">
+Your first visit includes a full-mouth series of x-rays and a
+          comprehensive oral exam of your teeth, gums, mouth, and jaw — plus an
+          oral cancer screening.
+</p> </article> <aside class="info-side" data-astro-cid-6wxqmesk=""> <div class="info-card" data-astro-cid-6wxqmesk=""> <h3 data-astro-cid-6wxqmesk="">Office Hours</h3> <p data-astro-cid-6wxqmesk=""> <strong data-astro-cid-6wxqmesk="">Mon – Thurs:</strong> 7:00 AM – 3:00 PM<br data-astro-cid-6wxqmesk=""> <strong data-astro-cid-6wxqmesk="">Friday:</strong> 7:00 AM – 2:00 PM
+</p> </div> <div class="info-card" data-astro-cid-6wxqmesk=""> <h3 data-astro-cid-6wxqmesk="">Contact</h3> <p data-astro-cid-6wxqmesk=""> <a href="tel:+14032712221" data-astro-cid-6wxqmesk="">403-271-2221</a><br data-astro-cid-6wxqmesk=""> <a href="mailto:admin@fishcreekdental.com" data-astro-cid-6wxqmesk="">admin@fishcreekdental.com</a> </p> </div> <div class="info-card" data-astro-cid-6wxqmesk=""> <h3 data-astro-cid-6wxqmesk="">Location</h3> <p data-astro-cid-6wxqmesk="">
+380 Canyon Meadows Drive SE<br data-astro-cid-6wxqmesk="">
+Suite 3212<br data-astro-cid-6wxqmesk="">
+Calgary, AB&nbsp;&nbsp;T2J 7C3
+</p> </div> </aside> </div> </section> <section class="section section--stone" data-astro-cid-6wxqmesk=""> <div class="container insurance" data-astro-cid-6wxqmesk=""> <p class="eyebrow" data-astro-cid-6wxqmesk="">Insurance &amp; Payment</p> <h2 data-astro-cid-6wxqmesk="">Direct billing, simplified.</h2> <p data-astro-cid-6wxqmesk="">
+We offer direct billing to most insurance companies. Our team is happy
+        to walk you through your benefits, assignment options, and accepted
+        payment methods — just ask.
+</p> </div> </section> <section class="section" data-astro-cid-6wxqmesk=""> <div class="container faqs" data-astro-cid-6wxqmesk=""> <p class="eyebrow" data-astro-cid-6wxqmesk="">FAQ</p> <h2 data-astro-cid-6wxqmesk="">Questions new patients ask.</h2> <dl data-astro-cid-6wxqmesk="">  <dt data-astro-cid-6wxqmesk="">What should I bring to my first visit?</dt> <dd data-astro-cid-6wxqmesk="">A list of any medications and dosages you take — including vitamins and supplements — plus your insurance information if you have coverage. We handle the rest.</dd>  <dt data-astro-cid-6wxqmesk="">What happens at a first appointment?</dt> <dd data-astro-cid-6wxqmesk="">Your first visit includes a conversation about what brought you in, a full-mouth series of x-rays, a comprehensive oral exam of your teeth, gums, mouth, and jaw, and an oral cancer screening. We'll discuss any findings before you leave.</dd>  <dt data-astro-cid-6wxqmesk="">Do you direct-bill insurance?</dt> <dd data-astro-cid-6wxqmesk="">Yes — we direct-bill most major insurance companies. Bring your benefits card or send us your provider info ahead of time and we'll handle the rest.</dd>  <dt data-astro-cid-6wxqmesk="">What are your office hours?</dt> <dd data-astro-cid-6wxqmesk="">Monday through Thursday from 7:00 AM to 3:00 PM, and Friday from 7:00 AM to 2:00 PM. We are closed Saturday and Sunday.</dd>  <dt data-astro-cid-6wxqmesk="">Do you accept dental emergencies?</dt> <dd data-astro-cid-6wxqmesk="">Yes — call us at 403-271-2221 and we will do our best to see you the same day. Same-day emergency appointments are available throughout the week.</dd>  </dl> </div> </section> <section class="section section--cream cta" data-astro-cid-6wxqmesk=""> <div class="container cta__inner" data-astro-cid-6wxqmesk=""> <div data-astro-cid-6wxqmesk=""> <p class="eyebrow" data-astro-cid-6wxqmesk="">Ready when you are</p> <h2 data-astro-cid-6wxqmesk="">Book your first visit.</h2> <p data-astro-cid-6wxqmesk="">New patients welcome. Same-day emergency appointments available.</p> </div> <div class="cta__buttons" data-astro-cid-6wxqmesk=""> <a href="https://akitu.io/kgWzb" target="_blank" rel="noopener" class="btn btn--primary" data-astro-cid-6wxqmesk="">Schedule Appointment</a> <a href="tel:+14032712221" class="btn btn--stone" data-astro-cid-6wxqmesk="">Call 403-271-2221</a> </div> </div> </section>  </main> <footer class="footer" data-astro-cid-sz7xmlte=""> <div class="container footer__inner" data-astro-cid-sz7xmlte=""> <div class="footer__col" data-astro-cid-sz7xmlte=""> <a href="/" class="footer__brand" aria-label="Fish Creek Dental — Home" data-astro-cid-sz7xmlte=""> <img src="/logo.png" alt="Fish Creek Dental" width="320" height="126" data-astro-cid-sz7xmlte=""> </a> <p data-astro-cid-sz7xmlte="">Your South Calgary Dentist</p> <p data-astro-cid-sz7xmlte=""> <a href="tel:+14032712221" data-astro-cid-sz7xmlte="">403-271-2221</a><br data-astro-cid-sz7xmlte=""> <a href="mailto:admin@fishcreekdental.com" data-astro-cid-sz7xmlte="">admin@fishcreekdental.com</a> </p> <ul class="footer__social" aria-label="Social media" data-astro-cid-sz7xmlte=""> <li data-astro-cid-sz7xmlte=""> <a href="https://www.facebook.com/fishcreekdentalclinic/" target="_blank" rel="noopener" aria-label="Fish Creek Dental on Facebook" data-astro-cid-sz7xmlte=""> <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" data-astro-cid-sz7xmlte=""> <path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.6c0-.9.3-1.6 1.6-1.6h1.6V4.1c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.7H7.5V14h2.8v8h3.2Z" data-astro-cid-sz7xmlte=""></path> </svg> </a> </li> </ul> </div> <div class="footer__col" data-astro-cid-sz7xmlte=""> <h4 data-astro-cid-sz7xmlte="">Visit</h4> <p data-astro-cid-sz7xmlte="">
+380 Canyon Meadows Drive SE<br data-astro-cid-sz7xmlte="">
+Suite 3212<br data-astro-cid-sz7xmlte="">
+Calgary, AB&nbsp;&nbsp;T2J 7C3
+</p> <p data-astro-cid-sz7xmlte=""> <strong data-astro-cid-sz7xmlte="">Mon – Thurs:</strong> 7AM – 3PM<br data-astro-cid-sz7xmlte=""> <strong data-astro-cid-sz7xmlte="">Friday:</strong> 7AM – 2PM
+</p> </div> <div class="footer__col" data-astro-cid-sz7xmlte=""> <h4 data-astro-cid-sz7xmlte="">Explore</h4> <ul data-astro-cid-sz7xmlte=""> <li data-astro-cid-sz7xmlte=""><a href="/about" data-astro-cid-sz7xmlte="">About</a></li> <li data-astro-cid-sz7xmlte=""><a href="/services" data-astro-cid-sz7xmlte="">Services</a></li> <li data-astro-cid-sz7xmlte=""><a href="/patient-info" data-astro-cid-sz7xmlte="">Patient Info</a></li> <li data-astro-cid-sz7xmlte=""><a href="/contact" data-astro-cid-sz7xmlte="">Contact</a></li> <li data-astro-cid-sz7xmlte=""><a href="/blog" data-astro-cid-sz7xmlte="">Blog</a></li> <li data-astro-cid-sz7xmlte=""><a href="/careers" data-astro-cid-sz7xmlte="">Careers</a></li> </ul> </div> <div class="footer__col footer__cta" data-astro-cid-sz7xmlte=""> <a href="https://akitu.io/kgWzb" target="_blank" rel="noopener" class="btn btn--white" data-astro-cid-sz7xmlte="">Schedule Appointment</a> </div> </div> <div class="footer__base container" data-astro-cid-sz7xmlte=""> <span data-astro-cid-sz7xmlte="">© 2026 Fish Creek Dental</span> <span data-astro-cid-sz7xmlte="">Calgary, Alberta</span> </div> </footer>  <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;a9808e24670740ca91ae20b5e9e96fd0&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+ </body></html>
