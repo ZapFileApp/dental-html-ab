@@ -1,0 +1,850 @@
+<!DOCTYPE html><html lang="en-CA" class="no-svg js js_active vc_desktop vc_transform crjs" style="--bookingWidgetPrimaryColor: #3b3b35; --bookingWidgetPrimaryColorDarker: rgb(49,49,43);"><head><style>@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");.CareCruModal{display:block;position:fixed;content:"";top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:-1;opacity:0;transition:opacity .2s,z-index 0s .2s;text-align:center;overflow:hidden;overflow-y:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;visibility:hidden}.CareCruModal.CareCruActive{z-index:999999;opacity:1;visibility:visible;transition:opacity .2s}.CareCruModal:before{overflow:hidden;width:0;height:100%;content:""}.CareCruModal:before,.CareCruModal>*{display:inline-block;vertical-align:middle}.CareCruModal>*{white-space:normal;text-align:left}.CareCruModalInner{position:relative;overflow:hidden;width:600px;height:100%;max-width:100%;overflow-y:auto;background:#fff;z-index:-1;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s,z-index 0s .2s}@media screen and (min-width:610px){.CareCruModalInner{height:650px}}.CareCruModalInner.CareCruActive{z-index:100;opacity:1;transform:scale(1);transition:opacity .2s,transform .2s}.CareCruButton{position:fixed;right:-160px;opacity:0;top:250px;min-width:157px;min-height:75px;cursor:pointer;display:flex;flex-direction:row;align-items:center;background-color:var(--bookingWidgetPrimaryColor);text-align:right;justify-content:center;padding:20px;color:#fff;box-sizing:border-box;z-index:9998;box-shadow:1px 2px 3px 0 hsla(0,0%,50.2%,.15);transition:all .2s ease-in;text-transform:uppercase;font-family:"Roboto"!important;font-size:19px;letter-spacing:0;line-height:19px;text-shadow:.5px .5px .5px rgba(0,0,0,.1);border-bottom-left-radius:999px;border-top-left-radius:999px}.CareCruButton.Request{font-size:15.5px}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;right:-160px}50%{opacity:0;right:-20px}to{opacity:1;right:0}}.CareCruButton .CareCruButtonIconBook{display:block;font-weight:600;font-size:25px;line-height:25px;color:#fff;font-family:"Roboto"!important}.CareCruButtonIcon{padding-right:.6rem;color:#fff;transition:all .2s ease-in;top:24px}.CareCruButtonIcon .CareCruButtonIconSVG{fill:currentColor;height:35px;transition:all .2s ease-in}.CareCruButton:hover{background:var(--bookingWidgetPrimaryColorDarker);box-shadow:1px 4px 5px 0 hsla(0,0%,50.2%,.25);transition:all .2s ease-in}.CareCruButton:hover .CareCruButtonIcon{transition:all .2s ease-in;border-color:var(--bookingWidgetPrimaryColorDarker)}.CareCruButton:hover .CareCruButtonIcon .CareCruButtonIconSVG{transition:all .2s ease-in;color:var(--bookingWidgetPrimaryColorDarker)}@media screen and (max-width:610px){.CareCruButton{top:auto;right:0;opacity:0;width:90%;left:5%;font-size:18px;justify-content:center;box-sizing:border-box;border-radius:9999px;padding:10px 0;text-align:center;min-height:auto}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;bottom:-3%}50%{opacity:0}to{opacity:1;bottom:2.5%}}.CareCruButton .CareCruButtonIconBook{display:inline;font-size:18px}.CareCruButtonIcon{display:none}}#CareCruIframe{z-index:101;position:absolute;top:0;left:0;width:1px;min-width:100%;height:100%;border:none;overflow:hidden}#hiddenCareCru{display:none}#locationWrapper .header{flex-flow:nowrap}#hiddenCareCru.active{display:block}.CareCruSpinner{font-family:"Roboto";margin:0 auto;text-align:center;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;font-weight:700;letter-spacing:.035em;z-index:102;position:relative;background:#fff;opacity:1}.CareCruSpinner,.CareCruSpinner.CareCruFadeOut{transition:opacity 1s cubic-bezier(.175,.885,.32,1.275)}.CareCruSpinner.CareCruFadeOut{opacity:0}.CareCruSpinner>div>div{width:18px;height:18px;background-color:var(--bookingWidgetPrimaryColor);border-radius:100%;display:inline-block;-webkit-animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both;animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both}.CareCruSpinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.CareCruSpinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}.CareCruSpinner>span{margin-top:12px}@-webkit-keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}
+/*# sourceMappingURL=widget.css.map */</style><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#ffb740">
+    <meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1, minimum-scale=1">
+    <title>Wisdom Teeth Extractions | Sarcee Dental | NW Calgary Dentist</title>
+<link data-rocket-preload="" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&amp;family=Montserrat:wght@400;500&amp;display=swap" rel="preload">
+<link data-rocket-preload="" as="style" href="https://fonts.googleapis.com/css?family=Cinzel%3A400%2C700%7CRaleway%3A400%2C700&amp;display=swap" rel="preload">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&amp;family=Montserrat:wght@400;500&amp;display=swap" media="all" onload="this.media='all'" rel="stylesheet">
+<noscript data-wpr-hosted-gf-parameters=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&#038;family=Montserrat:wght@400;500&#038;display=swap"></noscript>
+<link href="https://fonts.googleapis.com/css?family=Cinzel%3A400%2C700%7CRaleway%3A400%2C700&amp;display=swap" media="all" onload="this.media='all'" rel="stylesheet">
+<noscript data-wpr-hosted-gf-parameters=""><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel%3A400%2C700%7CRaleway%3A400%2C700&#038;display=swap"></noscript>
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<meta name="description" content="Sarcee Dental offers Wisdom Teeth Extractions. Although extraction is always a last resort, sometimes it may be necessary. Call us today!">
+	<link rel="canonical" href="https://www.sarcee-dental.ca/services/north-calgary-wisdom-teeth-extractions/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Wisdom Teeth Extractions | Sarcee Dental | NW Calgary Dentist">
+	<meta property="og:description" content="Sarcee Dental offers Wisdom Teeth Extractions. Although extraction is always a last resort, sometimes it may be necessary. Call us today!">
+	<meta property="og:url" content="https://www.sarcee-dental.ca/services/north-calgary-wisdom-teeth-extractions/">
+	<meta property="og:site_name" content="Sarcee Dental">
+	<meta property="article:publisher" content="https://www.facebook.com/pg/Sarcee-Dental-113599750515604/reviews/?ref=page_internal">
+	<meta property="article:modified_time" content="2026-04-21T13:39:31+00:00">
+	<meta property="og:image" content="https://www.sarcee-dental.ca/wp-content/uploads/2020/12/wisdom-teeth-banner.jpg">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="750">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="3 minutes">
+	<script async="" src="//www.gstatic.com/call-tracking/call-tracking_9.js" nonce="null"></script><script type="text/javascript" async="" src="https://www.gstatic.com/wcm/loader.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-KNXQC30BYG&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-382130026&amp;cx=c&amp;gtm=4e66u1"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script src="https://connect.facebook.net/signals/config/3134597256769729?v=2.9.349&amp;r=stable&amp;domain=www.sarcee-dental.ca&amp;hme=f29d86973612db0f0627890a64bdc8c47b471189050b33f2680b7d76997afc9a&amp;ex_m=107%2C208%2C158%2C22%2C73%2C74%2C149%2C69%2C68%2C11%2C167%2C93%2C16%2C141%2C130%2C39%2C76%2C81%2C137%2C163%2C169%2C8%2C4%2C5%2C7%2C6%2C3%2C94%2C104%2C170%2C175%2C222%2C30%2C75%2C234%2C233%2C232%2C23%2C33%2C55%2C106%2C61%2C10%2C64%2C100%2C101%2C102%2C108%2C133%2C31%2C29%2C135%2C136%2C132%2C131%2C159%2C77%2C162%2C160%2C161%2C50%2C60%2C126%2C15%2C166%2C45%2C279%2C280%2C278%2C26%2C27%2C28%2C48%2C150%2C78%2C115%2C18%2C20%2C44%2C40%2C42%2C41%2C86%2C95%2C99%2C113%2C148%2C151%2C46%2C114%2C24%2C21%2C122%2C70%2C36%2C153%2C152%2C154%2C145%2C143%2C25%2C35%2C59%2C112%2C165%2C71%2C17%2C156%2C117%2C84%2C67%2C19%2C88%2C89%2C119%2C87%2C139%2C138%2C142%2C164%2C34%2C293%2C309%2C215%2C204%2C62%2C205%2C203%2C312%2C303%2C52%2C216%2C110%2C134%2C83%2C124%2C54%2C47%2C49%2C116%2C123%2C129%2C128%2C58%2C65%2C63%2C155%2C79%2C80%2C118%2C37%2C32%2C53%2C56%2C103%2C168%2C1%2C127%2C14%2C125%2C12%2C2%2C57%2C96%2C66%2C121%2C92%2C91%2C171%2C172%2C97%2C98%2C9%2C105%2C51%2C146%2C90%2C82%2C72%2C120%2C109%2C43%2C147%2C0%2C85%2C140%2C144%2C157%2C38%2C111%2C13%2C173" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WR3K5N7"></script><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.sarcee-dental.ca\/services\/north-calgary-wisdom-teeth-extractions\/","url":"https:\/\/www.sarcee-dental.ca\/services\/north-calgary-wisdom-teeth-extractions\/","name":"Wisdom Teeth Extractions | Sarcee Dental | NW Calgary Dentist","isPartOf":{"@id":"https:\/\/www.sarcee-dental.ca\/#website"},"primaryImageOfPage":{"@id":"https:\/\/www.sarcee-dental.ca\/services\/north-calgary-wisdom-teeth-extractions\/#primaryimage"},"image":{"@id":"https:\/\/www.sarcee-dental.ca\/services\/north-calgary-wisdom-teeth-extractions\/#primaryimage"},"thumbnailUrl":"https:\/\/www.sarcee-dental.ca\/wp-content\/uploads\/2020\/12\/wisdom-teeth-banner.jpg","datePublished":"2020-12-16T07:03:06+00:00","dateModified":"2026-04-21T13:39:31+00:00","description":"Sarcee Dental offers Wisdom Teeth Extractions. Although extraction is always a last resort, sometimes it may be necessary. Call us today!","breadcrumb":{"@id":"https:\/\/www.sarcee-dental.ca\/services\/north-calgary-wisdom-teeth-extractions\/#breadcrumb"},"inLanguage":"en-CA","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.sarcee-dental.ca\/services\/north-calgary-wisdom-teeth-extractions\/"]}]},{"@type":"ImageObject","inLanguage":"en-CA","@id":"https:\/\/www.sarcee-dental.ca\/services\/north-calgary-wisdom-teeth-extractions\/#primaryimage","url":"https:\/\/www.sarcee-dental.ca\/wp-content\/uploads\/2020\/12\/wisdom-teeth-banner.jpg","contentUrl":"https:\/\/www.sarcee-dental.ca\/wp-content\/uploads\/2020\/12\/wisdom-teeth-banner.jpg","width":1920,"height":750,"caption":"Wisdom Teeth Extraction | Sarcee Dental | NW Calgary | General and Family Dentist"},{"@type":"BreadcrumbList","@id":"https:\/\/www.sarcee-dental.ca\/services\/north-calgary-wisdom-teeth-extractions\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.sarcee-dental.ca\/"},{"@type":"ListItem","position":2,"name":"Services","item":"https:\/\/www.sarcee-dental.ca\/services\/"},{"@type":"ListItem","position":3,"name":"Wisdom Tooth Extractions"}]},{"@type":"WebSite","@id":"https:\/\/www.sarcee-dental.ca\/#website","url":"https:\/\/www.sarcee-dental.ca\/","name":"Sarcee Dental","description":"Your Northwest Family and Cosmetic Neighborhood Dentists","publisher":{"@id":"https:\/\/www.sarcee-dental.ca\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.sarcee-dental.ca\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-CA"},{"@type":"Organization","@id":"https:\/\/www.sarcee-dental.ca\/#organization","name":"Sarcee Dental","url":"https:\/\/www.sarcee-dental.ca\/","logo":{"@type":"ImageObject","inLanguage":"en-CA","@id":"https:\/\/www.sarcee-dental.ca\/#\/schema\/logo\/image\/","url":"https:\/\/www.sarcee-dental.ca\/wp-content\/uploads\/2020\/12\/logo.png","contentUrl":"https:\/\/www.sarcee-dental.ca\/wp-content\/uploads\/2020\/12\/logo.png","width":257,"height":98,"caption":"Sarcee Dental"},"image":{"@id":"https:\/\/www.sarcee-dental.ca\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/pg\/Sarcee-Dental-113599750515604\/reviews\/?ref=page_internal","https:\/\/www.instagram.com\/sarcee.dental"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//www.google.com">
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="//cdn.linearicons.com">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//maps.google.com">
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.sarcee-dental.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sarcee-dental.ca%2Fservices%2Fnorth-calgary-wisdom-teeth-extractions%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.sarcee-dental.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sarcee-dental.ca%2Fservices%2Fnorth-calgary-wisdom-teeth-extractions%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link data-minify="1" rel="stylesheet" id="layerslider-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/LayerSlider/assets/static/layerslider/css/layerslider.css?ver=1779960787" media="all">
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+
+
+<link data-minify="1" rel="stylesheet" id="contact-form-7-signature-addon-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/contact-form-7-signature-addon/public/css/style.css?ver=1779960787" media="all">
+<link data-minify="1" rel="stylesheet" id="contact-form-7-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1779960787" media="all">
+<link data-minify="1" rel="stylesheet" id="hamburger.css-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/wp-responsive-menu/assets/css/wpr-hamburger.css?ver=1779960787" media="all">
+<link data-minify="1" rel="stylesheet" id="wprmenu.css-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/wp-responsive-menu/assets/css/wprmenu.css?ver=1779960787" media="all">
+<style id="wprmenu.css-inline-css">
+@media only screen and ( max-width: 1031px ) {html body div.wprm-wrapper {overflow: scroll;}html body div.wprm-overlay{ background: rgb(0,0,0) }#wprmenu_bar {background-image: url();background-size: cover ;background-repeat: repeat;}#wprmenu_bar {background-color: #ffb740;}html body div#mg-wprm-wrap .wpr_submit .icon.icon-search {color: #ffffff;}#wprmenu_bar .menu_title,#wprmenu_bar .wprmenu_icon_menu,#wprmenu_bar .menu_title a {color: #ffffff;}#wprmenu_bar .menu_title a {font-size: 20px;font-weight: normal;}#mg-wprm-wrap li.menu-item a {font-size: 15px;text-transform: uppercase;font-weight: normal;}#mg-wprm-wrap li.menu-item-has-children ul.sub-menu a {font-size: 15px;text-transform: uppercase;font-weight: normal;}#mg-wprm-wrap li.current-menu-item > a {background: #ffb740;}#mg-wprm-wrap li.current-menu-item > a,#mg-wprm-wrap li.current-menu-item span.wprmenu_icon{color: #0c0c0c !important;}#mg-wprm-wrap {background-color: #ffffff;}.cbp-spmenu-push-toright,.cbp-spmenu-push-toright .mm-slideout {left: 90% ;}.cbp-spmenu-push-toleft {left: -90% ;}#mg-wprm-wrap.cbp-spmenu-right,#mg-wprm-wrap.cbp-spmenu-left,#mg-wprm-wrap.cbp-spmenu-right.custom,#mg-wprm-wrap.cbp-spmenu-left.custom,.cbp-spmenu-vertical {width: 90%;max-width: 500px;}#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item a,div#mg-wprm-wrap ul li span.wprmenu_icon {color: #0c0c0c;}#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item:valid ~ a{color: #0c0c0c;}#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item a:hover {background: #ffb740;color: #0c0c0c !important;}div#mg-wprm-wrap ul>li:hover>span.wprmenu_icon {color: #0c0c0c !important;}.wprmenu_bar .hamburger-inner,.wprmenu_bar .hamburger-inner::before,.wprmenu_bar .hamburger-inner::after {background: #ffffff;}.wprmenu_bar .hamburger:hover .hamburger-inner,.wprmenu_bar .hamburger:hover .hamburger-inner::before,.wprmenu_bar .hamburger:hover .hamburger-inner::after {background: #ffffff;}#wprmenu_menu.left {width:90%;left: -90%;right: auto;}#wprmenu_menu.right {width:90%;right: -90%;left: auto;}.wprmenu_bar .hamburger {float: right;}.wprmenu_bar #custom_menu_icon.hamburger {top: 0px;right: 0px;float: right;background-color: #cccccc;}html body div#wprmenu_bar {height : 42px;}#mg-wprm-wrap.cbp-spmenu-left,#mg-wprm-wrap.cbp-spmenu-right,#mg-widgetmenu-wrap.cbp-spmenu-widget-left,#mg-widgetmenu-wrap.cbp-spmenu-widget-right {top: 42px !important;}.menu_section{ display: none !important; }.wpr_custom_menu #custom_menu_icon {display: block;}html { padding-top: 42px !important; }#wprmenu_bar,#mg-wprm-wrap { display: block; }div#wpadminbar { position: fixed; }}
+/*# sourceURL=wprmenu.css-inline-css */
+</style>
+<link data-minify="1" rel="stylesheet" id="wpr_icons-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/wp-responsive-menu/inc/assets/icons/wpr-icons.css?ver=1779960787" media="all">
+<link data-minify="1" rel="stylesheet" id="main-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/themes/cpm-theme-base2/assets/css/main.css?ver=1779960787" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="https://www.sarcee-dental.ca/wp-content/themes/cpm-theme-base2/assets/bootstrap/css/bootstrap.min.css" media="all">
+<link data-minify="1" rel="stylesheet" id="cpm-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/cpm/assets/css/cpm.css?ver=1779960787" media="all">
+<link data-minify="1" rel="stylesheet" id="child-style-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/themes/sarceedental/assets/css/main.css?ver=1779960787" media="all">
+<link rel="stylesheet" id="responsive-css" href="https://www.sarcee-dental.ca/wp-content/themes/cpm-theme-base2/assets/css/responsive.css" media="all">
+<link data-minify="1" rel="stylesheet" id="child-responsive-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/themes/sarceedental/assets/css/responsive.css?ver=1779960787" media="all">
+<link data-minify="1" rel="stylesheet" id="linearicons-style-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/free/1.0.0/icon-font.min.css?ver=1779960787" media="all">
+<link data-minify="1" rel="stylesheet" id="slick-min-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/themes/sarceedental/assets/css/slick.css?ver=1779960787" media="all">
+<link data-minify="1" rel="stylesheet" id="slick-theme-css-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/themes/sarceedental/assets/css/slick-theme-min.css?ver=1779960787" media="all">
+<link data-minify="1" rel="stylesheet" id="font-awesome-css" href="https://www.sarcee-dental.ca/wp-content/cache/min/1/font-awesome/4.6.3/css/font-awesome.min.css?ver=1779960787" media="all">
+
+
+<link rel="stylesheet" id="js_composer_front-css" href="https://www.sarcee-dental.ca/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=8.7.3" media="all">
+<script id="contact-form-7-signature-addon-signature-js" src="https://www.sarcee-dental.ca/wp-content/plugins/contact-form-7-signature-addon/public/js/signature_pad.min.js?ver=4.2.2"></script>
+<script data-minify="1" id="jquery-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/ajax/libs/jquery/3.7.1/jquery.min.js?ver=1779960787"></script>
+<script data-minify="1" id="contact-form-7-signature-addon-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/contact-form-7-signature-addon/public/js/scripts.js?ver=1779960787"></script>
+<script data-minify="1" id="modernizr-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/wp-responsive-menu/assets/js/modernizr.custom.js?ver=1779960787"></script>
+<script data-minify="1" id="touchSwipe-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/wp-responsive-menu/assets/js/touchSwipe.js?ver=1779960787"></script>
+<script id="wprmenu.js-js-extra">
+var wprmenu = {"zooming":"","from_width":"1031","push_width":"500","menu_width":"90","parent_click":"","swipe":"","enable_overlay":"1","wprmenuDemoId":""};
+//# sourceURL=wprmenu.js-js-extra
+</script>
+<script data-minify="1" id="wprmenu.js-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/wp-responsive-menu/assets/js/wprmenu.js?ver=1779960787"></script>
+<script id="google-maps-js" src="//maps.google.com/maps/api/js?sensor=false&amp;key=AIzaSyA4mAJRkbS3xSzeJOfPjmFfi7LctRNzAwU&amp;ver=7.0"></script>
+<script></script><meta name="generator" content="Powered by LayerSlider 8.2.0 - Build Heros, Sliders, and Popups. Create Animations and Beautiful, Rich Web Content as Easy as Never Before on WordPress.">
+<!-- LayerSlider updates and docs at: https://layerslider.com -->
+<link rel="https://api.w.org/" href="https://www.sarcee-dental.ca/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.sarcee-dental.ca/wp-json/wp/v2/pages/173"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sarcee-dental.ca/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 7.0">
+<link rel="shortlink" href="https://www.sarcee-dental.ca/?p=173">
+    <link rel="preload" as="style" data-no-minify="1" href="https://www.sarcee-dental.ca/wp-content/plugins/LayerSlider/assets/static/layerslider/skins/v6/skin.css">
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR3K5N7');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3134597256769729');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3134597256769729&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "@id": "https://www.sarcee-dental.ca/",
+  "name": "Sarcee Dental",
+"image": "https://www.sarcee-dental.ca/wp-content/uploads/2020/12/logo.png",
+  "description": "Our dedicated dental team offers an expanded and comprehensive range of dental services to meet all your family’s needs, including General Dentistry, Emergency Dentistry, Sedation Dentistry, Root Canals, Crowns and Bridges, Children’s Dentistry, Cosmetic Dentistry, Orthodontics, Invisalign, Teeth Whitening, and General Preventative Care.", 
+  "sameAs": [ "https://www.facebook.com/sarceedental",
+"https://www.instagram.com/sarcee.dental/",
+"https://www.linkedin.com/company/sarcee-dental/"],
+  "PriceRange": "$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "186 Nolanridge Cres NW",
+    "addressLocality": "Calgary",
+    "addressRegion": "AB",
+    "postalCode": "T3R 1W9",
+    "addressCountry": "Canada"
+  },
+  "telephone": "(403) 260-6636",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.170108,
+    "longitude": -114.170509
+  },
+"hasmap": "https://www.google.com/maps/place/Sarcee+Dental/@51.170108,-114.170509,14z/data=!4m6!3m5!1s0x53716f1ecb158311:0xcb9ec446e5d0bbd7!8m2!3d51.1701082!4d-114.1705086!16s%2Fg%2F11qn9hvbmv?hl=en&entry=ttu",
+"openingHours": "Mon 8:00am-8:00pm, Tues 8:00am–8:00pm, Wed 8:00am-8:00pm, Thur 8:00am-8:00pm, Fri 8:00am–8:00pm, Sat 8:00am–8:00pm, Sun 8:00am–8:00pm"
+    }
+    </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "CreativeWorkSeries",
+    "name": "Sarcee Dental",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "1056"
+    }
+}
+</script>
+<link rel="icon" href="https://www.sarcee-dental.ca/wp-content/uploads/2020/12/cropped-android-chrome-512x512-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.sarcee-dental.ca/wp-content/uploads/2020/12/cropped-android-chrome-512x512-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.sarcee-dental.ca/wp-content/uploads/2020/12/cropped-android-chrome-512x512-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.sarcee-dental.ca/wp-content/uploads/2020/12/cropped-android-chrome-512x512-1-270x270.png">
+<style type="text/css" data-type="vc_shortcodes-default-css">.vc_do_custom_heading{margin-bottom:0.625rem;margin-top:0;}</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1608982442440{margin-top: 0px !important;}.vc_custom_1608982448747{margin-top: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><link rel="stylesheet" id="vc_animate-css-css" href="https://www.sarcee-dental.ca/wp-content/plugins/js_composer/assets/lib/vendor/dist/animate.css/animate.min.css?ver=8.7.3" media="all">
+
+<meta name="generator" content="WP Rocket 3.21.3" data-wpr-features="wpr_minify_js wpr_image_dimensions wpr_minify_css wpr_preload_links wpr_desktop"><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/65/6a/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/65/6a/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/65/6a/geocoder.js"></script><style type="text/css">.fancybox-margin{margin-right:0px;}</style><style type="text/css">.crjs .phoneswap { visibility: hidden; }</style><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/382130026/?random=1783044608346&amp;cv=11&amp;fst=1783044608346&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be66u1v9214890473z8845147836za20gzb845147836zd845147836xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938465~115938468~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fwww.sarcee-dental.ca%2Fservices%2Fnorth-calgary-wisdom-teeth-extractions%2F&amp;rcb=11&amp;frm=0&amp;tiba=Wisdom%20Teeth%20Extractions%20%7C%20Sarcee%20Dental%20%7C%20NW%20Calgary%20Dentist&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=222153403.1783044535&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script></head>
+
+<body class="wp-singular page-template page-template-page-sidebar-left page-template-page-sidebar-left-php page page-id-173 page-child parent-pageid-323 wp-theme-cpm-theme-base2 wp-child-theme-sarceedental north-calgary-wisdom-teeth-extractions wpb-js-composer js-comp-ver-8.7.3 vc_responsive cbp-spmenu-push">
+    <div data-rocket-location-hash="46b5ec384d1573651fcf9e2729907712" class="wrapper">
+        <div data-rocket-location-hash="c5f4bcfee834cea485bfbb34a68deac9" class="header_section_main">
+                            <div data-rocket-location-hash="4d99d0e9c854386967c01af3022e0d39" class="header_top">
+                    <div data-rocket-location-hash="c2b2a1461d8b94e639cd80a05325878c" class="container">
+                        <div class="covid_19_header_top">
+                            <p>Your Northwest Family and Cosmetic Neighborhood Dentist</p>
+<p><a class="btn btn-secondary arrow" href="https://www.sarcee-dental.ca/about/">Learn About Us</a></p>
+                        </div>
+                    </div>
+                </div>
+                        <div data-rocket-location-hash="905a0a0d5bc8bb7fd9651c5b4e9f5ced" class="header_middle">
+                <div data-rocket-location-hash="04b24f2a01e05ca636ff58e62299aa1e" class="container">
+                    <div class="header_middle_inner row">
+                        <!-- Email Address -->
+                        <div class="col-xs-12 col-md-4 col-sm-4">
+                                                            <div class="email_address">
+                                    <a href="mailto:admin@sarcee-dental.ca" alt="email_address">
+                                        <span>Email</span>admin@sarcee-dental.ca                                    </a>
+                                </div>
+                                                    </div>
+                        <div class="col-xs-12 col-md-4 col-sm-4">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="https://www.sarcee-dental.ca"><img width="257" height="98" class="logo" style="" src="https://www.sarcee-dental.ca/wp-content/uploads/2020/12/logo.png" alt="Sarcee Dental Logo"></a>                            </div>
+                            <!-- Socail Icons --->
+                            <div class="social_icon">
+                                        <ul>
+                            <li>
+                    <a href="https://www.facebook.com/pg/Sarcee-Dental-113599750515604/reviews/?ref=page_internal" target="_blank" title="Sarcee Dental on Facebook" rel="nofollow noreferrer">
+                        <img src="https://www.sarcee-dental.ca/wp-content/themes/sarceedental'/assets/img/icon-fb.png'" alt="Sarcee Facebook">
+                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.instagram.com/sarcee.dental" target="_blank" title="Sarcee Dental on Instagram" rel="nofollow noreferrer">
+                        <img src="https://www.sarcee-dental.ca/wp-content/themes/sarceedental'/assets/img/icon-instagram.png'" alt="Sarcee Instagram">
+                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.google.com/maps/place/Sarcee+Dental/@51.1630732,-114.1741998,15z/data=!4m10!1m2!2m1!1ssarcee+dental!3m6!1s0x53716f1ecb158311:0xcb9ec446e5d0bbd7!8m2!3d51.1695695!4d-114.1705454!9m1!1b1" target="_blank" title="Sarcee Dental on Google" rel="nofollow noreferrer">
+                        <img src="https://www.sarcee-dental.ca/wp-content/themes/sarceedental'/assets/img/icon-location.png'" alt="Sarcee google location">
+                    </a>
+                </li>
+                    </ul>
+
+                                </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-sm-4">
+                                                            <div class="phone_number">
+                                    <a href="tel:5873180535">
+                                        <span>Phone:</span>(587) 318-0535                                    </a>
+                                </div>
+                                                    </div> <!-- phone number -->
+                    </div>
+                </div>
+            </div>
+        </div><!-- Header Main --->
+        <div data-rocket-location-hash="85c57775ac81241c375227009a0a8c7e" class="menu_section" id="stickyheader">
+            <div data-rocket-location-hash="1ded919732da144e02a015d2156ecef5" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 main_menu">
+                        <ul class="nav navbar-nav header-nav">
+                            <li id="menu-item-180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-180"><a class="dropdown-toggle disabled" data-toggle="dropdown" data-target="#" href="https://www.sarcee-dental.ca/about/">Why Sarcee Dental</a>
+<ul class="dropdown-menu">
+	<li id="menu-item-2374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2374"><a href="https://www.sarcee-dental.ca/about/about-sarcee-dental-clinic/">About Sarcee Dental Clinic</a></li>
+	<li id="menu-item-182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182"><a href="https://www.sarcee-dental.ca/about/dental-insurance-finances/">Dental Insurance &amp; Finances</a></li>
+	<li id="menu-item-181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181"><a href="https://www.sarcee-dental.ca/about/dental-appointment-office-policies/">Dental Appointment &amp; Office Policies</a></li>
+	<li id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183"><a href="https://www.sarcee-dental.ca/about/faqs/">FAQs</a></li>
+	<li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184"><a href="https://www.sarcee-dental.ca/about/health-and-safety/">Health &amp; Safety</a></li>
+</ul>
+</li>
+<li id="menu-item-642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-642"><a class="dropdown-toggle disabled" data-toggle="dropdown" data-target="#" href="https://www.sarcee-dental.ca/team/">Our Team</a>
+<ul class="dropdown-menu">
+	<li id="menu-item-646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a href="https://www.sarcee-dental.ca/team/dr-gaganpreet-k-dhillon/">Dr. Gaganpreet Dhillon</a></li>
+	<li id="menu-item-647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647"><a href="https://www.sarcee-dental.ca/team/dr-loveleen-kaur/">Dr. Loveleen Kaur</a></li>
+	<li id="menu-item-644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644"><a href="https://www.sarcee-dental.ca/dental-assistant-team/">Dental Assistant Team</a></li>
+	<li id="menu-item-645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645"><a href="https://www.sarcee-dental.ca/dental-hygienists-team/">Dental Hygienists Team</a></li>
+	<li id="menu-item-643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-643"><a href="https://www.sarcee-dental.ca/dental-administration-team/">Dental Administration Team</a></li>
+</ul>
+</li>
+<li id="menu-item-649" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-page-parent current_page_ancestor menu-item-has-children dropdown menu-item-649"><a class="dropdown-toggle disabled" data-toggle="dropdown" data-target="#" href="https://www.sarcee-dental.ca/services/">Services</a>
+<ul class="dropdown-menu">
+	<li id="menu-item-659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-659"><a href="https://www.sarcee-dental.ca/services/north-calgary-family-dentistry/">Family&nbsp;Dentistry</a></li>
+	<li id="menu-item-651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-651"><a href="https://www.sarcee-dental.ca/services/north-calgary-childrens-dentistry/">Children’s&nbsp;Dentistry</a></li>
+	<li id="menu-item-658" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-658"><a href="https://www.sarcee-dental.ca/services/north-calgary-emergency-dentistry/">Emergency&nbsp;Dentistry</a></li>
+	<li id="menu-item-656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-656"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-hygiene-teeth-cleanings/">Dental Hygiene &amp; Teeth Cleanings</a></li>
+	<li id="menu-item-665" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="https://www.sarcee-dental.ca/services/north-calgary-root-canal-therapy/">Root Canal Therapy</a></li>
+	<li id="menu-item-674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-674"><a href="https://www.sarcee-dental.ca/services/north-calgary-invisalign/">Invisalign</a></li>
+	<li id="menu-item-662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown-submenu menu-item-662"><a href="https://www.sarcee-dental.ca/services/north-calgary-orthodontics/">Orthodontics</a>
+<ul class="dropdown-menu">
+		<li id="menu-item-650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-650"><a href="https://www.sarcee-dental.ca/services/north-calgary-bruxism-teeth-grinding/">Bruxism Grinding Appliances</a></li>
+		<li id="menu-item-667" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667"><a href="https://www.sarcee-dental.ca/services/north-calgary-tmj-tmd-therapy/">TMJ/TMD Therapy</a></li>
+	</ul>
+</li>
+	<li id="menu-item-652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown-submenu menu-item-652"><a href="https://www.sarcee-dental.ca/services/north-calgary-cosmetic-dentistry/">Cosmetic&nbsp;Dentistry</a>
+<ul class="dropdown-menu">
+		<li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="https://www.sarcee-dental.ca/services/north-calgary-teeth-whitening/">Teeth Whitening</a></li>
+		<li id="menu-item-655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-655"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-crowns/">Dental Crowns</a></li>
+		<li id="menu-item-654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-654"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-bridges/">Dental Bridges</a></li>
+		<li id="menu-item-663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663"><a href="https://www.sarcee-dental.ca/services/north-calgary-porcelain-veneers/">Porcelain Veneers</a></li>
+		<li id="menu-item-653" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-653"><a href="https://www.sarcee-dental.ca/services/north-calgary-tooth-bonding/">Cosmetic Tooth Bonding</a></li>
+		<li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-implants/">Dental Implants</a></li>
+		<li id="menu-item-669" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-669"><a href="https://www.sarcee-dental.ca/services/north-calgary-white-fillings/">White Fillings</a></li>
+	</ul>
+</li>
+	<li id="menu-item-661" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children dropdown-submenu menu-item-661"><a href="https://www.sarcee-dental.ca/services/north-calgary-oral-surgery/">Oral Surgery</a>
+<ul class="dropdown-menu">
+		<li id="menu-item-668" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-173 current_page_item menu-item-668"><a href="https://www.sarcee-dental.ca/services/north-calgary-wisdom-teeth-extractions/" aria-current="page">Wisdom Tooth Extractions</a></li>
+		<li id="menu-item-670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-670"><a href="https://www.sarcee-dental.ca/services/north-calgary-tooth-extractions/">Tooth Extractions</a></li>
+		<li id="menu-item-675" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-675"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-implants/">Dental Implants</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-2236" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2236"><a href="https://www.sarcee-dental.ca/services/north-calgary-emergency-dentistry/">Dental Emergencies</a></li>
+<li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="https://www.sarcee-dental.ca/new-patients/">New Patients</a></li>
+<li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a href="https://www.sarcee-dental.ca/contact/">Contact</a></li>
+                        </ul>
+                    </div> <!-- Menu section -->
+                </div>
+            </div>
+        </div><!-- Menu -->
+                    <div data-rocket-location-hash="9c3462ecf28f2be0fa6b256afbc38493" class="header__inner test1" style="background: url(https://www.sarcee-dental.ca/wp-content/uploads/2020/12/wisdom-teeth-banner.jpg) center;">
+                <div data-rocket-location-hash="69d3cdbc261fa58cfe72d8e2ff532d75" class="inner_header_text text-center">
+                    <div data-rocket-location-hash="86e7759ebf0c59d073be9e2ac56e107d" class="container">
+                        <h1><span data-sheets-root="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Wisdom Teeth Removal Calgary&quot;}" data-sheets-userformat="{&quot;2&quot;:573,&quot;3&quot;:{&quot;1&quot;:0},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;12&quot;:0}">Wisdom Teeth Removal Calgary</span></h1>
+                    </div>
+                </div>
+            </div>
+        
+
+<div data-rocket-location-hash="f9357140ee36883ea6064de5d7279a99" class="container">
+			
+	<div data-rocket-location-hash="4763c92cdc705b76a8074194eb94fe21" class="row main-row">
+					<div class="col-lg-12">
+				<!--
+<div class="page-header">
+	</div> -->			</div>
+		
+					<div class="col-lg-3 col-md-3 col-sm-12 sidebar sidebar-left">
+				<div id="nav_menu-4" class="widget widget_nav_menu"><h3>Our Services</h3><ul id="menu-left-sidebar-services" class="menu"><li id="menu-item-692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-692"><a href="https://www.sarcee-dental.ca/services/north-calgary-family-dentistry/">Family&nbsp;Dentistry</a></li>
+<li id="menu-item-693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-693"><a href="https://www.sarcee-dental.ca/services/north-calgary-childrens-dentistry/">Children’s&nbsp;Dentistry</a></li>
+<li id="menu-item-694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-694"><a href="https://www.sarcee-dental.ca/services/north-calgary-emergency-dentistry/">Emergency&nbsp;Dentistry</a></li>
+<li id="menu-item-695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-695"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-hygiene-teeth-cleanings/">Dental Hygiene &amp; Teeth Cleanings</a></li>
+<li id="menu-item-696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-696"><a href="https://www.sarcee-dental.ca/services/north-calgary-root-canal-therapy/">Root Canal Therapy</a></li>
+<li id="menu-item-697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697"><a href="https://www.sarcee-dental.ca/services/north-calgary-invisalign/">Invisalign</a></li>
+<li id="menu-item-698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-698"><a href="https://www.sarcee-dental.ca/services/north-calgary-orthodontics/">Orthodontics</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-699"><a href="https://www.sarcee-dental.ca/services/north-calgary-bruxism-teeth-grinding/">Bruxism Grinding Appliances</a></li>
+	<li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><a href="https://www.sarcee-dental.ca/services/north-calgary-tmj-tmd-therapy/">TMJ/TMD Therapy</a></li>
+</ul>
+<span class="lnr lnr-chevron-down"></span></li>
+<li id="menu-item-701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-701"><a href="https://www.sarcee-dental.ca/services/north-calgary-cosmetic-dentistry/">Cosmetic&nbsp;Dentistry</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-702"><a href="https://www.sarcee-dental.ca/services/north-calgary-teeth-whitening/">Teeth Whitening</a></li>
+	<li id="menu-item-703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-703"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-crowns/">Dental Crowns</a></li>
+	<li id="menu-item-705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-705"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-bridges/">Dental Bridges</a></li>
+	<li id="menu-item-706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-706"><a href="https://www.sarcee-dental.ca/services/north-calgary-porcelain-veneers/">Porcelain Veneers</a></li>
+	<li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707"><a href="https://www.sarcee-dental.ca/services/north-calgary-tooth-bonding/">Cosmetic Tooth Bonding</a></li>
+	<li id="menu-item-708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-708"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-implants/">Dental Implants</a></li>
+	<li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-709"><a href="https://www.sarcee-dental.ca/services/north-calgary-white-fillings/">White Fillings</a></li>
+</ul>
+<span class="lnr lnr-chevron-down"></span></li>
+<li id="menu-item-710" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-710"><a href="https://www.sarcee-dental.ca/services/north-calgary-oral-surgery/">Oral Surgery</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-711" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-173 current_page_item menu-item-711"><a href="https://www.sarcee-dental.ca/services/north-calgary-wisdom-teeth-extractions/" aria-current="page">Wisdom Tooth Extractions</a></li>
+	<li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-713"><a href="https://www.sarcee-dental.ca/services/north-calgary-tooth-extractions/">Tooth Extractions</a></li>
+</ul>
+<span class="lnr lnr-chevron-down"></span></li>
+</ul></div><div id="text-3" class="widget widget_text">			<div class="textwidget">    <div class="sidebar-contact-info">
+        <div class="logo">
+            <a href="https://www.sarcee-dental.ca"><img width="257" height="98" decoding="async" class="logo" style="" src="https://www.sarcee-dental.ca/wp-content/uploads/2020/12/logo.png" alt="Sarcee Dental Logo"></a>        </div>
+        <div class="contact-info">
+                            <div class="contact_phone">        
+                    <label><span class="phone_number"><a href="tel:5873180535">(587) 318-0535</a></span></label>
+                </div>
+                            <div class="address_details">
+                    186 Nolanridge Crescent NW<br>
+Calgary, Alberta T3R 1W9                </div>
+                        <div class="contact_email">
+                <span class="email_address"><a href="mailto:admin@sarcee-dental.ca">admin@sarcee-dental.ca</a></span>
+            </div>
+                    </div>
+    </div>
+    </div>
+		</div><div id="text-4" class="widget widget_text"><h3>Follow Us:</h3>			<div class="textwidget">        <ul>
+                            <li>
+                    <a href="https://www.facebook.com/pg/Sarcee-Dental-113599750515604/reviews/?ref=page_internal" target="_blank" title="Sarcee Dental on Facebook" rel="nofollow noreferrer">
+                        <img decoding="async" src="https://www.sarcee-dental.ca/wp-content/themes/sarceedental'/assets/img/icon-fb.png'" alt="Sarcee Facebook">
+                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.instagram.com/sarcee.dental" target="_blank" title="Sarcee Dental on Instagram" rel="nofollow noreferrer">
+                        <img decoding="async" src="https://www.sarcee-dental.ca/wp-content/themes/sarceedental'/assets/img/icon-instagram.png'" alt="Sarcee Instagram">
+                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.google.com/maps/place/Sarcee+Dental/@51.1630732,-114.1741998,15z/data=!4m10!1m2!2m1!1ssarcee+dental!3m6!1s0x53716f1ecb158311:0xcb9ec446e5d0bbd7!8m2!3d51.1695695!4d-114.1705454!9m1!1b1" target="_blank" title="Sarcee Dental on Google" rel="nofollow noreferrer">
+                        <img decoding="async" src="https://www.sarcee-dental.ca/wp-content/themes/sarceedental'/assets/img/icon-location.png'" alt="Sarcee google location">
+                    </a>
+                </li>
+                    </ul>
+
+    </div>
+		</div>			</div>
+		
+		
+		<div class="content col-lg-9 col-md-9 col-sm-12">
+			<div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: left" class="vc_custom_heading vc_do_custom_heading">Your Choice For <strong>Wisdom Teeth Extractions</strong> in NW Calgary</h2>
+	<div class="wpb_text_column wpb_content_element">
+		<div class="wpb_wrapper">
+			<p>Sarcee Dental offers tooth extractions. The final set of adult teeth to develop, your NW Calgary wisdom teeth may cause problems. If this is the case, let Sarcee Dental Clinic help! If you have soreness or swelling throughout the jaw, crowding of the teeth due to pressure, decay or infection along with the teeth next to your wisdom teeth, or cysts or disease seen on your dental x-rays, you may need your wisdom teeth removed. Call Sarcee Dental Clinic to see whether Calgary tooth extractions might be the best solution for you.</p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><h4 style="text-align: left" class="vc_custom_heading vc_do_custom_heading">What are Wisdom Teeth and Why do they need to be removed?</h4>
+	<div class="wpb_text_column wpb_content_element">
+		<div class="wpb_wrapper">
+			<p>Located in the very back of your mouth, your wisdom teeth are the final set of adult teeth to develop. They usually develop during your late teens or early twenties but can develop anywhere from the ages of 14-30. Some people never get a full set of wisdom teeth. For many people, there is sufficient room in their jaw, and their wisdom teeth grow in properly and present no problems at all. For many others, however, wisdom teeth can become problematic, and dental intervention is required before they become more dangerous for the patient. The only way to know for sure whether your wisdom teeth need to be extracted is to schedule a consultation with your Calgary dentist. Here at <a href="/" target="_blank" rel="nofollow noreferrer">Sarcee Dental Clinic</a>, we will thoroughly assess your bite and take a series of diagnostic X-rays to see what’s going on under your gum or bone tissue.</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img fetchpriority="high" decoding="async" width="600" height="700" src="https://www.sarcee-dental.ca/wp-content/uploads/2021/01/wisdom-teeth-extractions-sarcee-dental-nw-calgary-dentist.jpg" class="vc_single_image-img attachment-full" alt="Wisdom Teeth Extraction | Sarcee Dental | NW Calgary | General and Family Dentist" title="wisdom-teeth-extractions-sarcee-dental-nw-calgary-dentist" srcset="https://www.sarcee-dental.ca/wp-content/uploads/2021/01/wisdom-teeth-extractions-sarcee-dental-nw-calgary-dentist.jpg 600w, https://www.sarcee-dental.ca/wp-content/uploads/2021/01/wisdom-teeth-extractions-sarcee-dental-nw-calgary-dentist-257x300.jpg 257w, https://www.sarcee-dental.ca/wp-content/uploads/2021/01/wisdom-teeth-extractions-sarcee-dental-nw-calgary-dentist-343x400.jpg 343w" sizes="(max-width: 600px) 100vw, 600px"></div>
+		</figure>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid why-choose-sdc-main-wrapper vc_custom_1608982442440"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h4 style="text-align: center" class="vc_custom_heading vc_do_custom_heading title-center">Why do Wisdom Teeth Need to be Extracted?</h4><div class="vc_row wpb_row vc_inner vc_row-fluid why-choose-sdc-wrapper vc_column-gap-30 vc_row-o-equal-height vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element">
+		<div class="wpb_wrapper">
+			<ul>
+<li><b></b><strong><b>Inadequate Space</b></strong>– if there is inadequate space in the mouth for the wisdom teeth to erupt properly and become fully functional, this can cause pain, cavities, and gum infections.</li>
+<li><b></b><strong><b>Impacted Wisdom Teeth</b></strong>– if there is inadequate space for the wisdom teeth to erupt properly, they may develop diagonally or horizontally, eventually becoming completely stuck.</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element">
+		<div class="wpb_wrapper">
+			<ul>
+<li><b></b><strong><b>Consequences of untreated impacted wisdom teeth:</b></strong>
+<ul>
+<li>Damage to nearby teeth</li>
+<li>Disease</li>
+<li>Infection</li>
+<li>Tooth crowding</li>
+</ul>
+</li>
+<li><strong><b>Partial Eruption</b></strong> – if wisdom teeth only partially erupt in the mouth, this may pose a potential risk of infection between the overhanging gum tissue and the tooth itself</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid why-choose-sdc-main-wrapper vc_custom_1608982448747"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h4 style="text-align: center" class="vc_custom_heading vc_do_custom_heading title-center">Your Wisdom teeth may become problematic when:</h4><div class="vc_row wpb_row vc_inner vc_row-fluid why-choose-sdc-wrapper vc_column-gap-30 vc_row-o-equal-height vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element">
+		<div class="wpb_wrapper">
+			<ul>
+<li>They are causing pain</li>
+<li>They become impacted, meaning that the teeth become trapped in your jawbone or gum</li>
+<li>They become misaligned</li>
+<li>There is not enough space in your jaw for them to erupt</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element">
+		<div class="wpb_wrapper">
+			<ul>
+<li>They crowd existing teeth</li>
+<li>They are causing damage to adjacent teeth</li>
+<li>They develop cavities and decay due to difficulty keeping them clean</li>
+<li>To prevent future issues depending on how your dentist believes they will grow in and affect future teeth</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid service-headlight-block"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><strong>If you are experiencing any pain, swelling, or discomfort, Sarcee Dental Clinic is here for you! We will assess the position and health of your wisdom teeth and determine with you whether removal is your best option and what that will involve. </strong></p>
+<p style="text-align: center;"><strong>Call us today to set up a consultation to discuss!</strong></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid innerpage-last-section-bottom-sapcing"><div class="inner-cta-wrapper wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;">Call Sarcee Dental at <a href="tel:5873180535">(587) 318-0535</a> to set up a <span style="color: #ffb740;">Wisdom Teeth Extraction</span> in NW appointment today!</p>
+<p><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Tooth Extractions in NW Calgary",
+  "description": "Complete removal of a tooth as a last resort when necessary. Common reasons include crowded mouth, infection or severe tooth decay, risk of infection, broken teeth that cannot be repaired, impacted teeth (poorly positioned), and preparation for orthodontic treatment. Process: local anesthetic to numb tooth, jawbone, and gums; tooth rocked back and forth to widen socket; gently lifted out. Post-extraction: some discomfort is normal; pain medication and ice packs can help.",
+  "url": "https://www.sarcee-dental.ca/services/north-calgary-tooth-extractions/",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Sarcee Dental",
+    "telephone": "+14032606636",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "186 Nolanridge Cres NW",
+      "addressLocality": "Calgary",
+      "addressRegion": "AB",
+      "postalCode": "T3R 1W9",
+      "addressCountry": "Canada"
+    }
+  }
+}
+</script></p>
+<p><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What are Wisdom Teeth and Why do they need to be removed?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Located in the very back of your mouth, your wisdom teeth are the final set of adult teeth to develop."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why do Wisdom Teeth Need to be Extracted?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "if there is inadequate space in the mouth for the wisdom teeth to erupt properly and become fully functional, this can cause pain, cavities, and gum infections."
+    }
+  }]
+}
+</script></p>
+
+		</div>
+	</div>
+</div></div></div></div>
+</div>		</div>
+				
+	</div>
+</div>
+<div class="container"><div class="row main-row footer-cta-form"><div class="col-lg-12"><div class="templatera_shortcode"><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1608914790421{background-image: url(https://www.sarcee-dental.ca/wp-content/uploads/2020/12/dr-loveleen-kaur-with-patient-sarcee-dental-nw-calgary-general-dentist.jpg?id=2468) !important;}</style><div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid home-new-patient-form-with-hours-wrapper vc_custom_1608914790421 vc_row-has-fill" style="position: relative; left: -55px; box-sizing: border-box; width: 1280px; max-width: 1280px; padding-left: 55px; padding-right: 55px;"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element wpb_animate_when_almost_visible wpb_fadeInLeft fadeInLeft home-new-patient-form-block">
+		<div class="wpb_wrapper">
+			<h2>We Always Welcome <strong>New Patients</strong></h2>
+<p>Thank you for considering Sarcee Dental. We look forward to meeting you.</p>
+<div class="new-patient-form"><div role="form" class="wpcf7" id="wpcf7-f383-p173-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/services/north-calgary-wisdom-teeth-extractions/#wpcf7-f383-p173-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="383">
+<input type="hidden" name="_wpcf7_version" value="5.3.2">
+<input type="hidden" name="_wpcf7_locale" value="en_US">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f383-p173-o1">
+<input type="hidden" name="_wpcf7_container_post" value="173">
+<input type="hidden" name="_wpcf7_posted_data_hash" value="">
+<input type="hidden" name="_wpcf7_recaptcha_response" value="0cAFcWeA5jPBKlWSjFx0MqpFfftvrzKCuP_LPsXRfL5AcrBl-H05BYPRJqEUyZH7U23Nk7zQ58xDl-0hM4vDpp1EpzrhNPNYahw_PuReSZcmF1thgi6_hBUrokH__mnofBF3UiHYC4rTeqvTI4Ki4M36kS6pM1LzDR885FyUJeL9GsF6Y2uDUYpCqQfg-gFLYtRog0tLKeROYco5QilJEByh90bTMlRsCAs1svIe2LQmVV5jE-h9YfOP7sdib5wN5f_BVAZkdoEeRAst5AF_VTPmVfK6oCzdOMxkidarXi3fN8AWBXlAhgPQmXbqlY_84hnoLDLo9GctyQMQ-I-boyLZxGPXDbBZfuTs7qTK0mu76pu27-iAUqNcvoyDflQtZgUSXwtu83zCnFPIKq79SKnlVmyrCITsfn0Q0oe7l2h8E43z6_jjtpu7cYVmOuDAONvM63ejtf6ZRuvDRdTCmtsHOgLDZdR463tA8XfnWMTnak3UPGIDINdta7Aoptus52SaHi0hlwr3Mkn_fRIUIRiJ9e1LOyEI8OH7d7LLkGPRAluyRxYTLxQ2Km-AcVWpirbejoG06zbqe1dfQTklSbZaZj7SKs2kVFdi3FCRFLngwYYsUuRT_MIlVolIibOdYF37BaKPeyHiPOSJubDOAz_ovWkFh_-Vpb-hlCRYp6-sd-_Z_blmTLZoMTw_lzKFaN8RojDz-zuDpQPsUQtumgItyr14WjjAa36ZoEMHFlEzcKIMFasxSh_M87ag9dxNgQ1EO4QmlhBTDxmOesh3czZVgO-bTURWZc6TjQ8_re1XIUkY0s5rNgdXm86jP3q_N-64tpNIKch6IxI-1alR3YFd0_Lbwm2v0dihC7yYGLseWAG3tSwZKVrnB-DGITA1c-fmO3WmwQv6y99-clL2GA-0QUBXo9hBtTkNLa9QEvDXDq4hWdvQDNHopjKbo28Ku3ZYKN78pASbXQb08fA7AEg64prdeZg4df-wurXZoHB7mRigSKmwTjlXKvQC9EH2cV_BW-tdkkANl50oBjDspD37ETZ4lmJ3Z_9485okDOrFPGSjg4okKaN_VL-dCbAPmEt22NBgEKOJ-cqh6jlcagFfNA-fyto4ECdFJvFb9SRA9hIocvViPAgEyzIsK-ytOmxy6LGzg0qa81DVYQyZrlJp5jtlU7UTMurZItZQt4FJczy1_QbLqErQQxtaZM9Mdll5tyajX_XVZitdvfOcJZCYGmqr63jdEQDRG5yt2ouKuZygvpSIZZahie7c0skrJLuymRD6NNmdkfiEiy4CWgaTGcR5awuMX9xtiwo6a00bBqbI5Ab9R1VACYd2j3Z4iovxNTN7sLaf7LD54CknVJtXnMiAd5pqF6dP57tc0KhNZ4L8Id-trtdBNqmn3q0VkGldlGDrvH0RaX0ZMTTSQkJFAXLyq0cvRRZM-iZdQenau5oqpPUPJGlTeyz_7od3MRXUBEif1ojWp1aSMjit3xnA_WoOUW20Lyxov5iryTMH_UpHc1eUooXBXg0z9EidEz_6PdZuBQyuGo41N44NoLoIJnCKGbPs9NNsNt6UhMpw1v865L_O7QoVLx7Ou1-yMQ0EtEYh5qyym713SQ8QXexp36GY1G9Yw1fbj1gSy9bV7PYHl0vgtIpPIddC7UzQg8U2ehS_133YDT-C-f0nseCbtXdN-1LhvVBfRuxQ9Tseogu0L1MrYVCXpvH3wR8Nu7U6HY4Ffp2bP7oYbDroyBAluipQ5a7Udxoz4nfIyWErf7FdXPBDxc9YWdLZYaFZpw5VkXNyS5srpAdD8soKR1NRWsexkS0z91WhYeupf2udmpV2ndfwLAxIKqeUpx1yKdIr5GmXGNmiDRe6GBJ5lGY09cMT-nGXNzIq4N-WYHMpHdMKCR00_-LiHzm_z-Uk7glTuDWgEPwYtSMwfVSvkVOZV66cUfYACWy-HIhL9XoBa5NKAXcobQaWXFm7bCWPYLZDiSwE9DU5CGbbX33YajdO_zsyII2aOSqNyv8TmmWZ4-1gc4fyBqQhAJ9jbEA2vfZjt5Cu1GTpgg3uGkpMEq4Ar86i05RqPO9QXfNJBtnbCso36iHgH0vKe_HRpliE3x8eIfrdSuNi-rP5GxgPKlSFrsGugNiko4Yg">
+</div>
+<div class="row">
+<div class="col-sm-6 col-md-6">
+<label><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name"></span> </label>
+</div>
+<div class="col-sm-6 col-md-6">
+<label><span class="wpcf7-form-control-wrap phone-number"><input type="text" name="phone-number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-phone-number" aria-required="true" aria-invalid="false" placeholder="Phone Number"></span></label>
+</div>
+<div class="col-sm-12 col-md-12">
+<label><span class="wpcf7-form-control-wrap email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"></span></label>
+</div>
+<div class="col-sm-6 col-md-6">
+<label> <span class="wpcf7-form-control-wrap new-patient-date"><input type="text" name="new-patient-date" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-date" aria-required="true" aria-invalid="false" placeholder="Date"></span> <span class="lnr lnr-calendar-full"></span></label>
+</div>
+<div class="col-sm-6 col-md-6">
+<label><span class="wpcf7-form-control-wrap new-patient-time"><select name="new-patient-time" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false"><option value="Time">Time</option><option value="Morning (9-12)">Morning (9-12)</option><option value="Afternoon (12-3)">Afternoon (12-3)</option><option value="Late Afternoon (3-5)">Late Afternoon (3-5)</option><option value="Early Evening (5-8)">Early Evening (5-8)</option></select></span> <span class="lnr lnr-clock"></span></label>
+</div>
+<div class="col-md-12">
+<input type="submit" value="Make an Appointment" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span>
+</div>
+</div>
+<div class="wpcf7-response-output" aria-hidden="true"></div></form></div></div>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element wpb_animate_when_almost_visible wpb_fadeInRight fadeInRight home-hours-block">
+		<div class="wpb_wrapper">
+			<h2>Practice <strong>Hours</strong></h2>
+    <div class="social_icon">
+        <h3>Practice Hours</h3>
+<p><strong>Monday:</strong> 8:00 am to 8:00 pm<br>
+<strong>Tuesday:</strong> 8:00 am to 8:00 pm<br>
+<strong>Wednesday:</strong> 8:00 am to 8:00 pm<br>
+<strong>Thursday:</strong> 8:00 am to 8:00 pm<br>
+<strong>Friday:</strong> 8:00 am to 8:00 pm<br>
+<strong>Saturday:</strong> 8:00 am to 5:00 pm<br>
+<strong>Sundays:</strong> 8:00 am to 5:00 pm<br>
+<strong>Statutory Holidays:</strong> Closed</p>
+    </div>
+
+    
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div></div></div></div></div>				<div data-rocket-location-hash="317b88bc8e1e797535b6a9dbf5f464c7" class="cta">
+					<div data-rocket-location-hash="d41813fee4980beb3a7eacb7c0b429fa" class="container">
+						<div class="col-xs-12 col-md-12 col-sm-12 cta-content-block">
+						<p>Call Sarcee Dental Clinic at <a href="tel:5873180535">(587) 318-0535</a><br>
+to set up a new patient appointment today!</p>
+<p><a class="btn btn-secondary arrow" href="https://www.sarcee-dental.ca/contact/">Contact Us</a></p>
+						</div>
+					</div>
+				</div> <!-- CTA --->
+								<div data-rocket-location-hash="cf2e768bb0bd46ea4600606a9fc0c145" class="map-section">
+					<div data-rocket-location-hash="e02d4abb341ba01ddcf628736c86d19a" class="container">
+						<div class="col-xs-12 col-md-12 col-sm-12 cta-content-block">
+							<div class="templatera_shortcode"><div data-vc-full-width="true" data-vc-full-width-init="true" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid sarcee-dental-google-map-wrapper vc_row-no-padding" style="position: relative; left: -70px; box-sizing: border-box; width: 1280px; max-width: 1280px;"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="wpb_gmaps_widget wpb_content_element google-map-block wpb_animate_when_almost_visible wpb_fadeIn fadeIn"><div class="wpb_wrapper"><div class="wpb_map_wraper"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10006.74585367548!2d-114.1705454!3d51.1695695!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb9ec446e5d0bbd7!2sSarcee%20Dental!5e0!3m2!1sen!2sin!4v1608212398011!5m2!1sen!2sin" frameborder="0" style="border: 0px; pointer-events: none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div></div>						</div>
+					</div>
+				</div>
+								<div data-rocket-location-hash="1f9d741e046136025a8f62781302c1cf" class="footer_main">
+					<div class="container">
+						<div class="col-xs-12 col-sm-6 col-md-3 footer_contact">
+															<a href="https://www.sarcee-dental.ca">
+									<img width="257" height="98" src="https://www.sarcee-dental.ca/wp-content/uploads/2020/12/logo.png" alt="Sarcee Dental Logo" class="img-responsive">
+								</a>
+															<div class="address_details">
+									<label>Location</label>
+									186 Nolanridge Crescent NW<br>
+Calgary, Alberta T3R 1W9								</div>
+														<div class="contact_email">
+								<label>Email</label>
+																	<span class="email_address"><a href="mailto:admin@sarcee-dental.ca">admin@sarcee-dental.ca</a></span>
+															</div>
+							<div class="contact_phone">
+								<label>Phone</label>
+																	<span class="phone_number"><a href="tel:5873180535">(587) 318-0535</a></span>
+															</div>
+							<div class="social_footer">
+								
+								        <ul>
+                            <li>
+                    <a href="https://www.facebook.com/pg/Sarcee-Dental-113599750515604/reviews/?ref=page_internal" target="_blank" title="Sarcee Dental on Facebook" rel="nofollow noreferrer">
+                        <img src="https://www.sarcee-dental.ca/wp-content/themes/sarceedental'/assets/img/icon-fb.png'" alt="Sarcee Facebook">
+                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.instagram.com/sarcee.dental" target="_blank" title="Sarcee Dental on Instagram" rel="nofollow noreferrer">
+                        <img src="https://www.sarcee-dental.ca/wp-content/themes/sarceedental'/assets/img/icon-instagram.png'" alt="Sarcee Instagram">
+                    </a>
+                </li>
+                            <li>
+                    <a href="https://www.google.com/maps/place/Sarcee+Dental/@51.1630732,-114.1741998,15z/data=!4m10!1m2!2m1!1ssarcee+dental!3m6!1s0x53716f1ecb158311:0xcb9ec446e5d0bbd7!8m2!3d51.1695695!4d-114.1705454!9m1!1b1" target="_blank" title="Sarcee Dental on Google" rel="nofollow noreferrer">
+                        <img src="https://www.sarcee-dental.ca/wp-content/themes/sarceedental'/assets/img/icon-location.png'" alt="Sarcee google location">
+                    </a>
+                </li>
+                    </ul>
+
+    								
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 footer_two">
+						<div id="nav_menu-3" class="widget widget_nav_menu"><h3>Quick Links</h3><ul id="menu-quick-links" class="menu"><li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-221"><a href="https://www.sarcee-dental.ca/">Home</a></li>
+<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="https://www.sarcee-dental.ca/about/">Why Choose Us</a></li>
+<li id="menu-item-688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-688"><a href="https://www.sarcee-dental.ca/team/">Team</a></li>
+<li id="menu-item-689" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-689"><a href="https://www.sarcee-dental.ca/services/">Services</a></li>
+<li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-691"><a href="https://www.sarcee-dental.ca/services/north-calgary-emergency-dentistry/">Dental Emergencies</a></li>
+<li id="menu-item-227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-227"><a href="https://www.sarcee-dental.ca/new-patients/">New Patients</a></li>
+<li id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-228"><a href="https://www.sarcee-dental.ca/contact/">Contact</a></li>
+</ul></div>													</div>
+						<div class="col-xs-12 col-sm-6 col-md-2 footer_services">
+							<div id="nav_menu-2" class="widget widget_nav_menu"><h3>Our Services</h3><ul id="menu-our-services" class="menu"><li id="menu-item-678" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-678"><a href="https://www.sarcee-dental.ca/services/north-calgary-emergency-dentistry/">Emergency&nbsp;Dentistry</a></li>
+<li id="menu-item-679" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-679"><a href="https://www.sarcee-dental.ca/services/north-calgary-root-canal-therapy/">Root Canal</a></li>
+<li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-bridges/">Crown and Bridges</a></li>
+<li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="https://www.sarcee-dental.ca/services/north-calgary-childrens-dentistry/">Children’s&nbsp;Dentistry</a></li>
+<li id="menu-item-682" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-682"><a href="https://www.sarcee-dental.ca/services/north-calgary-cosmetic-dentistry/">Cosmetic&nbsp;Dentistry</a></li>
+<li id="menu-item-683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-683"><a href="https://www.sarcee-dental.ca/services/north-calgary-orthodontics/">Orthodontics</a></li>
+<li id="menu-item-684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-684"><a href="https://www.sarcee-dental.ca/services/north-calgary-invisalign/">Invisalign</a></li>
+<li id="menu-item-685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-685"><a href="https://www.sarcee-dental.ca/services/north-calgary-teeth-whitening/">Teeth Whitening</a></li>
+</ul></div>						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 footer_hours">
+							<div class="widget">			<div class="textwidget">    <div class="social_icon">
+        <h3>Practice Hours</h3>
+<p><strong>Monday:</strong> 8:00 am to 8:00 pm<br>
+<strong>Tuesday:</strong> 8:00 am to 8:00 pm<br>
+<strong>Wednesday:</strong> 8:00 am to 8:00 pm<br>
+<strong>Thursday:</strong> 8:00 am to 8:00 pm<br>
+<strong>Friday:</strong> 8:00 am to 8:00 pm<br>
+<strong>Saturday:</strong> 8:00 am to 5:00 pm<br>
+<strong>Sundays:</strong> 8:00 am to 5:00 pm<br>
+<strong>Statutory Holidays:</strong> Closed</p>
+    </div>
+
+    </div>
+		</div>													</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 text-center">
+															<div class="disc">
+									<h4>Disclaimer</h4>
+									<a href="https://www.sarcee-dental.ca/team/dr-gaganpreet-k-dhillon/">Dr. Gaganpreet Dhillon</a> and <a href="https://www.sarcee-dental.ca/team/dr-loveleen-kaur/">Dr. Loveleen Kaur</a> at Sarcee Dental are both General Dentists. As general dentists, they provide cosmetic dental procedures such as porcelain veneers, dental crowns, dental braces, and teeth whitening as part of their General Dentistry license. Cosmetic Dentistry &amp; Family Dentistry are not specialties recognized by the Alberta Dental Association &amp; College of Dental Surgeons of Alberta (CDSA). As North West Calgary Family Dentists, they provide General Dental procedures for all ages within the family.								</div>
+													</div>
+					</div>
+				</div> <!-- Footer Main -->
+				<div data-rocket-location-hash="b2e2e3731676e3c335b3c7a7d703af3f" class="footer_copyright">
+					<div class="container">
+						<div class="col-xs-12 col-md-8 col-sm-12 left text-left padding">
+							<div class="copy_right">© 2026 Sarcee Dental - All Rights Reserved.							</div>
+							<ul class="copy_nav">
+																	<li><a href="https://www.sarcee-dental.ca/contact/privacy-policy/">Privacy Policy</a></li>
+																	<li><a href="https://www.sarcee-dental.ca/contact/website-terms-of-use/">Terms of Use</a></li>
+																	<li><a href="https://www.sarcee-dental.ca/contact/website-sitemap/">Sitemap</a></li>
+															</ul>
+						</div>
+						<div class="col-xs-12 col-md-4 col-sm-12 text-right text-right created_by">
+							<div class="footer_maker">Creative by <i class="fa fa-heart"></i> <a href="https://www.creativepixelmedia.com/" target="_blank" rel="nofollow noreferrer">Creative Pixel Media</a></div>
+						</div>
+					</div>
+				</div> <!-- Copyright --->
+			</div> <!-- Wrapper --->
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/sarceedental/*","/wp-content/themes/cpm-theme-base2/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+			<div data-rocket-location-hash="0d9e2b1c665536421323f1704783d49b" class="wprm-wrapper">
+        
+        <!-- Overlay Starts here -->
+			 			   <div data-rocket-location-hash="efe139d695140e901f2bdc3999a0232b" class="wprm-overlay"></div>
+			         <!-- Overlay Ends here -->
+			
+			         <div data-rocket-location-hash="9312249d8e12d94c9d74f1d615f16185" id="wprmenu_bar" class="wprmenu_bar bodyslide left">
+  <div data-rocket-location-hash="e0ffdad944efcd640f14b5df69509f1b" class="hamburger hamburger--slider">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </div>
+  <div data-rocket-location-hash="f992cfb4dfdd311b0368e1b19d3100b0" class="menu_title">
+      <a href="https://www.sarcee-dental.ca">
+      HOME    </a>
+      </div>
+</div>			 
+			<div data-rocket-location-hash="c96b279bc6e8d9c91467941294bdef3f" class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left default " id="mg-wprm-wrap">
+				
+				
+				<ul id="wprmenu_menu_ul">
+  
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-180 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://www.sarcee-dental.ca/about/" class="wprmenu_parent_item">Why Sarcee Dental</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2374"><a href="https://www.sarcee-dental.ca/about/about-sarcee-dental-clinic/">About Sarcee Dental Clinic</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182"><a href="https://www.sarcee-dental.ca/about/dental-insurance-finances/">Dental Insurance &amp; Finances</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181"><a href="https://www.sarcee-dental.ca/about/dental-appointment-office-policies/">Dental Appointment &amp; Office Policies</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183"><a href="https://www.sarcee-dental.ca/about/faqs/">FAQs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184"><a href="https://www.sarcee-dental.ca/about/health-and-safety/">Health &amp; Safety</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-642 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://www.sarcee-dental.ca/team/" class="wprmenu_parent_item">Our Team</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a href="https://www.sarcee-dental.ca/team/dr-gaganpreet-k-dhillon/">Dr. Gaganpreet Dhillon</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647"><a href="https://www.sarcee-dental.ca/team/dr-loveleen-kaur/">Dr. Loveleen Kaur</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644"><a href="https://www.sarcee-dental.ca/dental-assistant-team/">Dental Assistant Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645"><a href="https://www.sarcee-dental.ca/dental-hygienists-team/">Dental Hygienists Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-643"><a href="https://www.sarcee-dental.ca/dental-administration-team/">Dental Administration Team</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-page-parent current_page_ancestor menu-item-has-children menu-item-649 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://www.sarcee-dental.ca/services/" class="wprmenu_parent_item">Services</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-659"><a href="https://www.sarcee-dental.ca/services/north-calgary-family-dentistry/">Family&nbsp;Dentistry</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-651"><a href="https://www.sarcee-dental.ca/services/north-calgary-childrens-dentistry/">Children’s&nbsp;Dentistry</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-658"><a href="https://www.sarcee-dental.ca/services/north-calgary-emergency-dentistry/">Emergency&nbsp;Dentistry</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-656"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-hygiene-teeth-cleanings/">Dental Hygiene &amp; Teeth Cleanings</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="https://www.sarcee-dental.ca/services/north-calgary-root-canal-therapy/">Root Canal Therapy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-674"><a href="https://www.sarcee-dental.ca/services/north-calgary-invisalign/">Invisalign</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-662 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://www.sarcee-dental.ca/services/north-calgary-orthodontics/" class="wprmenu_parent_item">Orthodontics</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-650"><a href="https://www.sarcee-dental.ca/services/north-calgary-bruxism-teeth-grinding/">Bruxism Grinding Appliances</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667"><a href="https://www.sarcee-dental.ca/services/north-calgary-tmj-tmd-therapy/">TMJ/TMD Therapy</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-652 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://www.sarcee-dental.ca/services/north-calgary-cosmetic-dentistry/" class="wprmenu_parent_item">Cosmetic&nbsp;Dentistry</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="https://www.sarcee-dental.ca/services/north-calgary-teeth-whitening/">Teeth Whitening</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-655"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-crowns/">Dental Crowns</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-654"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-bridges/">Dental Bridges</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663"><a href="https://www.sarcee-dental.ca/services/north-calgary-porcelain-veneers/">Porcelain Veneers</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-653"><a href="https://www.sarcee-dental.ca/services/north-calgary-tooth-bonding/">Cosmetic Tooth Bonding</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-implants/">Dental Implants</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-669"><a href="https://www.sarcee-dental.ca/services/north-calgary-white-fillings/">White Fillings</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-661 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://www.sarcee-dental.ca/services/north-calgary-oral-surgery/" class="wprmenu_parent_item">Oral Surgery</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-173 current_page_item menu-item-668"><a href="https://www.sarcee-dental.ca/services/north-calgary-wisdom-teeth-extractions/" aria-current="page">Wisdom Tooth Extractions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-670"><a href="https://www.sarcee-dental.ca/services/north-calgary-tooth-extractions/">Tooth Extractions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-675"><a href="https://www.sarcee-dental.ca/services/north-calgary-dental-implants/">Dental Implants</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2236"><a href="https://www.sarcee-dental.ca/services/north-calgary-emergency-dentistry/">Dental Emergencies</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="https://www.sarcee-dental.ca/new-patients/">New Patients</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a href="https://www.sarcee-dental.ca/contact/">Contact</a></li>
+
+     
+</ul>
+				
+				</div>
+			</div>
+			    <style type="text/css">
+    /* WPR Custom CSS */
+#wprmenu_bar .menu_title a { display: inline-block; position: relative; top: 0; color: #fff; }
+    </style>
+        <script type="text/javascript">
+        (function($) {
+            var domainUrl = window.location.origin;
+            $('a').not('a[href*="' + domainUrl + '"], a[href*="mailto:"], a[href*="tel:"], a[href*="javascript:;"] ').attr({
+                'target': '_blank',
+                'rel': 'nofollow noreferrer',
+            })
+        })(jQuery);
+    </script>
+<script id="contact-form-7-js-extra">
+var wpcf7 = {"apiSettings":{"root":"https://www.sarcee-dental.ca/wp-json/contact-form-7/v1","namespace":"contact-form-7/v1"},"cached":"1"};
+//# sourceURL=contact-form-7-js-extra
+</script>
+<script data-minify="1" id="contact-form-7-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=1779960787"></script>
+<script id="google-recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6LcCDxwaAAAAAMVgTgmtNKvumSmnTNutVb86cFHv&amp;ver=3.0"></script>
+<script id="wpcf7-recaptcha-js-extra">
+var wpcf7_recaptcha = {"sitekey":"6LcCDxwaAAAAAMVgTgmtNKvumSmnTNutVb86cFHv","actions":{"homepage":"homepage","contactform":"contactform"}};
+//# sourceURL=wpcf7-recaptcha-js-extra
+</script>
+<script data-minify="1" id="wpcf7-recaptcha-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/contact-form-7/modules/recaptcha/script.js?ver=1779960787"></script>
+<script id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.sarcee-dental.ca","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script data-minify="1" id="slick-js-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/ajax/libs/slick-carousel/1.9.0/slick.min.js?ver=1779960787"></script>
+<script data-minify="1" id="child-scripts-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/themes/sarceedental/assets/js/main.js?ver=1779960787"></script>
+<script data-minify="1" id="linearicons-script-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/free/1.0.0/svgembedder.min.js?ver=1779960787"></script>
+<script id="bootstrap-js" src="https://www.sarcee-dental.ca/wp-content/themes/cpm-theme-base2/assets/bootstrap/js/bootstrap.min.js"></script>
+<script data-minify="1" id="main-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/themes/cpm-theme-base2/assets/js/main.js?ver=1779960788"></script>
+<script data-minify="1" id="cpm-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/cpm/assets/js/cpm.js?ver=1779960788"></script><div class="datepicker dropdown-menu"><div class="datepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">July 2026</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day  old">28</td><td class="day  old">29</td><td class="day  old">30</td><td class="day ">1</td><td class="day ">2</td><td class="day  active">3</td><td class="day ">4</td></tr><tr><td class="day ">5</td><td class="day ">6</td><td class="day ">7</td><td class="day ">8</td><td class="day ">9</td><td class="day ">10</td><td class="day ">11</td></tr><tr><td class="day ">12</td><td class="day ">13</td><td class="day ">14</td><td class="day ">15</td><td class="day ">16</td><td class="day ">17</td><td class="day ">18</td></tr><tr><td class="day ">19</td><td class="day ">20</td><td class="day ">21</td><td class="day ">22</td><td class="day ">23</td><td class="day ">24</td><td class="day ">25</td></tr><tr><td class="day ">26</td><td class="day ">27</td><td class="day ">28</td><td class="day ">29</td><td class="day ">30</td><td class="day ">31</td><td class="day  new">1</td></tr><tr><td class="day  new">2</td><td class="day  new">3</td><td class="day  new">4</td><td class="day  new">5</td><td class="day  new">6</td><td class="day  new">7</td><td class="day  new">8</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2026</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month active">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2020-2029</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2019</span><span class="year">2020</span><span class="year">2021</span><span class="year">2022</span><span class="year">2023</span><span class="year">2024</span><span class="year">2025</span><span class="year active">2026</span><span class="year">2027</span><span class="year">2028</span><span class="year">2029</span><span class="year old">2030</span></td></tr></tbody></table></div></div>
+<script id="jquery-core-js" src="https://www.sarcee-dental.ca/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="wpb_composer_front_js-js" src="https://www.sarcee-dental.ca/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=8.7.3"></script>
+<script id="vc_waypoints-js" src="https://www.sarcee-dental.ca/wp-content/plugins/js_composer/assets/lib/vc/vc_waypoints/vc-waypoints.min.js?ver=8.7.3"></script>
+<script id="layerslider-utils-js-extra">
+var LS_Meta = {"v":"8.2.0","fixGSAP":"1"};
+//# sourceURL=layerslider-utils-js-extra
+</script>
+<script data-minify="1" id="layerslider-utils-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/LayerSlider/assets/static/layerslider/js/layerslider.utils.js?ver=1779960788"></script>
+<script data-minify="1" id="layerslider-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/LayerSlider/assets/static/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=1779960788"></script>
+<script data-minify="1" id="layerslider-transitions-js" src="https://www.sarcee-dental.ca/wp-content/cache/min/1/wp-content/plugins/LayerSlider/assets/static/layerslider/js/layerslider.transitions.js?ver=1779960788"></script>
+<script></script>	<script>var rocket_beacon_data = {"ajax_url":"https:\/\/www.sarcee-dental.ca\/wp-admin\/admin-ajax.php","nonce":"03fbfabb78","url":"https:\/\/www.sarcee-dental.ca\/services\/north-calgary-wisdom-teeth-extractions","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src="https://www.sarcee-dental.ca/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js" async="" beacon-completed="true"></script>
+
+<script type="text/javascript" id="" charset="">document.addEventListener("wpcf7mailsent",function(a){window.dataLayer.push({event:"cf7submission",formId:a.detail.contactFormId,response:a.detail.inputs})});</script><script id="" text="" charset="" type="text/javascript" src="https://oswidget.carecru.ca/widgets/f514b343-791c-413b-b4f4-6b293dec536a/cc.js"></script><script id="" text="" charset="" type="text/javascript" src="//cdn.callrail.com/companies/463344436/9366d0dd64a57e2397e3/12/swap.js"></script><div class="CareCruModal"><div class="CareCruModalInner"><iframe width="100%" scrolling="no" src="https://oswidget.carecru.ca/widgets/f514b343-791c-413b-b4f4-6b293dec536a/app/book?ref=" id="CareCruIframe" style="height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; overflow: hidden;" title="CareCru"></iframe></div></div><div class="CareCruFadeIn CareCruButton Request"><div class="CareCruButtonIcon"><svg class="CareCruButtonIconSVG" viewBox="0 0 184 167" xmlns="http://www.w3.org/2000/svg"><path d="M170.486 6.775c7.462 0 13.511 6.049 13.511 13.511v132.935c0 7.462-6.049 13.512-13.511 13.512H13.931c-7.461 0-13.51-6.05-13.51-13.512V20.284c0-7.461 6.048-13.509 13.509-13.509h22.038V1.954c0-.809.655-1.465 1.465-1.465h18.999c.809 0 1.465.656 1.465 1.465v4.821h66.853V1.954c0-.809.656-1.465 1.465-1.465h19.001c.81 0 1.465.656 1.465 1.465v4.821h23.805zm-3.843 147.071a3.611 3.611 0 0 0 3.609-3.613V44.279a3.61 3.61 0 0 0-3.609-3.613H18.374a3.61 3.61 0 0 0-3.609 3.613v105.954a3.611 3.611 0 0 0 3.609 3.613h148.269zm-40.331-72.672a3.358 3.358 0 0 1 0 4.745l-38.846 38.846c-.371.37-.811.608-1.275.769-1.004.739-2.403.698-3.311-.212l-24.406-24.404a2.569 2.569 0 0 1 0-3.631l7.598-7.597a2.567 2.567 0 0 1 3.631 0l15.19 15.19 30.19-30.189a3.355 3.355 0 0 1 4.746 0l6.483 6.483z" fill="#FFFFFE" fill-rule="evenodd"></path></svg></div><div><strong class="CareCruButtonIconBook">Request</strong> Appointment</div></div> <div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-vgcysdtnke61" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcCDxwaAAAAAMVgTgmtNKvumSmnTNutVb86cFHv&amp;co=aHR0cHM6Ly93d3cuc2FyY2VlLWRlbnRhbC5jYTo0NDM.&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=5p96u65e014c"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></body></html>
