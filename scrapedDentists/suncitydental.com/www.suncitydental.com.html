@@ -1,0 +1,507 @@
+<!DOCTYPE html><html lang="en-US" class="no-js"><head><style>.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,.12);border:1px solid #d2e3fc;outline:0}.dismissButton:focus:not(:focus-visible){background-color:#fff;border:1px solid #dadce0;outline:none}.dismissButton:focus-visible{background-color:rgba(66,133,244,.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,.16);border:1px solid #d2e2fd}.dismissButton:hover:focus:not(:focus-visible){background-color:rgba(66,133,244,.04);border:1px solid #d2e3fc}.dismissButton:hover:focus-visible{background-color:rgba(66,133,244,.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,.16);border:1px solid #d2e2fd;-webkit-box-shadow:0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15);box-shadow:0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}sentinel{}
+</style><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}.gm-ui-hover-effect>span{background-color:light-dark(#000,#fff)}@media (forced-colors:active),(prefers-contrast:more){.gm-ui-hover-effect>span{background-color:ButtonText}}sentinel{}
+</style><style>.gm-style .transit-container{background-color:white;max-width:265px;overflow-x:hidden}.gm-style .transit-container .transit-title span{font-size:14px;font-weight:500}.gm-style .transit-container .gm-title{font-size:14px;font-weight:500;overflow:hidden}.gm-style .transit-container .gm-full-width{width:180px}.gm-style .transit-container .transit-title{padding-bottom:6px}.gm-style .transit-container .transit-wheelchair-icon{background:transparent url(https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png);-webkit-background-size:59px 492px;background-size:59px 492px;display:inline-block;background-position:-5px -450px;width:13px;height:13px}@media (-webkit-min-device-pixel-ratio:1.2),(-webkit-min-device-pixel-ratio:1.2083333333333333),(min-resolution:1.2dppx),(min-resolution:116dpi){.gm-style .transit-container .transit-wheelchair-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6_hdpi.png);-webkit-background-size:59px 492px;background-size:59px 492px;display:inline-block;background-position:-5px -449px;width:13px;height:13px}.gm-style.gm-china .transit-container .transit-wheelchair-icon{background-image:url(http://maps.gstatic.cn/mapfiles/api-3/images/mapcnt6_hdpi.png)}}.gm-style .transit-container div{background-color:white;font-size:11px;font-weight:300;line-height:15px}.gm-style .transit-container .transit-line-group{overflow:hidden;margin-right:-6px}.gm-style .transit-container .transit-line-group-separator{border-top:1px solid #e6e6e6;padding-top:5px}.gm-style .transit-container .transit-nlines-more-msg{color:#999;margin-top:-3px;padding-bottom:6px}.gm-style .transit-container .transit-line-group-vehicle-icons{display:inline-block;padding-right:10px;vertical-align:top;margin-top:1px}.gm-style .transit-container .transit-line-group-content{display:inline-block;min-width:100px;max-width:228px;margin-bottom:-3px}.gm-style .transit-container .transit-clear-lines{clear:both}.gm-style .transit-container .transit-div-line-name{float:left;padding:0 6px 6px 0;white-space:nowrap}.gm-style .transit-container .transit-div-line-name .gm-transit-long{width:107px}.gm-style .transit-container .transit-div-line-name .gm-transit-medium{width:50px}.gm-style .transit-container .transit-div-line-name .gm-transit-short{width:37px}.gm-style .transit-div-line-name .renderable-component-icon{float:left;margin-right:2px}.gm-style .transit-div-line-name .renderable-component-color-box{background-image:url(https://maps.gstatic.com/mapfiles/transparent.png);height:10px;width:4px;float:left;margin-top:3px;margin-right:3px;margin-left:1px}.gm-style.gm-china .transit-div-line-name .renderable-component-color-box{background-image:url(http://maps.gstatic.cn/mapfiles/transparent.png)}.gm-style .transit-div-line-name .renderable-component-text,.gm-style .transit-div-line-name .renderable-component-text-box{text-align:left;overflow:hidden;text-overflow:ellipsis;display:block}.gm-style .transit-div-line-name .renderable-component-text-box{font-size:8pt;font-weight:400;text-align:center;padding:1px 2px}.gm-style .transit-div-line-name .renderable-component-text-box-white{border:1px solid #ccc;background-color:white;padding:0 2px}.gm-style .transit-div-line-name .renderable-component-bold{font-weight:400}sentinel{}
+</style><style>.poi-info-window a,.poi-info-window div{color:#333;font-family:Roboto,Arial;font-size:13px;background-color:white;-moz-user-select:text;-webkit-user-select:text;-ms-user-select:text;user-select:text}.poi-info-window{cursor:default}.poi-info-window a:link{text-decoration:none;color:#1a73e8}.poi-info-window .view-link,.poi-info-window a:visited{color:#1a73e8}.poi-info-window .view-link:hover,.poi-info-window a:hover{cursor:pointer;text-decoration:underline}.poi-info-window .full-width{width:180px}.poi-info-window .title{overflow:hidden;font-weight:500;font-size:14px}.poi-info-window .address{margin-top:2px;color:#555}sentinel{}
+</style><style>.gm-style .gm-style-iw{font-weight:300;font-size:13px;overflow:hidden}.gm-style .gm-style-iw-a{position:absolute;width:9999px;height:0}.gm-style .gm-style-iw-t{position:absolute;width:100%}.gm-style .gm-style-iw-tc{-webkit-filter:drop-shadow(0 4px 2px rgba(178,178,178,.4));filter:drop-shadow(0 4px 2px rgba(178,178,178,.4));height:12px;left:0;position:absolute;top:0;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);width:25px}.gm-style .gm-style-iw-tc:after{background:#fff;-webkit-clip-path:polygon(0 0,50% 100%,100% 0);clip-path:polygon(0 0,50% 100%,100% 0);content:"";height:12px;left:0;position:absolute;top:-1px;width:25px}.gm-style .gm-style-iw-c{position:absolute;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden;top:0;left:0;-webkit-transform:translate3d(-50%,-100%,0);transform:translate3d(-50%,-100%,0);background-color:white;border-radius:8px;padding:12px;-webkit-box-shadow:0 2px 7px 1px rgba(0,0,0,.3);box-shadow:0 2px 7px 1px rgba(0,0,0,.3);display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;flex-direction:column}.gm-style .gm-style-iw-c.gm-style-iw-poi{padding:0}.gm-style .gm-style-iw-d{-webkit-box-sizing:border-box;box-sizing:border-box;overflow:auto}.gm-style .gm-style-iw-d::-webkit-scrollbar{width:18px;height:12px;-webkit-appearance:none}.gm-style .gm-style-iw-d::-webkit-scrollbar-track,.gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece{background:#fff}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.12);border:6px solid transparent;border-radius:9px;background-clip:content-box}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:horizontal{border:3px solid transparent}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:hover{background-color:rgba(0,0,0,.3)}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-corner{background:transparent}.gm-style .gm-iw{color:#2c2c2c}.gm-style .gm-iw b{font-weight:400}.gm-style .gm-iw a:link,.gm-style .gm-iw a:visited{color:#4272db;text-decoration:none}.gm-style .gm-iw a:hover{color:#4272db;text-decoration:underline}.gm-style .gm-iw .gm-title{font-weight:400;margin-bottom:1px}.gm-style .gm-iw .gm-basicinfo{line-height:18px;padding-bottom:12px}.gm-style .gm-iw .gm-website{padding-top:6px}.gm-style .gm-iw .gm-photos{padding-bottom:8px;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none}.gm-style .gm-iw .gm-ph,.gm-style .gm-iw .gm-sv{cursor:pointer;height:50px;width:100px;position:relative;overflow:hidden}.gm-style .gm-iw .gm-sv{padding-right:4px}.gm-style .gm-iw .gm-wsv{cursor:pointer;position:relative;overflow:hidden}.gm-style .gm-iw .gm-ph-label,.gm-style .gm-iw .gm-sv-label{cursor:pointer;position:absolute;bottom:6px;color:#fff;font-weight:400;text-shadow:rgba(0,0,0,.7) 0 1px 4px;font-size:12px}.gm-style .gm-iw .gm-stars-b,.gm-style .gm-iw .gm-stars-f{height:13px;font-size:0}.gm-style .gm-iw .gm-stars-b{position:relative;background-position:0 0;width:65px;top:3px;margin:0 5px}.gm-style .gm-iw .gm-rev{line-height:20px;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none}.gm-style .gm-iw .gm-numeric-rev{font-size:16px;color:#dd4b39;font-weight:400}.gm-style .gm-iw.gm-transit{margin-left:15px}.gm-style .gm-iw.gm-transit td{vertical-align:top}.gm-style .gm-iw.gm-transit .gm-time{white-space:nowrap;color:#676767;font-weight:700}.gm-style .gm-iw.gm-transit img{width:15px;height:15px;margin:1px 5px 0 -20px;float:left}.gm-style-iw-chr{display:-webkit-box;display:-webkit-flex;display:flex;overflow:visible}.gm-style-iw-ch{-webkit-box-flex:1;-webkit-flex-grow:1;flex-grow:1;-webkit-flex-shrink:1;flex-shrink:1;padding-top:17px;overflow:hidden}sentinel{}
+</style><style>.gm-iw {text-align:left;}.gm-iw .gm-numeric-rev {float:left;}.gm-iw .gm-photos,.gm-iw .gm-rev {direction:ltr;}.gm-iw .gm-stars-f, .gm-iw .gm-stars-b {background:url("https://maps.gstatic.com/mapfiles/api-3/images/review_stars.png") no-repeat;background-size: 65px 26px;float:left;}.gm-iw .gm-stars-f {background-position:left -13px;}.gm-iw .gm-sv-label,.gm-iw .gm-ph-label {left: 4px;}</style><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400,500,700&amp;lang=en"><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:400&amp;text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&amp;lang=en"><style>.gm-style-moc{background-color:rgba(0,0,0,.59);pointer-events:none;text-align:center;-webkit-transition:opacity ease-in-out;transition:opacity ease-in-out}.gm-style-mot{color:white;font-family:Roboto,Arial,sans-serif;font-size:22px;margin:0;position:relative;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)}sentinel{}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
+	<meta charset="UTF-8">
+   
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google-site-verification" content="nqBInjuRRZFwsZ_n9p6GY6HNAWjAYq_RHtWyBB08dN0">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.suncitydental.com/xmlrpc.php">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.suncitydental.com/wp-content/themes/sun-city-dental/images/favicon.ico">
+    <!-- <link type="text/css" rel="stylesheet" href="//www.demandforce.com/widget/css/widget.css" /> -->
+	<!--[if lt IE 9]>
+	<script src="https://www.suncitydental.com/wp-content/themes/sun-city-dental/js/html5.js"></script>
+	<![endif]-->
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-N91BNPN80M&amp;cx=c&amp;_slc=1"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-68663208-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.8.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Sun City Dental, Medicine Hat Dentist</title>
+	<meta name="description" content="Get the dental treatment here at Sun City Dental, located in Medicine Hat. We have local Medicine Hat dentists, Dr. Baba and Dr. Van Dam who provide all dental services that are commonly referred out of town.">
+	<link rel="canonical" href="https://www.suncitydental.com/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Sun City Dental, Medicine Hat Dentist">
+	<meta property="og:description" content="Get the dental treatment here at Sun City Dental, located in Medicine Hat. We have local Medicine Hat dentists, Dr. Baba and Dr. Van Dam who provide all dental services that are commonly referred out of town.">
+	<meta property="og:url" content="https://www.suncitydental.com/">
+	<meta property="og:site_name" content="Sun City Dental">
+	<meta property="article:modified_time" content="2022-07-18T13:40:47+00:00">
+	<meta property="og:image" content="https://www.suncitydental.com/wp-content/uploads/2015/07/banner-1.png">
+	<meta property="og:image:width" content="588">
+	<meta property="og:image:height" content="405">
+	<meta property="og:image:type" content="image/png">
+	<meta name="twitter:card" content="summary_large_image">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.suncitydental.com/","url":"https://www.suncitydental.com/","name":"Sun City Dental, Medicine Hat Dentist","isPartOf":{"@id":"https://www.suncitydental.com/#website"},"primaryImageOfPage":{"@id":"https://www.suncitydental.com/#primaryimage"},"image":{"@id":"https://www.suncitydental.com/#primaryimage"},"thumbnailUrl":"https://www.suncitydental.com/wp-content/uploads/2015/07/banner-1.png","datePublished":"2015-07-28T06:14:07+00:00","dateModified":"2022-07-18T13:40:47+00:00","description":"Get the dental treatment here at Sun City Dental, located in Medicine Hat. We have local Medicine Hat dentists, Dr. Baba and Dr. Van Dam who provide all dental services that are commonly referred out of town.","breadcrumb":{"@id":"https://www.suncitydental.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.suncitydental.com/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.suncitydental.com/#primaryimage","url":"https://www.suncitydental.com/wp-content/uploads/2015/07/banner-1.png","contentUrl":"https://www.suncitydental.com/wp-content/uploads/2015/07/banner-1.png","width":588,"height":405},{"@type":"BreadcrumbList","@id":"https://www.suncitydental.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.suncitydental.com/#website","url":"https://www.suncitydental.com/","name":"Sun City Dental","description":"Come See our Smiles on 13th","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.suncitydental.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Sun City Dental » Feed" href="https://www.suncitydental.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Sun City Dental » Comments Feed" href="https://www.suncitydental.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Sun City Dental » Home Comments Feed" href="https://www.suncitydental.com/home/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.suncitydental.com\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://www.suncitydental.com/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://www.suncitydental.com/wp-includes/css/classic-themes.min.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="contact-form-7-css" href="https://www.suncitydental.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.7.7" type="text/css" media="all">
+<link rel="stylesheet" id="theme-bootstrap-css-css" href="https://www.suncitydental.com/wp-content/themes/sun-city-dental/css/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-style-css-css" href="https://www.suncitydental.com/wp-content/themes/sun-city-dental/css/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-slick-css-css" href="https://www.suncitydental.com/wp-content/themes/sun-city-dental/css/slick.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-media-css-css" href="https://www.suncitydental.com/wp-content/themes/sun-city-dental/css/media.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-developer-css-css" href="https://www.suncitydental.com/wp-content/themes/sun-city-dental/css/developer.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-googleapis-css-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C300italic%2C400italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic" type="text/css" media="all">
+<link rel="https://api.w.org/" href="https://www.suncitydental.com/wp-json/"><link rel="alternate" type="application/json" href="https://www.suncitydental.com/wp-json/wp/v2/pages/5"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.suncitydental.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.suncitydental.com/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.6">
+<link rel="shortlink" href="https://www.suncitydental.com/">
+<link rel="alternate" type="application/json+oembed" href="https://www.suncitydental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.suncitydental.com%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.suncitydental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.suncitydental.com%2F&amp;format=xml">
+<!-- PanoPress [1.3] -->
+<script type="text/javascript">
+pp_oppp=false;
+pb_options={"fullscreen":true,"fade":true,"animate":true,"shadow":true,"width":"640px","height":"480px","style":{"box":"pb-light","overlay":"pb-light-overlay"},"galleries":false,"resize":1};
+</script>
+<script type="text/javascript" src="https://www.suncitydental.com/wp-content/plugins/panopress/js/panopress.js?v=1.3"></script>
+<link rel="stylesheet" type="text/css" media="all" href="https://www.suncitydental.com/wp-content/plugins/panopress/css/panopress.css?v=1.3">	
+<!-- /PanoPress -->
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/65/6a/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/65/6a/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/65/6a/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/65/6a/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/65/6a/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/65/6a/log.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/65/6a/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/65/6a/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i14!2i3153!3i5554!1m4!1m3!1i14!2i3153!3i5555!1m4!1m3!1i14!2i3154!3i5554!1m4!1m3!1i14!2i3154!3i5555!1m4!1m3!1i14!2i3155!3i5554!1m4!1m3!1i14!2i3155!3i5555!1m4!1m3!1i14!2i3153!3i5556!1m4!1m3!1i14!2i3154!3i5556!1m4!1m3!1i14!2i3155!3i5556!1m4!1m3!1i14!2i3156!3i5554!1m4!1m3!1i14!2i3156!3i5555!1m4!1m3!1i14!2i3157!3i5554!1m4!1m3!1i14!2i3157!3i5555!1m4!1m3!1i14!2i3158!3i5554!1m4!1m3!1i14!2i3158!3i5555!1m4!1m3!1i14!2i3156!3i5556!1m4!1m3!1i14!2i3157!3i5556!1m4!1m3!1i14!2i3158!3i5556!2m3!1e0!2sm!3i785550292!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e3!12m2!5b1!6b1!23i46991212!23i47054750&amp;callback=_xdc_._88n0ci&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=37529"></script></head>
+
+<body data-rsssl="1" class="home page-template page-template-page-home page-template-page-home-php page page-id-5">
+<div class="header">
+	<div class="container">
+    	<div class="logo">
+            <a href="https://www.suncitydental.com">
+                <img src="https://www.suncitydental.com/wp-content/themes/sun-city-dental/images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="header-right text-right">
+        	<div class="header-phone-mail">            	   
+                <div class="header-mail">
+                    <span class="header-mail-icon"></span><a href="mailto:admin@suncitydental.com ">admin@suncitydental.com </a>
+                </div>
+                <div class="header-phone">
+                   	<span class="header-phone-icon"></span><a href="tel:403-548-0028">403-548-0028</a>
+                </div>
+            </div>
+            <div class="nav-warp">
+            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-header">
+                	<span class="menu-text">Menu</span>
+                    <span class="menu-center">
+                    	<span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </span>
+                </button>
+            	<div class="nav collapse" id="nav-header">
+            	   <div class="menu-main-menu-container"><ul id="menu-main-menu" class=" " style="display: inline;"><li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-33 dropdown"><a href="https://www.suncitydental.com/about-us/">About</a><div class="caret dropdown-toggle" data-toggle="dropdown" data-target="submenu_1"></div>
+<ul class="sub-menu dropdown-menu" id="submenu_1">
+	<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="https://www.suncitydental.com/meet-the-doctors/">Meet The Doctors</a></li>
+	<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="https://www.suncitydental.com/meet-the-team/">Meet the Team</a></li>
+	<li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="https://www.suncitydental.com/dental-services/">Dental Services</a></li>
+</ul>
+</li>
+<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="https://www.suncitydental.com/patient-information/">Patient Information</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="https://www.suncitydental.com/fees/">Fees</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="https://www.suncitydental.com/forms/">Forms</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="https://www.suncitydental.com/sedation-anesthesia/">Sedation &amp; Anesthesia</a></li>
+<li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="https://www.suncitydental.com/referring-doctors/">Referring Doctors</a></li>
+<li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354"><a href="https://www.suncitydental.com/contact-us/">Contact</a></li>
+</ul></div>                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="banner-warp">
+	<div class="container">
+		<div class="row">
+        	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 banner-warp-left">
+            	            		<div class="banner-warp-content slick-initialized slick-slider">
+                		                			<div aria-live="polite" class="slick-list draggable" tabindex="0" style="height: 396.906px;"><div class="slick-track" style="opacity: 1; width: 5150px; transform: translate3d(-1030px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 1030px;">
+                				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+					        		<h2>We direct bill to insurance companies!</h2>
+					            						                <div class="know-more">
+					                	<a href="https://www.suncitydental.com/fees/">Learn More</a>
+					                </div>
+					                <div class="contact-us">
+					                	<a href="https://www.suncitydental.com/contact-us">Contact Us</a>
+					                </div>
+				                </div>
+				                						            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 banner_imgdiv">
+						            	<img width="588" height="405" src="https://www.suncitydental.com/wp-content/uploads/2015/08/banner-1.jpg" class="attachment-banner_image size-banner_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suncitydental.com/wp-content/uploads/2015/08/banner-1.jpg 588w, https://www.suncitydental.com/wp-content/uploads/2015/08/banner-1-300x207.jpg 300w" sizes="(max-width: 588px) 100vw, 588px">						            </div>
+					    						                <div class="clearfix"></div>
+			            	</div><div class="slick-slide slick-active" data-slick-index="0" aria-hidden="false" style="width: 1030px;">
+                				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+					        		<h2>Welcome Dr. Dustin Fedosa! Now accepting new patients</h2>
+					            						                <div class="know-more">
+					                	<a href="https://www.suncitydental.com/about-us/">Learn More</a>
+					                </div>
+					                <div class="contact-us">
+					                	<a href="https://www.suncitydental.com/contact-us">Contact Us</a>
+					                </div>
+				                </div>
+				                						            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 banner_imgdiv">
+						            	<img width="588" height="405" src="https://www.suncitydental.com/wp-content/uploads/2015/08/1-–-5.jpg" class="attachment-banner_image size-banner_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suncitydental.com/wp-content/uploads/2015/08/1-–-5.jpg 588w, https://www.suncitydental.com/wp-content/uploads/2015/08/1-–-5-300x207.jpg 300w" sizes="(max-width: 588px) 100vw, 588px">						            </div>
+					    						                <div class="clearfix"></div>
+			            	</div><div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 1030px;">
+                				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+					        		<h2>We offer in office Sedation &amp; Anesthesia for your convenience</h2>
+					            						                <div class="know-more">
+					                	<a href="https://www.suncitydental.com/sedation-anesthesia/">Learn More</a>
+					                </div>
+					                <div class="contact-us">
+					                	<a href="https://www.suncitydental.com/contact-us">Contact Us</a>
+					                </div>
+				                </div>
+				                						            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 banner_imgdiv">
+						            	<img width="588" height="405" src="https://www.suncitydental.com/wp-content/uploads/2015/08/Bobble-Head-1-588x405.jpeg" class="attachment-banner_image size-banner_image wp-post-image" alt="" decoding="async" loading="lazy">						            </div>
+					    						                <div class="clearfix"></div>
+			            	</div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1030px;">
+                				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+					        		<h2>We direct bill to insurance companies!</h2>
+					            						                <div class="know-more">
+					                	<a href="https://www.suncitydental.com/fees/">Learn More</a>
+					                </div>
+					                <div class="contact-us">
+					                	<a href="https://www.suncitydental.com/contact-us">Contact Us</a>
+					                </div>
+				                </div>
+				                						            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 banner_imgdiv">
+						            	<img width="588" height="405" src="https://www.suncitydental.com/wp-content/uploads/2015/08/banner-1.jpg" class="attachment-banner_image size-banner_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suncitydental.com/wp-content/uploads/2015/08/banner-1.jpg 588w, https://www.suncitydental.com/wp-content/uploads/2015/08/banner-1-300x207.jpg 300w" sizes="(max-width: 588px) 100vw, 588px">						            </div>
+					    						                <div class="clearfix"></div>
+			            	</div><div class="slick-slide slick-cloned" data-slick-index="3" id="" aria-hidden="true" style="width: 1030px;">
+                				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+					        		<h2>Welcome Dr. Dustin Fedosa! Now accepting new patients</h2>
+					            						                <div class="know-more">
+					                	<a href="https://www.suncitydental.com/about-us/">Learn More</a>
+					                </div>
+					                <div class="contact-us">
+					                	<a href="https://www.suncitydental.com/contact-us">Contact Us</a>
+					                </div>
+				                </div>
+				                						            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 banner_imgdiv">
+						            	<img width="588" height="405" src="https://www.suncitydental.com/wp-content/uploads/2015/08/1-–-5.jpg" class="attachment-banner_image size-banner_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suncitydental.com/wp-content/uploads/2015/08/1-–-5.jpg 588w, https://www.suncitydental.com/wp-content/uploads/2015/08/1-–-5-300x207.jpg 300w" sizes="(max-width: 588px) 100vw, 588px">						            </div>
+					    						                <div class="clearfix"></div>
+			            	</div></div></div>
+			                            			
+			                            			
+			            			        <ul class="slick-dots" style=""><li class="slick-active" aria-hidden="false"><button type="button" data-role="none">1</button></li><li aria-hidden="true"><button type="button" data-role="none">2</button></li><li aria-hidden="true"><button type="button" data-role="none">3</button></li></ul></div>
+			                </div>
+    		<!-- 	            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 banner-warp-right">
+	            	<img width="588" height="405" src="https://www.suncitydental.com/wp-content/uploads/2015/07/banner-1.png" class="attachment-banner_image size-banner_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suncitydental.com/wp-content/uploads/2015/07/banner-1.png 588w, https://www.suncitydental.com/wp-content/uploads/2015/07/banner-1-300x207.png 300w" sizes="(max-width: 588px) 100vw, 588px" />	            </div>
+    		 -->
+            <div class="clearfix"></div>
+	    </div>
+    </div>
+</div>
+
+	<div class="who-we-are-warp">
+	    <div class="container">
+	        <div class="row">
+	        			            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 who-we-are-warp-left">
+		            			            	<img src="https://www.suncitydental.com/wp-content/uploads/2022/03/FireShot-Capture-074-2021-Billboards-Google-Drive-drive.google.com-min-388x375.png" alt="FireShot Capture 074 – 2021 Billboards – Google Drive – drive.google.com-min">
+		            </div>
+	        		            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 who-we-are-warp-right">
+	            	<h2>Why Go Anywhere Else?</h2>
+<h3>Get it Done in Medicine Hat!</h3>
+<p>Why travel when you can get it done closer to home! Dr. Baba, Dr. Van Dam and Dr. Fedosa provide many dental services that are commonly referred out of town. Get the treatment you need right here in Medicine Hat</p>
+<ul>
+<li>Kids Dentistry</li>
+<li>Root Canal Treatment on Molars (back teeth)</li>
+<li>Wisdom Teeth Removal</li>
+<li>Full Mouth Extractions</li>
+<li>Oral Surgical Procedures</li>
+<li>Dental Implant surgery</li>
+<li>I.V. sedation and General Anesthetic</li>
+</ul>
+	                <div class="know-more">
+	                	<a href="https://www.suncitydental.com/about-us">Know More</a>
+	                </div>
+	            </div>
+	            <div class="clearfix"></div>
+	        </div>
+	    </div>
+	</div>
+
+<div class="patient-info-warp">
+	<div class="patient-info-warp-left">
+    	<div class="patient-info-warp-left-content">
+        	<h2>Patient Information</h2>
+												<div class="panel-group" id="accordion">
+												   	<div class="panel panel-default">
+						      	<div class="panel-heading">
+						         	<h4 class="panel-title">
+						            <a data-toggle="collapse" data-parent="#accordion" href="#collapse45">
+							            Oral Surgery Patient Instructions							            <span class="glyphicon glyphicon-minus"></span>
+							            <span class="glyphicon glyphicon-plus"></span>
+						            </a>
+						         	</h4>
+						      	</div>
+						      	<div id="collapse45" class="panel-collapse collapse in">
+						         	<div class="panel-body">
+							            <h5>General Advice:</h5>
+<p>For normal healing, it is essential that only a minimum amount of disturbance be created within the mouth after tooth extraction or surgery. The blood clot in the socket must be preserved. Most bleeding will stop in 30 minutes with a small amount of bleeding over the next 12 hours, depending on the extent of surgery.</p>
+							            <a href="https://www.suncitydental.com/patients/oral-surgery-patient-instructions/">Read more...</a>
+						         	</div>
+						      	</div>
+						   	</div>
+												   	<div class="panel panel-default">
+						      	<div class="panel-heading">
+						         	<h4 class="panel-title">
+						            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse46">
+							            Use of Fluoride Rinse and MI Paste							            <span class="glyphicon glyphicon-minus"></span>
+							            <span class="glyphicon glyphicon-plus"></span>
+						            </a>
+						         	</h4>
+						      	</div>
+						      	<div id="collapse46" class="panel-collapse collapse">
+						         	<div class="panel-body">
+							            <h5>General Advice:</h5>
+<p>I suggest that fluoride rinse be used separate from brushing your teeth. When you brush with regular toothpaste, your teeth are already being exposed to fluoride and no extra fluoride is needed at this time from a rinse. Spit out the toothpaste and do not rinse your mouth with water.</p>
+							            <a href="https://www.suncitydental.com/patients/use-of-fluoride-rinse-and-mi-paste/">Read more...</a>
+						         	</div>
+						      	</div>
+						   	</div>
+												   	<div class="panel panel-default">
+						      	<div class="panel-heading">
+						         	<h4 class="panel-title">
+						            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse47">
+							            What Causes Cavities?							            <span class="glyphicon glyphicon-minus"></span>
+							            <span class="glyphicon glyphicon-plus"></span>
+						            </a>
+						         	</h4>
+						      	</div>
+						      	<div id="collapse47" class="panel-collapse collapse">
+						         	<div class="panel-body">
+							            <h5>General Advice:</h5>
+<p>The process of cavity formation is not as straightforward as most people think it is.  Bacteria eat sugar and produce acid, which causes decay (loss of mineral from the tooth) and eventually a cavity (literally a hole in the tooth).  Decay is reversible by diet and oral hygiene, but a cavity is not reversible.  It has to be filled.</p>
+							            <a href="https://www.suncitydental.com/patients/what-causes-cavities/">Read more...</a>
+						         	</div>
+						      	</div>
+						   	</div>
+												   	<div class="panel panel-default">
+						      	<div class="panel-heading">
+						         	<h4 class="panel-title">
+						            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse188">
+							            Fear of Dentistry?							            <span class="glyphicon glyphicon-minus"></span>
+							            <span class="glyphicon glyphicon-plus"></span>
+						            </a>
+						         	</h4>
+						      	</div>
+						      	<div id="collapse188" class="panel-collapse collapse">
+						         	<div class="panel-body">
+							            <h5>General Advice:</h5>
+<p>Treating fearful patients is a huge part of my practice and is very rewarding for my team and me. Every day we see patients that are anxious about getting their dental work done and we’re able to make them comfortable. One thing I have learned over the years is that there is no “typical” fearful patient.</p>
+							            <a href="https://www.suncitydental.com/patients/fear-of-dentistry/">Read more...</a>
+						         	</div>
+						      	</div>
+						   	</div>
+											</div>
+							        </div>
+    </div>
+    	    <div class="patient-info-warp-right">
+	    	<div class="patient-info-warp-right-img">
+	        <img width="950" height="533" src="https://www.suncitydental.com/wp-content/uploads/2015/07/patient-information.jpg" class="attachment-patients_home_thumbnail size-patients_home_thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suncitydental.com/wp-content/uploads/2015/07/patient-information.jpg 950w, https://www.suncitydental.com/wp-content/uploads/2015/07/patient-information-300x168.jpg 300w" sizes="(max-width: 950px) 100vw, 950px">	        </div>
+	    </div>
+	    <div class="clearfix"></div>
+</div>
+
+
+<div class="htestimonial">
+<script type="text/javascript">
+
+//d3cp_bid = '106001732';// Business ID in DemandforceD3
+//d3cp_link_addreview = 'your_page_url'; //Optional. See Instructions.
+//d3cp_link_scheduler = 'your_page_url';   //Optional. See Instructions.
+</script>
+<!--<script src="//www.demandforced3.com/b/suncitydental/reviews.widget" type="text/javascript"></script>-->
+</div>
+
+
+<div class="our-location-warp" id="map_canvas" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div tabindex="0" aria-label="Map" aria-roledescription="map" role="region" aria-describedby="59FC2CCD-48F7-4C55-8270-04242792652B" style="position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"><div id="59FC2CCD-48F7-4C55-8270-04242792652B" style="display: none;"></div></div><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; will-change: transform; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -132, -145);"><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 768px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 768px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 768px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="width: 62px; height: 87px; overflow: hidden; position: absolute; left: -31px; top: -53px; z-index: 34;"><img alt="" src="https://www.suncitydental.com/wp-content/themes/sun-city-dental/images/map-icon.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 62px; height: 87px; border: 0px; padding: 0px; margin: 0px; max-width: none; opacity: 1;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -132, -145);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 768px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 768px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 768px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: -256px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -132, -145);"><div style="position: absolute; left: 768px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3158!3i5554!4i256!2m3!1e0!2sm!3i785549908!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=99851" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 768px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3158!3i5555!4i256!2m3!1e0!2sm!3i785549908!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=26915" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 768px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3158!3i5556!4i256!2m3!1e0!2sm!3i785549908!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=85050" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3157!3i5555!4i256!2m3!1e0!2sm!3i785550292!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=36385" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3157!3i5556!4i256!2m3!1e0!2sm!3i785550292!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=94520" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3153!3i5555!4i256!2m3!1e0!2sm!3i785550149!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=116180" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3154!3i5554!4i256!2m3!1e0!2sm!3i785550208!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=118576" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3154!3i5556!4i256!2m3!1e0!2sm!3i785550208!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=103775" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3154!3i5555!4i256!2m3!1e0!2sm!3i785550149!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=98589" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3156!3i5554!4i256!2m3!1e0!2sm!3i785550149!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=5272" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3155!3i5556!4i256!2m3!1e0!2sm!3i785550292!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=129702" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3156!3i5555!4i256!2m3!1e0!2sm!3i785550292!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=53976" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3156!3i5556!4i256!2m3!1e0!2sm!3i785550292!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=112111" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3157!3i5554!4i256!2m3!1e0!2sm!3i785550149!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=118752" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3153!3i5556!4i256!2m3!1e0!2sm!3i785549933!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=34894" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3155!3i5554!4i256!2m3!1e0!2sm!3i785550208!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=100985" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3155!3i5555!4i256!2m3!1e0!2sm!3i785550292!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=71567" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i3153!3i5554!4i256!2m3!1e0!2sm!3i785550208!2m3!1e2!6m1!3e5!3m18!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!1e3!23i46991212!23i47054750!23i47083502&amp;key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;token=5096" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; will-change: transform; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><slot></slot><span id="AA502533-7B78-4FE4-B185-59C8358099BC" aria-live="polite" style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap; border: 0px;"></span><div title="" role="button" tabindex="0" style="width: 62px; height: 87px; overflow: hidden; position: absolute; cursor: pointer; touch-action: none; left: -31px; top: -53px; z-index: 34;"><img alt="" src="https://maps.gstatic.com/mapfiles/transparent.png" draggable="false" style="width: 62px; height: 87px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"><div style="cursor: default; position: absolute; top: 0px; left: 0px; z-index: -142;"><div class="gm-style-iw-a" style="position: absolute; left: 0px; top: 34px;"><div class="gm-style-iw-t" style="right: 0px; bottom: 98px;"><div role="dialog" tabindex="-1" class="gm-style-iw gm-style-iw-c" aria-labelledby="DDEE1385-5E59-4A81-BD56-E664882ED100" style="padding-inline-end: 0px; padding-bottom: 0px; padding-top: 0px; max-width: 400px; max-height: 186px; min-width: 0px;"><div class="gm-style-iw-chr"><div class="gm-style-iw-ch" id="DDEE1385-5E59-4A81-BD56-E664882ED100"></div><button draggable="false" aria-label="Close" title="Close" type="button" class="gm-ui-hover-effect" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; width: 48px; height: 48px;"><span style="mask-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M19%206.41%2017.59%205%2012%2010.59%206.41%205%205%206.41%2010.59%2012%205%2017.59%206.41%2019%2012%2013.41%2017.59%2019%2019%2017.59%2013.41%2012z%22/%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0z%22/%3E%3C/svg%3E&quot;); pointer-events: none; display: block; width: 24px; height: 24px; margin: 12px;"></span></button></div><div class="gm-style-iw-d" style="overflow: scroll; max-height: 168px;"><div><div class="map_canvas">100 - 2800 13th Ave SE<br> Medicine Hat Alberta</div></div></div></div><div class="gm-style-iw-tc"></div></div></div></div></div></div></div><div class="gm-style-moc" style="z-index: 4; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; transition-property: opacity, display; transition-behavior: allow-discrete; opacity: 0; display: none;"><p class="gm-style-mot"></p></div></div><iframe aria-hidden="true" frameborder="0" tabindex="-1" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; opacity: 0;"></iframe><div style="pointer-events: none; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 1000002; opacity: 0; border: 2px solid rgb(26, 115, 232);"></div></div></div><div style="background-color: white; font-weight: 500; font-family: Roboto, sans-serif; padding: 15px 25px; box-sizing: border-box; top: 5px; border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 5px; left: 50%; max-width: 375px; position: absolute; transform: translateX(-50%); width: calc(100% - 10px); z-index: 1;"><div><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/google_gray.svg" draggable="false" style="padding: 0px; margin: 0px; border: 0px; height: 17px; vertical-align: middle; width: 52px; user-select: none;"></div><div style="line-height: 20px; margin: 15px 0px;"><span style="color: rgba(0, 0, 0, 0.87); font-size: 14px;">This page can't load Google Maps correctly.</span></div><table style="width: 100%;"><tr><td style="line-height: 16px; vertical-align: middle;"><a href="http://g.co/dev/maps-no-account" target="_blank" rel="noopener" style="color: rgba(0, 0, 0, 0.54); font-size: 12px;">Do you own this website?</a></td><td style="text-align: right;"><button class="dismissButton">OK</button></td></tr></table></div></div><div class="ourunique_mandivbox">
+	<div class="container">
+		<h3>What Our Patients Are Saying</h3>
+				
+	</div>
+</div>
+
+
+<section class="testimonials">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-sm-12">
+                <div class="ti-widget ti-goog ti-show-rating-text ti-review-text-mode-readmore ti-text-align-left" data-no-translation="true" data-layout-id="4" data-set-id="light-background" data-pid="" data-language="en" data-version="2" data-review-target-width="300" data-review-text-mode="readmore" data-pager-autoplay-timeout="6" data-trustindex-widget="true" style=""> <div class="ti-widget-container ti-col-3"> <div class="ti-reviews-container"> <div class="ti-controls" style="top: 118.5px;"> <div class="ti-next" aria-label="Next review" role="button"></div> <div class="ti-prev" aria-label="Previous review" role="button" style="display: none;"></div> </div> <div class="ti-reviews-container-wrapper">  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" style="position: relative;"> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-profile-img"> <img src="https://lh3.googleusercontent.com/a/AATXAJyPNO8s8DzDD4WQdJHxYw1FumFb4fV2uK2X80e3=w40-h40-c-c-rp-w40-h40-mo-br100" srcset="https://lh3.googleusercontent.com/a/AATXAJyPNO8s8DzDD4WQdJHxYw1FumFb4fV2uK2X80e3=w80-h80-c-c-rp-w80-h80-mo-br100 2x" alt="Marjorie Rathwell" loading="lazy"> </div> <div class="ti-profile-details"> <div class="ti-name"> Marjorie Rathwell </div> <div class="ti-date">2021-10-02</div> </div> </div> <span class="ti-stars"><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span></span> <div class="ti-review-text-container ti-review-content" style="transition: none"><!-- R-CONTENT -->Very friendly staff who are all vaccinated for COVID-19. Dr. VanDam and hygienist, Kayla are pleasant and helpful for any of my concerns!!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" style="opacity: 0; pointer-events: none;"><span>&nbsp;</span></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" style="position: relative;"> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-profile-img"> <img src="https://lh3.googleusercontent.com/a-/AOh14GgTCM9A5WbJALJB_g4BaXJavAAWH8cLt2mDR89G7ww=w40-h40-c-c-rp-w40-h40-mo-br100" srcset="https://lh3.googleusercontent.com/a-/AOh14GgTCM9A5WbJALJB_g4BaXJavAAWH8cLt2mDR89G7ww=w80-h80-c-c-rp-w80-h80-mo-br100 2x" alt="Kirby McPhie" loading="lazy"> </div> <div class="ti-profile-details"> <div class="ti-name"> Kirby McPhie </div> <div class="ti-date">2021-09-09</div> </div> </div> <span class="ti-stars"><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span></span> <div class="ti-review-text-container ti-review-content" style="transition: none"><!-- R-CONTENT -->Great team and fantastic dentists. Very thorough in explainations and quick work. Highly recommend.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" style="opacity: 0; pointer-events: none;"><span>&nbsp;</span></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" style="position: relative;"> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-profile-img"> <img src="https://lh3.googleusercontent.com/a/AATXAJy1KyzllIlUrqnu5kPNzvoU1zvJe14ZA5HwAHN3=w40-h40-c-c-rp-w40-h40-mo-br100" srcset="https://lh3.googleusercontent.com/a/AATXAJy1KyzllIlUrqnu5kPNzvoU1zvJe14ZA5HwAHN3=w80-h80-c-c-rp-w80-h80-mo-br100 2x" alt="Chris Pellerin" loading="lazy"> </div> <div class="ti-profile-details"> <div class="ti-name"> Chris Pellerin </div> <div class="ti-date">2021-08-31</div> </div> </div> <span class="ti-stars"><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span></span> <div class="ti-review-text-container ti-review-content" style="height: 87px !important;" data-initial-height="87" data-expanded-height="174"><!-- R-CONTENT -->Wanted to say an extra thank you to the staff on impeccable customer service. 3rd party communication puts them in a tough position and these guys went above and beyond to keep me happy.<br>Been to many dentist's in town and redcliff. This is by far the best one!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" style="" tabindex="0"><span class="ti-read-more-active" aria-label="Read more" role="button">Read more</span></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" style="position: relative;"> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-profile-img"> <img src="https://lh3.googleusercontent.com/a/AATXAJyeJhvsuRwcjkbOENTbtDUSCzGYiIS5-5tae5dG=w40-h40-c-c-rp-w40-h40-mo-br100" srcset="https://lh3.googleusercontent.com/a/AATXAJyeJhvsuRwcjkbOENTbtDUSCzGYiIS5-5tae5dG=w80-h80-c-c-rp-w80-h80-mo-br100 2x" alt="Don Gobin" loading="lazy"> </div> <div class="ti-profile-details"> <div class="ti-name"> Don Gobin </div> <div class="ti-date">2021-08-25</div> </div> </div> <span class="ti-stars"><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span></span> <div class="ti-review-text-container ti-review-content" style="transition: none"><!-- R-CONTENT -->They really look after you at Sun City Dental<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" style="opacity: 0; pointer-events: none;"><span>&nbsp;</span></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" style="position: relative;"> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-profile-img"> <img src="https://lh3.googleusercontent.com/a/AATXAJwhyPZnbW5JqNeTHW7-6KMSUu3GeghYBmM2hub6=w40-h40-c-c-rp-w40-h40-mo-br100" srcset="https://lh3.googleusercontent.com/a/AATXAJwhyPZnbW5JqNeTHW7-6KMSUu3GeghYBmM2hub6=w80-h80-c-c-rp-w80-h80-mo-br100 2x" alt="Clayton Rice" loading="lazy"> </div> <div class="ti-profile-details"> <div class="ti-name"> Clayton Rice </div> <div class="ti-date">2021-08-13</div> </div> </div> <span class="ti-stars"><span class="ti-star f"></span><span class="ti-star e"></span><span class="ti-star e"></span><span class="ti-star e"></span><span class="ti-star e"></span></span> <div class="ti-review-text-container ti-review-content" style="transition: none"><!-- R-CONTENT -->Need tooth pulled emergency. Was not helpful<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" style="opacity: 0; pointer-events: none;"><span>&nbsp;</span></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" style="position: relative;"> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-profile-img"> <img src="https://lh3.googleusercontent.com/a/AATXAJwPNwvrf8ztZboFNxSnVOESwQrV98hLZzWHuik=w40-h40-c-c-rp-w40-h40-mo-br100" srcset="https://lh3.googleusercontent.com/a/AATXAJwPNwvrf8ztZboFNxSnVOESwQrV98hLZzWHuik=w80-h80-c-c-rp-w80-h80-mo-br100 2x" alt="Jessica H" loading="lazy"> </div> <div class="ti-profile-details"> <div class="ti-name"> Jessica H </div> <div class="ti-date">2021-07-14</div> </div> </div> <span class="ti-stars"><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span><span class="ti-star f"></span></span> <div class="ti-review-text-container ti-review-content" style="transition: none"><!-- R-CONTENT -->Everyone at Sun City Dental is Always friendly and professional !<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" style="opacity: 0; pointer-events: none;"><span>&nbsp;</span></span> </div> </div>  </div> <div class="ti-controls-line"> <div class="dot" style="width: 1px; left: 0%;"></div> </div> </div> <div class="ti-footer"> <div class="ti-rating-text" data-number-formatted="1"> <span class="nowrap"><strong data-number-formatted="1">Google</strong> rating score: </span><span class="nowrap"><strong data-number-formatted="1">5.0</strong> of 5, </span><span class="nowrap">based on <strong data-number-formatted="1">207 reviews</strong></span> </div> </div>  </div> </div>            </div>
+        </div>
+    </div>
+</section>             
+
+<link href="https://www.suncitydental.com/wp-content/themes/sun-city-dental/css/home-css.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://www.suncitydental.com/wp-content/themes/sun-city-dental/js/home-script.js" type="text/javascript" charset="utf-8" async="" defer=""></script>
+
+
+
+
+<div class="footer-warp">
+
+	<div class="container">
+
+    	<div class="row">
+
+        	<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 quick-link">
+
+            	<h3>Quick Links:</h3>
+
+                <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class=" "><li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-72"><a href="https://www.suncitydental.com/" aria-current="page">Home</a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="https://www.suncitydental.com/fees/">Fees</a></li>
+<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://www.suncitydental.com/sedation-anesthesia/">Sedation &amp; Anesthesia</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="https://www.suncitydental.com/about-us/">About</a></li>
+<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="https://www.suncitydental.com/forms/">Forms</a></li>
+<li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="https://www.suncitydental.com/contact-us/">Contact us</a></li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="https://www.suncitydental.com/patient-information/">Patient Information</a></li>
+<li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="https://www.suncitydental.com/referring-doctors/">Referring Doctors</a></li>
+</ul></div>
+            </div>
+
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 contact-info">
+
+            	<h3>Contact Info:</h3>
+
+                <div class="address">
+
+                    <span>Address: </span>100 - 2800 13th Ave SE Medicine Hat Alberta
+                </div>
+
+                <div class="phone">
+
+                    <span>Phone:</span>
+
+                    <a href="tel:403-548-0028">403-548-0028</a>
+
+                </div>
+
+                <div class="phone">
+
+                    <span>Fax:</span>
+
+                    <a href="tel:403-548-2528">403-548-2528</a>
+
+                </div>
+
+                <div class="email">
+
+                    <span>Email: </span>
+
+                    <a href="mailto:admin@suncitydental.com ">admin@suncitydental.com </a>
+
+                </div>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="copyright-warp">
+
+	<div class="container">
+
+    	<div class="row">
+
+        	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 copyright-warp-left">© 2026, All rights reserved by Sun City Dental Medicine Hat</div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 copyright-warp-right text-right">
+
+            	<a href="" class="fb-icon" target="_blank"></a>
+
+                <a href="https://plus.google.com/108867513260740221139" class="google-plus-icon" target="_blank"></a>
+
+                <a href="" class="twitter-icon" target="_blank"></a>
+
+            </div>
+
+			<div class="clearfix"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA1VuAgUtJTzvm6qB-1FOq5J4W2pZBLi0&amp;sensor=false" id="theme-googleapis-js-js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">panopress.imagebox();</script><link rel="stylesheet" id="ti-widget-css-google-css" href="https://www.suncitydental.com/wp-content/uploads/trustindex-google-widget.css?ver=1728292025" type="text/css" media="all">
+<script type="text/javascript" src="https://www.suncitydental.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.7" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.suncitydental.com\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.suncitydental.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.7" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://www.suncitydental.com/wp-content/themes/sun-city-dental/js/bootstrap.js" id="theme-bootstrap-js-js"></script>
+<script type="text/javascript" src="https://www.suncitydental.com/wp-content/themes/sun-city-dental/js/slick.min.js" id="theme-slick-js-js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKeAkmMM0rv4lmL20y0UXdExCBY2hzYlQ&amp;sensor=false" id="theme-googleapis-js-js"></script>
+<script type="text/javascript" src="https://www.suncitydental.com/wp-content/themes/sun-city-dental/js/setting.js" id="theme-setting-js-js"></script>
+<script type="text/javascript" defer="" async="" src="https://cdn.trustindex.io/loader.js" id="trustindex-js-js" data-ti-widget-inited="true"></script>
+<script type="text/javascript" id="trustindex-js-js-after">
+(function trustindexWidgetInit() {
+if (typeof Trustindex === "undefined") {
+return setTimeout(trustindexWidgetInit, 100);
+}
+if (typeof Trustindex.pager_inited !== "undefined") {
+return false;
+}
+setTimeout(() => Trustindex.init_pager(document.querySelectorAll(".ti-widget")), 200);
+})();
+document.querySelectorAll("pre.ti-widget").forEach(item => item.replaceWith(item.firstChild));
+</script>
+
+
+
+
+
+</body></html>
