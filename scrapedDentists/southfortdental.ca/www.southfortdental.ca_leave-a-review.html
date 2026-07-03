@@ -1,0 +1,2225 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>
+	Leave A Review | Fort Saskatchewan, AB | Southfort Dental Centre
+</title><meta charset="UTF-8"><meta name="description" content="Fort Saskatchewan dentists, Rosalind Ting, DDS, Rhiannon MacPhail, DDS, and Teodora Radisic, DDS are dental professionals dedicated to general, family, and cosmetic dentistry with services including dental exams, dental makeovers, teeth whitening, veneers, crowns, x-rays, cleanings, root canals, and more. Please call our dentists in Fort Saskatchewan, AB, just a short 10 min. drive from Sherwood Park and Edmonton to schedule your next appointment.">
+<meta name="keywords" content="Fort Saskatchewan, Cosmetic Dentistry, Cleanings and Checkups, Root Canals, Crowns, Teeth Whitening - Zoom, Emergency Dentistry, and Accepting New Patients.">
+<meta name="index" content="index,follow">
+
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-247KKBQKHH&amp;cx=c&amp;_slc=1"></script><script type="text/javascript" async="" defer="" src="//analytics.prosites.com/matomo.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//styles.prosites.com/litesite/jquery/jquery-1.9.1.min.js"></script><script src="//styles.prosites.com/litesite/jquery/jquery-migrate-1.1.0.min.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65214821-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Matomo -->
+    <script type="text/javascript">
+        var _paq = window._paq || [];
+
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        
+        (function () {
+            var u = "//analytics.prosites.com/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '12123']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+            
+        })();
+
+        $(document).ready(function () {
+            $("a[href^='tel']").on("click", function () {
+                window._paq.push(['trackEvent', 'Contact', 'Phone Lead', this.href]);
+            });
+        });
+        
+    </script>
+<!-- End Matomo Code -->
+<!--
+     Prosites Web Engine Technology Version 4.0 Copyright � 2019 Prosites, Inc.  All Rights Reserved.  
+     This software, source code, HTML, JavaScript, CSS, and all other content and code is copyrighted
+     by Prosites, Inc. and may NOT be copied, reproduced, translated, reverse engineered, reduced to
+     any electronic medium or machine-readable form without the prior written consent of Prosites, Inc., 
+     except that you may use it according to our Terms of Use agreement.  Terms of Use may be
+     modified at anytime, and you agree to be bound by such modifications.
+     Please visit http://www.prosites.com/company/legal.aspx for Terms of Use.
+ 
+     Prosites, the prosites logo, the monitor symbol, and the phrase "Point. Click. Launch." are all trademarks of Prosites, Inc.
+--> 
+
+        
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="/js/paging.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+
+        /*****
+* rateYo - v2.0.1
+* http://prrashi.github.io/rateyo/
+* Copyright (c) 2014 Prashanth Pamidi; Licensed MIT
+*****/
+
+        ; (function ($) {
+            "use strict";
+
+            /* The basic svg string required to generate stars
+             */
+            var BASICSTAR = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
+                            "<svg version=\"1.1\" id=\"Layer_1\"" +
+                                  "xmlns=\"http://www.w3.org/2000/svg\"" +
+                                  "viewBox=\"0 12.705 512 486.59\"" +
+                                  "x=\"0px\" y=\"0px\"" +
+                                  "xml:space=\"preserve\">" +
+                              "<polygon id=\"star-icon\"" +
+                                        "points=\"256.814,12.705 317.205,198.566" +
+                                                " 512.631,198.566 354.529,313.435 " +
+                                                "414.918,499.295 256.814,384.427 " +
+                                                "98.713,499.295 159.102,313.435 " +
+                                                "1,198.566 196.426,198.566 \"/>" +
+                            "</svg>";
+
+            var DEFAULTS = {
+
+                starWidth: "32px",
+                normalFill: "gray",
+                ratedFill: "#f39c12",
+                numStars: 5,
+                maxValue: 5,
+                precision: 1,
+                rating: 0,
+                fullStar: false,
+                halfStar: false,
+                readOnly: false,
+                spacing: "0px",
+                onChange: null,
+                onSet: null
+            };
+
+            function checkPrecision(value, minValue, maxValue) {
+
+                /* its like comparing 0.00 with 0 which is true*/
+                if (value === minValue) {
+
+                    value = minValue;
+                }
+                else if (value === maxValue) {
+
+                    value = maxValue;
+                }
+
+                return value;
+            }
+
+            function checkBounds(value, minValue, maxValue) {
+
+                var isValid = value >= minValue && value <= maxValue;
+
+                if (!isValid) {
+
+                    throw Error("Invalid Rating, expected value between " + minValue +
+                                " and " + maxValue);
+                }
+
+                return value;
+            }
+
+            function getInstance(node, collection) {
+
+                var instance;
+
+                $.each(collection, function () {
+
+                    if (node === this.node) {
+
+                        instance = this;
+                        return false;
+                    }
+                });
+
+                return instance;
+            }
+
+            function deleteInstance(node, collection) {
+
+                $.each(collection, function (index) {
+
+                    if (node === this.node) {
+
+                        var firstPart = collection.slice(0, index),
+                            secondPart = collection.slice(index + 1, collection.length);
+
+                        collection = firstPart.concat(secondPart);
+
+                        return false;
+                    }
+                });
+
+                return collection;
+            }
+
+            function isDefined(value) {
+
+                return typeof value !== "undefined";
+            }
+
+            /* The Contructor, whose instances are used by plugin itself,
+             * to set and get values
+             */
+            function RateYo($node, options) {
+
+                this.$node = $node;
+
+                this.node = $node.get(0);
+
+                var that = this;
+
+                $node.addClass("jq-ry-container");
+
+                var $groupWrapper = $("<div/>").addClass("jq-ry-group-wrapper")
+                                               .appendTo($node);
+
+                var $normalGroup = $("<div/>").addClass("jq-ry-normal-group")
+                                              .addClass("jq-ry-group")
+                                              .appendTo($groupWrapper);
+
+                var $ratedGroup = $("<div/>").addClass("jq-ry-rated-group")
+                                             .addClass("jq-ry-group")
+                                             .appendTo($groupWrapper)
+                                             .remove();
+
+                var step, starWidth, percentOfStar, spacing,
+                    percentOfSpacing, containerWidth, minValue = 0;
+
+                function showRating(ratingVal) {
+
+                    if (!isDefined(ratingVal)) {
+
+                        ratingVal = options.rating;
+                    }
+
+                    var numStarsToShow = ratingVal / step;
+
+                    var percent = numStarsToShow * percentOfStar;
+
+                    if (numStarsToShow > 1) {
+
+                        percent += (Math.ceil(numStarsToShow) - 1) * percentOfSpacing;
+                    }
+
+                    $ratedGroup.css("width", percent + "%");
+                }
+
+                function setContainerWidth() {
+
+                    containerWidth = starWidth * options.numStars;
+
+                    containerWidth += spacing * (options.numStars - 1);
+
+                    percentOfStar = (starWidth / containerWidth) * 100;
+
+                    percentOfSpacing = (spacing / containerWidth) * 100;
+
+                    $node.width(containerWidth);
+
+                    showRating();
+                }
+
+                function setStarWidth(newWidth) {
+
+                    if (!isDefined(newWidth)) {
+
+                        return options.starWidth;
+                    }
+
+                    // In the current version, the width and height of the star
+                    // should be the same
+                    options.starWidth = options.starHeight = newWidth;
+
+                    starWidth = parseFloat(options.starWidth.replace("px", ""));
+
+                    $normalGroup.find("svg")
+                                .attr({
+                                    width: options.starWidth,
+                                    height: options.starHeight
+                                });
+
+                    $ratedGroup.find("svg")
+                               .attr({
+                                   width: options.starWidth,
+                                   height: options.starHeight
+                               });
+
+                    setContainerWidth();
+
+                    return $node;
+                }
+
+                function setSpacing(newSpacing) {
+
+                    if (!isDefined(newSpacing)) {
+
+                        return options.spacing;
+                    }
+
+                    options.spacing = newSpacing;
+
+                    spacing = parseFloat(options.spacing.replace("px", ""));
+
+                    $normalGroup.find("svg:not(:first-child)")
+                                .css({ "margin-left": newSpacing });
+
+                    $ratedGroup.find("svg:not(:first-child)")
+                               .css({ "margin-left": newSpacing });
+
+                    setContainerWidth();
+
+                    return $node;
+                }
+
+                function setNormalFill(newFill) {
+
+                    if (!isDefined(newFill)) {
+
+                        return options.normalFill;
+                    }
+
+                    options.normalFill = newFill;
+
+                    $normalGroup.find("svg").attr({ fill: options.normalFill });
+
+                    return $node;
+                }
+
+                function setRatedFill(newFill) {
+
+                    if (!isDefined(newFill)) {
+
+                        return options.ratedFill;
+                    }
+
+                    options.ratedFill = newFill;
+
+                    $ratedGroup.find("svg").attr({ fill: options.ratedFill });
+
+                    return $node;
+                }
+
+                function setNumStars(newValue) {
+
+                    if (!isDefined(newValue)) {
+
+                        return options.numStars;
+                    }
+
+                    options.numStars = newValue;
+
+                    step = options.maxValue / options.numStars;
+
+                    $normalGroup.empty();
+                    $ratedGroup.empty();
+
+                    for (var i = 0; i < options.numStars; i++) {
+
+                        $normalGroup.append($(BASICSTAR));
+                        $ratedGroup.append($(BASICSTAR));
+                    }
+
+                    setStarWidth(options.starWidth);
+                    setRatedFill(options.ratedFill);
+                    setNormalFill(options.normalFill);
+                    setSpacing(options.spacing);
+
+                    showRating();
+
+                    return $node;
+                }
+
+                function setMaxValue(newValue) {
+
+                    if (!isDefined(newValue)) {
+
+                        return options.maxValue;
+                    }
+
+                    options.maxValue = newValue;
+
+                    step = options.maxValue / options.numStars;
+
+                    if (options.rating > newValue) {
+
+                        setRating(newValue);
+                    }
+
+                    showRating();
+
+                    return $node;
+                }
+
+                function setPrecision(newValue) {
+
+                    if (!isDefined(newValue)) {
+
+                        return options.precision;
+                    }
+
+                    options.precision = newValue;
+
+                    showRating();
+
+                    return $node;
+                }
+
+                function setHalfStar(newValue) {
+
+                    if (!isDefined(newValue)) {
+
+                        return options.halfStar;
+                    }
+
+                    options.halfStar = newValue;
+
+                    return $node;
+                }
+
+                function setFullStar(newValue) {
+
+                    if (!isDefined(newValue)) {
+
+                        return options.fullStar;
+                    }
+
+                    options.fullStar = newValue;
+
+                    return $node;
+                }
+
+                function round(value) {
+
+                    var remainder = value % step,
+                        halfStep = step / 2,
+                        isHalfStar = options.halfStar,
+                        isFullStar = options.fullStar;
+
+                    if (!isFullStar && !isHalfStar) {
+
+                        return value;
+                    }
+
+                    if (isFullStar || (isHalfStar && remainder > halfStep)) {
+
+                        value += step - remainder;
+                    } else {
+
+                        value = value - remainder;
+
+                        if (remainder > 0) {
+
+                            value += halfStep;
+                        }
+                    }
+
+                    return value;
+                }
+
+                function calculateRating(e) {
+
+                    var position = $normalGroup.offset(),
+                        nodeStartX = position.left,
+                        nodeEndX = nodeStartX + $normalGroup.width();
+
+                    var maxValue = options.maxValue;
+
+                    var pageX = e.pageX;
+
+                    var calculatedRating = 0;
+
+                    if (pageX < nodeStartX) {
+
+                        calculatedRating = minValue;
+                    } else if (pageX > nodeEndX) {
+
+                        calculatedRating = maxValue;
+                    } else {
+
+                        var calcPrcnt = ((pageX - nodeStartX) / (nodeEndX - nodeStartX));
+
+                        if (spacing > 0) {
+
+                            calcPrcnt *= 100;
+
+                            var remPrcnt = calcPrcnt;
+
+                            while (remPrcnt > 0) {
+
+                                if (remPrcnt > percentOfStar) {
+
+                                    calculatedRating += step;
+                                    remPrcnt -= (percentOfStar + percentOfSpacing);
+                                } else {
+
+                                    calculatedRating += remPrcnt / percentOfStar * step;
+                                    remPrcnt = 0;
+                                }
+                            }
+                        } else {
+
+                            calculatedRating = calcPrcnt * (options.maxValue);
+                        }
+
+                        calculatedRating = round(calculatedRating);
+                    }
+
+                    return calculatedRating;
+                }
+
+                function onMouseEnter(e) {
+
+                    var rating = calculateRating(e).toFixed(options.precision);
+
+                    var maxValue = options.maxValue;
+
+                    rating = checkPrecision(parseFloat(rating), minValue, maxValue);
+
+                    showRating(rating);
+
+                    $node.trigger("rateyo.change", { rating: rating });
+                }
+
+                function onMouseLeave() {
+
+                    showRating();
+
+                    $node.trigger("rateyo.change", { rating: options.rating });
+                }
+
+                function onMouseClick(e) {
+
+                    var resultantRating = calculateRating(e).toFixed(options.precision);
+                    resultantRating = parseFloat(resultantRating);
+
+                    that.rating(resultantRating);
+                }
+
+                $('.rating-1').keyup(function (e) {
+                    if (e.keyCode == 13) {
+                        var resultantRating = calculateRating(e).toFixed(options.precision);
+                        resultantRating = parseFloat(resultantRating);
+
+                        that.rating(1);
+                    }
+                });
+
+                $('.rating-2').keyup(function (e) {
+                    if (e.keyCode == 13) {
+                        var resultantRating = calculateRating(e).toFixed(options.precision);
+                        resultantRating = parseFloat(resultantRating);
+
+                        that.rating(2);
+                    }
+                });
+
+                $('.rating-3').keyup(function (e) {
+                    if (e.keyCode == 13) {
+                        var resultantRating = calculateRating(e).toFixed(options.precision);
+                        resultantRating = parseFloat(resultantRating);
+
+                        that.rating(3);
+                    }
+                });
+
+                $('.rating-4').keyup(function (e) {
+                    if (e.keyCode == 13) {
+                        var resultantRating = calculateRating(e).toFixed(options.precision);
+                        resultantRating = parseFloat(resultantRating);
+
+                        that.rating(4);
+                    }
+                });
+
+                $('.rating-5').keyup(function (e) {
+                    if (e.keyCode == 13) {
+                        var resultantRating = calculateRating(e).toFixed(options.precision);
+                        resultantRating = parseFloat(resultantRating);
+
+                        that.rating(5);
+                    }
+                });
+
+                function onChange(e, data) {
+
+                    if (options.onChange && typeof options.onChange === "function") {
+
+                        /* jshint validthis:true */
+                        options.onChange.apply(this, [data.rating, that]);
+                    }
+                }
+
+                function onSet(e, data) {
+
+                    if (options.onSet && typeof options.onSet === "function") {
+
+                        /* jshint validthis:true */
+                        options.onSet.apply(this, [data.rating, that]);
+                    }
+                }
+
+                function bindEvents() {
+
+                    $node.on("mousemove", onMouseEnter)
+                         .on("mouseenter", onMouseEnter)
+                         .on("mouseleave", onMouseLeave)
+                         .on("click", onMouseClick)
+                         .on("rateyo.change", onChange)
+                         .on("rateyo.set", onSet);
+                }
+
+                function unbindEvents() {
+
+                    $node.off("mousemove", onMouseEnter)
+                         .off("mouseenter", onMouseEnter)
+                         .off("mouseleave", onMouseLeave)
+                         .off("click", onMouseClick)
+                         .off("rateyo.change", onChange)
+                         .off("rateyo.set", onSet);
+                }
+
+                function setReadOnly(newValue) {
+
+                    if (!isDefined(newValue)) {
+
+                        return options.readOnly;
+                    }
+
+                    options.readOnly = newValue;
+
+                    $node.attr("readonly", true);
+
+                    unbindEvents();
+
+                    if (!newValue) {
+
+                        $node.removeAttr("readonly");
+
+                        bindEvents();
+                    }
+
+                    return $node;
+                }
+
+                function setRating(newValue) {
+
+                    if (!isDefined(newValue)) {
+
+                        return options.rating;
+                    }
+
+                    var rating = newValue;
+
+                    var maxValue = options.maxValue;
+
+                    if (typeof rating === "string") {
+
+                        if (rating[rating.length - 1] === "%") {
+
+                            rating = rating.substr(0, rating.length - 1);
+                            maxValue = 100;
+
+                            setMaxValue(maxValue);
+                        }
+
+                        rating = parseFloat(rating);
+                    }
+
+                    checkBounds(rating, minValue, maxValue);
+
+                    rating = parseFloat(rating.toFixed(options.precision));
+
+                    checkPrecision(parseFloat(rating), minValue, maxValue);
+
+                    options.rating = rating;
+
+                    showRating();
+
+                    $node.trigger("rateyo.set", { rating: rating });
+
+                    return $node;
+                }
+
+                function setOnSet(method) {
+
+                    if (!isDefined(method)) {
+
+                        return options.onSet;
+                    }
+
+                    options.onSet = method;
+
+                    return $node;
+                }
+
+                function setOnChange(method) {
+
+                    if (!isDefined(method)) {
+
+                        return options.onChange;
+                    }
+
+                    options.onChange = method;
+
+                    return $node;
+                }
+
+                this.rating = function (newValue) {
+
+                    if (!isDefined(newValue)) {
+
+                        return options.rating;
+                    }
+
+                    setRating(newValue);
+
+                    return $node;
+                };
+
+                this.destroy = function () {
+
+                    if (!options.readOnly) {
+                        unbindEvents();
+                    }
+
+                    RateYo.prototype.collection = deleteInstance($node.get(0),
+                                                                 this.collection);
+
+                    $node.removeClass("jq-ry-container").children().remove();
+
+                    return $node;
+                };
+
+                this.method = function (methodName) {
+
+                    if (!methodName) {
+
+                        throw Error("Method name not specified!");
+                    }
+
+                    if (!isDefined(this[methodName])) {
+
+                        throw Error("Method " + methodName + " doesn't exist!");
+                    }
+
+                    var args = Array.prototype.slice.apply(arguments, []),
+                        params = args.slice(1),
+                        method = this[methodName];
+
+                    return method.apply(this, params);
+                };
+
+                this.option = function (optionName, param) {
+
+                    if (!isDefined(optionName)) {
+
+                        return options;
+                    }
+
+                    var method;
+
+                    switch (optionName) {
+
+                        case "starWidth":
+
+                            method = setStarWidth;
+                            break;
+                        case "numStars":
+
+                            method = setNumStars;
+                            break;
+                        case "normalFill":
+
+                            method = setNormalFill;
+                            break;
+                        case "ratedFill":
+
+                            method = setRatedFill;
+                            break;
+                        case "maxValue":
+
+                            method = setMaxValue;
+                            break;
+                        case "precision":
+
+                            method = setPrecision;
+                            break;
+                        case "rating":
+
+                            method = setRating;
+                            break;
+                        case "halfStar":
+
+                            method = setHalfStar;
+                            break;
+                        case "fullStar":
+
+                            method = setFullStar;
+                            break;
+                        case "readOnly":
+
+                            method = setReadOnly;
+                            break;
+                        case "spacing":
+
+                            method = setSpacing;
+                            break;
+                        case "onSet":
+
+                            method = setOnSet;
+                            break;
+                        case "onChange":
+
+                            method = setOnChange;
+                            break;
+                        default:
+
+                            throw Error("No such option as " + optionName);
+                    }
+
+                    return method(param);
+                };
+
+                setNumStars(options.numStars);
+                setReadOnly(options.readOnly);
+
+                this.collection.push(this);
+                this.rating(options.rating);
+            }
+
+            RateYo.prototype.collection = [];
+
+            window.RateYo = RateYo;
+
+            function _rateYo(options) {
+
+                var rateYoInstances = RateYo.prototype.collection;
+
+                /* jshint validthis:true */
+                var $nodes = $(this);
+
+                if ($nodes.length === 0) {
+
+                    return $nodes;
+                }
+
+                var args = Array.prototype.slice.apply(arguments, []);
+
+                if (args.length === 0) {
+
+                    //Setting Options to empty
+                    options = args[0] = {};
+                } else if (args.length === 1 && typeof args[0] === "object") {
+
+                    //Setting options to first argument
+                    options = args[0];
+                } else if (args.length >= 1 && typeof args[0] === "string") {
+
+                    var methodName = args[0],
+                        params = args.slice(1);
+
+                    var result = [];
+
+                    $.each($nodes, function (i, node) {
+
+                        var existingInstance = getInstance(node, rateYoInstances);
+
+                        if (!existingInstance) {
+
+                            throw Error("Trying to set options before even initialization");
+                        }
+
+                        var method = existingInstance[methodName];
+
+                        if (!method) {
+
+                            throw Error("Method " + methodName + " does not exist!");
+                        }
+
+                        var returnVal = method.apply(existingInstance, params);
+
+                        result.push(returnVal);
+                    });
+
+                    result = result.length === 1 ? result[0] : $(result);
+
+                    return result;
+                } else {
+
+                    throw Error("Invalid Arguments");
+                }
+
+                options = $.extend(JSON.parse(JSON.stringify(DEFAULTS)), options);
+
+                return $.each($nodes, function () {
+
+                    var existingInstance = getInstance(this, rateYoInstances);
+
+                    if (!existingInstance) {
+
+                        return new RateYo($(this), $.extend({}, options));
+                    }
+                });
+            }
+
+            function rateYo() {
+
+                /* jshint validthis:true */
+                return _rateYo.apply(this, Array.prototype.slice.apply(arguments, []));
+            }
+
+            $.fn.rateYo = rateYo;
+
+        }(jQuery));
+    </script>
+    <script type="text/javascript" src="/js/clipboard.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="//styles.prosites.com/litesite/102/css/style.css"><link rel="stylesheet" href="//styles.prosites.com/litesite/102/css/sm-core-css.css"><link rel="stylesheet" href="//styles.prosites.com/litesite/102/css/sm-blue/sm-blue.css">
+    <script type="text/javascript">
+        var delete_cookie = function (name) {
+            document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/;';
+    //        document.cookie = "ADA=false"
+
+            location.reload();
+        };
+    </script>
+    <script>
+(function () {
+  function cleanADAEditorStyles() {
+    const mainDiv = document.querySelector("#main");
+    if (!mainDiv) return;
+
+    // Remove Font Awesome icon <i> tags inside #main
+    mainDiv.querySelectorAll(
+      "i[class*='fa-'], i.fa, i.fas, i.far, i.fab"
+    ).forEach(function (icon) {
+      icon.remove();
+    });
+  }
+
+  // Run when DOM is ready
+  document.addEventListener("DOMContentLoaded", cleanADAEditorStyles);
+
+  // Backup run after full page load
+  window.addEventListener("load", cleanADAEditorStyles);
+})();
+</script>
+<link href="/images/icons/tap/0.png" rel="icon" type="image/x-icon"><link href="/images/icons/tap/0.png" rel="apple-touch-icon"><link href="/images/icons/tap/0.png" rel="apple-touch-startup-image"><script type="text/javascript">var verticalID = 0;</script><link type="text/css">
+<link rel="stylesheet" href="/css/LiteSiteForms.css?chg7=3503" type="text/css">
+<link rel="canonical" href="https://www.southfortdental.ca/leave-a-review/">
+<script>var styledir='//styles.prosites.com/litesite/6763/'</script>
+
+<style> .hiddenPhone { display:none; }</style></head>
+<body>
+
+    <form method="post" action="./leave-a-review?SiteVersionId=30382917&amp;PageId=486271401" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwNDI2OTY5NDIPZBYCZg9kFgQCAQ9kFgYCBA9kFgJmDxYCHgRUZXh0BfIFPG1ldGEgY2hhcnNldD0iVVRGLTgiIC8+PG1ldGEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IkZvcnQgU2Fza2F0Y2hld2FuIGRlbnRpc3RzLCBSb3NhbGluZCBUaW5nLCBERFMsIFJoaWFubm9uIE1hY1BoYWlsLCBERFMsIGFuZCBUZW9kb3JhIFJhZGlzaWMsIEREUyBhcmUgZGVudGFsIHByb2Zlc3Npb25hbHMgZGVkaWNhdGVkIHRvIGdlbmVyYWwsIGZhbWlseSwgYW5kIGNvc21ldGljIGRlbnRpc3RyeSB3aXRoIHNlcnZpY2VzIGluY2x1ZGluZyBkZW50YWwgZXhhbXMsIGRlbnRhbCBtYWtlb3ZlcnMsIHRlZXRoIHdoaXRlbmluZywgdmVuZWVycywgY3Jvd25zLCB4LXJheXMsIGNsZWFuaW5ncywgcm9vdCBjYW5hbHMsIGFuZCBtb3JlLiBQbGVhc2UgY2FsbCBvdXIgZGVudGlzdHMgaW4gRm9ydCBTYXNrYXRjaGV3YW4sIEFCLCBqdXN0IGEgc2hvcnQgMTAgbWluLiBkcml2ZSBmcm9tIFNoZXJ3b29kIFBhcmsgYW5kIEVkbW9udG9uIHRvIHNjaGVkdWxlIHlvdXIgbmV4dCBhcHBvaW50bWVudC4iIC8+DQo8bWV0YSBuYW1lPSJrZXl3b3JkcyIgY29udGVudD0iRm9ydCBTYXNrYXRjaGV3YW4sIENvc21ldGljIERlbnRpc3RyeSwgQ2xlYW5pbmdzIGFuZCBDaGVja3VwcywgUm9vdCBDYW5hbHMsIENyb3ducywgVGVldGggV2hpdGVuaW5nIC0gWm9vbSwgRW1lcmdlbmN5IERlbnRpc3RyeSwgYW5kIEFjY2VwdGluZyBOZXcgUGF0aWVudHMuIiAvPg0KPG1ldGEgbmFtZT0iaW5kZXgiIGNvbnRlbnQ9ImluZGV4LGZvbGxvdyIgLz4NCmQCBQ9kFgJmDxYCHwAF0QQ8c2NyaXB0ICAgIHNyYz0nLy9zdHlsZXMucHJvc2l0ZXMuY29tL2xpdGVzaXRlL2pxdWVyeS9qcXVlcnktMS45LjEubWluLmpzJz48L3NjcmlwdD48c2NyaXB0ICAgIHNyYz0nLy9zdHlsZXMucHJvc2l0ZXMuY29tL2xpdGVzaXRlL2pxdWVyeS9qcXVlcnktbWlncmF0ZS0xLjEuMC5taW4uanMnPjwvc2NyaXB0PjxzY3JpcHQ+DQogIChmdW5jdGlvbihpLHMsbyxnLHIsYSxtKXtpWydHb29nbGVBbmFseXRpY3NPYmplY3QnXT1yO2lbcl09aVtyXXx8ZnVuY3Rpb24oKXsNCiAgKGlbcl0ucT1pW3JdLnF8fFtdKS5wdXNoKGFyZ3VtZW50cyl9LGlbcl0ubD0xKm5ldyBEYXRlKCk7YT1zLmNyZWF0ZUVsZW1lbnQobyksDQogIG09cy5nZXRFbGVtZW50c0J5VGFnTmFtZShvKVswXTthLmFzeW5jPTE7YS5zcmM9ZzttLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsbSkNCiAgfSkod2luZG93LGRvY3VtZW50LCdzY3JpcHQnLCcvL3d3dy5nb29nbGUtYW5hbHl0aWNzLmNvbS9hbmFseXRpY3MuanMnLCdnYScpOw0KDQogIGdhKCdjcmVhdGUnLCAnVUEtNjUyMTQ4MjEtMScsICdhdXRvJyk7DQogIGdhKCdzZW5kJywgJ3BhZ2V2aWV3Jyk7DQoNCjwvc2NyaXB0PmQCDA9kFgJmDxYCHwBlZAIDD2QWDmYPZBYCZg8WAh4LXyFJdGVtQ291bnQCBxYQZg9kFgICAQ8WAh8ABSc8dWwgY2xhc3M9J3NtIHNtLWJsdWUnIGlkPSdtYWluLW1lbnUnPiBkAgEPZBYCAgEPZBYCAgEPFgYeBGhyZWYFAS8eCWlubmVyaHRtbAUHV2VsY29tZR4FdGl0bGUFB1dlbGNvbWVkAgIPZBYCAgEPZBYCAgEPFgYfAgUOL291ci1wcmFjdGljZS8fAwUMT3VyIFByYWN0aWNlHwQFDE91ciBQcmFjdGljZWQCAw9kFgICAQ9kFgICAQ8WBh8CBQwvcHJvY2VkdXJlcy8fAwUKUHJvY2VkdXJlcx8EBQpQcm9jZWR1cmVzZAIED2QWAgIBD2QWAgIBDxYGHwIFFS9wYXRpZW50LWluZm9ybWF0aW9uLx8DBRRQYXRpZW50IEluZm9ybWF0aW9uIB8EBRRQYXRpZW50IEluZm9ybWF0aW9uIGQCBQ9kFgICAQ9kFgICAQ8WBh8CBRAvbGVhdmUtYS1yZXZpZXcvHwMFDkxlYXZlIEEgUmV2aWV3HwQFDkxlYXZlIEEgUmV2aWV3ZAIGD2QWAgIBD2QWAgIBDxYGHwIFDi90ZXN0aW1vbmlhbHMvHwMFDFRlc3RpbW9uaWFscx8EBQxUZXN0aW1vbmlhbHNkAgcPZBYCAgEPZBYCAgEPFgYfAgUJL2NvbnRhY3QvHwMFB0NvbnRhY3QfBAUHQ29udGFjdGQCAQ9kFgRmDw8WBh4JSW1hZ2VGaWxlBQpoZWFkZXIuanBnHghJbWFnZURpcgU0L3Byb3NpdGVzU3R5bGVzL1N0eWxlTGlicmFyeS82NzYzL0ZpeGVkSW1hZ2VzL0dlbkJnLx4NT3V0cHV0RmlsZURpcgU9L3Byb3NpdGVzU3R5bGVzL1N0eWxlTGlicmFyeS82NzYzL0dlbmVkSW1hZ2VzL0hlYWRlcnMvMjIzMjAyL2RkAgIPZBYGAgEPFgIeBWNsYXNzBQ9jb21wVGl0bGUxTGFyZ2UWAmYPFgIfAAUXU291dGhmb3J0IERlbnRhbCBDZW50cmVkAgMPFgIfCAUQY29tcFRpdGxlMk1lZGl1bRYCZg8WAh8ABR5QYXRpZW50IEZpcnN0IEZhbWlseSBEZW50aXN0cnlkAgUPFgIfCAUPY29tcFRpdGxlM1NtYWxsFgJmDxYCHwAFGkNyZWF0aW5nIEJlYXV0aWZ1bCBTbWlsZXMhZAICD2QWBGYPFgQeA3JlbAUIbm9mb2xsb3cfAgUSdGVsOig3ODApIDk5OC0xNzU5FgQCAQ9kFgQCAQ8WAh8ABQVDYWxsIGQCAw8WAh8ABQ4oNzgwKSA5OTgtMTc1OWQCAw8PFggfAAUOKDc4MCkgOTk4LTE3NTkeDUFsdGVybmF0ZVRleHQFDig3ODApIDk5OC0xNzU5HwYFNC9wcm9zaXRlc1N0eWxlcy9TdHlsZUxpYnJhcnkvNjc2My9GaXhlZEltYWdlcy9HZW5CZy8fBwU8L3Byb3NpdGVzU3R5bGVzL1N0eWxlTGlicmFyeS82NzYzL0dlbmVkSW1hZ2VzL1Bob25lcy8yMjMyMDIvZGQCAw8WAh4HVmlzaWJsZWhkAgMPDxYCHwtoZBYCZg9kFgICAQ8PFgIfC2hkZAIED2QWEAIDDw8WAh8ABbABPHA+V2Ugc3RyaXZlIHRvIHByb3ZpZGUgdGhlIGJlc3QgcG9zc2libGUgY2FyZSBhbmQgc2VydmljZSBmb3Igb3VyIHBhdGllbnRzLiBQbGVhc2UgbGVhdmUgYSByZXZpZXcgdG8gbGV0IHVzIGtub3cgaG93IHdlIGFyZSBkb2luZyBhbmQgdG8gc2hhcmUgeW91ciBleHBlcmllbmNlIHdpdGggb3RoZXJzLjwvcD5kZAINDw8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQICZGQCEQ8PFgIfDAICZGQCFQ8PFgIfDAICZGQCGQ8PFgIfDAICZGQCHw8WAh8BAgIWBGYPZBYCAgEPDxYGHghJbWFnZVVybAUgL2ltYWdlcy9pY29ucy9Hb29nbGVQbHVzbG9nby5wbmceDU9uQ2xpZW50Q2xpY2sF5QF3aW5kb3cub3BlbignaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g/cT0oNzgwKSs5OTgtMTc1OSZybHo9MUMxR0NFQV9lblVTMTA0MVVTMTA0MSZvcT0oNzgwKSs5OTgtMTc1OSZhcXM9Y2hyb21lLi42OWk1Ny4xMDI5ajBqNyZzb3VyY2VpZD1jaHJvbWUmaWU9VVRGLTgjbHJkPTB4NTNhMDQ3N2I1MDcyZTg4OToweDIzM2VmNDFkYTI0OTc2YzMsMywsLCwnLCdfYmxhbmsnKTtyZXR1cm4gZmFsc2U7HwtnZGQCAQ9kFgICAQ8PFgYfDQUeL2ltYWdlcy9pY29ucy9GYWNlYm9va2xvZ28ucG5nHw4FTndpbmRvdy5vcGVuKCdodHRwczovL3d3dy5mYWNlYm9vay5jb20vc291dGhmb3J0ZGVudGFsJywnX2JsYW5rJyk7cmV0dXJuIGZhbHNlOx8LZ2RkAiEPZBYCAgEPFgIfAWZkAiMPZBYCAgMPFgIfAQIRFiJmD2QWAgIBDw9kFgIeBnJhdGluZwUBNRYGAgEPFgIfAAVdPGltZyBjbGFzcz0icmV2aWV3LWxvZ28iIHNyYz0iLy9zdHlsZXMucHJvc2l0ZXMuY29tL2ltYWdlcy9QYXRpZW50UmV2aWV3cy9wcm9zaXRlcy1zbS5wbmciIC8+ZAIDDw8WAh8ABRdKb2FuLCBGb3J0IFNhc2thdGNoZXdhbmRkAgUPFgIfAAW5AknigJl2ZSBiZWVuIGdvaW5nIHRvIFNvdXRoZm9ydCBEZW50YWwgZm9yIG1hbnkgeWVhcnMgYW5kIGFtIHZlcnkgaGFwcHkgd2l0aCBldmVyeSBhc3BlY3Qgb2YgdGhlaXIgYnVzaW5lc3M7IGV2ZXJ5b25lIGlzIGZyaWVuZGx5IGFuZCBoZWxwZnVsLiBXaGV0aGVyIGl0IGlzIGZvciBhIGNsZWFuaW5nLCBjaGVja3VwIG9yIGRlbnRhbCB3b3JrIHRoZSBzdGFmZiBtYWtlIG1lIGZlZWwgYXQgZWFzZSBhbmQgYXJlIGdlbnRsZSBhbmQgaG9uZXN0LiBJIHdvdWxkIHJlY29tbWVuZCBEci4gUm9xdWUgdG8gYW55b25lIGxvb2tpbmcgZm9yIGEgZGVudGlzdC5kAgEPZBYCAgEPD2QWAh8PBQE1FgYCAQ8WAh8ABV08aW1nIGNsYXNzPSJyZXZpZXctbG9nbyIgc3JjPSIvL3N0eWxlcy5wcm9zaXRlcy5jb20vaW1hZ2VzL1BhdGllbnRSZXZpZXdzL3Byb3NpdGVzLXNtLnBuZyIgLz5kAgMPDxYCHwAFGEdyZWcsIEZvcnQgU2Fza2F0Y2hld2FuIGRkAgUPFgIfAAVWVHJpc3RhbiBpcyB2ZXJ5IHRob3JvdWdoIGFuZCBleHRyZW1lbHkgcGF0aWVudC4gSeKAmW0gYWx3YXlzIHBsZWFzZWQgd2l0aCBteSBzZXJ2aWNlLiBkAgIPZBYCAgEPD2QWAh8PBQE1FgYCAQ8WAh8ABV08aW1nIGNsYXNzPSJyZXZpZXctbG9nbyIgc3JjPSIvL3N0eWxlcy5wcm9zaXRlcy5jb20vaW1hZ2VzL1BhdGllbnRSZXZpZXdzL3Byb3NpdGVzLXNtLnBuZyIgLz5kAgMPDxYCHwAFGkR1c3RpbiwgRm9ydCBzYXNrYXRjaGV3YW4gZGQCBQ8WAh8ABbUBT25lIG9mIHRoZSBiZXN0IGRlbnRhbCBjbGluaWNzIEkgaGF2ZSBiZWVuIHRvLiBTdXBlciBhbWF6aW5nIGRlbnRpc3RzIGFuZCB0aGUgc3RhZmYgaXMgc28gaGVscGZ1bCBhbmQgY2hlZXJmdWwuIE1ha2luZyBldmVyeSB2aXNpdCBvbmUgdG8gcmVtZW1iZXIuIEhpZ2hseSByZWNvbW1lbmQuIEdyZWF0IHZpYmVzICEhIWQCAw9kFgICAQ8PZBYCHw8FATUWBgIBDxYCHwAFXTxpbWcgY2xhc3M9InJldmlldy1sb2dvIiBzcmM9Ii8vc3R5bGVzLnByb3NpdGVzLmNvbS9pbWFnZXMvUGF0aWVudFJldmlld3MvcHJvc2l0ZXMtc20ucG5nIiAvPmQCAw8PFgIfAAUcSGVhdGhlciBTb21lcnZpbGxlLCBFZG1vbnRvbmRkAgUPFgIfAAXCA0RyIFJvcXVlIGFuZCB0ZWFtIHNlcmlvdXNseSBhcmUgdGhlIGJlc3QhIFByb2Zlc3Npb25hbCBidXQgYWxzbyBzbyBraW5kIGFuZCBwYXRpZW50LiBGcm9tIHRoZSBtaW51dGUgeW91IHdhbGsgaW4gUGFpZ2UgYXQgdGhlIGRlc2sgaXMgZnJpZW5kbHkgYW5kIHJlYWR5IHRvIGhlbHAuIFRyeXN0YW4gdGhlIGh5Z2llbmlzdCBpcyBvbiBhIG1pc3Npb24gdG8gZ2V0IHlvdXIgdGVldGggY2xlYW4gd2hpbGUgbWFraW5nIHlvdSBsYXVnaCBpbiB0aGUgY2hhaXIgYW5kIGxhc3QgYnV0IG5vdCBsZWFzdCBBbGxpc29uIGFzc2lzdGluZyBEci4gUm9xdWUgY2xvc2VseSB0byBtYWtlIHN1cmUgdGhlIHZpc2l0IHJ1bnMgc21vb3RobHkgYW5kIHNoZSdzIHNvIG5pY2UgdG9vISBEci4gUm9xdWUgaXMgdGhlIGJlc3QhIEkgd291bGQgaGlnaGx5IHJlY29tbWVuZCB0aGlzIGRlbnRhbCBwcmFjdGljZSEgCmQCBA9kFgICAQ8PZBYCHw8FATUWBgIBDxYCHwAFXTxpbWcgY2xhc3M9InJldmlldy1sb2dvIiBzcmM9Ii8vc3R5bGVzLnByb3NpdGVzLmNvbS9pbWFnZXMvUGF0aWVudFJldmlld3MvcHJvc2l0ZXMtc20ucG5nIiAvPmQCAw8PFgIfAAUiTWVsaXNzYSBNY05hYmIgLCBNY2xlbm5hbiwgQWxiZXJ0YWRkAgUPFgIfAAXPAlNvdXRoZm9ydCBEZW50YWwgaGFzIGJlZW4gbXkgZmFtaWx5J3MgZGVudGlzdCBmb3IgeWVhcnMgbm93LiBXZSBkcml2ZSA1IGhvdXJzIGp1c3QgdG8gc2VlIHRoZW0gYW5kIHdvbid0IHNlZSBhbnkgb3RoZXIgZGVudGlzdHMuIFdlIGFkb3JlIHRoZWlyIGh5Z2llbmlzdHMgYXMgd2VsbC4gRXZlcnlvbmUgaXMgc28ga25vd2xlZGdlYWJsZSwga2luZCBhbmQgY2FyaW5nLiBZb3Ugd2lsbCBub3QgZXZlciBmaW5kIGEgYmV0dGVyIGRlbnRhbCBvZmZpY2UgdG8gZ28gdG8uIFdlIGxvdmUgU291dGhmb3J0IERlbnRhbCBpdCdzIGRlZmluaXRlbHkgb3VyIG51bWJlciBvbmUgY2hvaWNlICMxISEhZAIFD2QWAgIBDw9kFgIfDwUBNRYGAgEPFgIfAAVdPGltZyBjbGFzcz0icmV2aWV3LWxvZ28iIHNyYz0iLy9zdHlsZXMucHJvc2l0ZXMuY29tL2ltYWdlcy9QYXRpZW50UmV2aWV3cy9wcm9zaXRlcy1zbS5wbmciIC8+ZAIDDw8WAh8ABRJIZWxlbiBELiwgRWRtb250b25kZAIFDxYCHwAFogNXZSBoYXZlIG1vdmVkIHRocmVlIHRpbWVzIHNpbmNlIHdlIGxpdmVkIGluIEZvcnQgU2Fza2F0Y2hld2FuIGFuZCBubyBtYXR0ZXIgd2hlcmUgd2UgbGl2ZSwgRHIgVGluZyBhbmQgU291dGhmb3J0IERlbnRhbCB3aWxsIHJlbWFpbiBvdXIgY29uc3RhbnQuIE15IGh1c2JhbmQgY2FsbGVkIGF0IDg6MDUgYW0gdG9kYXkgd2l0aCBhIGJyb2tlbiwgaW5mZWN0ZWQgdG9vdGggdGhhdCBoYWQgYmVlbiBhIGxvbmcgd2Vla2VuZCBuaWdodG1hcmUgYW5kIGJ5IDM6MDAgcG0gc2FtZSBkYXksIERyIFRpbmcgbWFkZSBpdCBhbGwgZ28gYXdheS4gTmV2ZXIgdW5kZXJlc3RpbWF0ZSB0aGUgY29tZm9ydCwgc2VjdXJpdHkgYW5kIGV4Y2VsbGVudCBwZXJzb25hbCBjYXJlIGEgcmVhbGx5IGdvb2QgZGVudGlzdCBhbmQgc3RhZmYgY2FuIHByb3ZpZGUhZAIGD2QWAgIBDw9kFgIfDwUBNRYGAgEPFgIfAAVdPGltZyBjbGFzcz0icmV2aWV3LWxvZ28iIHNyYz0iLy9zdHlsZXMucHJvc2l0ZXMuY29tL2ltYWdlcy9QYXRpZW50UmV2aWV3cy9wcm9zaXRlcy1zbS5wbmciIC8+ZAIDDw8WAh8ABSNtYXJ5YW5uIGtlbm9waWMsIGZvcnQgc2Fza2F0Y2hld2FuIGRkAgUPFgIfAAVUQWJzb2x1dGVseSB0aGUgQmVzdCEhISBMb3ZlIERyLiBNY1BoYWlsIHNoZSBpcyB0aGUgc3dlZXRlc3QgbW9zdCB0YWxlbnRlZCBkZW50aXN0ISEhZAIHD2QWAgIBDw9kFgIfDwUBNRYGAgEPFgIfAAVdPGltZyBjbGFzcz0icmV2aWV3LWxvZ28iIHNyYz0iLy9zdHlsZXMucHJvc2l0ZXMuY29tL2ltYWdlcy9QYXRpZW50UmV2aWV3cy9wcm9zaXRlcy1zbS5wbmciIC8+ZAIDDw8WAh8ABRlUaWphbmEgQ3ZpamljLCBTdC4gQWxiZXJ0ZGQCBQ8WAh8ABc8BRHIuIFJvcXVlIGFuZCBEci4gUmFkaXNpYyBhcmUgYWJzb2x1dGVseSBhbWF6aW5nLiBJIGFtIHNvIGltcHJlc3NlZCB3aXRoIGhvdyB3ZWxsIHRoZXkgaGF2ZSB0cmVhdGVkIG15IGVudGlyZSBmYW1pbHkuIFRoZXkgYXJlIHNvIGtpbmQsIGdlbnRsZSBhbmQgaG9uZXN0IGFuZCBpdHMgYWx3YXlzIHN1Y2ggYSBwbGVhc2FudCBleHBlcmllbmNlIHdpdGggdGhlbS4gZAIID2QWAgIBDw9kFgIfDwUBNRYGAgEPFgIfAAVdPGltZyBjbGFzcz0icmV2aWV3LWxvZ28iIHNyYz0iLy9zdHlsZXMucHJvc2l0ZXMuY29tL2ltYWdlcy9QYXRpZW50UmV2aWV3cy9wcm9zaXRlcy1zbS5wbmciIC8+ZAIDDw8WAh8ABQ9DcmFpZywgTWNMZW5uYW5kZAIFDxYCHwAF7gFBbHdheXMgZXhjZWxsZW50IHNlcnZpY2UgYW5kIGtub3dsZWRnZWFibGUsIGZyaWVuZGx5IHN0YWZmISBJIHRpbWUgbXkgeWVhcmx5IHRyaXAgdG8gY2l2aWxpemF0aW9uIHRvIGNvaW5jaWRlIHdpdGggYSB0cmlwIHRvIERyLiBNYWNQaGFpbC4gTXkgd2lmZSBzYXlzIERyLiBNYWNQaGFpbCBpcyB0aGUgb25seSBkZW50aXN0IHNoZSB0cnVzdHMgYW5kIG15IGRhdWdodGVyIGxvdmVzIGdvaW5nIHRvIHZpc2l0IHRoZW0hZAIJD2QWAgIBDw9kFgIfDwUBNRYGAgEPFgIfAAVdPGltZyBjbGFzcz0icmV2aWV3LWxvZ28iIHNyYz0iLy9zdHlsZXMucHJvc2l0ZXMuY29tL2ltYWdlcy9QYXRpZW50UmV2aWV3cy9wcm9zaXRlcy1zbS5wbmciIC8+ZAIDDw8WAh8ABRxTaGFubmEgSCwgRm9ydCBTYXNrYXRjaGV3YW4gZGQCBQ8WAh8ABU5UaGV5IHdlcmUgYWJzb2x1dGVseSBmYW50YXN0aWMgd2l0aCBteSBzb24sIGhlIGxvdmVzIGdvaW5nIHRvIHRoZSBkZW50aXN0IG5vdyFkAgoPZBYCAgEPD2QWAh8PBQE1FgYCAQ8WAh8ABV08aW1nIGNsYXNzPSJyZXZpZXctbG9nbyIgc3JjPSIvL3N0eWxlcy5wcm9zaXRlcy5jb20vaW1hZ2VzL1BhdGllbnRSZXZpZXdzL3Byb3NpdGVzLXNtLnBuZyIgLz5kAgMPDxYCHwAFGk5pY2tpIEUsIEZvcnQgU2Fza2F0Y2hld2FuZGQCBQ8WAh8ABdYBSSBoYXZlIGJlZW4gYSBwYXRpZW50IGF0IFNvdXRoRm9ydCBkZW50YWwgZm9yIDcgeWVhcnMuIERyLiBSYWRpc2ljIGlzIGFuIGFtYXppbmcgIGRlbnRpc3QuIE92ZXJhbGwsIG9uZSBvZiB0aGUga2luZG5lc3MgYW5kIG1vc3Qgc2luY2VyZSBwZW9wbGUgSSd2ZSBtZXQuIFRoZSBzdGFmZiBhcmUgdmVyeSBmcmllbmRseSBhbmQgdGhlIGVudmlyb25tZW50IGlzIHJlbGF4ZWQuIGQCCw9kFgICAQ8PZBYCHw8FATUWBgIBDxYCHwAFXTxpbWcgY2xhc3M9InJldmlldy1sb2dvIiBzcmM9Ii8vc3R5bGVzLnByb3NpdGVzLmNvbS9pbWFnZXMvUGF0aWVudFJldmlld3MvcHJvc2l0ZXMtc20ucG5nIiAvPmQCAw8PFgIfAAUPTGVhaCwgQXJkcm9zc2FuZGQCBQ8WAh8ABSVWZXJ5IGZyaWVuZGx5LCBhbmQgbWV0IGFsbCBvdXIgbmVlZHMhZAIMD2QWAgIBDw9kFgIfDwUBNRYGAgEPFgIfAAVdPGltZyBjbGFzcz0icmV2aWV3LWxvZ28iIHNyYz0iLy9zdHlsZXMucHJvc2l0ZXMuY29tL2ltYWdlcy9QYXRpZW50UmV2aWV3cy9wcm9zaXRlcy1zbS5wbmciIC8+ZAIDDw8WAh8ABRFTdGV2ZW4sIFNhc2thdG9vbmRkAgUPFgIfAAWqAVRoaXMgY2xpbmljIHRvb2sgdGhlIHRpbWUgdG8gZG8gYSBjb21wbGV0ZSBjbGVhbmluZyBvbiBteSB3aG9sZSBmYW1pbHkuIFRoZXkgaGF2ZSBmcmllbmRseSBzdGFmZiBhbmQgYW1hemluZyBzZXJ2aWNlLiBUaGFuayB5b3UgU291dGhmb3J0IERlbnRhbCBmb3IgdGhlIGdyZWF0IGV4cGVyaWVuY2UuZAIND2QWAgIBDw9kFgIfDwUBNRYGAgEPFgIfAAVdPGltZyBjbGFzcz0icmV2aWV3LWxvZ28iIHNyYz0iLy9zdHlsZXMucHJvc2l0ZXMuY29tL2ltYWdlcy9QYXRpZW50UmV2aWV3cy9wcm9zaXRlcy1zbS5wbmciIC8+ZAIDDw8WAh8ABRx0YW1hcmEgcCwgZm9ydCBTYXNrYXRjaGV3YW4gZGQCBQ8WAh8ABcMBbXkgNyB5ZWFyIG9sZCBkYXVnaHRlciBhbmQgSSBnZXQgb3VyIHRlZXRoIGRvbmUgaGVyZS4gSSBhbSBzbyBpbXByZXNzZWQgd2l0aCAgdGhlIHBhdGllbmNlIGFuZCBjYXJlIHRoZXkgcHJvdmlkZS4geW91IGZlZWwgbGlrZSBmYW1pbHkgd2hlbiB5b3Ugd2FsayBpbi4gSSB3b3VsZCBoaWdobHkgcmVjb21tZW5kIHNvdXRoZm9ydCBkZW50YWwhZAIOD2QWAgIBDw9kFgIfDwUBNRYGAgEPFgIfAAVdPGltZyBjbGFzcz0icmV2aWV3LWxvZ28iIHNyYz0iLy9zdHlsZXMucHJvc2l0ZXMuY29tL2ltYWdlcy9QYXRpZW50UmV2aWV3cy9wcm9zaXRlcy1zbS5wbmciIC8+ZAIDDw8WAh8ABRJEZWVuYSBTICwgUmVkd2F0ZXJkZAIFDxYCHwAFOEdyZWF0IGV4cGVyaWVuY2UhIFByb2Zlc3Npb25hbCwgdGhvcm91Z2ggYW5kIGZyaWVuZGx5ISAgZAIPD2QWAgIBDw9kFgIfDwUBNRYGAgEPFgIfAAVdPGltZyBjbGFzcz0icmV2aWV3LWxvZ28iIHNyYz0iLy9zdHlsZXMucHJvc2l0ZXMuY29tL2ltYWdlcy9QYXRpZW50UmV2aWV3cy9wcm9zaXRlcy1zbS5wbmciIC8+ZAIDDw8WAh8ABRhDaW5keSwgRm9ydCBTYXNrYXRjaGV3YW5kZAIFDxYCHwAF0QRUaGUgc3RhZmYgaGVyZSBhcmUgYWx3YXlzIHZlcnkgaGVscGZ1bCBhbmQga2luZC4gSSB1c2VkIHRvIGJlIHZlcnkgYW54aW91cyBnb2luZyB0byB0aGUgZGVudGlzdCwgYnV0IGFmdGVyIG1hbnkgZ3JlYXQgZXhwZXJpZW5jZXMgaGVyZSwgSSBhbSBub3QgYW55bW9yZS4gRHIuS2luZyB0YWtlcyB0aGUgdGltZSB0byBleHBsYWluIHdoYXQgbmVlZHMgdG8gYmUgZG9uZSBhbmQgcHJvdmlkZXMgdmFsdWFibGUgYWR2aWNlLiBTaGUgaGFzIHNhdmVkIG1lIG1vbmV5IGJ1eSBzdWdnZXN0aW5nIG90aGVyIG9wdGlvbnMgdGhhdCBJIHdhcyBub3QgYXdhcmUgb2YuIEl0IGNhbiBiZSBoYXJkIHRvIGZpbmQgYSBncmVhdCBkZW50aXN0LiBIZXJlIHlvdSB3aWxsIG5vdCBvbmx5IGZpbmQgYSBncmVhdCBkZW50aXN0IGJ1dCBhbHNvIGEgcmVhbGx5IGdyZWF0IHRlYW0gb2YgaHlnaWVuaXN0cyBhbmQgYWxsIGFyb3VuZCBncmVhdCBzdGFmZi4gSSBjb3VsZG4ndCBiZSBoYXBwaWVyIHdpdGggdGhlIHdvcmsgSSd2ZSBoYWQgZG9uZSBvdmVyIHRoZSB5ZWFycyBhbmQgSSBoaWdobHkgcmVjb21tZW5kIHNvdXRoZm9ydCBkZW50YWwgdG8gZXZlcnlvbmUhISA6KWQCEA9kFgICAQ8PZBYCHw8FATUWBgIBDxYCHwAFXTxpbWcgY2xhc3M9InJldmlldy1sb2dvIiBzcmM9Ii8vc3R5bGVzLnByb3NpdGVzLmNvbS9pbWFnZXMvUGF0aWVudFJldmlld3MvcHJvc2l0ZXMtc20ucG5nIiAvPmQCAw8PFgIfAAUPR2VtbWEsIEVkbW9udG9uZGQCBQ8WAh8ABRhHcmVhdCBkZW50aXN0cyBhbmQgY3JldyFkAgYPZBYCAgEPZBYCZg9kFgQCAQ8WAh8ABQ9PZmZpY2UgTG9jYXRpb25kAgMPFgIfAQL/////D2QCBw9kFgJmDxYCHwBlZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgU6Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRycHRyZXZpZXdTaXRlcyRjdGwwMCRyc0ltZ0J1dHRvbgU6Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRycHRyZXZpZXdTaXRlcyRjdGwwMSRyc0ltZ0J1dHRvbuvP/DNAMbCwr2mQmMlpCkObX0CTH7Pme1U+RMWyCGkF">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="//ajax.aspnetcdn.com/ajax/4.5.2/1/WebForms.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+window.WebForm_PostBackOptions||document.write('<script type="text/javascript" src="/WebResource.axd?d=s3sjimUM1PRUKo_dmX54ntNiSaRwRbQT2BOsGiicJ2sRDbOzSLpUEAcdRgi1gfpI_sIlYGUTgvp1xOISknEMwztS7Ez3opMgJkiVNLRcIYQ1&amp;t=638901284248157332"><\/script>');//]]>
+</script>
+
+
+
+<script src="//ajax.aspnetcdn.com/ajax/4.5.2/1/WebUIValidation.js" type="text/javascript"></script>
+<script src="//ajax.aspnetcdn.com/ajax/4.5.1/1/MicrosoftAjax.js" type="text/javascript"></script>
+<script src="//ajax.aspnetcdn.com/ajax/4.5.1/1/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+        <div class="container">
+            <nav id="nav" role="navigation">
+                <a href="javascript:delete_cookie('ADA')"><i class="fa fa-undo" aria-hidden="true"></i> Back to main site</a>
+                <a href="#header" class="skip-link"><i class="fa fa-caret-down" aria-hidden="true"></i> Skip navigation</a>
+                
+             <ul class="sm sm-blue" id="main-menu" data-smartmenus-id="17830449246435637"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl01_li">
+                            <a href="/" id="ctl00_navigation_MenuRepeater_ctl01_atag" title="Welcome">Welcome</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl02_li">
+                            <a href="/our-practice/" id="ctl00_navigation_MenuRepeater_ctl02_atag" title="Our Practice" class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-1" aria-expanded="false"><span class="sub-arrow">+</span>Our Practice</a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-1" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl02_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl02_ctl00_ctl01_li">
+                            <a href="/our-practice/meet-the-doctors/" id="ctl00_navigation_MenuRepeater_ctl02_ctl00_ctl01_atag" title="Meet The Doctors">Meet The Doctors</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl02_ctl00_ctl02_li">
+                            <a href="/our-practice/meet-the-team/" id="ctl00_navigation_MenuRepeater_ctl02_ctl00_ctl02_atag" title="Meet The Team">Meet The Team</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_li">
+                            <a href="/procedures/" id="ctl00_navigation_MenuRepeater_ctl03_atag" title="Procedures" class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-2" aria-expanded="false"><span class="sub-arrow">+</span>Procedures</a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-2" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl03_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_li">
+                            <a href="/procedures/cleanings-prevention/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_atag" title="Cleanings &amp; Prevention" class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-3" aria-expanded="false"><span class="sub-arrow">+</span>Cleanings &amp; Prevention</a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-3" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl01_li">
+                            <a href="/procedures/cleanings-prevention/digital-radiographs/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl01_atag" title="Digital Radiographs">Digital Radiographs</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl02_li">
+                            <a href="/procedures/cleanings-prevention/caring-for-athletic-mouth-guards/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl02_atag" title="Caring for Athletic Mouth Guards">Caring for Athletic Mouth Guards</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl03_li">
+                            <a href="/procedures/cleanings-prevention/intraoral-cameras/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl03_atag" title="Intraoral Cameras">Intraoral Cameras</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl04_li">
+                            <a href="/procedures/cleanings-prevention/simple-tooth-extractions/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl04_atag" title="Simple Tooth Extractions">Simple Tooth Extractions</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl05_li">
+                            <a href="/procedures/cleanings-prevention/fluoride-treatment/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl05_atag" title="Fluoride Treatment">Fluoride Treatment</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl06_li">
+                            <a href="/procedures/cleanings-prevention/oral-cancer-exam/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl06_atag" title="Oral Cancer Exam">Oral Cancer Exam</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl07_li">
+                            <a href="/procedures/cleanings-prevention/sealants/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl07_atag" title="Sealants">Sealants</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl08_li">
+                            <a href="/procedures/cleanings-prevention/dental-exams-cleanings/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl08_atag" title="Dental Exams &amp; Cleanings">Dental Exams &amp; Cleanings</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl09_li">
+                            <a href="/procedures/cleanings-prevention/digital-x-rays/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl09_atag" title="Digital X-Rays">Digital X-Rays</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl10_li">
+                            <a href="/procedures/cleanings-prevention/home-care/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl10_atag" title="Home Care">Home Care</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl11_li">
+                            <a href="/procedures/cleanings-prevention/how-to-properly-brush-floss/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl01_ctl00_ctl11_atag" title="How to Properly Brush &amp; Floss">How to Properly Brush &amp; Floss</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl02_li">
+                            <a href="/procedures/dental-implants/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl02_atag" title="Dental Implants">Dental Implants</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_li">
+                            <a href="/procedures/cosmetic-dentistry/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_atag" title="Cosmetic Dentistry" class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-4" aria-expanded="false"><span class="sub-arrow">+</span>Cosmetic Dentistry</a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-4" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_ctl00_ctl01_li">
+                            <a href="/procedures/cosmetic-dentistry/teeth-whitening/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_ctl00_ctl01_atag" title="Teeth Whitening">Teeth Whitening</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_ctl00_ctl02_li">
+                            <a href="/procedures/cosmetic-dentistry/composite-fillings/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_ctl00_ctl02_atag" title="Composite Fillings">Composite Fillings</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_ctl00_ctl03_li">
+                            <a href="/procedures/cosmetic-dentistry/porcelain-crowns-caps/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_ctl00_ctl03_atag" title="Porcelain Crowns (Caps)">Porcelain Crowns (Caps)</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_ctl00_ctl04_li">
+                            <a href="/procedures/cosmetic-dentistry/porcelain-fixed-bridges/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_ctl00_ctl04_atag" title="Porcelain Fixed Bridges">Porcelain Fixed Bridges</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_ctl00_ctl05_li">
+                            <a href="/procedures/cosmetic-dentistry/porcelain-veneers/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl03_ctl00_ctl05_atag" title="Porcelain Veneers">Porcelain Veneers</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_li">
+                            <a href="/procedures/periodontal-disease/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_atag" title="Periodontal Disease" class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-5" aria-expanded="false"><span class="sub-arrow">+</span>Periodontal Disease</a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-5" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_ctl00_ctl01_li">
+                            <a href="/procedures/periodontal-disease/mouth-body-connection/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_ctl00_ctl01_atag" title="Mouth - Body Connection">Mouth - Body Connection</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_ctl00_ctl02_li">
+                            <a href="/procedures/periodontal-disease/what-is-periodontal-gum-disease/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_ctl00_ctl02_atag" title="What is Periodontal (Gum) Disease?">What is Periodontal (Gum) Disease?</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_ctl00_ctl03_li">
+                            <a href="/procedures/periodontal-disease/diagnosis/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_ctl00_ctl03_atag" title="Diagnosis">Diagnosis</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_ctl00_ctl04_li">
+                            <a href="/procedures/periodontal-disease/treatment/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_ctl00_ctl04_atag" title="Treatment">Treatment</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_ctl00_ctl05_li">
+                            <a href="/procedures/periodontal-disease/maintenance/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl04_ctl00_ctl05_atag" title="Maintenance">Maintenance</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_li">
+                            <a href="/procedures/restorations/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_atag" title="Restorations" class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-6" aria-expanded="false"><span class="sub-arrow">+</span>Restorations</a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-6" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_ctl00_ctl01_li">
+                            <a href="/procedures/restorations/root-canal-therapy/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_ctl00_ctl01_atag" title="Root Canal Therapy">Root Canal Therapy</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_ctl00_ctl02_li">
+                            <a href="/procedures/restorations/composite-fillings/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_ctl00_ctl02_atag" title="Composite Fillings">Composite Fillings</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_ctl00_ctl03_li">
+                            <a href="/procedures/restorations/crowns-caps/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_ctl00_ctl03_atag" title="Crowns (Caps)">Crowns (Caps)</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_ctl00_ctl04_li">
+                            <a href="/procedures/restorations/dentures-partial-dentures/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_ctl00_ctl04_atag" title="Dentures &amp; Partial Dentures">Dentures &amp; Partial Dentures</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_ctl00_ctl05_li">
+                            <a href="/procedures/restorations/fixed-bridges/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl05_ctl00_ctl05_atag" title="Fixed Bridges">Fixed Bridges</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl06_li">
+                            <a href="/procedures/orthodontics/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl06_atag" title="Orthodontics" class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-7" aria-expanded="false"><span class="sub-arrow">+</span>Orthodontics</a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-7" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl06_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl06_ctl00_ctl01_li">
+                            <a href="/procedures/orthodontics/invisalign®/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl06_ctl00_ctl01_atag" title="Invisalign®">Invisalign®</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl07_li">
+                            <a href="/procedures/oral-surgery/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl07_atag" title="Oral Surgery" class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-8" aria-expanded="false"><span class="sub-arrow">+</span>Oral Surgery</a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-8" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl07_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl07_ctl00_ctl01_li">
+                            <a href="/procedures/oral-surgery/tooth-extractions/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl07_ctl00_ctl01_atag" title="Tooth Extractions">Tooth Extractions</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl07_ctl00_ctl02_li">
+                            <a href="/procedures/oral-surgery/bone-grafting/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl07_ctl00_ctl02_atag" title="Bone Grafting">Bone Grafting</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl08_li">
+                            <a href="/procedures/prosthodontics/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl08_atag" title="Prosthodontics" class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-9" aria-expanded="false"><span class="sub-arrow">+</span>Prosthodontics</a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-9" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl08_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl08_ctl00_ctl01_li">
+                            <a href="/procedures/prosthodontics/crowns-caps/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl08_ctl00_ctl01_atag" title="Crowns (Caps)">Crowns (Caps)</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl08_ctl00_ctl02_li">
+                            <a href="/procedures/prosthodontics/dentures-partial-dentures/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl08_ctl00_ctl02_atag" title="Dentures &amp; Partial Dentures">Dentures &amp; Partial Dentures</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl08_ctl00_ctl03_li">
+                            <a href="/procedures/prosthodontics/fixed-bridges/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl08_ctl00_ctl03_atag" title="Fixed Bridges">Fixed Bridges</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl09_li">
+                            <a href="/procedures/pediatric-dentistry/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl09_atag" title="Pediatric Dentistry" class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-10" aria-expanded="false"><span class="sub-arrow">+</span>Pediatric Dentistry</a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-10" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl09_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl09_ctl00_ctl01_li">
+                            <a href="/procedures/pediatric-dentistry/first-visit/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl09_ctl00_ctl01_atag" title="First Visit">First Visit</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl09_ctl00_ctl02_li">
+                            <a href="/procedures/pediatric-dentistry/mouth-guards/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl09_ctl00_ctl02_atag" title="Mouth Guards">Mouth Guards</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl10_li">
+                            <a href="/procedures/dental-emergencies/" id="ctl00_navigation_MenuRepeater_ctl03_ctl00_ctl10_atag" title="Dental Emergencies">Dental Emergencies</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl04_li">
+                            <a href="/patient-information/" id="ctl00_navigation_MenuRepeater_ctl04_atag" title="Patient Information " class="has-submenu" aria-haspopup="true" aria-controls="sm-17830449246435637-11" aria-expanded="false"><span class="sub-arrow">+</span>Patient Information </a>
+                            
+             <ul class="dropdown-menu" id="sm-17830449246435637-11" role="group" aria-hidden="true" aria-labelledby="ctl00_navigation_MenuRepeater_ctl04_atag" aria-expanded="false"> 
+       
+                        <li id="ctl00_navigation_MenuRepeater_ctl04_ctl00_ctl01_li">
+                            <a href="/patient-information-/dental-videos/" id="ctl00_navigation_MenuRepeater_ctl04_ctl00_ctl01_atag" title="Dental Videos">Dental Videos</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl04_ctl00_ctl02_li">
+                            <a href="/patient-information-/faqs/" id="ctl00_navigation_MenuRepeater_ctl04_ctl00_ctl02_atag" title="FAQs">FAQs</a>
+                            
+                        </li>
+        
+            </ul>
+     
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl05_li">
+                            <a href="/leave-a-review/" id="ctl00_navigation_MenuRepeater_ctl05_atag" title="Leave A Review">Leave A Review</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl06_li">
+                            <a href="/testimonials/" id="ctl00_navigation_MenuRepeater_ctl06_atag" title="Testimonials">Testimonials</a>
+                            
+                        </li>
+        
+                        <li id="ctl00_navigation_MenuRepeater_ctl07_li">
+                            <a href="/contact/" id="ctl00_navigation_MenuRepeater_ctl07_atag" title="Contact">Contact</a>
+                            
+                        </li>
+        
+            </ul>
+         
+
+
+                <br>
+                <span><i class="fa fa-text-height" aria-hidden="true"></i> Text size: </span>
+                <div class="hidden" id="textSizeIcon">Change Text Size</div>
+                <input type="button" value="Small" aria-describedby="textSizeIcon" class="resize-to-small-text" name="small-button" id="small-text-button">
+                <input type="button" value="Medium" aria-describedby="textSizeIcon" class="resize-to-medium-text" name="medium-button" id="medium-text-button">
+                <input type="button" value="Large" aria-describedby="textSizeIcon" class="resize-to-large-text" name="large-button" id="large-text-button">
+                <input type="button" value="Extra large" aria-describedby="textSizeIcon" class="resize-to-extra-large-text" name="extra-large-button" id="extra-large-text-button">
+            </nav>
+            <header id="header" role="document">
+                <hr>
+                <a href="#main" class="skip-link"><i class="fa fa-caret-down" aria-hidden="true"></i> Skip header</a>
+                
+<div id="pnlheader">
+	
+    <div id="ctl00_ctl11_CompTitle1" class="compTitle1Large">Southfort Dental Centre</div>
+    <div id="ctl00_ctl11_CompTitle2" class="compTitle2Medium">Patient First Family Dentistry</div>
+    <div id="ctl00_ctl11_CompTitle3" class="compTitle3Small">Creating Beautiful Smiles!</div>
+    
+</div>
+
+                <a href="tel:(780) 998-1759" id="ctl00_phoneControl_TelHyperlink" rel="nofollow">
+    <div id="ctl00_phoneControl_pnlTextBased" class="seoPhone">
+	
+        <span class="span1">Call </span><span class="span2 number">(780) 998-1759</span>
+    
+</div>
+    <span id="phspan" style="display:none;">
+        <img id="ctl00_phoneControl_ImageFlarePhone1" src="" alt="(780) 998-1759">
+    </span>
+</a>
+
+<span class="number" id="fs" style="display:none;">
+    (780) 998-1759
+    <input type="hidden" name="ctl00$phoneControl$phfs" id="ctl00_phoneControl_phfs">
+    <input type="hidden" name="ctl00$phoneControl$phimg" id="ctl00_phoneControl_phimg">
+</span>
+
+
+
+
+
+
+
+
+                <hr>
+            </header>
+            <main id="main" role="main">     
+                <a href="#footer" class="skip-link"> Skip main content</a>   
+                
+                
+  <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$sm', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+<div class="page-reviews">
+
+    <div class="form plugin-review-form" id="showreview">
+        <span id="ctl00_ContentPlaceHolder1_LiteralIntro" class="page-intro"><p>We strive to provide the best possible care and service for our patients. Please leave a review to let us know how we are doing and to share your experience with others.</p></span>
+    
+
+<!--Post Review /////////////////////////////////////////////////////////////////////////////////////////-->
+            <h2 class="reviews-heading one">Write your Review:</h2>
+            <h3 class="padding-top block">Your Star Rating:</h3>
+
+            <div class="page-item newRating">
+            <fieldset class="starnote"><legend>Select a star rating button by clicking directly on a star or selecting a button with "enter"
+                <br>1 – 5, where 5 = great! and 1 = really bad</legend>
+                <div id="newRating" class="jq-ry-container" style="width: 220px;">
+
+<div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="40px" height="40px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="40px" height="40px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="40px" height="40px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="40px" height="40px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="40px" height="40px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+                <input class="rating-1" value="1 star" type="button">
+                <input class="rating-2" value="2 stars" type="button">
+                <input class="rating-3" value="3 stars" type="button">
+                <input class="rating-4" value="4 stars" type="button">
+                <input class="rating-5" value="5 stars" type="button">
+                <div class="selectstarnote"></div>
+            </fieldset>
+            <span id="ctl00_ContentPlaceHolder1_CustomValidator2" class="valMessage padding" style="visibility:hidden;">Please select a rating from 1 to 5 stars!</span>
+        </div>
+                <!--<input name="ctl00$ContentPlaceHolder1$text1" type="text" id="text1" />-->
+
+            <div class="page-item">
+                 <fieldset>
+                     <legend>Please provide a review of your experience with us:</legend>
+                <label>
+                    Write your review here
+                <textarea name="ctl00$ContentPlaceHolder1$txtComment" rows="5" cols="20" id="txtComment" class="qcformcolor reviewtextarea" onpaste="return false;" placeholder="Leave a comment to share your experience with others."></textarea>
+                
+                </label>
+                <div id="pnlCaptcha">
+                    <div class="textarea_feedback">1000 characters remaining</div>
+                </div>
+                <span id="ctl00_ContentPlaceHolder1_rfvComment" class="valMessage" style="display:none;">Comment is Required</span>
+                </fieldset>
+            </div>
+
+            <div class="fieldswrap page-item">
+                <h2 class="reviews-heading two">Your Info:</h2>
+                <span class="smalltext">Only Type your First Name and Last Initial (Ex. John D.) </span>
+                <br>
+                <fieldset class="col1">
+                    <legend>Please provide your information to associate with your review:</legend>
+                    <label>Name <br><input name="ctl00$ContentPlaceHolder1$txtName" type="text" id="txtName" class="qcformcolor" placeholder="Name:"></label>
+                     <span id="ctl00_ContentPlaceHolder1_rfvName" class="valMessage" style="display:none;">Name is Required</span>
+                    <br>
+                    <label>City <br><input name="ctl00$ContentPlaceHolder1$txtCity" type="text" id="txtCity" class="qcformcolor" placeholder="City:"></label>
+                     <span id="ctl00_ContentPlaceHolder1_rfvCity" class="valMessage" style="display:none;">City is Required</span>
+                    <br>
+                    <label>Email <br><input name="ctl00$ContentPlaceHolder1$txtEmail" id="txtEmail" class="qcformcolor" type="email" placeholder="Email"></label>
+                    <span id="ctl00_ContentPlaceHolder1_rfvEmail" class="valMessage" style="display:none;">Email is Required</span>
+                </fieldset>
+                <div class="btn-row" id="CaptchaBaseControl1_SendButtonDiv">      
+                    <input type="button" name="ctl00$ContentPlaceHolder1$show" value="Submit" onclick="return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$show&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="show" class="Button">
+                    <span class="smalltext disclaimer">By clicking <strong>Submit,</strong> I authorize the sharing of my name and review on the Web. (email will not be shared)</span>
+                </div>
+            </div>
+        </div>
+    
+<div id="dialog-message" title="Important information" class="thankyouDialog" style="display:none;">
+    <span class="ui-state-default"><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 0 0;"></span></span>
+        <p>
+            Thank you for your feedback
+        </p>
+        <p>
+            <span id="ctl00_ContentPlaceHolder1_lblReviewToEmail">A copy of your review has been sent to the Doctor's email.</span>
+        </p>
+</div>
+
+<!--Share Review /////////////////////////////////////////////////////////////////////////////////////////-->
+        <div class="sharereview">
+            <h2 class="section-heading"> Thank you for your review!</h2>
+            <!--<p class="subsection-heading">Please take a moment to copy and paste your review on our social networks:</p>
+                                       <textarea id="txtComment2" spellcheck="false" rows="5" cols="62" autocapitalize="off" autocorrect="off" autocomplete="off"></textarea>
+            <div class="form-actions">
+                 <input class="Button" id="copyClipboard" data-clipboard-target="#txtComment2" type="Button" value="Copy Review to Clipboard" data-clipboard-target="#bar" />
+            </div>
+            <div class="page-item">
+                 <p class="subsection-heading">Choose the social network site you would like to share on: </p>
+                <ul class="smlogos">
+                
+                     <li>
+                        <input type="image" name="ctl00$ContentPlaceHolder1$rptreviewSites$ctl00$rsImgButton" id="ctl00_ContentPlaceHolder1_rptreviewSites_ctl00_rsImgButton" class="logo border-color" src="/images/icons/GooglePluslogo.png" onclick="window.open(&#39;https://www.google.com/search?q=(780)+998-1759&amp;rlz=1C1GCEA_enUS1041US1041&amp;oq=(780)+998-1759&amp;aqs=chrome..69i57.1029j0j7&amp;sourceid=chrome&amp;ie=UTF-8#lrd=0x53a0477b5072e889:0x233ef41da24976c3,3,,,,&#39;,&#39;_blank&#39;);return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$rptreviewSites$ctl00$rsImgButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" />
+                        
+                    </li> 
+                    
+                     <li>
+                        <input type="image" name="ctl00$ContentPlaceHolder1$rptreviewSites$ctl01$rsImgButton" id="ctl00_ContentPlaceHolder1_rptreviewSites_ctl01_rsImgButton" class="logo border-color" src="/images/icons/Facebooklogo.png" onclick="window.open(&#39;https://www.facebook.com/southfortdental&#39;,&#39;_blank&#39;);return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$rptreviewSites$ctl01$rsImgButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" />
+                        
+                    </li> 
+                    
+                </ul>
+            </div>
+             <div id="ctl00_ContentPlaceHolder1_pnlOtherReviewSites" class="page-item otherReviewSites">
+	
+               <p class="subsection-heading">We also appreciate reviews on the following:</p>
+                <ul>
+                
+               </ul>
+            
+</div>-->
+        </div>
+    <!--<script type="text/javascript">
+        //new Clipboard('#copyClipboard');
+    </script>-->
+<!--Sample Reviews/////////////////////////////////////////////////////////////////////////////////////////-->
+                        <div id="ctl00_ContentPlaceHolder1_PnlOtherReviews" class="samplereviews">
+	
+                            <p class="h4 mb-4"><span id="ctl00_ContentPlaceHolder1_lblReadWhat">Read what other patients have said about us:</span></p>
+                            <div class="samplereviewsfeed" id="feed">
+                                <div id="table-demo">                      
+                                    
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl00_pitem" class="page-item" rating="5" style="display: block;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl00_revNameandCity" class="reviewername">Joan, Fort Saskatchewan</span>
+                                                
+                                                <p>I’ve been going to Southfort Dental for many years and am very happy with every aspect of their business; everyone is friendly and helpful. Whether it is for a cleaning, checkup or dental work the staff make me feel at ease and are gentle and honest. I would recommend Dr. Roque to anyone looking for a dentist.</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl01_pitem" class="page-item" rating="5" style="display: block;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl01_revNameandCity" class="reviewername">Greg, Fort Saskatchewan </span>
+                                                
+                                                <p>Tristan is very thorough and extremely patient. I’m always pleased with my service. </p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl02_pitem" class="page-item" rating="5" style="display: block;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl02_revNameandCity" class="reviewername">Dustin, Fort saskatchewan </span>
+                                                
+                                                <p>One of the best dental clinics I have been to. Super amazing dentists and the staff is so helpful and cheerful. Making every visit one to remember. Highly recommend. Great vibes !!!</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl03_pitem" class="page-item" rating="5" style="display: block;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl03_revNameandCity" class="reviewername">Heather Somerville, Edmonton</span>
+                                                
+                                                <p>Dr Roque and team seriously are the best! Professional but also so kind and patient. From the minute you walk in Paige at the desk is friendly and ready to help. Trystan the hygienist is on a mission to get your teeth clean while making you laugh in the chair and last but not least Allison assisting Dr. Roque closely to make sure the visit runs smoothly and she's so nice too! Dr. Roque is the best! I would highly recommend this dental practice! 
+</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl04_pitem" class="page-item" rating="5" style="display: block;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl04_revNameandCity" class="reviewername">Melissa McNabb , Mclennan, Alberta</span>
+                                                
+                                                <p>Southfort Dental has been my family's dentist for years now. We drive 5 hours just to see them and won't see any other dentists. We adore their hygienists as well. Everyone is so knowledgeable, kind and caring. You will not ever find a better dental office to go to. We love Southfort Dental it's definitely our number one choice #1!!!</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl05_pitem" class="page-item" rating="5" style="display: block;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl05_revNameandCity" class="reviewername">Helen D., Edmonton</span>
+                                                
+                                                <p>We have moved three times since we lived in Fort Saskatchewan and no matter where we live, Dr Ting and Southfort Dental will remain our constant. My husband called at 8:05 am today with a broken, infected tooth that had been a long weekend nightmare and by 3:00 pm same day, Dr Ting made it all go away. Never underestimate the comfort, security and excellent personal care a really good dentist and staff can provide!</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl06_pitem" class="page-item" rating="5" style="display: block;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl06_revNameandCity" class="reviewername">maryann kenopic, fort saskatchewan </span>
+                                                
+                                                <p>Absolutely the Best!!! Love Dr. McPhail she is the sweetest most talented dentist!!!</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl07_pitem" class="page-item" rating="5" style="display: block;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl07_revNameandCity" class="reviewername">Tijana Cvijic, St. Albert</span>
+                                                
+                                                <p>Dr. Roque and Dr. Radisic are absolutely amazing. I am so impressed with how well they have treated my entire family. They are so kind, gentle and honest and its always such a pleasant experience with them. </p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl08_pitem" class="page-item" rating="5" style="display: block;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl08_revNameandCity" class="reviewername">Craig, McLennan</span>
+                                                
+                                                <p>Always excellent service and knowledgeable, friendly staff! I time my yearly trip to civilization to coincide with a trip to Dr. MacPhail. My wife says Dr. MacPhail is the only dentist she trusts and my daughter loves going to visit them!</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl09_pitem" class="page-item" rating="5" style="display: block;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl09_revNameandCity" class="reviewername">Shanna H, Fort Saskatchewan </span>
+                                                
+                                                <p>They were absolutely fantastic with my son, he loves going to the dentist now!</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl10_pitem" class="page-item" rating="5" style="display: none;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl10_revNameandCity" class="reviewername">Nicki E, Fort Saskatchewan</span>
+                                                
+                                                <p>I have been a patient at SouthFort dental for 7 years. Dr. Radisic is an amazing  dentist. Overall, one of the kindness and most sincere people I've met. The staff are very friendly and the environment is relaxed. </p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl11_pitem" class="page-item" rating="5" style="display: none;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl11_revNameandCity" class="reviewername">Leah, Ardrossan</span>
+                                                
+                                                <p>Very friendly, and met all our needs!</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl12_pitem" class="page-item" rating="5" style="display: none;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl12_revNameandCity" class="reviewername">Steven, Saskatoon</span>
+                                                
+                                                <p>This clinic took the time to do a complete cleaning on my whole family. They have friendly staff and amazing service. Thank you Southfort Dental for the great experience.</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl13_pitem" class="page-item" rating="5" style="display: none;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl13_revNameandCity" class="reviewername">tamara p, fort Saskatchewan </span>
+                                                
+                                                <p>my 7 year old daughter and I get our teeth done here. I am so impressed with  the patience and care they provide. you feel like family when you walk in. I would highly recommend southfort dental!</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl14_pitem" class="page-item" rating="5" style="display: none;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl14_revNameandCity" class="reviewername">Deena S , Redwater</span>
+                                                
+                                                <p>Great experience! Professional, thorough and friendly!  </p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl15_pitem" class="page-item" rating="5" style="display: none;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl15_revNameandCity" class="reviewername">Cindy, Fort Saskatchewan</span>
+                                                
+                                                <p>The staff here are always very helpful and kind. I used to be very anxious going to the dentist, but after many great experiences here, I am not anymore. Dr.King takes the time to explain what needs to be done and provides valuable advice. She has saved me money buy suggesting other options that I was not aware of. It can be hard to find a great dentist. Here you will not only find a great dentist but also a really great team of hygienists and all around great staff. I couldn't be happier with the work I've had done over the years and I highly recommend southfort dental to everyone!! :)</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                        
+                                       
+                                            <div id="ctl00_ContentPlaceHolder1_OtherReviews_ctl16_pitem" class="page-item" rating="5" style="display: none;">
+		
+
+
+                                                <div class="starsrate">
+                                                                                                
+                                                <div id="rateYo" class="rateYo jq-ry-container" readonly="readonly" style="width: 145px;"><div class="jq-ry-group-wrapper"><div class="jq-ry-normal-group jq-ry-group"><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg><!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 12.705 512 486.59" x="0px" y="0px" xml:space="preserve" width="25px" height="25px" fill="gray" style="margin-left: 5px;"><polygon id="star-icon" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon></svg></div></div></div>
+
+                                                <div class="reviewersource"><img class="review-logo" src="//styles.prosites.com/images/PatientReviews/prosites-sm.png"></div>
+
+                                                </div>
+
+                                                <div class="commentcol">
+                                                    
+                                                <span id="ctl00_ContentPlaceHolder1_OtherReviews_ctl16_revNameandCity" class="reviewername">Gemma, Edmonton</span>
+                                                
+                                                <p>Great dentists and crew!</p><br>
+                                                
+                                                </div>
+
+
+                                            
+	</div>
+                          
+                                                      
+                                                                 
+                                 </div><div class="paging-nav"><a href="#" data-direction="-1" style="display: none;">&lt;&lt;</a><a href="#" data-page="0">1</a><a href="#" data-page="1">2</a><a href="#" data-direction="1">&gt;&gt;</a></div>
+                            </div>
+                        
+</div>
+                        <!--END-->
+        <br style="clear:both;">
+    </div>
+    
+
+<script type="text/javascript" src="/js/placeholders.min.js"></script>
+
+<script type="text/javascript">
+    //remove section if empty
+    $(document).ready(function () {
+        if ($.trim($('.page-item.otherReviewSites ul').text()) == "") {
+            $('.otherReviewSites .subsection-heading').remove();
+        }
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var text_max = 1000;
+        $('.textarea_feedback').html(text_max + ' characters remaining');
+
+        $('.reviewtextarea').keypress(function () {
+            if ($(this).val().length >= text_max) {
+                return false;
+            }
+
+        });
+        $('.reviewtextarea').keyup(function () {
+            var text_length = $('.reviewtextarea').val().length;
+            var text_remaining = text_max - text_length;
+
+            $('.textarea_feedback').html(text_remaining + ' characters remaining');
+        });
+    });
+</script>
+<script type="text/javascript">
+    $("#show").click(function () {
+        var rating = $("#newRating").rateYo("rating");
+        if (rating > 0) {
+            $('#text1').text(rating);
+        }
+        else {
+            $('#text1').text('');
+        }
+        Page_ClientValidate();
+        if (Page_IsValid) {
+            var cnt = {
+                StarRating: rating,
+                PatientName: $('#txtName').val(),
+                Text: $('#txtComment').val(),
+                City: $('#txtCity').val(),
+                Email: $('#txtEmail').val()
+            };
+            $.ajax({
+                type: 'POST',
+                url: '/lsSvc.asmx/AddReview',
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+
+
+                data: JSON.stringify({ 'review': cnt }),
+                success: function (msg) {
+                    // Replace the div's content with the page method's return.
+
+
+                },
+                fail: function (jqXHR, textStatus) {
+
+
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+
+            });
+            if (rating > 3) {
+                $("#showreview").fadeToggle("slow", function () {
+                    $(".sharereview").fadeToggle("slow");
+                    $('html, body').animate({ scrollTop: $(".page-reviews").offset().top - 200 }, 'slow');
+                    $('#txtComment2').val($('#txtComment').val());
+                });
+                return false;
+            }
+            else {
+                $("#showreview").fadeToggle("slow", function () {
+                    $(".thankyouDialog").fadeToggle("slow");
+                    $('html, body').animate({ scrollTop: $(".page-reviews").offset().top - 200 }, 'slow');
+
+                });
+                return false;
+                return false;
+            }
+        }
+
+        return true;
+    });
+</script>
+<script>
+    $(function () {
+        //$('#table-demo').paging({ limit: 10});
+        $('#table-demo').paging({
+            limit: 10,
+            rowDisplayStyle: 'block',
+            activePage: 0,
+            rows: []
+        });
+        $(".rateYo").rateYo({
+            spacing: "5px",
+            starWidth: "25px",
+            fullStar: true,
+            readOnly: true
+        });
+        $(".rateYo").each(function (i, el) {
+            var elem = $(el);
+            elem.rateYo("option", "rating", elem.closest('.page-item').attr('rating'));
+        })
+        $("#newRating").rateYo({
+            spacing: "5px",
+            starWidth: "40px",
+            fullStar: true,
+            rating: 0
+        });
+        $("#newRating").rateYo()
+            .on("rateyo.set", function (e, data) {
+                switch (data.rating) {
+                    case 1: txt = '1 Star - Terrible Experience!';
+                        break;
+                    case 2: txt = '2 Stars - Below Average Experience!';
+                        break;
+                    case 3: txt = '3 Stars - Average Experience!';
+                        break;
+                    case 4: txt = '4 Stars - Good Experience!';
+                        break;
+                    case 5: txt = '5 Stars - Great Experience!';
+                        break;
+                    default: txt = ''; break;
+                }
+                $('.selectstarnote').text(txt);
+            });
+
+    })
+    function validateLength(oSrc, args) {
+
+        args.IsValid = ($('#text1').text().length > 0);
+    }
+
+</script>
+<input name="__RequestVerificationToken" type="hidden" value="Jcqf7HxKFzW1Kg0cbROMR_bUBExSgUrO4bvF-KKcdPGQv7RaJ8_LjcKWMLDs4apDSgjY_caZ7Kf8PWAZ8GBKk2hKYAHOPM5AKtGOZq4CinM1">
+            </main>
+            <footer id="footer"> 
+                <hr>
+                
+                
+    
+
+
+
+
+                <hr>
+                <div role="contentinfo">
+                <p>Site Developed by <span class="footcolor">
+					<a href="http://www.prosites.com/" target="_blank">Prosites.com</a></span></p>
+                <a href="#nav" class="skip-link"><i class="fa fa-caret-up" aria-hidden="true"></i> Return to the top of the page</a>
+           </div> </footer>
+            
+
+
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_ContentPlaceHolder1_CustomValidator2"), document.getElementById("ctl00_ContentPlaceHolder1_rfvComment"), document.getElementById("ctl00_ContentPlaceHolder1_rfvName"), document.getElementById("ctl00_ContentPlaceHolder1_rfvCity"), document.getElementById("ctl00_ContentPlaceHolder1_rfvEmail"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ContentPlaceHolder1_CustomValidator2 = document.all ? document.all["ctl00_ContentPlaceHolder1_CustomValidator2"] : document.getElementById("ctl00_ContentPlaceHolder1_CustomValidator2");
+ctl00_ContentPlaceHolder1_CustomValidator2.controltovalidate = "text1";
+ctl00_ContentPlaceHolder1_CustomValidator2.errormessage = "Please select a rating from 1 to 5 stars!";
+ctl00_ContentPlaceHolder1_CustomValidator2.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_CustomValidator2.clientvalidationfunction = "validateLength";
+ctl00_ContentPlaceHolder1_CustomValidator2.validateemptytext = "true";
+var ctl00_ContentPlaceHolder1_rfvComment = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvComment"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvComment");
+ctl00_ContentPlaceHolder1_rfvComment.controltovalidate = "txtComment";
+ctl00_ContentPlaceHolder1_rfvComment.errormessage = "Comment is Required";
+ctl00_ContentPlaceHolder1_rfvComment.display = "Dynamic";
+ctl00_ContentPlaceHolder1_rfvComment.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvComment.initialvalue = "";
+var ctl00_ContentPlaceHolder1_rfvName = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvName"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvName");
+ctl00_ContentPlaceHolder1_rfvName.controltovalidate = "txtName";
+ctl00_ContentPlaceHolder1_rfvName.errormessage = "Name is Required";
+ctl00_ContentPlaceHolder1_rfvName.display = "Dynamic";
+ctl00_ContentPlaceHolder1_rfvName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvName.initialvalue = "";
+var ctl00_ContentPlaceHolder1_rfvCity = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvCity"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvCity");
+ctl00_ContentPlaceHolder1_rfvCity.controltovalidate = "txtCity";
+ctl00_ContentPlaceHolder1_rfvCity.errormessage = "City is Required";
+ctl00_ContentPlaceHolder1_rfvCity.display = "Dynamic";
+ctl00_ContentPlaceHolder1_rfvCity.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvCity.initialvalue = "";
+var ctl00_ContentPlaceHolder1_rfvEmail = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvEmail"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvEmail");
+ctl00_ContentPlaceHolder1_rfvEmail.controltovalidate = "txtEmail";
+ctl00_ContentPlaceHolder1_rfvEmail.errormessage = "Email is Required";
+ctl00_ContentPlaceHolder1_rfvEmail.display = "Dynamic";
+ctl00_ContentPlaceHolder1_rfvEmail.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvEmail.initialvalue = "";
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A01023FD">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_CustomValidator2'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvComment').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvComment'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvName'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvCity').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvCity'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvEmail').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvEmail'));
+}
+//]]>
+</script>
+</form>
+
+<script>/*! SmartMenus jQuery Plugin - v1.0.1 - November 1, 2016
+ * http://www.smartmenus.org/
+ * Copyright Vasil Dinkov, Vadikom Web Ltd. http://vadikom.com; Licensed MIT */(function(t){"function"==typeof define&&define.amd?define(["jquery"],t):"object"==typeof module&&"object"==typeof module.exports?module.exports=t(require("jquery")):t(jQuery)})(function($){function initMouseDetection(t){var e=".smartmenus_mouse";if(mouseDetectionEnabled||t)mouseDetectionEnabled&&t&&($(document).unbind(e),mouseDetectionEnabled=!1);else{var i=!0,s=null;$(document).bind(getEventsNS([["mousemove",function(t){var e={x:t.pageX,y:t.pageY,timeStamp:(new Date).getTime()};if(s){var o=Math.abs(s.x-e.x),a=Math.abs(s.y-e.y);if((o>0||a>0)&&2>=o&&2>=a&&300>=e.timeStamp-s.timeStamp&&(mouse=!0,i)){var n=$(t.target).closest("a");n.is("a")&&$.each(menuTrees,function(){return $.contains(this.$root[0],n[0])?(this.itemEnter({currentTarget:n[0]}),!1):void 0}),i=!1}}s=e}],[touchEvents?"touchstart":"pointerover pointermove pointerout MSPointerOver MSPointerMove MSPointerOut",function(t){isTouchEvent(t.originalEvent)&&(mouse=!1)}]],e)),mouseDetectionEnabled=!0}}function isTouchEvent(t){return!/^(4|mouse)$/.test(t.pointerType)}function getEventsNS(t,e){e||(e="");var i={};return $.each(t,function(t,s){i[s[0].split(" ").join(e+" ")+e]=s[1]}),i}var menuTrees=[],IE=!!window.createPopup,mouse=!1,touchEvents="ontouchstart"in window,mouseDetectionEnabled=!1,requestAnimationFrame=window.requestAnimationFrame||function(t){return setTimeout(t,1e3/60)},cancelAnimationFrame=window.cancelAnimationFrame||function(t){clearTimeout(t)};return $.SmartMenus=function(t,e){this.$root=$(t),this.opts=e,this.rootId="",this.accessIdPrefix="",this.$subArrow=null,this.activatedItems=[],this.visibleSubMenus=[],this.showTimeout=0,this.hideTimeout=0,this.scrollTimeout=0,this.clickActivated=!1,this.focusActivated=!1,this.zIndexInc=0,this.idInc=0,this.$firstLink=null,this.$firstSub=null,this.disabled=!1,this.$disableOverlay=null,this.$touchScrollingSub=null,this.cssTransforms3d="perspective"in t.style||"webkitPerspective"in t.style,this.wasCollapsible=!1,this.init()},$.extend($.SmartMenus,{hideAll:function(){$.each(menuTrees,function(){this.menuHideAll()})},destroy:function(){for(;menuTrees.length;)menuTrees[0].destroy();initMouseDetection(!0)},prototype:{init:function(t){var e=this;if(!t){menuTrees.push(this),this.rootId=((new Date).getTime()+Math.random()+"").replace(/\D/g,""),this.accessIdPrefix="sm-"+this.rootId+"-",this.$root.hasClass("sm-rtl")&&(this.opts.rightToLeftSubMenus=!0);var i=".smartmenus";this.$root.data("smartmenus",this).attr("data-smartmenus-id",this.rootId).dataSM("level",1).bind(getEventsNS([["mouseover focusin",$.proxy(this.rootOver,this)],["mouseout focusout",$.proxy(this.rootOut,this)],["keydown",$.proxy(this.rootKeyDown,this)]],i)).delegate("a",getEventsNS([["mouseenter",$.proxy(this.itemEnter,this)],["mouseleave",$.proxy(this.itemLeave,this)],["mousedown",$.proxy(this.itemDown,this)],["focus",$.proxy(this.itemFocus,this)],["blur",$.proxy(this.itemBlur,this)],["click",$.proxy(this.itemClick,this)]],i)),i+=this.rootId,this.opts.hideOnClick&&$(document).bind(getEventsNS([["touchstart",$.proxy(this.docTouchStart,this)],["touchmove",$.proxy(this.docTouchMove,this)],["touchend",$.proxy(this.docTouchEnd,this)],["click",$.proxy(this.docClick,this)]],i)),$(window).bind(getEventsNS([["resize orientationchange",$.proxy(this.winResize,this)]],i)),this.opts.subIndicators&&(this.$subArrow=$("<span/>").addClass("sub-arrow"),this.opts.subIndicatorsText&&this.$subArrow.html(this.opts.subIndicatorsText)),initMouseDetection()}if(this.$firstSub=this.$root.find("ul").each(function(){e.menuInit($(this))}).eq(0),this.$firstLink=this.$root.find("a").eq(0),this.opts.markCurrentItem){var s=/(index|default)\.[^#\?\/]*/i,o=/#.*/,a=window.location.href.replace(s,""),n=a.replace(o,"");this.$root.find("a").each(function(){var t=this.href.replace(s,""),i=$(this);(t==a||t==n)&&(i.addClass("current"),e.opts.markCurrentTree&&i.parentsUntil("[data-smartmenus-id]","ul").each(function(){$(this).dataSM("parent-a").addClass("current")}))})}this.wasCollapsible=this.isCollapsible()},destroy:function(t){if(!t){var e=".smartmenus";this.$root.removeData("smartmenus").removeAttr("data-smartmenus-id").removeDataSM("level").unbind(e).undelegate(e),e+=this.rootId,$(document).unbind(e),$(window).unbind(e),this.opts.subIndicators&&(this.$subArrow=null)}this.menuHideAll();var i=this;this.$root.find("ul").each(function(){var t=$(this);t.dataSM("scroll-arrows")&&t.dataSM("scroll-arrows").remove(),t.dataSM("shown-before")&&((i.opts.subMenusMinWidth||i.opts.subMenusMaxWidth)&&t.css({width:"",minWidth:"",maxWidth:""}).removeClass("sm-nowrap"),t.dataSM("scroll-arrows")&&t.dataSM("scroll-arrows").remove(),t.css({zIndex:"",top:"",left:"",marginLeft:"",marginTop:"",display:""})),0==(t.attr("id")||"").indexOf(i.accessIdPrefix)&&t.removeAttr("id")}).removeDataSM("in-mega").removeDataSM("shown-before").removeDataSM("ie-shim").removeDataSM("scroll-arrows").removeDataSM("parent-a").removeDataSM("level").removeDataSM("beforefirstshowfired").removeAttr("role").removeAttr("aria-hidden").removeAttr("aria-labelledby").removeAttr("aria-expanded"),this.$root.find("a.has-submenu").each(function(){var t=$(this);0==t.attr("id").indexOf(i.accessIdPrefix)&&t.removeAttr("id")}).removeClass("has-submenu").removeDataSM("sub").removeAttr("aria-haspopup").removeAttr("aria-controls").removeAttr("aria-expanded").closest("li").removeDataSM("sub"),this.opts.subIndicators&&this.$root.find("span.sub-arrow").remove(),this.opts.markCurrentItem&&this.$root.find("a.current").removeClass("current"),t||(this.$root=null,this.$firstLink=null,this.$firstSub=null,this.$disableOverlay&&(this.$disableOverlay.remove(),this.$disableOverlay=null),menuTrees.splice($.inArray(this,menuTrees),1))},disable:function(t){if(!this.disabled){if(this.menuHideAll(),!t&&!this.opts.isPopup&&this.$root.is(":visible")){var e=this.$root.offset();this.$disableOverlay=$('<div class="sm-jquery-disable-overlay"/>').css({position:"absolute",top:e.top,left:e.left,width:this.$root.outerWidth(),height:this.$root.outerHeight(),zIndex:this.getStartZIndex(!0),opacity:0}).appendTo(document.body)}this.disabled=!0}},docClick:function(t){return this.$touchScrollingSub?(this.$touchScrollingSub=null,void 0):((this.visibleSubMenus.length&&!$.contains(this.$root[0],t.target)||$(t.target).is("a"))&&this.menuHideAll(),void 0)},docTouchEnd:function(){if(this.lastTouch){if(!(!this.visibleSubMenus.length||void 0!==this.lastTouch.x2&&this.lastTouch.x1!=this.lastTouch.x2||void 0!==this.lastTouch.y2&&this.lastTouch.y1!=this.lastTouch.y2||this.lastTouch.target&&$.contains(this.$root[0],this.lastTouch.target))){this.hideTimeout&&(clearTimeout(this.hideTimeout),this.hideTimeout=0);var t=this;this.hideTimeout=setTimeout(function(){t.menuHideAll()},350)}this.lastTouch=null}},docTouchMove:function(t){if(this.lastTouch){var e=t.originalEvent.touches[0];this.lastTouch.x2=e.pageX,this.lastTouch.y2=e.pageY}},docTouchStart:function(t){var e=t.originalEvent.touches[0];this.lastTouch={x1:e.pageX,y1:e.pageY,target:e.target}},enable:function(){this.disabled&&(this.$disableOverlay&&(this.$disableOverlay.remove(),this.$disableOverlay=null),this.disabled=!1)},getClosestMenu:function(t){for(var e=$(t).closest("ul");e.dataSM("in-mega");)e=e.parent().closest("ul");return e[0]||null},getHeight:function(t){return this.getOffset(t,!0)},getOffset:function(t,e){var i;"none"==t.css("display")&&(i={position:t[0].style.position,visibility:t[0].style.visibility},t.css({position:"absolute",visibility:"hidden"}).show());var s=t[0].getBoundingClientRect&&t[0].getBoundingClientRect(),o=s&&(e?s.height||s.bottom-s.top:s.width||s.right-s.left);return o||0===o||(o=e?t[0].offsetHeight:t[0].offsetWidth),i&&t.hide().css(i),o},getStartZIndex:function(t){var e=parseInt(this[t?"$root":"$firstSub"].css("z-index"));return!t&&isNaN(e)&&(e=parseInt(this.$root.css("z-index"))),isNaN(e)?1:e},getTouchPoint:function(t){return t.touches&&t.touches[0]||t.changedTouches&&t.changedTouches[0]||t},getViewport:function(t){var e=t?"Height":"Width",i=document.documentElement["client"+e],s=window["inner"+e];return s&&(i=Math.min(i,s)),i},getViewportHeight:function(){return this.getViewport(!0)},getViewportWidth:function(){return this.getViewport()},getWidth:function(t){return this.getOffset(t)},handleEvents:function(){return!this.disabled&&this.isCSSOn()},handleItemEvents:function(t){return this.handleEvents()&&!this.isLinkInMegaMenu(t)},isCollapsible:function(){return"static"==this.$firstSub.css("position")},isCSSOn:function(){return"block"==this.$firstLink.css("display")},isFixed:function(){var t="fixed"==this.$root.css("position");return t||this.$root.parentsUntil("body").each(function(){return"fixed"==$(this).css("position")?(t=!0,!1):void 0}),t},isLinkInMegaMenu:function(t){return $(this.getClosestMenu(t[0])).hasClass("mega-menu")},isTouchMode:function(){return!mouse||this.opts.noMouseOver||this.isCollapsible()},itemActivate:function(t,e){var i=t.closest("ul"),s=i.dataSM("level");if(s>1&&(!this.activatedItems[s-2]||this.activatedItems[s-2][0]!=i.dataSM("parent-a")[0])){var o=this;$(i.parentsUntil("[data-smartmenus-id]","ul").get().reverse()).add(i).each(function(){o.itemActivate($(this).dataSM("parent-a"))})}if((!this.isCollapsible()||e)&&this.menuHideSubMenus(this.activatedItems[s-1]&&this.activatedItems[s-1][0]==t[0]?s:s-1),this.activatedItems[s-1]=t,this.$root.triggerHandler("activate.smapi",t[0])!==!1){var a=t.dataSM("sub");a&&(this.isTouchMode()||!this.opts.showOnClick||this.clickActivated)&&this.menuShow(a)}},itemBlur:function(t){var e=$(t.currentTarget);this.handleItemEvents(e)&&this.$root.triggerHandler("blur.smapi",e[0])},itemClick:function(t){var e=$(t.currentTarget);if(this.handleItemEvents(e)){if(this.$touchScrollingSub&&this.$touchScrollingSub[0]==e.closest("ul")[0])return this.$touchScrollingSub=null,t.stopPropagation(),!1;if(this.$root.triggerHandler("click.smapi",e[0])===!1)return!1;var i=$(t.target).is("span.sub-arrow"),s=e.dataSM("sub"),o=s?2==s.dataSM("level"):!1;if(s&&!s.is(":visible")){if(this.opts.showOnClick&&o&&(this.clickActivated=!0),this.itemActivate(e),s.is(":visible"))return this.focusActivated=!0,!1}else if(this.isCollapsible()&&i)return this.itemActivate(e),this.menuHide(s),!1;return this.opts.showOnClick&&o||e.hasClass("disabled")||this.$root.triggerHandler("select.smapi",e[0])===!1?!1:void 0}},itemDown:function(t){var e=$(t.currentTarget);this.handleItemEvents(e)&&e.dataSM("mousedown",!0)},itemEnter:function(t){var e=$(t.currentTarget);if(this.handleItemEvents(e)){if(!this.isTouchMode()){this.showTimeout&&(clearTimeout(this.showTimeout),this.showTimeout=0);var i=this;this.showTimeout=setTimeout(function(){i.itemActivate(e)},this.opts.showOnClick&&1==e.closest("ul").dataSM("level")?1:this.opts.showTimeout)}this.$root.triggerHandler("mouseenter.smapi",e[0])}},itemFocus:function(t){var e=$(t.currentTarget);this.handleItemEvents(e)&&(!this.focusActivated||this.isTouchMode()&&e.dataSM("mousedown")||this.activatedItems.length&&this.activatedItems[this.activatedItems.length-1][0]==e[0]||this.itemActivate(e,!0),this.$root.triggerHandler("focus.smapi",e[0]))},itemLeave:function(t){var e=$(t.currentTarget);this.handleItemEvents(e)&&(this.isTouchMode()||(e[0].blur(),this.showTimeout&&(clearTimeout(this.showTimeout),this.showTimeout=0)),e.removeDataSM("mousedown"),this.$root.triggerHandler("mouseleave.smapi",e[0]))},menuHide:function(t){if(this.$root.triggerHandler("beforehide.smapi",t[0])!==!1&&(t.stop(!0,!0),"none"!=t.css("display"))){var e=function(){t.css("z-index","")};this.isCollapsible()?this.opts.collapsibleHideFunction?this.opts.collapsibleHideFunction.call(this,t,e):t.hide(this.opts.collapsibleHideDuration,e):this.opts.hideFunction?this.opts.hideFunction.call(this,t,e):t.hide(this.opts.hideDuration,e),t.dataSM("ie-shim")&&t.dataSM("ie-shim").remove().css({"-webkit-transform":"",transform:""}),t.dataSM("scroll")&&(this.menuScrollStop(t),t.css({"touch-action":"","-ms-touch-action":"","-webkit-transform":"",transform:""}).unbind(".smartmenus_scroll").removeDataSM("scroll").dataSM("scroll-arrows").hide()),t.dataSM("parent-a").removeClass("highlighted").attr("aria-expanded","false"),t.attr({"aria-expanded":"false","aria-hidden":"true"});var i=t.dataSM("level");this.activatedItems.splice(i-1,1),this.visibleSubMenus.splice($.inArray(t,this.visibleSubMenus),1),this.$root.triggerHandler("hide.smapi",t[0])}},menuHideAll:function(){this.showTimeout&&(clearTimeout(this.showTimeout),this.showTimeout=0);for(var t=this.opts.isPopup?1:0,e=this.visibleSubMenus.length-1;e>=t;e--)this.menuHide(this.visibleSubMenus[e]);this.opts.isPopup&&(this.$root.stop(!0,!0),this.$root.is(":visible")&&(this.opts.hideFunction?this.opts.hideFunction.call(this,this.$root):this.$root.hide(this.opts.hideDuration),this.$root.dataSM("ie-shim")&&this.$root.dataSM("ie-shim").remove())),this.activatedItems=[],this.visibleSubMenus=[],this.clickActivated=!1,this.focusActivated=!1,this.zIndexInc=0,this.$root.triggerHandler("hideAll.smapi")},menuHideSubMenus:function(t){for(var e=this.activatedItems.length-1;e>=t;e--){var i=this.activatedItems[e].dataSM("sub");i&&this.menuHide(i)}},menuIframeShim:function(t){IE&&this.opts.overlapControlsInIE&&!t.dataSM("ie-shim")&&t.dataSM("ie-shim",$("<iframe/>").attr({src:"javascript:0",tabindex:-9}).css({position:"absolute",top:"auto",left:"0",opacity:0,border:"0"}))},menuInit:function(t){if(!t.dataSM("in-mega")){t.hasClass("mega-menu")&&t.find("ul").dataSM("in-mega",!0);for(var e=2,i=t[0];(i=i.parentNode.parentNode)!=this.$root[0];)e++;var s=t.prevAll("a").eq(-1);s.length||(s=t.prevAll().find("a").eq(-1)),s.addClass("has-submenu").dataSM("sub",t),t.dataSM("parent-a",s).dataSM("level",e).parent().dataSM("sub",t);var o=s.attr("id")||this.accessIdPrefix+ ++this.idInc,a=t.attr("id")||this.accessIdPrefix+ ++this.idInc;s.attr({id:o,"aria-haspopup":"true","aria-controls":a,"aria-expanded":"false"}),t.attr({id:a,role:"group","aria-hidden":"true","aria-labelledby":o,"aria-expanded":"false"}),this.opts.subIndicators&&s[this.opts.subIndicatorsPos](this.$subArrow.clone())}},menuPosition:function(t){var e,i,s=t.dataSM("parent-a"),o=s.closest("li"),a=o.parent(),n=t.dataSM("level"),r=this.getWidth(t),h=this.getHeight(t),u=s.offset(),l=u.left,c=u.top,d=this.getWidth(s),m=this.getHeight(s),p=$(window),f=p.scrollLeft(),v=p.scrollTop(),S=this.getViewportWidth(),b=this.getViewportHeight(),g=a.parent().is("[data-sm-horizontal-sub]")||2==n&&!a.hasClass("sm-vertical"),M=this.opts.rightToLeftSubMenus&&!o.is("[data-sm-reverse]")||!this.opts.rightToLeftSubMenus&&o.is("[data-sm-reverse]"),w=2==n?this.opts.mainMenuSubOffsetX:this.opts.subMenusSubOffsetX,T=2==n?this.opts.mainMenuSubOffsetY:this.opts.subMenusSubOffsetY;if(g?(e=M?d-r-w:w,i=this.opts.bottomToTopSubMenus?-h-T:m+T):(e=M?w-r:d-w,i=this.opts.bottomToTopSubMenus?m-T-h:T),this.opts.keepInViewport){var y=l+e,I=c+i;if(M&&f>y?e=g?f-y+e:d-w:!M&&y+r>f+S&&(e=g?f+S-r-y+e:w-r),g||(b>h&&I+h>v+b?i+=v+b-h-I:(h>=b||v>I)&&(i+=v-I)),g&&(I+h>v+b+.49||v>I)||!g&&h>b+.49){var x=this;t.dataSM("scroll-arrows")||t.dataSM("scroll-arrows",$([$('<span class="scroll-up"><span class="scroll-up-arrow"></span></span>')[0],$('<span class="scroll-down"><span class="scroll-down-arrow"></span></span>')[0]]).bind({mouseenter:function(){t.dataSM("scroll").up=$(this).hasClass("scroll-up"),x.menuScroll(t)},mouseleave:function(e){x.menuScrollStop(t),x.menuScrollOut(t,e)},"mousewheel DOMMouseScroll":function(t){t.preventDefault()}}).insertAfter(t));var C=".smartmenus_scroll";t.dataSM("scroll",{y:this.cssTransforms3d?0:i-m,step:1,itemH:m,subH:h,arrowDownH:this.getHeight(t.dataSM("scroll-arrows").eq(1))}).bind(getEventsNS([["mouseover",function(e){x.menuScrollOver(t,e)}],["mouseout",function(e){x.menuScrollOut(t,e)}],["mousewheel DOMMouseScroll",function(e){x.menuScrollMousewheel(t,e)}]],C)).dataSM("scroll-arrows").css({top:"auto",left:"0",marginLeft:e+(parseInt(t.css("border-left-width"))||0),width:r-(parseInt(t.css("border-left-width"))||0)-(parseInt(t.css("border-right-width"))||0),zIndex:t.css("z-index")}).eq(g&&this.opts.bottomToTopSubMenus?0:1).show(),this.isFixed()&&t.css({"touch-action":"none","-ms-touch-action":"none"}).bind(getEventsNS([[touchEvents?"touchstart touchmove touchend":"pointerdown pointermove pointerup MSPointerDown MSPointerMove MSPointerUp",function(e){x.menuScrollTouch(t,e)}]],C))}}t.css({top:"auto",left:"0",marginLeft:e,marginTop:i-m}),this.menuIframeShim(t),t.dataSM("ie-shim")&&t.dataSM("ie-shim").css({zIndex:t.css("z-index"),width:r,height:h,marginLeft:e,marginTop:i-m})},menuScroll:function(t,e,i){var s,o=t.dataSM("scroll"),a=t.dataSM("scroll-arrows"),n=o.up?o.upEnd:o.downEnd;if(!e&&o.momentum){if(o.momentum*=.92,s=o.momentum,.5>s)return this.menuScrollStop(t),void 0}else s=i||(e||!this.opts.scrollAccelerate?this.opts.scrollStep:Math.floor(o.step));var r=t.dataSM("level");if(this.activatedItems[r-1]&&this.activatedItems[r-1].dataSM("sub")&&this.activatedItems[r-1].dataSM("sub").is(":visible")&&this.menuHideSubMenus(r-1),o.y=o.up&&o.y>=n||!o.up&&n>=o.y?o.y:Math.abs(n-o.y)>s?o.y+(o.up?s:-s):n,t.add(t.dataSM("ie-shim")).css(this.cssTransforms3d?{"-webkit-transform":"translate3d(0, "+o.y+"px, 0)",transform:"translate3d(0, "+o.y+"px, 0)"}:{marginTop:o.y}),mouse&&(o.up&&o.y>o.downEnd||!o.up&&o.y<o.upEnd)&&a.eq(o.up?1:0).show(),o.y==n)mouse&&a.eq(o.up?0:1).hide(),this.menuScrollStop(t);else if(!e){this.opts.scrollAccelerate&&o.step<this.opts.scrollStep&&(o.step+=.2);var h=this;this.scrollTimeout=requestAnimationFrame(function(){h.menuScroll(t)})}},menuScrollMousewheel:function(t,e){if(this.getClosestMenu(e.target)==t[0]){e=e.originalEvent;var i=(e.wheelDelta||-e.detail)>0;t.dataSM("scroll-arrows").eq(i?0:1).is(":visible")&&(t.dataSM("scroll").up=i,this.menuScroll(t,!0))}e.preventDefault()},menuScrollOut:function(t,e){mouse&&(/^scroll-(up|down)/.test((e.relatedTarget||"").className)||(t[0]==e.relatedTarget||$.contains(t[0],e.relatedTarget))&&this.getClosestMenu(e.relatedTarget)==t[0]||t.dataSM("scroll-arrows").css("visibility","hidden"))},menuScrollOver:function(t,e){if(mouse&&!/^scroll-(up|down)/.test(e.target.className)&&this.getClosestMenu(e.target)==t[0]){this.menuScrollRefreshData(t);var i=t.dataSM("scroll"),s=$(window).scrollTop()-t.dataSM("parent-a").offset().top-i.itemH;t.dataSM("scroll-arrows").eq(0).css("margin-top",s).end().eq(1).css("margin-top",s+this.getViewportHeight()-i.arrowDownH).end().css("visibility","visible")}},menuScrollRefreshData:function(t){var e=t.dataSM("scroll"),i=$(window).scrollTop()-t.dataSM("parent-a").offset().top-e.itemH;this.cssTransforms3d&&(i=-(parseFloat(t.css("margin-top"))-i)),$.extend(e,{upEnd:i,downEnd:i+this.getViewportHeight()-e.subH})},menuScrollStop:function(t){return this.scrollTimeout?(cancelAnimationFrame(this.scrollTimeout),this.scrollTimeout=0,t.dataSM("scroll").step=1,!0):void 0},menuScrollTouch:function(t,e){if(e=e.originalEvent,isTouchEvent(e)){var i=this.getTouchPoint(e);if(this.getClosestMenu(i.target)==t[0]){var s=t.dataSM("scroll");if(/(start|down)$/i.test(e.type))this.menuScrollStop(t)?(e.preventDefault(),this.$touchScrollingSub=t):this.$touchScrollingSub=null,this.menuScrollRefreshData(t),$.extend(s,{touchStartY:i.pageY,touchStartTime:e.timeStamp});else if(/move$/i.test(e.type)){var o=void 0!==s.touchY?s.touchY:s.touchStartY;if(void 0!==o&&o!=i.pageY){this.$touchScrollingSub=t;var a=i.pageY>o;void 0!==s.up&&s.up!=a&&$.extend(s,{touchStartY:i.pageY,touchStartTime:e.timeStamp}),$.extend(s,{up:a,touchY:i.pageY}),this.menuScroll(t,!0,Math.abs(i.pageY-o))}e.preventDefault()}else void 0!==s.touchY&&((s.momentum=15*Math.pow(Math.abs(i.pageY-s.touchStartY)/(e.timeStamp-s.touchStartTime),2))&&(this.menuScrollStop(t),this.menuScroll(t),e.preventDefault()),delete s.touchY)}}},menuShow:function(t){if((t.dataSM("beforefirstshowfired")||(t.dataSM("beforefirstshowfired",!0),this.$root.triggerHandler("beforefirstshow.smapi",t[0])!==!1))&&this.$root.triggerHandler("beforeshow.smapi",t[0])!==!1&&(t.dataSM("shown-before",!0).stop(!0,!0),!t.is(":visible"))){var e=t.dataSM("parent-a");if((this.opts.keepHighlighted||this.isCollapsible())&&e.addClass("highlighted"),this.isCollapsible())t.removeClass("sm-nowrap").css({zIndex:"",width:"auto",minWidth:"",maxWidth:"",top:"",left:"",marginLeft:"",marginTop:""});else{if(t.css("z-index",this.zIndexInc=(this.zIndexInc||this.getStartZIndex())+1),(this.opts.subMenusMinWidth||this.opts.subMenusMaxWidth)&&(t.css({width:"auto",minWidth:"",maxWidth:""}).addClass("sm-nowrap"),this.opts.subMenusMinWidth&&t.css("min-width",this.opts.subMenusMinWidth),this.opts.subMenusMaxWidth)){var i=this.getWidth(t);t.css("max-width",this.opts.subMenusMaxWidth),i>this.getWidth(t)&&t.removeClass("sm-nowrap").css("width",this.opts.subMenusMaxWidth)}this.menuPosition(t),t.dataSM("ie-shim")&&t.dataSM("ie-shim").insertBefore(t)}var s=function(){t.css("overflow","")};this.isCollapsible()?this.opts.collapsibleShowFunction?this.opts.collapsibleShowFunction.call(this,t,s):t.show(this.opts.collapsibleShowDuration,s):this.opts.showFunction?this.opts.showFunction.call(this,t,s):t.show(this.opts.showDuration,s),e.attr("aria-expanded","true"),t.attr({"aria-expanded":"true","aria-hidden":"false"}),this.visibleSubMenus.push(t),this.$root.triggerHandler("show.smapi",t[0])}},popupHide:function(t){this.hideTimeout&&(clearTimeout(this.hideTimeout),this.hideTimeout=0);var e=this;this.hideTimeout=setTimeout(function(){e.menuHideAll()},t?1:this.opts.hideTimeout)},popupShow:function(t,e){if(!this.opts.isPopup)return alert('SmartMenus jQuery Error:\n\nIf you want to show this menu via the "popupShow" method, set the isPopup:true option.'),void 0;if(this.hideTimeout&&(clearTimeout(this.hideTimeout),this.hideTimeout=0),this.$root.dataSM("shown-before",!0).stop(!0,!0),!this.$root.is(":visible")){this.$root.css({left:t,top:e}),this.menuIframeShim(this.$root),this.$root.dataSM("ie-shim")&&this.$root.dataSM("ie-shim").css({zIndex:this.$root.css("z-index"),width:this.getWidth(this.$root),height:this.getHeight(this.$root),left:t,top:e}).insertBefore(this.$root);var i=this,s=function(){i.$root.css("overflow","")};this.opts.showFunction?this.opts.showFunction.call(this,this.$root,s):this.$root.show(this.opts.showDuration,s),this.visibleSubMenus[0]=this.$root}},refresh:function(){this.destroy(!0),this.init(!0)},rootKeyDown:function(t){if(this.handleEvents())switch(t.keyCode){case 27:var e=this.activatedItems[0];if(e){this.menuHideAll(),e[0].focus();var i=e.dataSM("sub");i&&this.menuHide(i)}break;case 32:var s=$(t.target);if(s.is("a")&&this.handleItemEvents(s)){var i=s.dataSM("sub");i&&!i.is(":visible")&&(this.itemClick({currentTarget:t.target}),t.preventDefault())}}},rootOut:function(t){if(this.handleEvents()&&!this.isTouchMode()&&t.target!=this.$root[0]&&(this.hideTimeout&&(clearTimeout(this.hideTimeout),this.hideTimeout=0),!this.opts.showOnClick||!this.opts.hideOnClick)){var e=this;this.hideTimeout=setTimeout(function(){e.menuHideAll()},this.opts.hideTimeout)}},rootOver:function(t){this.handleEvents()&&!this.isTouchMode()&&t.target!=this.$root[0]&&this.hideTimeout&&(clearTimeout(this.hideTimeout),this.hideTimeout=0)},winResize:function(t){if(this.handleEvents()){if(!("onorientationchange"in window)||"orientationchange"==t.type){var e=this.isCollapsible();this.wasCollapsible&&e||(this.activatedItems.length&&this.activatedItems[this.activatedItems.length-1][0].blur(),this.menuHideAll()),this.wasCollapsible=e}}else if(this.$disableOverlay){var i=this.$root.offset();this.$disableOverlay.css({top:i.top,left:i.left,width:this.$root.outerWidth(),height:this.$root.outerHeight()})}}}}),$.fn.dataSM=function(t,e){return e?this.data(t+"_smartmenus",e):this.data(t+"_smartmenus")},$.fn.removeDataSM=function(t){return this.removeData(t+"_smartmenus")},$.fn.smartmenus=function(options){if("string"==typeof options){var args=arguments,method=options;return Array.prototype.shift.call(args),this.each(function(){var t=$(this).data("smartmenus");t&&t[method]&&t[method].apply(t,args)})}var dataOpts=this.data("sm-options")||null;if(dataOpts)try{dataOpts=eval("("+dataOpts+")")}catch(e){dataOpts=null,alert('ERROR\n\nSmartMenus jQuery init:\nInvalid "data-sm-options" attribute value syntax.')}return this.each(function(){new $.SmartMenus(this,$.extend({},$.fn.smartmenus.defaults,options,dataOpts))})},$.fn.smartmenus.defaults={isPopup:!1,mainMenuSubOffsetX:0,mainMenuSubOffsetY:0,subMenusSubOffsetX:0,subMenusSubOffsetY:0,subMenusMinWidth:"10em",subMenusMaxWidth:"20em",subIndicators:!0,subIndicatorsPos:"prepend",subIndicatorsText:"+",scrollStep:30,scrollAccelerate:!0,showTimeout:250,hideTimeout:500,showDuration:0,showFunction:null,hideDuration:0,hideFunction:function(t,e){t.fadeOut(200,e)},collapsibleShowDuration:0,collapsibleShowFunction:function(t,e){t.slideDown(200,e)},collapsibleHideDuration:0,collapsibleHideFunction:function(t,e){t.slideUp(200,e)},showOnClick:!1,hideOnClick:!0,noMouseOver:!1,keepInViewport:!0,keepHighlighted:!0,markCurrentItem:!1,markCurrentTree:!0,rightToLeftSubMenus:!1,bottomToTopSubMenus:!1,overlapControlsInIE:!0},$});
+</script>
+<script>
+$(function() {
+    $('#main-menu').smartmenus({
+        subMenusSubOffsetX: 1,
+        subMenusSubOffsetY: -8
+    });
+});
+</script>
+<script src="/js/jquery.cookie.js"></script>
+<script>
+$(document).ready(function(){
+    if ($('.page-dentalvideos').length) {
+        $('body').attr('page-type','dental-videos')
+    }
+    $('.resize-to-small-text').click(function() {
+        $.cookie('ada-text-size', 'small', { path:'/'});
+           $('body').css('font-size','0.8em');
+    });
+    if ($.cookie('ada-text-size') === 'small') {
+           $('body').css('font-size','0.8em');
+       }
+    $('.resize-to-medium-text').click(function() {
+        $.cookie('ada-text-size', 'medium', { path:'/'});
+           $('body').css('font-size','1em');
+    });
+    if ($.cookie('ada-text-size') === 'medium') {
+           $('body').css('font-size','1em');
+       }
+    $('.resize-to-large-text').click(function() {
+        $.cookie('ada-text-size', 'large', { path:'/'});
+       $('body').css('font-size','1.2em');
+    });
+    if ($.cookie('ada-text-size') === 'large') {
+           $('body').css('font-size','1.2em');
+       }
+    $('.resize-to-extra-large-text').click(function() {
+        $.cookie('ada-text-size', 'extra-large', { path:'/'});
+       $('body').css('font-size','1.4em');
+    });
+    if ($.cookie('ada-text-size') === 'extra-large') {
+           $('body').css('font-size','1.4em');
+       }
+});
+</script>
+</body></html>
