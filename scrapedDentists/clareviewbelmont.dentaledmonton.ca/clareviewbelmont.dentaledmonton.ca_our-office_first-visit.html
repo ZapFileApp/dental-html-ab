@@ -1,0 +1,511 @@
+<!DOCTYPE html><html lang="en"><head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Dental Edmonton</title>
+
+		<meta name="description" content="">
+
+		<link rel="canonical" href="/">
+		<link rel="alternate" href="/" hreflang="en">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link rel="shortcut icon" type="image/x-icon" href="landing_favicon.ico">
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700i|Merriweather:400,400i,700,900" rel="stylesheet">
+
+		<!--jquery libs-->        
+		<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+
+		<!--[if lte IE 8]>
+		<script type="text/javascript" src="js/html5shiv.js"></script>
+		<script type="text/javascript" src="js/selectivizr.js"></script>
+		<script type="text/javascript" src="js/respond.min.js"></script>
+		<![endif]-->
+
+		<style>
+			* {
+				font-family: "Lato", "Arial", sans-serif;
+				-webkit-font-smoothing: antialiased;
+				letter-spacing: -0.5px;
+				box-sizing: border-box;
+				margin: 0;
+			}
+
+			.clearfix:after {
+				content:"\0020";
+				display:block;
+				clear:both;
+				visibility:hidden;
+				line-height:0;
+				height:0;
+			}
+			.clearfix{display:inline-block;}
+			html[xmlns] .clearfix, html .clearfix{display:block;}
+			* html .clearfix{height:1%;}
+
+			html,
+			body,
+			.container {
+				margin: 0;
+				height: 100%;
+			}
+
+			body {
+				position: relative;
+			}
+
+			.selected-branch {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background-position: center center;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity 0.6s ease-in;
+			}
+
+			.branch {
+				display: block;
+				float: left;
+				width: 50%;
+				background-size: cover;
+				height: 100%;
+				min-height: 700px;
+				padding: 20px 100px;
+				position: relative;
+				text-align: center;
+
+				opacity: 0;
+				-webkit-transition: opacity 0.4s ease-in, -webkit-transform 0.6s ease-out;
+				-moz-transition: opacity 0.4s ease-in, transform 0.6s ease-out;
+				-ms-transition: opacity 0.4s ease-in, transform 0.6s ease-out;
+				transition: opacity 0.4s ease-in, transform 0.6s ease-out;
+			}
+
+			.flossophy {
+				background: url('/images/landing/1920/flossophy_landingimage.jpg') center center no-repeat;
+				border-right: 1px solid #fff;
+			}
+
+			.flossophy.slide {
+				-webkit-transform: translateX(-100%);
+				-moz-transform: translateX(-100%);
+				-ms-transform: translateX(-100%);
+				transform: translateX(-100%);
+			}
+
+			.flossophy a:hover,
+			.clareview a:hover {
+				color: #333;
+			}
+
+			.clareview {
+				background: url('/images/landing/1920/clareviewbelmont_landingimage.jpg') center center no-repeat;
+			}
+
+			.clareview.slide {
+				-webkit-transform: translateX(100%);
+				-moz-transform: translateX(100%);
+				-ms-transform: translateX(100%);
+				transform: translateX(100%);
+			}
+
+			.branch .overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background: rgba(0, 0, 0, 0.75);
+				transition: background 0.3s ease-in;
+			}
+
+			.branch:hover .overlay {
+				background: rgba(0, 0, 0, 0);
+			}
+
+			.hover-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				opacity: 0;
+				background: url('/images/blue-texture.jpg');
+				transition: opacity 0.3s ease-in;
+			}
+
+			.branch:hover .hover-overlay {
+				opacity: 1;
+			}
+
+			.branch .content {
+				position: relative;
+
+				opacity: 0;
+				-webkit-transform: translateY(20px);
+				-moz-transform: translateY(20px);
+				-ms-transform: translateY(20px);
+				transform: translateY(20px);
+				-webkit-transition: opacity 0.6s ease-in, -webkit-transform 0.6s ease-out;
+				-moz-transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+				-ms-transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+				transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+			}
+
+			@media screen and (min-width: 769px) {
+				.branch .content {
+					margin-top: 300px !important;
+				}
+			}
+
+			.branch.animate {
+				opacity: 1;
+			}
+
+			.branch .content.animate {
+				opacity: 1;
+				-webkit-transform: translateY(0);
+				-moz-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+			}
+
+			.branch .content > a {
+				display: inline-block;
+				margin: 0 0 80px 0;
+			}
+
+			img {
+				max-width: 90%;
+				margin: 0 0 40px 0;
+			}
+
+			p {
+				color: #fff;
+				font-size: 18px;
+				padding: 0 0 10px 0;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+				transition: color 0.3s ease-in;
+			}
+
+			.text {
+				color: #fff;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 80px;
+				margin: 0 auto;
+				width: 500px;
+				max-width: 100%;
+				z-index: 999;
+				text-align: center;
+				text-shadow: 1px 2px 20px rgba(0, 0, 0, 1);
+
+				opacity: 0;
+				-webkit-transform: translateY(20px);
+				-moz-transform: translateY(20px);
+				-ms-transform: translateY(20px);
+				transform: translateY(20px);
+				-webkit-transition: opacity 0.6s ease-in, -webkit-transform 0.6s ease-out;
+				-moz-transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+				-ms-transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+				transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+			}
+
+			.text .container {
+				width: 100%;
+				position: relative;
+				height: 160px;
+			}
+
+			.text .container img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+
+				opacity: 0;
+				-webkit-transform: translateY(20px);
+				-moz-transform: translateY(20px);
+				-ms-transform: translateY(20px);
+				transform: translateY(20px);
+				-webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-out, background 0.3s ease-in, color 0.3s ease-in;
+				-moz-transition: opacity 0.3s ease-in, transform 0.3s ease-out, background 0.3s ease-in, color 0.3s ease-in;
+				-ms-transition: opacity 0.3s ease-in, transform 0.3s ease-out, background 0.3s ease-in, color 0.3s ease-in;
+				transition: opacity 0.3s ease-in, transform 0.3s ease-out, background 0.3s ease-in, color 0.3s ease-in;
+			}
+
+			.text .container img.animate {
+				opacity: 1;
+				-webkit-transform: translateY(0);
+				-moz-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+			}
+
+			.text.animate {
+				opacity: 1;
+				-webkit-transform: translateY(0);
+				-moz-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+			}
+
+			.text img {
+				margin: 0;
+				max-width: 100%;
+				vertical-align: top;
+			}
+
+			.text h1 {
+				font-size: 90px;
+				font-weight: 900;
+				font-style: italic;
+				line-height: 1em;
+			}
+
+			.select {
+				color: #fff;
+				font-weight: 700;
+				font-style: italic;
+				font-size: 21px;
+				padding: 25px 40px;
+				border: 1px solid #fff;
+				background: rgba(0, 0, 0, 0.25);
+				margin-top: 40px;
+				display: inline-block;
+
+				opacity: 0;
+				-webkit-transform: translateY(20px);
+				-moz-transform: translateY(20px);
+				-ms-transform: translateY(20px);
+				transform: translateY(20px);
+				-webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-out, background 0.3s ease-in, color 0.3s ease-in;
+				-moz-transition: opacity 0.3s ease-in, transform 0.3s ease-out, background 0.3s ease-in, color 0.3s ease-in;
+				-ms-transition: opacity 0.3s ease-in, transform 0.3s ease-out, background 0.3s ease-in, color 0.3s ease-in;
+				transition: opacity 0.3s ease-in, transform 0.3s ease-out, background 0.3s ease-in, color 0.3s ease-in;
+			}
+
+			.select:hover {
+				background: #fff;
+				color: #029ccf;
+			}
+
+			.branch:hover .select.animate {
+				opacity: 1;
+				-webkit-transform: translateY(0);
+				-moz-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+			}
+
+			@media screen and (max-width: 1366px) {
+				.text {}
+
+				.text img {
+					max-width: 360px;
+				}
+
+				.text h1 {
+					font-size: 72px;
+				}
+			}
+
+			@media screen and (max-width: 1024px) {
+				.text img {
+					max-width: 300px;
+				}
+			}
+
+			@media screen and (max-width: 768px) {
+				.branch {
+					float: none;
+					width: 100%;
+					height: 50%;
+					min-height: 400px;
+					padding: 20px;
+				}
+
+				.branch .overlay {
+					background: rgba(0, 0, 0, 0.6);
+				}
+
+				.flossophy {
+					border: none;
+					border-bottom: 1px solid #fff;
+				}
+
+				.branch .content > a {
+					margin: 0 0 30px 0;
+				}
+
+				img {
+					max-width: 80%;
+					margin: 0 0 20px 0;
+				}
+
+				.text {
+					position: relative;
+					top: 0 !important;
+					/*margin: -60px auto;*/
+					margin: -60px auto -100px auto;
+					width: 400px;
+				}
+
+				.text img {
+					max-height: 160px;
+					max-width: 100%;
+					width: auto;
+				}
+
+				.text h1 {
+					font-size: 60px;
+				}
+
+				.select {
+					display: none;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				.text {
+					width: 300px;
+				}
+
+				.text h1 {
+					font-size: 48px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="selected-branch"></div>
+		<div class="container clearfix">
+			<a href="https://flossophy.dentaledmonton.ca/" class="branch flossophy animate" data-branch="flossophy">
+				<div class="hover-overlay"></div>
+				<div class="overlay"><div class="content" style="margin-top: 385.2px;">
+	<img src="/images/flossophy_header_logo.png" alt="Flossophy Dental">
+
+	<p class="address">#218, 5540 Windermere Blvd NW, Edmonton, AB</p>
+	<p class="phone"><a href="tel:7803069333">(780) 306-9333</a></p>
+	<p class="email"><a href="mailto:info@flossophydental.ca">info@flossophydental.ca</a></p>
+</div>
+
+<div class="select">Select Location</div></div>
+			</a>
+
+			<div class="text">
+				<div class="container">
+					<img src="/images/plan.png" alt="Plan">
+					<img src="/images/to.png" alt="to">
+					<img src="/images/love.png" alt="Love">
+					<img src="/images/your.png" alt="Your">
+					<img src="/images/smile.png" alt="Smile">
+				</div>
+			</div>
+			
+			<a href="https://clareviewbelmont.dentaledmonton.ca/" class="branch clareview animate" data-branch="clareview">
+				<div class="hover-overlay"></div>
+				<div class="overlay"><div class="content" style="margin-top: 385.2px;">
+	<img src="/images/clareviewbelmont_landing_logo2.png" alt="Clareview Belmont Dental">
+
+	<p class="address">2911 137 Ave NW, Edmonton, AB</p>
+	<p class="phone"><a href="tel:7804755922">(780) 475-5922</a></p>
+	<p class="email"><a href="mailto:info@cbdental.ca">info@cbdental.ca</a></p>
+</div>
+
+<div class="select">Select Location</div></div>
+			</a>
+		</div>
+
+		<!--scripts-->
+		<script>
+			$(document).ready(function() {
+				$.ajax({
+					url: '/js/ajax/flossophy_landing.php',
+					type: 'post',
+					success: function(data){
+						$('.branch.flossophy .overlay').html(data);
+
+						$.ajax({
+							url: '/js/ajax/clareview_landing.php',
+							type: 'post',
+							success: function(data){
+								$('.branch.clareview .overlay').html(data);
+							}
+						});
+					}
+				});
+
+				branchContentHeight();
+
+				$(this).delay(1000).queue(function() {
+					branchContentHeight();
+
+					$('.branch').addClass('animate').delay(500).queue(function() {
+						$('.text').addClass('animate').delay(500).queue(function() {
+							var lcount = 0;
+
+							$('.text img').each(function() {
+								$(this).delay(lcount).queue(function() {
+									$(this).addClass('animate');
+								});
+
+								lcount += 200;
+							});
+
+							setTimeout(function () {
+								$('.branch .content').addClass('animate').delay(500).queue(function() {
+									$('.branch .select').addClass('animate');
+								});
+							}, 1000);
+						});
+					});
+				});
+			});
+
+			$(window).resize(function() {
+				branchContentHeight();
+			});
+
+			function branchContentHeight() {
+				$('.branch').each(function() {
+					var height = $(this).outerHeight(),
+					content = $(this).find('.content');
+
+					content.css('margin-top', 0).css('margin-top', (($(this).css('min-height') == '700px' ? 200 : 0) + (height - content.height()) / ($(this).css('min-height') == '700px' ? 2.5 : 2)) + 'px');
+				});
+			}
+
+			function middleTextHeight() {
+				var target = $('.text');
+
+				if(target.css('top') != '0px') {
+					target.css('top', (($('body').height() - target.height()) / 5) + 'px');
+				}
+			}
+
+			$('.branch').on('click', function(event) {
+				event.preventDefault();
+
+				$('.branch').addClass('slide');
+				$('.text').removeClass('animate');
+				$('body').css('overflow', 'hidden');
+
+				setTimeout(function () {
+					window.location.href = event.currentTarget.href;
+				}, 600);
+			});
+		</script>
+	<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;386f7ae290ae4a5c90fa9859e69d3c60&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+</body></html>

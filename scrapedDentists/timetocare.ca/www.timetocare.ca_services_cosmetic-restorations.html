@@ -1,0 +1,2161 @@
+<!DOCTYPE html><html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+        <style type="text/css">
+            iframe,
+            object,
+            embed {
+                /* position: absolute; */
+                width: 100%;
+                height: 100%;
+            }
+
+
+
+
+
+
+            /**
+             * NavBar Default Control
+             */
+            .navbar {
+                font-size: 14px !important;
+                font: 'Roboto', sans-serif;
+                padding: 0;
+                border: 1px solid;
+                line-height: 48px;
+            }
+            .navbar a{
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .navbar-nav{
+                
+            }
+            .dropdown-menu {
+                font-size: 14px !important;
+            }
+
+            #mainNav .navbar-nav .nav-item .nav-link {
+                /* font-size: 90%; */
+                font-weight: 400;
+                /* padding: 0.75em 0; */
+                letter-spacing: normal !important;
+                color: #fff;
+                white-space: nowrap;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .d-md-inline,
+            .ninja-forms-field option {
+                
+                
+                font-family: 'Roboto', sans-serif;
+                
+            }
+
+            .navbar .navbar-nav>.nav-item>.dropdown-toggle {
+                position: relative;
+                width: 100%;
+                
+            }
+
+            #mainNav .dropdown-menu .dropdown-item.heading a {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                
+
+            }
+
+            #mainNav .dropdown:not(.mega) .dropdown-menu .nav-link {
+
+                
+
+            }
+
+            /** END Navbar Default Control */
+
+
+
+
+
+
+
+
+
+            
+            .masthead-cover-invisalign {
+
+                height: 510px;
+
+            }
+
+            .masthead-cover-invisalign {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                padding-top: 50px;
+            }
+
+            .banner-ad {
+                height: 436px;
+                margin-top: 40px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                /* background-image: url(../img/photos/bg-hero-booking.jpg); */
+            }
+
+            .steps-list {
+                counter-reset: section;
+                list-style: none;
+                position: relative;
+                margin-left: 32px;
+                /* margin-right: 94px; */
+
+            }
+
+            .book-consultation {
+
+                height: 600px;
+
+            }
+
+            .steps-list h2 {
+
+                font-weight: 500 !important;
+
+
+            }
+
+            .schedule-consultation {
+
+                float: left;
+                margin-left: 71px;
+                width: 360px;
+                font-size: 24px !important;
+                text-transform: uppercase !important;
+                padding: 9px;
+                font-weight: 500 !important;
+                background-color: #e88c44 !important;
+
+            }
+
+            .schedule-consultation-button {
+
+                width: 250px;
+                font-size: 24px !important;
+                text-transform: uppercase !important;
+                padding: 13px;
+                border-radius: 10px;
+                line-height: initial;
+                font-weight: 500 !important;
+                background-color: #e88c44 !important;
+
+            }
+
+            .steps-list .step-title,
+            .step-title {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+                padding-top: 7px;
+                padding-bottom: 0px;
+
+            }
+
+            .videos h2.step-title {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                padding-top: 7px;
+                padding-bottom: 10px;
+
+            }
+
+            .steps-list p {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24.8px;
+
+            }
+
+            .steps-list li {
+
+                position: relative;
+
+            }
+
+            .steps-list li:before {
+                counter-increment: section;
+                content: counter(section);
+                color: #fff;
+                font-size: 34px;
+                font-weight: 400;
+                position: absolute;
+                width: 64px;
+                left: -80px;
+                text-align: center;
+                height: 64px;
+                padding-top: 7px;
+                background-image: url("data:image/svg+xml;utf8,<svg width='64' height='64' xmlns='http://www.w3.org/2000/svg'><circle cx='32' cy='32' r='32' width='64' height='64' style='fill: %23e88c44 !important' /></svg>");
+            }
+
+
+            .notification {
+
+                font-weight: normal !important;
+                line-height: normal !important;
+                height: 32px !important;
+
+            }
+
+            .notification .container p.notification-hours,
+            .notification .container p.desktop-notification {
+
+                font-size: 13px;
+                font-weight: 500;
+                color: #fff;
+                margin-bottom: 0;
+
+            }
+
+
+
+            .notification,
+            .notifocation p,
+            .notification .container p.notification-hours,
+            .notification .container p.desktop-notification {
+
+                font-size: 19px !important;
+
+            }
+
+            @media(max-width: 420px) {
+
+                .notification,
+                .notifocation p,
+                .notification .container p.notification-hours,
+                .notification .container p.desktop-notification {
+
+                    font-size: 19px !important;
+
+                }
+
+            }
+
+            @media(max-width:992px) {
+
+                .anchor {
+                    display: block;
+                    height: 115px;
+                    /*same height as header*/
+                    margin-top: -115px;
+                    /*same height as header*/
+                    visibility: hidden;
+
+                }
+
+
+                .book-consultation {
+
+                    height: 660px;
+
+                }
+
+                .js-map-home.consult {
+
+                    padding: 13px;
+                    padding-left: 0;
+                    height: 550px !important;
+
+                }
+
+                .notification .container p.desktop-notification {
+                    display: none;
+                }
+
+                .notification .container p.notification-hours {
+                    text-align: center !important;
+                }
+
+                .banner-desktop {
+                    display: none;
+                }
+
+                .banner-mobile {
+
+                    text-align: center;
+                    margin: auto;
+                    display: block;
+
+                }
+
+                .banner-ad {
+                    margin-top: 40px;
+                    height: 589px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    /* background-image: url(../img/photos/bg-hero-booking.jpg); */
+                }
+
+                .consultation h3 {
+
+                    color: #e88c44 !important;
+                    font-size: 21px;
+                    font-weight: 500;
+
+                }
+
+                .consultation h2 {
+
+                    color: #1f1f1f;
+                    font-size: 48px;
+                    font-weight: 700;
+
+                }
+
+                .steps-list {
+                    counter-reset: section;
+                    list-style: none;
+                    position: relative;
+                    margin-left: unset;
+                    margin-right: unset;
+                    padding: unset;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                /* Mobile Styling */
+                .container.invisalign h2.section-heading {
+
+                    margin-left: 45px !important;
+                    margin-right: 45px !important;
+
+                }
+
+                .invisalign .steps-list {
+
+                    counter-reset: section;
+                    list-style: none;
+                    position: relative;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    padding: unset;
+
+                }
+
+                .invisalign-mobile-image {
+
+                    display: block;
+                    /* padding: unset !important; */
+                    /* padding: 20px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important; */
+                    width: 100% !important;
+
+                }
+
+                .invisalign-desktop-image {
+
+                    display: none !important;
+                    padding: 20px !important;
+                    width: 100% !important;
+                    margin-left: 50px;
+
+                }
+
+                .container.invisalign-mobile-image {
+
+                    background-color: #303A1A;
+
+                }
+
+                .invisalign-welcome {
+
+                    color: #fff;
+                    font-family: 'Roboto', sans serif;
+
+
+                    max-width: 340px;
+                    margin: auto;
+                    padding-bottom: 25px;
+
+
+                }
+
+                .invisalign-welcome p {
+
+                    color: #fff;
+                    font-size: 24px;
+                    line-height: 34px;
+                    font-weight: 500;
+
+                }
+
+                .invisalign-welcome .schedule-consultation {
+
+                    max-width: 100% !important;
+                    /* padding: 0; */
+                    width: unset;
+                    margin: 0;
+
+                }
+
+                .invisalign .schedule-consultation {
+
+                    float: none !important;
+                    text-align: center;
+                    margin: auto !important;
+                    max-width: 100%;
+                    display: block;
+                    font-size: 24px !important;
+                    text-transform: uppercase !important;
+                    padding: 9px;
+                    font-weight: 500 !important;
+                    background-color: #139FD9 !important;
+
+                }
+
+                .steps-list li:before {
+                    counter-increment: section;
+                    content: counter(section);
+                    color: #fff;
+                    font-size: 34px;
+                    font-weight: 400;
+                    position: absolute;
+                    width: 64px;
+                    left: unset !important;
+                    text-align: center;
+                    height: 64px;
+                    padding-top: 7px;
+                    background-image: url(data:image/svg+xml;utf8,<svg width='64' height='64' xmlns='http://www.w3.org/2000/svg'><circle cx='32' cy='32' r='32' width='64' height='64' style='fill: %23139FD9' /></svg>);
+                }
+
+                .steps-list .step-title {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 28px;
+                    padding-top: 7px;
+                    padding-left: 80px;
+                    min-height: 80px;
+                }
+
+            }
+
+            [id^="pw_map_"] iframe {
+                position: absolute !important;
+            }
+
+            @media(min-width:993px) {
+
+                .anchor {
+                    display: block;
+                    height: 165px;
+                    /*same height as header*/
+                    margin-top: -165px;
+                    /*same height as header*/
+                    visibility: hidden;
+                }
+
+                .notification .container p.desktop-notification {
+                    display: block;
+                }
+
+                .notification .container p.notification-hours {
+                    text-align: right !important;
+                }
+
+                .banner-desktop {
+
+                    display: block;
+                    background-image: none !important;
+                    position: relative;
+                    left: -150px;
+
+                }
+
+                #banner-ad {}
+
+                [id^="pw_map_"] iframe {
+                    position: absolute !important;
+                }
+
+                .banner-mobile {
+
+                    display: none;
+
+                }
+
+                .consultation h3 {
+
+                    color: #e88c44 !important;
+                    font-size: 32px;
+                    font-weight: 500;
+                }
+
+                .consultation h2 {
+
+                    color: #1f1f1f;
+                    font-size: 64px;
+                    font-weight: 600;
+                    margin-bottom: 80px;
+
+                }
+
+                .invisalign-mobile-image {
+
+                    display: none;
+
+                }
+
+                .invisalign-desktop-image {
+
+                    display: block !important;
+
+                }
+
+                .invisalign-desktop-image .schedule-consultationz {
+
+                    width: 310px;
+                    font-size: 24px !important;
+                    text-transform: uppercase !important;
+                    padding: 9px;
+                    border-radius: 12px;
+                    font-weight: 500 !important;
+                    background-color: #139FD9 !important;
+
+
+                }
+
+                .container.invisalign h2.section-heading {
+
+                    margin-bottom: 52px !important;
+
+                }
+
+
+                .invisalign-welcome {
+
+                    color: #fff;
+                    font-family: 'Roboto', sans serif;
+                    font-weight: 500;
+                    text-align: right;
+                    font-size: 32px;
+                    line-height: 34px;
+                    width: 371px;
+                    float: right;
+                    margin-top: 15px;
+                    padding-bottom: 20px;
+
+                }
+
+            }
+
+                        
+            
+            @media(max-width:991px) {
+
+                #mainNav #phone-number .phone-number__text,
+                #mainNav .phone-number .phone-number__text {
+
+                    display: none !important;
+
+                }
+
+            }
+
+            @media(min-width:992px) {
+
+                #mainNav #phone-number .phone-number__text {
+
+                    font-family: acumin-pro-condensed, sans-serif !important;
+                    font-weight: 700 !important;
+                    font-size: 26px !important;
+
+
+                }
+
+            }
+
+                        
+            
+                #mainNav #phone-number .phone-number__text {
+
+                    font-family: acumin-pro-condensed, sans-serif !important;
+                    font-weight: 700 !important;
+                    font-size: 26px !important;
+
+                }
+
+                @media(max-width: 991px) {
+                    #mainNav .container>.nav-btn {
+
+                        display: block !important;
+
+                    }
+                }
+
+                #mainNav .navbar-nav .nav-item .nav-link {
+                    /* padding-left: 20px !important;
+                    padding-right: 20px !important; */
+                    text-transform: uppercase !important;
+                }
+
+                #mainNav .navbar-nav .nav-item .current_page_parent {
+                    background-image: none !important;
+                    color: #e88c44 !important;
+                    font-weight: 900 !important;
+                } 
+
+                #mainNav .navbar-nav .nav-item.current-menu-item,
+                #mainNav .navbar-nav .nav-item.current-menu-item a,
+                #mainNav .navbar-nav .nav-item.current-menu-item .nav-link  {
+                    background-image: none !important;
+                    color: #e88c44 !important;
+                }
+
+                .menu-item.menu-item-type-taxonomy.menu-item-object-services_categories.current-menu-item.dropdown-item.p-1.pb-3.heading {
+                    background-image: none !important;
+                    color: #e88c44 !important;
+                }
+
+                /**
+                * Comment me
+                */
+                @media(max-width: 991px) {
+
+
+                    /**
+                    * Top Level MOBILE Nav items
+                    */
+
+
+                    #mainNav .navbar-nav .nav-item {
+
+                        line-height: 1.5 !important;
+                        padding-bottom: 0;
+                        margin-top: 0;
+                        border-bottom: 1px solid #D9D9D9 !important;
+                        margin-bottom: 0px !important;
+                        padding-bottom: 20px !important;
+
+                    }
+
+                    /**
+                    * Highlight top level Mobile
+                    */
+                    #mainNav .navbar-nav .nav-item.current_page_item .nav-link {
+                        padding-left: 0px !important;
+                        color: #e88c44 !important;
+                    }
+
+                    #mainNav .navbar-nav .dropdown.mega .dropdown-menu .current-menu-item.heading a {
+                        color: #e88c44 !important;
+                        font-weight: 900 !important;
+                    }
+
+                    /**
+                    * Second Level Mobile
+                    */
+                    #mainNav .navbar-nav .dropdown.mega .dropdown-menu .dropdown-item {
+                        line-height: 1.5 !important;
+                        border-top: 1px solid #D9D9D9 !important;
+                        margin-bottom: 0px !important;
+                        padding-bottom: 20px !important;
+                        padding-top: 20px !important;
+                    }
+
+                    #mainNav .dropdown:not(.mega) .dropdown-menu .nav-item:first-child {
+                        padding-top: 20px;
+                        margin-top: 20px;
+                        /* border-top: 0 !important; */
+                    }
+
+                    #mainNav .dropdown:not(.mega) .dropdown-menu .nav-item:last-child {
+
+                        border: 0 !important;
+                    }
+
+                    #mainNav .navbar-nav .dropdown.mega .dropdown-menu .heading a {
+
+                        margin: 0px !important;
+                        padding: 11px !important;
+                        padding-left: 0px !important;
+
+                    }
+
+                    /**
+                    * Second Level, non Mega Dropdown
+                    */
+
+                    .nav-item.dropdown.show .dropdown-menu .dropdown {
+                        padding-left: 15px !important;
+                    }
+
+                    #mainNav .navbar-nav .nav-item:not([type=heading]) {}
+
+                    .nav-item.dropdown.show .dropdown-menu .dropdown .nav-item {
+                        padding-left: 0 !important;
+                        padding-right: 0 !important;
+                        margin-bottom: 15px !important;
+                        line-height: 1 !important;
+                        border-top: 0px solid #D9D9D9 !important;
+                        border-bottom: 0px !important;
+                    }
+
+                    .nav-item.dropdown.show .dropdown-menu .dropdown .nav-item:first-child {
+
+                        border-top: 1px solid #D9D9D9 !important;
+
+                    }
+
+                    /**
+                    * 3rd level, Mobile 
+                    */
+                    .dropdown-menu .dropdown-item:not([type=heading]) {
+
+                        display: block;
+
+                    }
+
+                }
+
+                /**
+                * .navbar font control
+                */
+
+                .navbar {
+                    font-size: 14px !important;
+                    font-family: acumin-pro-semi-condensed, sans-serif;
+                    font-weight: 500;
+                    font-style: normal;
+                    padding: 0;
+                    border: 1px solid;
+                    line-height: 48px;
+                }
+                .navbar a{
+                    padding-left: 1rem !important;
+                    padding-right: 1rem !important;
+                }
+                .navbar-nav{
+                    
+                }
+                .dropdown-menu {
+                    font-size: 14px !important;
+                }
+                
+                .d-md-inline,
+                .ninja-forms-field option {
+
+                    text-transform: uppercase !important;
+                    font-family: acumin-pro-semi-condensed, sans-serif;
+                    font-style: normal;
+                }
+
+                #mainNav .navbar-nav .nav-item .nav-link {
+                    /* font-size: 90%; */
+                    font-family: acumin-pro-semi-condensed, sans-serif;
+                    font-style: normal;
+                    /* padding: 0.75em 0; */
+                    letter-spacing: normal !important;
+                    color: #fff;
+                    white-space: nowrap;
+                    padding-left: 1rem !important;
+                    padding-right: 1rem !important;
+                }
+
+
+                
+
+                .navbar .navbar-nav>.nav-item>.dropdown-toggle {
+                    position: relative;
+                    width: 100%;
+                    text-transform: uppercase !important;
+                }
+
+                #mainNav .dropdown-menu .dropdown-item.heading a {
+
+                    font-family: acumin-pro-semi-condensed, sans-serif !important;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-weight: 400;
+                    text-transform: uppercase !important;
+
+                }
+
+                #mainNav .dropdown:not(.mega) .dropdown-menu .nav-link {
+
+                    text-transform: uppercase !important;
+
+                }
+
+                .dropdown-menu .row>div a {
+                    display: inline-block;
+                    margin-bottom: 10px;
+
+                }
+
+                        </style>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y5DKWGY0D0&amp;cx=c&amp;gtm=4e66u1h1"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/signals/config/606868416445605?v=2.9.349&amp;r=stable&amp;domain=www.timetocare.ca&amp;hme=f29d86973612db0f0627890a64bdc8c47b471189050b33f2680b7d76997afc9a&amp;ex_m=107%2C208%2C158%2C22%2C73%2C74%2C149%2C69%2C68%2C11%2C167%2C93%2C16%2C141%2C130%2C39%2C76%2C81%2C137%2C163%2C169%2C8%2C4%2C5%2C7%2C6%2C3%2C94%2C104%2C170%2C175%2C222%2C30%2C75%2C234%2C233%2C232%2C23%2C33%2C55%2C106%2C61%2C10%2C64%2C100%2C101%2C102%2C108%2C133%2C31%2C29%2C135%2C136%2C132%2C131%2C159%2C77%2C162%2C160%2C161%2C50%2C60%2C126%2C15%2C166%2C45%2C279%2C280%2C278%2C26%2C27%2C28%2C48%2C150%2C78%2C115%2C18%2C20%2C44%2C40%2C42%2C41%2C86%2C95%2C99%2C113%2C148%2C151%2C46%2C114%2C24%2C21%2C122%2C70%2C36%2C153%2C152%2C154%2C145%2C143%2C25%2C35%2C59%2C112%2C165%2C71%2C17%2C156%2C117%2C84%2C67%2C19%2C88%2C89%2C119%2C87%2C139%2C138%2C142%2C164%2C34%2C293%2C309%2C215%2C204%2C62%2C205%2C203%2C312%2C303%2C52%2C216%2C110%2C134%2C83%2C124%2C54%2C47%2C49%2C116%2C123%2C129%2C128%2C58%2C65%2C63%2C155%2C79%2C80%2C118%2C37%2C32%2C53%2C56%2C103%2C168%2C1%2C127%2C14%2C125%2C12%2C2%2C57%2C96%2C66%2C121%2C92%2C91%2C171%2C172%2C97%2C98%2C9%2C105%2C51%2C146%2C90%2C82%2C72%2C120%2C109%2C43%2C147%2C0%2C85%2C140%2C144%2C157%2C38%2C111%2C13%2C173" async=""></script><script type="text/javascript" async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-TMLL7PSNF7&amp;cx=c&amp;gtm=4e66u1h1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PWJFP5W"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-PWJFP5W"></script><script data-cfasync="false" data-pagespeed-no-defer="">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v27.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Dental Bonding Edmonton | Cosmetic Dentist | Time to Care Dental Group</title>
+	<meta name="description" content="Create a flawless, healthy smile with dental bonding in Edmonton performed by the skilled cosmetic dentist in Edmonton and the dentistry team at Time to Care Dental Group.">
+	<link rel="canonical" href="https://www.timetocare.ca/services/cosmetic-restorations/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Dental Bonding Edmonton | Cosmetic Dentist | Time to Care Dental Group">
+	<meta property="og:description" content="Create a flawless, healthy smile with dental bonding in Edmonton performed by the skilled cosmetic dentist in Edmonton and the dentistry team at Time to Care Dental Group.">
+	<meta property="og:url" content="https://www.timetocare.ca/services/cosmetic-restorations/">
+	<meta property="og:site_name" content="Time to Care Dental">
+	<meta property="article:modified_time" content="2022-01-25T18:45:21+00:00">
+	<meta property="og:image" content="https://www.timetocare.ca/wp-content/uploads/sites/10/2019/09/image-thumbnail-dental-bonding-700x400px.jpg">
+	<meta property="og:image:width" content="700">
+	<meta property="og:image:height" content="400">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary_large_image">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.timetocare.ca\/services\/cosmetic-restorations\/","url":"https:\/\/www.timetocare.ca\/services\/cosmetic-restorations\/","name":"Dental Bonding Edmonton | Cosmetic Dentist | Time to Care Dental Group","isPartOf":{"@id":"https:\/\/www.timetocare.ca\/#website"},"primaryImageOfPage":{"@id":"https:\/\/www.timetocare.ca\/services\/cosmetic-restorations\/#primaryimage"},"image":{"@id":"https:\/\/www.timetocare.ca\/services\/cosmetic-restorations\/#primaryimage"},"thumbnailUrl":"https:\/\/www.timetocare.ca\/wp-content\/uploads\/sites\/10\/2019\/09\/image-thumbnail-dental-bonding-700x400px.jpg","datePublished":"2019-09-27T20:09:51+00:00","dateModified":"2022-01-25T18:45:21+00:00","description":"Create a flawless, healthy smile with dental bonding in Edmonton performed by the skilled cosmetic dentist in Edmonton and the dentistry team at Time to Care Dental Group.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.timetocare.ca\/services\/cosmetic-restorations\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.timetocare.ca\/services\/cosmetic-restorations\/#primaryimage","url":"https:\/\/www.timetocare.ca\/wp-content\/uploads\/sites\/10\/2019\/09\/image-thumbnail-dental-bonding-700x400px.jpg","contentUrl":"https:\/\/www.timetocare.ca\/wp-content\/uploads\/sites\/10\/2019\/09\/image-thumbnail-dental-bonding-700x400px.jpg","width":700,"height":400},{"@type":"WebSite","@id":"https:\/\/www.timetocare.ca\/#website","url":"https:\/\/www.timetocare.ca\/","name":"Time to Care Dental","description":"West Edmonton’s gentle, patient-centered dental team makes your visit easy and comfortable.","publisher":{"@id":"https:\/\/www.timetocare.ca\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.timetocare.ca\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/www.timetocare.ca\/#organization","name":"Time To Care Dental Group","url":"https:\/\/www.timetocare.ca\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.timetocare.ca\/#\/schema\/logo\/image\/","url":"https:\/\/www.timetocare.ca\/wp-content\/uploads\/sites\/10\/2022\/09\/time-to-care-dental-group-logo-tall-square-600x600px.jpg","contentUrl":"https:\/\/www.timetocare.ca\/wp-content\/uploads\/sites\/10\/2022\/09\/time-to-care-dental-group-logo-tall-square-600x600px.jpg","width":600,"height":600,"caption":"Time To Care Dental Group"},"image":{"@id":"https:\/\/www.timetocare.ca\/#\/schema\/logo\/image\/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//www.optiopublishing.com">
+<link rel="dns-prefetch" href="//www.timetocare.ca">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.timetocare.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.timetocare.ca%2Fservices%2Fcosmetic-restorations%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.timetocare.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.timetocare.ca%2Fservices%2Fcosmetic-restorations%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://www.timetocare.ca/wp-includes/css/dist/block-library/common.min.css?ver=7.0" media="all">
+<style id="wp-block-library-inline-css">
+/*wp_block_styles_on_demand_placeholder:6a471a8350bcc*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<link rel="stylesheet" id="section_block-cgb-style-css-css" href="https://www.timetocare.ca/wp-content/plugins/gutenberg-section-block-master/dist/blocks.style.build.css?ver=7.0" media="all">
+<style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style>
+<link rel="stylesheet" id="cds-boostrap-style-css" href="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/vendor/bootstrap/css/bootstrap.min.css?ver=1.0.0" media="all">
+<link rel="stylesheet" id="cds-fontawesome-style-css" href="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/vendor/fontawesome-free/css/all.min.css?ver=1.0.0" media="all">
+<link rel="stylesheet" id="cds-site-template-style-css" href="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/css/cds.min.css?ver=1.0.08989111889988" media="all">
+<link rel="stylesheet" id="custom-google-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;ver=7.0" media="all">
+<link rel="stylesheet" id="minimal-grid-css" href="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/style.css?ver=7.0" media="all">
+<script id="optio-api-js" async="" defer="" src="https://www.optiopublishing.com/api/js?ver=4.1"></script>
+<script id="jquery-core-js" src="https://www.timetocare.ca/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.timetocare.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.timetocare.ca/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 7.0">
+<link rel="shortlink" href="https://www.timetocare.ca/?p=1354">
+<style type="text/css">/* =Responsive Map fix
+-------------------------------------------------------------- */
+.pw_map_canvas img {
+	max-width: none;
+}</style>
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to footer -->
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+	var dataLayer_content = {"pagePostType":"services_group","pagePostType2":"single-services_group"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PWJFP5W');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->      <!--Customizer CSS--> 
+      <style type="text/css">
+            
+            
+                 </style> 
+      <!--/Customizer CSS-->
+      <!-- GA4 TNTga13 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y5DKWGY0D0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y5DKWGY0D0');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PWJFP5W');</script>
+<!-- End Google Tag Manager --><link rel="icon" href="https://www.timetocare.ca/wp-content/uploads/sites/10/2024/11/cropped-TTC-Logo-redesign-creative-2024-icon2-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.timetocare.ca/wp-content/uploads/sites/10/2024/11/cropped-TTC-Logo-redesign-creative-2024-icon2-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.timetocare.ca/wp-content/uploads/sites/10/2024/11/cropped-TTC-Logo-redesign-creative-2024-icon2-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.timetocare.ca/wp-content/uploads/sites/10/2024/11/cropped-TTC-Logo-redesign-creative-2024-icon2-270x270.png">
+<style id="wp-custom-css">
+#interior {    color: #fff;
+    text-align: center;
+    font-size: 22px;}
+
+#append {    font-size: 2.5em;
+    line-height: 1.2;
+}
+
+.primary-bg {    display: flex;
+    flex-direction: column;
+    justify-content: center;}
+
+@media (max-width: 630px)  {
+	#interior {font-size: 18px;}
+	#append {font-size: 1.5em;}
+	
+	.wp-block-image .alignleft, .wp-block-image .alignright {float: none;}
+}
+
+/* --- emergency icons ---*/
+/***** Remove the class="off" from the leanModal link in the html to activate the link/connect to its pop-up *****/
+.off {
+  pointer-events: none;
+}
+.service-icons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+	 max-width: 700px;
+}
+.service-icons h3 {
+  margin: 5px auto;
+  font-size: 22px;
+  line-height: 1.1;
+}
+.service-icons > * {
+  padding: 5px;
+  flex: 0 1 210px;
+  margin: 10px auto;
+  display: block;
+}
+.service-icons a {
+  color: #2f3437;
+  text-decoration: none;
+}
+.service-icons a:hover .icon .ic-color {
+  fill: #3a97bb;
+}
+.service-icons a:hover h3 {
+  color: #3a97bb;
+}
+.ic-color {
+  fill: #e88c44;
+}
+.sv-icon {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.has-h3 {
+  clear: both;
+  display: table;
+  width: 100%;
+  margin: 20px auto;
+  text-align: left;
+}
+.has-h3 h3 {
+  margin: 0 auto 10px;
+  text-align: left;
+}
+@media (max-width: 750px) {
+  .has-h3, .has-h3 h3 {
+    text-align: center;
+  }
+}
+/*==================== Modal ================*/
+#lean_overlay {
+  padding: 10px;
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  overflow: scroll;
+}
+.modal-content {
+  display: none;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 97%;
+  flex: 0 1 97%;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  max-width: 1000px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  width: 93%;
+  max-height: calc(100vh - 80px);
+  overflow-y: scroll;
+  padding: 10px 20px;
+}
+.modal-content h3 {
+  text-align: center;
+  font-size: 26px;
+  margin: 15px 0 10px;
+}
+.modal-content .has_btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.modal-content .btn {
+  margin: 5px;
+  min-width: 430px;
+}
+.modal-content .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.modal-content .buttons > p {
+  margin: 5px;
+}
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px;
+  z-index: 1002;
+  cursor: pointer;
+  color: #e88c44;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+}
+.modal-close span {
+  display: none;
+}
+.modal-close i {
+  position: relative;
+  color: #e88c44;
+  font-style: normal;
+  padding-bottom: 4px;
+}
+.modal-close i:before {
+  font-size: 40px;
+  content: '\00d7';
+}
+.modal-close:hover i {
+  color: #555;
+}
+.modal-content .has_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.modal-content .btn {
+  margin: 5px;
+  min-width: 350px;
+}
+ [id='213535384202247']{
+	
+	position:relative;
+	width: unset;
+    min-width: unset;
+    display: unset;
+    overflow: unset;
+    border: none;
+    height: unset;
+	
+}
+
+.pw_map_canvas iframe{
+	
+	position: absolute !important;
+
+}
+html .banner-ad :where(img) {
+    height: auto;
+    max-width: none !important;
+}
+
+
+.alignleft {float: left; margin: 0 25px 10px 0;}
+
+
+
+
+h2, h3 {clear:both;}
+h2 {margin-top: 20px;}
+.content h3 {margin-bottom: 10px;}
+
+ [id='223476843333257']{
+	
+	position:relative;
+	width: unset;
+    min-width: unset;
+    display: unset;
+    overflow: unset;
+    border: none;
+    height: unset;
+	
+}
+
+#mainNav #book-button{
+	
+	background-color: #ff0000 !important;
+	
+}
+
+
+.elem-left {float: left; margin: 0 25px 25px 0;}
+
+
+
+
+
+
+h3.book-now-heading {
+    color: #000000;
+    font-size: 150%;
+    font-weight: 600;
+    text-align: center;
+}
+
+a.book-now-button-body.btn.btn-lg {
+    background-color: #ff0000 !important;
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px !important;
+    margin: 0px 0px;
+    cursor: pointer;
+    border-radius: 7px;
+margin-top: 8px;
+}
+
+a.contact-us-button.btn.btn-teal.btn-lg.jb_button2 {
+    background-color: #e88c44 !important;
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px !important;
+    margin: 0px 0px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+</style>
+<style> #mainNav #phone-number {
+    color: #e88c44 !important;
+
+}
+
+
+.carousel-home .carousel-item h1,
+.masthead-cover h1 {
+    color: #434343 !important;
+    font-size: 48px;
+    line-height: 1;
+}
+
+@media(max-width: 450px) {
+/* JB JB */
+    .carousel-home .carousel-item h1{
+
+        font-size:  !important;
+
+    }
+
+}
+
+.btn-radio:not(.checked):hover {
+
+    border: 2px solid #e88c44 !important;
+    color: #e88c44 !important;
+
+}
+
+.notification {
+
+    background-color: #e88c44 !important;
+
+}
+
+.btn-teal, .btn-primary, .get-touch-form .nf-field-element .btn-primary{
+
+    background-color: #e88c44 !important;
+    color: #fff;
+
+}
+
+.btn-radio.checked, .get-touch-form .btn-radio.checked{
+
+
+    color: #e88c44 !important;
+    border: 2px solid #e88c44 !important;
+
+
+}
+
+#portfolio.portfolio-reverse-spaced .row:nth-of-type(odd) .portfolio-item:nth-child(odd) .portfolio-up:hover,
+#portfolio.portfolio-reverse-spaced .portfolio-item .portfolio-link .portfolio-up:hover,
+#portfolio.portfolio-reverse .row:nth-of-type(odd) .portfolio-item:nth-child(odd) .portfolio-up:hover,
+#portfolio.portfolio-reverse .portfolio-item .portfolio-link .portfolio-up:hover{
+
+    background-color: #e88c44b3 !important;
+
+}
+
+.primary-color{
+
+    color: #e88c44 !important;
+
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-up {
+
+    background-color: #e88c44 !important;
+
+}
+
+.social-feed {
+
+    border: 6px solid #e88c44 !important;
+
+}
+
+.accent:before {
+
+    background-color: #e88c44 !important;
+
+}
+
+.address h2:before {
+
+    background-color: #e88c44 !important;
+
+}
+
+.bg-teal {
+
+    background-color: #e88c44 !important;
+
+}
+
+.box-title {
+
+    color: #e88c44 !important;
+
+}
+
+.bg-teal--light{
+
+    background-color: #e9e9e9 !important;
+
+}
+
+.carousel-control-prev-icon {
+    background: #e88c44 !important;
+}
+
+.primary-bg {
+    background: #e9e9e9 !important;
+    background: -webkit-gradient(linear,left top,left bottom,from(#eea973),to(#e87a27)) !important;
+    background: linear-gradient(to bottom,#eea973 0,#e87a27 100%) !important;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(0,0,0,.25);
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,.25);
+}
+
+.phone-number__icon path{
+
+    fill: #e88c44 !important;
+
+}
+
+@media (min-width: 992px) {
+
+#mainNav .navbar-nav .nav-item.current-menu-item {
+
+
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%23e88c44' fill-rule='evenodd'/%3E%3C/svg%3E");
+color: #e88c44 !important;
+
+
+}
+#mainNav .navbar-nav .nav-item.current-menu-item .nav-link {
+    color: #e88c44 !important;
+}
+
+#mainNav .navbar-nav .nav-item .current_page_item {
+
+
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%23e88c44' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+
+
+}
+
+#mainNav .navbar-nav .nav-item .current_page_parent {
+
+
+background-image: none !important; //url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%23e88c44' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+color: #e88c44 !important;
+
+}
+
+#mainNav .navbar-nav .nav-item.mega .current_page_parent,
+a.dropdown-toggle.cds_current_post,
+.nav-item.dropdown.mega.cds_current_post,
+a.cds_current_post {
+
+    color: #e88c44 !important;
+    font-weight: 900 !important;
+    background: none !important;
+
+}
+
+
+#mainNav .navbar-nav .nav-item.mega .current_page_parent a,
+a.dropdown-toggle.cds_current_post a,
+.nav-item.dropdown.mega.cds_current_post a{
+
+    color: #e88c44 !important;
+
+}
+
+.menu-item.menu-item-type-taxonomy.menu-item-object-services_categories.current-menu-item.dropdown-item.p-1.pb-3.heading a {
+    font-weight: 900 !important;
+    color: #e88c44 !important;
+      background-image: none !important;
+
+  }
+
+  .cds_current_post.menu-item.menu-item-type-taxonomy.menu-item-object-services_categories.dropdown-item.p-1{
+    background:none !important;
+    margin-bottom: 0px !important;
+    //background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%23e88c44' fill-rule='evenodd'/%3E%3C/svg%3E") !important;
+
+  }
+
+}
+
+
+
+.carousel-indicators li.active {
+    background: url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Ccircle%20cx%3D%2710%27%20cy%3D%2710%27%20r%3D%278%27%20stroke%3D%27%23e88c44%27%20stroke-width%3D%274%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+.carousel-indicators li {
+    background: url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Ccircle%20cx%3D%2710%27%20cy%3D%2710%27%20r%3D%278%27%20stroke%3D%27%23979797%27%20stroke-width%3D%274%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+.carousel-control-prev-icon {
+    background: #e88c44 url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M3.104%209.09H19.09a.91.91%200%200%201%200%201.82H3.104l7.539%207.538a.91.91%200%200%201-1.286%201.286l-9.09-9.091a.91.91%200%200%201%200-1.286l9.09-9.09a.91.91%200%201%201%201.286%201.285L3.103%20%0A9.09z%27%20fill%3D%27%23FFF%27%20fill-rule%3D%27nonzero%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+.carousel-control-next-icon {
+    background: #e88c44 url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M16.896%209.09L9.357%201.553A.91.91%200%200%201%2010.643.266l9.09%209.091a.91.91%200%200%201%200%201.286l-9.09%209.09a.91.91%200%201%201-1.286-1.285l7.54-7.539H.908a.91.91%200%200%201%200-1.818h15.987z%27%20fill%3D%27%23FFF%27%20fill-rule%3D%27nonzero%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+select.form-control {
+
+    background-image: url("data:image/svg+xml,%3Csvg width=%2721%27 height=%2712%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M18.948.768a.904.904 0 0 1 1.286 0 .922.922 0 0 1 0 1.297l-9.091 9.167a.904.904 0 0 1-1.286 0L.767 2.065a.922.922 0 0 1 0-1.297.904.904 0 0 1 1.285 0L10.5 9.181 18.948.768z%27 fill=%27%23e88c44%27 fill-rule=%27nonzero%27/%3E%3C/svg%3E") !important;
+") !important;
+
+}
+
+
+
+.text-icon__icon {
+
+    background-image: url("data:image/svg+xml,%3Csvg width=%2711%27 height=%2720%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M.268 1.552a.904.904 0 0 1 0-1.286.922.922 0 0 1 1.297 0l9.167 9.091a.904.904 0 0 1 0 1.286l-9.167 9.09a.922.922 0 0 1-1.297 0 .904.904 0 0 1 0-1.285L8.681 10 .268 1.552z%27 fill=%27%23e88c44%27 fill-rule=%27nonzero%27/%3E%3C/svg%3E") !important;
+
+}
+
+.get-touch-form .nf-field-element .btn-primary:hover {
+
+    background-color: #e88c44 !important;
+
+}
+
+.flex-schedule-buttons>a:first-child button {
+    background-color: #fff!important;
+    color: #e88c44 !important;
+}
+
+
+</style>
+
+        <style>
+
+
+        .overview>.row>.col:last-child {
+
+            background-color: #e9e9e9 !important;
+        }
+
+        </style>
+
+        <style>
+
+            #portfolio .row:nth-of-type(even) .portfolio-item:nth-child(even) .portfolio-up {
+
+                background-color: #e89d63 !important;
+
+            }
+
+        </style>
+<style>
+            :root {
+                --maxassistBookOnlineBackgroundColor:#a5238c;
+                --maxassistBookOnlineForegroundColor:#fff;
+                --maxassistBookOnlineHoverColor:#ba55d3;
+                --maxassistBookOnlineTextAlign: left;
+                --maxassistBookOnlinePageLocationHeight: 250px;
+            }
+            .MaxAssistBookButton { 
+                position: fixed; 
+                background-color: var(--maxassistBookOnlineBackgroundColor); 
+                opacity: 0; 
+                top: var(--maxassistBookOnlinePageLocationHeight); 
+                min-height: 65px; 
+                display: block; 
+                align-items: center; 
+                text-align: var(--maxassistBookOnlineTextAlign); 
+                justify-content: center; 
+                padding: 15px; 
+                color: white; 
+                box-sizing: border-box; 
+                z-index: 9999; 
+                box-shadow: 1px 2px 3px 0 rgba(128, 128, 128, 0.15); 
+                transition: all 0.2s ease-in; 
+                --text-transform: uppercase; 
+                font-family: 'Helvetica, Arial, sans-serif' !important; 
+                font-size: 19px; 
+                letter-spacing: 0; 
+                line-height: 19px; 
+                text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.10); 
+                border-bottom-left-radius: 999px; 
+                border-top-left-radius: 999px; 
+                cursor: pointer; 
+                vertical-align: middle; 
+            }
+            .MaxAssistBookButton .icon { 
+                display: inline-block; 
+                align-items: center; 
+                justify-content: center; 
+                color: var(--maxassistBookOnlineForegroundColor); 
+                height: 40px; 
+                width: auto; 
+                vertical-align: middle; 
+            }
+            .MaxAssistBookButton .SVG { 
+                fill: var(--maxassistBookOnlineForegroundColor); 
+                height: 100%; 
+                width: auto; 
+                transition: all 0.2s ease-in; 
+                stroke: var(--maxassistBookOnlineForegroundColor); 
+            }
+            .MaxAssistBookButton .content { 
+                vertical-align: middle; 
+                display: inline-block; 
+                color: var(--maxassistBookOnlineForegroundColor); 
+                transition: all 0.2s ease-in; 
+                font-family: 'Helvetica, Arial, sans-serif' !important; 
+            }
+            .MaxAssistBookButton .content strong { 
+                display: inline-block; 
+                font-weight: 600; 
+                font-size: 23px; 
+                line-height: 23px; 
+            }
+            .MaxAssistButtonIcon { 
+                display: block; 
+            }
+            .MaxAssistBookButton.MaxAssistFadeIn { 
+                animation: MaxAssistBookFadeIn 1s ease-out forwards; 
+            }
+            @keyframes MaxAssistBookFadeIn { 
+                0% { opacity: 0; right: -160px; } 
+                50% { opacity: 0.3; right: -5px; } 
+                75% { opacity: 0.6; right: -10px; } 
+                100%{ opacity: 1; right: 0px; } 
+            }
+            .MaxAssistBookButton:hover { 
+                box-shadow: 1px 4px 5px 0 rgba(128, 128, 128, 0.25); 
+                transition: all 0.4s ease-in; 
+                background: var(--maxassistBookOnlineHoverColor); 
+            }
+
+            /* Dialog styles */
+            .MaxAssistBackdrop {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 10000;
+                display: none;
+            }
+
+            /* Style to disable scrolling on body */
+            .MaxAssistNoScroll {
+                overflow: hidden;
+            }
+
+            .MaxAssistDialog {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 660px;
+                height: 98vh;
+                background-color: white;
+                z-index: 10001;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                display: none;
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            /* Media query for smaller screens */
+            @media (max-width: 650px) {
+                .MaxAssistDialog {
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    transform: none;
+                    border-radius: 0;
+                }
+            }
+
+            .MaxAssistCloseButton {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                color: #666;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                z-index: 10002;
+            }
+
+            .MaxAssistCloseButton:hover {
+                background-color: #f0f0f0;
+                color: #333;
+            }
+
+            .MaxAssistDialogContent {
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                padding: 0;
+            }
+
+            .MaxAssistDialogContent iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+            @keyframes MaxAssistSpin {
+                0% {
+                 transform: rotate(0deg); 
+                 }
+                100% {
+                 transform: rotate(360deg); 
+                 }
+            }
+        </style><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17531539760/?random=1783044739878&amp;cv=11&amp;fst=1783044739878&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45je66u1h1v9129827851z8811741322za20gzb811741322zd811741322xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115616986~115938466~115938468~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fwww.timetocare.ca%2Fservices%2Fcosmetic-restorations%2F&amp;rcb=2&amp;frm=0&amp;tiba=Dental%20Bonding%20Edmonton%20%7C%20Cosmetic%20Dentist%20%7C%20Time%20to%20Care%20Dental%20Group&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=2038984890.1783044718&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script></head>
+
+
+
+<body class="wp-singular services_group-template-default single single-services_group postid-1354 wp-theme-canadian-dental-services">
+
+
+
+    <div class="notification fixed-top">
+        <div class="container">
+
+                <div class="row">
+                    <div class="col-6"><p class="desktop-notification">We are accepting new patients!</p></div>
+                    <div class="col-12 col-lg-6"><p class="notification-hours">8708 - 155th Street #209, Edmonton <span class="phone-number"> | <a href="tel:780-484-5918">780-484-5918</a></span></p></div>
+                </div>
+
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top white-bg justify-content-end" id="mainNav">
+
+
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="https://www.timetocare.ca"><img src="https://www.timetocare.ca/wp-content/uploads/sites/10/2024/11/TTC-New-logo-Edmonton-200px.png"> </a>
+
+            <button class="navbar-toggler js-navbar-toggler" type="button" role="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler__lines"></span><div class="menu-button-text">MENU</div><div class="menu-button-close">close</div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                <ul class="navbar-nav text-uppercase">
+
+                    <li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.timetocare.ca/about/">About</a></li>
+
+		
+
+
+
+    <!-- START Mega Wrapper -->
+    <div class="nav-item dropdown mega " data-toggle="popover" data-placement="right" data-content="1381">
+
+    
+    <a data-toggle="collapse" href="#id_1381" class="dropdown-toggle collapsed do-mega-drop menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><span class="d-collapsed-inline d-none d-md-inline">Dental Services<span class="mobile-expand"><!--?xml version="1.0" encoding="UTF-8"?-->
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -391.000000)" fill="#999999" fill-rule="nonzero">
+                <path d="M973.768485,388.551915 C973.410505,388.196893 973.410505,387.621289 973.768485,387.266267 C974.126466,386.911244 974.706867,386.911244 975.064848,387.266267 L984.231515,396.357176 C984.589495,396.712198 984.589495,397.287802 984.231515,397.642824 L975.064848,406.733733 C974.706867,407.088756 974.126466,407.088756 973.768485,406.733733 C973.410505,406.378711 973.410505,405.803107 973.768485,405.448085 L982.180508,397 L973.768485,388.551915 Z" id="Arrow/Right/Green-Copy" transform="translate(979.000000, 397.000000) rotate(90.000000) translate(-979.000000, -397.000000) "></path>
+            </g>
+        </g>
+    </svg></span><span class="mobile-contract"><!--?xml version="1.0" encoding="UTF-8"?-->
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -335.000000)" fill="#e88c44" fill-rule="nonzero">
+                <path d="M973.768485,332.551915 C973.410505,332.196893 973.410505,331.621289 973.768485,331.266267 C974.126466,330.911244 974.706867,330.911244 975.064848,331.266267 L984.231515,340.357176 C984.589495,340.712198 984.589495,341.287802 984.231515,341.642824 L975.064848,350.733733 C974.706867,351.088756 974.126466,351.088756 973.768485,350.733733 C973.410505,350.378711 973.410505,349.803107 973.768485,349.448085 L982.180508,341 L973.768485,332.551915 Z" id="Arrow/Right/Green" transform="translate(979.000000, 341.000000) rotate(90.000000) translate(-979.000000, -341.000000) "></path>
+            </g>
+        </g>
+    </svg></span></span></a>
+
+        
+        <!-- START Mega Wrapper and Columns --> 
+        
+        <div class="dropdown-menu shadow border-0" id="id_1381">
+	
+
+
+
+
+
+            <!-- START P3 -->
+            <div class="p-3">
+		
+
+                <!-- START Tab Content -->
+                <div class="tab-content">
+			
+
+                    <!-- START Tab Pane -->
+                    <div class="tab-pane fade show active" id="nav-A" role="tabpanel">
+			
+
+                        <!-- START All Services Link -->
+                        <!-- <div class="row">
+
+                            <div class="dropdown-item p-1 pb-3 heading" type="heading 176">
+                            <a href="https://www.timetocare.ca/dental-services/">All Dental Services</a>
+                            </div>
+    
+                        </div> -->
+                        <!-- END All Services Link -->
+
+                        <!-- START Row -->
+                        <div class="row">
+			
+                            
+                            <!-- START 1st Column -->
+                            <div class="col-6 col-lg-4 col-xl-3">
+
+		<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading" type="heading"><a data-previous-object_id="1174" data-this-count="0" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/dental-services/general-dentistry/">General Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1174" data-this-count="0" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/services/dentistry-for-children/">Dentistry for Children</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1174" data-this-count="1" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/services/wisdom-tooth-extraction-edmonton-ab/">Wisdom Tooth Extraction</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1174" data-this-count="2" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/services/porcelain-dental-bridges/">Porcelain Bridges</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1174" data-this-count="3" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/services/dental-bridges/">Dental Bridges</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1174" data-this-count="4" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/services/dental-crowns/">Dental Crowns</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1174" data-this-count="5" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/services/emergency-dentist/">Emergency Dentistry in West Edmonton</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1174" data-this-count="6" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/services/tooth-colored-fillings/">Tooth-Colored Fillings</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1174" data-this-count="7" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/services/implant-restoration/">Implant Restoration</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1174" data-this-count="8" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/services/root-canal-treatment/">Root Canal Treatment</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1174" data-this-count="9" data-previous-item_parent="0" current-menu_parent="1381" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.timetocare.ca/services/preventative-hygiene/">Preventative Hygiene</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=8-->
+
+		<div class="col-6 col-lg-4 col-xl-3">
+                        <div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading 228" type="heading"><a data-previous-object_id="10" data-this-count="0" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.timetocare.ca/dental-services/cosmetic-dentistry/">Cosmetic Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="10" data-this-count="0" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.timetocare.ca/services/veneers/">Veneers</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="10" data-this-count="1" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.timetocare.ca/services/neuromodulation/">Neuromodulation</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="10" data-this-count="2" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.timetocare.ca/services/dental-bonding/">Dental Bonding</a></div>
+<div class=" cds_current_post  menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass  cds_current_post " data-previous-object_id="10" data-this-count="3" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.timetocare.ca/services/cosmetic-restorations/">Cosmetic Restorations</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="10" data-this-count="4" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.timetocare.ca/services/zoom-whitening/">In-Office ZOOM! Teeth Whitening</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="10" data-this-count="5" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.timetocare.ca/services/dysport-for-tmj-therapy/">Dysport® for TMJ Therapy</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=11-->
+
+		<div class="col-6 col-lg-4 col-xl-3">
+                        <div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading 228" type="heading"><a data-previous-object_id="8" data-this-count="0" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.timetocare.ca/dental-services/preventative-dentistry/">Preventative Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="8" data-this-count="0" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.timetocare.ca/services/fluoride-varnish-treatment/">Fluoride Varnish Treatment</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="8" data-this-count="1" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.timetocare.ca/services/silver-diamine-fluoride/">Silver Diamine Fluoride</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="8" data-this-count="2" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.timetocare.ca/services/diagnostic-imaging-and-x-rays/">Diagnostic Imaging &amp; X-Rays</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="8" data-this-count="3" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.timetocare.ca/services/dental-sealants/">Dental Sealants</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=9-->
+
+		<div class="col-6 col-lg-4 col-xl-3">
+                        <div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading 228" type="heading"><a data-previous-object_id="11" data-this-count="0" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="3" data-siblings-index-count="3" href="https://www.timetocare.ca/dental-services/dental-surgery-and-other-treatments/">Dental Surgery and Other Treatments</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="11" data-this-count="0" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="3" data-siblings-index-count="3" href="https://www.timetocare.ca/services/oral-surgery/">Oral Surgery</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="11" data-this-count="1" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="3" data-siblings-index-count="3" href="https://www.timetocare.ca/services/night-guards-sports-guards/">Night Guards &amp; Sports Guards</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="11" data-this-count="2" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="3" data-siblings-index-count="3" href="https://www.timetocare.ca/services/sedation/">Sedation</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="11" data-this-count="3" data-previous-item_parent="1381" current-menu_parent="1381" data-siblings-index-key="3" data-siblings-index-count="3" href="https://www.timetocare.ca/services/sleep-apnea-treatment/">Sleep Apnea</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=426-->
+
+                             </div><!-- CLOSE ROW  for FINAL TAX ITEM nextITEM object id=426-->
+
+		                    <!-- start MEGA END -->         </div></div></div></div><!-- END MEGA END -->
+</div><!-- NORMAL START --><div class="nav-item dropdown  new_nav_style ">
+    <a class="  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-childrennav-link dropdown-toggle collapsed" href="#id_submenu1073" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Patient Info<span class="mobile-expand"><!--?xml version="1.0" encoding="UTF-8"?-->
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -391.000000)" fill="#999999" fill-rule="nonzero">
+                <path d="M973.768485,388.551915 C973.410505,388.196893 973.410505,387.621289 973.768485,387.266267 C974.126466,386.911244 974.706867,386.911244 975.064848,387.266267 L984.231515,396.357176 C984.589495,396.712198 984.589495,397.287802 984.231515,397.642824 L975.064848,406.733733 C974.706867,407.088756 974.126466,407.088756 973.768485,406.733733 C973.410505,406.378711 973.410505,405.803107 973.768485,405.448085 L982.180508,397 L973.768485,388.551915 Z" id="Arrow/Right/Green-Copy" transform="translate(979.000000, 397.000000) rotate(90.000000) translate(-979.000000, -397.000000) "></path>
+            </g>
+        </g>
+    </svg></span><span class="mobile-contract"><!--?xml version="1.0" encoding="UTF-8"?-->
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -335.000000)" data-jb="" fill="#e88c44" fill-rule="nonzero">
+                <path d="M973.768485,332.551915 C973.410505,332.196893 973.410505,331.621289 973.768485,331.266267 C974.126466,330.911244 974.706867,330.911244 975.064848,331.266267 L984.231515,340.357176 C984.589495,340.712198 984.589495,341.287802 984.231515,341.642824 L975.064848,350.733733 C974.706867,351.088756 974.126466,351.088756 973.768485,350.733733 C973.410505,350.378711 973.410505,349.803107 973.768485,349.448085 L982.180508,341 L973.768485,332.551915 Z" id="Arrow/Right/Green" transform="translate(979.000000, 341.000000) rotate(90.000000) translate(-979.000000, -341.000000) "></path>
+            </g>
+        </g>
+    </svg></span></a>
+    <div class="dropdown-menu collapse" id="id_submenu1073" style="">
+    <div class="dropdown">
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.timetocare.ca/digital-patient-forms/">Patient Forms</a></li>
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.timetocare.ca/patient-info/">Patient Info</a></li>
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.timetocare.ca/office-policies/">Office Policies</a></li>
+
+		<li class="nav-item  menu-item menu-item-type-custom menu-item-object-custom"><a class="nav-link" href="https://www.timetocare.ca/blog/">Blog</a></li>
+
+		<!-- start NORMAL END -->
+    </div>
+    </div><!-- END NORMAL END -->
+</div><li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.timetocare.ca/contact-us/">Contact Us</a></li>
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.timetocare.ca/financial-options/">Financial Options</a></li>
+
+		
+                    <!-- <a data-toggle="collapse" href="#id_search1" class="dropdown-toggle dropdown-toggle--search" aria-expanded="true"><i class="fa fa-search"></i>&nbsp;</a> -->
+
+                    <!-- DO not remove - Search Bar -->
+
+                    <!--
+
+                        <div class="nav-item nav-item--search">
+                            <a data-toggle="collapse" href="#id_search1" class="dropdown-toggle" aria-expanded="true"><i class="fa fa-search"></i>&nbsp;</a>
+
+                            <div class="nav-search dropdown-menu col-sm-5 col-lg-4 collapse" role="menu" id="id_search1" style="">
+                                <form class="p-3">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter your serach request" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    -->
+
+                </ul>
+
+                <a class="nav-btn btn btn-teal btn-lg js-scroll-trigger" id="book-button" href="https://can1.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=a1GAkMQ1qettTwbcN4UtEVtzm_p4828FJ2">BOOK NOW</a>
+            </div>
+
+            <a href="tel:780-484-5918" class="ml-auto primary-color phone-number" id="phone-number">
+<span class="phone-number__text">780-484-5918</span>
+<span class="phone-number__icon"><svg aria-hidn="true" focusable="false" data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#008080" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg></span>
+</a>
+            <a class="nav-btn btn btn-teal btn-lg js-scroll-trigger" id="book-button" href="https://can1.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=a1GAkMQ1qettTwbcN4UtEVtzm_p4828FJ2">BOOK NOW</a>
+        </div>
+    </nav>
+
+
+<div class="masthead masthead-general inner"><a id="CDSGeneralMasthead"></a><div class="masthead-cover" style="background-image: url( https://www.timetocare.ca/wp-content/uploads/sites/10/2019/09/image-hero-bonding.jpg ) !important;"><div class="container container--md"></div></div><div class="container container--md">
+	    
+	        <div class="masthead-callout primary-bg">
+	        	
+	        	<div class="intro-text text-left">
+            <div class="breadcrumb">Able Dental Family Dentistry &gt;</div>
+            <h1 style="color: #fff;text-align:center;">Cosmetic Restorations</h1>
+    </div>
+	    		<h2>Remember patching up your favourite pair of jeans, or that hole in the wall?</h2>
+
+	        </div>
+		
+		</div>
+		
+	</div>
+
+
+<div class="container container--sm">
+	<a id="CDSThemeParagraph"></a>
+
+    <div class="content">
+        
+        <h2>What is cosmetic restoration and dental bonding?</h2>
+<p>Dental bonding is a procedure in which resin is used to form tooth-coloured components to repair discoloured, fractured, chipped, or decayed teeth. In order to receive a personal fit, a custom mold is taken of the impaired tooth and a newly formed tooth is formed in a lab. Back at the dental office, the formed material is then bonded to your tooth, hence the term “bonding”.</p>
+<p>The dental bonding procedure can also be used to make teeth appear longer and to protect a fragment of the tooth’s root that has been exposed with receding gums.</p>
+<h2>How bonding is accomplished</h2>
+<p>Your dentist will begin the bonding process by using a shade guide to determine the correct resin colouring that matches closely to your tooth. Like using sandpaper on furniture, he will carefully etch your tooth to create a rough surface. To prepare the resin to adhere or “bond” to your tooth, it will be coated with a conditioning liquid. The resin will then be applied, molded and smoothed into the desired shape and hardened by laser or ultraviolet light. After the bonding has hardened, the tooth will be shaped, trimmed and polished to conform with the rest of your teeth.</p>
+<p>Taking care of your oral health is imperative in maintaining your bonded tooth/teeth. Refrain from eating or drinking foods that may stain your new tooth/teeth and make sure to see your Time to Care Dental Group dentist regularly. Bonding can last a number of years but do remember the resin is not as naturally tough as your teeth.</p>
+<p>You may not have been born with a perfect smile – something that makes us all unique – however, you always have the option of making cosmetic improvements to your smile.</p>
+<p>If you’re curious about dental bonding or cosmetic restoration, we’re only a <a href="https://www.timetocare.ca/contact-us/">phone call</a> away – 780-484-5918.</p>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- Consultation Block Data
+
+
+<pre>Array
+(
+    [book_a_consultation_banner] => 2105
+    [_book_a_consultation_banner] => field_5ccaf4ec6f3ce
+    [link_and_text] => 184
+    [_link_and_text] => field_5ccaf52f6f3cf
+    [banner_text] => Book a Consultation
+    [_banner_text] => field_5ccaf7ee469e7
+)
+</pre>
+
+
+END Block Data -->
+
+
+<!-- 1- -->
+<!-- 2- https://www.timetocare.ca/booking-->
+<!-- 3- https://www.timetocare.ca/booking/-->
+
+<section class="book cover white-bg d-flex align-items-center" id="book" style="background-image: url( https://www.timetocare.ca/wp-content/uploads/sites/10/2020/08/image-hero-contact-timetocare-1.jpg ) !important;">
+
+    <div class="container">
+
+        <a class="text-icon accent" href="https://www.timetocare.ca/booking/">
+            <span class="d-block-mobile">Book a Consultation</span><span class="text-icon__icon"></span>
+
+        </a>
+
+    </div>
+
+</section>
+<p class="card-text text-white text-normal"></p>
+    
+
+
+<footer class="footer" id="footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="d-sm-block d-md-none pt-50 pb-50">
+                        <a class="btn btn-teal btn-lg js-scroll-trigger" id="book-button" href="https://www.timetocare.ca/dental-emergency/" title="Dental Emergency">Dental Emergency</a>                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-3 bg-left pt-50 pb-50">
+                            <a href="https://www.timetocare.ca"><img src="https://www.timetocare.ca/wp-content/uploads/sites/10/2024/11/TTC-New-logo-Edmonton-white-200px.png"></a>
+
+                            <div class="links-social">
+                                <a class="link-social" href="https://www.facebook.com/timetocaresmiles"><img src="https://www.timetocare.ca/wp-content/uploads/sites/10/2019/09/Facebook_logo.png" alt=""></a><a href="https://www.facebook.com/timetocaresmiles"><span class="text-white "> Follow us on <span class="font-weight-bold">Facebook</span></span></a><br><a class="link-social" href="https://www.instagram.com/timetocaredentalgroup/"><img src="https://www.timetocare.ca/wp-content/uploads/sites/10/2019/10/instagram-logo-white.png" alt=""></a><a href="https://www.instagram.com/timetocaredentalgroup/"><span class="text-white "> Follow us on <span class="font-weight-bold">Instagram</span></span></a><br>                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-md-2 col-6 bg-left pt-50 pb-50">
+                            <p class="small text-white">
+
+                                <a href="https://www.timetocare.ca/about/">About</a><br>
+<a href="https://www.timetocare.ca/dental-services/">Services</a><br>
+<a href="https://www.timetocare.ca/financial-options/">Financial Options</a><br>
+<a href="https://www.timetocare.ca/contact-us/">Contact Us</a><br>
+<a href="https://can1.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=a1GAkMQ1qettTwbcN4UtEVtzm_p4828FJ2">Book Now</a><br>
+<a href="https://www.timetocare.ca/join-our-team/">Join Our Team</a><br>
+<a href="https://www.timetocare.ca/privacy-policy/">Privacy Policy</a><br>
+
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-md-4 col-6 bg-left pt-50 pb-50">
+                            <div class="footer-text">
+
+                                <p><strong>Telephone:</strong> <a href="tel:780-484-5918">780-484-5918</a></p>
+<p><strong>Address:</strong><br>
+8708 – 155th Street #209<br>
+Edmonton, AB<br>
+T5R 1W2</p>
+<p><strong>Fax:</strong> 780-484-7819</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 text-right d-none d-md-block bg-right pt-50 pb-50">
+
+                            <a class="btn btn-teal btn-lg js-scroll-trigger" id="book-button" href="https://www.timetocare.ca/dental-emergency/" title="Dental Emergency">Dental Emergency</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        <p class="copyright-text mt-15">©2026 Time to Care Dental</p>
+
+                        <!-- <div class="copyright-links">
+                            <a class="copyright-link" href="#">Privacy Policy</a>
+                            <a class="copyright-link" href="#">Terms of Service</a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="footer-managing">
+                        <div class="footer-managing__text">
+                            <span class="d-block">Professionally</span>
+                            <span class="d-block">managed by</span>
+                        </div>
+
+                        <div class="footer-managing__img">
+                            
+                            <a href="http://www.canadiandentalservices.ca/" target="_blank">
+                                <img src="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/img/assets/logo-cds.svg" alt="Canadian Dental Services">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/sites/10/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/canadian-dental-services/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+     <script async="" type="application/ld+json">	
+     	{"@context": "https://schema.org",  	
+     	"@type": "Dentist",
+     	"url": "https://www.timetocare.ca/", 
+     	"logo": "https://www.timetocare.ca/wp-content/uploads/sites/10/2019/09/time_to_care_132x90_colour.png",
+            "image": "https://www.timetocare.ca/wp-content/uploads/sites/10/2019/09/TTC2_1024x535.jpg",
+            "priceRange": "$$$",    
+     	"hasMap": "https://www.google.com/maps/place/Time+to+Care+Dental+Group/@53.519944,-113.588967,17z/data=!4m5!3m4!1s0x0:0xc57eaf9bbaaa501b!8m2!3d53.519944!4d-113.5889669?hl=en-US",
+     	"email": "info@timetocare.ca",
+       	"address": {"@type": "PostalAddress",
+             	"addressLocality": "Edmonton",
+             	"addressRegion": "AB",
+             	"postalCode":"T5R 1W2",
+             	"streetAddress": "8708 155 St NW #209",
+     	 	"addressCountry":"Canada"},
+       	"description": "Dentist in Edmonton, AB",
+       	"name": "Time to Care Dental Group",
+       	"telephone": "780-484-5918",
+       	"openingHours": ["Mo,Tu,We,Fr 08:30-16:00","Thu 10:00-17:00"],
+       	"geo": {"@type": "GeoCoordinates",
+        	"latitude": "53.519913",
+             	"longitude": "-113.588885"},
+      	"sameAs" : [ "https://www.facebook.com/timetocaresmiles","https://www.yelp.com/biz/time-to-care-dental-group-edmonton","https://foursquare.com/v/time-to-care-dental/4e7bc249aeb71fc808dcdd7d","https://www.instagram.com/timetocaredentalgroup/?hl=en","https://twitter.com/time2caredental","https://www.linkedin.com/in/time-to-care-dental-group/"],
+            "founder" : ["Dr. Michelle Breault"]
+     	}
+     </script>
+<!-- GTM Container placement set to footer -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWJFP5W" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script id="gtm4wp-form-move-tracker-js" src="https://www.timetocare.ca/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.3"></script>
+<script id="jq-js" src="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/vendor/jquery/jquery.min.js?ver=1.1"></script>
+<script id="bootstrap-js" src="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/vendor/bootstrap/js/bootstrap.bundle.min.js?ver=1.1"></script>
+<script id="easing-js" src="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/vendor/jquery-easing/jquery.easing.min.js?ver=1.1"></script>
+<script id="cds-mega-menu-js" src="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/js/MegaNavbarBS4.min.js?ver=1.1"></script>
+<script id="cds-js-js" src="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/js/cds.js?ver=1.1"></script>
+<script id="ninja-ajax-js-extra">
+var ninja_forms_ajax_object = {"ajaxurl":"https://www.timetocare.ca/wp-admin/admin-ajax.php"};
+//# sourceURL=ninja-ajax-js-extra
+</script>
+<script id="ninja-ajax-js" src="https://www.timetocare.ca/wp-content/themes/canadian-dental-services/js/ninja-forms-ajax.min.js?ver=1.1"></script>
+<script id="mediaelement-core-js-before">
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https://get.adobe.com/flashplayer/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+//# sourceURL=mediaelement-core-js-before
+</script>
+<script id="mediaelement-core-js" src="https://www.timetocare.ca/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17"></script>
+<script id="mediaelement-migrate-js" src="https://www.timetocare.ca/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=7.0"></script>
+<script id="mediaelement-js-extra">
+var _wpmejsSettings = {"pluginPath":"/wp-includes/js/mediaelement/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+//# sourceURL=mediaelement-js-extra
+</script>
+
+
+  <script>
+$( document ).ready(function() {
+
+    $('.carousel').carousel({
+        interval: false
+    });
+
+    $(".js-navbar-toggler").click(function(event) {
+
+        event.preventDefault();
+
+        toggle_navigation();
+
+    })
+
+    // NAV TOGGLE
+    $(".js-navbar-toggler.close").click(function(event) {
+        event.preventDefault();
+        // search bar
+        // $('.search-popup-overlay').hide();
+    })
+
+    function toggle_navigation(){
+
+        $('main-navigation').toggleClass("toggled");
+        $('.navbar-toggler').toggleClass("close");
+        $(".navbar-mobile").toggleClass("is-open");
+        $('.search-popup-overlay').fadeToggle(0,'swing');
+
+    }
+
+  });
+
+</script>
+<script src="https://cdn.maxassist.com/scripts/maxassist-booking.js" data-server-url="https://can1.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=a1GAkMQ1qettTwbcN4UtEVtzm_p4828FJ2">
+</script>
+
+<!-- this is production JB Monday March 6th -->
+
+
+
+<div class="MaxAssistBookButton MaxAssistFadeIn">
+            <div class="icon">
+                <svg class="SVG" viewBox="0 0 16.933333 16.933334" xmlns="http://www.w3.org/2000/svg"> <g id="layer1" transform="translate(0,-280.06665)"> <g id="g20571" transform="translate(-0.41856903)"> <path stroke-width="1.5" d="m 12.123047,5.625 h -1.126953 c -4.0684559,0 -7.3730471,3.3046121 -7.3730471,7.373047 v 5.556641 c -0.1868908,0.598608 0.1645108,1.375397 1.0039062,1.332031 H 58.373047 v 35.734375 c 0,2.995049 -2.377991,5.382812 -5.373047,5.382812 H 10.996094 c -2.9950523,0 -5.3730471,-2.387763 -5.3730471,-5.382812 V 23.376953 c 0,-1.333644 -2,-1.333644 -2,0 v 32.244141 c 0,4.068472 3.3045984,7.382812 7.3730471,7.382812 H 53 c 4.068454,0 7.375,-3.31434 7.375,-7.382812 V 12.998047 C 60.375,8.9296121 57.068457,5.625 53,5.625 h -0.996094 c -2.332088,-6.39390948 -10.882193,-5.62815817 -12.568359,0 H 24.689453 c -1.745886,-6.18656523 -11.042441,-5.94004653 -12.566406,0 z m 6.105469,-2.6230469 c 2.091449,0 3.462373,0.8278927 4.310546,2.6230465 h -8.273437 c 0.727207,-1.5455212 2.251723,-2.5623689 3.962891,-2.6230465 z m 27.3125,0 c 2.514627,0.010891 3.81297,1.2070473 4.3125,2.6230465 H 41.578125 C 42.305334,4.0794788 43.829849,3.0626311 45.541016,3.0019531 Z M 10.996094,7.625 h 11.976562 c 0,2.551471 -2.622119,4.498892 -4.564413,4.554688 -1.363604,-0.03062 -1.363604,2.030615 0,2 3.97158,0 6.57617,-3.521475 6.57617,-6.554688 h 25.300781 c 0,2.702667 -2.628694,4.498863 -4.572225,4.554688 -1.363604,-0.03062 -1.363604,2.030615 0,2 3.869266,0 6.583982,-3.212555 6.583982,-6.554688 H 53 c 2.995049,0 5.373047,2.377998 5.373047,5.373047 v 4.886719 H 5.6230469 v -4.886719 c 0,-2.995049 2.378002,-5.373047 5.3730471,-5.373047 z m 6.902344,22.064453 c -1.291578,2.91515 -1.29173,6.901249 0.384765,11.574219 1.668348,4.650255 2.548972,7.522972 3.460938,9.396484 0.864245,1.86087 2.130339,2.857422 3.957031,2.857422 3.168906,0 3.865915,-2.985005 4.509766,-5.513672 0.329724,-1.294299 -1.611681,-1.78844 -1.941407,-0.49414 -0.385193,1.972411 -1.054148,4.007812 -2.568359,4.007812 -1.244719,-0.0021 -1.694607,-0.934788 -2.154297,-1.734375 -0.773968,-1.590009 -1.700924,-4.516649 -3.380859,-9.199219 -1.553754,-4.330847 -1.456728,-7.794774 -0.44336,-10.082031 1.444021,-3.244717 5.857508,-4.894069 8.451159,-1.927734 0.217394,0.249156 0.444588,0.524003 0.705078,0.796875 -0.21162,0.01699 -0.430677,0.05046 -0.630859,0.05273 -1.333795,0.01512 -1.31231,2.014627 0.02148,2 2.352875,0 4.618793,-0.329734 6.150379,-1.423822 0.60696,-0.450746 1.021353,-0.980175 1.410156,-1.425781 2.669253,-2.875925 7.101777,-0.957383 8.44336,1.927734 1.013362,2.287219 1.112346,5.751184 -0.441407,10.082031 -1.679935,4.68257 -2.606891,7.60921 -3.380859,9.199219 -0.507018,1.047136 -1.095306,1.734375 -2.148438,1.734375 -1.71254,0 -2.071131,-2.053999 -2.435546,-3.470703 -0.484236,-2.207276 -1.227626,-4.974609 -3.869141,-4.974609 -1.33367,0 -1.33367,2 0,2 1.447556,0 1.607201,2.216815 1.927734,3.470703 0.540788,2.427709 1.947501,4.924104 4.376953,4.974609 2.011592,-0.07948 3.18211,-1.298991 3.949219,-2.857422 0.911966,-1.873512 1.79259,-4.746229 3.460938,-9.396484 1.676492,-4.67297 1.684148,-8.659069 0.392578,-11.574219 -1.291574,-2.915187 -3.969942,-4.673828 -7.123047,-4.673828 -2.685688,0 -4.323913,1.950705 -5.751958,3.375 -0.807293,0.616874 -1.736502,0.695534 -2.457018,-10e-7 -1.706831,-1.779494 -3.788928,-3.31435 -5.736329,-3.375 -3.672802,0 -6.053844,2.355963 -7.13865,4.673827 z" transform="matrix(0.26458333,0,0,0.26458333,0.41856903,280.06665)"></path> </g> </g> </svg>
+            </div>
+            <div class="content">
+                <div>Schedule</div>
+                <div>Appointment</div>
+            </div>
+        </div><div class="MaxAssistBackdrop"></div><div class="MaxAssistDialog">
+            <button class="MaxAssistCloseButton">×</button>
+            <div class="MaxAssistDialogContent">
+                <div id="MaxAssistLoadingIndicator" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                    <div style="text-align: center;">
+                        <div style="border: 4px solid #f3f3f3; border-top: 4px solid var(--maxassistBookOnlineBackgroundColor); border-radius: 50%; width: 40px; height: 40px; margin: 0 auto; animation: MaxAssistSpin 1s linear infinite;"></div>
+                        <p style="margin-top: 10px; color: #666;">Loading...</p>
+                    </div>
+                </div>
+                <iframe id="MaxAssistContentFrame" allow="sync-xhr" style="display: none; width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+        </div><script type="application/ld+json">
+{
+"@context" : "http://schema.org",
+"@type" : "Organization",
+"name" : "Time to Care Dental Group",
+"url" : "https://www.timetocare.ca/",
+"sameAs" : [
+"https://www.facebook.com/timetocaresmiles",
+"https://twitter.com/time2caredental",
+"https://www.instagram.com/timetocaredentalgroup/"
+]
+}
+</script></body></html>
