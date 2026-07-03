@@ -1,0 +1,834 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="profile" href="https://gmpg.org/xfn/11">
+		<link rel="pingback" href="https://www.flossbanff.com/xmlrpc.php">
+		
+		<meta name="geo.position" content="51.1751184,-115.5715085">
+<meta name="ICBM" content="51.1751184,-115.5715085">
+<meta name="contactorganization" content="Floss Banff">
+<meta name="contactstreetaddress" content="111 Banff Ave Unit 106">
+<meta name="contactzipcode" content="T1L 1A6">
+<meta name="contactcity" content="Banff">
+<meta name="geo.region" content="AB">
+<meta name="contactcountry" content="CA">
+<meta name="contactphonenumber" content="+1 (403) 762-2341">		
+		
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.4 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>X-Rays in Banff | Dental X-Rays Near You</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C700%3B0%2C900%3B1%2C300%3B1%2C700&amp;ver=8429c31ef93784652aa8b5996c1a0c23&amp;family=Quicksand%3Awght%40400%3B700&amp;ver=8429c31ef93784652aa8b5996c1a0c23&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C700%3B0%2C900%3B1%2C300%3B1%2C700&amp;ver=8429c31ef93784652aa8b5996c1a0c23&amp;family=Quicksand%3Awght%40400%3B700&amp;ver=8429c31ef93784652aa8b5996c1a0c23&amp;display=swap" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C700%3B0%2C900%3B1%2C300%3B1%2C700&#038;ver=8429c31ef93784652aa8b5996c1a0c23&#038;family=Quicksand%3Awght%40400%3B700&#038;ver=8429c31ef93784652aa8b5996c1a0c23&#038;display=swap" /></noscript>
+	<meta name="description" content="Looking for X-Rays in Banff? We offer Dental X-Rays Near You. Schedule a consultation with us.">
+	<link rel="canonical" href="https://www.flossbanff.com/service/x-rays/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="X-Rays in Banff | Dental X-Rays Near You">
+	<meta property="og:description" content="Looking for X-Rays in Banff? We offer Dental X-Rays Near You. Schedule a consultation with us.">
+	<meta property="og:url" content="https://www.flossbanff.com/service/x-rays/">
+	<meta property="og:site_name" content="Floss">
+	<meta property="article:modified_time" content="2023-09-18T11:19:17+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="3 minutes">
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//maps.google.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.flossbanff.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.flossbanff.com%2Fservice%2Fx-rays%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.flossbanff.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.flossbanff.com%2Fservice%2Fx-rays%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css" type="text/css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link data-minify="1" rel="stylesheet" id="contact-form-7-css" href="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1780327456" type="text/css" media="all">
+<link rel="stylesheet" id="xdsoft-datetimepicker-css" href="https://www.flossbanff.com/wp-content/plugins/date-time-picker-field/assets/vendor/xdsoft-datetimepicker/jquery.datetimepicker.min.css?ver=2.5.20" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="availability-datepicker-css" href="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/date-time-picker-field/public/css/avdp-public.css?ver=1780327456" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="wpgmp-frontend-css" href="https://www.flossbanff.com/wp-content/cache/background-css/www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/wp-google-map-plugin/assets/css/wpgmp_all_frontend.css?ver=1780327456&amp;wpr_t=1783006221" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="wpcf7-redirect-script-frontend-css" href="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/wpcf7-redirect/build/assets/frontend-script.css?ver=1780327456" type="text/css" media="all">
+<link rel="stylesheet" id="fancybox-css" href="https://www.flossbanff.com/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.css?ver=8429c31ef93784652aa8b5996c1a0c23" type="text/css" media="screen">
+<style id="fancybox-inline-css" type="text/css">
+#fancybox-content{border-color:#000;}
+/*# sourceURL=fancybox-inline-css */
+</style>
+<link data-minify="1" rel="stylesheet" id="js_composer_front-css" href="https://www.flossbanff.com/wp-content/cache/background-css/www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=1780327456&amp;wpr_t=1783006221" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="tpbc-style-css" href="https://www.flossbanff.com/wp-content/cache/background-css/www.flossbanff.com/wp-content/cache/min/1/wp-content/themes/dental/style.css?ver=1780327456&amp;wpr_t=1783006221" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="css_main-css" href="https://www.flossbanff.com/wp-content/cache/background-css/www.flossbanff.com/wp-content/cache/min/1/wp-content/themes/dental/css_main.css?ver=1780327456&amp;wpr_t=1783006221" type="text/css" media="all">
+<link rel="stylesheet" id="tpbc-bootstrap-css" href="https://www.flossbanff.com/wp-content/themes/dental/assets/css/bootstrap/bootstrap.min.css?ver=8429c31ef93784652aa8b5996c1a0c23" type="text/css" media="all">
+<link rel="stylesheet" id="tpbc-bootstrap-reboot-css" href="https://www.flossbanff.com/wp-content/themes/dental/assets/css/bootstrap/bootstrap-reboot.min.css?ver=8429c31ef93784652aa8b5996c1a0c23" type="text/css" media="all">
+
+
+<link data-minify="1" rel="stylesheet" id="tpbc-bootstrapwp-css" href="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/themes/dental/assets/css/bootstrap-wp.css?ver=1780327456" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="slick-css-css" href="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/themes/dental/slick/slick.css?ver=1780327456" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="slick-theme-css-css" href="https://www.flossbanff.com/wp-content/cache/background-css/www.flossbanff.com/wp-content/cache/min/1/wp-content/themes/dental/slick/slick-theme.css?ver=1780327456&amp;wpr_t=1783006221" type="text/css" media="all">
+<style id="rocket-lazyload-inline-css" type="text/css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:var(--wpr-bg-d10fe317-f89d-4ba2-8f10-ad4bd05b0833) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+/*# sourceURL=rocket-lazyload-inline-css */
+</style>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/themes/dental/assets/js/bootstrap/bootstrap.bundle.min.js?ver=8429c31ef93784652aa8b5996c1a0c23' async='async" id="tpbc-bootstrapjs-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/themes/dental/assets/js/bootstrap/popper.min.js?ver=8429c31ef93784652aa8b5996c1a0c23' async='async" id="tpbc-popperjs-js"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/themes/dental/assets/js/js_dental.js?ver=1780327456" id="dental-js-js" defer=""></script>
+<link rel="https://api.w.org/" href="https://www.flossbanff.com/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.flossbanff.com/xmlrpc.php?rsd">
+
+<link rel="shortlink" href="https://www.flossbanff.com/?p=1603">
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<link rel="icon" href="https://www.flossbanff.com/wp-content/uploads/2023/02/flos-logo.png" sizes="32x32">
+<link rel="icon" href="https://www.flossbanff.com/wp-content/uploads/2023/02/flos-logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.flossbanff.com/wp-content/uploads/2023/02/flos-logo.png">
+<meta name="msapplication-TileImage" content="https://www.flossbanff.com/wp-content/uploads/2023/02/flos-logo.png">
+		<style type="text/css" id="wp-custom-css">
+			/* Style 10-02-2025 Start */
+.site-content {
+    margin-top: 174px;
+}
+@media only screen and (max-width: 767px) {
+	.site-content {
+    margin-top: 0px;
+}
+}
+/* Style 10-02-2025 END */
+.contact-info-item .c-info.cal-icon,
+.site-footer .c-info.cal-icon {
+    background: var(--wpr-bg-dbfe25ed-b9dd-453a-9bfa-044092e17ead) no-repeat left top 4px;
+    background-size: 19px;
+}
+.contact-info-item .c-info.mail-icon,
+.site-footer .c-info.mail-icon {
+    background: var(--wpr-bg-5a25ff44-6f33-4e89-bb65-935fb82aa015) no-repeat left top 4px;
+    background-size: 21px;
+}
+.contact-info-item .c-info.fax-icon,
+.site-footer .c-info.fax-icon {
+    background: var(--wpr-bg-6b05c0cc-d172-484d-9fa2-d44881ee0a93) no-repeat left top 4px;
+    background-size: 21px;
+}
+.contact-info-item .c-info.map-icon,
+.site-footer .c-info.map-icon {
+    background: var(--wpr-bg-e02ff75b-438b-42b3-8c70-02a2eacfd29f) no-repeat left top 4px;
+    background-size: 23px;
+}
+
+
+.contact-info-item .c-info { padding: 0 0 15px 30px; }
+.contact-info-item .hours { padding: 0; margin: 0; }
+.contact-info-item .hours li { list-style: none; padding: 10px 0 0px 0; font-size: 17px; }
+.contact-info-item .hours li .time { float: right; }
+@media all and (min-width:768px) and (max-width: 991px) {
+.col-md-4.foo-widget-1 {
+    max-width: 25%;
+    flex: 25%;
+}
+.col-md-3.foo-widget-2 {
+    max-width: 25%;
+    flex: 25%;
+}
+.col-md-2.foo-widget-3 {
+    max-width: 25%;
+    flex: 25%;
+}
+.col-md-3.foo-widget-4 {
+    max-width: 25%;
+    flex: 25%;
+}
+}
+/*******************************/
+	
+	.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+	
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
+ul.footer-social li i:hover {
+    color: #fdc1da !important;
+}
+.slide-inner-text {
+    display: none;
+}	
+
+/*Comment By MD*/
+@media(max-width:767px) {
+	.inner-banner.blog-banner {
+		margin-top : 0;
+	}
+	.grecaptcha-badge {
+		opacity: 0;
+	}
+	.custom-team .vc_col-sm-3 {
+		margin-bottom: 30px;
+	}
+	.collapse.navbar-collapse:before {
+		display : none;
+	}
+	.site-header .navbar-nav li.ct-nav a {
+		margin-left : 0;
+	}
+	.footer-top .foo-widget-2 {
+		margin-top : 20px;
+		margin-bottom : 5px;
+	} 
+}
+@media(min-width:768px) and (max-width:1024px) {
+	#masthead .navbar {
+		-ms-flex-wrap: wrap;
+    flex-wrap: unset;
+	}
+	.collapse.navbar-collapse:before {
+		width: 80%;
+		bottom: 30%;
+	}
+	.site-header .navbar-nav li a {
+		font-size: 14px;
+	}
+	.site-header .navbar-nav li.ct-nav a {
+		margin: 0px 0 0 15px;
+	}
+	.site-header .navbar-collapse {
+		margin-top: 0;
+	}
+	.site-header .navbar-nav li a {
+		margin: 0 0px 0 20px;
+	}
+	.site-header .navbar-nav li.ct-nav a {
+		font-size: 14px;
+	}
+	.inner-banner.blog-banner {
+		margin-top: 141px;
+	}
+	.inner-banner.blog-banner .inner-title.text-center {
+		padding: 30px 0px;
+	}
+	.site-header.sticky .collapse.navbar-collapse:before {
+		bottom: 0%;
+	}
+	.homepage-slider .slide3 .slide-inner {
+		width: 300px;
+	}
+	.homepage-slider .slide-inner {
+		width: 300px;
+	}
+	.slide-main.slick-slide:after {
+		width: 450px;
+	}
+	.team-right .team-info p {
+    line-height: 16px;
+	}
+}
+
+.custom-list, .blog .entry-content ul, .single .entry-content ul {
+    /* padding: 0px 0 0 30px; */
+	padding:0px !important;
+}
+
+@media(max-width: 767px){
+	 .contact-right-desktop{display: none !important;}
+}
+
+@media(min-width: 768px){
+	.contact-right-desktop .our-address li a{color: #4f675a;}
+	
+	.contact-right-desktop .our-address li a:hover{
+		text-decoration: none;
+	}
+	
+		.contact-right-desktop .new-header-social-icon{padding-left: 0px;display: flex;
+        justify-content: flex-end;}
+	
+	.contact-right-desktop .our-address{justify-content: end;}
+	
+	.contact-right-desktop	.new-header-social-icon li a svg{
+		padding: 0 7px;
+    background: #fff;
+    border-radius: 50px 50px;
+		        margin-bottom: -4px;
+	}
+	.site-header.sticky .contact-right-desktop{margin-bottom: 15px;}
+}
+
+
+
+
+/*---mobile-header-css-- */
+@media (max-width:767px) {
+#masthead .col-md-12 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.contact-right.d-md-none.d-block {
+	order: 1;
+	grid-column: span 2;
+}
+.navbar-brand.header-image img {
+	width: 70px;
+}
+a.navbar-brand.header-image.d-block.d-md-none.text-center {
+	margin-right: auto !important;
+}
+.navbar-toggler.collapsed {
+
+	margin: 0 !important;
+}
+#masthead {
+	padding: 0;
+	padding-top: 7px;
+}
+
+#bs-example-navbar-collapse-1 {
+	position: absolute;
+	top: 77px;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	z-index: 9999999;
+	padding: 12px;
+}
+
+.navbar.navbar-expand-xl.navbar-light {
+	position: static;
+	justify-content: right;
+}
+.navbar-toggler {
+	margin: 0 !important;
+}
+.site-header.sticky .contact-right.d-md-none.d-block {
+	display: none !important;
+}
+.site-header.sticky {
+	position: fixed;
+	top: 0;
+	z-index: 999999;
+	padding: 12px 0px !important;
+}
+.site-header.sticky #bs-example-navbar-collapse-1 {
+	position: absolute;
+	top: 53px;
+}}
+
+/*---mobile-header-css-- */
+
+
+		</style>
+		<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Service", 
+  "name": "X-Rays in Banff | Dental X-Rays Near You",
+  "Image": "https://flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays-.jpg",
+  "description": "Looking for X-Rays in Banff? We offer Dental X-Rays Near You. Schedule a consultation with us.",
+  "brand": {
+    "@type": "Dentist",
+    "name": "FLOSS"
+  },
+  "offers": {
+    "@type": "Offer",
+    "additionalType": "https://en.wikipedia.org/wiki/Dental_radiography",
+    "url": "https://flossbanff.com/service/x-rays/",
+    "areaServed": "https://en.wikipedia.org/wiki/Banff,_Alberta",
+    "priceCurrency": "$"
+ } }
+</script><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1590477738337{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1678877099043{margin-top: 0px !important;margin-bottom: 0px !important;}.vc_custom_1678877051047{margin-top: 0px !important;margin-bottom: 0px !important;}.vc_custom_1678877209466{margin-top: 0px !important;margin-bottom: 0px !important;}.vc_custom_1590477683514{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1692593950528{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1590487630780{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1692846773644{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1590487630780{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1678876636989{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1678876620540{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1678876628683{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1678878768699{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1692846828859{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1590487630780{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1692936383628{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>	 
+		
+		<meta name="geo.position" content="@51.1751184,-115.5715085">
+<meta name="ICBM" content="@51.1751184,-115.57150852">
+<meta name="contactorganization" content="FLOSS - Dental Hygiene &amp; Whitening Clinic">
+<meta name="contactstreetaddress" content="111 Banff Ave Unit 106">
+<meta name="contactzipcode" content="T1L 1A6">
+<meta name="contactcity" content="Banff">
+<meta name="geo.region" content="AB">
+<meta name="contactcountry" content="Canada">
+<meta name="contactphonenumber" content="+1 403 762 2341">
+
+<!-- Google Tag Manager -->
+<script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N9XSCBHC');</script>
+<!-- End Google Tag Manager -->
+		 
+		
+	<link rel="stylesheet" id="vc_animate-css-css" href="https://www.flossbanff.com/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=6.6.0" type="text/css" media="all">
+
+<style id="wpr-lazyload-bg"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">:root{--wpr-bg-8f3ade5d-8c0d-4824-b0f5-7a0e96834ae0: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/loader.gif');}:root{--wpr-bg-20f755ae-75a9-48d2-9518-a423aee44522: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/wpgmp-toggle-sprite.png');}:root{--wpr-bg-08f4fb77-fddc-4c82-9bc9-fba0abe78ed5: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/white_select_arrow.png');}:root{--wpr-bg-ad7b162e-df59-4e15-ba20-b76af6f3c549: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/select_arrow.png');}:root{--wpr-bg-f4bc231e-261c-4f5f-970e-f15e66756d86: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/cross.png');}:root{--wpr-bg-0fb4671a-1285-4dda-ac2a-94e382f517bc: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/facebook.png');}:root{--wpr-bg-78e01c4f-ac0b-4116-83ad-de829c396cb8: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/twitter.png');}:root{--wpr-bg-a83e3b78-66b3-49d8-8955-840abf1cfa2f: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/map.png');}:root{--wpr-bg-34121672-4349-4f1b-ae3a-e4d2338052de: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/location-icon.png');}:root{--wpr-bg-1b532a0b-e64a-4812-9332-d9a41b54f4db: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/arrow.png');}:root{--wpr-bg-0445dd7b-9960-403e-9bd6-98f045ab77ab: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/arrow.png');}:root{--wpr-bg-493c58ed-7588-41fe-a1c3-4d11e75f79d7: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/css/fullscreen.png');}:root{--wpr-bg-d1639f8e-6055-4300-98ae-13d15be0b28c: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/css/fullscreen@2x.png');}:root{--wpr-bg-32d554dd-caa8-41db-9789-3111b9c7190b: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/images/map_placeholder.png');}:root{--wpr-bg-1a49f52c-d09e-489a-a744-1fb5f62d05f5: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/css/leaflet.routing.icons.png');}:root{--wpr-bg-069e605d-f47c-4ecb-926c-8af87c27b0f6: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/css/routing-icon.png');}:root{--wpr-bg-723ea518-37e7-47f3-b2d7-9c89089e441d: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/css/images/layers.png');}:root{--wpr-bg-3183676c-6fb3-47c5-b7db-167b55e1e806: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/css/images/layers-2x.png');}:root{--wpr-bg-04292d7d-ba89-4851-aa70-8da01f852aa4: url('../../../../../../../../../../../../plugins/wp-google-map-plugin/assets/css/images/marker-icon.png');}:root{--wpr-bg-a6a9d897-4796-413e-a3e8-6a69f401fd38: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/address-book.png');}:root{--wpr-bg-be3a88ef-f117-41d4-8280-363ea1c0b87a: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/alarm-clock.png');}:root{--wpr-bg-d22024c8-8de5-419b-83ba-ef83c56f1b3c: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/anchor.png');}:root{--wpr-bg-228e8bed-d84e-4b7d-9df3-955d03aeb537: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/application-image.png');}:root{--wpr-bg-6dbb37cf-0321-4d93-887f-0036e3f63666: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/arrow.png');}:root{--wpr-bg-331e4ba5-aa3a-4bde-8bdf-f57d8b824d5c: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/asterisk.png');}:root{--wpr-bg-afb0b399-c893-465d-a9b2-4f94af7c4fad: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/auction-hammer.png');}:root{--wpr-bg-4ca745fa-bedc-4038-837d-27bd29a695bb: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/balloon.png');}:root{--wpr-bg-d51c6f13-e108-4865-8a96-495e1ed45327: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/balloon-buzz.png');}:root{--wpr-bg-c6156f20-34f4-46d9-aaa5-60984bb2ef67: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/balloon-facebook.png');}:root{--wpr-bg-7c20ace5-dc33-48ac-ad65-64d96723c4b1: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/balloon-twitter.png');}:root{--wpr-bg-041fa6c5-42b5-4bff-98a9-a1ca4c843214: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/battery-full.png');}:root{--wpr-bg-c3364b62-3adb-4502-95ad-157e453ebf64: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/binocular.png');}:root{--wpr-bg-b27201ec-d160-495c-b51e-47733cfc523b: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-excel.png');}:root{--wpr-bg-3cddbc61-0dad-408a-9aef-ebf42fb342ce: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-image.png');}:root{--wpr-bg-1d51a5e7-e24f-4527-a2e2-e4113c758ef7: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-music.png');}:root{--wpr-bg-1a94a706-3bd0-4d11-8a6a-3681d075fb30: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-office.png');}:root{--wpr-bg-e74bacf4-7f35-48ec-97e6-f057feb91462: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-pdf.png');}:root{--wpr-bg-33eb6339-8847-487a-9ada-536554c01c29: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-powerpoint.png');}:root{--wpr-bg-ba14354e-69e2-4561-867c-40fb2d7b4b23: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-word.png');}:root{--wpr-bg-ef2dfc91-54d3-4c52-baea-4e06214c3a27: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/bookmark.png');}:root{--wpr-bg-c2d1cea4-03e2-4769-b0fe-d05229ed25d2: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/camcorder.png');}:root{--wpr-bg-395649c4-d845-4672-9ce9-2e8245b5fc8a: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/camera.png');}:root{--wpr-bg-9145f394-77bf-4c55-ada6-940f9f49af05: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/chart.png');}:root{--wpr-bg-3859af65-a354-4cd4-9edd-e6ee25911ecb: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/chart-pie.png');}:root{--wpr-bg-0cc011ef-acc1-403d-8827-5b657cefdf05: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/clock.png');}:root{--wpr-bg-d256202c-bf84-442c-9652-5860400bfe8c: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/control.png');}:root{--wpr-bg-6f389d0c-2d5b-41cb-aade-67b0728b382d: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/fire.png');}:root{--wpr-bg-3717480b-ecc0-4715-837d-4e07324aba7c: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/heart.png');}:root{--wpr-bg-183bf0a0-a5b9-4f37-9574-e63109008b4a: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/mail.png');}:root{--wpr-bg-182766ee-371a-4a85-8c21-6b811e3bbea3: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/plus-shield.png');}:root{--wpr-bg-7f863505-c599-44d9-a170-f596ff322322: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/video.png');}:root{--wpr-bg-a4a947da-3c46-4e71-a897-1c0897f15725: url('../../../../../../../../../../../../plugins/js_composer/assets/images/spinner.gif');}:root{--wpr-bg-3e6b9ac2-45c6-4ea2-8e19-edb9febc85b9: url('../../../../../../../../../../../../plugins/js_composer/assets/vc/alert.png');}:root{--wpr-bg-79d3b457-8ecd-419f-9147-e084b6980c3a: url('../../../../../../../../../../../../plugins/js_composer/assets/vc/info.png');}:root{--wpr-bg-769705b1-0203-4189-933d-d5f8841032a2: url('../../../../../../../../../../../../plugins/js_composer/assets/vc/tick.png');}:root{--wpr-bg-5977f246-f06d-44c1-b840-750a35b5fbd6: url('../../../../../../../../../../../../plugins/js_composer/assets/vc/exclamation.png');}:root{--wpr-bg-1537809e-c225-43d8-9fc2-02019958c81b: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/address-book.png');}:root{--wpr-bg-e67bfa2e-c3db-4bfe-9568-95d5ae3bcef2: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/alarm-clock.png');}:root{--wpr-bg-58752dcc-efa1-401d-933b-c66cef2f5716: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/anchor.png');}:root{--wpr-bg-62dd8e97-8913-478a-ba7e-f29484fdee86: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/application-image.png');}:root{--wpr-bg-1af94804-4b02-4e22-8ba5-6c8f5dfd2a0d: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/arrow.png');}:root{--wpr-bg-53c67648-9d73-4ac8-884a-1286601de168: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/asterisk.png');}:root{--wpr-bg-f6821e4c-999f-4082-8a5c-73f4b727b238: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/auction-hammer.png');}:root{--wpr-bg-c4b5f838-19ee-4148-9aaa-5f7f5e7e15d1: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/balloon.png');}:root{--wpr-bg-ed963137-4c1a-4b1f-8f7c-4190bad0eab2: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/balloon-buzz.png');}:root{--wpr-bg-5dc55245-9281-4690-8123-e28253622f39: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/balloon-facebook.png');}:root{--wpr-bg-54b36038-c2cb-4f47-af23-76f02475ee87: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/balloon-twitter.png');}:root{--wpr-bg-1c15d4f5-8e75-47e7-a613-a7744fb177b9: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/battery-full.png');}:root{--wpr-bg-2b293d7a-bbca-4f14-9eba-a39a757b4541: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/binocular.png');}:root{--wpr-bg-4ec2e239-0792-4150-b79d-b36c0c3e7b9c: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-excel.png');}:root{--wpr-bg-3554e8d7-263a-4374-b3bc-5d10a6a37519: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-image.png');}:root{--wpr-bg-db2aa810-f7e4-410b-8d1b-552aea3367d6: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-music.png');}:root{--wpr-bg-8330e5b1-dce3-43f0-bc04-9affaafbe1e0: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-office.png');}:root{--wpr-bg-0b76f967-2ce6-41e5-b6c4-dd760ab47f7d: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-pdf.png');}:root{--wpr-bg-55a60ef7-76e7-470b-b444-4c36ae2d8e05: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-powerpoint.png');}:root{--wpr-bg-e1f5d382-9a13-46dd-ac4c-d176bca3cce3: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/blue-document-word.png');}:root{--wpr-bg-635d1107-c6fc-4364-98fa-858926a7583c: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/bookmark.png');}:root{--wpr-bg-3d6b689d-ed16-4087-bb15-adf3b2f8c476: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/camcorder.png');}:root{--wpr-bg-9ee70c5f-da43-46e1-b7a0-a9f425d4186f: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/camera.png');}:root{--wpr-bg-a8f52aab-e59f-48b5-a3f6-2dbb0ea944e5: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/chart.png');}:root{--wpr-bg-b06869d9-98ec-4228-9ff0-0ca69631c639: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/chart-pie.png');}:root{--wpr-bg-afe30aa1-131e-46a5-9770-2a099c4604d5: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/clock.png');}:root{--wpr-bg-26723cef-b615-4372-b7b2-c3d478f6274a: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/control.png');}:root{--wpr-bg-ece247c1-91f1-4bb5-b35a-09df75e7dfdc: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/fire.png');}:root{--wpr-bg-0ae5ce55-92ea-477e-9864-8870a3e9450a: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/heart.png');}:root{--wpr-bg-3429d77c-635f-4616-9f65-b2d5fb58f88b: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/mail.png');}:root{--wpr-bg-b2efcc1f-4936-4a9f-a9b0-67ee37e700ab: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/plus-shield.png');}:root{--wpr-bg-384e120e-3361-451e-9db6-aad0311bd29a: url('../../../../../../../../../../../../plugins/js_composer/assets/images/icons/video.png');}:root{--wpr-bg-78651e99-9b58-4c20-a782-319ea62fc585: url('../../../../../../../../../../../../plugins/js_composer/assets/images/toggle_open.png');}:root{--wpr-bg-1bf6ad8e-5e5f-43f7-bc12-4ff41205f2cf: url('../../../../../../../../../../../../plugins/js_composer/assets/images/toggle_close.png');}:root{--wpr-bg-5c72aa9f-a120-44d7-a9c1-8473ee419633: url('../../../../../../../../../../../../plugins/js_composer/assets/images/flickr.png');}:root{--wpr-bg-67a5e8fd-c7da-432a-9f3a-67a500c30466: url('../../../../../../../../../../../../plugins/js_composer/assets/vc/tick.png');}:root{--wpr-bg-93a48d10-c540-474e-8f30-6c11e393ce7f: url('../../../../../../../../../../../../plugins/js_composer/assets/vc/remove.png');}:root{--wpr-bg-bceff219-4e54-417c-bd36-adb544bb9c68: url('../../../../../../../../../../themes/dental/images/sprite.png');}:root{--wpr-bg-e42c91e5-42d5-4eb4-9dba-b967233a0ebc: url('../../../../../../../../../../themes/dental/images/slick-arrow-left.png');}:root{--wpr-bg-8531af72-a542-4bf1-87ac-6005fc73d97d: url('../../../../../../../../../../themes/dental/images/slick-arrow-right.png');}:root{--wpr-bg-0dbbecad-1213-46ca-a751-eaca9f30ec5e: url('http://medianvdemo.com/flo/wp-content/uploads/2023/08/right-arrow.svg');}:root{--wpr-bg-13fe9303-982d-41c5-b642-32d3555d7d56: url('../../../../../../../../../../../themes/dental/slick/ajax-loader.gif');}:root{--wpr-bg-d10fe317-f89d-4ba2-8f10-ad4bd05b0833: url('https://www.flossbanff.com/wp-content/plugins/wp-rocket/assets/img/youtube.png');}:root{--wpr-bg-dbfe25ed-b9dd-453a-9bfa-044092e17ead: url('https://flossbanff.com/wp-content/uploads/2023/02/call-icon-ft.svg');}:root{--wpr-bg-5a25ff44-6f33-4e89-bb65-935fb82aa015: url('https://flossbanff.com/wp-content/uploads/2023/02/email-icon-ft.svg');}:root{--wpr-bg-6b05c0cc-d172-484d-9fa2-d44881ee0a93: url('https://flossbanff.com/wp-content/uploads/2023/03/fax.svg');}:root{--wpr-bg-e02ff75b-438b-42b3-8c70-02a2eacfd29f: url('https://flossbanff.com/wp-content/uploads/2023/02/map-icon-ft.svg');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".wpgmp_loading","style":":root{--wpr-bg-8f3ade5d-8c0d-4824-b0f5-7a0e96834ae0: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/loader.gif');}"},{"selector":"div.wpgmp_direction_panel_container h2 a","style":":root{--wpr-bg-20f755ae-75a9-48d2-9518-a423aee44522: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/wpgmp-toggle-sprite.png');}"},{"selector":"div.categories_filter select","style":":root{--wpr-bg-08f4fb77-fddc-4c82-9bc9-fba0abe78ed5: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/white_select_arrow.png');}"},{"selector":".wpgmp_toggle_main_container p select","style":":root{--wpr-bg-ad7b162e-df59-4e15-ba20-b76af6f3c549: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/select_arrow.png');}"},{"selector":".infowindow-close","style":":root{--wpr-bg-f4bc231e-261c-4f5f-970e-f15e66756d86: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/cross.png');}"},{"selector":".fc-featured-hoverinner .facebook","style":":root{--wpr-bg-0fb4671a-1285-4dda-ac2a-94e382f517bc: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/facebook.png');}"},{"selector":".fc-featured-hoverinner .twitter","style":":root{--wpr-bg-78e01c4f-ac0b-4116-83ad-de829c396cb8: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/twitter.png');}"},{"selector":".fc-featured-hoverinner .map","style":":root{--wpr-bg-a83e3b78-66b3-49d8-8955-840abf1cfa2f: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/map.png');}"},{"selector":".fc-location-marker","style":":root{--wpr-bg-34121672-4349-4f1b-ae3a-e4d2338052de: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/location-icon.png');}"},{"selector":".fc-item-fano .read-more","style":":root{--wpr-bg-1b532a0b-e64a-4812-9332-d9a41b54f4db: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/arrow.png');}"},{"selector":".fc-item-fano .read-more","style":":root{--wpr-bg-0445dd7b-9960-403e-9bd6-98f045ab77ab: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/arrow.png');}"},{"selector":".leaflet-control-fullscreen a","style":":root{--wpr-bg-493c58ed-7588-41fe-a1c3-4d11e75f79d7: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/css\/fullscreen.png');}"},{"selector":".leaflet-control-fullscreen a","style":":root{--wpr-bg-d1639f8e-6055-4300-98ae-13d15be0b28c: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/css\/fullscreen@2x.png');}"},{"selector":".wpgmp_map_container_placeholder","style":":root{--wpr-bg-32d554dd-caa8-41db-9789-3111b9c7190b: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/images\/map_placeholder.png');}"},{"selector":".leaflet-routing-icon","style":":root{--wpr-bg-1a49f52c-d09e-489a-a744-1fb5f62d05f5: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/css\/leaflet.routing.icons.png');}"},{"selector":".leaflet-routing-container-hide .leaflet-routing-collapse-btn","style":":root{--wpr-bg-069e605d-f47c-4ecb-926c-8af87c27b0f6: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/css\/routing-icon.png');}"},{"selector":".leaflet-control-layers-toggle","style":":root{--wpr-bg-723ea518-37e7-47f3-b2d7-9c89089e441d: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/css\/images\/layers.png');}"},{"selector":".leaflet-retina .leaflet-control-layers-toggle","style":":root{--wpr-bg-3183676c-6fb3-47c5-b7db-167b55e1e806: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/css\/images\/layers-2x.png');}"},{"selector":".leaflet-default-icon-path","style":":root{--wpr-bg-04292d7d-ba89-4851-aa70-8da01f852aa4: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/wp-google-map-plugin\/assets\/css\/images\/marker-icon.png');}"},{"selector":".wpb_address_book i.icon,option.wpb_address_book","style":":root{--wpr-bg-a6a9d897-4796-413e-a3e8-6a69f401fd38: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/address-book.png');}"},{"selector":".wpb_alarm_clock i.icon,option.wpb_alarm_clock","style":":root{--wpr-bg-be3a88ef-f117-41d4-8280-363ea1c0b87a: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/alarm-clock.png');}"},{"selector":".wpb_anchor i.icon,option.wpb_anchor","style":":root{--wpr-bg-d22024c8-8de5-419b-83ba-ef83c56f1b3c: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/anchor.png');}"},{"selector":".wpb_application_image i.icon,option.wpb_application_image","style":":root{--wpr-bg-228e8bed-d84e-4b7d-9df3-955d03aeb537: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/application-image.png');}"},{"selector":".wpb_arrow i.icon,option.wpb_arrow","style":":root{--wpr-bg-6dbb37cf-0321-4d93-887f-0036e3f63666: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/arrow.png');}"},{"selector":".wpb_asterisk i.icon,option.wpb_asterisk","style":":root{--wpr-bg-331e4ba5-aa3a-4bde-8bdf-f57d8b824d5c: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/asterisk.png');}"},{"selector":".wpb_hammer i.icon,option.wpb_hammer","style":":root{--wpr-bg-afb0b399-c893-465d-a9b2-4f94af7c4fad: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/auction-hammer.png');}"},{"selector":".wpb_balloon i.icon,option.wpb_balloon","style":":root{--wpr-bg-4ca745fa-bedc-4038-837d-27bd29a695bb: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/balloon.png');}"},{"selector":".wpb_balloon_buzz i.icon,option.wpb_balloon_buzz","style":":root{--wpr-bg-d51c6f13-e108-4865-8a96-495e1ed45327: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/balloon-buzz.png');}"},{"selector":".wpb_balloon_facebook i.icon,option.wpb_balloon_facebook","style":":root{--wpr-bg-c6156f20-34f4-46d9-aaa5-60984bb2ef67: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/balloon-facebook.png');}"},{"selector":".wpb_balloon_twitter i.icon,option.wpb_balloon_twitter","style":":root{--wpr-bg-7c20ace5-dc33-48ac-ad65-64d96723c4b1: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/balloon-twitter.png');}"},{"selector":".wpb_battery i.icon,option.wpb_battery","style":":root{--wpr-bg-041fa6c5-42b5-4bff-98a9-a1ca4c843214: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/battery-full.png');}"},{"selector":".wpb_binocular i.icon,option.wpb_binocular","style":":root{--wpr-bg-c3364b62-3adb-4502-95ad-157e453ebf64: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/binocular.png');}"},{"selector":".wpb_document_excel i.icon,option.wpb_document_excel","style":":root{--wpr-bg-b27201ec-d160-495c-b51e-47733cfc523b: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-excel.png');}"},{"selector":".wpb_document_image i.icon,option.wpb_document_image","style":":root{--wpr-bg-3cddbc61-0dad-408a-9aef-ebf42fb342ce: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-image.png');}"},{"selector":".wpb_document_music i.icon,option.wpb_document_music","style":":root{--wpr-bg-1d51a5e7-e24f-4527-a2e2-e4113c758ef7: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-music.png');}"},{"selector":".wpb_document_office i.icon,option.wpb_document_office","style":":root{--wpr-bg-1a94a706-3bd0-4d11-8a6a-3681d075fb30: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-office.png');}"},{"selector":".wpb_document_pdf i.icon,option.wpb_document_pdf","style":":root{--wpr-bg-e74bacf4-7f35-48ec-97e6-f057feb91462: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-pdf.png');}"},{"selector":".wpb_document_powerpoint i.icon,option.wpb_document_powerpoint","style":":root{--wpr-bg-33eb6339-8847-487a-9ada-536554c01c29: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-powerpoint.png');}"},{"selector":".wpb_document_word i.icon,option.wpb_document_word","style":":root{--wpr-bg-ba14354e-69e2-4561-867c-40fb2d7b4b23: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-word.png');}"},{"selector":".wpb_bookmark i.icon,option.wpb_bookmark","style":":root{--wpr-bg-ef2dfc91-54d3-4c52-baea-4e06214c3a27: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/bookmark.png');}"},{"selector":".wpb_camcorder i.icon,option.wpb_camcorder","style":":root{--wpr-bg-c2d1cea4-03e2-4769-b0fe-d05229ed25d2: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/camcorder.png');}"},{"selector":".wpb_camera i.icon,option.wpb_camera","style":":root{--wpr-bg-395649c4-d845-4672-9ce9-2e8245b5fc8a: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/camera.png');}"},{"selector":".wpb_chart i.icon,option.wpb_chart","style":":root{--wpr-bg-9145f394-77bf-4c55-ada6-940f9f49af05: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/chart.png');}"},{"selector":".wpb_chart_pie i.icon,option.wpb_chart_pie","style":":root{--wpr-bg-3859af65-a354-4cd4-9edd-e6ee25911ecb: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/chart-pie.png');}"},{"selector":".wpb_clock i.icon,option.wpb_clock","style":":root{--wpr-bg-0cc011ef-acc1-403d-8827-5b657cefdf05: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/clock.png');}"},{"selector":".wpb_play i.icon,option.wpb_play","style":":root{--wpr-bg-d256202c-bf84-442c-9652-5860400bfe8c: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/control.png');}"},{"selector":".wpb_fire i.icon,option.wpb_fire","style":":root{--wpr-bg-6f389d0c-2d5b-41cb-aade-67b0728b382d: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/fire.png');}"},{"selector":".wpb_heart i.icon,option.wpb_heart","style":":root{--wpr-bg-3717480b-ecc0-4715-837d-4e07324aba7c: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/heart.png');}"},{"selector":".wpb_mail i.icon,option.wpb_mail","style":":root{--wpr-bg-183bf0a0-a5b9-4f37-9574-e63109008b4a: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/mail.png');}"},{"selector":".wpb_shield i.icon,option.wpb_shield","style":":root{--wpr-bg-182766ee-371a-4a85-8c21-6b811e3bbea3: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/plus-shield.png');}"},{"selector":".wpb_video i.icon,option.wpb_video","style":":root{--wpr-bg-7f863505-c599-44d9-a170-f596ff322322: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/video.png');}"},{"selector":".vc-spinner","style":":root{--wpr-bg-a4a947da-3c46-4e71-a897-1c0897f15725: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/spinner.gif');}"},{"selector":".vc_pixel_icon-alert","style":":root{--wpr-bg-3e6b9ac2-45c6-4ea2-8e19-edb9febc85b9: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/vc\/alert.png');}"},{"selector":".vc_pixel_icon-info","style":":root{--wpr-bg-79d3b457-8ecd-419f-9147-e084b6980c3a: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/vc\/info.png');}"},{"selector":".vc_pixel_icon-tick","style":":root{--wpr-bg-769705b1-0203-4189-933d-d5f8841032a2: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/vc\/tick.png');}"},{"selector":".vc_pixel_icon-explanation","style":":root{--wpr-bg-5977f246-f06d-44c1-b840-750a35b5fbd6: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/vc\/exclamation.png');}"},{"selector":".vc_pixel_icon-address_book","style":":root{--wpr-bg-1537809e-c225-43d8-9fc2-02019958c81b: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/address-book.png');}"},{"selector":".vc_pixel_icon-alarm_clock","style":":root{--wpr-bg-e67bfa2e-c3db-4bfe-9568-95d5ae3bcef2: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/alarm-clock.png');}"},{"selector":".vc_pixel_icon-anchor","style":":root{--wpr-bg-58752dcc-efa1-401d-933b-c66cef2f5716: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/anchor.png');}"},{"selector":".vc_pixel_icon-application_image","style":":root{--wpr-bg-62dd8e97-8913-478a-ba7e-f29484fdee86: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/application-image.png');}"},{"selector":".vc_pixel_icon-arrow","style":":root{--wpr-bg-1af94804-4b02-4e22-8ba5-6c8f5dfd2a0d: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/arrow.png');}"},{"selector":".vc_pixel_icon-asterisk","style":":root{--wpr-bg-53c67648-9d73-4ac8-884a-1286601de168: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/asterisk.png');}"},{"selector":".vc_pixel_icon-hammer","style":":root{--wpr-bg-f6821e4c-999f-4082-8a5c-73f4b727b238: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/auction-hammer.png');}"},{"selector":".vc_pixel_icon-balloon","style":":root{--wpr-bg-c4b5f838-19ee-4148-9aaa-5f7f5e7e15d1: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/balloon.png');}"},{"selector":".vc_pixel_icon-balloon_buzz","style":":root{--wpr-bg-ed963137-4c1a-4b1f-8f7c-4190bad0eab2: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/balloon-buzz.png');}"},{"selector":".vc_pixel_icon-balloon_facebook","style":":root{--wpr-bg-5dc55245-9281-4690-8123-e28253622f39: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/balloon-facebook.png');}"},{"selector":".vc_pixel_icon-balloon_twitter","style":":root{--wpr-bg-54b36038-c2cb-4f47-af23-76f02475ee87: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/balloon-twitter.png');}"},{"selector":".vc_pixel_icon-battery","style":":root{--wpr-bg-1c15d4f5-8e75-47e7-a613-a7744fb177b9: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/battery-full.png');}"},{"selector":".vc_pixel_icon-binocular","style":":root{--wpr-bg-2b293d7a-bbca-4f14-9eba-a39a757b4541: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/binocular.png');}"},{"selector":".vc_pixel_icon-document_excel","style":":root{--wpr-bg-4ec2e239-0792-4150-b79d-b36c0c3e7b9c: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-excel.png');}"},{"selector":".vc_pixel_icon-document_image","style":":root{--wpr-bg-3554e8d7-263a-4374-b3bc-5d10a6a37519: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-image.png');}"},{"selector":".vc_pixel_icon-document_music","style":":root{--wpr-bg-db2aa810-f7e4-410b-8d1b-552aea3367d6: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-music.png');}"},{"selector":".vc_pixel_icon-document_office","style":":root{--wpr-bg-8330e5b1-dce3-43f0-bc04-9affaafbe1e0: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-office.png');}"},{"selector":".vc_pixel_icon-document_pdf","style":":root{--wpr-bg-0b76f967-2ce6-41e5-b6c4-dd760ab47f7d: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-pdf.png');}"},{"selector":".vc_pixel_icon-document_powerpoint","style":":root{--wpr-bg-55a60ef7-76e7-470b-b444-4c36ae2d8e05: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-powerpoint.png');}"},{"selector":".vc_pixel_icon-document_word","style":":root{--wpr-bg-e1f5d382-9a13-46dd-ac4c-d176bca3cce3: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/blue-document-word.png');}"},{"selector":".vc_pixel_icon-bookmark","style":":root{--wpr-bg-635d1107-c6fc-4364-98fa-858926a7583c: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/bookmark.png');}"},{"selector":".vc_pixel_icon-camcorder","style":":root{--wpr-bg-3d6b689d-ed16-4087-bb15-adf3b2f8c476: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/camcorder.png');}"},{"selector":".vc_pixel_icon-camera","style":":root{--wpr-bg-9ee70c5f-da43-46e1-b7a0-a9f425d4186f: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/camera.png');}"},{"selector":".vc_pixel_icon-chart","style":":root{--wpr-bg-a8f52aab-e59f-48b5-a3f6-2dbb0ea944e5: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/chart.png');}"},{"selector":".vc_pixel_icon-chart_pie","style":":root{--wpr-bg-b06869d9-98ec-4228-9ff0-0ca69631c639: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/chart-pie.png');}"},{"selector":".vc_pixel_icon-clock","style":":root{--wpr-bg-afe30aa1-131e-46a5-9770-2a099c4604d5: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/clock.png');}"},{"selector":".vc_pixel_icon-play","style":":root{--wpr-bg-26723cef-b615-4372-b7b2-c3d478f6274a: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/control.png');}"},{"selector":".vc_pixel_icon-fire","style":":root{--wpr-bg-ece247c1-91f1-4bb5-b35a-09df75e7dfdc: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/fire.png');}"},{"selector":".vc_pixel_icon-heart","style":":root{--wpr-bg-0ae5ce55-92ea-477e-9864-8870a3e9450a: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/heart.png');}"},{"selector":".vc_pixel_icon-mail","style":":root{--wpr-bg-3429d77c-635f-4616-9f65-b2d5fb58f88b: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/mail.png');}"},{"selector":".vc_pixel_icon-shield","style":":root{--wpr-bg-b2efcc1f-4936-4a9f-a9b0-67ee37e700ab: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/plus-shield.png');}"},{"selector":".vc_pixel_icon-video","style":":root{--wpr-bg-384e120e-3361-451e-9db6-aad0311bd29a: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/icons\/video.png');}"},{"selector":".wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon,.wpb_accordion .wpb_accordion_wrapper .ui-state-default .ui-icon","style":":root{--wpr-bg-78651e99-9b58-4c20-a782-319ea62fc585: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/toggle_open.png');}"},{"selector":".wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon","style":":root{--wpr-bg-1bf6ad8e-5e5f-43f7-bc12-4ff41205f2cf: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/toggle_close.png');}"},{"selector":".wpb_flickr_widget p.flickr_stream_wrap a","style":":root{--wpr-bg-5c72aa9f-a120-44d7-a9c1-8473ee419633: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/images\/flickr.png');}"},{"selector":".vc-spinner.vc-spinner-complete","style":":root{--wpr-bg-67a5e8fd-c7da-432a-9f3a-67a500c30466: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/vc\/tick.png');}"},{"selector":".vc-spinner.vc-spinner-failed","style":":root{--wpr-bg-93a48d10-c540-474e-8f30-6c11e393ce7f: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/plugins\/js_composer\/assets\/vc\/remove.png');}"},{"selector":".sprite","style":":root{--wpr-bg-bceff219-4e54-417c-bd36-adb544bb9c68: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/themes\/dental\/images\/sprite.png');}"},{"selector":".slick-prev","style":":root{--wpr-bg-e42c91e5-42d5-4eb4-9dba-b967233a0ebc: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/themes\/dental\/images\/slick-arrow-left.png');}"},{"selector":".slick-next","style":":root{--wpr-bg-8531af72-a542-4bf1-87ac-6005fc73d97d: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/themes\/dental\/images\/slick-arrow-right.png');}"},{"selector":".price-chart .price-content ul li","style":":root{--wpr-bg-0dbbecad-1213-46ca-a751-eaca9f30ec5e: url('http:\/\/medianvdemo.com\/flo\/wp-content\/uploads\/2023\/08\/right-arrow.svg');}"},{"selector":".slick-loading .slick-list","style":":root{--wpr-bg-13fe9303-982d-41c5-b642-32d3555d7d56: url('..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/..\/themes\/dental\/slick\/ajax-loader.gif');}"},{"selector":".rll-youtube-player .play","style":":root{--wpr-bg-d10fe317-f89d-4ba2-8f10-ad4bd05b0833: url('https:\/\/www.flossbanff.com\/wp-content\/plugins\/wp-rocket\/assets\/img\/youtube.png');}"},{"selector":".contact-info-item .c-info.cal-icon,\n.site-footer .c-info.cal-icon","style":":root{--wpr-bg-dbfe25ed-b9dd-453a-9bfa-044092e17ead: url('https:\/\/flossbanff.com\/wp-content\/uploads\/2023\/02\/call-icon-ft.svg');}"},{"selector":".contact-info-item .c-info.mail-icon,\n.site-footer .c-info.mail-icon","style":":root{--wpr-bg-5a25ff44-6f33-4e89-bb65-935fb82aa015: url('https:\/\/flossbanff.com\/wp-content\/uploads\/2023\/02\/email-icon-ft.svg');}"},{"selector":".contact-info-item .c-info.fax-icon,\n.site-footer .c-info.fax-icon","style":":root{--wpr-bg-6b05c0cc-d172-484d-9fa2-d44881ee0a93: url('https:\/\/flossbanff.com\/wp-content\/uploads\/2023\/03\/fax.svg');}"},{"selector":".contact-info-item .c-info.map-icon,\n.site-footer .c-info.map-icon","style":":root{--wpr-bg-e02ff75b-438b-42b3-8c70-02a2eacfd29f: url('https:\/\/flossbanff.com\/wp-content\/uploads\/2023\/02\/map-icon-ft.svg');}"}];</script></head>  
+ 
+<body class="wp-singular services-template-default single single-services postid-1603 wp-theme-dental wpb-js-composer js-comp-ver-6.6.0 vc_responsive">
+
+	 <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9XSCBHC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->	 
+    <div id="page" class="site page-x-rays">
+         
+        <header id="masthead" class="site-header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<a class="navbar-brand header-image d-block d-md-none text-center" href="https://www.flossbanff.com/" title="Floss" rel="home"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Floss" border="0" data-lazy-src="https://flossbanff.com/wp-content/uploads/2023/02/flos-logo.png"><noscript><img src="https://flossbanff.com/wp-content/uploads/2023/02/flos-logo.png" alt="Floss" border="0" /></noscript></a>
+						<div class="contact-right d-md-none d-block"> 
+								<ul class="our-address clearfix">
+									<li><a href="https://www.google.com/maps?cid=19137060163647293" class="o-add" target="blank">111 Banff Ave Unit 106, Banff, AB T1L 1C1, Canada</a></li>
+									<li><a href="tel:4037622341" class="o-ph">(403) 762-2341</a></li>
+									<li><a href="https://mychart.myoryx.ca/patient/#/auth/onlineschedule?realm=floss&amp;univers=ca" class="btn-appt d-block d-md-none" target="_blank">Book Appointment</a></li>
+								</ul>								
+						</div>  
+						<div class="contact-right-desktop"> 
+								<ul class="our-address clearfix">
+									<li><a href="https://www.google.com/maps?cid=19137060163647293" class="o-add" target="blank">111 Banff Ave Unit 106, Banff, AB T1L 1C1, Canada</a></li>
+									<li><a href="tel:4037622341" class="o-ph">(403) 762-2341</a></li>
+									<ul class="new-header-social-icon">
+													<li>
+																		<a href="https://www.facebook.com/flossbanff" target="_blank" title="">
+																							<svg width="30px" height="30px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+													<title>facebook [#176]</title>
+													<desc>Created with Sketch.</desc>
+													<defs></defs>
+													<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill="#4f675a">
+															<g id="icons" transform="translate(56.000000, 160.000000)">
+																<path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" id="facebook-[#176]"></path>
+															</g>
+														</g>
+													</g>
+												</svg>
+																																											</a>
+															</li>
+													<li>
+																		<a href="https://www.instagram.com/flossbanff/" target="_blank" title="">
+																																													<svg width="30px" height="30px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#4f675a"></path>
+													<path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#4f675a"></path>
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#4f675a"></path>
+												</svg>
+																					</a>
+															</li>
+													
+																	
+												</ul>
+								</ul>								
+						</div>  
+							
+							
+					<nav class="navbar navbar-expand-xl navbar-light">                    	                          
+					<a class="navbar-brand header-image d-none d-md-block" href="https://www.flossbanff.com/" title="Floss" rel="home"><img src="https://flossbanff.com/wp-content/uploads/2023/02/flos-logo.png" alt="Floss" border="0" data-lazy-src="https://flossbanff.com/wp-content/uploads/2023/02/flos-logo.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img src="https://flossbanff.com/wp-content/uploads/2023/02/flos-logo.png" alt="Floss" border="0" /></noscript></a>  
+						<!-- <a class="navbar-brand header-image d-block d-md-none">Menu</a> -->
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">Menu</span></button>
+						<div class="contact-right"> 
+														
+					</div> 
+					
+						<div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul id="main-menu" class="nav navbar-nav ml-auto sm sm-clean"><li id="menu-item-1478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1478"><a href="https://www.flossbanff.com/">Home</a></li>
+<li id="menu-item-381" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-381"><a href="#">SERVICES</a>
+<ul class="sub-menu">
+	<li id="menu-item-1636" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1636"><a href="https://www.flossbanff.com/service/dental-cleanings/">Dental Cleanings</a></li>
+	<li id="menu-item-1620" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1620"><a href="https://www.flossbanff.com/service/oral-exams/">Dental Hygiene Exams</a></li>
+	<li id="menu-item-2006" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-2006"><a href="https://www.flossbanff.com/service/dentures/">Dentures</a></li>
+	<li id="menu-item-1624" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1624"><a href="https://www.flossbanff.com/service/fluoride-treatment/">Fluoride Treatment</a></li>
+	<li id="menu-item-1625" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1625"><a href="https://www.flossbanff.com/service/laser-whitening/">Laser Whitening</a></li>
+	<li id="menu-item-1800" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1800"><a href="https://www.flossbanff.com/service/sports-guards-and-night-guards/">Mouth Guards</a></li>
+	<li id="menu-item-1626" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1626"><a href="https://www.flossbanff.com/service/teeth-whitening/">Teeth Whitening</a></li>
+	<li id="menu-item-1627" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1627"><a href="https://www.flossbanff.com/service/tooth-jewels/">Tooth Jewels</a></li>
+	<li id="menu-item-1621" class="menu-item menu-item-type-post_type menu-item-object-services current-menu-item menu-item-1621"><a href="https://www.flossbanff.com/service/x-rays/" aria-current="page">X-Rays</a></li>
+</ul>
+</li>
+<li id="menu-item-1820" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1820"><a href="#">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-1535" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1535"><a href="https://www.flossbanff.com/meet-the-team/">Our Team</a></li>
+	<li id="menu-item-1857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1857"><a href="https://www.flossbanff.com/our-office/">Our Gallery</a></li>
+</ul>
+</li>
+<li id="menu-item-1821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1821"><a href="https://www.flossbanff.com/fees/">Fees</a></li>
+<li id="menu-item-1480" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1480"><a href="https://www.flossbanff.com/blog/">Blog</a></li>
+<li id="menu-item-1481" class="ct-nav regular menu-item menu-item-type-post_type menu-item-object-page menu-item-1481"><a href="https://www.flossbanff.com/contact/">Contact</a></li>
+<li id="menu-item-1823" class="ct-nav regular menu-item menu-item-type-custom menu-item-object-custom menu-item-1823"><a target="_blank" href="https://mychart.myoryx.ca/patient/#/auth/onlineschedule?realm=floss&amp;univers=ca">Book Appointment</a></li>
+</ul></div> 		
+						
+				</nav> 
+				
+				
+					</div>
+				</div>				 
+			</div>			
+			<div class="search-form-main d-none"><form role="search" method="get" class="search-form" action="https://www.flossbanff.com/">
+	<label>
+		<input type="search" class="search-field form-control" placeholder="Search …" value="" name="s" title="Search for:">
+	</label>
+	<input type="submit" class="search-submit btn btn-default" value="Search">
+</form></div>
+        </header><!-- #masthead -->            
+	
+		        <div id="content" class="site-content">
+			<div class="container">
+                <div class="row"> 
+<div id="primary" class="content-area portfolio-single col-md-12">
+	<main id="main" class="site-main">
+		 
+			<article id="post-1603" class="post-1603 services type-services status-publish hentry">
+				<div class="entry-content">
+					<div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid inner-banner vc_custom_1590477738337"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1590477683514"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element  vc_custom_1692593950528 text-center">
+		<div class="wpb_wrapper">
+			<h1 class="section-title">X-Rays in Banff</h1>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid default50 inner-top-content wpb_animate_when_almost_visible wpb_zoomIn zoomIn vc_custom_1678877099043"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1590487630780"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element  vc_custom_1692846773644 text-center">
+		<div class="wpb_wrapper">
+			<h2>X-Rays Near You</h2>
+<p><span style="font-weight: 400;">Have you been experiencing any tooth pain or sensitivity? X-rays, or radiographs, are images taken of your teeth, bones, and soft tissues inside the mouth by a <a href="https://flossbanff.com/">hygienist near you</a>. Our hygienist uses diagnostic tools such as x-rays to detect oral health problems that may not be visible during a regular oral examination.</span></p>
+<p><span style="font-weight: 400;">At Floss, we strive to provide our patients with quality oral care. That is why we offer in-office x-rays for your comfort.</span></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid default50 inner-content grey-bg vc_custom_1678877051047"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1590487630780"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1678876636989"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner vc_custom_1678876620540"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left  wpb_animate_when_almost_visible wpb_zoomIn zoomIn vc_custom_1678878768699">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img fetchpriority="high" decoding="async" width="800" height="546" src="https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays-.jpg" class="vc_single_image-img attachment-full entered lazyloaded" alt="x-rays in banff" data-lazy-srcset="https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays-.jpg 800w, https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays--300x205.jpg 300w, https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays--768x524.jpg 768w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays-.jpg" data-ll-status="loaded" sizes="(max-width: 800px) 100vw, 800px" srcset="https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays-.jpg 800w, https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays--300x205.jpg 300w, https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays--768x524.jpg 768w"><noscript><img fetchpriority="high" decoding="async" width="800" height="546" src="https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays-.jpg" class="vc_single_image-img attachment-full" alt="x-rays in banff" srcset="https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays-.jpg 800w, https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays--300x205.jpg 300w, https://www.flossbanff.com/wp-content/uploads/2023/03/Dental-X-Rays--768x524.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></div>
+		</figure>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner vc_custom_1678876628683"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_zoomIn zoomIn vc_custom_1692846828859">
+		<div class="wpb_wrapper">
+			<h2>Are X-Rays Necessary?</h2>
+<p><span style="font-weight: 400;">X-rays are useful to our team for detecting tooth decay, gum disease, bone loss, abscesses, and other abnormalities that may not be visible during a regular oral examination. These are also used to evaluate the growth and development of teeth and jaws and for our hygiene team</span><span style="font-weight: 400;">&nbsp;to better provide patients with the best oral treatment plan tailored to their oral health needs.</span></p>
+<p><span style="font-weight: 400;">X-rays are also helpful for planning oral procedures like extractions or root canals. By providing a clear view of the teeth, roots, and bone, our Banff hygienists can make a more informed decision about the best course of treatment for your smile goals.</span></p>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid default50 inner-content wpb_animate_when_almost_visible wpb_zoomIn zoomIn vc_custom_1678877209466"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1590487630780"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element  vc_custom_1692936383628">
+		<div class="wpb_wrapper">
+			<p><span style="font-weight: 400;">There are certain reasons why our dedicated team may recommend you get a x-ray:</span></p>
+<ul>
+<li><b>Routine check-up:</b><span style="font-weight: 400;"> This is to check for any oral health problems that may not be visible during a regular examination. This helps detect any issues early on and prevents them from becoming more serious.</span></li>
+<li><b>Toothache or pain: </b><span style="font-weight: 400;">X-rays can reveal tooth decay, infections, abscesses, or impacted teeth that may be causing the pain.</span></li>
+<li><strong>Orthodontic treatment:</strong> They provide a clear view of the teeth and jaws, which helps create a dental hygiene diagnosis.</li>
+<li><b>Oral implants: </b><span style="font-weight: 400;">They show the bone’s density and thickness, which helps determine the best location for oral implants.</span></li>
+</ul>
+<h2>Book Your Check-Up in Banff Today</h2>
+<p><span style="font-weight: 400;">Are you due for a routine oral check-up? At Floss, our dedicated team may recommend having x-rays taken of your mouth. X-rays are a helpful diagnostic tool that detects oral problems that may not be visible during a regular examination. It’s a quick and painless process that can help keep your smile healthy and beautiful. <a href="https://flossbanff.com/contact/">Contact</a> our Banff hygiene clinic today with any concerns or questions about X-rays.</span></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div>
+				</div><!-- .entry-content --> 
+				
+			</article><!-- #post-## -->
+			</main><!-- #main -->
+</div><!-- #primary -->
+            </div><!-- .row --> 
+        </div><!-- .container -->
+   
+		<div class="all-services">
+			<div class="container">
+					<h2 class="section-title">Our Services</h2>
+		<ul class="custom-sv-list">
+					<li><a href="https://www.flossbanff.com/service/oral-exams/"><span>Dental Hygiene Exams</span></a></li>
+					<li><a href="https://www.flossbanff.com/service/dentures/"><span>Dentures</span></a></li>
+					<li><a href="https://www.flossbanff.com/service/fluoride-treatment/"><span>Fluoride Treatment</span></a></li>
+					<li><a href="https://www.flossbanff.com/service/laser-whitening/"><span>Laser Whitening</span></a></li>
+					<li><a href="https://www.flossbanff.com/service/teeth-whitening/"><span>Teeth Whitening</span></a></li>
+					<li><a href="https://www.flossbanff.com/service/tooth-jewels/"><span>Tooth Jewels</span></a></li>
+					<li><a href="https://www.flossbanff.com/service/dental-cleanings/"><span>Dental Cleanings</span></a></li>
+					<li><a href="https://www.flossbanff.com/service/sports-guards-and-night-guards/"><span>Sports Guards and Night Guards in Banff</span></a></li>
+				</ul>
+				</div>
+		</div>	
+</div><!-- #content --> 
+
+   <section class="footer-map">
+ 	  <div id="text-8" class="widget widget_text">			<div class="textwidget"><p><iframe loading="lazy" style="border: 0; width: 100%;" tabindex="0" src="about:blank" allowfullscreen="" aria-hidden="false" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.3854450547383!2d-115.5736971842422!3d51.17511837958197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5370cb4023b54d77%3A0x43fd0e0919773d!2sFLOSS%20-%20Dental%20Hygiene%20%26%20Whitening%20Clinic!5e0!3m2!1sen!2sin!4v1678434537318!5m2!1sen!2sin"></iframe><noscript><iframe style="border: 0; width: 100%;" tabindex="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.3854450547383!2d-115.5736971842422!3d51.17511837958197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5370cb4023b54d77%3A0x43fd0e0919773d!2sFLOSS%20-%20Dental%20Hygiene%20%26%20Whitening%20Clinic!5e0!3m2!1sen!2sin!4v1678434537318!5m2!1sen!2sin" allowfullscreen="" aria-hidden="false"></iframe></noscript></p>
+</div>
+		</div>   </section><!-- footer map end -->
+	<footer class="site-footer fluid-space-lg" style="position: absolute; width: 100%; background-color: #fff;"> 
+
+		<div class="footer-top default-5">
+			<div class="container-fluid">
+				<div class="row"> 			
+					<div class="col-md-5 foo-widget-1">
+						<div id="text-10" class="widget widget_text"><h4 class="foot-widget-title">Hours of Operation</h4>			<div class="textwidget"><ul class="hours">
+<li>Monday: <span class="time"> 11:00am – 7:30pm</span></li>
+<li>Tuesday: <span class="time">8:00am – 4:30pm</span></li>
+<li>Wednesday: <span class="time">8:00am – 4:30pm</span></li>
+<li>Thursday: <span class="time">7:00am – 3:30pm</span></li>
+<li>Friday: <span class="time">7:00am – 3:30pm</span></li>
+<li>Saturday: <span class="time">Closed</span></li>
+<li>Sunday: <span class="time">Closed</span></li>
+</ul>
+</div>
+		</div> 
+					</div>				
+					<div class="col-md-4 foo-widget-2">
+						<div id="custom_html-8" class="widget_text widget widget_custom_html"><h4 class="foot-widget-title">Contact Us</h4><div class="textwidget custom-html-widget"><p class="c-info cal-icon"><a href="tel:4037622341">(403) 762-2341</a></p>
+<p class="c-info fax-icon"><a href="fax:4037622362">(403) 762-2362</a></p>
+<p class="c-info mail-icon"><a href="mailto:info@flossbanff.com" target="_blank">info@flossbanff.com</a></p>
+<p class="c-info map-icon"><a href="https://www.google.com/maps?cid=19137060163647293" target="_blank">111 Banff Ave Unit 106, Banff, AB T1L 1C1, Canada</a></p> </div></div>					</div>				
+					<div class="col-md-3 foo-widget-3"> 
+						<div id="custom_html-9" class="widget_text widget widget_custom_html"><h4 class="foot-widget-title">Connect With Us</h4><div class="textwidget custom-html-widget"><ul class="footer-social">
+ 	<li><i class="ne-icon-fb-circle-icon"></i><a href="https://www.facebook.com/flossbanff" target="_blank">Facebook</a></li>
+ 	<li><i class="ne-icon-google-circle-icon"></i><a href="https://www.google.com/maps?cid=19137060163647293" target="_blank">Google</a></li>
+ 	<li><i class="ne-icon-instagram-circle-icon"></i><a href="https://www.instagram.com/flossbanff/" target="_blank">Instagram</a></li> 	
+</ul></div></div>					</div>			
+					<!-- <div class="col-md-3 foo-widget-4">  -->
+											<!-- </div> -->
+				</div>
+			</div>   			
+		</div><!-- Footer Top --> 
+		<div class="copyright-section default-5">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="mb-0">FLOSS © 2026 | All Rights Reserved.</p>
+					</div>
+				
+				</div>
+			</div>
+		</div>       
+    </footer><!-- footer end here -->
+
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/dental/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1780327456" id="swv-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.flossbanff.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1780327456" id="contact-form-7-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/plugins/date-time-picker-field/assets/vendor/xdsoft-datetimepicker/jquery.datetimepicker.full.min.js?ver=2.5.20" id="xdsoft-datetimepicker-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/date-time-picker-field/public/js/avdp-availability-core.js?ver=1780327456" id="avdp-availability-core-js" defer=""></script>
+<script type="text/javascript" id="availability-datepicker-js-extra">
+/* <![CDATA[ */
+var avdpPublic = {"config":{"booking_type":"fixed","min_date":"2026-07-02","max_date":"2026-08-01","disabled_dates":[],"disabled_weekdays":[0,6],"exempted_dates":[],"allowed_dates_with_times":[],"time_24hr":true,"slot_interval":30,"min_days":1,"max_days":14,"min_duration":1,"max_duration":24,"buffer_before":0,"buffer_after":0,"minimum_notice":0,"weekly_hours":{"monday":{"enabled":true,"slots":[{"start":"09:00","end":"17:00"}]},"tuesday":{"enabled":true,"slots":[{"start":"09:00","end":"17:00"}]},"wednesday":{"enabled":true,"slots":[{"start":"09:00","end":"17:00"}]},"thursday":{"enabled":true,"slots":[{"start":"09:00","end":"17:00"}]},"friday":{"enabled":true,"slots":[{"start":"09:00","end":"17:00"}]},"saturday":{"enabled":false,"slots":[]},"sunday":{"enabled":false,"slots":[]}},"format":"Y-m-d H:i","formatDate":"Y-m-d","formatTime":"H:i","lang":"en","minDate":"2026-07-02","maxDate":"2026-08-01","minDatetime":null,"disabledDates":[],"disabledWeekDays":[0,6],"step":30,"defaultTime":"09:00","exemptedDates":[],"inline":false,"timepicker":true,"library":"xdsoft"},"selectors":{"single_field":".avdp-datepicker","start_date":".datePicker","start_time":".avdp-start-time","end_date":"","end_time":"","start_datetime":"","end_datetime":""},"theme":"light","i18n":{"select_time":"Select Time"}};
+//# sourceURL=availability-datepicker-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/date-time-picker-field/public/js/avdp-public.js?ver=1780327456" id="availability-datepicker-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b" id="jquery-masonry-js" defer=""></script>
+<script type="text/javascript" id="wpgmp-google-map-main-js-extra">
+/* <![CDATA[ */
+var wpgmp_local = {"language":"en","apiKey":"","urlforajax":"https://www.flossbanff.com/wp-admin/admin-ajax.php","nonce":"6265f3b24d","wpgmp_country_specific":"","wpgmp_countries":"","wpgmp_assets":"https://www.flossbanff.com/wp-content/plugins/wp-google-map-plugin/assets/js/","days_to_remember":"","wpgmp_mapbox_key":"","map_provider":"google","route_provider":"openstreet","tiles_provider":"openstreet","use_advanced_marker":"","set_timeout":"100","debug_mode":"","select_radius":"Select Radius","search_placeholder":"Enter address or latitude or longitude or title or city or state or country or postal code here...","select":"Select","select_all":"Select All","select_category":"Select Category","all_location":"All","show_locations":"Show Locations","sort_by":"Sort by","wpgmp_not_working":"not working...","place_icon_url":"https://www.flossbanff.com/wp-content/plugins/wp-google-map-plugin/assets/images/icons/","wpgmp_location_no_results":"No results found.","wpgmp_route_not_avilable":"Route is not available for your requested route.","image_path":"https://www.flossbanff.com/wp-content/plugins/wp-google-map-plugin/assets/images/","default_marker_icon":"https://www.flossbanff.com/wp-content/plugins/wp-google-map-plugin/assets/images/icons/marker-shape-2.svg","img_grid":"\u003Cspan class='span_grid'\u003E\u003Ca class='wpgmp_grid'\u003E\u003Ci class='wep-icon-grid'\u003E\u003C/i\u003E\u003C/a\u003E\u003C/span\u003E","img_list":"\u003Cspan class='span_list'\u003E\u003Ca class='wpgmp_list'\u003E\u003Ci class='wep-icon-list'\u003E\u003C/i\u003E\u003C/a\u003E\u003C/span\u003E","img_print":"\u003Cspan class='span_print'\u003E\u003Ca class='wpgmp_print' data-action='wpgmp-print'\u003E\u003Ci class='wep-icon-printer'\u003E\u003C/i\u003E\u003C/a\u003E\u003C/span\u003E","hide":"Hide","show":"Show","start_location":"Start Location","start_point":"Start Point","radius":"Radius","end_location":"End Location","take_current_location":"Take Current Location","center_location_message":"Your Location","driving":"Driving","bicycling":"Bicycling","walking":"Walking","transit":"Transit","metric":"Metric","imperial":"Imperial","find_direction":"Find Direction","miles":"Miles","km":"KM","show_amenities":"Show Amenities","find_location":"Find Locations","locate_me":"Locate Me","prev":"Prev","next":"Next","ajax_url":"https://www.flossbanff.com/wp-admin/admin-ajax.php","no_routes":"No routes have been assigned to this map.","no_categories":"No categories have been assigned to the locations.","mobile_marker_size":[24,24],"desktop_marker_size":[32,32],"retina_marker_size":[64,64]};
+//# sourceURL=wpgmp-google-map-main-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/wp-google-map-plugin/assets/js/maps.js?ver=1780327456" id="wpgmp-google-map-main-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://maps.google.com/maps/api/js?loading=async&amp;libraries=marker%2Cgeometry%2Cplaces%2Cdrawing&amp;callback=wpgmpInitMap&amp;language=en&amp;ver=4.9.2" id="wpgmp-google-api-js" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/wp-google-map-plugin/assets/js/wpgmp_frontend.js?ver=1780327456" id="wpgmp-frontend-js" defer=""></script>
+<script type="text/javascript" id="wpcf7-redirect-script-js-extra">
+/* <![CDATA[ */
+var wpcf7r = {"ajax_url":"https://www.flossbanff.com/wp-admin/admin-ajax.php"};
+//# sourceURL=wpcf7-redirect-script-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/wpcf7-redirect/build/assets/frontend-script.js?ver=1780327456" id="wpcf7-redirect-script-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.flossbanff.com","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-extra">
+/* <![CDATA[ */
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-after">
+/* <![CDATA[ */
+!function o(n,c,i){function s(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(u)return u(t,!0);throw(r=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",r}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return s(n[t][1][e]||e)},r,r.exports,o,n,c,i)}return c[t].exports}for(var u="function"==typeof require&&require,e=0;e<i.length;e++)s(i[e]);return s}({1:[function(e,t,r){"use strict";!function(){const r="undefined"==typeof rocket_pairs?[]:rocket_pairs,o=document.querySelector("#wpr-lazyload-bg");var e=rocket_lazyload_css_data.threshold||300;const n=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){const e=r.filter(e=>t.target.matches(e.selector));e.map(e=>{e&&(o.innerHTML+=e.style,e.elements.forEach(e=>{e.setAttribute("data-rocket-lazy-bg","loaded"),n.unobserve(e)}))})}})},{rootMargin:e+"px"});function t(){let e=0<arguments.length&&void 0!==arguments[0]?arguments[0]:[];0!==e.length&&!e.find(e=>"attributes"!==e.type||"class"===e.attributeName)||r.forEach(t=>{try{const e=document.querySelectorAll(t.selector);e.forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg")&&(n.observe(e),(t.elements||(t.elements=[])).push(e))})}catch(e){console.error(e)}})}t();const c=function(){const o=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType){const r=new o(t);return r.observe(e,{attributes:!0,childList:!0,subtree:!0}),r}}}();e=document.querySelector("body"),c(e,t)}()},{}]},{},[1]);
+
+//# sourceURL=rocket_lazyload_css-js-after
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/plugins/easy-fancybox/vendor/purify.min.js?ver=8429c31ef93784652aa8b5996c1a0c23" id="fancybox-purify-js" defer=""></script>
+<script type="text/javascript" id="jquery-fancybox-js-extra">window.addEventListener('DOMContentLoaded', function() {
+/* <![CDATA[ */
+var efb_i18n = {"close":"Close","next":"Next","prev":"Previous","startSlideshow":"Start slideshow","toggleSize":"Toggle size"};
+//# sourceURL=jquery-fancybox-js-extra
+/* ]]> */
+});</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.js?ver=8429c31ef93784652aa8b5996c1a0c23" id="jquery-fancybox-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="jquery-fancybox-js-after">window.addEventListener('DOMContentLoaded', function() {
+/* <![CDATA[ */
+var fb_timeout, fb_opts={'autoScale':true,'showCloseButton':true,'margin':20,'pixelRatio':'false','centerOnScroll':false,'enableEscapeButton':true,'overlayShow':true,'hideOnOverlayClick':true,'minVpHeight':320,'disableCoreLightbox':'true','enableBlockControls':'true','fancybox_openBlockControls':'true' };
+if(typeof easy_fancybox_handler==='undefined'){
+var easy_fancybox_handler=function(){
+jQuery([".nolightbox","a.wp-block-file__button","a.pin-it-button","a[href*='pinterest.com\/pin\/create']","a[href*='facebook.com\/share']","a[href*='twitter.com\/share']"].join(',')).addClass('nofancybox');
+jQuery('a.fancybox-close').on('click',function(e){e.preventDefault();jQuery.fancybox.close()});
+/* YouTube */
+jQuery('a[href*="youtu.be/" i],area[href*="youtu.be/" i],a[href*="youtube.com/" i],area[href*="youtube.com/" i]' ).filter(function(){return this.href.match(/\/(?:youtu\.be|watch\?|embed\/)/);}).not('.nofancybox,li.nofancybox>a').addClass('fancybox-youtube');
+jQuery('a.fancybox-youtube,area.fancybox-youtube,.fancybox-youtube>a').each(function(){jQuery(this).fancybox(jQuery.extend(true,{},fb_opts,{'type':'iframe','width':760,'height':420,'keepRatio':1,'aspectRatio':1,'titleShow':false,'titlePosition':'float','titleFromAlt':true,'onStart':function(a,i,o){var splitOn=a[i].href.indexOf("?");var urlParms=(splitOn>-1)?a[i].href.substring(splitOn):"";o.allowfullscreen=(urlParms.indexOf("fs=0")>-1)?false:true;o.href=a[i].href.replace(/https?:\/\/(?:www\.)?youtu(?:\.be\/([^\?]+)\??|be\.com\/watch\?(.*(?=v=))v=([^&]+))(.*)/gi,"https://www.youtube.com/embed/$1$3?$2$4&autoplay=1");}}))});
+};};
+jQuery(easy_fancybox_handler);jQuery(document).on('post-load',easy_fancybox_handler);
+
+//# sourceURL=jquery-fancybox-js-after
+/* ]]> */
+});</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.google.com/recaptcha/api.js?render=6Len2N4nAAAAAKMY7OLTISF6kftxlGsx7a61mXqo&amp;ver=3.0" id="google-recaptcha-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="wpcf7-recaptcha-js-before">
+/* <![CDATA[ */
+var wpcf7_recaptcha = {
+    "sitekey": "6Len2N4nAAAAAKMY7OLTISF6kftxlGsx7a61mXqo",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+//# sourceURL=wpcf7-recaptcha-js-before
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=1780327456" id="wpcf7-recaptcha-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.6.0" id="wpb_composer_front_js-js" defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.flossbanff.com/wp-content/plugins/js_composer/assets/lib/vc_waypoints/vc-waypoints.min.js?ver=6.6.0" id="vc_waypoints-js" defer=""></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://www.flossbanff.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>	
+
+<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+jQuery(document).ready(function(){
+  // Restricts input for each element in the set of matched elements to the given inputFilter.
+(function(jQuery) {
+  jQuery.fn.inputFilter = function(inputFilter) {
+    return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      } else {
+        this.value = "";
+      }
+    });
+  };
+}(jQuery));
+// Install input filters.
+jQuery("#intTextBox").inputFilter(function(value) {
+  return /^-?\d*$/.test(value); });
+jQuery("#uintTextBox").inputFilter(function(value) {
+  return /^\d*$/.test(value); });
+jQuery(".intLimitTextBox").inputFilter(function(value) {
+  return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 9999999990); });
+jQuery(".intLimitTextBox2").inputFilter(function(value) {
+  return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 9999999990); });
+jQuery("#floatTextBox").inputFilter(function(value) {
+  return /^-?\d*[.,]?\d*$/.test(value); });
+jQuery("#currencyTextBox").inputFilter(function(value) {
+  return /^-?\d*[.,]?\d{0,2}$/.test(value); });
+jQuery("#latinTextBox").inputFilter(function(value) {
+  return /^[a-z]*$/i.test(value); });
+jQuery("#latinTextBox1").inputFilter(function(value) {
+  return /^[0-9]*$/i.test(value); });
+jQuery("#hexTextBox").inputFilter(function(value) {
+  return /^[0-9a-f]*$/i.test(value); });
+});
+
+});</script>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;dd29d0e31e6849548521916274c89ed5&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+jQuery(document).ready(function() {
+    jQuery(".slide-inner-text").delay(2000).fadeIn(500);
+});
+});</script>
+<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+jQuery(document).ready(function(){
+	jQuery('.menu-item').click(function(){
+		jQuery(this).siblings('.menu-item-has-children').children('a.has-submenu.highlighted').removeClass('highlighted');
+		jQuery(this).siblings('.menu-item-has-children').children('ul').css('display', 'none');
+	});
+});
+});</script>
+
+</body></html>

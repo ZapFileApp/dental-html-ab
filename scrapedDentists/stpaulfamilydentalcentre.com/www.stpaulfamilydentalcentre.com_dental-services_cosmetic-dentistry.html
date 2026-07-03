@@ -1,0 +1,1735 @@
+<!DOCTYPE html><html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+        <style type="text/css">
+            iframe,
+            object,
+            embed {
+                /* position: absolute; */
+                width: 100%;
+                height: 100%;
+            }
+
+
+
+
+
+
+            /**
+             * NavBar Default Control
+             */
+            .navbar {
+                font-size: 14px !important;
+                font: 'Roboto', sans-serif;
+                padding: 0;
+                border: 1px solid;
+                line-height: 48px;
+            }
+            .navbar a{
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .navbar-nav{
+                
+            }
+            .dropdown-menu {
+                font-size: 14px !important;
+            }
+
+            #mainNav .navbar-nav .nav-item .nav-link {
+                /* font-size: 90%; */
+                font-weight: 400;
+                /* padding: 0.75em 0; */
+                letter-spacing: normal !important;
+                color: #fff;
+                white-space: nowrap;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .d-md-inline,
+            .ninja-forms-field option {
+                
+                
+                font-family: 'Roboto', sans-serif;
+                
+            }
+
+            .navbar .navbar-nav>.nav-item>.dropdown-toggle {
+                position: relative;
+                width: 100%;
+                
+            }
+
+            #mainNav .dropdown-menu .dropdown-item.heading a {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                
+
+            }
+
+            #mainNav .dropdown:not(.mega) .dropdown-menu .nav-link {
+
+                
+
+            }
+
+            /** END Navbar Default Control */
+
+
+
+
+
+
+
+
+
+            
+            .masthead-cover-invisalign {
+
+                height: 510px;
+
+            }
+
+            .masthead-cover-invisalign {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                padding-top: 50px;
+            }
+
+            .banner-ad {
+                height: 436px;
+                margin-top: 40px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                /* background-image: url(../img/photos/bg-hero-booking.jpg); */
+            }
+
+            .steps-list {
+                counter-reset: section;
+                list-style: none;
+                position: relative;
+                margin-left: 32px;
+                /* margin-right: 94px; */
+
+            }
+
+            .book-consultation {
+
+                height: 600px;
+
+            }
+
+            .steps-list h2 {
+
+                font-weight: 500 !important;
+
+
+            }
+
+            .schedule-consultation {
+
+                float: left;
+                margin-left: 71px;
+                width: 360px;
+                font-size: 24px !important;
+                text-transform: uppercase !important;
+                padding: 9px;
+                font-weight: 500 !important;
+                background-color: #4f1929 !important;
+
+            }
+
+            .schedule-consultation-button {
+
+                width: 250px;
+                font-size: 24px !important;
+                text-transform: uppercase !important;
+                padding: 13px;
+                border-radius: 10px;
+                line-height: initial;
+                font-weight: 500 !important;
+                background-color: #4f1929 !important;
+
+            }
+
+            .steps-list .step-title,
+            .step-title {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+                padding-top: 7px;
+                padding-bottom: 0px;
+
+            }
+
+            .videos h2.step-title {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                padding-top: 7px;
+                padding-bottom: 10px;
+
+            }
+
+            .steps-list p {
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24.8px;
+
+            }
+
+            .steps-list li {
+
+                position: relative;
+
+            }
+
+            .steps-list li:before {
+                counter-increment: section;
+                content: counter(section);
+                color: #fff;
+                font-size: 34px;
+                font-weight: 400;
+                position: absolute;
+                width: 64px;
+                left: -80px;
+                text-align: center;
+                height: 64px;
+                padding-top: 7px;
+                background-image: url("data:image/svg+xml;utf8,<svg width='64' height='64' xmlns='http://www.w3.org/2000/svg'><circle cx='32' cy='32' r='32' width='64' height='64' style='fill: %234f1929 !important' /></svg>");
+            }
+
+
+            .notification {
+
+                font-weight: normal !important;
+                line-height: normal !important;
+                height: 32px !important;
+
+            }
+
+            .notification .container p.notification-hours,
+            .notification .container p.desktop-notification {
+
+                font-size: 13px;
+                font-weight: 500;
+                color: #fff;
+                margin-bottom: 0;
+
+            }
+
+
+
+            .notification,
+            .notifocation p,
+            .notification .container p.notification-hours,
+            .notification .container p.desktop-notification {
+
+                font-size: 19px !important;
+
+            }
+
+            @media(max-width: 420px) {
+
+                .notification,
+                .notifocation p,
+                .notification .container p.notification-hours,
+                .notification .container p.desktop-notification {
+
+                    font-size: 19px !important;
+
+                }
+
+            }
+
+            @media(max-width:992px) {
+
+                .anchor {
+                    display: block;
+                    height: 115px;
+                    /*same height as header*/
+                    margin-top: -115px;
+                    /*same height as header*/
+                    visibility: hidden;
+
+                }
+
+
+                .book-consultation {
+
+                    height: 660px;
+
+                }
+
+                .js-map-home.consult {
+
+                    padding: 13px;
+                    padding-left: 0;
+                    height: 550px !important;
+
+                }
+
+                .notification .container p.desktop-notification {
+                    display: none;
+                }
+
+                .notification .container p.notification-hours {
+                    text-align: center !important;
+                }
+
+                .banner-desktop {
+                    display: none;
+                }
+
+                .banner-mobile {
+
+                    text-align: center;
+                    margin: auto;
+                    display: block;
+
+                }
+
+                .banner-ad {
+                    margin-top: 40px;
+                    height: 589px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    /* background-image: url(../img/photos/bg-hero-booking.jpg); */
+                }
+
+                .consultation h3 {
+
+                    color: #4f1929 !important;
+                    font-size: 21px;
+                    font-weight: 500;
+
+                }
+
+                .consultation h2 {
+
+                    color: #1f1f1f;
+                    font-size: 48px;
+                    font-weight: 700;
+
+                }
+
+                .steps-list {
+                    counter-reset: section;
+                    list-style: none;
+                    position: relative;
+                    margin-left: unset;
+                    margin-right: unset;
+                    padding: unset;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                /* Mobile Styling */
+                .container.invisalign h2.section-heading {
+
+                    margin-left: 45px !important;
+                    margin-right: 45px !important;
+
+                }
+
+                .invisalign .steps-list {
+
+                    counter-reset: section;
+                    list-style: none;
+                    position: relative;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    padding: unset;
+
+                }
+
+                .invisalign-mobile-image {
+
+                    display: block;
+                    /* padding: unset !important; */
+                    /* padding: 20px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important; */
+                    width: 100% !important;
+
+                }
+
+                .invisalign-desktop-image {
+
+                    display: none !important;
+                    padding: 20px !important;
+                    width: 100% !important;
+                    margin-left: 50px;
+
+                }
+
+                .container.invisalign-mobile-image {
+
+                    background-color: #303A1A;
+
+                }
+
+                .invisalign-welcome {
+
+                    color: #fff;
+                    font-family: 'Roboto', sans serif;
+
+
+                    max-width: 340px;
+                    margin: auto;
+                    padding-bottom: 25px;
+
+
+                }
+
+                .invisalign-welcome p {
+
+                    color: #fff;
+                    font-size: 24px;
+                    line-height: 34px;
+                    font-weight: 500;
+
+                }
+
+                .invisalign-welcome .schedule-consultation {
+
+                    max-width: 100% !important;
+                    /* padding: 0; */
+                    width: unset;
+                    margin: 0;
+
+                }
+
+                .invisalign .schedule-consultation {
+
+                    float: none !important;
+                    text-align: center;
+                    margin: auto !important;
+                    max-width: 100%;
+                    display: block;
+                    font-size: 24px !important;
+                    text-transform: uppercase !important;
+                    padding: 9px;
+                    font-weight: 500 !important;
+                    background-color: #139FD9 !important;
+
+                }
+
+                .steps-list li:before {
+                    counter-increment: section;
+                    content: counter(section);
+                    color: #fff;
+                    font-size: 34px;
+                    font-weight: 400;
+                    position: absolute;
+                    width: 64px;
+                    left: unset !important;
+                    text-align: center;
+                    height: 64px;
+                    padding-top: 7px;
+                    background-image: url(data:image/svg+xml;utf8,<svg width='64' height='64' xmlns='http://www.w3.org/2000/svg'><circle cx='32' cy='32' r='32' width='64' height='64' style='fill: %23139FD9' /></svg>);
+                }
+
+                .steps-list .step-title {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 28px;
+                    padding-top: 7px;
+                    padding-left: 80px;
+                    min-height: 80px;
+                }
+
+            }
+
+            [id^="pw_map_"] iframe {
+                position: absolute !important;
+            }
+
+            @media(min-width:993px) {
+
+                .anchor {
+                    display: block;
+                    height: 165px;
+                    /*same height as header*/
+                    margin-top: -165px;
+                    /*same height as header*/
+                    visibility: hidden;
+                }
+
+                .notification .container p.desktop-notification {
+                    display: block;
+                }
+
+                .notification .container p.notification-hours {
+                    text-align: right !important;
+                }
+
+                .banner-desktop {
+
+                    display: block;
+                    background-image: none !important;
+                    position: relative;
+                    left: -150px;
+
+                }
+
+                #banner-ad {}
+
+                [id^="pw_map_"] iframe {
+                    position: absolute !important;
+                }
+
+                .banner-mobile {
+
+                    display: none;
+
+                }
+
+                .consultation h3 {
+
+                    color: #4f1929 !important;
+                    font-size: 32px;
+                    font-weight: 500;
+                }
+
+                .consultation h2 {
+
+                    color: #1f1f1f;
+                    font-size: 64px;
+                    font-weight: 600;
+                    margin-bottom: 80px;
+
+                }
+
+                .invisalign-mobile-image {
+
+                    display: none;
+
+                }
+
+                .invisalign-desktop-image {
+
+                    display: block !important;
+
+                }
+
+                .invisalign-desktop-image .schedule-consultationz {
+
+                    width: 310px;
+                    font-size: 24px !important;
+                    text-transform: uppercase !important;
+                    padding: 9px;
+                    border-radius: 12px;
+                    font-weight: 500 !important;
+                    background-color: #139FD9 !important;
+
+
+                }
+
+                .container.invisalign h2.section-heading {
+
+                    margin-bottom: 52px !important;
+
+                }
+
+
+                .invisalign-welcome {
+
+                    color: #fff;
+                    font-family: 'Roboto', sans serif;
+                    font-weight: 500;
+                    text-align: right;
+                    font-size: 32px;
+                    line-height: 34px;
+                    width: 371px;
+                    float: right;
+                    margin-top: 15px;
+                    padding-bottom: 20px;
+
+                }
+
+            }
+
+                        
+            
+            @media(max-width:991px) {
+
+                #mainNav #phone-number .phone-number__text,
+                #mainNav .phone-number .phone-number__text {
+
+                    display: none !important;
+
+                }
+
+            }
+
+            @media(min-width:992px) {
+
+                #mainNav #phone-number .phone-number__text {
+
+                    font-family: acumin-pro-condensed, sans-serif !important;
+                    font-weight: 700 !important;
+                    font-size: 26px !important;
+
+
+                }
+
+            }
+
+                        
+            
+                #mainNav #phone-number .phone-number__text {
+
+                    font-family: acumin-pro-condensed, sans-serif !important;
+                    font-weight: 700 !important;
+                    font-size: 26px !important;
+
+                }
+
+                @media(max-width: 991px) {
+                    #mainNav .container>.nav-btn {
+
+                        display: block !important;
+
+                    }
+                }
+
+                #mainNav .navbar-nav .nav-item .nav-link {
+                    /* padding-left: 20px !important;
+                    padding-right: 20px !important; */
+                    text-transform: uppercase !important;
+                }
+
+                #mainNav .navbar-nav .nav-item .current_page_parent {
+                    background-image: none !important;
+                    color: #4f1929 !important;
+                    font-weight: 900 !important;
+                } 
+
+                #mainNav .navbar-nav .nav-item.current-menu-item,
+                #mainNav .navbar-nav .nav-item.current-menu-item a,
+                #mainNav .navbar-nav .nav-item.current-menu-item .nav-link  {
+                    background-image: none !important;
+                    color: #4f1929 !important;
+                }
+
+                .menu-item.menu-item-type-taxonomy.menu-item-object-services_categories.current-menu-item.dropdown-item.p-1.pb-3.heading {
+                    background-image: none !important;
+                    color: #4f1929 !important;
+                }
+
+                /**
+                * Comment me
+                */
+                @media(max-width: 991px) {
+
+
+                    /**
+                    * Top Level MOBILE Nav items
+                    */
+
+
+                    #mainNav .navbar-nav .nav-item {
+
+                        line-height: 1.5 !important;
+                        padding-bottom: 0;
+                        margin-top: 0;
+                        border-bottom: 1px solid #D9D9D9 !important;
+                        margin-bottom: 0px !important;
+                        padding-bottom: 20px !important;
+
+                    }
+
+                    /**
+                    * Highlight top level Mobile
+                    */
+                    #mainNav .navbar-nav .nav-item.current_page_item .nav-link {
+                        padding-left: 0px !important;
+                        color: #4f1929 !important;
+                    }
+
+                    #mainNav .navbar-nav .dropdown.mega .dropdown-menu .current-menu-item.heading a {
+                        color: #4f1929 !important;
+                        font-weight: 900 !important;
+                    }
+
+                    /**
+                    * Second Level Mobile
+                    */
+                    #mainNav .navbar-nav .dropdown.mega .dropdown-menu .dropdown-item {
+                        line-height: 1.5 !important;
+                        border-top: 1px solid #D9D9D9 !important;
+                        margin-bottom: 0px !important;
+                        padding-bottom: 20px !important;
+                        padding-top: 20px !important;
+                    }
+
+                    #mainNav .dropdown:not(.mega) .dropdown-menu .nav-item:first-child {
+                        padding-top: 20px;
+                        margin-top: 20px;
+                        /* border-top: 0 !important; */
+                    }
+
+                    #mainNav .dropdown:not(.mega) .dropdown-menu .nav-item:last-child {
+
+                        border: 0 !important;
+                    }
+
+                    #mainNav .navbar-nav .dropdown.mega .dropdown-menu .heading a {
+
+                        margin: 0px !important;
+                        padding: 11px !important;
+                        padding-left: 0px !important;
+
+                    }
+
+                    /**
+                    * Second Level, non Mega Dropdown
+                    */
+
+                    .nav-item.dropdown.show .dropdown-menu .dropdown {
+                        padding-left: 15px !important;
+                    }
+
+                    #mainNav .navbar-nav .nav-item:not([type=heading]) {}
+
+                    .nav-item.dropdown.show .dropdown-menu .dropdown .nav-item {
+                        padding-left: 0 !important;
+                        padding-right: 0 !important;
+                        margin-bottom: 15px !important;
+                        line-height: 1 !important;
+                        border-top: 0px solid #D9D9D9 !important;
+                        border-bottom: 0px !important;
+                    }
+
+                    .nav-item.dropdown.show .dropdown-menu .dropdown .nav-item:first-child {
+
+                        border-top: 1px solid #D9D9D9 !important;
+
+                    }
+
+                    /**
+                    * 3rd level, Mobile 
+                    */
+                    .dropdown-menu .dropdown-item:not([type=heading]) {
+
+                        display: block;
+
+                    }
+
+                }
+
+                /**
+                * .navbar font control
+                */
+
+                .navbar {
+                    font-size: 14px !important;
+                    font-family: acumin-pro-semi-condensed, sans-serif;
+                    font-weight: 500;
+                    font-style: normal;
+                    padding: 0;
+                    border: 1px solid;
+                    line-height: 48px;
+                }
+                .navbar a{
+                    padding-left: 1rem !important;
+                    padding-right: 1rem !important;
+                }
+                .navbar-nav{
+                    
+                }
+                .dropdown-menu {
+                    font-size: 14px !important;
+                }
+                
+                .d-md-inline,
+                .ninja-forms-field option {
+
+                    text-transform: uppercase !important;
+                    font-family: acumin-pro-semi-condensed, sans-serif;
+                    font-style: normal;
+                }
+
+                #mainNav .navbar-nav .nav-item .nav-link {
+                    /* font-size: 90%; */
+                    font-family: acumin-pro-semi-condensed, sans-serif;
+                    font-style: normal;
+                    /* padding: 0.75em 0; */
+                    letter-spacing: normal !important;
+                    color: #fff;
+                    white-space: nowrap;
+                    padding-left: 1rem !important;
+                    padding-right: 1rem !important;
+                }
+
+
+                
+
+                .navbar .navbar-nav>.nav-item>.dropdown-toggle {
+                    position: relative;
+                    width: 100%;
+                    text-transform: uppercase !important;
+                }
+
+                #mainNav .dropdown-menu .dropdown-item.heading a {
+
+                    font-family: acumin-pro-semi-condensed, sans-serif !important;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-weight: 400;
+                    text-transform: uppercase !important;
+
+                }
+
+                #mainNav .dropdown:not(.mega) .dropdown-menu .nav-link {
+
+                    text-transform: uppercase !important;
+
+                }
+
+                .dropdown-menu .row>div a {
+                    display: inline-block;
+                    margin-bottom: 10px;
+
+                }
+
+                        </style>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/signals/config/1288233344944810?v=2.9.349&amp;r=stable&amp;domain=www.stpaulfamilydentalcentre.com&amp;hme=f29d86973612db0f0627890a64bdc8c47b471189050b33f2680b7d76997afc9a&amp;ex_m=107%2C208%2C158%2C22%2C73%2C74%2C149%2C69%2C68%2C11%2C167%2C93%2C16%2C141%2C130%2C39%2C76%2C81%2C137%2C163%2C169%2C8%2C4%2C5%2C7%2C6%2C3%2C94%2C104%2C170%2C175%2C222%2C30%2C75%2C234%2C233%2C232%2C23%2C33%2C55%2C106%2C61%2C10%2C64%2C100%2C101%2C102%2C108%2C133%2C31%2C29%2C135%2C136%2C132%2C131%2C159%2C77%2C162%2C160%2C161%2C50%2C60%2C126%2C15%2C166%2C45%2C279%2C280%2C278%2C26%2C27%2C28%2C48%2C150%2C78%2C115%2C18%2C20%2C44%2C40%2C42%2C41%2C86%2C95%2C99%2C113%2C148%2C151%2C46%2C114%2C24%2C21%2C122%2C70%2C36%2C153%2C152%2C154%2C145%2C143%2C25%2C35%2C59%2C112%2C165%2C71%2C17%2C156%2C117%2C84%2C67%2C19%2C88%2C89%2C119%2C87%2C139%2C138%2C142%2C164%2C34%2C293%2C309%2C215%2C204%2C62%2C205%2C203%2C312%2C303%2C52%2C216%2C110%2C134%2C83%2C124%2C54%2C47%2C49%2C116%2C123%2C129%2C128%2C58%2C65%2C63%2C155%2C79%2C80%2C118%2C37%2C32%2C53%2C56%2C103%2C168%2C1%2C127%2C14%2C125%2C12%2C2%2C57%2C96%2C66%2C121%2C92%2C91%2C171%2C172%2C97%2C98%2C9%2C105%2C51%2C146%2C90%2C82%2C72%2C120%2C109%2C43%2C147%2C0%2C85%2C140%2C144%2C157%2C38%2C111%2C13%2C173" async=""></script><script type="text/javascript" async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-GB5H2EEQ1Y&amp;cx=c&amp;gtm=4e66u1"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-WG57ZBB"></script><script data-cfasync="false" data-pagespeed-no-defer="">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v27.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Cosmetic Dentistry | St. Paul Family Dental Centre</title>
+	<meta name="description" content="Cosmetic Dentistry is available to you at St. Paul Family Dental Centre in St. Paul, Alberta. Take a leap forward and contact us today for a consultation!">
+	<link rel="canonical" href="https://www.stpaulfamilydentalcentre.com/dental-services/cosmetic-dentistry/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Cosmetic Dentistry | St. Paul Family Dental Centre">
+	<meta property="og:description" content="Cosmetic Dentistry is available to you at St. Paul Family Dental Centre in St. Paul, Alberta. Take a leap forward and contact us today for a consultation!">
+	<meta property="og:url" content="https://www.stpaulfamilydentalcentre.com/dental-services/cosmetic-dentistry/">
+	<meta property="og:site_name" content="St. Paul Family Dental Centre">
+	<meta property="og:image" content="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2024/02/image-thumbnail-St.-Paul-Dental-Clinic-book-700x400px-1.jpg">
+	<meta property="og:image:width" content="700">
+	<meta property="og:image:height" content="400">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary_large_image">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"CollectionPage","@id":"https:\/\/www.stpaulfamilydentalcentre.com\/dental-services\/cosmetic-dentistry\/","url":"https:\/\/www.stpaulfamilydentalcentre.com\/dental-services\/cosmetic-dentistry\/","name":"Cosmetic Dentistry | St. Paul Family Dental Centre","isPartOf":{"@id":"https:\/\/www.stpaulfamilydentalcentre.com\/#website"},"description":"Cosmetic Dentistry is available to you at St. Paul Family Dental Centre in St. Paul, Alberta. Take a leap forward and contact us today for a consultation!","breadcrumb":{"@id":"https:\/\/www.stpaulfamilydentalcentre.com\/dental-services\/cosmetic-dentistry\/#breadcrumb"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"https:\/\/www.stpaulfamilydentalcentre.com\/dental-services\/cosmetic-dentistry\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.stpaulfamilydentalcentre.com\/"},{"@type":"ListItem","position":2,"name":"Cosmetic Dentistry"}]},{"@type":"WebSite","@id":"https:\/\/www.stpaulfamilydentalcentre.com\/#website","url":"https:\/\/www.stpaulfamilydentalcentre.com\/","name":"St. Paul Family Dental Centre","description":"Family Dentistry in St. Paul Alberta","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.stpaulfamilydentalcentre.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//www.optiopublishing.com">
+<link rel="dns-prefetch" href="//www.stpaulfamilydentalcentre.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="St. Paul Family Dental Centre » Cosmetic Dentistry Service Category Feed" href="https://www.stpaulfamilydentalcentre.com/dental-services/cosmetic-dentistry/feed/">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://www.stpaulfamilydentalcentre.com/wp-includes/css/dist/block-library/common.min.css?ver=7.0" media="all">
+<style id="wp-block-library-inline-css">
+/*wp_block_styles_on_demand_placeholder:6a471950a20e0*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<link rel="stylesheet" id="section_block-cgb-style-css-css" href="https://www.stpaulfamilydentalcentre.com/wp-content/plugins/gutenberg-section-block-master/dist/blocks.style.build.css?ver=7.0" media="all">
+<style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style>
+<link rel="stylesheet" id="cds-boostrap-style-css" href="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/vendor/bootstrap/css/bootstrap.min.css?ver=1.0.0" media="all">
+<link rel="stylesheet" id="cds-fontawesome-style-css" href="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/vendor/fontawesome-free/css/all.min.css?ver=1.0.0" media="all">
+<link rel="stylesheet" id="cds-site-template-style-css" href="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/css/cds.min.css?ver=1.0.08989111889988" media="all">
+<link rel="stylesheet" id="custom-google-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;ver=7.0" media="all">
+<link rel="stylesheet" id="minimal-grid-css" href="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/style.css?ver=7.0" media="all">
+<script id="optio-api-js" async="" defer="" src="https://www.optiopublishing.com/api/js?ver=4.1"></script>
+<script id="jquery-core-js" src="https://www.stpaulfamilydentalcentre.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.stpaulfamilydentalcentre.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.stpaulfamilydentalcentre.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 7.0">
+<style type="text/css">/* =Responsive Map fix
+-------------------------------------------------------------- */
+.pw_map_canvas img {
+	max-width: none;
+}</style>
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to footer -->
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+	var dataLayer_content = {"pagePostType":"services_group","pagePostType2":"tax-services_group","pageCategory":[]};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WG57ZBB');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->      <!--Customizer CSS--> 
+      <style type="text/css">
+            
+            
+                 </style> 
+      <!--/Customizer CSS-->
+      
+<link rel="icon" href="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2020/01/St.Paul-Family-Dental-Centre-favicon.ico" sizes="32x32">
+<link rel="icon" href="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2020/01/St.Paul-Family-Dental-Centre-favicon.ico" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2020/01/St.Paul-Family-Dental-Centre-favicon.ico">
+<meta name="msapplication-TileImage" content="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2020/01/St.Paul-Family-Dental-Centre-favicon.ico">
+<style id="wp-custom-css">
+ [id='213545668958271']{
+	
+	position:relative;
+	width: unset;
+    min-width: unset;
+    display: unset;
+    overflow: unset;
+    border: none;
+    height: unset;
+	
+}
+
+.pw_map_canvas iframe{
+	
+	position: absolute !important;
+
+}
+html .banner-ad :where(img) {
+    height: auto;
+    max-width: none !important;
+}
+
+</style>
+<style> #mainNav #phone-number {
+    color: #4f1929 !important;
+
+}
+
+
+.carousel-home .carousel-item h1,
+.masthead-cover h1 {
+    color: #4f1929 !important;
+    font-size: 48px;
+    line-height: 1;
+}
+
+@media(max-width: 450px) {
+/* JB JB */
+    .carousel-home .carousel-item h1{
+
+        font-size:  !important;
+
+    }
+
+}
+
+.btn-radio:not(.checked):hover {
+
+    border: 2px solid #d1b959 !important;
+    color: #d1b959 !important;
+
+}
+
+.notification {
+
+    background-color: #4f1929 !important;
+
+}
+
+.btn-teal, .btn-primary, .get-touch-form .nf-field-element .btn-primary{
+
+    background-color: #d1b959 !important;
+    color: #fff;
+
+}
+
+.btn-radio.checked, .get-touch-form .btn-radio.checked{
+
+
+    color: #d1b959 !important;
+    border: 2px solid #d1b959 !important;
+
+
+}
+
+#portfolio.portfolio-reverse-spaced .row:nth-of-type(odd) .portfolio-item:nth-child(odd) .portfolio-up:hover,
+#portfolio.portfolio-reverse-spaced .portfolio-item .portfolio-link .portfolio-up:hover,
+#portfolio.portfolio-reverse .row:nth-of-type(odd) .portfolio-item:nth-child(odd) .portfolio-up:hover,
+#portfolio.portfolio-reverse .portfolio-item .portfolio-link .portfolio-up:hover{
+
+    background-color: #4f1929b3 !important;
+
+}
+
+.primary-color{
+
+    color: #4f1929 !important;
+
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-up {
+
+    background-color: #4f1929 !important;
+
+}
+
+.social-feed {
+
+    border: 6px solid #4f1929 !important;
+
+}
+
+.accent:before {
+
+    background-color: #4f1929 !important;
+
+}
+
+.address h2:before {
+
+    background-color: #4f1929 !important;
+
+}
+
+.bg-teal {
+
+    background-color: #4f1929 !important;
+
+}
+
+.box-title {
+
+    color: #4f1929 !important;
+
+}
+
+.bg-teal--light{
+
+    background-color: #d1c9a7 !important;
+
+}
+
+.carousel-control-prev-icon {
+    background: #4f1929 !important;
+}
+
+.primary-bg {
+    background: #d1c9a7 !important;
+    background: -webkit-gradient(linear,left top,left bottom,from(#4f1929),to(#2d000c)) !important;
+    background: linear-gradient(to bottom,#4f1929 0,#2d000c 100%) !important;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(0,0,0,.25);
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,.25);
+}
+
+.phone-number__icon path{
+
+    fill: #4f1929 !important;
+
+}
+
+@media (min-width: 992px) {
+
+#mainNav .navbar-nav .nav-item.current-menu-item {
+
+
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%234f1929' fill-rule='evenodd'/%3E%3C/svg%3E");
+color: #4f1929 !important;
+
+
+}
+#mainNav .navbar-nav .nav-item.current-menu-item .nav-link {
+    color: #4f1929 !important;
+}
+
+#mainNav .navbar-nav .nav-item .current_page_item {
+
+
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%234f1929' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+
+
+}
+
+#mainNav .navbar-nav .nav-item .current_page_parent {
+
+
+background-image: none !important; //url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%234f1929' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+color: #4f1929 !important;
+
+}
+
+#mainNav .navbar-nav .nav-item.mega .current_page_parent,
+a.dropdown-toggle.cds_current_post,
+.nav-item.dropdown.mega.cds_current_post,
+a.cds_current_post {
+
+    color: #4f1929 !important;
+    font-weight: 900 !important;
+    background: none !important;
+
+}
+
+
+#mainNav .navbar-nav .nav-item.mega .current_page_parent a,
+a.dropdown-toggle.cds_current_post a,
+.nav-item.dropdown.mega.cds_current_post a{
+
+    color: #4f1929 !important;
+
+}
+
+.menu-item.menu-item-type-taxonomy.menu-item-object-services_categories.current-menu-item.dropdown-item.p-1.pb-3.heading a {
+    font-weight: 900 !important;
+    color: #4f1929 !important;
+      background-image: none !important;
+
+  }
+
+  .cds_current_post.menu-item.menu-item-type-taxonomy.menu-item-object-services_categories.dropdown-item.p-1{
+    background:none !important;
+    margin-bottom: 0px !important;
+    //background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='200' y='101' width='40' height='5' rx='2.5' transform='translate(-200 -101)' fill='%234f1929' fill-rule='evenodd'/%3E%3C/svg%3E") !important;
+
+  }
+
+}
+
+
+
+.carousel-indicators li.active {
+    background: url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Ccircle%20cx%3D%2710%27%20cy%3D%2710%27%20r%3D%278%27%20stroke%3D%27%234f1929%27%20stroke-width%3D%274%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+.carousel-indicators li {
+    background: url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Ccircle%20cx%3D%2710%27%20cy%3D%2710%27%20r%3D%278%27%20stroke%3D%27%23979797%27%20stroke-width%3D%274%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+.carousel-control-prev-icon {
+    background: #4f1929 url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M3.104%209.09H19.09a.91.91%200%200%201%200%201.82H3.104l7.539%207.538a.91.91%200%200%201-1.286%201.286l-9.09-9.091a.91.91%200%200%201%200-1.286l9.09-9.09a.91.91%200%201%201%201.286%201.285L3.103%20%0A9.09z%27%20fill%3D%27%23FFF%27%20fill-rule%3D%27nonzero%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+.carousel-control-next-icon {
+    background: #4f1929 url("data:image/svg+xml,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M16.896%209.09L9.357%201.553A.91.91%200%200%201%2010.643.266l9.09%209.091a.91.91%200%200%201%200%201.286l-9.09%209.09a.91.91%200%201%201-1.286-1.285l7.54-7.539H.908a.91.91%200%200%201%200-1.818h15.987z%27%20fill%3D%27%23FFF%27%20fill-rule%3D%27nonzero%27%2F%3E%3C%2Fsvg%3E") no-repeat center !important;
+}
+
+select.form-control {
+
+    background-image: url("data:image/svg+xml,%3Csvg width=%2721%27 height=%2712%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M18.948.768a.904.904 0 0 1 1.286 0 .922.922 0 0 1 0 1.297l-9.091 9.167a.904.904 0 0 1-1.286 0L.767 2.065a.922.922 0 0 1 0-1.297.904.904 0 0 1 1.285 0L10.5 9.181 18.948.768z%27 fill=%27%234f1929%27 fill-rule=%27nonzero%27/%3E%3C/svg%3E") !important;
+") !important;
+
+}
+
+
+
+.text-icon__icon {
+
+    background-image: url("data:image/svg+xml,%3Csvg width=%2711%27 height=%2720%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M.268 1.552a.904.904 0 0 1 0-1.286.922.922 0 0 1 1.297 0l9.167 9.091a.904.904 0 0 1 0 1.286l-9.167 9.09a.922.922 0 0 1-1.297 0 .904.904 0 0 1 0-1.285L8.681 10 .268 1.552z%27 fill=%27%234f1929%27 fill-rule=%27nonzero%27/%3E%3C/svg%3E") !important;
+
+}
+
+.get-touch-form .nf-field-element .btn-primary:hover {
+
+    background-color: #4f1929 !important;
+
+}
+
+.flex-schedule-buttons>a:first-child button {
+    background-color: #fff!important;
+    color: #4f1929 !important;
+}
+
+
+</style>
+
+        <style>
+
+
+        .overview>.row>.col:last-child {
+
+            background-color: #d1c9a7 !important;
+        }
+
+        </style>
+
+        <style>
+
+            #portfolio .row:nth-of-type(even) .portfolio-item:nth-child(even) .portfolio-up {
+
+                background-color: #2d000c !important;
+
+            }
+
+        </style>
+</head>
+
+<body class="archive tax-services_categories term-cosmetic-dentistry term-2 wp-theme-canadian-dental-services">
+
+
+    <div class="notification fixed-top">
+        <div class="container">
+
+                <div class="row">
+                    <div class="col-6"><p class="desktop-notification">Servicing St. Paul and its surrounding areas</p></div>
+                    <div class="col-12 col-lg-6"><p class="notification-hours">4432 – 50 Ave, St. Paul, Alberta <span class="phone-number"> | <a href="tel:780-645-6028">780-645-6028</a></span></p></div>
+                </div>
+
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top white-bg justify-content-end" id="mainNav">
+
+
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="https://www.stpaulfamilydentalcentre.com"><img src="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2020/01/stpaul_logo_rgb.png"> </a>
+
+            <button class="navbar-toggler js-navbar-toggler" type="button" role="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler__lines"></span><div class="menu-button-text">MENU</div><div class="menu-button-close">close</div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                <ul class="navbar-nav text-uppercase">
+
+                    <li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.stpaulfamilydentalcentre.com/about-us/">About</a></li>
+
+		
+
+
+
+    <!-- START Mega Wrapper -->
+    <div class="nav-item dropdown mega " data-toggle="popover" data-placement="right" data-content="1856">
+
+    
+    <a data-toggle="collapse" href="#id_1856" class="dropdown-toggle collapsed do-mega-drop menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children"><span class="d-collapsed-inline d-none d-md-inline">Dental Services<span class="mobile-expand"><!--?xml version="1.0" encoding="UTF-8"?-->
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -391.000000)" fill="#999999" fill-rule="nonzero">
+                <path d="M973.768485,388.551915 C973.410505,388.196893 973.410505,387.621289 973.768485,387.266267 C974.126466,386.911244 974.706867,386.911244 975.064848,387.266267 L984.231515,396.357176 C984.589495,396.712198 984.589495,397.287802 984.231515,397.642824 L975.064848,406.733733 C974.706867,407.088756 974.126466,407.088756 973.768485,406.733733 C973.410505,406.378711 973.410505,405.803107 973.768485,405.448085 L982.180508,397 L973.768485,388.551915 Z" id="Arrow/Right/Green-Copy" transform="translate(979.000000, 397.000000) rotate(90.000000) translate(-979.000000, -397.000000) "></path>
+            </g>
+        </g>
+    </svg></span><span class="mobile-contract"><!--?xml version="1.0" encoding="UTF-8"?-->
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -335.000000)" fill="#4f1929" fill-rule="nonzero">
+                <path d="M973.768485,332.551915 C973.410505,332.196893 973.410505,331.621289 973.768485,331.266267 C974.126466,330.911244 974.706867,330.911244 975.064848,331.266267 L984.231515,340.357176 C984.589495,340.712198 984.589495,341.287802 984.231515,341.642824 L975.064848,350.733733 C974.706867,351.088756 974.126466,351.088756 973.768485,350.733733 C973.410505,350.378711 973.410505,349.803107 973.768485,349.448085 L982.180508,341 L973.768485,332.551915 Z" id="Arrow/Right/Green" transform="translate(979.000000, 341.000000) rotate(90.000000) translate(-979.000000, -341.000000) "></path>
+            </g>
+        </g>
+    </svg></span></span></a>
+
+        
+        <!-- START Mega Wrapper and Columns --> 
+        
+        <div class="dropdown-menu shadow border-0" id="id_1856">
+	
+
+
+
+
+
+            <!-- START P3 -->
+            <div class="p-3">
+		
+
+                <!-- START Tab Content -->
+                <div class="tab-content">
+			
+
+                    <!-- START Tab Pane -->
+                    <div class="tab-pane fade show active" id="nav-A" role="tabpanel">
+			
+
+                        <!-- START All Services Link -->
+                        <!-- <div class="row">
+
+                            <div class="dropdown-item p-1 pb-3 heading" type="heading 176">
+                            <a href="https://www.stpaulfamilydentalcentre.com/dental-services/">				All Dental Services		</a>
+                            </div>
+    
+                        </div> -->
+                        <!-- END All Services Link -->
+
+                        <!-- START Row -->
+                        <div class="row">
+			
+                            
+                            <!-- START 1st Column -->
+                            <div class="col-6 col-lg-4 col-xl-3">
+
+		<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading" type="heading"><a data-previous-object_id="1516" data-this-count="0" data-previous-item_parent="0" current-menu_parent="1856" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/dental-services/general-dentistry/">General Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1516" data-this-count="0" data-previous-item_parent="0" current-menu_parent="1856" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/restorative-dentistry/">Restorative Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1516" data-this-count="1" data-previous-item_parent="0" current-menu_parent="1856" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/1904-2/">Root Canal Treatment</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1516" data-this-count="2" data-previous-item_parent="0" current-menu_parent="1856" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/bridges/">Bridges</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1516" data-this-count="3" data-previous-item_parent="0" current-menu_parent="1856" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/crowns/">Crowns</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1516" data-this-count="4" data-previous-item_parent="0" current-menu_parent="1856" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/dental-fillings/">Dental Fillings</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="1516" data-this-count="5" data-previous-item_parent="0" current-menu_parent="1856" data-siblings-index-key="0" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/dentistry-for-children/">Dentistry for Children</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=2-->
+
+		<div class="col-6 col-lg-4 col-xl-3">
+                        <div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories current-menu-item dropdown-item p-1 pb-3 heading 228" type="heading"><a data-previous-object_id="7" data-this-count="0" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/dental-services/cosmetic-dentistry/">Cosmetic Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories current-menu-item dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7" data-this-count="0" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/teeth-whitening/">Teeth Whitening</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories current-menu-item dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7" data-this-count="1" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/bonding/">Bonding</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories current-menu-item dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="7" data-this-count="2" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="1" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/veneers/">Veneers</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=8-->
+
+		<div class="col-6 col-lg-4 col-xl-3">
+                        <div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading 228" type="heading"><a data-previous-object_id="2" data-this-count="0" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/dental-services/preventative-dentistry/">Preventative Dentistry</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="2" data-this-count="0" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/periodontal-therapy/">Periodontal Therapy</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="2" data-this-count="1" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/intraoral-photos/">Intra-oral photos</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="2" data-this-count="2" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/fluoride-treatment/">Fluoride Treatment</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="2" data-this-count="3" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/diagnostic-imaging-and-x-rays/">Diagnostic Imaging and X-Rays</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="2" data-this-count="4" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/dental-cleanings-exams/">Dental Cleanings &amp; Exams</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="2" data-this-count="5" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="2" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/dental-sealants/">Dental Sealants</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=4-->
+
+		<div class="col-6 col-lg-4 col-xl-3">
+                        <div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1 pb-3 heading 228" type="heading"><a data-previous-object_id="8" data-this-count="0" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="3" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/dental-services/dental-surgery/">Dental Surgery</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="8" data-this-count="0" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="3" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/emergency-service-2/">Emergency Service</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="8" data-this-count="1" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="3" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/snoring-sleep-apnea-treatment/">Snoring &amp; Sleep Apnea Treatment</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="8" data-this-count="2" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="3" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/night-guards-sports-guards/">Night Guards &amp; Sports Guards</a></div>
+<div class=" menu-item menu-item-type-taxonomy menu-item-object-services_categories dropdown-item p-1" type="item"><a class="ass " data-previous-object_id="8" data-this-count="3" data-previous-item_parent="1856" current-menu_parent="1856" data-siblings-index-key="3" data-siblings-index-count="3" href="https://www.stpaulfamilydentalcentre.com/services/dental-extractions/">Dental Extractions</a></div>
+
+ </div><!-- CLOSE COLUMN  for TAX nextITEM object id=426-->
+
+                             </div><!-- CLOSE ROW  for FINAL TAX ITEM nextITEM object id=426-->
+
+		                    <!-- start MEGA END -->         </div></div></div></div><!-- END MEGA END -->
+</div><!-- NORMAL START --><div class="nav-item dropdown  new_nav_style ">
+    <a class="  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-childrennav-link dropdown-toggle collapsed" href="#id_submenu1852" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Patient Info<span class="mobile-expand"><!--?xml version="1.0" encoding="UTF-8"?-->
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -391.000000)" fill="#999999" fill-rule="nonzero">
+                <path d="M973.768485,388.551915 C973.410505,388.196893 973.410505,387.621289 973.768485,387.266267 C974.126466,386.911244 974.706867,386.911244 975.064848,387.266267 L984.231515,396.357176 C984.589495,396.712198 984.589495,397.287802 984.231515,397.642824 L975.064848,406.733733 C974.706867,407.088756 974.126466,407.088756 973.768485,406.733733 C973.410505,406.378711 973.410505,405.803107 973.768485,405.448085 L982.180508,397 L973.768485,388.551915 Z" id="Arrow/Right/Green-Copy" transform="translate(979.000000, 397.000000) rotate(90.000000) translate(-979.000000, -397.000000) "></path>
+            </g>
+        </g>
+    </svg></span><span class="mobile-contract"><!--?xml version="1.0" encoding="UTF-8"?-->
+    <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <g id="New-Headers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="01-Home---Tablet---Tier2" transform="translate(-969.000000, -335.000000)" data-jb="" fill="#4f1929" fill-rule="nonzero">
+                <path d="M973.768485,332.551915 C973.410505,332.196893 973.410505,331.621289 973.768485,331.266267 C974.126466,330.911244 974.706867,330.911244 975.064848,331.266267 L984.231515,340.357176 C984.589495,340.712198 984.589495,341.287802 984.231515,341.642824 L975.064848,350.733733 C974.706867,351.088756 974.126466,351.088756 973.768485,350.733733 C973.410505,350.378711 973.410505,349.803107 973.768485,349.448085 L982.180508,341 L973.768485,332.551915 Z" id="Arrow/Right/Green" transform="translate(979.000000, 341.000000) rotate(90.000000) translate(-979.000000, -341.000000) "></path>
+            </g>
+        </g>
+    </svg></span></a>
+    <div class="dropdown-menu collapse" id="id_submenu1852" style="">
+    <div class="dropdown">
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.stpaulfamilydentalcentre.com/digital-patient-forms/">Patient Forms</a></li>
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.stpaulfamilydentalcentre.com/patient-info/">Patient Info</a></li>
+
+		<!-- start NORMAL END -->
+    </div>
+    </div><!-- END NORMAL END -->
+</div><li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.stpaulfamilydentalcentre.com/contact-us/">Contact Us</a></li>
+
+		<li class="nav-item  menu-item menu-item-type-post_type menu-item-object-page"><a class="nav-link" href="https://www.stpaulfamilydentalcentre.com/financial-options/">Financial Options</a></li>
+
+		
+                    <!-- <a data-toggle="collapse" href="#id_search1" class="dropdown-toggle dropdown-toggle--search" aria-expanded="true"><i class="fa fa-search"></i>&nbsp;</a> -->
+
+                    <!-- DO not remove - Search Bar -->
+
+                    <!--
+
+                        <div class="nav-item nav-item--search">
+                            <a data-toggle="collapse" href="#id_search1" class="dropdown-toggle" aria-expanded="true"><i class="fa fa-search"></i>&nbsp;</a>
+
+                            <div class="nav-search dropdown-menu col-sm-5 col-lg-4 collapse" role="menu" id="id_search1" style="">
+                                <form class="p-3">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter your serach request" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    -->
+
+                </ul>
+
+                <a class="nav-btn btn btn-teal btn-lg js-scroll-trigger" id="book-button" href="https://www.stpaulfamilydentalcentre.com/booking">Book Appointment</a>
+            </div>
+
+            <a href="tel:780-645-6028" class="ml-auto primary-color phone-number" id="phone-number">
+<span class="phone-number__text">780-645-6028</span>
+<span class="phone-number__icon"><svg aria-hidn="true" focusable="false" data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#008080" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg></span>
+</a>
+            <a class="nav-btn btn btn-teal btn-lg js-scroll-trigger" id="book-button" href="https://www.stpaulfamilydentalcentre.com/booking">Book Appointment</a>
+        </div>
+    </nav>
+
+
+<div class="masthead masthead-general inner">
+    
+    <a id="CDSMastheadTaxonomy"></a>
+
+    <div class="masthead-cover" style="background-image: url( https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2021/03/image-hero-cosmetic.jpg ) !important;">
+    
+        <div class="container container--md">
+    
+            
+    
+        </div>
+    
+    </div>
+
+    <div class="container container--md">
+    
+        <div class="masthead-callout primary-bg">
+            <div class="intro-text text-left">
+            <div class="breadcrumb">Able Dental Family Dentistry &gt;</div>
+            <h1 style="color: #fff;text-align:center;">Cosmetic Dentistry</h1>
+    </div>            <h2>Cosmetic dentistry can be a great option for those looking to fine-tune their smile.</h2>
+    
+        </div>
+    
+    </div>
+
+</div>
+
+
+<section class="wp-block-mkl-section-block">
+    <a id="CDSTaxonomyPostsForCategory"></a>
+
+    <div class="container container--sm">
+        <div class="content">
+            <p></p><p>Is it time to replace those metal fillings? Maybe it’s time to upgrade them to a more natural, colour-matched solution. Or, perhaps you have a chipped tooth you’ve been thinking of reshaping? We have an array of cosmetic dentistry services available for you to achieve the results you’re looking for.</p>
+<p>Get ready to embrace a bright and gleaming natural smile to show off to the world!</p>
+<h2>Cosmetic dentistry in St. Paul</h2>
+<p>Cosmetic dentistry is an important and transformative procedure for many. We offer our patients cosmetic dentistry solutions such as teeth whitening, veneers, colour-matched composite fillings, teeth contouring and more.</p>
+<p>Your dentist will schedule an exam to determine the status of your oral health. They will look for possible issues that may hinder your cosmetic dentistry procedure. You will also discuss any questions and concerns you may have about your pending procedure.</p>
+<p>Restoring your confidence with a great smile is our end goal. At St. Paul Family Dental Centre, we seek to achieve that from our initial meeting to our post-care program.</p>
+<p>Our highly qualified staff will make you feel at home with absolute care and attention. They will all work with you to create a treatment plan that will meet your needs. Using state-of-the-art technology and techniques, we will ensure that you receive exceptional care. Cosmetic dentistry can dramatically alter your smile, your confidence and your life.</p>
+<p>Cosmetic dentistry has become more popular now than ever before. Therefore, translating into many taking the leap forward to revamp their oral look. If you're looking for a dentist in St. Paul who can provide you with cosmetic dentistry services, look no further.</p>
+<p>Beautiful smiles are some of our favourite things! <a href="https://www.stpaulfamilydentalcentre.com/contact-us/">Call us</a> for a consultation today – 780-645-6028!</p>
+<p></p>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio-reverse-spaced portfolio-taxonomy">
+    <div class="container">
+        <h2 class="section-heading accent">Cosmetic Dentistry</h2>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12 portfolio-item">
+
+            <a class="portfolio-link" data-toggle="modal" href="https://www.stpaulfamilydentalcentre.com/services/teeth-whitening/" style="background-image: url( https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2019/12/image-tumb-whiten-teeth.jpg ) !important; background-size: cover;background-position: center;">
+            <div class="portfolio-up">
+            <div class="portfolio-hover-content">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            </div>
+
+            <img class="img-fluid" src="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2019/12/image-tumb-whiten-teeth.jpg" alt="">
+            </a>
+            <h2 class="text-left text-dark py-3">Teeth Whitening</h2>
+        </div><div class="col-md-6 col-sm-12 portfolio-item">
+
+            <a class="portfolio-link" data-toggle="modal" href="https://www.stpaulfamilydentalcentre.com/services/bonding/" style="background-image: url( https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2019/12/image-thumb-bonding-stpaul.png ) !important; background-size: cover;background-position: center;">
+            <div class="portfolio-up">
+            <div class="portfolio-hover-content">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            </div>
+
+            <img class="img-fluid" src="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2019/12/image-thumb-bonding-stpaul.png" alt="">
+            </a>
+            <h2 class="text-left text-dark py-3">Bonding</h2>
+        </div><div class="col-md-6 col-sm-12 portfolio-item">
+
+            <a class="portfolio-link" data-toggle="modal" href="https://www.stpaulfamilydentalcentre.com/services/veneers/" style="background-image: url( https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2019/12/image-thumb-veneers-stpaul.png ) !important; background-size: cover;background-position: center;">
+            <div class="portfolio-up">
+            <div class="portfolio-hover-content">
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            </div>
+
+            <img class="img-fluid" src="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2019/12/image-thumb-veneers-stpaul.png" alt="">
+            </a>
+            <h2 class="text-left text-dark py-3">Veneers</h2>
+        </div>        </div>
+    </div>
+</section>
+
+
+<section class="schedule bg-teal" id="schedule">
+    <div class="container container--md">
+        <h2 class="section-heading text-center">To schedule an appointment, call us at 780-645-6028 or book an appointment via our <strong><a href="https://www.stpaulfamilydentalcentre.com/booking/">booking form</a></strong>.</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://youtube.com/embed/-YKOSqVikWU"></iframe>
+                </div>
+            </div>
+
+            <div class="col-md-6 flex-schedule-buttons">
+                <a href="https://www.stpaulfamilydentalcentre.com/booking/" title="Schedule an Appointment"><button class="col-sm-12 btn btn-dark btn-xl" type="button">Schedule an Appointment</button></a><a href="https://bit.ly/2OvZSss" title="Review us on Google"><button class="col-sm-12 btn btn-dark btn-xl" type="button">Review us on Google</button></a><a href="https://www.facebook.com/St-Paul-Dental-Centre-457552921673674/reviews/" title="Review us on Facebook"><button class="col-sm-12 btn btn-dark btn-xl" type="button">Review us on Facebook</button></a>            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Consultation Block Data
+
+
+<pre>Array
+(
+    [book_a_consultation_banner] => 2545
+    [_book_a_consultation_banner] => field_5ccaf4ec6f3ce
+    [link_and_text] => 184
+    [_link_and_text] => field_5ccaf52f6f3cf
+    [banner_text] => Book a Consultation
+    [_banner_text] => field_5ccaf7ee469e7
+)
+</pre>
+
+
+END Block Data -->
+
+
+<!-- 1- -->
+<!-- 2- https://www.stpaulfamilydentalcentre.com/booking-->
+<!-- 3- https://www.stpaulfamilydentalcentre.com/booking/-->
+
+<section class="book cover white-bg d-flex align-items-center" id="book" style="background-image: url( https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2021/01/St-Paul-Dentist-booking.jpg ) !important;">
+
+    <div class="container">
+
+        <a class="text-icon accent" href="https://www.stpaulfamilydentalcentre.com/booking/">
+            <span class="d-block-mobile">Book a Consultation</span><span class="text-icon__icon"></span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<footer class="footer" id="footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="d-sm-block d-md-none pt-50 pb-50">
+                        <a class="btn btn-teal btn-lg js-scroll-trigger" id="book-button" href="https://www.stpaulfamilydentalcentre.com/emergency-service/" title="Emergency Service">Emergency Service</a>                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-3 bg-left pt-50 pb-50">
+                            <a href="https://www.stpaulfamilydentalcentre.com"><img src="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2019/12/stpaul_logo_reversewhite.png"></a>
+
+                            <div class="links-social">
+                                <a class="link-social" href="https://www.facebook.com/stpaulfamilydentalcentre/"><img src="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2019/12/Facebook_logo.png" alt=""></a><a href="https://www.facebook.com/stpaulfamilydentalcentre/"><span class="text-white "> Follow us on <span class="font-weight-bold">Facebook</span></span></a><br><a class="link-social" href="https://www.instagram.com/stpaulfamilydentalcentre/"><img src="https://www.stpaulfamilydentalcentre.com/wp-content/uploads/sites/8/2020/06/myinstagram.png" alt=""></a><a href="https://www.instagram.com/stpaulfamilydentalcentre/"><span class="text-white "> Follow us on <span class="font-weight-bold">Instagram</span></span></a><br>                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-md-2 col-6 bg-left pt-50 pb-50">
+                            <p class="small text-white">
+
+                                <a href="https://www.stpaulfamilydentalcentre.com/about-us/">About</a><br>
+<a href="https://www.stpaulfamilydentalcentre.com/dental-services/">Services</a><br>
+<a href="https://www.stpaulfamilydentalcentre.com/financial-options/">Financial Options</a><br>
+<a href="https://www.stpaulfamilydentalcentre.com/contact-us/">Contact Us</a><br>
+<a href="https://www.stpaulfamilydentalcentre.com/booking/">Book Appointment</a><br>
+<a href="https://www.stpaulfamilydentalcentre.com/join-our-team/">Join Our Team</a><br>
+<a href="https://www.stpaulfamilydentalcentre.com/privacy-policy/">Privacy Policy</a><br>
+
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-md-4 col-6 bg-left pt-50 pb-50">
+                            <div class="footer-text">
+
+                                <p><strong>Telephone:</strong> <a href="tel:780-645-6028">780-645-6028</a></p>
+<p><strong>Email:</strong> <a href="mailto:info@stpaulfamilydentalcentre.com">info@stpaulfamilydentalcentre.com</a></p>
+<p><strong>Address:</strong><br>
+4432 – 50 Ave<br>
+St. Paul, Alberta<br>
+T0A 3A2</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 text-right d-none d-md-block bg-right pt-50 pb-50">
+
+                            <a class="btn btn-teal btn-lg js-scroll-trigger" id="book-button" href="https://www.stpaulfamilydentalcentre.com/emergency-service/" title="Emergency Service">Emergency Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        <p class="copyright-text mt-15">©2026 St. Paul Family Dental Centre</p>
+
+                        <!-- <div class="copyright-links">
+                            <a class="copyright-link" href="#">Privacy Policy</a>
+                            <a class="copyright-link" href="#">Terms of Service</a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="footer-managing">
+                        <div class="footer-managing__text">
+                            <span class="d-block">Professionally</span>
+                            <span class="d-block">managed by</span>
+                        </div>
+
+                        <div class="footer-managing__img">
+                            
+                            <a href="http://www.canadiandentalservices.ca/" target="_blank">
+                                <img src="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/img/assets/logo-cds.svg" alt="Canadian Dental Services">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/sites/8/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/canadian-dental-services/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+<!-- GTM Container placement set to footer -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG57ZBB" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script id="gtm4wp-form-move-tracker-js" src="https://www.stpaulfamilydentalcentre.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.3"></script>
+<script id="jq-js" src="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/vendor/jquery/jquery.min.js?ver=1.1"></script>
+<script id="bootstrap-js" src="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/vendor/bootstrap/js/bootstrap.bundle.min.js?ver=1.1"></script>
+<script id="easing-js" src="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/vendor/jquery-easing/jquery.easing.min.js?ver=1.1"></script>
+<script id="cds-mega-menu-js" src="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/js/MegaNavbarBS4.min.js?ver=1.1"></script>
+<script id="cds-js-js" src="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/js/cds.js?ver=1.1"></script>
+<script id="ninja-ajax-js-extra">
+var ninja_forms_ajax_object = {"ajaxurl":"https://www.stpaulfamilydentalcentre.com/wp-admin/admin-ajax.php"};
+//# sourceURL=ninja-ajax-js-extra
+</script>
+<script id="ninja-ajax-js" src="https://www.stpaulfamilydentalcentre.com/wp-content/themes/canadian-dental-services/js/ninja-forms-ajax.min.js?ver=1.1"></script>
+<script id="mediaelement-core-js-before">
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https://get.adobe.com/flashplayer/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+//# sourceURL=mediaelement-core-js-before
+</script>
+<script id="mediaelement-core-js" src="https://www.stpaulfamilydentalcentre.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17"></script>
+<script id="mediaelement-migrate-js" src="https://www.stpaulfamilydentalcentre.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=7.0"></script>
+<script id="mediaelement-js-extra">
+var _wpmejsSettings = {"pluginPath":"/wp-includes/js/mediaelement/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+//# sourceURL=mediaelement-js-extra
+</script>
+
+
+  <script>
+$( document ).ready(function() {
+
+    $('.carousel').carousel({
+        interval: false
+    });
+
+    $(".js-navbar-toggler").click(function(event) {
+
+        event.preventDefault();
+
+        toggle_navigation();
+
+    })
+
+    // NAV TOGGLE
+    $(".js-navbar-toggler.close").click(function(event) {
+        event.preventDefault();
+        // search bar
+        // $('.search-popup-overlay').hide();
+    })
+
+    function toggle_navigation(){
+
+        $('main-navigation').toggleClass("toggled");
+        $('.navbar-toggler').toggleClass("close");
+        $(".navbar-mobile").toggleClass("is-open");
+        $('.search-popup-overlay').fadeToggle(0,'swing');
+
+    }
+
+  });
+
+</script>
+
+
+<!-- this is production JB Monday March 6th -->
+
+
+
+<script type="application/ld+json">
+{
+"@context" : "http://schema.org",
+"@type" : "Organization",
+"name" : "St. Paul Family Dental Centre",
+"url" : "https://www.stpaulfamilydentalcentre.com/",
+"sameAs" : [
+"https://www.facebook.com/stpaulfamilydentalcentre/",
+"https://www.facebook.com/stpaulfamilydentalcentre/"
+]
+}
+</script></body></html>
