@@ -1,0 +1,525 @@
+<!DOCTYPE html><html data-wf-domain="www.pinecreekdentalcalgary.ca" data-wf-page="67338b81f097d621c05629fd" data-wf-site="67338b81f097d621c0562965" lang="en" class="w-mod-js wf-inconsolata-n4-active wf-inconsolata-n7-active wf-active" data-uw-w-loader=""><head><meta charset="utf-8"><link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous"><title>Dental Specials &amp; Offers | Pine Creek Dental</title><meta content="Take advantage of Pine Creek Dental’s current specials and discounts on dental services. Save on treatments while getting the care you need!" name="description"><meta content="Dental Specials &amp; Offers | Pine Creek Dental" property="og:title"><meta content="Take advantage of Pine Creek Dental’s current specials and discounts on dental services. Save on treatments while getting the care you need!" property="og:description"><meta content="https://cdn.prod.website-files.com/67338b81f097d621c0562965/69c45d0f690b2735f8140235_opengraph-internal-03.webp" property="og:image"><meta content="Dental Specials &amp; Offers | Pine Creek Dental" name="twitter:title"><meta content="Take advantage of Pine Creek Dental’s current specials and discounts on dental services. Save on treatments while getting the care you need!" name="twitter:description"><meta content="https://cdn.prod.website-files.com/67338b81f097d621c0562965/69c45d0f690b2735f8140235_opengraph-internal-03.webp" name="twitter:image"><meta property="og:type" content="website"><meta content="summary_large_image" name="twitter:card"><meta content="width=device-width, initial-scale=1" name="viewport"><meta content="Webflow" name="generator"><link href="https://cdn.prod.website-files.com/67338b81f097d621c0562965/css/pine-creek-dental.webflow.shared.109d715ec.min.css" rel="stylesheet" type="text/css" integrity="sha384-EJ1xXs877hskEcXsDQFjZJRZZd4wRjwKSukuk7ZIf86C9ITSCGWDPRzjy2jVgxzq" crossorigin="anonymous"><link href="https://fonts.googleapis.com" rel="preconnect"><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"><script async="" src="//www.gstatic.com/call-tracking/call-tracking_9.js" nonce="null"></script><script type="text/javascript" async="" src="https://www.gstatic.com/wcm/loader.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-W6RSY7M24Z&amp;cx=c&amp;gtm=4e66u1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-58NSCPR5"></script><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" media="all"><script type="text/javascript">WebFont.load({  google: {    families: ["Inconsolata:400,700"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/67338b81f097d621c0562965/673babddb8008787367bd689_favicon.png" rel="shortcut icon" type="image/x-icon"><link href="https://cdn.prod.website-files.com/67338b81f097d621c0562965/673babe1dd636b5caf65474c_webclip.png" rel="apple-touch-icon"><link href="https://www.pinecreekdentalcalgary.ca/specials" rel="canonical"><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-58NSCPR5');</script>
+<!-- End Google Tag Manager -->
+
+<!-- WhatConverts Script -->
+
+<!-- End WhatConverts Script -->
+
+<link rel="stylesheet" href="https://s3.amazonaws.com/cw-server3.com/global.css">
+
+<style media="screen">
+    html {
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased; 
+      font-smooth: always;
+      max-width:100%;
+      overflow-x: hidden;
+    }
+  
+ 	/* SVG Icons - Check Icons in "Styles Page" */
+	.svg-icon{ width:1.125em; height:1.125em;}
+  
+  	/* Fix Arrow Icon on Top CTA on mobile */
+	.header-top-cta-arrow {
+    	vertical-align: top;
+	}
+   /* Fix Typeform to have heigh 100% */
+  .typeform-embed.w-embed.w-script div {
+    height:100%
+	}
+</style>
+
+
+<script>
+  /* "OPEN NOW" Script */
+  
+   // Function to fetch the API and handle the response
+ async function fetchAndHandleResponse() {
+    
+    // UPDATE COLLECTION ID HERE 
+   const collectionID = '64db8bdc859e00d0033b4870';
+
+   // UPDATE SITE ID HERE   
+    const siteID = '64db8bdc859e00d0033b4843';
+    try {
+        const response = await fetch(`https://us-central1-internal-projects-405217.cloudfunctions.net/open-now-v1?colID=${collectionID}&siteID=${siteID}`);
+        const data = await response.json();
+       console.log(data)
+       const boolValue = String(data.isOpen).trim() === "true"
+        console.log(boolValue)
+        
+        // Extract the boolean value from the response
+        const isOpenNow = boolValue; // Assuming the API returns an object with an 'is_open' property
+        
+        // Select the element with the id 'open-now'
+        const openNowElement = document.getElementById('open-now');
+        // Change its display property based on the value of isOpenNow
+        if (openNowElement) {
+            openNowElement.style.display = isOpenNow ? 'block' : 'none';
+        } else {
+            console.error("Element with id 'open-now' not found.");
+        }
+    } catch (error) {
+        console.error('Error fetching or parsing data:', error);
+    }
+}
+// Call the function to fetch and handle the response
+fetchAndHandleResponse();
+ </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "@id": "https://www.pinecreekdentalcalgary.ca/#dentist",
+  "medicalSpecialty": "Dentistry",
+  "naics": "621210",
+  "name": "Pine Creek Dental",
+  "url": "https://www.pinecreekdentalcalgary.ca/",
+  "priceRange": "$$",
+  "logo": "https://cdn.prod.website-files.com/67338b81f097d621c0562965/673644b00c305a8e78fb0b8c_logo.svg",
+  "image": [
+        "https://cdn.prod.website-files.com/67338b81f097d621c0562965/67d9a3dc81ff404455f11017_opengraph-home-02.webp"
+  ],
+  "description": "Discover modern, compassionate dental care in Calgary at Pine Creek Dental. Offering comprehensive services in a comfortable, family-friendly environment",
+  "telephone": "(403) 984-6767",
+  "paymentAccepted": [
+    "Cash",
+    "Credit Card",
+    "Debit Card",
+    "Personal Check"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1275 Creekside Blvd SW #120",
+    "addressLocality": "Calgary",
+    "addressRegion": "AB",
+    "postalCode": "T2X 5W8",
+    "addressCountry": "CA"
+  },
+  "hasMap": "https://www.google.com/maps?cid=11561975882080059836",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "@50.8590939",
+    "longitude": "-114.0767697,17z"
+  },
+  "sameAs": [
+    "https://www.facebook.com/people/Pine-Creek-Dental/61553596912212",
+    "https://www.instagram.com/pine.creek.dental/?igsh=NzNlMW9nZ3JieXdz#",
+    "https://www.google.com/maps?cid=11561975882080059836"
+
+  ],
+  "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Tuesday",
+        "Wednesday"
+      ],
+      "opens": "11:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Thursday"
+      ],
+      "opens": "10:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "16:00"
+    }
+  ]
+
+}
+</script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11405887244/?random=1783044783397&amp;cv=11&amp;fst=1783044783397&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be66u1v9215204861za200zd9215204861xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115616986~115938465~115938468~119027224~119576881~119576885~119576891~119576895&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fwww.pinecreekdentalcalgary.ca%2Fspecials&amp;rcb=17&amp;frm=0&amp;tiba=Dental%20Specials%20%26%20Offers%20%7C%20Pine%20Creek%20Dental&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=149101384.1783044777&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script><link href="https://cdn.userway.org/styles/2026-06-09-08-22-25/widget_base.css?v=1780993345047" type="text/css" rel="stylesheet"></head><body style="overflow-x:visible;"><div class="uwy userway_p1" data-uw-feature-ignore="true" data-uw-rm-ignore="true" title="Accessibility Menu" style="background-color: transparent !important; overflow: initial !important;"><div class="userway_buttons_wrapper"><div class="ulsti hidden userway_dark" id="userwayLstIcon" aria-label="Translations Menu" role="button" tabindex="0" aria-haspopup="dialog" data-uw-s19-ignore="" title="Translations Menu" style="background: rgb(59, 82, 61) !important;"><span class="uiiw"></span><div class="ups"><img width="43" height="43" data-uw-rm-ignore="" class="si_w" aria-hidden="true" alt="Spinner: White decorative" src="https://cdn.userway.org/widgetapp/images/spin_wh.svg"></div><span class="usr lst-spacer"></span></div><div class="uai userway_dark" id="userwayAccessibilityIcon" aria-label="Accessibility Menu" role="button" tabindex="0" aria-haspopup="dialog" title="Accessibility Menu" style="background: rgb(59, 82, 61) !important;"><span class="uiiw"><img data-uw-rm-ignore="" class="ui_w" role="presentation" alt="" src="https://cdn.userway.org/widgetapp/images/body_wh.svg"></span><div class="ups"><img width="43" height="43" data-uw-rm-ignore="" class="si_w" aria-hidden="true" alt="Spinner: White decorative" src="https://cdn.userway.org/widgetapp/images/spin_wh.svg"></div><span class="usr"></span></div><div class="uwaw-dictionary-tooltip"></div></div><iframe class="uwif userway_p1" data-uw-ignore-translate="true" name="userway" title="UserWay Accessibility Menu" allow="clipboard-write" style="max-width: 100vw !important; visibility: visible !important; opacity: 1 !important; color-scheme: light !important;"></iframe></div><div class="uw-s10-bottom-ruler-guide"></div><div class="uw-s10-right-ruler-guide"></div><div class="uw-s10-left-ruler-guide"></div><div class="uw-s10-reading-guide"><div class="uw-s10-reading-guide__arrow"></div></div><div class="uw-s12-tooltip" aria-hidden="true"></div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58NSCPR5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="header-sticky"><div class="header"><div class="w-layout-blockcontainer container header-wrapper w-container"><a href="/" class="header-logo w-inline-block"><img src="https://cdn.prod.website-files.com/67338b81f097d621c0562965/673644b00c305a8e78fb0b8c_logo.svg" loading="lazy" width="162.5" data-w-id="1096111d-001e-ff38-5a34-a93203735b20" alt="Pine Creek Dental Design" class="logo"></a><div class="header-nav-wrapper"><nav class="header-nav"><div class="header-nav-top"><a data-w-id="503003e9-39b8-ecee-b659-c3ae87272979" href="/" class="header-nav-logo w-inline-block"><img src="https://cdn.prod.website-files.com/67338b81f097d621c0562965/673645002fc9b3896518f244_logo-white.svg" loading="lazy" width="162.5" alt="Pine Creek Dental Design" class="logo"></a><div data-w-id="37456654-14cf-0acf-b925-a5138f394468" class="navbar-menu-button-close"><div class="navbar-menu-button-text">Close</div><div class="navbar-menu-button-x">✕</div></div></div><a href="/about" class="navbar-link">About</a><a href="/location" class="navbar-link">Location</a><a href="/insurance" class="navbar-link">Insurance</a><a href="/services" class="navbar-link">Services</a><a href="#" class="navbar-link rm-trigger mobile">How Did We Do?</a><div class="header-nav-actions"><div class="header-nav-subtitle">Follow Us:</div><div class="social-icons-wrapper header-social-icons-wrapper"><a href="https://www.google.com/maps?cid=11561975882080059836" target="_blank" class="social-link social-link-white w-inline-block"><div class="google-icon w-embed"><svg enable-background="new 0 0 210 210" viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" style="width:100%"><path d="m0 105c0-57.897 47.103-105 105-105 23.383 0 45.515 7.523 64.004 21.756l-24.4 31.696c-11.432-8.8-25.127-13.452-39.604-13.452-35.841 0-65 29.159-65 65s29.159 65 65 65c28.867 0 53.398-18.913 61.852-45h-61.852v-40h105v20c0 57.897-47.103 105-105 105s-105-47.103-105-105z" fill="currentColor"></path></svg></div></a><a href="https://www.facebook.com/people/Pine-Creek-Dental/61553596912212/" target="_blank" class="social-link social-link-white w-inline-block"><div class="w-embed"><svg enable-background="new 0 0 100 100" viewBox="0 0 100 100" style="width:100%" xmlns="http://www.w3.org/2000/svg"><path d="m40.4 55.2c-.3 0-6.9 0-9.9 0-1.6 0-2.1-.6-2.1-2.1 0-4 0-8.1 0-12.1 0-1.6.6-2.1 2.1-2.1h9.9c0-.3 0-6.1 0-8.8 0-4 .7-7.8 2.7-11.3 2.1-3.6 5.1-6 8.9-7.4 2.5-.9 5-1.3 7.7-1.3h9.8c1.4 0 2 .6 2 2v11.4c0 1.4-.6 2-2 2-2.7 0-5.4 0-8.1.1-2.7 0-4.1 1.3-4.1 4.1-.1 3 0 5.9 0 9h11.6c1.6 0 2.2.6 2.2 2.2v12.1c0 1.6-.5 2.1-2.2 2.1-3.6 0-11.3 0-11.6 0v32.6c0 1.7-.5 2.3-2.3 2.3-4.2 0-8.3 0-12.5 0-1.5 0-2.1-.6-2.1-2.1 0-10.5 0-32.4 0-32.7z" fill="currentColor"></path></svg></div></a><a href="https://www.instagram.com/pine.creek.dental?igsh=NzNlMW9nZ3JieXdz" target="_blank" class="social-link text-white w-inline-block"><div class="w-embed"><svg class="svg-icon" enable-background="new 0 0 100 100;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="width: 100%;">
+	<path d="M96.7,30.6c0.1,2.5,0.2,4.8,0.2,6.8c0,2,0,6.2,0,12.6c0,6.4,0,10.6-0.1,12.6c-0.1,2-0.1,4.3-0.2,6.8
+		c-0.1,2.5-0.4,4.7-0.8,6.5c-0.4,1.8-0.9,3.4-1.4,4.9c-1.2,3.2-3,6-5.5,8.4c-2.4,2.4-5.2,4.2-8.3,5.4c-1.5,0.6-3.1,1-5,1.4
+		c-1.8,0.4-4,0.7-6.4,0.8c-2.5,0.1-4.8,0.2-6.8,0.2c-2,0-6.2,0-12.6,0c-6.4,0-10.7,0-12.7,0c-2,0-4.3-0.1-6.7-0.2
+		c-2.5-0.1-4.7-0.4-6.5-0.8c-1.8-0.4-3.5-0.9-5-1.4c-1.5-0.6-3-1.3-4.4-2.2c-1.4-0.9-2.7-2-3.9-3.2c-1.2-1.2-2.3-2.4-3.2-3.9
+		c-0.9-1.4-1.7-2.9-2.2-4.5c-0.6-1.5-1.1-3.1-1.5-4.9c-0.4-1.8-0.6-4-0.7-6.5c-0.1-2.5-0.2-4.8-0.2-6.8c0-2,0-6.2,0-12.6
+		c0-6.4,0-10.6,0-12.6c0-2,0.1-4.3,0.2-6.8C3.4,28.1,3.6,26,4,24.1c0.4-1.8,0.9-3.4,1.5-4.9c0.6-1.6,1.3-3.1,2.2-4.5
+		c0.9-1.4,2-2.7,3.2-3.9c1.2-1.2,2.4-2.3,3.9-3.2c1.4-0.9,2.9-1.6,4.5-2.3c1.5-0.6,3.1-1.1,4.9-1.5c1.8-0.4,4-0.6,6.5-0.7
+		c2.5-0.1,4.8-0.2,6.8-0.2c2,0,6.2,0,12.6,0c6.4,0,10.6,0,12.6,0c2,0,4.3,0.1,6.8,0.2C71.9,3.4,74,3.6,75.9,4
+		c1.8,0.4,3.4,0.9,4.9,1.4c1.6,0.6,3.1,1.3,4.5,2.2c1.4,0.9,2.7,2,3.9,3.2c1.2,1.2,2.3,2.4,3.2,3.9c0.9,1.4,1.6,2.9,2.3,4.5
+		c0.6,1.5,1.1,3.1,1.5,4.9C96.4,26,96.6,28.1,96.7,30.6z M88.3,69c0.1-2.4,0.2-4.7,0.2-6.6c0-2,0-6.1,0-12.3c0-6.3,0-10.4-0.1-12.4
+		c-0.1-2-0.1-4.2-0.2-6.6c-0.1-2.3-0.4-4.2-0.7-5.5c-0.3-1.3-0.7-2.4-1-3.2c-0.4-1-0.9-2-1.5-2.9c-0.6-0.9-1.3-1.7-2-2.5
+		c-0.7-0.8-1.6-1.5-2.5-2.1c-0.9-0.6-1.9-1.1-2.9-1.4c-0.9-0.4-1.9-0.7-3.3-1c-1.3-0.3-3.1-0.5-5.5-0.6c-2.4-0.1-4.7-0.2-6.6-0.2
+		c-2,0-6.1,0-12.4,0c-6.2,0-10.3,0-12.3,0c-2,0-4.2,0.1-6.7,0.2c-2.3,0.1-4.1,0.3-5.4,0.6c-1.3,0.3-2.4,0.6-3.3,1
+		c-1,0.4-1.9,0.8-2.8,1.4c-0.9,0.6-1.7,1.3-2.5,2.1c-0.8,0.7-1.5,1.6-2.1,2.5c-0.6,0.9-1.1,1.9-1.5,2.9c-0.3,0.8-0.6,1.9-1,3.2
+		c-0.3,1.3-0.5,3.2-0.6,5.5c-0.1,2.4-0.2,4.7-0.2,6.6c0,2,0,6.1,0,12.4c0,6.2,0,10.3,0,12.3c0,2,0.1,4.2,0.2,6.6
+		c0.1,2.3,0.3,4.2,0.6,5.5c0.3,1.3,0.7,2.4,1,3.2c0.4,1,0.9,2,1.5,2.9c0.6,0.9,1.3,1.7,2.1,2.5c0.7,0.8,1.6,1.5,2.5,2.1
+		c0.9,0.6,1.9,1.1,2.8,1.4c0.9,0.4,2,0.7,3.3,1c1.3,0.3,3.2,0.5,5.4,0.6c2.5,0.1,4.7,0.2,6.7,0.2c2,0,6.1,0,12.3,0
+		c6.3,0,10.4,0,12.4,0c1.9,0,4.1-0.1,6.7-0.2c2.3-0.1,4.1-0.3,5.4-0.6c1.3-0.3,2.4-0.6,3.3-1c2-0.8,3.8-2,5.4-3.5
+		c1.6-1.5,2.7-3.3,3.5-5.4c0.3-0.8,0.6-1.9,1-3.2C87.9,73.2,88.2,71.3,88.3,69z M50,25.8c3.3,0,6.4,0.6,9.4,1.9
+		c2.9,1.2,5.5,2.9,7.7,5.1c2.2,2.2,3.9,4.8,5.1,7.7c1.3,2.9,1.9,6.1,1.9,9.4s-0.6,6.4-1.9,9.4c-1.2,2.9-2.9,5.5-5.1,7.7
+		c-2.2,2.2-4.8,3.9-7.7,5.1c-2.9,1.3-6.1,1.9-9.4,1.9c-3.4,0-6.5-0.6-9.5-1.9c-2.9-1.2-5.4-2.9-7.6-5.1c-2.2-2.2-3.9-4.7-5.2-7.6
+		c-1.2-2.9-1.8-6.1-1.8-9.5c0-3.3,0.6-6.4,1.8-9.4c1.3-2.9,3-5.5,5.2-7.7c2.2-2.2,4.7-3.9,7.7-5.1C43.5,26.5,46.6,25.8,50,25.8z
+		 M61.1,61.1c3.1-3.1,4.6-6.8,4.6-11.1c0-4.3-1.5-8.1-4.6-11.1c-3.1-3.1-6.8-4.6-11.1-4.6c-4.3,0-8.1,1.5-11.1,4.6
+		c-3.1,3.1-4.6,6.8-4.6,11.1c0,4.3,1.5,8.1,4.6,11.1c3.1,3.1,6.8,4.6,11.1,4.6C54.3,65.7,58.1,64.2,61.1,61.1z M79.1,20.9
+		c-1.1-1.1-2.4-1.7-3.9-1.7c-1.6,0-2.9,0.6-4,1.7s-1.7,2.4-1.7,4c0,1.5,0.6,2.8,1.7,3.9c1.1,1.1,2.4,1.7,4,1.7
+		c1.5,0,2.8-0.6,3.9-1.7c1.1-1.1,1.7-2.4,1.7-3.9C80.8,23.3,80.2,22,79.1,20.9z" fill="currentColor"></path></svg></div></a></div></div></nav></div><div class="header-actions"><div data-w-id="f3b53255-ea6e-4732-d8be-e6f645f3de4e" class="call-header"><a href="tel:(587)815-8549" class="button button-outline button-call-header w-inline-block"><div class="button-with-icon"><div class="icon-html-embed button-icon button-call-icon w-embed"><style media="screen">
+  .phone{width:1.125em;height:1.125em}
+  .phone path:nth-child(2){animation:header-phone 1s infinite cubic-bezier(0.1, 0.57, 0.5, 1)}
+  .phone path:nth-child(3){animation:header-phone2 1s infinite cubic-bezier(0.1, 0.57, 0.5, 1)}
+  @keyframes header-phone{0%,30%{opacity:0;transform:translate3d(-20px, 20px, 0)}80%{opacity:1;transform:translate3d(0, 0, 0)}100%{opacity:0}}
+  @keyframes header-phone2{0%{opacity:0;transform:translate3d(-20px, 20px, 0)}70%,90%{opacity:1;transform:translate3d(0, 0, 0)}100%{opacity:0}}
+
+</style>
+<svg class="phone" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 82 82" style="enable-background:new 0 0 82 82;" xml:space="preserve"><path d="M64.5,78.2c1.7-1.9,3.6-3.6,5.4-5.4c2.6-2.7,2.7-5.9,0-8.6c-3.1-3.2-6.3-6.3-9.4-9.4 c-2.6-2.6-5.8-2.6-8.4,0c-2,1.9-3.9,3.9-5.9,5.9c-0.1,0.1-0.3,0.2-0.4,0.3l-1.3,1.3c-0.4,0.2-0.7,0.2-1.2,0 c-1.3-0.7-2.6-1.2-3.8-2c-5.7-3.6-10.5-8.2-14.7-13.4c-2.1-2.6-4-5.3-5.3-8.4c-0.2-0.5-0.2-0.9,0.1-1.3l1.3-1.3 c0.1-0.1,0.1-0.2,0.2-0.3c0.6-0.6,1.2-1.1,1.8-1.7c1.4-1.3,2.7-2.7,4.1-4.1c2.7-2.7,2.7-5.9,0-8.6c-1.5-1.5-3.1-3.1-4.6-4.6 c-1.6-1.6-3.2-3.2-4.8-4.8c-2.6-2.5-5.8-2.5-8.4,0c-2,1.9-3.9,3.9-5.9,5.9c-1.9,1.8-2.8,3.9-3,6.5c-0.3,4.1,0.7,8,2.1,11.8 C5.2,43.8,9.6,50.7,15,57.1c7.2,8.6,15.9,15.4,26,20.4c4.6,2.2,9.3,3.9,14.4,4.2C58.9,81.8,62,81,64.5,78.2z" fill="currentColor"></path><path d="M41.1,15.7 c-0.7,0-1.5,0.1-2.2,0.4c-1.7,0.8-2.5,2.8-2,4.8c0.4,1.8,2,3,3.9,3c4.6,0.1,8.6,1.5,12,4.6c3.7,3.4,5.4,7.7,5.6,12.8 c0,0.9,0.4,1.9,0.9,2.6c1.1,1.5,3,1.9,4.8,1.2c1.6-0.6,2.5-2,2.5-3.9c-0.1-7-2.6-12.9-7.5-18.1C54.1,18.4,48.1,15.8,41.1,15.7z" fill="currentColor"></path><path d="M69,11.4c8.5,8.7,12.5,18.1,12.8,29.1c0.1,2.5-1.5,4.2-3.9,4.3c-2.6,0.1-4.3-1.4-4.4-4c-0.1-5.4-1.4-10.5-4-15.2 C63.5,14.9,54.2,9.3,42,8.6c-1.4-0.1-2.6-0.2-3.6-1.3c-1.2-1.4-1.3-3-0.7-4.6c0.7-1.6,2-2.4,3.8-2.4c8,0.1,15.3,2.4,22,6.8 C65.7,8.6,67.8,10.4,69,11.4z" fill="currentColor"></path></svg></div><div class="header-call-text">(587) 815-8549</div><div class="header-call-text-mobile">Call</div></div></a></div><div class="spacer-1"></div><div class="desktop"><a href="https://can2.recallmax.com/rsm/request/public/bookOnline/patient/patient.html?a=6uKyjz38q1Qa1tI5n0ga1cfdAi_a1Wa3u1QMs" target="_blank" class="button book-button w-inline-block"><div>Book Online</div></a></div></div><div class="navbar-menu-button"><div class="navbar-menu-button-text-open"><div class="navbar-menu-button-text">MENU</div><div class="navbar-menu-button-trigram">☰</div></div></div></div></div></div><div class="content"><section class="filled-section background-overlay hero-inner-section"><img src="https://cdn.prod.website-files.com/67338b81f097d621c0562965/6746453a372fb487a48af6b9_specials-hero.webp" loading="lazy" width="1920" alt="A man sitting on the ground wearing a green tie." class="background-image image_pos_center"><div class="w-layout-blockcontainer container hero-wrapper w-container"><div class="boxed-content narrow-inner-hero-section text-white"><h1 class="page-title">New Patient Specials</h1><div class="section-tagline">Save on your smile with our new patient offers! Book now to get started.</div></div></div></section><div id="section-services" class="general-section"><div class="container w-container"><div class="grid-3"><div data-w-id="90058460-9497-b79e-2dca-880b1ec2de8f" style="opacity:0" class="boxed-content boxed-content-md background-primary-soft-light"><div class="action-open-modal-book"><div class="special-box action-open-modal-book"><div class="text-color"><a href="#" class="text-color w-inline-block"><h3 class="special-title">Sedation Consultation</h3><div class="special-price">FREE</div><div class="special-description">Must mention or present this coupon at time of booking. </div><div class="special-notes">Limited Time Offer. For New Patients Only.</div><div class="special-notes last">Expires on <span class="offer-expiration">07/10/2026</span>. </div></a></div></div></div></div><div data-w-id="b3ec1e24-5710-403a-15ca-489abc9ccaca" style="opacity:0" class="boxed-content boxed-content-md background-primary-soft-light"><div class="action-open-modal-book"><div class="special-box action-open-modal-book"><div class="text-color"><a href="#" class="text-color w-inline-block"><h3 class="special-title">Invisalign Consultation</h3><div class="special-price">FREE</div><div class="special-description">Must mention or present this coupon at time of booking. </div><div class="special-notes">Limited Time Offer. For New Patients Only.</div><div class="special-notes last">Expires on <span class="offer-expiration">07/10/2026</span>. </div></a></div></div></div></div><div data-w-id="82b60cf1-d3e2-a55f-549c-22f552e33e08" style="opacity:0" class="boxed-content boxed-content-md background-primary-soft-light"><div class="action-open-modal-book"><div class="special-box action-open-modal-book"><div class="text-color"><a href="#" class="text-color w-inline-block"><h3 class="special-title">DENTAL IMPLANT CONSULTATION</h3><div class="special-price">FREE</div><div class="special-description">Must mention or present this coupon at time of booking.</div><div class="special-notes">Limited Time Offer. For New Patients Only.</div><div class="special-notes last">Expires on <span class="offer-expiration">07/10/2026</span>. </div></a></div></div></div></div></div></div></div><div class="filled-section background-primary-soft closing"><div class="container container-full-on-mobile w-container"><div id="w-node-_3e57f2f7-7886-232d-4204-fa1015a35f78-f53950c8" class="closing-section"><h2 class="section-title text-center-mobile">Connect with Us</h2><div class="section-tagline text-center">Let us give you the care you deserve. <br>Call (<a href="tel:(587)815-8549" class="link">587) 815-8549</a>, schedule online or Email us <a href="mailto:info@pinecreekdentalcalgary.ca?subject=I'd%20like%20to%20Schedule%20and%20Appointment%20-%20Dental%20Marketing%20Lead" class="link">info@pinecreekdentalcalgary.ca</a> to set up your visit. We'll be in touch soon. </div><div class="closing-section-buttons"><a href="https://can2.recallmax.com/rsm/request/public/bookOnline/patient/patient.html?a=6uKyjz38q1Qa1tI5n0ga1cfdAi_a1Wa3u1QMs" target="_blank" class="button book-button w-inline-block"><div>Book Online</div></a><a href="/location" id="w-node-b97affb1-eb55-fd98-35ad-957df53950da-f53950c8" class="button button-outline w-inline-block"><div>Location</div></a></div></div></div></div></div><footer class="footer"><div class="container w-container"><div class="footer-grid"><div id="w-node-fde39053-6e61-0d25-1503-3be562f34630-1d0c1c33" class="footer-grid-box"><h3 class="footer-title">Questions?</h3><div class="bordered-top bordered-top-short"></div><div class="footer-navigation-grid"><div id="w-node-c4f6f08a-b9d6-28ec-1baa-e46522a81096-1d0c1c33" class="footer-navigation-box temp-hide"><h4 class="footer-subtitle">Phone</h4><a href="tel:(480)999-5854" class="footer-main-link temp-hide">(587) 815-8549</a></div><div id="w-node-_960a8396-1374-2e6f-ad9e-4044c16d8579-1d0c1c33" class="footer-navigation-box"><h4 class="footer-subtitle">Social</h4><div class="social-icons-wrapper header-social-icons-wrapper"><a rel="me" href="https://www.google.com/maps?cid=11561975882080059836" target="_blank" class="social-link google w-inline-block"><div class="google-icon w-embed"><svg enable-background="new 0 0 210 210" viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" style="width:100%"><path d="m0 105c0-57.897 47.103-105 105-105 23.383 0 45.515 7.523 64.004 21.756l-24.4 31.696c-11.432-8.8-25.127-13.452-39.604-13.452-35.841 0-65 29.159-65 65s29.159 65 65 65c28.867 0 53.398-18.913 61.852-45h-61.852v-40h105v20c0 57.897-47.103 105-105 105s-105-47.103-105-105z" fill="currentColor"></path></svg></div></a><a rel="me" href="https://www.instagram.com/pine.creek.dental/?igsh=NzNlMW9nZ3JieXdz#" target="_blank" class="social-link instagram w-inline-block"><div class="w-embed"><svg class="svg-icon" enable-background="new 0 0 100 100;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="width: 100%;">
+	<path d="M96.7,30.6c0.1,2.5,0.2,4.8,0.2,6.8c0,2,0,6.2,0,12.6c0,6.4,0,10.6-0.1,12.6c-0.1,2-0.1,4.3-0.2,6.8
+		c-0.1,2.5-0.4,4.7-0.8,6.5c-0.4,1.8-0.9,3.4-1.4,4.9c-1.2,3.2-3,6-5.5,8.4c-2.4,2.4-5.2,4.2-8.3,5.4c-1.5,0.6-3.1,1-5,1.4
+		c-1.8,0.4-4,0.7-6.4,0.8c-2.5,0.1-4.8,0.2-6.8,0.2c-2,0-6.2,0-12.6,0c-6.4,0-10.7,0-12.7,0c-2,0-4.3-0.1-6.7-0.2
+		c-2.5-0.1-4.7-0.4-6.5-0.8c-1.8-0.4-3.5-0.9-5-1.4c-1.5-0.6-3-1.3-4.4-2.2c-1.4-0.9-2.7-2-3.9-3.2c-1.2-1.2-2.3-2.4-3.2-3.9
+		c-0.9-1.4-1.7-2.9-2.2-4.5c-0.6-1.5-1.1-3.1-1.5-4.9c-0.4-1.8-0.6-4-0.7-6.5c-0.1-2.5-0.2-4.8-0.2-6.8c0-2,0-6.2,0-12.6
+		c0-6.4,0-10.6,0-12.6c0-2,0.1-4.3,0.2-6.8C3.4,28.1,3.6,26,4,24.1c0.4-1.8,0.9-3.4,1.5-4.9c0.6-1.6,1.3-3.1,2.2-4.5
+		c0.9-1.4,2-2.7,3.2-3.9c1.2-1.2,2.4-2.3,3.9-3.2c1.4-0.9,2.9-1.6,4.5-2.3c1.5-0.6,3.1-1.1,4.9-1.5c1.8-0.4,4-0.6,6.5-0.7
+		c2.5-0.1,4.8-0.2,6.8-0.2c2,0,6.2,0,12.6,0c6.4,0,10.6,0,12.6,0c2,0,4.3,0.1,6.8,0.2C71.9,3.4,74,3.6,75.9,4
+		c1.8,0.4,3.4,0.9,4.9,1.4c1.6,0.6,3.1,1.3,4.5,2.2c1.4,0.9,2.7,2,3.9,3.2c1.2,1.2,2.3,2.4,3.2,3.9c0.9,1.4,1.6,2.9,2.3,4.5
+		c0.6,1.5,1.1,3.1,1.5,4.9C96.4,26,96.6,28.1,96.7,30.6z M88.3,69c0.1-2.4,0.2-4.7,0.2-6.6c0-2,0-6.1,0-12.3c0-6.3,0-10.4-0.1-12.4
+		c-0.1-2-0.1-4.2-0.2-6.6c-0.1-2.3-0.4-4.2-0.7-5.5c-0.3-1.3-0.7-2.4-1-3.2c-0.4-1-0.9-2-1.5-2.9c-0.6-0.9-1.3-1.7-2-2.5
+		c-0.7-0.8-1.6-1.5-2.5-2.1c-0.9-0.6-1.9-1.1-2.9-1.4c-0.9-0.4-1.9-0.7-3.3-1c-1.3-0.3-3.1-0.5-5.5-0.6c-2.4-0.1-4.7-0.2-6.6-0.2
+		c-2,0-6.1,0-12.4,0c-6.2,0-10.3,0-12.3,0c-2,0-4.2,0.1-6.7,0.2c-2.3,0.1-4.1,0.3-5.4,0.6c-1.3,0.3-2.4,0.6-3.3,1
+		c-1,0.4-1.9,0.8-2.8,1.4c-0.9,0.6-1.7,1.3-2.5,2.1c-0.8,0.7-1.5,1.6-2.1,2.5c-0.6,0.9-1.1,1.9-1.5,2.9c-0.3,0.8-0.6,1.9-1,3.2
+		c-0.3,1.3-0.5,3.2-0.6,5.5c-0.1,2.4-0.2,4.7-0.2,6.6c0,2,0,6.1,0,12.4c0,6.2,0,10.3,0,12.3c0,2,0.1,4.2,0.2,6.6
+		c0.1,2.3,0.3,4.2,0.6,5.5c0.3,1.3,0.7,2.4,1,3.2c0.4,1,0.9,2,1.5,2.9c0.6,0.9,1.3,1.7,2.1,2.5c0.7,0.8,1.6,1.5,2.5,2.1
+		c0.9,0.6,1.9,1.1,2.8,1.4c0.9,0.4,2,0.7,3.3,1c1.3,0.3,3.2,0.5,5.4,0.6c2.5,0.1,4.7,0.2,6.7,0.2c2,0,6.1,0,12.3,0
+		c6.3,0,10.4,0,12.4,0c1.9,0,4.1-0.1,6.7-0.2c2.3-0.1,4.1-0.3,5.4-0.6c1.3-0.3,2.4-0.6,3.3-1c2-0.8,3.8-2,5.4-3.5
+		c1.6-1.5,2.7-3.3,3.5-5.4c0.3-0.8,0.6-1.9,1-3.2C87.9,73.2,88.2,71.3,88.3,69z M50,25.8c3.3,0,6.4,0.6,9.4,1.9
+		c2.9,1.2,5.5,2.9,7.7,5.1c2.2,2.2,3.9,4.8,5.1,7.7c1.3,2.9,1.9,6.1,1.9,9.4s-0.6,6.4-1.9,9.4c-1.2,2.9-2.9,5.5-5.1,7.7
+		c-2.2,2.2-4.8,3.9-7.7,5.1c-2.9,1.3-6.1,1.9-9.4,1.9c-3.4,0-6.5-0.6-9.5-1.9c-2.9-1.2-5.4-2.9-7.6-5.1c-2.2-2.2-3.9-4.7-5.2-7.6
+		c-1.2-2.9-1.8-6.1-1.8-9.5c0-3.3,0.6-6.4,1.8-9.4c1.3-2.9,3-5.5,5.2-7.7c2.2-2.2,4.7-3.9,7.7-5.1C43.5,26.5,46.6,25.8,50,25.8z
+		 M61.1,61.1c3.1-3.1,4.6-6.8,4.6-11.1c0-4.3-1.5-8.1-4.6-11.1c-3.1-3.1-6.8-4.6-11.1-4.6c-4.3,0-8.1,1.5-11.1,4.6
+		c-3.1,3.1-4.6,6.8-4.6,11.1c0,4.3,1.5,8.1,4.6,11.1c3.1,3.1,6.8,4.6,11.1,4.6C54.3,65.7,58.1,64.2,61.1,61.1z M79.1,20.9
+		c-1.1-1.1-2.4-1.7-3.9-1.7c-1.6,0-2.9,0.6-4,1.7s-1.7,2.4-1.7,4c0,1.5,0.6,2.8,1.7,3.9c1.1,1.1,2.4,1.7,4,1.7
+		c1.5,0,2.8-0.6,3.9-1.7c1.1-1.1,1.7-2.4,1.7-3.9C80.8,23.3,80.2,22,79.1,20.9z" fill="currentColor"></path></svg></div></a><a rel="me" href="https://www.facebook.com/people/Pine-Creek-Dental/61553596912212/" target="_blank" class="social-link facebook w-inline-block"><div class="w-embed"><svg enable-background="new 0 0 100 100" viewBox="0 0 100 100" style="width:100%" xmlns="http://www.w3.org/2000/svg"><path d="m40.4 55.2c-.3 0-6.9 0-9.9 0-1.6 0-2.1-.6-2.1-2.1 0-4 0-8.1 0-12.1 0-1.6.6-2.1 2.1-2.1h9.9c0-.3 0-6.1 0-8.8 0-4 .7-7.8 2.7-11.3 2.1-3.6 5.1-6 8.9-7.4 2.5-.9 5-1.3 7.7-1.3h9.8c1.4 0 2 .6 2 2v11.4c0 1.4-.6 2-2 2-2.7 0-5.4 0-8.1.1-2.7 0-4.1 1.3-4.1 4.1-.1 3 0 5.9 0 9h11.6c1.6 0 2.2.6 2.2 2.2v12.1c0 1.6-.5 2.1-2.2 2.1-3.6 0-11.3 0-11.6 0v32.6c0 1.7-.5 2.3-2.3 2.3-4.2 0-8.3 0-12.5 0-1.5 0-2.1-.6-2.1-2.1 0-10.5 0-32.4 0-32.7z" fill="currentColor"></path></svg></div></a></div></div><div id="w-node-_223c3268-1d30-00cf-8341-3491424e56f2-1d0c1c33" class="footer-navigation-box"><h4 class="footer-subtitle">Address</h4><a href="https://www.google.com/maps?cid=11561975882080059836" target="_blank" class="footer-main-link">1275 Creekside Blvd SW #120 Calgary AB T2X 5W8</a><img src="https://cdn.prod.website-files.com/67338b81f097d621c0562965/6744e8326dec56c5b754fa75_calgary.webp" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/67338b81f097d621c0562965/6744e8326dec56c5b754fa75_calgary-p-500.webp 500w, https://cdn.prod.website-files.com/67338b81f097d621c0562965/6744e8326dec56c5b754fa75_calgary.webp 628w" alt="City of Calgary" class="city-logo"></div></div></div><div id="w-node-b88765de-4b2d-22c9-18b6-6bb3e61420f0-1d0c1c33" class="footer-grid-box"><h3 class="footer-title">Navigation</h3><div class="bordered-top bordered-top-short"></div><div class="footer-navigation-grid"><a href="/blog" class="footer-link">Blogs</a><a href="/faq" class="footer-link">FAQ</a><a href="/testimonials" class="footer-link">Testimonials</a><a href="/sterilization-practices" class="footer-link">Sterilization Practices</a><a href="/our-technology" class="footer-link">Our Technology</a><a href="#" class="footer-link rm-trigger">How Did We Do?</a></div></div><div id="w-node-_900f28a4-1f7b-d795-8aba-8f70c3357e88-1d0c1c33" class="footer-grid-box"><h3 class="footer-title">Patient Center</h3><div class="bordered-top bordered-top-short"></div><div class="footer-navigation-grid"><a href="/our-doctors" class="footer-link">Our Doctors</a><a href="/specials" aria-current="page" class="footer-link w--current">Specials</a><a href="/review-us" class="footer-link">Review Us</a><a href="/your-first-visit" class="footer-link">Your First Visit</a><a href="/office-tour" class="footer-link">Office Tour</a><a href="/insurance" class="footer-link">Insurance &amp; Financing</a></div></div><div id="w-node-d8a7b3e5-6df0-bcb3-075c-76bbe06055f7-1d0c1c33" class="footer-grid-box"><h3 class="footer-title">Office Hours</h3><div class="bordered-top bordered-top-short"></div><div><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="w-dyn-item"><div class="office-hours-table-row w-condition-invisible"><div class="office-hours-table-column-info inline"><div class="inline alt">Mon - Fri</div></div><div class="location-office-hours">Closed</div></div><div><div class="office-hours-table-row"><div class="office-hours-table-column-info inline"><div class="inline alt">Monday</div></div><div class="location-office-hours">Closed</div></div><div class="office-hours-table-row"><div class="office-hours-table-column-info inline"><div class="inline alt">Tuesday</div></div><div class="location-office-hours">11AM - 7PM</div></div><div class="office-hours-table-row"><div class="office-hours-table-column-info inline"><div class="inline alt">Wednesday</div></div><div class="location-office-hours">11AM - 7PM</div></div><div class="office-hours-table-row"><div class="office-hours-table-column-info inline"><div class="inline alt">Thursday</div></div><div class="location-office-hours">10AM - 6PM</div></div><div class="office-hours-table-row"><div class="office-hours-table-column-info inline"><div class="inline alt">Friday</div></div><div class="location-office-hours">8AM - 4PM</div></div></div><div class="office-hours-table-row"><div class="office-hours-table-column-info inline"><div class="inline alt">Saturday*</div></div><div class="location-office-hours">Closed.</div></div><div class="office-hours-table-row"><div class="office-hours-table-column-info inline"><div class="inline alt">Sunday</div></div><div class="location-office-hours">Closed</div></div><div>*Open one Saturday per month 9AM - 3PM.</div></div></div></div></div></div></div></div><div class="footer-bottom"><div class="w-layout-blockcontainer container w-container"><div class="footer-bottom-grid"><div id="w-node-_6588cd4c-0bc2-c06f-6c83-1e29a9eace19-a9eace18" class="footer-bottom-box"><div class="footer-bottom-copyrights"><div class="footer-bottom-copyrights-text">© </div><div class="footer-bottom-copyrights-year w-embed w-script"><span id="copy-year">2026</span>
+<script type="text/javascript">
+  var copyYear = document.getElementById('copy-year');
+  copyYear.appendChild(document.createTextNode(new Date().getFullYear()));
+</script></div><div class="footer-bottom-copyrights-text">Pine Creek Dental. All rights reserved.</div></div></div><div id="w-node-_6588cd4c-0bc2-c06f-6c83-1e29a9eace20-a9eace18" class="footer-bottom-box middle"><div class="footer-bottom-middle-flex"><a href="/privacy-policy" class="footer-main-link footer-bottom-link">Privacy Policy</a><a href="/ada-accessibility" class="footer-main-link footer-bottom-link footer-bottom-link-middle">Accessibility</a><a href="/disclaimer" class="footer-main-link footer-bottom-link">Disclaimer</a></div></div><div id="w-node-_6588cd4c-0bc2-c06f-6c83-1e29a9eace28-a9eace18" class="footer-bottom-box last"><a href="https://www.dentalmarketing.com/" target="_blank" class="footer-link">Built by DentalMarketing.com</a></div></div></div></div><div class="w-embed w-script"><script type="text/javascript">
+var _userway_config = {
+/* uncomment the following line to override default position*/
+position: '1',
+/* uncomment the following line to override default size (values: small, large)*/
+ size: 'small',
+/* uncomment the following line to override default language (e.g., fr, de, es, he, nl, etc.)*/
+/* language: 'en-US', */
+/* uncomment the following line to override color set via widget (e.g., #053f67)*/
+color: '#3b523d',
+/* uncomment the following line to override type set via widget (1=person, 2=chair, 3=eye, 4=text)*/
+/* type: '1', */
+/* uncomment the following lines to override the accessibility statement*/
+/* statement_text: "Our Accessibility Statement", */
+/* statement_url: "http://www.example.com/accessibility", */
+/* uncomment the following line to override support on mobile devices*/
+mobile: true,
+account: 'UKhKXA0qGK'
+};
+</script>
+<script type="text/javascript" src="https://cdn.userway.org/widget.js"></script>
+<style media="screen">
+  body .uwy.userway_p1 .userway_buttons_wrapper {
+   	top: auto!important;
+    right: -1rem!important;
+    bottom: 1rem!important;
+    left: auto!important;
+  }
+
+    @media only screen 
+    and (min-width : 200px) 
+    and (max-width : 767px)  { 
+      body .uwy.userway_p1 .userway_buttons_wrapper {
+              top: auto !important;
+              right: auto !important;
+              left: 3.2rem!important;
+              bottom: 0.75em!important;
+      }
+    }
+    
+</style></div><div class="modal-box modal-book"><div class="modal-close">✕</div><div class="modal flex-center"><div class="w-layout-blockcontainer container container-narrow w-container"><div class="modal-content"><h2 class="section-title section-title-medium">Follow us</h2><div class="social-icons-wrapper header-social-icons-wrapper"><a rel="me" href="https://www.google.com/maps?cid=11561975882080059836" target="_blank" class="social-link google w-inline-block"><div class="google-icon w-embed"><svg enable-background="new 0 0 210 210" viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" style="width:100%"><path d="m0 105c0-57.897 47.103-105 105-105 23.383 0 45.515 7.523 64.004 21.756l-24.4 31.696c-11.432-8.8-25.127-13.452-39.604-13.452-35.841 0-65 29.159-65 65s29.159 65 65 65c28.867 0 53.398-18.913 61.852-45h-61.852v-40h105v20c0 57.897-47.103 105-105 105s-105-47.103-105-105z" fill="currentColor"></path></svg></div></a><a rel="me" href="https://www.instagram.com/pine.creek.dental/?igsh=NzNlMW9nZ3JieXdz#" target="_blank" class="social-link instagram w-inline-block"><div class="w-embed"><svg class="svg-icon" enable-background="new 0 0 100 100;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="width: 100%;">
+	<path d="M96.7,30.6c0.1,2.5,0.2,4.8,0.2,6.8c0,2,0,6.2,0,12.6c0,6.4,0,10.6-0.1,12.6c-0.1,2-0.1,4.3-0.2,6.8
+		c-0.1,2.5-0.4,4.7-0.8,6.5c-0.4,1.8-0.9,3.4-1.4,4.9c-1.2,3.2-3,6-5.5,8.4c-2.4,2.4-5.2,4.2-8.3,5.4c-1.5,0.6-3.1,1-5,1.4
+		c-1.8,0.4-4,0.7-6.4,0.8c-2.5,0.1-4.8,0.2-6.8,0.2c-2,0-6.2,0-12.6,0c-6.4,0-10.7,0-12.7,0c-2,0-4.3-0.1-6.7-0.2
+		c-2.5-0.1-4.7-0.4-6.5-0.8c-1.8-0.4-3.5-0.9-5-1.4c-1.5-0.6-3-1.3-4.4-2.2c-1.4-0.9-2.7-2-3.9-3.2c-1.2-1.2-2.3-2.4-3.2-3.9
+		c-0.9-1.4-1.7-2.9-2.2-4.5c-0.6-1.5-1.1-3.1-1.5-4.9c-0.4-1.8-0.6-4-0.7-6.5c-0.1-2.5-0.2-4.8-0.2-6.8c0-2,0-6.2,0-12.6
+		c0-6.4,0-10.6,0-12.6c0-2,0.1-4.3,0.2-6.8C3.4,28.1,3.6,26,4,24.1c0.4-1.8,0.9-3.4,1.5-4.9c0.6-1.6,1.3-3.1,2.2-4.5
+		c0.9-1.4,2-2.7,3.2-3.9c1.2-1.2,2.4-2.3,3.9-3.2c1.4-0.9,2.9-1.6,4.5-2.3c1.5-0.6,3.1-1.1,4.9-1.5c1.8-0.4,4-0.6,6.5-0.7
+		c2.5-0.1,4.8-0.2,6.8-0.2c2,0,6.2,0,12.6,0c6.4,0,10.6,0,12.6,0c2,0,4.3,0.1,6.8,0.2C71.9,3.4,74,3.6,75.9,4
+		c1.8,0.4,3.4,0.9,4.9,1.4c1.6,0.6,3.1,1.3,4.5,2.2c1.4,0.9,2.7,2,3.9,3.2c1.2,1.2,2.3,2.4,3.2,3.9c0.9,1.4,1.6,2.9,2.3,4.5
+		c0.6,1.5,1.1,3.1,1.5,4.9C96.4,26,96.6,28.1,96.7,30.6z M88.3,69c0.1-2.4,0.2-4.7,0.2-6.6c0-2,0-6.1,0-12.3c0-6.3,0-10.4-0.1-12.4
+		c-0.1-2-0.1-4.2-0.2-6.6c-0.1-2.3-0.4-4.2-0.7-5.5c-0.3-1.3-0.7-2.4-1-3.2c-0.4-1-0.9-2-1.5-2.9c-0.6-0.9-1.3-1.7-2-2.5
+		c-0.7-0.8-1.6-1.5-2.5-2.1c-0.9-0.6-1.9-1.1-2.9-1.4c-0.9-0.4-1.9-0.7-3.3-1c-1.3-0.3-3.1-0.5-5.5-0.6c-2.4-0.1-4.7-0.2-6.6-0.2
+		c-2,0-6.1,0-12.4,0c-6.2,0-10.3,0-12.3,0c-2,0-4.2,0.1-6.7,0.2c-2.3,0.1-4.1,0.3-5.4,0.6c-1.3,0.3-2.4,0.6-3.3,1
+		c-1,0.4-1.9,0.8-2.8,1.4c-0.9,0.6-1.7,1.3-2.5,2.1c-0.8,0.7-1.5,1.6-2.1,2.5c-0.6,0.9-1.1,1.9-1.5,2.9c-0.3,0.8-0.6,1.9-1,3.2
+		c-0.3,1.3-0.5,3.2-0.6,5.5c-0.1,2.4-0.2,4.7-0.2,6.6c0,2,0,6.1,0,12.4c0,6.2,0,10.3,0,12.3c0,2,0.1,4.2,0.2,6.6
+		c0.1,2.3,0.3,4.2,0.6,5.5c0.3,1.3,0.7,2.4,1,3.2c0.4,1,0.9,2,1.5,2.9c0.6,0.9,1.3,1.7,2.1,2.5c0.7,0.8,1.6,1.5,2.5,2.1
+		c0.9,0.6,1.9,1.1,2.8,1.4c0.9,0.4,2,0.7,3.3,1c1.3,0.3,3.2,0.5,5.4,0.6c2.5,0.1,4.7,0.2,6.7,0.2c2,0,6.1,0,12.3,0
+		c6.3,0,10.4,0,12.4,0c1.9,0,4.1-0.1,6.7-0.2c2.3-0.1,4.1-0.3,5.4-0.6c1.3-0.3,2.4-0.6,3.3-1c2-0.8,3.8-2,5.4-3.5
+		c1.6-1.5,2.7-3.3,3.5-5.4c0.3-0.8,0.6-1.9,1-3.2C87.9,73.2,88.2,71.3,88.3,69z M50,25.8c3.3,0,6.4,0.6,9.4,1.9
+		c2.9,1.2,5.5,2.9,7.7,5.1c2.2,2.2,3.9,4.8,5.1,7.7c1.3,2.9,1.9,6.1,1.9,9.4s-0.6,6.4-1.9,9.4c-1.2,2.9-2.9,5.5-5.1,7.7
+		c-2.2,2.2-4.8,3.9-7.7,5.1c-2.9,1.3-6.1,1.9-9.4,1.9c-3.4,0-6.5-0.6-9.5-1.9c-2.9-1.2-5.4-2.9-7.6-5.1c-2.2-2.2-3.9-4.7-5.2-7.6
+		c-1.2-2.9-1.8-6.1-1.8-9.5c0-3.3,0.6-6.4,1.8-9.4c1.3-2.9,3-5.5,5.2-7.7c2.2-2.2,4.7-3.9,7.7-5.1C43.5,26.5,46.6,25.8,50,25.8z
+		 M61.1,61.1c3.1-3.1,4.6-6.8,4.6-11.1c0-4.3-1.5-8.1-4.6-11.1c-3.1-3.1-6.8-4.6-11.1-4.6c-4.3,0-8.1,1.5-11.1,4.6
+		c-3.1,3.1-4.6,6.8-4.6,11.1c0,4.3,1.5,8.1,4.6,11.1c3.1,3.1,6.8,4.6,11.1,4.6C54.3,65.7,58.1,64.2,61.1,61.1z M79.1,20.9
+		c-1.1-1.1-2.4-1.7-3.9-1.7c-1.6,0-2.9,0.6-4,1.7s-1.7,2.4-1.7,4c0,1.5,0.6,2.8,1.7,3.9c1.1,1.1,2.4,1.7,4,1.7
+		c1.5,0,2.8-0.6,3.9-1.7c1.1-1.1,1.7-2.4,1.7-3.9C80.8,23.3,80.2,22,79.1,20.9z" fill="currentColor"></path></svg></div></a><a rel="me" href="https://www.facebook.com/people/Pine-Creek-Dental/61553596912212/" target="_blank" class="social-link facebook w-inline-block"><div class="w-embed"><svg enable-background="new 0 0 100 100" viewBox="0 0 100 100" style="width:100%" xmlns="http://www.w3.org/2000/svg"><path d="m40.4 55.2c-.3 0-6.9 0-9.9 0-1.6 0-2.1-.6-2.1-2.1 0-4 0-8.1 0-12.1 0-1.6.6-2.1 2.1-2.1h9.9c0-.3 0-6.1 0-8.8 0-4 .7-7.8 2.7-11.3 2.1-3.6 5.1-6 8.9-7.4 2.5-.9 5-1.3 7.7-1.3h9.8c1.4 0 2 .6 2 2v11.4c0 1.4-.6 2-2 2-2.7 0-5.4 0-8.1.1-2.7 0-4.1 1.3-4.1 4.1-.1 3 0 5.9 0 9h11.6c1.6 0 2.2.6 2.2 2.2v12.1c0 1.6-.5 2.1-2.2 2.1-3.6 0-11.3 0-11.6 0v32.6c0 1.7-.5 2.3-2.3 2.3-4.2 0-8.3 0-12.5 0-1.5 0-2.1-.6-2.1-2.1 0-10.5 0-32.4 0-32.7z" fill="currentColor"></path></svg></div></a></div><div class="temp-hide w-form"><form id="wf-form-Book-Form" name="wf-form-Book-Form" data-name="Book Form" redirect="/thank-you" data-redirect="/thank-you" action="https://usebasin.com/f/f56dd6f519f5" method="post" class="book-form-grid" data-wf-page-id="67338b81f097d621c05629fd" data-wf-element-id="e7ed20ce-b007-d74f-b203-a789a445e624"><input class="book-form-text-field book-form-text-field-dark w-input" maxlength="256" name="Name" data-name="Name" placeholder="Name" type="text" id="Name-bf"><input class="book-form-text-field book-form-text-field-dark w-input" maxlength="256" name="Email" data-name="Email" placeholder="Email" type="email" id="Email-bf" required=""><input class="book-form-text-field book-form-text-field-dark w-input" maxlength="14" name="Phone" data-name="Phone" placeholder="Phone Number" type="tel" id="Phone-bf" required=""><input class="book-form-text-field book-form-text-field-dark w-input" maxlength="256" name="Preferred-Date" data-name="Preferred Date" placeholder="Preferred Date: MM/DD/YYYY" type="text" id="Preferred-Date-bf" required=""><select id="Preferred-Time-bf" name="Preferred-Time" data-name="Preferred Time" class="select-field select-field-dark w-node-e7ed20ce-b007-d74f-b203-a789a445e629-a445e61c w-select"><option value="">Preferred Time</option><option value="Morning">Morning</option><option value="Afternoon">Afternoon</option><option value="Evening">Evening</option></select><textarea id="message-bf" name="Message" maxlength="5000" data-name="Message" placeholder="Message" class="book-form-text-field book-form-text-field-dark w-node-e7ed20ce-b007-d74f-b203-a789a445e62a-a445e61c w-input"></textarea><div id="w-node-e7ed20ce-b007-d74f-b203-a789a445e62b-a445e61c" class="mt-2"><input type="submit" data-wait="Please wait..." class="button button-color w-button" value="Send"><div class="mt-2"><a href="tel:(587)815-8549" class="modal-call-text temp-hide">If you prefer to speak to a team member, <br>please call<strong> (587) 815-8549</strong></a></div></div></form><div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div><div class="rm-widget"><div class="rm-wrapper main"><div class="rm-modal main"><div class="rm-close">×</div><div class="rm-modal-wrapper"><div class="rm-content _1"><div class="rm-content-wrapper"><div class="rm-modal-header"><h2 class="rm-title">Tell us how we are doing?</h2></div><div class="rm-options-flex"><div class="rm-options-column-half"><a href="#" class="rm-options-link-block like w-inline-block"><div data-is-ix2-target="1" class="rm-lottie-animation" data-w-id="bda160b1-cdb1-46e4-78b6-6f5be3508729" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/636407be54ffb341c978b0d9/63642a5c1c9a0966c7a3fa2a_DM_Reputation%20management%20widget%20.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="3.96" data-duration="0" data-loading="eager" data-ix2-initial-state="0"></div><div class="rm-options-description">Amazing!</div></a></div><div class="rm-options-column-half"><a href="#" class="rm-options-link-block dislike w-inline-block"><div data-is-ix2-target="1" class="rm-lottie-animation" data-w-id="bda160b1-cdb1-46e4-78b6-6f5be350872e" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/636407be54ffb341c978b0d9/63640864daab8424d4d0225c_DM_RMW%20DISLIKE.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="3.76" data-duration="0" data-loading="eager" data-ix2-initial-state="0"></div><div class="rm-options-description">Dissatisfied</div></a></div></div></div></div><div class="rm-content _2"><div class="rm-content-wrapper"><div class="rm-modal-header"><h2 class="rm-title">Thank you so much for providing your feedback!</h2><div class="rm-tagline"> We would be so grateful if you can leave us a review on your preferred platform. It would mean so much if we are able to share with potential clients so they can feel more confident choosing us.</div></div><div class="rm-options-flex"><div class="rm-options-column-third"><a rel="me noopener" href="https://www.google.com/maps?cid=11561975882080059836" target="_blank" class="rm-social-link-block w-inline-block"><div class="rm-social-icon-wrapper"><div class="icon-html-embed rm-social-icon w-embed"><svg class="svg-icon" enable-background="new 0 0 210 210" viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg"><path d="m0 105c0-57.897 47.103-105 105-105 23.383 0 45.515 7.523 64.004 21.756l-24.4 31.696c-11.432-8.8-25.127-13.452-39.604-13.452-35.841 0-65 29.159-65 65s29.159 65 65 65c28.867 0 53.398-18.913 61.852-45h-61.852v-40h105v20c0 57.897-47.103 105-105 105s-105-47.103-105-105z" fill="currentColor"></path></svg></div></div><div class="rm-options-description small">Leave a review on <strong class="rm-social-link-site">Google →</strong></div></a></div><div class="rm-options-column-third"><a rel="me noopener" href="https://www.facebook.com/people/Pine-Creek-Dental/61553596912212/" target="_blank" class="rm-social-link-block w-inline-block"><div class="rm-social-icon-wrapper facebook"><div class="icon-html-embed rm-social-icon w-embed"><svg class="svg-icon" enable-background="new 0 0 100 100" height="100" viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg"><path d="m40.4 55.2c-.3 0-6.9 0-9.9 0-1.6 0-2.1-.6-2.1-2.1 0-4 0-8.1 0-12.1 0-1.6.6-2.1 2.1-2.1h9.9c0-.3 0-6.1 0-8.8 0-4 .7-7.8 2.7-11.3 2.1-3.6 5.1-6 8.9-7.4 2.5-.9 5-1.3 7.7-1.3h9.8c1.4 0 2 .6 2 2v11.4c0 1.4-.6 2-2 2-2.7 0-5.4 0-8.1.1-2.7 0-4.1 1.3-4.1 4.1-.1 3 0 5.9 0 9h11.6c1.6 0 2.2.6 2.2 2.2v12.1c0 1.6-.5 2.1-2.2 2.1-3.6 0-11.3 0-11.6 0v32.6c0 1.7-.5 2.3-2.3 2.3-4.2 0-8.3 0-12.5 0-1.5 0-2.1-.6-2.1-2.1 0-10.5 0-32.4 0-32.7z" fill="currentColor"></path></svg></div></div><div class="rm-options-description small">Leave a review on <strong class="rm-social-link-site">Facebook →</strong></div></a></div></div></div></div><div class="rm-content _3"><div class="rm-content-wrapper"><div class="w-form"><form id="dm-Reputation-Management-Form" name="wf-form-Reputation-Management" data-name="Reputation Management" redirect="/thank-you" data-redirect="/thank-you" method="get" data-wf-page-id="67338b81f097d621c05629fd" data-wf-element-id="bda160b1-cdb1-46e4-78b6-6f5be3508736"><div class="rm-modal-header"><h2 class="rm-title">What Can We Improve?</h2><div class="rm-tagline">We are constantly improving our services to create a lasting relationship with our clients. Please let us know the areas in which we can improve. Any feedback is beneficial, as our goal is to maintain customer satisfaction.</div></div><div class="rm-form-flex"><div class="rm-form-column"><div class="field-group"><input class="rm-text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Name" type="text" id="rm-Name" required=""></div><div class="field-group"><input class="rm-text-field w-input" maxlength="14" name="Phone-Number" data-name="Phone Number" placeholder="Phone Number" type="tel" id="rm-Phone-Number" required=""></div><div class="field-group"><input class="rm-text-field w-input" maxlength="256" name="email" data-name="Email" placeholder="Email" type="email" id="rm-Email" required=""></div></div><div class="rm-form-column"><div class="field-group"><textarea id="rm-Message" name="Message" maxlength="5000" data-name="Message" placeholder="Message" class="rm-textarea w-input"></textarea></div><input type="submit" data-wait="Please wait..." class="r-msubmit w-button" value="Submit"></div></div></form><div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="error-message w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div></div><div class="rm-elements"><a href="#" class="rm-trigger w-button">How Did We Do ?</a></div></div><div class="footer-cta"><a href="https://can2.recallmax.com/rsm/request/public/bookOnline/patient/patient.html?a=6uKyjz38q1Qa1tI5n0ga1cfdAi_a1Wa3u1QMs" target="_blank" class="footer-cta-link book-button w-inline-block"><div class="footer-cta-text">Book Online</div><div id="open-now" class="footer-cta-note">Open Now!</div></a></div><div class="google-review-widget-wrapper"><a rel="me noopener" href="https://www.google.com/maps?cid=11561975882080059836" target="_blank" class="google-review-widget w-inline-block"><div class="google-review-widget-rating"><img src="https://cdn.prod.website-files.com/67338b81f097d621c0562965/67338b81f097d621c05629ac_icon-google.svg" loading="lazy" alt="Google Logo" class="google-review-widget-icon"></div><div class="w-embed w-script"><div id="reviews-container"><div class="google-widget" style="color: rgb(246, 153, 66);">5 <span class="g-footer-star" style="margin-right: -0.25em; position: relative; top: 1px;"><svg enable-background="new 0 0 576 512" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                <path fill="#f69942" d="m287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5l-111.2 110.2 26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5-111.1-110.2c-6.5-6.3-8.8-15.8-5.9-24.5 2.8-8.6 10.3-14.9 19.3-16.2l153.2-22.7 68.6-141.3c4.1-8.3 12.4-13.5 21.6-13.5z"></path>
+                                </svg>
+                            </span><span class="g-footer-star" style="margin-right: -0.25em; position: relative; top: 1px;"><svg enable-background="new 0 0 576 512" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                <path fill="#f69942" d="m287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5l-111.2 110.2 26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5-111.1-110.2c-6.5-6.3-8.8-15.8-5.9-24.5 2.8-8.6 10.3-14.9 19.3-16.2l153.2-22.7 68.6-141.3c4.1-8.3 12.4-13.5 21.6-13.5z"></path>
+                                </svg>
+                            </span><span class="g-footer-star" style="margin-right: -0.25em; position: relative; top: 1px;"><svg enable-background="new 0 0 576 512" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                <path fill="#f69942" d="m287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5l-111.2 110.2 26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5-111.1-110.2c-6.5-6.3-8.8-15.8-5.9-24.5 2.8-8.6 10.3-14.9 19.3-16.2l153.2-22.7 68.6-141.3c4.1-8.3 12.4-13.5 21.6-13.5z"></path>
+                                </svg>
+                            </span><span class="g-footer-star" style="margin-right: -0.25em; position: relative; top: 1px;"><svg enable-background="new 0 0 576 512" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                <path fill="#f69942" d="m287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5l-111.2 110.2 26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5-111.1-110.2c-6.5-6.3-8.8-15.8-5.9-24.5 2.8-8.6 10.3-14.9 19.3-16.2l153.2-22.7 68.6-141.3c4.1-8.3 12.4-13.5 21.6-13.5z"></path>
+                                </svg>
+                            </span><span class="g-footer-star" style="margin-right: -0.25em; position: relative; top: 1px;"><svg enable-background="new 0 0 576 512" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                <path fill="#f69942" d="m287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5l-111.2 110.2 26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5-111.1-110.2c-6.5-6.3-8.8-15.8-5.9-24.5 2.8-8.6 10.3-14.9 19.3-16.2l153.2-22.7 68.6-141.3c4.1-8.3 12.4-13.5 21.6-13.5z"></path>
+                                </svg>
+                            </span><span class="g-footer-number" style="margin-left: 0.5em; color: rgb(70, 116, 242);">198 reviews</span></div></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Fetch HTML content from the API
+    const gmbID = '	ChIJ3fpoWuyfcVMRvAEEic5jdKA';
+    fetch(`https://googlereviewwidget-api-production.up.railway.app/api/reviews/${gmbID}`)
+        .then(response => response.text())
+        .then(htmlContent => {
+            // Update the HTML content of the container
+            const reviewsContainer = document.getElementById('reviews-container');
+            reviewsContainer.innerHTML = htmlContent;
+        })
+        .catch(error => {
+            console.error('Error fetching reviews:', error);
+            // Handle the error, e.g., display an error message to the user
+        });
+});
+</script></div></a></div></footer><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67338b81f097d621c0562965" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/67338b81f097d621c0562965/js/webflow.schunk.8496dbaa1bda7e10.js" type="text/javascript" integrity="sha384-4zy2u16Th0I3JWmwiiE40zRd4Fhwao8WFoFlXpHFvgUBVaBsYIjwM4IBav4HO85N" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/67338b81f097d621c0562965/js/webflow.schunk.9cffaab1769e5368.js" type="text/javascript" integrity="sha384-iZqGOoiFA3ye0ePVztFBqrhYGfZ/FqGpmYXRa2oLWDvX9WWD0Yitw8T0q4nCwjLO" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/67338b81f097d621c0562965/js/webflow.ba6567ef.cec5dc9101f9b14a.js" type="text/javascript" integrity="sha384-Ej0uKHgrf7lPDnSfquGsmKdDHscPlrLzTh6MPQDpRMEMOTAVlVZ80r8dPSx2sq27" crossorigin="anonymous"></script><script>
+  /* GTM FIX: Extract GTAG <noscript> from <div> created by Webflow HTML embed*/
+  $(document).ready(function(event) {
+    /* Extract GTAG <noscript> from <div> created by HTML embed*/
+    $("#gtm-wrapper").replaceWith(function() { return $(':first', this); });
+  });
+  
+  
+</script>
+
+<script>
+  // Fix for Sticky Header
+  $('body').attr("style", "overflow-x:visible;");
+  
+  // Fixed click on menu
+  var menuLinks = document.querySelectorAll(".navbar-link");
+  var navbarMenuBtn = document.querySelector(".navbar-menu-button-close");
+  if(menuLinks && navbarMenuBtn) {
+    for (var i = 0; i < menuLinks.length; i++) {
+      menuLinks[i].addEventListener("click", function() {
+        navbarMenuBtn.click();
+      });
+  	}
+  }
+  
+  // Specials - Expiration Date 
+  var today = new Date();
+  var nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+  var dd = String(nextWeek.getDate()).padStart(2, '0');
+  var mm = String(nextWeek.getMonth() + 1).padStart(2, '0'); 
+  var yyyy = nextWeek.getFullYear();
+
+  specialdate = mm + '/' + dd + '/' + yyyy;
+  specialdateAlt = mm + '/' + dd;
+  var dateNodes = document.getElementsByClassName('offer-expiration');
+  var dateNodesAlt = document.getElementsByClassName('offer-expiration-alt');
+  for(var i = 0; i < dateNodes.length; i++){
+    dateNodes[i].innerHTML = specialdate;
+  }
+  for(var i = 0; i < dateNodesAlt.length; i++){
+    dateNodesAlt[i].innerHTML = specialdateAlt;
+  }
+</script>
+<script>
+const input = document.querySelectorAll('#Preferred-Date-bf')[0];
+  
+const dateInputMask = function dateInputMask(elm) {
+  elm.addEventListener('keypress', function(e) {
+    if(e.keyCode < 47 || e.keyCode > 57) {
+      e.preventDefault();
+    }
+    
+    const len = elm.value.length;
+    
+    // If we're at a particular place, let the user type the slash
+    // i.e., 12/12/1212
+    if(len !== 1 || len !== 3) {
+      if(e.keyCode == 47) {
+        e.preventDefault();
+      }
+    }
+    
+    // If they don't add the slash, do it for them...
+    if(len === 2) {
+      elm.value += '/';
+    }
+
+    // If they don't add the slash, do it for them...
+    if(len === 5) {
+      elm.value += '/';
+    }
+  });
+};
+  
+dateInputMask(input);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script>
+$('input[type="tel"]').mask('(000) 000-0000', {placeholder: 'Phone Number'} );
+</script>
+
+<script>
+// Define your current and Twilio tracking numbers
+var currentNumber = '(587) 815-8549'; // Replace with the current phone number on the site
+var trackingNumber = '(587) 848-3532'; // Replace with the Google Ads Twilio tracking number
+
+// Helper function to normalize phone numbers by removing spaces, dashes, and parentheses
+function normalizePhoneNumber(number) {
+    return number.replace(/\D/g, ''); // Remove all non-digit characters
+}
+
+// Helper function to create a regex that matches variations of the current phone number
+function createPhoneNumberRegex(number) {
+    const normalized = normalizePhoneNumber(number);
+    return new RegExp(`\\(?${normalized.slice(0, 3)}\\)?[\\s.-]?${normalized.slice(3, 6)}[\\s.-]?${normalized.slice(6, 10)}`, 'g');
+}
+
+// Function to process text nodes and replace phone numbers
+function processTextNode(node, phoneRegex, replacement) {
+    if (node.nodeType === Node.TEXT_NODE && phoneRegex.test(node.nodeValue)) {
+        node.nodeValue = node.nodeValue.replace(phoneRegex, replacement);
+    }
+}
+
+// Function to process tel: links in <a> tags
+function processTelLinks(node, phoneRegex, formattedReplacementTel) {
+    if (node.tagName === 'A' && node.href.startsWith('tel:')) {
+        const normalizedHref = normalizePhoneNumber(node.href);
+
+        if (phoneRegex.test(normalizedHref)) {
+            node.href = `tel:${formattedReplacementTel}`;
+        }
+    }
+}
+
+// Recursive function to traverse and process nodes
+function traverseNodes(node, phoneRegex, replacement, formattedReplacementTel) {
+    if (node.nodeType === Node.ELEMENT_NODE) {
+        // Process Shadow DOM content if present
+        if (node.shadowRoot) {
+            traverseNodes(node.shadowRoot, phoneRegex, replacement, formattedReplacementTel);
+        }
+
+        // Process tel: links
+        processTelLinks(node, phoneRegex, formattedReplacementTel);
+
+        // Process child nodes
+        node.childNodes.forEach(child => traverseNodes(child, phoneRegex, replacement, formattedReplacementTel));
+    } else {
+        processTextNode(node, phoneRegex, replacement);
+    }
+}
+
+// Main function to replace phone numbers in the DOM
+function replacePhoneNumbers() {
+    const phoneRegex = createPhoneNumberRegex(currentNumber);
+    const formattedReplacementTel = normalizePhoneNumber(trackingNumber); // Ensure the phone number is normalized
+    traverseNodes(document.body, phoneRegex, trackingNumber, formattedReplacementTel);
+    
+    // After replacement, check if any phone numbers are left to replace
+    checkForRemainingNumbers();
+}
+
+// Check if any phone numbers are still in the DOM
+function checkForRemainingNumbers() {
+    const phoneRegex = createPhoneNumberRegex(currentNumber);
+    const remainingNodes = document.body.innerHTML.match(phoneRegex);
+    
+    if (remainingNodes && remainingNodes.length > 0) {
+        // Optionally, you could track how many numbers are left, but no log is needed now
+    }
+}
+
+// Force a re-scan of the document after initial replacement
+function forceRescanForRemainingNumbers() {
+    const phoneRegex = createPhoneNumberRegex(currentNumber);
+    const formattedReplacementTel = normalizePhoneNumber(trackingNumber); // Normalize the replacement phone number
+    traverseNodes(document.body, phoneRegex, trackingNumber, formattedReplacementTel);
+}
+
+// Observe and process dynamically added content
+function observeDOMChanges() {
+    const phoneRegex = createPhoneNumberRegex(currentNumber);
+    const formattedReplacementTel = normalizePhoneNumber(trackingNumber);
+
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            mutation.addedNodes.forEach(node => {
+                traverseNodes(node, phoneRegex, trackingNumber, formattedReplacementTel);
+            });
+        });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+}
+
+// Check if "network=g" is present in the URL
+function isGoogleNetworkVisitor() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('network') === 'g';
+}
+
+// Store "network=g" in local storage
+function storeNetworkParam() {
+    if (isGoogleNetworkVisitor()) {
+        localStorage.setItem('networkGoogleAds', 'true');
+    }
+}
+
+// Check local storage for "networkGoogleAds"
+function isGoogleAdsSession() {
+    return localStorage.getItem('networkGoogleAds') === 'true';
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    storeNetworkParam();
+
+    if (isGoogleAdsSession()) {
+        replacePhoneNumbers();
+        forceRescanForRemainingNumbers();  // Force re-scan after initial replacement
+        observeDOMChanges();
+    }
+});
+</script><style> /*Mobile_blurry_effect*/
+
+@supports ((backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px))) {
+  .blur-bg {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+}
+</style><script src="https://cdn.userway.org/widgetapp/2026-06-09-08-22-25/widget_app_base_1780993345047.js" async="" id="a11yWidgetSrc" crossorigin="anonymous" integrity="sha256-elUiDlZQ7KB3gzFxrCiA2ABCTDxwVC55nwiRzU3Ugkc="></script>
+<script id="" text="" charset="" type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=AW-11405887244"></script>
+<script type="text/javascript" id="" charset="">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","AW-11405887244");</script>
+<script crossorigin="anonymous" integrity="sha256-D54btnHmAP+zTQ3UmPIA6BqfpsrDqwlmcYrqprO//iU=" src="https://cdn.userway.org/widgetapp/2026-06-09-08-22-25/remediation/remediation_1780993345047.js"></script></body></html>

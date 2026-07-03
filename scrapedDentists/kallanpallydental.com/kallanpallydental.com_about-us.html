@@ -1,0 +1,860 @@
+<!DOCTYPE html><html lang="en-US" class="js svg svgfilters cssgradients video bgpositionshorthand csscalc rgba hidden srcset inlinesvg supports svgclippaths svgasimg cssinvalid checked fontface lastchild nthchild cssvalid cssvhunit cssvmaxunit cssvminunit cssvwunit mediaqueries cssanimations appearance backgroundcliptext bgpositionxy cssmask csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside no-cssgridlegacy cssgrid cssfilters flexbox flexboxlegacy no-overflowscrolling shapes csstransforms csstransforms3d csstransitions backgroundblendmode objectfit object-fit webp webp-alpha webp-animation webp-lossless" data-uw-w-loader="" style="--bookingWidgetPrimaryColor: #68bd45; --bookingWidgetPrimaryColorDarker: rgb(94,179,59);"><head><style>@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");.CareCruModal{display:block;position:fixed;content:"";top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:-1;opacity:0;transition:opacity .2s,z-index 0s .2s;text-align:center;overflow:hidden;overflow-y:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;visibility:hidden}.CareCruModal.CareCruActive{z-index:999999;opacity:1;visibility:visible;transition:opacity .2s}.CareCruModal:before{overflow:hidden;width:0;height:100%;content:""}.CareCruModal:before,.CareCruModal>*{display:inline-block;vertical-align:middle}.CareCruModal>*{white-space:normal;text-align:left}.CareCruModalInner{position:relative;overflow:hidden;width:600px;height:100%;max-width:100%;overflow-y:auto;background:#fff;z-index:-1;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s,z-index 0s .2s}@media screen and (min-width:610px){.CareCruModalInner{height:650px}}.CareCruModalInner.CareCruActive{z-index:100;opacity:1;transform:scale(1);transition:opacity .2s,transform .2s}.CareCruButton{position:fixed;right:-160px;opacity:0;top:250px;min-width:157px;min-height:75px;cursor:pointer;display:flex;flex-direction:row;align-items:center;background-color:var(--bookingWidgetPrimaryColor);text-align:right;justify-content:center;padding:20px;color:#fff;box-sizing:border-box;z-index:9998;box-shadow:1px 2px 3px 0 hsla(0,0%,50.2%,.15);transition:all .2s ease-in;text-transform:uppercase;font-family:"Roboto"!important;font-size:19px;letter-spacing:0;line-height:19px;text-shadow:.5px .5px .5px rgba(0,0,0,.1);border-bottom-left-radius:999px;border-top-left-radius:999px}.CareCruButton.Request{font-size:15.5px}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;right:-160px}50%{opacity:0;right:-20px}to{opacity:1;right:0}}.CareCruButton .CareCruButtonIconBook{display:block;font-weight:600;font-size:25px;line-height:25px;color:#fff;font-family:"Roboto"!important}.CareCruButtonIcon{padding-right:.6rem;color:#fff;transition:all .2s ease-in;top:24px}.CareCruButtonIcon .CareCruButtonIconSVG{fill:currentColor;height:35px;transition:all .2s ease-in}.CareCruButton:hover{background:var(--bookingWidgetPrimaryColorDarker);box-shadow:1px 4px 5px 0 hsla(0,0%,50.2%,.25);transition:all .2s ease-in}.CareCruButton:hover .CareCruButtonIcon{transition:all .2s ease-in;border-color:var(--bookingWidgetPrimaryColorDarker)}.CareCruButton:hover .CareCruButtonIcon .CareCruButtonIconSVG{transition:all .2s ease-in;color:var(--bookingWidgetPrimaryColorDarker)}@media screen and (max-width:610px){.CareCruButton{top:auto;right:0;opacity:0;width:90%;left:5%;font-size:18px;justify-content:center;box-sizing:border-box;border-radius:9999px;padding:10px 0;text-align:center;min-height:auto}.CareCruButton.CareCruFadeIn{animation:CareCruFadeIn 1s ease-out forwards}@keyframes CareCruFadeIn{0%{opacity:0;bottom:-3%}50%{opacity:0}to{opacity:1;bottom:2.5%}}.CareCruButton .CareCruButtonIconBook{display:inline;font-size:18px}.CareCruButtonIcon{display:none}}#CareCruIframe{z-index:101;position:absolute;top:0;left:0;width:1px;min-width:100%;height:100%;border:none;overflow:hidden}#hiddenCareCru{display:none}#locationWrapper .header{flex-flow:nowrap}#hiddenCareCru.active{display:block}.CareCruSpinner{font-family:"Roboto";margin:0 auto;text-align:center;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column;font-weight:700;letter-spacing:.035em;z-index:102;position:relative;background:#fff;opacity:1}.CareCruSpinner,.CareCruSpinner.CareCruFadeOut{transition:opacity 1s cubic-bezier(.175,.885,.32,1.275)}.CareCruSpinner.CareCruFadeOut{opacity:0}.CareCruSpinner>div>div{width:18px;height:18px;background-color:var(--bookingWidgetPrimaryColor);border-radius:100%;display:inline-block;-webkit-animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both;animation:CareCruSpinner-bouncedelay 1.4s ease-in-out infinite both}.CareCruSpinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.CareCruSpinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}.CareCruSpinner>span{margin-top:12px}@-webkit-keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes CareCruSpinner-bouncedelay{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}
+/*# sourceMappingURL=widget.css.map */</style><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+	<!-- Google Analytics added in options panel -->
+	<meta charset="UTF-8">
+	
+
+	<link href="//www.google-analytics.com" rel="dns-prefetch">
+	<link href="" rel="shortcut icon">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+	
+				<meta name="keywords" content="About">
+				<meta name="description" content="This is the description">
+				
+
+
+
+	
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script async="" src="https://scripts.clarity.ms/0.8.66/clarity.js"></script><script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script async="" src="https://www.clarity.ms/tag/jtc16dk4sh?ref=gtm2"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-MGPHJJF59J&amp;cx=c&amp;gtm=4e66u1"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-MCFG4FW"></script><script data-cfasync="false" data-pagespeed-no-defer="">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v27.8 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>About Kallanpally Dental Clinic | Dental Clinic Slave Lake</title>
+	<meta name="description" content="Kallanpally Dental Clinic delivers quality dental care in a friendly setting, helping patients feel confident and comfortable. Learn more today.">
+	<link rel="canonical" href="https://kallanpallydental.com/about-us/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="About Kallanpally Dental Clinic | Dental Clinic Slave Lake">
+	<meta property="og:description" content="Kallanpally Dental Clinic delivers quality dental care in a friendly setting, helping patients feel confident and comfortable. Learn more today.">
+	<meta property="og:url" content="https://kallanpallydental.com/about-us/">
+	<meta property="og:site_name" content="Kallanpally Dental Clinic">
+	<meta property="article:publisher" content="https://www.facebook.com/KallanpallyDentalClinic">
+	<meta property="article:modified_time" content="2026-04-07T13:52:28+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="2 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/kallanpallydental.com\/about-us\/","url":"https:\/\/kallanpallydental.com\/about-us\/","name":"About Kallanpally Dental Clinic | Dental Clinic Slave Lake","isPartOf":{"@id":"\/#website"},"datePublished":"2020-03-09T21:41:54+00:00","dateModified":"2026-04-07T13:52:28+00:00","description":"Kallanpally Dental Clinic delivers quality dental care in a friendly setting, helping patients feel confident and comfortable. Learn more today.","breadcrumb":{"@id":"https:\/\/kallanpallydental.com\/about-us\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/kallanpallydental.com\/about-us\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/kallanpallydental.com\/about-us\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/kallanpallydental.com\/"},{"@type":"ListItem","position":2,"name":"About"}]},{"@type":"WebSite","@id":"\/#website","url":"\/","name":"Kallanpally Dental Clinic","description":"General family dentistry","publisher":{"@id":"\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"\/#organization","name":"Kallanpally Dental Clinic","url":"\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"\/#\/schema\/logo\/image\/","url":"https:\/\/kallanpallydental.com\/wp-content\/uploads\/2020\/08\/Kallanpally-Dental-Logo-01.svg","contentUrl":"https:\/\/kallanpallydental.com\/wp-content\/uploads\/2020\/08\/Kallanpally-Dental-Logo-01.svg","width":1,"height":1,"caption":"Kallanpally Dental Clinic"},"image":{"@id":"\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/KallanpallyDentalClinic","https:\/\/www.instagram.com\/kallanpallydental"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//maps.googleapis.com">
+<link rel="dns-prefetch" href="//www.google.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://kallanpallydental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkallanpallydental.com%2Fabout-us%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://kallanpallydental.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkallanpallydental.com%2Fabout-us%2F&amp;format=xml">
+
+            <meta property="og:title" content="About">
+            <meta property="og:description" content="General family dentistry">
+            <meta property="og:type" content="article">
+            <meta property="og:url" content="https://kallanpallydental.com/about-us/">
+            <meta property="og:site_name" content="Kallanpally Dental Clinic">
+            <meta property="og:image" content="https://kallanpallydental.com/wp-content/uploads/2020/07/Mother-and-daughter-smiling-on-the-grass.jpg">
+
+
+        <style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel="stylesheet" id="wp-components-css" href="https://kallanpallydental.com/wp-includes/css/dist/components/style.min.css?ver=6.9.4" media="all">
+<link rel="stylesheet" id="wp-preferences-css" href="https://kallanpallydental.com/wp-includes/css/dist/preferences/style.min.css?ver=6.9.4" media="all">
+<link rel="stylesheet" id="wp-block-editor-css" href="https://kallanpallydental.com/wp-includes/css/dist/block-editor/style.min.css?ver=6.9.4" media="all">
+<link rel="stylesheet" id="popup-maker-block-library-style-css" href="https://kallanpallydental.com/wp-content/plugins/popup-maker/dist/packages/block-library-style.css?ver=7424eb959f91acb8bbb2" media="all">
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel="stylesheet" id="cip-child-css" href="https://kallanpallydental.com/wp-content/plugins/aow_cip/css/contentshare.css?ver=6.9.4" media="all">
+<link rel="stylesheet" id="my-plugin-style-css" href="https://kallanpallydental.com/wp-content/plugins/aow_cip%202/css/contentshare.css?ver=6.9.4" media="all">
+<link rel="stylesheet" id="aow_gf_failure_notification-css" href="https://kallanpallydental.com/wp-content/plugins/aow_gf_failure_notification/public/css/aow_gf_failure_notification-public.css?ver=1.3.0" media="all">
+<style id="seopatchr-public-inline-css" type="text/css">
+
+            a[href^="#seopatchr-unlinked"] {
+                color: inherit !important;
+                text-decoration: none !important;
+                pointer-events: none !important;
+                cursor: text !important;
+                border: none !important;
+                background: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                display: inline !important;
+            }
+        
+/*# sourceURL=seopatchr-public-inline-css */
+</style>
+<link rel="stylesheet" id="googleFonts-css" href="https://fonts.googleapis.com/css2?family=Poppins%3Awght%40300%3B400%3B600&amp;display=swap&amp;ver=1.0" media="all">
+<link rel="stylesheet" id="html5blank-css" href="https://kallanpallydental.com/wp-content/themes/Sonder-Client/style.css?ver=1.1" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="https://kallanpallydental.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.48.0" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="https://kallanpallydental.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.0.2" media="all">
+<link rel="stylesheet" id="elementor-post-152-css" href="https://kallanpallydental.com/wp-content/uploads/elementor/css/post-152.css?ver=1781752859" media="all">
+<link rel="stylesheet" id="widget-icon-box-css" href="https://kallanpallydental.com/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css?ver=4.0.2" media="all">
+<link rel="stylesheet" id="widget-heading-css" href="https://kallanpallydental.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.0.2" media="all">
+<link rel="stylesheet" id="elementor-post-100-css" href="https://kallanpallydental.com/wp-content/uploads/elementor/css/post-100.css?ver=1781752871" media="all">
+<link rel="stylesheet" id="elementor-gf-local-roboto-css" href="https://kallanpallydental.com/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742509769" media="all">
+<link rel="stylesheet" id="elementor-gf-local-robotoslab-css" href="https://kallanpallydental.com/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1742509770" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="https://kallanpallydental.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="https://kallanpallydental.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3" media="all">
+<script type="text/javascript" src="https://kallanpallydental.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/aow_gf_failure_notification/public/js/aow_gf_failure_notification-public.js?ver=1.3.0" id="aow_gf_failure_notification-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/handl-utm-grabber/js/js.cookie.js?ver=6.9.4" id="js.cookie-js"></script>
+<script type="text/javascript" id="handl-utm-grabber-js-extra">
+/* <![CDATA[ */
+var handl_utm = [];
+//# sourceURL=handl-utm-grabber-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/handl-utm-grabber/js/handl-utm-grabber.js?ver=6.9.4" id="handl-utm-grabber-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.3" id="jquery-ui-sortable-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3" id="jquery-ui-resizable-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/advanced-custom-fields-pro/assets/build/js/acf.min.js?ver=6.8.0.1" id="acf-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed" id="wp-a11y-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/advanced-custom-fields-pro/assets/build/js/acf-input.min.js?ver=6.8.0.1" id="acf-input-js"></script>
+<link rel="https://api.w.org/" href="https://kallanpallydental.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://kallanpallydental.com/wp-json/wp/v2/pages/100"><script type="application/ld+json"> 
+	{
+	  "@context": "http://www.schema.org",
+	  "@type": "Dentist",
+	  "name": "Kallanpally Dental Clinic",
+	  "url": "https://kallanpallydental.com/",
+	  "logo": "https://v5.airtableusercontent.com/v3/u/53/53/1778032800000/LsIeZaoLH2u_eU7KJoCyEA/FQ0G8lVuJa6zXv-vGwHR75q-UEMKDPjkJ80_EYi34s3iieIgRiToS-bUsC9H9ziKa-PMV1k8OnEZQmKlBbGM_PdtbXr_PsG3lRCI3iLtPEy5B6sxXYCxjjAKYg61G5V5gfTjVzdoURijc2uJt_Ra2w/97V9IzSBaHqcfgUATCyckeYQBi4QL2pNoNE6XLBG6UI",
+	  "image": "",
+	  "description": "Kallanpally Dental Clinic provides general dentistry to patients of all ages in Slave Lake. Dr. Jeny Antony and her dedicated team run a prevention-oriented practice, promoting great oral health for the whole family. Book an appointment at our conveniently located, wheelchair-accessible office.",
+	  "address": {
+		"@type": "PostalAddress",
+		"streetAddress": "214 Main Street Northwest",
+		"addressLocality": "Slave Lake",
+		"addressRegion": "AB",
+		"postalCode": "T0G2A0",
+		"addressCountry": "CA"
+	  },
+	  "geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "55.28332589999999",
+		"longitude": " -114.772245"
+	  },
+	  "hasMap": "https://www.google.com/maps/search/?api=1&query=Kallanpally+Dental+Clinic&query_place_id=ChIJbeb9XGKNolMRzMmuf7xqg30",
+	  "openingHours": "Mo 8:00 am-16:30 pm Tu 8:00 am-16:30 pm We 8:00 am-16:30 pm Th 8:00 am-16:30 pm Fr 8:00 am-15:00 pm"
+	  ,
+	  "contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+1 (780) 849-4477",
+		"contactType": "customer service"
+	  }
+	  	}
+ 	</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to automatic -->
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+	var dataLayer_content = {"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"Jade"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MCFG4FW');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="generator" content="Elementor 4.0.2; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://kallanpallydental.com/wp-content/uploads/2021/01/cropped-Kallanpally-Favicon-01-32x32.png" sizes="32x32">
+<link rel="icon" href="https://kallanpallydental.com/wp-content/uploads/2021/01/cropped-Kallanpally-Favicon-01-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://kallanpallydental.com/wp-content/uploads/2021/01/cropped-Kallanpally-Favicon-01-180x180.png">
+<meta name="msapplication-TileImage" content="https://kallanpallydental.com/wp-content/uploads/2021/01/cropped-Kallanpally-Favicon-01-270x270.png">
+		<style type="text/css" id="wp-custom-css">
+			.gform_wrapper.gravity-theme .gfield input.medium, .gform_wrapper.gravity-theme .gfield select.medium{
+	width: 100% !important;
+}
+.gform_wrapper.gravity-theme .gfield_label{
+	display: block !important;
+}
+.select .ginput_container_select:not(.is-multiple) {
+    width: 100% !important;
+}
+
+
+/* Menu hide */
+.menu-hide a {display:none!important;}
+
+/* Hide request appt */
+.button[href*="request-an-appointment"] {display:none!important;}		</style>
+		
+
+<link href="https://cdn.userway.org/styles/2026-06-09-08-22-25/widget_base.css?v=1780993345047" type="text/css" rel="stylesheet"></head>
+
+<body class="wp-singular page-template-default page page-id-100 page-parent wp-theme-Sonder-Client about-us elementor-default elementor-kit-152 elementor-page elementor-page-100 e--ua-blink e--ua-webkit" data-elementor-device-mode="desktop">
+
+
+	
+
+<div class="uwy userway_p2" data-uw-feature-ignore="true" data-uw-rm-ignore="true" style="background-color: transparent !important; overflow: initial !important;" title="Accessibility Menu"><div class="userway_buttons_wrapper"><div class="ulsti hidden userway_dark" id="userwayLstIcon" aria-label="Translations Menu" role="button" tabindex="0" aria-haspopup="dialog" data-uw-s19-ignore="" title="Translations Menu" style="background: rgb(0, 115, 207) !important;"><span class="uiiw"></span><div class="ups"><img width="43" height="43" data-uw-rm-ignore="" class="si_w" aria-hidden="true" alt="Spinner: White decorative" src="https://cdn.userway.org/widgetapp/images/spin_wh.svg"></div><span class="usr lst-spacer"></span></div><div class="uai userway_dark" id="userwayAccessibilityIcon" aria-label="Accessibility Menu" role="button" tabindex="0" aria-haspopup="dialog" title="Accessibility Menu" style="background: rgb(0, 115, 207) !important;"><span class="uiiw"><img data-uw-rm-ignore="" class="ui_w" role="presentation" alt="" src="https://cdn.userway.org/widgetapp/images/body_wh.svg"></span><div class="ups"><img width="43" height="43" data-uw-rm-ignore="" class="si_w" aria-hidden="true" alt="Spinner: White decorative" src="https://cdn.userway.org/widgetapp/images/spin_wh.svg"></div><span class="usr"></span></div><div class="uwaw-dictionary-tooltip"></div></div><iframe class="uwif userway_p2" data-uw-ignore-translate="true" name="userway" title="UserWay Accessibility Menu" allow="clipboard-write" style="max-width: 100vw !important; visibility: visible !important; opacity: 1 !important; color-scheme: light !important;"></iframe></div><div class="uw-s10-bottom-ruler-guide"></div><div class="uw-s10-right-ruler-guide"></div><div class="uw-s10-left-ruler-guide"></div><div class="uw-s10-reading-guide"><div class="uw-s10-reading-guide__arrow"></div></div><div class="uw-s12-tooltip" aria-hidden="true"></div><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
+
+	<symbol id="icon-keyboard_backspace" viewBox="0 0 24 24">
+		<path d="M21 11.016v1.969h-14.156l3.563 3.609-1.406 1.406-6-6 6-6 1.406 1.406-3.563 3.609h14.156z"></path>
+	</symbol>
+	<symbol id="icon-trending_neutral" viewBox="0 0 24 24">
+		<path d="M21.984 12l-3.984 3.984v-3h-15v-1.969h15v-3z"></path>
+	</symbol>
+	<symbol id="icon-keyboard_arrow_right" viewBox="0 0 24 24">
+		<path d="M8.578 16.594l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z"></path>
+	</symbol>
+	<symbol id="icon-keyboard_arrow_down" viewBox="0 0 24 24">
+		<path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path>
+	</symbol>
+	<symbol id="icon-close" viewBox="0 0 20 20">
+		<path d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
+	</symbol>
+	<symbol id="icon-download" viewBox="0 0 20 20">
+		<path d="M13 8v-6h-6v6h-5l8 8 8-8h-5zM0 18h20v2h-20v-2z"></path>
+	</symbol>
+	<symbol id="icon-envelope-o" viewBox="0 0 28 28">
+		<path d="M26 23.5v-12c-0.328 0.375-0.688 0.719-1.078 1.031-2.234 1.719-4.484 3.469-6.656 5.281-1.172 0.984-2.625 2.188-4.25 2.188h-0.031c-1.625 0-3.078-1.203-4.25-2.188-2.172-1.813-4.422-3.563-6.656-5.281-0.391-0.313-0.75-0.656-1.078-1.031v12c0 0.266 0.234 0.5 0.5 0.5h23c0.266 0 0.5-0.234 0.5-0.5zM26 7.078c0-0.391 0.094-1.078-0.5-1.078h-23c-0.266 0-0.5 0.234-0.5 0.5 0 1.781 0.891 3.328 2.297 4.438 2.094 1.641 4.188 3.297 6.266 4.953 0.828 0.672 2.328 2.109 3.422 2.109h0.031c1.094 0 2.594-1.437 3.422-2.109 2.078-1.656 4.172-3.313 6.266-4.953 1.016-0.797 2.297-2.531 2.297-3.859zM28 6.5v17c0 1.375-1.125 2.5-2.5 2.5h-23c-1.375 0-2.5-1.125-2.5-2.5v-17c0-1.375 1.125-2.5 2.5-2.5h23c1.375 0 2.5 1.125 2.5 2.5z"></path>
+	</symbol>
+	<symbol id="icon-search" viewBox="0 0 32 32">
+		<path d="M20 0.005c-6.627 0-12 5.373-12 12 0 2.026 0.507 3.933 1.395 5.608l-8.344 8.342 0.007 0.006c-0.652 0.641-1.058 1.529-1.058 2.516 0 1.949 1.58 3.529 3.529 3.529 0.985 0 1.874-0.406 2.515-1.059l-0.002-0.002 8.341-8.34c1.676 0.891 3.586 1.4 5.617 1.4 6.627 0 12-5.373 12-12s-5.373-12-12-12zM4.795 29.697c-0.322 0.334-0.768 0.543-1.266 0.543-0.975 0-1.765-0.789-1.765-1.764 0-0.498 0.21-0.943 0.543-1.266l-0.009-0.008 8.066-8.066c0.705 0.951 1.545 1.791 2.494 2.498l-8.063 8.063zM20 22.006c-5.522 0-10-4.479-10-10s4.478-10 10-10c5.521 0 10 4.478 10 10s-4.479 10-10 10zM20 5.005c0.275 0 0.5 0.224 0.5 0.5s-0.225 0.5-0.5 0.5c-3.314 0-6 2.687-6 6 0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-3.866 3.133-7 7-7z"></path>
+	</symbol>
+	<symbol id="icon-search1" viewBox="0 0 32 32">
+		<path d="M19.427 20.427c-1.39 0.99-3.090 1.573-4.927 1.573-4.694 0-8.5-3.806-8.5-8.5s3.806-8.5 8.5-8.5c4.694 0 8.5 3.806 8.5 8.5 0 1.837-0.583 3.537-1.573 4.927l5.585 5.585c0.55 0.55 0.546 1.431-0 1.976l-0.023 0.023c-0.544 0.544-1.431 0.546-1.976 0l-5.585-5.585zM14.5 20c3.59 0 6.5-2.91 6.5-6.5s-2.91-6.5-6.5-6.5c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5v0z"></path>
+	</symbol>
+	<symbol id="icon-search2" viewBox="0 0 32 32">
+		<path d="M19.427 20.427c-1.39 0.99-3.090 1.573-4.927 1.573-4.694 0-8.5-3.806-8.5-8.5s3.806-8.5 8.5-8.5c4.694 0 8.5 3.806 8.5 8.5 0 2.347-0.951 4.472-2.49 6.010l5.997 5.997c0.275 0.275 0.268 0.716-0.008 0.992-0.278 0.278-0.72 0.28-0.992 0.008l-6.081-6.081zM14.5 21c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5v0z"></path>
+	</symbol>
+	<symbol id="icon-file-text2" viewBox="0 0 32 32">
+		<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+		<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+		<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+		<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+	</symbol>
+	<symbol id="icon-envelop" viewBox="0 0 32 32">
+		<path d="M29 4h-26c-1.65 0-3 1.35-3 3v20c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-20c0-1.65-1.35-3-3-3zM12.461 17.199l-8.461 6.59v-15.676l8.461 9.086zM5.512 8h20.976l-10.488 7.875-10.488-7.875zM12.79 17.553l3.21 3.447 3.21-3.447 6.58 8.447h-19.579l6.58-8.447zM19.539 17.199l8.461-9.086v15.676l-8.461-6.59z"></path>
+	</symbol>
+	<symbol id="icon-arrow-up2" viewBox="0 0 32 32">
+		<path d="M27.414 12.586l-10-10c-0.781-0.781-2.047-0.781-2.828 0l-10 10c-0.781 0.781-0.781 2.047 0 2.828s2.047 0.781 2.828 0l6.586-6.586v19.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-19.172l6.586 6.586c0.39 0.39 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586c0.781-0.781 0.781-2.047 0-2.828z"></path>
+	</symbol>
+	<symbol id="icon-arrow-right2" viewBox="0 0 32 32">
+		<path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path>
+	</symbol>
+	<symbol id="icon-arrow-down2" viewBox="0 0 32 32">
+		<path d="M27.414 19.414l-10 10c-0.781 0.781-2.047 0.781-2.828 0l-10-10c-0.781-0.781-0.781-2.047 0-2.828s2.047-0.781 2.828 0l6.586 6.586v-19.172c0-1.105 0.895-2 2-2s2 0.895 2 2v19.172l6.586-6.586c0.39-0.39 0.902-0.586 1.414-0.586s1.024 0.195 1.414 0.586c0.781 0.781 0.781 2.047 0 2.828z"></path>
+	</symbol>
+	<symbol id="icon-arrow-left2" viewBox="0 0 32 32">
+		<path d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z"></path>
+	</symbol>
+	<symbol id="icon-google" viewBox="0 0 32 32">
+		<path d="M16.319 13.713v5.487h9.075c-0.369 2.356-2.744 6.9-9.075 6.9-5.463 0-9.919-4.525-9.919-10.1s4.456-10.1 9.919-10.1c3.106 0 5.188 1.325 6.375 2.469l4.344-4.181c-2.788-2.612-6.4-4.188-10.719-4.188-8.844 0-16 7.156-16 16s7.156 16 16 16c9.231 0 15.363-6.494 15.363-15.631 0-1.050-0.113-1.85-0.25-2.65l-15.113-0.006z"></path>
+	</symbol>
+	<symbol id="icon-facebook" viewBox="0 0 32 32">
+		<path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+	</symbol>
+	<symbol id="icon-instagram" viewBox="0 0 32 32">
+		<path d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"></path>
+		<path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"></path>
+		<path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
+	</symbol>
+	<symbol id="icon-twitter" viewBox="0 0 32 32">
+		<path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+	</symbol>
+	<symbol id="icon-youtube" viewBox="0 0 32 32">
+		<path d="M31.681 9.6c0 0-0.313-2.206-1.275-3.175-1.219-1.275-2.581-1.281-3.206-1.356-4.475-0.325-11.194-0.325-11.194-0.325h-0.012c0 0-6.719 0-11.194 0.325-0.625 0.075-1.987 0.081-3.206 1.356-0.963 0.969-1.269 3.175-1.269 3.175s-0.319 2.588-0.319 5.181v2.425c0 2.587 0.319 5.181 0.319 5.181s0.313 2.206 1.269 3.175c1.219 1.275 2.819 1.231 3.531 1.369 2.563 0.244 10.881 0.319 10.881 0.319s6.725-0.012 11.2-0.331c0.625-0.075 1.988-0.081 3.206-1.356 0.962-0.969 1.275-3.175 1.275-3.175s0.319-2.587 0.319-5.181v-2.425c-0.006-2.588-0.325-5.181-0.325-5.181zM12.694 20.15v-8.994l8.644 4.513-8.644 4.481z"></path>
+	</symbol>
+	<symbol id="icon-linkedin2" viewBox="0 0 32 32">
+		<path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+		<path d="M2 12h6v18h-6v-18z"></path>
+		<path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+	</symbol>
+	<symbol id="icon-pinterest2" viewBox="0 0 32 32">
+		<path d="M16 0c-8.825 0-16 7.175-16 16s7.175 16 16 16 16-7.175 16-16-7.175-16-16-16zM16 29.863c-1.431 0-2.806-0.219-4.106-0.619 0.563-0.919 1.412-2.431 1.725-3.631 0.169-0.65 0.863-3.294 0.863-3.294 0.45 0.863 1.775 1.594 3.175 1.594 4.181 0 7.194-3.844 7.194-8.625 0-4.581-3.738-8.006-8.544-8.006-5.981 0-9.156 4.019-9.156 8.387 0 2.031 1.081 4.563 2.813 5.369 0.262 0.125 0.4 0.069 0.463-0.188 0.044-0.194 0.281-1.131 0.387-1.575 0.031-0.137 0.019-0.262-0.094-0.4-0.575-0.694-1.031-1.975-1.031-3.162 0-3.056 2.313-6.019 6.256-6.019 3.406 0 5.788 2.319 5.788 5.637 0 3.75-1.894 6.35-4.356 6.35-1.363 0-2.381-1.125-2.050-2.506 0.394-1.65 1.15-3.425 1.15-4.613 0-1.063-0.569-1.95-1.756-1.95-1.394 0-2.506 1.438-2.506 3.369 0 1.225 0.412 2.056 0.412 2.056s-1.375 5.806-1.625 6.887c-0.281 1.2-0.169 2.881-0.050 3.975-5.156-2.012-8.813-7.025-8.813-12.9 0-7.656 6.206-13.863 13.862-13.863s13.863 6.206 13.863 13.863c0 7.656-6.206 13.863-13.863 13.863z"></path>
+	</symbol>
+</svg>
+
+	
+
+	<div class="wrapper">
+
+		<!-- header -->
+		<header class="header clear" role="banner">
+
+
+			<div class="navWrap ">
+
+				<!-- new -->
+				<div class="preHead">
+					<div class="columns is-multiline is-mobile">
+
+
+						
+									<div class="column  is-hidden-touch is-hidden-touch">
+
+										<div class="linkBlock">
+											<div class="sh-icon"><img src="https://kallanpallydental.com/wp-content/uploads/2020/08/invisalign_logo-01.svg" class="attachment-full size-full" alt="Invisalign Slave Lake" decoding="async"></div>										</div>
+
+									</div>
+
+								
+									<div class="column  is-narrow-desktop has-text-centered-mobile is-narrow-desktop has-text-centered-mobile">
+
+										<div class="linkBlock">
+																							<a class="linkBlockLink" href="tel:+15878186308">
+												<div class="sh-icon"><img src="https://kallanpallydental.com/wp-content/uploads/2020/08/icon-phone.svg" class="attachment-full size-full" alt="icon phone" decoding="async"></div><div class="sh-text">(587) 818-6308</div>												</a>
+																					</div>
+
+									</div>
+
+																	<div class="column is-narrow-desktop  is-hidden-mobile has-text-right">
+										<div class="socialIcons"><a href="https://www.instagram.com/kallanpallydentalclinic/" target="_new"><svg class="icon closeIcon"><use xlink:href="#icon-instagram"></use></svg></a>  <a href="https://www.facebook.com/KallanpallyDentalClinic" target="_new"><svg class="icon closeIcon"><use xlink:href="#icon-facebook"></use></svg></a>       <a href="mailto:info@kallanpallydental.com"><svg class="icon closeIcon"><use xlink:href="#icon-envelope-o"></use></svg></a></div>									</div>
+
+						
+					</div>
+				</div>
+				<!-- new -->
+
+
+
+				<nav class="headerNav">
+					<div class="container">
+
+						<div class="logo">
+							<a id="logo-container" href="https://kallanpallydental.com" class="logoLink"><span class="logoWrap"><img alt="Kallanpally Dental Clinic in Slave Lake" src="https://kallanpallydental.com/wp-content/uploads/2020/08/Kallanpally-Dental-Logo-01.svg" onerror="this.src=&quot;https://kallanpallydental.com/wp-content/uploads/2020/08/Kallanpally-Dental-Logo-01.png&quot;"></span></a>						</div>
+
+
+
+						<div class="mobileWrap">
+
+							<ul class="mainNav" id="menu-nested-pages"><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/cdcp-information-for-patients/">CDCP Information for Patients</a>
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/patient-financing/">Patient Financing</a>
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-100 current_page_item menu-item-has-children"><a href="https://kallanpallydental.com/about-us/">About<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path></svg></a>
+<div class="sub-toggle"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path></svg></div><div class="sub-menu-wrap"><ul class="sub-menu">
+<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/cdcp-information-for-patients/">CDCP Information for Patients</a>
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/about-us/our-team/">Our Team</a>
+</li></ul></div>
+
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://kallanpallydental.com/services/">Dental Services and Technology<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path></svg></a>
+<div class="sub-toggle"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path></svg></div><div class="sub-menu-wrap"><ul class="sub-menu">
+<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/services/emergency-dentist/">Emergency Dentist</a>
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/services/general-dentistry/">General Dentistry</a>
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/services/cosmetic-dentistry/">Cosmetic Dentistry</a>
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/services/restorative-dentistry/">Restorative Dentistry</a>
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://kallanpallydental.com/services/orthodontics/">Orthodontics<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path></svg></a>
+	<div class="sub-toggle"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path></svg></div><div class="sub-menu-wrap flipped"><ul class="sub-menu">
+<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/services/orthodontics/invisalign/">Invisalign</a>
+	</li></ul></div>
+
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/services/dental-guards-and-appliances/">Guards and Appliances</a>
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/services/sedation-dentistry/">Sedation Dentistry</a>
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/services/dental-technology/">Dental Technology</a>
+</li></ul></div>
+
+</li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://kallanpallydental.com/contact/">Contact<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path></svg></a>
+<div class="sub-toggle"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path></svg></div><div class="sub-menu-wrap"><ul class="sub-menu">
+<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://kallanpallydental.com/contact/new-patients/">New Patients</a>
+</li></ul></div>
+
+</li></ul>
+
+							<div class="searchWrap">
+								<form role="search" action="https://kallanpallydental.com" method="get" id="searchform">
+									<input type="text" class="form-control searchInput" name="s" placeholder="Search">
+									<input type="hidden" name="site_section" value="site-search">
+									<button type="submit" class="form-control searchSubmit" alt="Search">
+
+										<svg class="icon">
+											<use xlink:href="#icon-search"></use>
+										</svg>
+
+									</button>
+								</form>
+							</div>
+
+						</div>
+
+						
+						<div class="searchIcon">
+							<a href="#" class="search-act">
+								<svg class="icon searchIcon">
+									<use xlink:href="#icon-search"></use>
+								</svg>
+								<svg class="icon closeIcon">
+									<use xlink:href="#icon-close"></use>
+								</svg>
+							</a>
+						</div>
+
+
+						<div class="nav-activator">
+							<button class="hamburger hamburger--spin" type="button">
+								<span class="hamburger-box">
+									<span class="hamburger-inner"></span>
+								</span>
+							</button>
+						</div>
+
+
+					</div>
+				</nav>
+
+				
+			</div>
+
+			
+
+
+				<section class="pageHead section hasBg ">
+					<div class="headerBg" style="background-image: url(https://kallanpallydental.com/wp-content/uploads/2020/07/Happy-family-smiling-general-family-dentistry.jpg); opacity:.2;"></div>
+					<div class="container">
+
+						<nav class="breadcrumb is-small" aria-label="breadcrumbs"><ul><li><a href="https://kallanpallydental.com">Home</a></li> <li class="is-active"><a href="#" aria-current="page">About</a></li></ul></nav><h1>About Kallanpally Dental Clinic</h1><p class="headIntro">Kallanpally Dental Clinic provides general dentistry to patients of all ages in Slave Lake. We are conveniently located in a wheelchair-accessible office.</p>
+						
+
+					</div>
+				</section>
+
+			
+
+		</header>
+		<!-- /header -->
+<main role="main">
+
+
+
+	<section id="pageContent" class="section">
+		<div class="container content">
+									<div data-elementor-type="wp-page" data-elementor-id="100" class="elementor elementor-100" data-elementor-post-type="page">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-07b0b1f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="07b0b1f" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-wider">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b0936cf" data-id="b0936cf" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7a019b9 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="7a019b9" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><path d="M119.41153,48.493a1.62092,1.62092,0,0,0-1.2667,1.91277c2.83748,14.002-6.9999,29.42-10.08278,33.812a7.89666,7.89666,0,0,0-1.36041,3.55561c-2.87473,23.36334-7.98573,39.679-12.429,39.679-4.17424,0-13.51837-7.0782-14.10867-28.104a9.74211,9.74211,0,0,0-5.64173-8.77993,5.4496,5.4496,0,0,0-4.97044,0,9.74561,9.74561,0,0,0-5.64039,8.77993c-.5894,21.03-9.93443,28.10623-14.10755,28.10623-4.44328,0-9.55539-16.31792-12.43013-39.68126a7.86744,7.86744,0,0,0-1.36063-3.55114c-3.13062-4.46181-18.12049-27.52018-5.67631-43.337C42.06865,25.977,52.94206,30.90284,65.53014,36.60859c.721.32683,1.45968.65789,2.1961.987a31.62447,31.62447,0,0,1-10.27107,1.98037,1.622,1.622,0,1,0,0,3.24395c5.233,0,10.25791-1.59687,15.14336-3.61.03815-.01517.07317-.02833.11021-.04573,1.965-.8125,3.91166-1.68411,5.83536-2.5555,8.01942-3.63392,15.59668-7.06526,23.03874-4.91267a1.62292,1.62292,0,0,0,.90307-3.11768c-8.60213-2.4879-17.08022,1.35728-25.28057,5.074-1.708.77345-3.43135,1.55115-5.16654,2.27886-1.73208-.72771-3.476-1.50965-5.16878-2.27663-12.67308-5.74279-25.77851-11.6839-39.08449,5.22432-13.51614,17.18062.84863,40.47658,5.57189,47.20833a4.534,4.534,0,0,1,.79421,2.08276c1.95627,15.88424,6.58807,42.531,15.65222,42.531,5.37357,0,16.68156-7.63615,17.3515-31.23708.00112-.0261.00223-.0522.00223-.0783a6.51393,6.51393,0,0,1,3.87686-5.93018,2.19867,2.19867,0,0,1,2.00536,0A6.5121,6.5121,0,0,1,76.91889,99.381v.00447c0,.0261.00112.0522.002.0783.66994,23.59669,11.977,31.23485,17.35173,31.23485,9.063,0,13.69572-26.64655,15.6511-42.52879a4.542,4.542,0,0,1,.7951-2.08477c3.27028-4.66013,13.7013-21.05413,10.60548-36.3242A1.6217,1.6217,0,0,0,119.41153,48.493Z" fill="#859b6a"></path><path d="M124.88639,35.61517a10.38764,10.38764,0,0,1-10.37458-10.37681,1.62254,1.62254,0,0,0-3.24507,0,10.3884,10.3884,0,0,1-10.37548,10.37681,1.622,1.622,0,1,0,0,3.24395,10.38649,10.38649,0,0,1,10.37548,10.37459,1.62254,1.62254,0,1,0,3.24507,0,10.38573,10.38573,0,0,1,10.37458-10.37459,1.622,1.622,0,1,0,0-3.24395Zm-11.99756,7.17636a13.72369,13.72369,0,0,0-5.55539-5.55539,13.712,13.712,0,0,0,5.55539-5.55561,13.7092,13.7092,0,0,0,5.55427,5.55561A13.72086,13.72086,0,0,0,112.88883,42.79153Z" fill="#859b6a"></path><path d="M90.73888,62.14861a1.62332,1.62332,0,0,0-1.62209,1.623A10.38649,10.38649,0,0,1,78.74131,74.14618a1.62309,1.62309,0,1,0,0,3.24618A10.38649,10.38649,0,0,1,89.11679,87.76694a1.62254,1.62254,0,0,0,3.24507,0,10.38573,10.38573,0,0,1,10.37458-10.37458,1.62309,1.62309,0,1,0,0-3.24618A10.38573,10.38573,0,0,1,92.36186,63.77159,1.62352,1.62352,0,0,0,90.73888,62.14861Zm5.55539,13.61854a13.73584,13.73584,0,0,0-5.55539,5.55539,13.73049,13.73049,0,0,0-5.55539-5.55539,13.69181,13.69181,0,0,0,5.55539-5.55561A13.69713,13.69713,0,0,0,96.29427,75.76715Z" fill="#859b6a"></path><path d="M53.29164,49.6172a1.62242,1.62242,0,0,0-3.24484,0A10.38639,10.38639,0,0,1,39.6711,59.99379a1.622,1.622,0,1,0,0,3.244A10.388,10.388,0,0,1,50.0468,73.61455a1.62242,1.62242,0,1,0,3.24484,0,10.38873,10.38873,0,0,1,10.3757-10.37681,1.622,1.622,0,1,0,0-3.244A10.38711,10.38711,0,0,1,53.29164,49.6172ZM51.66978,67.17238A13.72369,13.72369,0,0,0,46.11439,61.617a13.72422,13.72422,0,0,0,5.55539-5.55561A13.71742,13.71742,0,0,0,57.22517,61.617,13.71689,13.71689,0,0,0,51.66978,67.17238Z" fill="#859b6a"></path></svg>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h2 class="elementor-icon-box-title">
+						<span>
+							Preventative Dentistry						</span>
+					</h2>
+				
+									<p class="elementor-icon-box-description">
+						We have a dedicated team that runs a prevention-oriented practice. Our goal is to help you avoid the leading causes of dental issues.					</p>
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d500feb" data-id="d500feb" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-45bdaf2 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="45bdaf2" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><polygon points="47.483 69.744 47.483 69.744 47.483 69.744 47.483 69.744" fill="#859b6a"></polygon><path d="M29.21725,134.92252a1.32984,1.32984,0,0,0,1.05371.52539h86.88086a1.31745,1.31745,0,0,0,1.26758-1.68066v-.001l-.88672-3.09912a36.55572,36.55572,0,0,0-13.28321-19.35351,37.11042,37.11042,0,0,0-13.1914-6.31592l-.30762-.07813-1.416-2.47754a1.31749,1.31749,0,0,0-1.14257-.66015H83.30514V93.1027l.46777-.18994a15.8114,15.8114,0,0,0,3.73926-2.166l.11426-.07324.31054-.15674c.14942-.07422.29981-.14892.44922-.23144.34766-.19434.69434-.39209,1.02149-.59717A29.69929,29.69929,0,0,0,92.018,87.90934l.22558-.17188c.22754-.17724.45411-.35058.57618-.46826a28.414,28.414,0,0,0,4.28613-4.27148c.25683-.30322.50488-.61084.7334-.91895a2.88569,2.88569,0,0,0,.27051-.36474c.24414-.32276.43359-.59619.69628-.98.30957-.44532.59766-.90577.874-1.376.33886-.56055.6416-1.1084.90527-1.63574.30567-.58545.54883-1.05908.72852-1.49561.32129-.70459.62207-1.45947.93066-2.33545l.17578-.501h1.28613a10.64527,10.64527,0,0,0,10.627-10.62745,10.59584,10.59584,0,0,0-5.79785-9.45361l-.40723-.20947V44.42985h.75a1.32045,1.32045,0,0,0,1.31836-1.31885V38.97428a26.46194,26.46194,0,0,0-5.94336-16.60352c-.05469-.07421-.0752-.105-.10059-.13281a26.12945,26.12945,0,0,0-20.09765-9.40576H63.36861A26.1716,26.1716,0,0,0,37.227,38.97428V43.111a1.32045,1.32045,0,0,0,1.31836,1.31885h.75v8.65576l-.4082.209a10.32741,10.32741,0,0,0-2.666,1.94483,10.48166,10.48166,0,0,0-3.13086,7.52343,10.63954,10.63954,0,0,0,10.627,10.62745h1.27148l.21192.61963c.10839.30273.18945.50683.28515.74609a30.3728,30.3728,0,0,0,14.044,15.79785l.43652.23486a15.81677,15.81677,0,0,0,3.68457,2.124l.46777.18994v8.6792H59.2319a1.31751,1.31751,0,0,0-1.14258.66015l-1.419,2.48291-.30957.07813A37.02711,37.02711,0,0,0,29.894,130.66227l-.88964,3.104A1.32527,1.32527,0,0,0,29.21725,134.92252ZM70.98873,114.3693c.10156.019.15723.03027.21192.04492a9.5646,9.5646,0,0,0,.96679.2085l.251.0415a8.39828,8.39828,0,0,0,2.584.00049l.25489-.042a9.6619,9.6619,0,0,0,.96484-.208c.05371-.01514.11133-.02637.16895-.03662l1.27832-.37549-.30176,1.28027-3.65528,13.72657-3.999-15.01416ZM68.81,110.08317l-.13965-.1416-.10547-.25-1.80859-6.86377V93.83219l.84375.106a15.6114,15.6114,0,0,0,1.97461.13769h8.27441a15.61127,15.61127,0,0,0,1.97461-.13769l.84375-.106-.02539,9.18945-1.84082,6.86621-.13672.14014a6.93638,6.93638,0,0,1-4.95215,2.01319h-.0039A6.90515,6.90515,0,0,1,68.81,110.08317Zm25.74414-1.20606a34.67709,34.67709,0,0,1,8.10938,4.54444,33.94042,33.94042,0,0,1,12.334,17.96972l.39941,1.41944H96.12447l.72559-2.65674a1.32473,1.32473,0,0,0-.16992-1.07129L92.08248,122.089l5.11524-3.41114a1.32237,1.32237,0,0,0,.41308-1.752l-5.04-8.83008Zm-7.125-4.458,7.28223,12.74708-5.18262,3.45458a1.32172,1.32172,0,0,0-.37012,1.82081l4.98926,7.59082-.75683,2.77832H75.42916L82.9985,104.4191ZM101.353,63.797c0,.63819-.02344,1.29688-.06934,1.957a27.36964,27.36964,0,0,1-1.01855,5.69677,25.76985,25.76985,0,0,1-1.36426,3.71534c-.19043.45507-.43164.91357-.665,1.35742-.22754.45849-.49023.93457-.82031,1.48242-.24512.416-.49414.82129-.874,1.36963l-.6377.90869a1.07811,1.07811,0,0,0-.125.146c-.21484.29248-.43945.57226-.69922.87939-.07812.09619-.168.2002-.25781.30371l-1.96,2.30615.51074-2.76513a15.68664,15.68664,0,0,0,.27539-2.877V68.42008l7.70508-8.98974Zm1.582-12.04834a19.32086,19.32086,0,0,1-9.81934-5.28662c-.25293-.25341-.49414-.5166-.73242-.78271l-1.11621-1.24951h14.22363V52.111l-.835-.09522c-.58593-.0664-1.16406-.15625-1.71777-.2666Zm8.76172,11.01416a8.0097,8.0097,0,0,1-7.53223,7.97706l-.96972.05371.19238-.95166c.11719-.57911.21289-1.16309.2959-1.75l.01269-.1045c.08789-.64746.14649-1.21923.19141-1.79394l.03516-.46826c.041-.64112.06835-1.28272.06835-1.92823V56.35368l1.23926-1.44581.45117.11573A7.987,7.987,0,0,1,111.69674,62.76285Zm-71.832-23.78857A23.53122,23.53122,0,0,1,63.36861,15.4694H84.05514a23.48808,23.48808,0,0,1,18.05859,8.43994l.07715.09863A23.63111,23.63111,0,0,1,107.559,38.97428v2.81836H83.15377l.64648-1.124c.01954-.03418.03516-.07032.05176-.10547.02832-.05957.05567-.11914.08692-.17676.13672-.25146.26074-.50537.37793-.76416.082-.18262.16406-.36377.2373-.55029.10547-.26856.19531-.54541.28125-.82471l.04883-.15479c.041-.12841.082-.25634.11523-.3872.08008-.31153.13672-.62647.19043-.94287l.03907-.2085c.01757-.08984.03515-.1792.04785-.27051a11.66193,11.66193,0,1,0-23.12891.00489c.01172.08984.0293.17919.04688.26855l.03711.19531c.05468.32471.1123.64258.19238.95459.0332.127.07324.25244.1123.37842l.04981.15674c.08691.28174.17773.561.28515.83545.06836.17529.14356.34228.21875.51025.13184.29053.25879.54981.39649.8042.03125.05664.06055.11768.08887.1792l.04687.09668.64941,1.125H39.86471ZM82.7358,34.83707a9.08665,9.08665,0,0,1-3.61133,7.22071,8.75106,8.75106,0,0,1-4.18261,1.7041,7.571,7.571,0,0,1-.90235.09668q-.20654.01024-.41308.01025a8.85986,8.85986,0,0,1-5.002-1.58838l-.09668-.064c-.07519-.04981-.15039-.09961-.22265-.1543l-.05078-.041A9.02326,9.02326,0,1,1,82.7358,34.83707ZM43.25826,70.73991A7.9936,7.9936,0,0,1,35.727,62.76285a7.96937,7.96937,0,0,1,6.0293-7.728l.45019-.1128,1.22657,1.43116V63.797c0,.6045.02343,1.24024.07324,2.001l.03613.48975a30.44747,30.44747,0,0,0,.49414,3.5542l.19336.95312Zm-1.32519-18.6045V44.42985H67.07565l.19043.12939c.42187.272.76953.47656,1.11035.65235l.20215.09667c.30273.14893.60742.28272.91894.40284l.126.05517,1.31543.61328-1.38965.87745c-.6211.34912-1.249.68554-1.8877.99951l-.23925.11133c-.585.28222-1.17872.54687-1.77833.79882l-.46386.19385q-.98731.39771-1.98926.7417l-.3877.12549q-.8994.29444-1.80957.54492l-.41308.11475q-1.02833.27026-2.07715.48193l-.46191.08838c-.64551.123-1.291.23047-1.94141.31982l-.27832.041c-.71387.09277-1.43262.16064-2.15234.21289l-.50586.03174c-.7334.043-1.46875.07226-2.20606.07226ZM52.74459,81.77457a27.79277,27.79277,0,0,1-4.82617-8.03564v-.001l-.21-.54345c-.10156-.27491-.1875-.54883-.27149-.81983l-.21875-.67187c-.18066-.604-.33105-1.19629-.46679-1.793l.703-.28852v-.00006l-.7323.16114c-.13086-.59571-.248-1.23877-.35742-1.96485-.08985-.59668-.15528-1.21094-.20508-1.83252L46.144,65.8361c-.04882-.67334-.07421-1.3584-.07421-2.03907V59.43034l7.70605,8.98974V78.2775a15.64027,15.64027,0,0,0,.27539,2.87256l.50684,2.74072ZM45.5483,54.77262h5.40918q.84375,0,1.68555-.03564l.70215-.04248c.32617-.01807.65136-.03614.97656-.06348.13379-.01074.2666-.02539.39941-.04l.50879-.05273c.25391-.02491.50684-.04981.75977-.08155.14844-.01855.29492-.041.44238-.063l.52051-.07617c.23144-.03271.46387-.06543.69531-.10449.167-.02783.33106-.05957.49609-.0918l.4502-.08447c.2334-.043.4668-.08594.69922-.13477.165-.03466.3291-.07324.49316-.11181l.458-.106c.22559-.05127.45117-.10254.67578-.15967.168-.04248.335-.08886.502-.13574l.48144-.13232c.209-.05664.418-.11328.626-.1753.18066-.05371.35937-.11181.53906-.16992l.36426-.11621c.22851-.07226.457-.14453.68359-.22265.1875-.064.37207-.13184.55664-.19971l.37305-.13623c.21289-.07715.42578-.15479.63672-.23682.18066-.07031.35937-.14453.53808-.21875l.40625-.16748c.19825-.08154.39551-.1626.5918-.24853.20215-.08838.40234-.18116.60156-.27393l.31055-.14307c.20019-.09228.40039-.18408.59863-.28076.20117-.09814.40137-.20117.60156-.3042l.33008-.16943c.18262-.09375.36621-.1875.54688-.28467.23047-.12451.458-.25439.68554-.38428l.1543-.0874c.20313-.11474.40528-.229.60547-.34814.24414-.14453.48242-.29346.7207-.44239l.15137-.09521c.18066-.11279.36133-.2251.54-.34131.25391-.166.50488-.33789.75586-.51025l.0918-.0625c.1748-.12012.35058-.23975.52343-.36328.25391-.18067.50391-.36817.75391-.55567l.54785-.40771.17871-.03223c.13184-.02393.26074-.05762.38965-.09033l.36914-.08887c.07227-.01611.14551-.03223.21777-.05176a11.30934,11.30934,0,0,0,1.249-.42187l.13867-.06592a11.38374,11.38374,0,0,0,1.05762-.51611c.09277-.05127.18261-.10645.27343-.16211l.28907-.17188c.08593-.04883.17187-.09765.2539-.15283l.18946-.127h7.80761l.27246.41845c.35352.53711.73926,1.06641,1.18165,1.62159l.23046.28027c.53711.64893.98438,1.14648,1.41407,1.57617.36132.36084.73535.70508,1.11816,1.03858l.38477.31689c.26172.21924.52636.43506.79687.64014.124.09424.25293.18506.38086.27636l.08789.062c.25684.18408.51172.36279.77344.53369.16894.10986.33887.21631.51074.32177q.39258.24245.79688.46778c.17187.09521.34472.19189.5205.2832.28418.14844.57129.28711.85938.42285l.14258.06739c.12011.05712.24023.11376.36133.16748.32617.14257.6582.27295.99316.40039l.40723.15918c.46875.168.94238.32275,1.42187.45849l.5459.15479v1.28418L91.72408,66.61588H55.69967Zm18.36035,34.856c-.249-.082-.52441-.19287-.86914-.332l-.082-.03321c-.56152-.23193-1.09668-.48877-1.62109-.75244l-.1416-.09228A13.13,13.13,0,0,1,56.41354,78.2775V69.25309H91.01022V78.2775a13.13159,13.13159,0,0,1-4.75684,10.11914l-.1416.09278-.21192.11084c-.13964.07422-.28027.14843-.42968.21679-.34375.1626-.65625.30909-1.03321.458a27.71765,27.71765,0,0,1-3.0791,1.084c-.53808.15576-1.08105.30078-1.63183.42236l-.15528.03125c-.5957.126-1.13867.22363-1.68554.30615l-.29883.04444c-.45508.064-.915.10742-1.375.14794l-.59571.04883c-.11035.01123-.20019.01416-.28906.0166l-.14258.00586c-.49316.02539-.98632.03809-1.47656.03809q-.731,0-1.45312-.03711l-.15723-.00684c-.08887-.00244-.17871-.00537-.26563-.01367l-.61425-.05127c-.44922-.04-.88965-.08252-1.32617-.14209l-.22168-.02929c-.69825-.104-1.3379-.22022-1.94239-.35352-.58593-.12842-1.13672-.27539-1.68359-.43359C65.23873,90.11784,64.5815,89.89469,63.90865,89.62858Zm-3.915,14.79052h4.42774l.17871.65235,7.39551,27.73926H54.03463l-.75879-2.77784,4.98926-7.59179a1.31987,1.31987,0,0,0-.3711-1.82032l-5.18164-3.45458ZM32.42818,131.38883a34.4783,34.4783,0,0,1,20.44922-22.522l1.97852-.77637-5.043,8.83545a1.32236,1.32236,0,0,0,.41211,1.75147l5.11523,3.41162-4.59668,6.99414a1.3221,1.3221,0,0,0-.16992,1.0708l.72559,2.65674H32.02389Z" fill="#859b6a"></path></svg>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h2 class="elementor-icon-box-title">
+						<span>
+							Exceptional Team						</span>
+					</h2>
+				
+									<p class="elementor-icon-box-description">
+						The recruitment of a talented team of dentists and health care professionals recognized for the high quality of their dental procedures.					</p>
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a61e6e7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a61e6e7" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-wider">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5a50993" data-id="5a50993" data-element_type="column" data-e-type="column" id="languages">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-50022d5 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="50022d5" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon">
+				<i aria-hidden="true" class="fas fa-globe"></i>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h2 class="elementor-icon-box-title">
+						<span>
+							Languages at our Clinic						</span>
+					</h2>
+				
+									<p class="elementor-icon-box-description">
+						Do you prefer to speak another language other than English? We offer dental appointments in French, Hindi, Malayam, Punjabi and Tagalog. Just let us know what you prefer when you book with us.					</p>
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a8f4b5a" data-id="a8f4b5a" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2754b14 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="2754b14" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><path d="M78.472,63.06214a4.70837,4.70837,0,0,1,4.617,1.19139L84.161,65.32292a4.713,4.713,0,0,1,1.21021,4.544A1.64993,1.64993,0,0,0,86.53376,71.891a1.62063,1.62063,0,0,0,.43061.0576,1.65037,1.65037,0,0,0,1.5923-1.22019,8.01166,8.01166,0,0,0-1.47393-7.064L99.68191,51.06433a16.73558,16.73558,0,1,0-2.33289-2.334L84.74781,61.33038a7.99322,7.99322,0,0,0-7.18826-1.43946,1.64994,1.64994,0,0,0,.91248,3.17122Zm22.31828-34.43468a13.43182,13.43182,0,1,1,0,18.99558A13.38627,13.38627,0,0,1,100.79031,28.62746Z" fill="#859b6a"></path><path d="M57.42383,80.9525a1.64917,1.64917,0,0,0-2.33289,0l-.00114.00226h0L23.53723,112.50394a4.81968,4.81968,0,0,0,0,6.81591l5.55491,5.556a4.82218,4.82218,0,0,0,6.81614,0L67.45949,93.32468h0l.00114-.00227a1.64782,1.64782,0,0,0,0-2.33176ZM33.57425,122.54187a1.52355,1.52355,0,0,1-2.14922,0l-5.55377-5.55378a1.51531,1.51531,0,0,1,0-2.14786L56.25784,84.45365l7.703,7.70164Z" fill="#859b6a"></path><path d="M83.10358,75.35224l-.00113-.00454h-.00227L71.85861,64.10727a8.23769,8.23769,0,0,0-10.76877-.73289L48.80745,51.0929a7.935,7.935,0,0,0-4.43019-2.24763l-14.31618-2.21a1.51971,1.51971,0,0,1-1.239-1.88437l6.04312-23.29606a1.64943,1.64943,0,0,0-3.19322-.82812L25.62772,43.92256a4.819,4.819,0,0,0,3.93063,5.97238L43.8725,52.1072a4.66076,4.66076,0,0,1,2.60183,1.31769L58.75672,65.70841a8.23385,8.23385,0,0,0,.732,10.76878L70.73026,87.71762h0l.00113.00453,39.066,39.06487a4.95437,4.95437,0,0,0,7.001,0l5.37124-5.3701a4.95713,4.95713,0,0,0,0-6.99982ZM74.23142,86.55276l7.7039-7.7039L85.205,82.11962l-7.7039,7.70391Zm-5.60367-5.60457,7.70277-7.70186,3.27077,3.27077-7.7039,7.7039ZM61.82159,67.14334l.34989-.34989.00227-.00226.00226-.00227.34989-.34989a4.95851,4.95851,0,0,1,6.99982,0l4.47191,4.47327-7.7039,7.7039-4.47214-4.473A4.95713,4.95713,0,0,1,61.82159,67.14334Zm58.014,51.93955-5.3701,5.3701a1.65054,1.65054,0,0,1-2.334,0L79.83508,92.15529l7.70277-7.70164,32.2977,32.29521A1.65259,1.65259,0,0,1,119.83555,119.08289Z" fill="#859b6a"></path></svg>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h2 class="elementor-icon-box-title">
+						<span>
+							Technologies						</span>
+					</h2>
+				
+									<p class="elementor-icon-box-description">
+						The clinic’s modern accommodations combined with cutting-edge equipment, all at the service of our clients.					</p>
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-ac1f613 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ac1f613" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" style="width: 1280px; left: -64px;">
+						<div class="elementor-container elementor-column-gap-wider">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-5a2032f" data-id="5a2032f" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-42f3a53 elementor-widget elementor-widget-heading" data-id="42f3a53" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Now Accepting New Patients </h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-511fa2f elementor-widget elementor-widget-text-editor" data-id="511fa2f" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Kallanpally Dental Clinic is pleased to welcome new patients to our Slave Lake dental clinic. Reach out to book your first appointment with our experienced team of professionals.</p><p><a class="arw" href="https://kallanpallydental.com/contact/new-patients/">New Patient Info</a></p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1fa9c4f" data-id="1fa9c4f" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a09f765 elementor-widget elementor-widget-heading" data-id="a09f765" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Convenient &amp; Accessible Location</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-6baf960 elementor-widget elementor-widget-text-editor" data-id="6baf960" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Our dental office is wheelchair accessible and centrally located in Slave Lake. We work hard to accommodate any special needs or requests for our patients.</p><p><a class="arw" href="https://goo.gl/maps/KiDoqkjeWHwR8neu5" target="_blank" rel="noopener">GET DIRECTIONS</a></p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-ecb9cb6" data-id="ecb9cb6" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e673d56 elementor-widget elementor-widget-heading" data-id="e673d56" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Book Your Next Appointment </h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-4813fd3 elementor-widget elementor-widget-text-editor" data-id="4813fd3" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Whether you need a single appointment or you would like to bring the whole family in for oral exams and dental hygiene appointments, we look forward to seeing you soon!</p><p>&nbsp;</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b1de663 elementor-section-height-min-height elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="b1de663" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}" style="width: 1280px; left: -64px;">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b2469f5" data-id="b2469f5" data-element_type="column" data-e-type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a96af8e elementor-widget elementor-widget-heading" data-id="a96af8e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Gentle, Compassionate Dental Care for Your Family </h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-ca85884 elementor-widget elementor-widget-text-editor" data-id="ca85884" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>We believe high-quality dental care should be accessible to everyone. Our dental office welcomes patients of all ages, needs, and backgrounds. The team at Kallanpally Dental Clinic speaks multiple languages and has created an approachable and welcoming clinic space designed around your comfort.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-0291faa elementor-widget elementor-widget-text-editor" data-id="0291faa" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>We value the health of you and your family above all else. In many cases, we provide dental care for multiple generations of families. Our focus on preventative dentistry practices allows us to provide a high level of care so you can continue to share smiles, laughter, and joy with those you love most.</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+					
+
+		</div>
+	</section>
+
+
+	
+
+	<div class="prefootWrap ctaActive">
+
+  
+      <section class="ctaContact section " id="cta">
+      <div class="ctaImage objectFit">
+        <img width="1600" height="980" src="https://kallanpallydental.com/wp-content/uploads/2020/07/apple-dental--1600x980.jpg" class="attachment-slider size-slider" alt="dental services patients" decoding="async">      </div>
+      <div class="container">
+        <div class="columns is-desktop">
+
+                        <div class="column ctaText has-text-centered">
+                <h3>Book Your Next Appointment</h3>
+<p>Whether you need a single appointment or you would like to bring the whole family in for oral exams and dental hygiene appointments, we look forward to seeing you soon!</p>
+<p><a class="button" href="https://kallanpallydental.com/contact/request-an-appointment/">Request an Appointment</a></p>
+              </div>
+          
+
+
+          
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+
+<footer style="position: absolute; width: 100%;" class="footer ctaActive">
+
+  <div class="container">
+
+    <div class="columns is-mobile">
+
+      <div class="column is-full-touch">
+
+
+        
+
+        <div id="text-2" class="widget_text"><h3>Kallanpally Dental Clinic</h3>			<div class="textwidget"><p><a href="https://www.google.com/maps?cid=9044189834518645196" target="_blank" rel="noopener">214 Main St NW,<br>
+Slave Lake, AB T0G 2A0, Canada</a></p>
+<p><a href="tel:+15878186308">(587) 818-6308</a></p>
+<p><a href="mailto:info@kallanpallydental.com">info@kallanpallydental.com</a></p>
+</div>
+		</div>
+      </div>
+
+
+      <div class="column is-full-touch">
+        <div id="text-3" class="widget_text"><h3>Hours</h3>			<div class="textwidget"><div class="hours_shortcode"><ul class="child_hours_ul"><li><span class="child_dayofweek">Mon:</span><span class="child_hours"><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="4:30 pm" itemprop="endTime">4:30 pm</time></span></span></li><li><span class="child_dayofweek"><time day="2" itemprop="weekDay">Tue:</time></span><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="4:30 pm" itemprop="endTime">4:30 pm</time></span></li><li><span class="child_dayofweek"><time day="3" itemprop="weekDay">Wed:</time></span><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="4:30 pm" itemprop="endTime">4:30 pm</time></span></li><li><span class="child_dayofweek"><time day="4" itemprop="weekDay">Thu:</time></span><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="4:30 pm" itemprop="endTime">4:30 pm</time></span></li><li><span class="child_dayofweek"><time day="5" itemprop="weekDay">Fri:</time></span><span class="child_hours"><time time="8:00 am" itemprop="startTime">8:00 am</time><span class="child_dash"> - </span><time time="3:00 pm" itemprop="endTime">3:00 pm</time></span></li><li><span class="child_dayofweek"><time day="6" itemprop="weekEnd">Sat:</time></span><span class="child_replace">Closed</span></li><li><span class="child_dayofweek"><time day="7" itemprop="weekEnd">Sun:</time></span><span class="child_replace">Closed</span></li></ul></div>
+</div>
+		</div>      </div>
+
+
+      <div class="column is-half-touch is-full-mobile is-one-fifth-desktop">
+        <div id="nav_menu-2" class="widget_nav_menu"><h3>Our Services</h3><ul id="menu-services" class="menu"><li id="menu-item-823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-823"><a href="https://kallanpallydental.com/services/general-dentistry/">General Dentistry</a></li>
+<li id="menu-item-824" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-824"><a href="https://kallanpallydental.com/services/cosmetic-dentistry/">Cosmetic Dentistry</a></li>
+<li id="menu-item-825" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-825"><a href="https://kallanpallydental.com/services/restorative-dentistry/">Restorative Dentistry</a></li>
+<li id="menu-item-826" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-826"><a href="https://kallanpallydental.com/services/orthodontics/">Orthodontics</a></li>
+<li id="menu-item-827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-827"><a href="https://kallanpallydental.com/services/dental-guards-and-appliances/">Dental Guards and Appliances</a></li>
+<li id="menu-item-828" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a href="https://kallanpallydental.com/services/sedation-dentistry/">Sedation Dentistry</a></li>
+</ul></div>      </div>
+
+
+      <div class="column is-half-touch is-full-mobile is-one-fifth-desktop">
+        <div id="nav_menu-3" class="widget_nav_menu"><h3>About</h3><ul id="menu-about-menu" class="menu"><li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-100 current_page_item menu-item-829"><a href="https://kallanpallydental.com/about-us/" aria-current="page">About</a></li>
+<li id="menu-item-830" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-830"><a href="https://kallanpallydental.com/services/">Dental Services and Technology</a></li>
+<li id="menu-item-832" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832"><a href="https://kallanpallydental.com/contact/new-patients/">New Patients</a></li>
+<li id="menu-item-1693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1693"><a href="https://kallanpallydental.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1909"><a href="https://kallanpallydental.com/terms-of-use/">Terms of Use</a></li>
+</ul></div>      </div>
+
+
+    </div>
+
+
+
+  </div>
+  <div class="secondary">
+    <div class="container ">
+      <div class="columns">
+        <div class="column">
+          <p>
+            <span>Copyright © 2026 Kallanpally Dental Clinic</span>
+          </p>
+        </div>
+        <div class="column">
+          <div class="socialIcons"><a href="https://www.instagram.com/kallanpallydentalclinic/" target="_new"><svg class="icon closeIcon"><use xlink:href="#icon-instagram"></use></svg></a>  <a href="https://www.facebook.com/KallanpallyDentalClinic" target="_new"><svg class="icon closeIcon"><use xlink:href="#icon-facebook"></use></svg></a>       <a href="mailto:info@kallanpallydental.com"><svg class="icon closeIcon"><use xlink:href="#icon-envelope-o"></use></svg></a></div>        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<!-- /wrapper -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/Sonder-Client/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+			<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script type="text/javascript" src="https://kallanpallydental.com/wp-content/themes/Sonder-Client/js/scripts-compiled-min.js?ver=1.0.0" id="html5blankscripts-js"></script>
+<script type="text/javascript" id="seopatchr-public-js-js-after">
+/* <![CDATA[ */
+
+(function() {
+    document.addEventListener("click", function(e) {
+        var el = e.target;
+        while (el && el.tagName !== "A") {
+            el = el.parentElement;
+        }
+        if (el && el.tagName === "A") {
+            var href = el.getAttribute("href") || "";
+            if (href.indexOf("#seopatchr-unlinked") === 0) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+            }
+        }
+    }, true);
+})();
+        
+//# sourceURL=seopatchr-public-js-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.3" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHJNbFYMRJYnBvoCuj1zED-1SDJitKuAc" id="google-api-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.0.2" id="elementor-webpack-runtime-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.0.2" id="elementor-frontend-modules-js"></script>
+<script id="" text="" charset="" type="text/javascript" src="//cdn.callrail.com/companies/584227862/154ce0dafafa08de406b/12/swap.js"></script><script id="" text="" charset="" type="text/javascript" src="https://oswidget.carecru.ca/widgets/05472059-19ea-4eb5-9b4c-30d463018e87/cc.js"></script><script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","jtc16dk4sh");</script><script id="" text="" charset="" type="text/javascript" src="https://next-api.patientprism.com/v1/snippet/9ed0cc69-d338-40e0-8bd7-c9ddf550653b"></script><script type="text/javascript" id="elementor-frontend-js-before">
+/* <![CDATA[ */
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.0.2","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"theme_builder_v2":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_widget_creation":true,"import-export-customization":true,"e_pro_atomic_form":true,"e_pro_variables":true,"e_pro_interactions":true},"urls":{"assets":"https:\/\/kallanpallydental.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/kallanpallydental.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/kallanpallydental.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"b7cd0c2964","atomicFormsSendForm":"e06470fcee"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":100,"title":"About%20Kallanpally%20Dental%20Clinic%20%7C%20Dental%20Clinic%20Slave%20Lake","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.0.2" id="elementor-frontend-js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
+<script type="text/javascript" id="gforms_recaptcha_recaptcha-js-extra">
+/* <![CDATA[ */
+var gforms_recaptcha_recaptcha_strings = {"nonce":"96065d1770","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https://kallanpallydental.com/wp-content/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LcTMU0mAAAAAJYGLqGJKJFnM4XgIMt1JAJhENyy"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6LcTMU0mAAAAAJYGLqGJKJFnM4XgIMt1JAJhENyy&amp;ver=2.2.2" id="gforms_recaptcha_recaptcha-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.2.2" id="gforms_recaptcha_frontend-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=4.0.2" id="elementor-pro-webpack-runtime-js"></script>
+<script type="text/javascript" id="elementor-pro-frontend-js-before">
+/* <![CDATA[ */
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/kallanpallydental.com\/wp-admin\/admin-ajax.php","nonce":"6547dd924a","urls":{"assets":"https:\/\/kallanpallydental.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/kallanpallydental.com\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/kallanpallydental.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.0.2" id="elementor-pro-frontend-js"></script>
+<script type="text/javascript" src="https://kallanpallydental.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.0.2" id="pro-elements-handlers-js"></script><svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
+ <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "EHAt5TiNes");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><script data-account="EHAt5TiNes" src="https://cdn.userway.org/widget.js"></script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+
+<script>
+  if (!Modernizr.svg) {
+    $('img[src*="svg"]').attr('src', function() {
+      return $(this).attr('src').replace('.svg', '.png');
+    });
+  }
+</script>
+
+
+<script>
+  jQuery.each(window.deferAfterjQueryLoaded, function(index, fn) {
+    fn();
+  });
+</script>
+
+
+
+
+
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;fb37bc5dd4914ecd97008ead7b602eef&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+
+<p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" hidden="">Notifications</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div><div class="CareCruModal"><div class="CareCruModalInner"><iframe width="100%" scrolling="no" src="https://oswidget.carecru.ca/widgets/05472059-19ea-4eb5-9b4c-30d463018e87/app/book?ref=" id="CareCruIframe" style="height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; overflow: hidden;" title="CareCru"></iframe></div></div><div class="CareCruFadeIn CareCruButton Book"><div class="CareCruButtonIcon"><svg class="CareCruButtonIconSVG" viewBox="0 0 184 167" xmlns="http://www.w3.org/2000/svg"><path d="M170.486 6.775c7.462 0 13.511 6.049 13.511 13.511v132.935c0 7.462-6.049 13.512-13.511 13.512H13.931c-7.461 0-13.51-6.05-13.51-13.512V20.284c0-7.461 6.048-13.509 13.509-13.509h22.038V1.954c0-.809.655-1.465 1.465-1.465h18.999c.809 0 1.465.656 1.465 1.465v4.821h66.853V1.954c0-.809.656-1.465 1.465-1.465h19.001c.81 0 1.465.656 1.465 1.465v4.821h23.805zm-3.843 147.071a3.611 3.611 0 0 0 3.609-3.613V44.279a3.61 3.61 0 0 0-3.609-3.613H18.374a3.61 3.61 0 0 0-3.609 3.613v105.954a3.611 3.611 0 0 0 3.609 3.613h148.269zm-40.331-72.672a3.358 3.358 0 0 1 0 4.745l-38.846 38.846c-.371.37-.811.608-1.275.769-1.004.739-2.403.698-3.311-.212l-24.406-24.404a2.569 2.569 0 0 1 0-3.631l7.598-7.597a2.567 2.567 0 0 1 3.631 0l15.19 15.19 30.19-30.189a3.355 3.355 0 0 1 4.746 0l6.483 6.483z" fill="#FFFFFE" fill-rule="evenodd"></path></svg></div><div><strong class="CareCruButtonIconBook">Book</strong> Online</div></div><script src="https://cdn.userway.org/widgetapp/2026-06-09-08-22-25/widget_app_base_1780993345047.js" async="" id="a11yWidgetSrc" crossorigin="anonymous" integrity="sha256-elUiDlZQ7KB3gzFxrCiA2ABCTDxwVC55nwiRzU3Ugkc="></script><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-j6kw8wjfxola" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcTMU0mAAAAAJYGLqGJKJFnM4XgIMt1JAJhENyy&amp;co=aHR0cHM6Ly9rYWxsYW5wYWxseWRlbnRhbC5jb206NDQz&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=nvkt691gqhat"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><script crossorigin="anonymous" integrity="sha256-D54btnHmAP+zTQ3UmPIA6BqfpsrDqwlmcYrqprO//iU=" src="https://cdn.userway.org/widgetapp/2026-06-09-08-22-25/remediation/remediation_1780993345047.js"></script></body></html>
