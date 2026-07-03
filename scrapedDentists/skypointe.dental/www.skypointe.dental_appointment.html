@@ -1,0 +1,3247 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Online Booking</title>
+	<!-- App favicon -->
+	<link rel="shortcut icon" href="/rsm/images/rmFavicon.ico">
+
+	<link rel="shortcut icon" href="/rsm/images/rmFavicon.ico">
+	<link rel="stylesheet" href="/rsm/css/general-theme.css">
+	<link rel="stylesheet" href="/rsm/css/rm-icons.css">
+
+	<script src="/rsm/js/bootstrap.bundle.min.js"></script>
+	<script src="/rsm/webjars/jquery/jquery.min.js"></script>
+	<style>
+        :root {
+            --bs-primary: #00A4B5;
+            --bs-primary-rgb: 0, 164, 181;
+
+            --bs-primary-shade-10: color-mix(in srgb, var(--bs-primary) 90%, black);
+            --bs-primary-shade-20: color-mix(in srgb, var(--bs-primary) 80%, black);
+
+            --bs-primary-border-subtle: color-mix(in srgb, var(--bs-primary) 60%, white);
+
+            --bs-primary-100: color-mix(in srgb, var(--bs-primary) 10%, white);
+        }
+
+        .bg-primary-100 {
+            background-color: var(--bs-primary-100);
+        }
+
+        .progress {
+            --bs-progress-bar-bg: var(--bs-primary);
+            margin: 3rem 1rem 2rem;
+        }
+
+        .btn-primary {
+            --bs-btn-font-weight: 600;
+            --bs-btn-bg: var(--bs-primary);
+            --bs-btn-border-color: var(--bs-primary);
+
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: var(--bs-primary-shade-10);
+            --bs-btn-hover-border-color: var(--bs-primary-shade-10);
+
+            --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: var(--bs-primary-shade-20);
+            --bs-btn-active-border-color: var(--bs-primary-shade-20);
+
+            --bs-btn-disabled-bg: var(--bs-primary);
+            --bs-btn-disabled-border-color: var(--bs-primary);
+        }
+
+        .btn-outline-primary {
+            --bs-btn-color: var(--bs-primary);
+            --bs-btn-bg: transparent;
+            --bs-btn-border-color: var(--bs-primary);
+            --bs-gradient: none;
+
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: var(--bs-primary);
+            --bs-btn-hover-border-color: var(--bs-primary);
+
+            --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+
+            --bs-btn-active-color: var(--bs-white);
+            --bs-btn-active-bg: var(--bs-primary-shade-20);
+            --bs-btn-active-border-color: var(--bs-primary-shade-20);
+
+            --bs-btn-disabled-color: var(--bs-primary);
+            --bs-btn-disabled-bg: transparent;
+            --bs-btn-disabled-border-color: var(--bs-primary);
+        }
+
+        .form-control:focus {
+            border-color: color-mix(in srgb, var(--bs-primary) 50%, white);
+            box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+        }
+
+        .form-check-input:checked {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+
+        .form-check-input:focus {
+            box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+        }
+
+        .link-primary:hover, .link-primary:focus {
+            color: color-mix(in srgb, var(--bs-primary) 80%, black) !important;
+            text-decoration-color: color-mix(in srgb, var(--bs-primary) 80%, black) !important;
+        }
+
+        .offcanvas.offcanvas-bottom {
+            height: auto !important;
+            max-height: 66vh !important;
+        }
+
+        @media (max-width: 575.98px) {
+            .progress-label {
+                display: none;
+            }
+        }
+
+        #apptTypeContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: 1fr;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 576px) {
+            #apptTypeContainer {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 1rem
+            }
+
+            /* Target the last item when it's alone in the last row */
+            #apptTypeContainer > *:last-child:nth-child(3n + 1):not(:nth-child(3n)):not(:nth-child(3n-1)) {
+                grid-column: 2;
+            }
+
+            /* Target the last two items when they are alone in the last row */
+            #apptTypeContainer > *:nth-last-child(2):nth-child(3n + 1),
+            #apptTypeContainer > *:nth-last-child(1):nth-child(3n + 2) {
+                transform: translateX(50%);
+            }
+        }
+	</style>
+	
+	<script>
+		function getSessionId(name){
+			let namePart = name + '=';
+			let cookieString = decodeURIComponent(document.cookie);
+			let cookieArray = cookieString.split(';');
+			let result = null;
+			for(let i = 0; i<cookieArray.length; i++ ){
+				let trimmedSection = cookieArray[i].trim();
+				if (trimmedSection.indexOf(namePart) == 0) {
+					return trimmedSection.substring(namePart.length, trimmedSection.length);
+				}
+			}
+			return null;
+		}
+	</script>
+<style>
+      .nav-buttons {
+        align-self: start;
+        padding-top: 8px;
+      }
+      
+      .calendar-grid {
+        width: 100%;
+      }
+      
+      .calendar-grid th {
+        text-align: center;
+        font-weight: normal;
+        color: var(--bs-max-gray);
+        padding: 10px 0;
+      }
+      
+      .calendar-grid td {
+        text-align: center;
+        padding: 8px 0;
+      }
+      
+      .week-day-container {
+        flex: 1;
+        width: calc(100% / 7);
+        min-width: 0;
+      }
+      
+      .week-day-container.disabled .day-btn {
+        text-decoration: line-through;
+      }
+      
+      .week-day-container:not(.disabled):hover {
+        color: var(--bs-body-color);
+        background-color: #f0f0f0;
+        cursor: pointer;
+      }
+      
+      .week-day-container.today {
+        border: 1px solid var(--bs-primary) !important;
+      }
+      
+      td .today {
+        border: 1px solid var(--bs-primary) !important;
+      }
+      
+      @media (hover: hover) {
+	      td .day-btn:not(.disabled):hover {
+	        color: var(--bs-body-color);
+	        background-color: #f0f0f0;
+	        cursor: pointer;
+	      }
+      }
+      
+      @media (hover: none) {
+	     td .day-btn:not(.disabled):hover {
+	        color: var(--bs-btn-hover-color) !important;
+	        background-color: var(--bs-primary) !important;
+	        border-color: var(--bs-primary) !important;
+	      }
+      }
+      
+      td .disabled {
+        text-decoration: line-through;
+      }
+      
+      .toggle-btn, .nav-buttons button {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      
+      .month-view {
+        display: none;
+      }
+      
+      /* Weekly view animations */
+      .week-slide-container {
+        position: relative;
+        overflow: hidden;
+        height: 80px;
+      }
+      
+      .week-slide {
+        position: absolute;
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2px;
+      }
+      
+      .slide-in-right {
+        transform: translateX(100%);
+        animation: slideInRight 0.3s forwards;
+      }
+      
+      .slide-in-left {
+        transform: translateX(-100%);
+        animation: slideInLeft 0.3s forwards;
+      }
+      
+      .slide-out-left {
+        transform: translateX(0);
+        animation: slideOutLeft 0.3s forwards;
+      }
+      
+      .slide-out-right {
+        transform: translateX(0);
+        animation: slideOutRight 0.3s forwards;
+      }
+      
+      @keyframes slideInRight {
+        from { transform: translateX(100%); }
+        to { transform: translateX(0); }
+      }
+      
+      @keyframes slideInLeft {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+      }
+      
+      @keyframes slideOutLeft {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+      }
+      
+      @keyframes slideOutRight {
+        from { transform: translateX(0); }
+        to { transform: translateX(100%); }
+      }
+      
+      .slide-up {
+        overflow: hidden;
+        animation: slideUpHeight 0.4s forwards;
+      }
+      
+      .slide-down {
+        overflow: hidden;
+        animation: slideDownHeight 0.4s forwards;
+      }
+      
+      @keyframes slideUpHeight {
+        from {
+          max-height: 375px;
+          opacity: 1;
+        }
+        to {
+          max-height: 0;
+          opacity: 0;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+      
+      @keyframes slideDownHeight {
+        from {
+          max-height: 0;
+          opacity: 0;
+        }
+        to {
+          max-height: 270px;
+          opacity: 1;
+        }
+      }
+      
+      /* For transition between views */
+      .calendar-transition {
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        overflow: hidden;
+      }
+      
+      /* Icon rotation animation */
+      .toggle-btn i {
+        transition: transform 0.3s ease;
+      }
+      
+      #toggleIcon:not(.icon-rotated) {
+        transform: translateY(-1px);
+      }
+      
+      .icon-rotated {
+        transform: rotate(180deg) translateY(-2px);
+      }
+      
+      /* Month view animations */
+      .month-slide-container {
+        position: relative;
+        overflow: hidden;
+        height: 270px;
+      }
+      
+      .month-slide {
+        position: absolute;
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .slide-month-in-right {
+        transform: translateX(100%);
+        animation: slideInRight 0.3s forwards;
+      }
+      
+      .slide-month-in-left {
+        transform: translateX(-100%);
+        animation: slideInLeft 0.3s forwards;
+      }
+      
+      .slide-month-out-left {
+        transform: translateX(0);
+        animation: slideOutLeft 0.3s forwards;
+      }
+      
+      .slide-month-out-right {
+        transform: translateX(0);
+        animation: slideOutRight 0.3s forwards;
+      }
+       
+      @media (min-width: 576px) {
+        .week-slide {
+          gap: 12px;
+        }
+       
+        .calendar-grid td {
+          padding: 8px;
+		}
+      }
+    </style></head>
+<body class="overflow-hidden">
+
+
+
+<div class="d-flex flex-column align-items-center vh-100">
+	
+	<header class="bg-white sticky-top border-bottom flex-shrink-0 w-100" style="min-height: 5.2rem; max-width: 660px;">
+		
+			
+			
+			
+				<div class="d-flex align-items-center gap-3 w-100 h-100 px-4 flex-wrap justify-content-center">
+					<img src="https://can10.recallmax.com/rsm/request/public/imageByType/73414/10/MjkxMjM0MDU5Mw==" alt="practice logo" class="img-fluid" style="max-height: 5rem; max-width: 250px;">
+					<div class="fw-bold fs-4 text-center">Skypointe Dental</div>
+				</div>
+			
+		
+	</header>
+
+	<main class="d-flex flex-column position-relative w-100 p-2 p-sm-4 overflow-y-auto flex-grow-1" style="max-width: 660px;">
+		
+		<section id="progressSection" class="d-flex justify-content-center pb-6">
+			<div class="position-relative w-100 m-2" style="max-width: 26rem;">
+				<div class="progress m-0" style="height: .5rem;">
+					<div class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+				
+				<div class="progress-dots rounded-circle bg-primary text-white d-flex align-items-center justify-content-center position-absolute border border-primary-subtle border-2" style="width: .75rem; height: .75rem; left: 0; top: -25%;">
+				</div>
+				<div class="progress-dots rounded-circle bg-white text-white d-flex align-items-center justify-content-center position-absolute border border-2" style="width: .75rem; height: .75rem; left: calc(50% - .5rem); top: -25%;">
+				</div>
+				<div class="progress-dots rounded-circle bg-white text-white d-flex align-items-center justify-content-center position-absolute border border-2" style="width: .75rem; height: .75rem; left: calc(100% - .75rem); top: -25%;">
+				</div>
+				
+				<div class="progress-label position-absolute fw-bold text-primary" style="top: 15px; left: -2rem;">Appointment</div>
+				<div class="progress-label position-absolute" style="top: 15px; left: calc(50% - 2rem);">Patient Info</div>
+				<div class="progress-label position-absolute" style="top: 15px; left: calc(100% - 2rem);">Review</div>
+			</div>
+		</section>
+
+		
+		<section id="appointmentSection" class="step-section mt-7 p-2 p-sm-4 border rounded-4">
+			
+			<div>
+				<div class="fw-bold text-center">What type of appointment would you like to book?</div>
+				<div class="text-max-red text-center d-none" id="emptyApptTypesPreviewMode">There are no appointment types to preview. Please complete setup.</div>
+				<div id="apptTypeContainer" class="pt-5">
+                    <div class="apptTypeRadioBtn d-flex w-100">
+                        <input type="radio" class="btn-check" name="typeRadio" id="apptType0" value="10236" autocomplete="off">
+                        <label class="d-flex flex-sm-column align-items-center gap-1 gap-sm-0 btn btn-outline-primary border rounded-5 border-primary p-3 p-sm-4 w-100 h-100" for="apptType0">
+                            <i class="icon-clipboard fs-3"></i>
+                            <div class="appt-details text-start text-sm-center">
+                                <div class="appt-name-length d-sm-flex flex-sm-column">
+                                    <span class="appt-name">Emergency Exam</span>
+                                    <span class="appt-length">(30 mins)</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="apptTypeRadioBtn d-flex w-100">
+                        <input type="radio" class="btn-check" name="typeRadio" id="apptType1" value="10237" autocomplete="off">
+                        <label class="d-flex flex-sm-column align-items-center gap-1 gap-sm-0 btn btn-outline-primary border rounded-5 border-primary p-3 p-sm-4 w-100 h-100" for="apptType1">
+                            <i class="icon-dental-probe fs-3"></i>
+                            <div class="appt-details text-start text-sm-center">
+                                <div class="appt-name-length d-sm-flex flex-sm-column">
+                                    <span class="appt-name">Hygiene</span>
+                                    <span class="appt-length">(30 mins)</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="apptTypeRadioBtn d-flex w-100">
+                        <input type="radio" class="btn-check" name="typeRadio" id="apptType2" value="10239" autocomplete="off">
+                        <label class="d-flex flex-sm-column align-items-center gap-1 gap-sm-0 btn btn-outline-primary border rounded-5 border-primary p-3 p-sm-4 w-100 h-100" for="apptType2">
+                            <i class="icon-clipboard fs-3"></i>
+                            <div class="appt-details text-start text-sm-center">
+                                <div class="appt-name-length d-sm-flex flex-sm-column">
+                                    <span class="appt-name">Invisalign Consult</span>
+                                    <span class="appt-length">(30 mins)</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="apptTypeRadioBtn d-flex w-100">
+                        <input type="radio" class="btn-check" name="typeRadio" id="apptType3" value="10235" autocomplete="off">
+                        <label class="d-flex flex-sm-column align-items-center gap-1 gap-sm-0 btn btn-outline-primary border rounded-5 border-primary p-3 p-sm-4 w-100 h-100" for="apptType3">
+                            <i class="icon-clipboard fs-3"></i>
+                            <div class="appt-details text-start text-sm-center">
+                                <div class="appt-name-length d-sm-flex flex-sm-column">
+                                    <span class="appt-name">New Patient Exam</span>
+                                    <span class="appt-length">(30 mins)</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="apptTypeRadioBtn d-flex w-100">
+                        <input type="radio" class="btn-check" name="typeRadio" id="apptType4" value="10238" autocomplete="off">
+                        <label class="d-flex flex-sm-column align-items-center gap-1 gap-sm-0 btn btn-outline-primary border rounded-5 border-primary p-3 p-sm-4 w-100 h-100" for="apptType4">
+                            <i class="icon-dental-probe fs-3"></i>
+                            <div class="appt-details text-start text-sm-center">
+                                <div class="appt-name-length d-sm-flex flex-sm-column">
+                                    <span class="appt-name">Recall</span>
+                                    <span class="appt-length">(30 mins)</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="apptTypeRadioBtn d-flex w-100">
+                        <input type="radio" class="btn-check" name="typeRadio" id="apptType5" value="10240" autocomplete="off">
+                        <label class="d-flex flex-sm-column align-items-center gap-1 gap-sm-0 btn btn-outline-primary border rounded-5 border-primary p-3 p-sm-4 w-100 h-100" for="apptType5">
+                            <i class="icon-clipboard fs-3"></i>
+                            <div class="appt-details text-start text-sm-center">
+                                <div class="appt-name-length d-sm-flex flex-sm-column">
+                                    <span class="appt-name">Root Canal Treatment Consult</span>
+                                    <span class="appt-length">(15 mins)</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="apptTypeRadioBtn d-flex w-100">
+                        <input type="radio" class="btn-check" name="typeRadio" id="apptType6" value="10241" autocomplete="off">
+                        <label class="d-flex flex-sm-column align-items-center gap-1 gap-sm-0 btn btn-outline-primary border rounded-5 border-primary p-3 p-sm-4 w-100 h-100" for="apptType6">
+                            <i class="icon-clipboard fs-3"></i>
+                            <div class="appt-details text-start text-sm-center">
+                                <div class="appt-name-length d-sm-flex flex-sm-column">
+                                    <span class="appt-name">Wisdom Tooth Extraction Consult</span>
+                                    <span class="appt-length">(15 mins)</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div></div>
+			</div>
+
+			
+			<div id="availabilityContainer" class="d-flex flex-column align-items-center d-none">
+				<div class="mb-6 border-top my-5" style="width: 200px;"></div>
+				<div class="fw-bold text-center">Available Appointments</div>
+
+				
+				<div id="calendarContainer" class="w-100 mt-5 position-relative">
+        <!-- Calendar Header -->
+        <div id="calendarHeader" class="calendar-header d-flex align-items-center justify-content-between mb-5">
+          <div class="month-year fs-5 fw-bold" id="monthYear">Jun - Jul 2026</div>
+        </div>
+        
+        <!-- Month View -->
+        <div class="month-view" id="monthView">
+          <div class="month-slide-container" id="monthSlideContainer">
+            <div class="month-slide" id="currentMonthSlide">
+              <table class="calendar-grid">
+                <!-- Calendar days will be inserted here by JavaScript -->
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Week View (initially visible) -->
+        <div class="week-view" id="weekView">
+          <div class="week-slide-container" id="weekSlideContainer">
+            
+          <div class="week-slide" id="weekViewDays"><div class="nav-buttons"><button class="prevMonth btn btn-sm btn-outline-max-gray border border-max-gray disabled" disabled=""><i class="icon-chevron-left fs-7"></i></button></div><button class="week-day-container fs-7 fs-sm-6 text-center py-2 px-3 rounded-3 btn border-0 disabled" data-date="28-6-2026" disabled=""><div class="mb-3 week-day">Su</div><div class="day-btn disabled">28</div></button><button class="week-day-container fs-7 fs-sm-6 text-center py-2 px-3 rounded-3 btn border-0 disabled" data-date="29-6-2026" disabled=""><div class="mb-3 week-day">Mo</div><div class="day-btn disabled">29</div></button><button class="week-day-container fs-7 fs-sm-6 text-center py-2 px-3 rounded-3 btn border-0 disabled" data-date="30-6-2026" disabled=""><div class="mb-3 week-day">Tu</div><div class="day-btn disabled">30</div></button><button class="week-day-container fs-7 fs-sm-6 text-center py-2 px-3 rounded-3 btn border-0 disabled" data-date="1-7-2026" disabled=""><div class="mb-3 week-day">We</div><div class="day-btn disabled">1</div></button><button class="week-day-container fs-7 fs-sm-6 text-center py-2 px-3 rounded-3 btn border-0 disabled" data-date="2-7-2026" disabled=""><div class="mb-3 week-day">Th</div><div class="day-btn disabled">2</div></button><button class="week-day-container fs-7 fs-sm-6 text-center py-2 px-3 rounded-3 btn border-0 today disabled" data-date="3-7-2026" disabled=""><div class="mb-3 week-day">Fr</div><div class="day-btn disabled">3</div></button><button class="week-day-container fs-7 fs-sm-6 text-center py-2 px-3 rounded-3 btn border-0 selected btn-primary" data-date="4-7-2026"><div class="mb-3 week-day">Sa</div><div class="day-btn">4</div></button><div class="nav-buttons"><button class="nextMonth btn btn-sm btn-outline-max-gray border border-max-gray"><i class="icon-chevron-right fs-7"></i></button></div></div></div>
+        </div>
+        
+        <!-- Toggle Button -->
+        <div class="toggle-calendar d-flex justify-content-center mt-sm-5">
+          <button class="toggle-btn btn btn-sm btn-outline-max-gray" id="toggleView">
+            <i class="icon-chevron-down fs-7" id="toggleIcon"></i>
+          </button>
+        </div>
+    
+				<div id="calendarSpinner" class="d-flex w-100 justify-content-center position-absolute h-100 top-0 bg-white bg-opacity-75 d-none" style="">
+					<i class="d-block icon-rm-spinner"></i>
+				</div>
+			</div>
+
+				
+				<div class="offcanvas offcanvas-bottom" tabindex="-1" id="providerOffcanvas" aria-labelledby="providerOffcanvasLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="providerOffcanvasLabel">Providers</h5>
+						<button id="offcanvasApplyBtn" type="button" class="btn btn-sm btn-primary px-2 py-1 rounded-5" aria-label="apply">Apply</button>
+					</div>
+					<div class="offcanvas-body">
+						<div id="providerOffcanvasContent" class="d-flex flex-column gap-3">
+							<!-- Provider options will be populated here -->
+						</div>
+					</div>
+				</div>
+
+				
+				<div id="availableTimesContainer" class="w-100">
+					<hr class="my-4">
+					<div id="dateTitle" class="fw-bold fs-5"></div>
+
+					<div id="noApptAvailableContainer" class="my-4 d-none">
+						<div id="nextAvailableDate" class="mb-4"></div>
+						<button id="goToNextApptBtn" class="btn btn-sm btn-primary w-100 px-2 py-1 rounded-5">Go to next available appointment</button>
+					</div>
+
+					<div id="apptAvailableContainer" class="d-none">
+						<!-- Available time slots will be populated here -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+		<section id="patientInfoSection" class="step-section mt-7 p-4 border rounded-4 d-none">
+			<div class="fw-bold text-center">Patient Information</div>
+			<form id="patientInfoForm" class="needs-validation pt-5" novalidate="">
+				<div class="my-2 d-flex justify-content-end">
+					<button id="testPatientBtn" class="btn btn-sm btn-outline-primary border border-primary rounded-5 px-2 py-1 d-none" type="button">Test Patient</button>
+				</div>
+				<div class="row gx-5 gy-4">
+					<div class="col-sm-6">
+						<label for="firstName" class="form-label">First name <span class="text-max-red">*</span></label>
+						<input type="text" class="form-control" id="firstName" required="">
+						<div class="invalid-feedback">Required</div>
+					</div>
+					<div class="col-sm-6">
+						<label for="lastName" class="form-label">Last name <span class="text-max-red">*</span></label>
+						<input type="text" class="form-control" id="lastName" required="">
+						<div class="invalid-feedback">Required</div>
+					</div>
+					<div class="col-6">
+						<label for="dob" class="form-label">Birth Date <span class="text-max-red">*</span></label>
+						<input type="date" class="form-control" id="dob" required="" max="2026-07-03">
+						<div class="invalid-feedback">Required</div>
+					</div>
+					<div class="col-6">
+						<label for="phone" class="form-label">Cell <span class="text-max-red">*</span></label>
+						<input type="tel" class="form-control" id="phone" pattern="(?!.*0000000)[2-9]{1}[0-9]{9}" maxlength="10" required="">
+						<div class="invalid-feedback">Required</div>
+					</div>
+					<div class="col-12">
+						<label for="email" class="form-label">Email <span class="text-max-red">*</span></label>
+						<input type="email" class="form-control" id="email" required="">
+						<div class="invalid-feedback">Required</div>
+					</div>
+					
+					
+						<div class="col-12">
+							<label class="form-label">Are you using Canadian Dental Care Plan (CDCP)? <i class="icon-info-circle" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="The Canadian Dental Care Plan (CDCP) is an application-based federal government program intended for Canadians without a dental plan." data-bs-trigger="hover"></i> <span class="text-max-red">*</span></label>
+							<div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="cdcp" id="cdcpYes" value="yes" required="">
+									<label class="form-check-label" for="cdcpYes">Yes</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="cdcp" id="cdcpNo" value="no" required="">
+									<label class="form-check-label" for="cdcpNo">No</label>
+								</div>
+								<div class="invalid-feedback">Required</div>
+							</div>
+						</div>
+					
+					<div class="col-12">
+						<label class="form-label">Are you an existing patient? <span class="text-max-red">*</span></label>
+						<div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="existingPatient" id="existingPatientYes" value="yes" required="">
+								<label class="form-check-label" for="existingPatientYes">Yes</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="existingPatient" id="existingPatientNo" value="no" required="">
+								<label class="form-check-label" for="existingPatientNo">No</label>
+							</div>
+							<div class="invalid-feedback">Required</div>
+						</div>
+					</div>
+                    
+                    <div class="col-12 d-none" id="genderSection">
+                        <label class="form-label" for="gender">Gender: <span class="text-max-red">*</span></label>
+                        <div class="invalid-feedback">Required</div>
+                    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="Male" value="0" required="">
+                            <label class="form-check-label" for="Male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="Female" value="1" required="">
+                            <label class="form-check-label" for="Female">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="Unknown" value="2" required="">
+                            <label class="form-check-label" for="Unknown">Unknown</label>
+                        </div></div>
+					
+					
+						<div id="snlCheckboxCol" class="col-12 d-none">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="notifyEarlier">
+								<label class="form-check-label" for="notifyEarlier">Please notify me if any earlier appointments become available.
+									<i class="icon-info-circle" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Upon selecting, we will add you to a waitlist. We will contact you if any earlier appointments become available." data-bs-trigger="hover"></i>
+								</label>
+							</div>
+						</div>
+					
+					<div class="col-12">
+						<label for="note" class="form-label">Notes</label>
+						<textarea class="form-control" id="note" rows="3" placeholder="Anything you would like us to know?" maxlength="500"></textarea>
+						<div class="invalid-feedback">Notes cannot exceed 500 characters.</div>
+					</div>
+				</div>
+			</form>
+		</section>
+
+		
+		<section id="apptReviewSection" class="step-section p-4 border rounded-4 d-none">
+			<div class="fw-bold text-center mb-5">Appointment Review</div>
+			<div class="alert alert-max-orange p-4 mb-5">
+				Please take a moment to review the details below, and click 'Reserve Appointment' when you're ready.
+				If any adjustments are needed for your appointment time,
+				our team will contact you shortly.
+			</div>
+			<div class="d-flex align-items-center justify-content-center gap-3 mb-5">
+				<div class="border-top flex-grow-1"></div>
+				<div class="d-flex align-items-center gap-2">
+					<i class="icon-calendar-dot fs-5"></i>
+					<span class="fw-bold">Appointment(s)</span>
+				</div>
+				<div class="border-top flex-grow-1"></div>
+			</div>
+
+			<div id="reviewApptContainer" class="row gx-4 gy-5 justify-content-center">
+				<!-- Review cards will be populated here -->
+			</div>
+
+			<div class="d-flex w-100 justify-content-center mt-5">
+				<button id="addAnotherPatientBtn" class="btn btn-sm btn-outline-max-gray px-2 py-1 rounded-5"><i class="icon-plus"></i> Add Another Patient</button>
+			</div>
+
+			
+			<div id="guardianInfoSection" class="d-none">
+				<div class="d-flex align-items-center justify-content-center gap-3 mt-5">
+					<div class="border-top flex-grow-1"></div>
+					<div class="d-flex align-items-center gap-2">
+						<i class="icon-person fs-5"></i>
+						<span class="fw-bold">Guardian Information</span>
+					</div>
+					<div class="border-top flex-grow-1"></div>
+				</div>
+
+				<form id="guardianInfoForm" class="needs-validation pt-5" novalidate="">
+					<div class="row gx-5 gy-4">
+						<div class="col-sm-6">
+							<label for="guardianFirstName" class="form-label">Legal First Name <span class="text-max-red">*</span></label>
+							<input type="text" class="form-control" id="guardianFirstName" required="">
+							<div class="invalid-feedback">Guardian's first name is required.</div>
+						</div>
+						<div class="col-sm-6">
+							<label for="guardianLastName" class="form-label">Legal Last Name <span class="text-max-red">*</span></label>
+							<input type="text" class="form-control" id="guardianLastName" required="">
+							<div class="invalid-feedback">Guardian's last name is required.</div>
+						</div>
+						<div class="col-sm-6">
+							<label for="guardianEmail" class="form-label">Email <span class="text-max-red">*</span></label>
+							<input type="email" class="form-control" id="guardianEmail" required="">
+							<div class="invalid-feedback">Please enter a valid email address.</div>
+						</div>
+						<div class="col-sm-6">
+							<label for="guardianCell" class="form-label">Cell <span class="text-max-red">*</span></label>
+							<input type="tel" class="form-control" id="guardianCell" pattern="(?!.*0000000)[2-9]{1}[0-9]{9}" maxlength="10" required="">
+							<div class="invalid-feedback">Guardian's cell phone number is required.</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		
+		<section id="confirmationSection" class="p-4 border rounded-4 d-none">
+			<div class="fw-bold text-center mb-5">Thank You</div>
+			
+				<div class="mb-5">You have successfully scheduled your appointment(s) with us. We will be sending you an email confirmation shortly.</div>
+			
+			
+			<div class="d-flex align-items-center justify-content-center gap-3 mb-5">
+				<div class="border-top flex-grow-1"></div>
+				<div class="d-flex align-items-center gap-2">
+					<i class="icon-calendar-dot fs-5"></i>
+					<span class="fw-bold">Appointment(s)</span>
+				</div>
+				<div class="border-top flex-grow-1"></div>
+			</div>
+
+			<div id="confirmApptContainer" class="row gx-4 gy-5 justify-content-center">
+				<!-- confirmation cards will be populated here -->
+			</div>
+
+			<div class="mt-5">If you have any questions or concerns regarding the appointment(s) you reserved, please do not hesitate to call. We look forward to seeing you.</div>
+			<div class="mt-5">
+				<div>Skypointe Dental</div>
+				<div>(403) 475-1222</div>
+			</div>
+		</section>
+
+		
+		<section id="stepSection" class="mt-7 mb-4 d-flex justify-content-between">
+			<button id="prevStepBtn" class="btn btn-sm btn-outline-max-gray py-1 px-2 rounded-5 invisible">Previous</button>
+			<button id="nextStepBtn" class="btn btn-sm btn-primary py-1 px-2 rounded-5" disabled="">Next Step</button>
+		</section>
+
+		
+		<section id="reservationSection" class="mt-7 mb-4 d-flex justify-content-end d-none">
+			<button id="reserveBtn" class="btn btn-sm btn-primary py-1 px-2 rounded-5">Reserve Appointment</button>
+		</section>
+
+		
+		<section class="flex-fill"></section>
+
+		
+		<section class="d-flex flex-column align-items-center p-4">
+			<div class="mb-6 border-top" style="width: 200px;"></div>
+
+			<div class="bg-primary-100 p-5 rounded-3 w-100 d-flex flex-column align-items-center">
+				<div class="fs-7">If you have any questions or can't find an appointment that works for you, please contact us.</div>
+				<div class="border-top my-2" style="width: 50px;"></div>
+
+				<div class="fw-bold">Skypointe Dental</div>
+
+				<div class="mt-2 d-flex align-items-center gap-2 justify-content-center flex-wrap w-auto">
+					<a href="tel:4034751222" class="btn btn-sm btn-outline-max-gray border border-max-gray rounded-5 py-1 px-2 text-decoration-none">
+						<i class="icon-telephone"></i>
+						<span>(403) 475-1222</span>
+					</a>
+					<a href="mailto:reception@skypointe.dental" class="btn btn-sm btn-outline-max-gray border border-max-gray rounded-5 py-1 px-2 text-decoration-none">
+						<i class="icon-envelope"></i>
+						<span>reception@skypointe.dental</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="fst-italic fs-7">Online booking powered by <strong>MaxAssist®</strong></div>
+		</section>
+	</main>
+</div>
+
+<!-- Session Timeout Warning Modal -->
+<div class="modal fade" id="sessionTimeoutModal" tabindex="-1" aria-labelledby="sessionTimeoutModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content p-4 rounded-3">
+			<div class="fw-bold text-uppercase">Inactivity Warning</div>
+			<div class="my-4">Your session is about to expire soon.</div>
+			<div class="d-flex justify-content-end">
+				<button id="sessionContinueBtn" class="btn btn-sm btn-primary rounded-5 py-1 px-2">Continue booking</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Timeslot no longer available modal -->
+<div class="modal fade" id="apptGoneModal" tabindex="-1" aria-labelledby="apptGoneModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content p-4 rounded-3">
+			<div class="fw-bold text-uppercase">Error</div>
+			<div class="my-4">This timeslot is no longer available. Please choose another day or time for your appointment</div>
+			<ul id="apptGoneModalPatientsList" class="my-4 text-danger"></ul>
+			<div class="d-flex justify-content-end">
+				<button id="apptGoneModalBtn" class="btn btn-sm btn-primary rounded-5 py-1 px-2 text-uppercase">Ok</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Appointment Removal Modal -->
+<div class="modal fade" id="apptRemovalModal" tabindex="-1" aria-labelledby="apptRemovalModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content p-4 rounded-3">
+			<div class="fw-bold text-uppercase">Remove</div>
+			<div class="my-4 text-max-red">Are you sure you would like to remove this appointment?</div>
+			<div class="d-flex justify-content-end gap-2">
+				<button id="apptRemovalCancelBtn" class="btn btn-sm btn-outline-primary border border-primary rounded-5 py-1 px-2">No</button>
+				<button id="apptRemovalSubmitBtn" class="btn btn-sm btn-primary rounded-5 py-1 px-2">Yes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/rsm/js/calendar-widget.js"></script>
+
+<script>
+
+	$(document).ready(function () {
+		window.previewMode = false;
+
+		// Spinner HTML
+		window.spinner = `
+            <div class="d-flex w-100 justify-content-center">
+                <i class="d-block icon-rm-spinner"></i>
+            </div>
+        `;
+
+		// Cache JQuery elements
+		window.elements = {
+			$progressSection: $('#progressSection'),
+			$appointmentSection: $('#appointmentSection'),
+			$apptTypeContainer: $('#apptTypeContainer'),
+			$availabilityContainer: $('#availabilityContainer'),
+			$calendarContainer: $('#calendarContainer'),
+			$availableTimesContainer: $('#availableTimesContainer'),
+			$providerOffcanvasContent: $('#providerOffcanvasContent'),
+			$dateTitle : $('#dateTitle'),
+			noApptAvailableContainer: $('#noApptAvailableContainer'),
+			apptAvailableContainer: $('#apptAvailableContainer'),
+			nextAvailableDate: $('#nextAvailableDate'),
+			$goToNextApptBtn: $('#goToNextApptBtn'),
+			stepSection: $('#stepSection'),
+			nextStepBtn: $('#nextStepBtn'),
+			prevStepBtn: $('#prevStepBtn'),
+			reservationSection: $('#reservationSection'),
+			$reserveBtn: $('#reserveBtn'),
+			// Patient info form fields
+			$patientInfoSection: $('#patientInfoSection'),
+			$testPatientBtn: $('#testPatientBtn'),
+			$patientForm: $('#patientInfoForm'),
+			$firstName: $('#firstName'),
+			$lastName: $('#lastName'),
+			$dob: $('#dob'),
+			$phone: $('#phone'),
+			$email: $('#email'),
+			$cdcpYes: $('#cdcpYes'),
+			$cdcpNo: $('#cdcpNo'),
+			$ascendInfo: $('#ascendInfo'),
+			$address: $('#address'),
+			$zipcode: $('#zipcode'),
+			$city: $('#city'),
+			$state: $('#state'),
+			$existingPatientYes: $('#existingPatientYes'),
+			$existingPatientNo: $('#existingPatientNo'),
+            $genderSection: $('#genderSection'),
+			$insuranceQuestion: $('#insuranceQuestion'),
+			$insuranceInfo: $('#insuranceInfo'),
+			$insuranceYes: $('#insuranceYes'),
+			$insuranceNo: $('#insuranceNo'),
+			$insuranceBring: $('#insuranceBring'),
+			$insuranceCompany: $('#insuranceCompany'),
+			$subscriberName: $('#subscriberName'),
+			$memberId: $('#memberId'),
+			$groupId: $('#groupId'),
+			$insurancePhone: $('#insurancePhone'),
+			$snlCheckboxCol: $('#snlCheckboxCol'),
+			$notifyEarlier: $('#notifyEarlier'),
+			$note: $('#note'),
+			// Session
+			$sessionTimeoutModal: $('#sessionTimeoutModal'),
+			$sessionContinueBtn: $('#sessionContinueBtn'),
+			//Appt Gone Modal
+			$apptGoneModal: $('#apptGoneModal'),
+			$apptGoneModalBtn: $('#apptGoneModalBtn'),
+			// Review
+			$apptReviewSection: $('#apptReviewSection'),
+			$reviewApptContainer: $('#reviewApptContainer'),
+			$addAnotherPatientBtn: $('#addAnotherPatientBtn'),
+			// Appt removal
+			$apptRemovalModal: $('#apptRemovalModal'),
+			$apptRemovalCancelBtn: $('#apptRemovalCancelBtn'),
+			$apptRemovalSubmitBtn: $('#apptRemovalSubmitBtn'),
+			// Guardian
+			$guardianInfoSection: $('#guardianInfoSection'),
+			$guardianInfoForm: $('#guardianInfoForm'),
+			$guardianFirstName: $('#guardianFirstName'),
+			$guardianLastName: $('#guardianLastName'),
+			$guardianEmail: $('#guardianEmail'),
+			$guardianCell: $('#guardianCell'),
+			// Confirmation
+			$confirmationSection: $('#confirmationSection'),
+			$confirmApptContainer: $('#confirmApptContainer'),
+		};
+
+		const accountIdEnc = 'bgGf5HMk9UEPpG200y2ztdmF_fdSkCNrK';
+        const genderHash = {
+            0: 'Male', 1: 'Female', 2: 'Unknown',  3: 'Other', 4: 'NonBinary', 5: 'Transgender'
+        };
+        const genderOptions = [0, 1, 2];
+		// Session
+		const sessionId = 'client_1783044439658_7119';
+		const isAscendPractice = false
+		window.sessionTimeoutMinutes = 30;
+		window.sessionWarningMinutes = Math.max(1, Math.floor(sessionTimeoutMinutes * 0.17));
+		window.sessionWarningTimeMs = (sessionTimeoutMinutes - sessionWarningMinutes) * 60 * 1000;
+
+		//google analytics
+		let gA4IdSessionId = '';
+		let gA4IdUserId = '';
+		let gA4ClickId = '';
+
+		let sessionTimer;
+		let sessionWarningTimer;
+
+		// Patient
+		window.patientsData = [];
+		window.patientCount = 1;
+		window.currentPatientId = null;
+
+		window.minBookingDaysFromToday = 1;
+		window.maxBookingMonthsInFuture = 6;
+
+		window.selectedApptType = null;
+		window.selectedProviders = [];
+
+		let appointmentDataPromise = null;
+
+		window.currentStep = 1; // 1: appointment, 2: patientInfo, 3: review
+		window.selectedTimeSlot = null;
+
+		window.selectedRemoveButton = null;
+
+		// Start the page
+		init();
+
+		// Init
+		function init() {
+			// Create first patient template
+			initPatientBooking();
+
+			// Start session management
+			initSession();
+			elements.$sessionContinueBtn.on('click', extendSession);
+            //If the appointment is no longer available, go back to the main screen.
+            elements.$apptGoneModalBtn.on('click', appointmentExpired);
+
+			// Load the appt data
+			loadAppointmentTypes().then(() => {
+				fillApptTypeContainer(); // Once the appt data is gathered, fill the page.
+			});
+
+			// Initialize the Calendar widget
+			initCalendarWidget();
+
+			// Init navigation
+			initNavigation();
+
+			// Set patient info form behavior
+			initPatientInfoForm();
+
+			// Handle click on "Go to next available appointment" button
+			window.elements.$goToNextApptBtn.on('click', function() {
+				const nextDate = $(this).data('nextDate');
+				if (nextDate) {
+					// Set a flag to indicate this selection is from the "next available" button
+					window.isNavigatingToNextAvailable = true;
+
+					if (window.calendarWidget && typeof window.calendarWidget.selectDate === 'function') {
+						window.calendarWidget.selectDate(nextDate);
+
+						// Refresh availability after selecting the date
+						refreshAvailability();
+					}
+				}
+			});
+
+			// Event listener for Add Another Patient button
+			elements.$addAnotherPatientBtn.on('click', () => addNewPatient());
+
+			// Setup patient removal modal events
+			handlePatientRemoval();
+
+			// Setup reservation button event
+			window.elements.$reserveBtn.on('click', () => {
+				//fail-safe for catching google analytic params incase it has initialization delays.
+				updateGAPatData();
+
+				if (window.elements.$guardianInfoSection.is(':visible')) {
+					validateGuardianInfoForm(function (isValid) {
+						if (isValid) {
+							submitAppointments();
+						}
+					});
+				} else {
+					submitAppointments();
+				}
+			});
+
+			// Init popovers
+			$('[data-bs-toggle="popover"]').popover();
+
+			//Auto format zip code IF it's an ascend practice
+			$('#zipcode').on('input', function () {
+				//Prevent users from typing stuff like 92aaabc
+				let val = $(this).val().replace(/\D/g, '');
+				if (val.length > 5) {
+					val = val.slice(0, 5) + '-' + val.slice(5, 9);
+				}
+				$(this).val(val);
+			});
+		}
+
+		/**
+		 * Create a session ID
+		 * Set up two timers: one to display a session warning modal and
+		 * another to redirect the user to session expired page.
+		 */
+		function initSession() {
+			if (previewMode) {
+				return;
+			}
+
+			if (sessionId) {
+				// Store session ID in localStorage
+				localStorage.setItem('maxassist_bookonline_session', sessionId);
+
+				// Send to the parent window if in iframe
+				if (window.parent && window.parent !== window) {
+					try {
+						window.parent.postMessage({
+							type: 'maxassist_session_created',
+							sessionId: sessionId,
+							accountIdEnc: accountIdEnc
+						}, '*');
+					} catch (e) {
+						console.log('Could not communicate with parent window:', e);
+					}
+				}
+
+				console.log('Session stored:', sessionId);
+			}
+
+			setupSessionTimeout();
+		}
+
+		function setupSessionTimeout() {
+			if (previewMode) {
+				return;
+			}
+
+			clearTimeout(sessionTimer);
+			clearTimeout(sessionWarningTimer);
+
+			// Set timer to show warning after 25 minutes
+			sessionWarningTimer = setTimeout(() => {
+				elements.$sessionTimeoutModal.modal('show');
+				sessionTimer = setTimeout(() => {
+					window.location.href = '/rsm/public/bookOnline/sessionExpired.html?brandColor=' + encodeURIComponent('#00A4B5')+'&'+(new URLSearchParams(window.location.search)).toString();	//apped all existing params (including google analytics) to expiry page
+				}, sessionWarningMinutes * 60 * 1000);
+			}, sessionWarningTimeMs);
+		}
+
+		/**
+		 * Extends the current user session.
+		 */
+		function extendSession() {
+			if (previewMode) {
+				return;
+			}
+
+			clearTimeout(sessionTimer);
+			clearTimeout(sessionWarningTimer);
+
+			elements.$sessionTimeoutModal.modal('hide');
+
+			$.ajax({
+				url: '/rsm/public/bookOnline/patient/extendSession',
+				type: 'POST',
+				data: {
+					a: encodeURIComponent(accountIdEnc),
+					sessionId: encodeURIComponent(sessionId),
+				},
+				success: function() {
+					// Reset session timeout
+					setupSessionTimeout();
+				},
+				error: function(xhr, status, error) {
+					redirectToErrorPage(xhr, status, error);
+				}
+			});
+		}
+
+		function initCalendarWidget() {
+			// Create a new instance of the calendar widget
+			window.calendarWidget = new CalendarWidget();
+			// Calculate start and end dates
+			const today = new Date();
+			const startDate = new Date(today);
+			startDate.setDate(today.getDate() + window.minBookingDaysFromToday);
+			const endDate = new Date(today);
+			endDate.setMonth(today.getMonth() + window.maxBookingMonthsInFuture);
+
+			window.calendarWidget.init('#calendarContainer', {
+				selectedDate: startDate,
+				startDate: formatDateForCalendar(startDate),
+				endDate: formatDateForCalendar(endDate),
+				onNextNavigation: function(info) {
+					console.log('Navigated forward:', info);
+					loadAvailabilitySummary(info.startDate, info.endDate).then(() => window.elements.$calendarSpinner.addClass('d-none'));
+				},
+				onPrevNavigation: function(info) {
+					console.log('Navigated backward:', info);
+					loadAvailabilitySummary(info.startDate, info.endDate).then(() => window.elements.$calendarSpinner.addClass('d-none'));
+				},
+				onViewChange: function(info) {
+					console.log('View changed:', info);
+					loadAvailabilitySummary(info.startDate, info.endDate).then(() => window.elements.$calendarSpinner.addClass('d-none'));
+				},
+				onDateSelected: function(dateInfo) {
+					console.log('Date selected:', dateInfo);
+					window.elements.$calendarSpinner.addClass('d-none');
+					initDateSelection();
+				}
+			});
+
+			window.elements.$calendarHeader = $('#calendarHeader');
+
+			window.elements.$calendarContainer.append(`
+				<div id="calendarSpinner" class="d-flex w-100 justify-content-center position-absolute h-100 top-0 bg-white bg-opacity-75 d-none" style="">
+					<i class="d-block icon-rm-spinner"></i>
+				</div>
+			`);
+
+			window.elements.$calendarSpinner = $('#calendarSpinner');
+		}
+
+		function updateDateTitle(selectedDate) {
+			const options = { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric' };
+			let dateText = selectedDate.toLocaleDateString('en-US', options);
+
+			// Check if the selected date is today
+			const today = new Date();
+			const isToday = selectedDate.getDate() === today.getDate() &&
+				selectedDate.getMonth() === today.getMonth() &&
+				selectedDate.getFullYear() === today.getFullYear();
+
+			if (isToday) {
+				dateText = 'Today, ' + dateText;
+			}
+
+			window.elements.$dateTitle.text(dateText);
+		}
+
+		function loadAppointmentTypes() {
+			if (appointmentDataPromise) {
+				return appointmentDataPromise; // Return existing promise if already loading
+			}
+
+			appointmentDataPromise = $.ajax({
+				url: '/rsm/public/bookOnline/patient/appointmentData.json',
+				method: 'GET',
+				data: {
+					a: encodeURIComponent(accountIdEnc),
+					sessionId: encodeURIComponent(sessionId),
+					previewModeCd: previewMode ? 1 : 0
+				}
+			}).then(function(response) {
+				// Reset session timeout
+				setupSessionTimeout();
+
+				// If preview mode && account has 0 appointment blocks, then return.
+				// Error message showing is handled in fillApptTypeContainer function
+				if(previewMode && response === 'EMPTY_APPT_BLOCKS_PREVIEW_WS_RESPONSE') {
+					return;
+				}
+
+				// Sort appointment types alphabetically by name before setting window variables
+				response.appointmentTypes.sort((a, b) => a.name.localeCompare(b.name));
+				// Sort providers by name within each appointment type
+				Object.keys(response.providersByApptType).forEach(apptTypeId => {
+					response.providersByApptType[apptTypeId].sort((a, b) => a.name.localeCompare(b.name));
+				});
+
+				// Set window variables
+				window.appointmentTypes = response.appointmentTypes;
+				window.providersByApptType = response.providersByApptType;
+
+				return response;
+			}).catch(function(xhr, status, error) {
+				redirectToErrorPage(xhr, status, error);
+
+				// Throw error to maintain promise chain behavior
+				throw error;
+			});
+
+			return appointmentDataPromise;
+		}
+
+		/**
+		 * Parses session data for google analytics IDs and updates backend
+		 */
+		function updateGAPatData() {
+			if (previewMode) {
+				return;
+			}
+
+			if(!gA4IdSessionId){
+				gA4IdSessionId = getSessionId('_ga_JZRRQMYMGN');
+			}
+			if(!gA4IdUserId){
+				gA4IdUserId = getSessionId('_ga');
+			}
+			if(!gA4ClickId){
+				gA4ClickId = getSessionId('_gcl_aw');
+			}
+
+			if(gA4IdSessionId!=null || gA4IdUserId!=null || gA4ClickId!=null){
+				$.ajax({
+					url: '/rsm/public/bookOnlineNew/patient/updateGAPatData.html',
+					type:'POST',
+					async: false,
+					data: {
+						a: encodeURIComponent(accountIdEnc),
+						patientId: encodeURIComponent(currentPatientId),
+						sessionId: encodeURIComponent(sessionId),
+						gA4IdSessionId: gA4IdSessionId,
+						gA4IdUserId: gA4IdUserId,
+						gA4ClickId: gA4ClickId
+					},
+					success: function(response, status, xhr) {
+						if(response == 'success'){
+							console.log('success');
+						} else {
+							gA4IdSessionId = '';
+							gA4IdUserId = '';
+							gA4ClickId = '';
+						}
+					},
+					error: function (e){
+						console.log('Error updating google analytics data', e);
+						gA4IdSessionId = '';
+						gA4IdUserId = '';
+						gA4ClickId = '';
+					}
+				});
+			}
+		}
+
+		function createBookOnlineSessPat() {
+			if (previewMode) {
+				return;
+			}
+
+			$.ajax({
+				url: '/rsm/public/bookOnlineNew/patient/createBookOnlineSessPat.html',
+				type: 'POST',
+				async: false,
+				data: {
+					a: encodeURIComponent(accountIdEnc),
+					patientId: encodeURIComponent(currentPatientId),
+					sessionId: encodeURIComponent(sessionId),
+				},
+				success: function(response) {
+					if(response == 'success'){
+						console.log('Created book online session patient.')
+					}
+				},
+				error: function(xhr, status, error) {
+					//Not a critical error. Don't halt user flow.
+					console.error("error creating book online session patient.", error);
+				}
+			});
+		}
+
+		function fillApptTypeContainer() {
+			window.elements.$apptTypeContainer.empty();
+
+			if(previewMode && (!window.appointmentTypes || window.appointmentTypes.length==0)) {
+				$("#emptyApptTypesPreviewMode").removeClass("d-none");
+				return;
+			}
+
+			window.appointmentTypes.forEach((type, index) => {
+				const html = `
+                    <div class="apptTypeRadioBtn d-flex w-100">
+                        <input type="radio" class="btn-check" name="typeRadio" id="apptType${index}" value="${type.apptTypeId}" autocomplete="off">
+                        <label class="d-flex flex-sm-column align-items-center gap-1 gap-sm-0 btn btn-outline-primary border rounded-5 border-primary p-3 p-sm-4 w-100 h-100" for="apptType${index}">
+                            <i class="${type.categoryIcon} fs-3"></i>
+                            <div class="appt-details text-start text-sm-center">
+                                <div class="appt-name-length d-sm-flex flex-sm-column">
+                                    <span class="appt-name">${type.name}</span>
+                                    <span class="appt-length">(${type.length} mins)</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>`;
+				window.elements.$apptTypeContainer.append(html);
+			});
+
+			$('input[name="typeRadio"]').on('change', function(){
+				createBookOnlineSessPat();
+			});
+			// Event listener for appointment type selection
+			$('input[name="typeRadio"]').on('change', function() {
+				if (this.checked) {
+					// Find and set the selected appointment type
+					const selectedApptTypeId = parseInt(this.value);
+					window.selectedApptType = window.appointmentTypes.find(type => type.apptTypeId === selectedApptTypeId);
+
+					// Setup provider selection
+					handleProviderSelection(selectedApptTypeId);
+
+					// Load date with availability
+					refreshAvailability();
+
+					window.elements.$availabilityContainer.removeClass('d-none');
+
+					// Scroll to calendar
+					window.elements.$calendarContainer[0].scrollIntoView({
+						behavior: 'instant',
+						block: 'start'
+					});
+
+					// Update SNL checkbox state
+					updateShortNoticeCheckboxState();
+				}
+			});
+
+			//Update google analytics if present
+			$('input[name="typeRadio"]').on('change', function(){
+				updateGAPatData();
+			});
+		}
+
+
+		function handleProviderSelection(apptTypeId) {
+			const providers = window.providersByApptType[apptTypeId] || [];
+
+			// Set selected providers array to all providers for this appointment type
+			// initially we assume they have no provider preferences
+			window.selectedProviders = [...providers];
+
+			// Remove existing provider button if it exists
+			$('#providersBtn').remove();
+
+			if (providers.length === 1) {
+				return;
+			}
+
+			window.elements.$calendarHeader.append(`
+                    <button id="providersBtn" class="btn btn-sm btn-outline-primary border border-primary rounded-5 px-2 py-1">
+                        <i class="icon-funnel"></i> Providers
+                    </button>
+                `);
+
+			// Check if user is on mobile
+			const isMobile = window.innerWidth <= 575.98; // Bootstrap sm breakpoint
+
+			if (isMobile) {
+				setupMobileProviderSelection(providers);
+			} else {
+				setupDesktopProviderSelection(providers);
+			}
+		}
+
+		function setupMobileProviderSelection(providers) {
+			// Clear existing options
+			window.elements.$providerOffcanvasContent.empty();
+
+			// Add the "All Providers" option
+			window.elements.$providerOffcanvasContent.append(`
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="all" id="providerAll" checked>
+                    <label class="form-check-label" for="providerAll">All</label>
+                </div>
+            `);
+
+			// Add individual provider options
+			providers.forEach((provider, index) => {
+				window.elements.$providerOffcanvasContent.append(`
+                    <div class="form-check">
+                        <input class="form-check-input provider-checkbox" type="checkbox" value="${provider.providerId}" id="provider${index}" checked>
+                        <label class="form-check-label text-truncate w-100" for="provider${index}">
+                            ${provider.name}
+                        </label>
+                    </div>
+                `);
+			});
+
+			// Set up offcanvas functionality
+			$('#providersBtn').off('click').on('click', function() {
+				// Reset checkboxes to the current selectedProviders state
+				resetProviderCheckboxes(true);
+				updateApplyButtonState(true);
+
+				const offcanvas = new bootstrap.Offcanvas('#providerOffcanvas', {
+					backdrop: true
+				});
+				offcanvas.show();
+			});
+
+			// Handle the "All Providers" checkbox
+			$('#providerAll').on('change', function() {
+				const isChecked = $(this).is(':checked');
+				$('.provider-checkbox').prop('checked', isChecked);
+				updateApplyButtonState(true);
+			});
+
+			// Handle individual provider checkboxes
+			$('.provider-checkbox').on('change', function() {
+				const checkedCount = $('.provider-checkbox:checked').length;
+				const allChecked = checkedCount === $('.provider-checkbox').length;
+
+				// Disable apply if no provider is selected
+				if (checkedCount === 0) {
+					$('#offcanvasApplyBtn').prop('disabled', true).addClass('disabled');
+				} else {
+					$('#offcanvasApplyBtn').prop('disabled', false).removeClass('disabled');
+				}
+
+				$('#providerAll').prop('checked', allChecked);
+				updateApplyButtonState(true);
+			});
+
+			// Handle the Apply button
+			$('#offcanvasApplyBtn').on('click', function() {
+				if ($(this).prop('disabled')) {
+					return;
+				}
+
+				updateSelectedProviders();
+				const offcanvas = bootstrap.Offcanvas.getInstance('#providerOffcanvas');
+				offcanvas.hide();
+			});
+
+			// Handle offcanvas hidden event (when closed without applying)
+			$('#providerOffcanvas').on('hidden.bs.offcanvas', function() {
+				// Reset checkboxes to the current selectedProviders state
+				resetProviderCheckboxes(true);
+				updateApplyButtonState(true);
+				updateProvidersButtonState();
+			});
+		}
+
+		function setupDesktopProviderSelection(providers) {
+			// Create dropdown menu HTML
+			let dropdownHTML = `
+				<div id="providerDropdown" class="dropdown">
+					<button id="providersBtn" class="btn btn-sm btn-outline-primary border border-primary rounded-5 px-2 py-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="icon-funnel"></i> Providers</button>
+					<ul class="dropdown-menu p-2" style="min-width: 210px;">
+						<li class="dropdown-item-text mb-2">
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="mb-0 fw-bold">Providers</div>
+								<button id="dropdownApplyBtn" type="button" class="btn btn-sm btn-primary px-2 py-1 rounded-5">Apply</button>
+							</div>
+						</li>
+						<li class="dropdown-item-text">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="all" id="providerAllDesktop" checked>
+								<label class="form-check-label" for="providerAllDesktop">All</label>
+							</div>
+						</li>
+
+						<!-- Scrollable container for provider options -->
+						<div class="provider-scroll-container" style="max-height: 330px; overflow-y: auto;">
+				`;
+
+			// Add individual provider options
+			providers.forEach((provider, index) => {
+				dropdownHTML += `
+					<li class="dropdown-item-text">
+						<div class="form-check">
+							<input class="form-check-input provider-checkbox-desktop" type="checkbox" value="${provider.providerId}" id="providerDesktop${index}" checked>
+							<label class="form-check-label text-nowrap text-truncate" for="providerDesktop${index}" style="max-width: 210px;">
+								${provider.name}
+							</label>
+						</div>
+					</li>
+				`;
+			});
+
+			dropdownHTML += `
+						</div>
+					</ul>
+				</div>
+			`;
+
+			// Replace the provider button with dropdown
+			$('#providerDropdown').remove();
+			$('#providersBtn').replaceWith(dropdownHTML);
+
+			// Handle dropdown show event
+			$('#providersBtn').on('show.bs.dropdown', function() {
+				// Reset checkboxes to the current selectedProviders state
+				resetProviderCheckboxes(false);
+				updateApplyButtonState(false);
+			});
+
+			// Handle the "All Providers" checkbox
+			$('#providerAllDesktop').on('change', function() {
+				const isChecked = $(this).is(':checked');
+				$('.provider-checkbox-desktop').prop('checked', isChecked);
+				updateApplyButtonState(false);
+			});
+
+			// Handle individual provider checkboxes
+			$('.provider-checkbox-desktop').on('change', function() {
+				const checkedCount = $('.provider-checkbox-desktop:checked').length;
+				const allChecked = checkedCount === $('.provider-checkbox-desktop').length;
+
+				// Disable apply if no provider is selected
+				if (checkedCount === 0) {
+					$('#dropdownApplyBtn').prop('disabled', true).addClass('disabled');
+				} else {
+					$('#dropdownApplyBtn').prop('disabled', false).removeClass('disabled');
+				}
+
+				$('#providerAllDesktop').prop('checked', allChecked);
+				updateApplyButtonState(false);
+			});
+
+			// Handle the Apply button
+			$('#dropdownApplyBtn').on('click', function() {
+				if ($(this).prop('disabled')) {
+					return;
+				}
+
+				updateSelectedProviders();
+				$('#providersBtn').dropdown('hide');
+			});
+
+			// Handle dropdown hidden event (when closed without applying)
+			$('#providersBtn').on('hidden.bs.dropdown', function() {
+				// Reset checkboxes to reflect current selectedProviders state
+				resetProviderCheckboxes(false);
+				updateApplyButtonState(false);
+				updateProvidersButtonState();
+			});
+
+			// Prevent dropdown from closing when clicking checkboxes
+			$('.dropdown-menu').on('click', function(e) {
+				e.stopPropagation();
+			});
+		}
+
+		function updateApplyButtonState(isMobile) {
+			const checkboxSelector = isMobile ? '.provider-checkbox:checked' : '.provider-checkbox-desktop:checked';
+			const applyBtnSelector = isMobile ? '#offcanvasApplyBtn' : '#dropdownApplyBtn';
+
+			const checkedCount = $(checkboxSelector).length;
+			const $applyBtn = $(applyBtnSelector);
+
+			if (checkedCount === 0) {
+				$applyBtn.prop('disabled', true).addClass('disabled');
+			} else {
+				$applyBtn.prop('disabled', false).removeClass('disabled');
+			}
+		}
+
+        /**
+         * Handle the case where the patient tries to make a reservation, but the appointment cutoff window has expired.
+         * This would be for same day booking.
+         * */
+        function appointmentExpired() {
+            //When the 410 error is thrown, the data of the patientId will be stored. This is the patient that the
+	        //validation failed for.
+            elements.$apptGoneModal.modal('hide');
+            window.elements.$reserveBtn.prop('disabled', false);
+            //Anything inside of $apptGoneModalBtn.data() are patients with invalid appointment times.
+            const firstPatientId = Object.values(elements.$apptGoneModalBtn.data())[0];
+            //Hnadle the case in which multiple patients have an error. If this is the case, we just only want to go back
+	        //to the edit appointment screen for one patient who had the error. Remove all subsequent patients.
+            $.each(elements.$apptGoneModalBtn.data(), function(key,value) {
+                $('.patient-review-card[patient-id="' + value + '"]').remove();
+                if (key > 0) {
+                    releaseAppointment(value);
+                    window.patientsData = window.patientsData.filter(patient => patient.id != value);
+                }
+            });
+            elements.$apptGoneModalBtn.removeData();
+            // Check if guardian information should be shown
+            // Show or hide the guardian information section based on conditions
+            if (checkGuardianInfoRequired()) {
+                window.elements.$guardianInfoSection.removeClass('d-none');
+            } else {
+                window.elements.$guardianInfoSection.addClass('d-none');
+            }
+            const index = window.patientsData.findIndex(patient => patient.id === firstPatientId);
+            resetPatientAppointment(index);
+        }
+
+		function resetProviderCheckboxes(isMobile) {
+			const selectedProviderIds = window.selectedProviders.map(p => p.providerId);
+
+			if (isMobile) {
+				// Reset mobile checkboxes
+				$('.provider-checkbox').each(function() {
+					const providerId = parseInt($(this).val());
+					$(this).prop('checked', selectedProviderIds.includes(providerId));
+				});
+
+				// Update "All Providers" checkbox
+				const allChecked = $('.provider-checkbox').length === $('.provider-checkbox:checked').length;
+				$('#providerAll').prop('checked', allChecked);
+			} else {
+				// Reset desktop checkboxes
+				$('.provider-checkbox-desktop').each(function() {
+					const providerId = parseInt($(this).val());
+					$(this).prop('checked', selectedProviderIds.includes(providerId));
+				});
+
+				// Update "All Providers" checkbox
+				const allChecked = $('.provider-checkbox-desktop').length === $('.provider-checkbox-desktop:checked').length;
+				$('#providerAllDesktop').prop('checked', allChecked);
+			}
+		}
+
+		function updateSelectedProviders() {
+			const isMobile = window.innerWidth <= 576;
+			const checkboxSelector = isMobile ? '.provider-checkbox:checked' : '.provider-checkbox-desktop:checked';
+
+			const selectedProviderIds = $(checkboxSelector).map(function() {
+				return parseInt($(this).val());
+			}).get();
+
+			// Update the selected providers array based on checked boxes
+			const allProviders = window.providersByApptType[window.selectedApptType.apptTypeId] || [];
+			window.selectedProviders = allProviders.filter(provider =>
+				selectedProviderIds.includes(provider.providerId)
+			);
+
+			// Refresh patient's selected providers
+			const patient = getCurrentPatient();
+			if (patient) {
+				patient.selectedProviders = window.selectedProviders;
+			}
+			refreshAvailability();
+		}
+
+		/**
+		 * If the user does not have all the providers selected, then providers button will be in active state
+		 */
+		function updateProvidersButtonState() {
+			const $providersBtn = $('#providersBtn');
+
+			// Get all available providers for the selected appointment type
+			const availableProviders = window.providersByApptType[window.selectedApptType?.apptTypeId] || [];
+			const totalProviders = availableProviders.length;
+			const selectedProviders = window.selectedProviders || [];
+			const selectedCount = selectedProviders.length;
+
+			// If no providers are selected or all providers are selected, remove 'active' class
+			if (selectedCount === 0 || selectedCount === totalProviders) {
+				$providersBtn.removeClass('active');
+			} else {
+				// If some but not all providers are selected, add 'active' class
+				$providersBtn.addClass('active');
+			}
+		}
+
+		function updateProviderCheckboxes(selectedProviders) {
+			// Create a Set of selected provider IDs for faster lookup
+			const selectedProviderIds = new Set(selectedProviders.map(provider => provider.providerId.toString()));
+
+			// Check if the user is on mobile
+			const isMobile = window.innerWidth <= 575.98; // Bootstrap sm breakpoint
+
+			if (isMobile) {
+				// Update mobile/offcanvas checkboxes
+				updateCheckboxGroup('.provider-checkbox-mobile', '#providerAllMobile', selectedProviderIds);
+			} else {
+				// Update desktop checkboxes
+				updateCheckboxGroup('.provider-checkbox-desktop', '#providerAllDesktop', selectedProviderIds);
+			}
+
+			updateProvidersButtonState();
+		}
+
+		function updateCheckboxGroup(checkboxSelector, allCheckboxSelector, selectedProviderIds) {
+			const $providerCheckboxes = $(checkboxSelector);
+			const $allCheckbox = $(allCheckboxSelector);
+
+			// First, uncheck all checkboxes
+			$providerCheckboxes.prop('checked', false);
+			$allCheckbox.prop('checked', false);
+
+			// Check only the selected providers
+			$providerCheckboxes.each(function() {
+				if (selectedProviderIds.has(this.value)) {
+					$(this).prop('checked', true);
+				}
+			});
+
+			// Check if all providers are selected to update the "All" checkbox
+			const totalProviders = $providerCheckboxes.length;
+			const checkedProviders = $(checkboxSelector + ':checked').length;
+
+			if ($allCheckbox.length && checkedProviders === totalProviders && totalProviders > 0) {
+				$allCheckbox.prop('checked', true);
+			}
+		}
+
+		/**
+		 * Load availability summary (has opening or not) for a date range
+		 */
+		function loadAvailabilitySummary(startDate, endDate) {
+			// show spinner
+			window.elements.$calendarSpinner.removeClass('d-none');
+
+			// Format dates (YYYY-MM-DD format)
+			const startDateStr = startDate.toISOString().split('T')[0];
+			const endDateStr = endDate.toISOString().split('T')[0];
+
+			// Pass provider IDs as a comma separated string
+			let providerIdsParam = '';
+			if (window.selectedProviders && window.selectedProviders.length > 0) {
+				providerIdsParam = window.selectedProviders.map(provider => provider.providerId).join(',');
+			}
+
+			// Parameters
+			const requestData = {
+				a: encodeURIComponent(accountIdEnc),
+				startDate: startDateStr,
+				endDate: endDateStr,
+				apptTypeId: window.selectedApptType.apptTypeId,
+				sessionId: encodeURIComponent(sessionId),
+				patientId: encodeURIComponent(currentPatientId),
+			};
+
+			// Add provider IDs if selected (should always be there)
+			if (providerIdsParam) {
+				requestData.providerIds = providerIdsParam;
+			}
+
+			return new Promise((resolve, reject) => {
+				$.ajax({
+					url: `/rsm/public/bookOnlineNew/patient/availabilitySummary.json`,
+					method: 'GET',
+					data: requestData,
+					success: function(response) {
+						try {
+							// Reset session timeout
+							setupSessionTimeout();
+
+							window.availabilitySummaryCache = JSON.parse(response);
+							applyAvailabilityStyles();
+							resolve(window.availabilitySummaryCache); // We need the array to be filled
+						} catch (error) {
+							console.error('Error parsing availability response:', error);
+							reject(error);
+						}
+					},
+					error: function(xhr, status, error) {
+						redirectToErrorPage(xhr, status, error);
+					}
+				});
+			});
+		}
+
+		/**
+		 * Mark unavailable days by reducing the opacity by 50%
+		 */
+		function applyAvailabilityStyles() {
+			// Remove any existing opacity classes first
+			$('#calendarContainer .day-btn, #calendarContainer .week-day-container').removeClass('opacity-50');
+
+			window.availabilitySummaryCache.forEach(dayData => {
+				if (!dayData.hasOpening) {
+
+					const {day, month, year} = getDateMonthYear(dayData.date);
+
+					const dateSelector = `[data-date="${day}-${month}-${year}"]`;
+					// Apply to month view
+					$(`#calendarContainer .day-btn${dateSelector}`).addClass('opacity-50');
+					// Apply to week view
+					$(`#calendarContainer .week-day-container${dateSelector}`).addClass('opacity-50');
+				}
+			});
+		}
+
+		/**
+		 * Load availability when appointment type or providers change
+		 */
+		function refreshAvailability() {
+			// Get current calendar view dates
+			const calendar = window.calendarWidget;
+
+			if (!calendar) {
+				console.warn('Calendar widget not initialized');
+				return;
+			}
+
+			let startDate, endDate;
+
+			if (calendar.isCalendarExpanded) {
+				// Month view - get the full month
+				startDate = new Date(calendar.currentYear, calendar.currentMonth, 1);
+				endDate = new Date(calendar.currentYear, calendar.currentMonth + 1, 0);
+			} else {
+				// Week view - get the current week
+				startDate = new Date(calendar.currentWeekSunday);
+				endDate = new Date(calendar.currentWeekSunday);
+				endDate.setDate(endDate.getDate() + 6);
+			}
+
+			loadAvailabilitySummary(startDate, endDate).then(() => {
+				window.elements.$calendarSpinner.addClass('d-none');
+				initDateSelection() // Handle selected date
+			});
+		}
+
+		/**
+		 * Redirects the user to the error page.
+		 */
+		function redirectToErrorPage(xhr, status, error) {
+			// Log the error for debugging
+			console.error('Error loading appointment data:', error);
+			console.error('Status:', xhr.status || status);
+			console.error('Status Text:', xhr.statusText || 'Unknown');
+			console.error('Response Text:', xhr.responseText || 'No response text');
+
+			// Redirect to error page
+			window.location.href = '/rsm/public/bookOnline/error.html';
+		}
+
+		/**
+		 * Handles all the events when a date is selected
+		 */
+		function initDateSelection() {
+			const calendar = window.calendarWidget;
+			const selectedDate = calendar.selectedDate;
+
+			// Update date title
+			updateDateTitle(selectedDate);
+
+			if (window.isNavigatingToNextAvailable) {
+				// Reset the flag
+				window.isNavigatingToNextAvailable = false;
+
+				// Skip availability check since we know this date has availability
+				showAvailableTimesContainer(selectedDate);
+				return;
+			}
+
+			// Disable the next step button
+			window.elements.nextStepBtn.prop('disabled', true);
+
+			// Check if the date availability and hande accordingly
+			if (checkDateAvailability(selectedDate)) {
+				// Date has availability - show loading and fetch time slots
+				showAvailableTimesContainer(selectedDate);
+			} else {
+				// Date has no availability - show no availability message
+				showNoAvailabilityContainer(selectedDate);
+			}
+		}
+
+		/**
+		 * Checks the availability of a specific date.
+		 *
+		 * @param {Date} date - The date to check for availability.
+		 * @return {boolean} - True if there's a availability for the day.
+		 */
+		function checkDateAvailability(date) {
+			try {
+				if (!window.availabilitySummaryCache) {
+					return false;
+				}
+
+				date.setHours(0, 0, 0, 0);
+				// Find the date entry in cache
+				const dateEntry = window.availabilitySummaryCache.find(entry => {
+					const {day, month, year} = getDateMonthYear(entry.date);
+					const entryDate = new Date(year, month - 1, day);
+					entryDate.setHours(0, 0, 0, 0);
+					return entryDate.getDate() === date.getDate();
+				});
+
+				// Return hasOpening value or null if not found
+				return dateEntry ? dateEntry.hasOpening : false;
+			} catch (error) {
+				console.error('Error checking date availability:', error);
+				return false;
+			}
+		}
+
+		/**
+		 * Show the available times container and hide no availability message
+		 */
+		function showAvailableTimesContainer(selectedDate) {
+			window.elements.apptAvailableContainer.removeClass('d-none');
+			window.elements.noApptAvailableContainer.addClass('d-none');
+
+			// Show loading state while fetching time slots
+			window.elements.apptAvailableContainer.html(window.spinner);
+
+			// Load time slots
+			loadTimeSlots(selectedDate);
+		}
+
+		/**
+		 * Show no availability container and hide available times
+		 * @param {Date} selectedDate - The selected date with no availability
+		 */
+		async function showNoAvailabilityContainer(selectedDate) {
+			window.elements.apptAvailableContainer.addClass('d-none');
+			window.elements.noApptAvailableContainer.removeClass('d-none');
+
+			// Update next available date
+			const nextAvailability = await getNextAvailableDate(selectedDate);
+			if (nextAvailability) {
+				const options = {weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'};
+				window.elements.nextAvailableDate.removeClass('text-max-red').text(`No availability until ${nextAvailability.toLocaleDateString('en-US', options)}`);
+				// Enable the button and store the next availability date
+				window.elements.$goToNextApptBtn.prop('disabled', false);
+				window.elements.$goToNextApptBtn.data('nextDate', nextAvailability.toISOString().split('T')[0]);
+
+			} else {
+				window.elements.nextAvailableDate.addClass('text-max-red').text(`No future appointments available.`);
+				window.elements.$goToNextApptBtn.prop('disabled', true);
+				window.elements.$goToNextApptBtn.removeData('nextDate');
+			}
+		}
+
+		/**
+		 * Checks from the give date forward to find the next day with opening.
+		 * First, checks the cached dates.
+		 * Then, calls server to find the next date with opening
+		 * (from give date to the date that practice stops offering reservation)
+		 * @param date Lookup starting date
+		 * @returns {Date|null} - Date or nul if no opening is found
+		 */
+		async function getNextAvailableDate(date) {
+			try {
+				// Check the cache appointments first
+				let nextDayWithOpening = await getNextDayOpeningFromCache(date);
+				if (nextDayWithOpening) {
+					return nextDayWithOpening;
+				}
+
+				// Not found in the cache, call the controller
+				const serverResponse = await getNextDayOpeningFromServer(date);
+				if (serverResponse.found) {
+					// Parse as local date to avoid timezone issues
+					const dateParts = serverResponse.date.split('-');
+					return new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
+				}
+			} catch (error) {
+				console.error('Error checking date availability:', error);
+			}
+
+			return null;
+		}
+
+		/**
+		 * Gets the next available date with an opening from the availability cache.
+		 *
+		 * @param {Date} date - The start searching from date.
+		 * @return {Date|null} The next date with an opening, or null if not found.
+		 */
+		function getNextDayOpeningFromCache(date) {
+			if (!window.availabilitySummaryCache || !Array.isArray(window.availabilitySummaryCache)) {
+				return null; // Don't refresh availability cause server will be called anyway
+			}
+
+			// Find the next date
+			const nextDay = new Date(date);
+			nextDay.setDate(nextDay.getDate() + 1);
+			nextDay.setHours(0, 0, 0, 0);
+
+			// Search from tomorrow and only for days with opening
+			const futureDaysWithOpening = window.availabilitySummaryCache
+				.filter(entry => {
+					const {day, month, year} = getDateMonthYear(entry.date);
+					const entryDate = new Date(year, month - 1, day);
+					return entryDate >= nextDay && entry.hasOpening;
+				})
+				.sort((a, b) => a.date.localeCompare(b.date));
+
+			if (futureDaysWithOpening.length === 0) {
+				return null;
+			}
+
+			const [year, month, day] = futureDaysWithOpening[0].date.split('-').map(Number);
+			return new Date(year, month - 1, day);
+		}
+
+		/**
+		 * Sends an AJAX request to fetch the next available opening for an appointment.
+		 *
+		 * @param {Date} startDate The start date to query for the next available appointment.
+		 */
+		function getNextDayOpeningFromServer(startDate) {
+			// Reset session timeout
+			setupSessionTimeout();
+
+			// Format dates (YYYY-MM-DD format)
+			const startDateStr = startDate.toISOString().split('T')[0];
+
+			// Pass provider IDs as a comma separated string
+			let providerIdsParam = '';
+			if (window.selectedProviders && window.selectedProviders.length > 0) {
+				providerIdsParam = window.selectedProviders.map(provider => provider.providerId).join(',');
+			}
+
+			// Parameters
+			const requestData = {
+				a: encodeURIComponent(accountIdEnc),
+				startDate: startDateStr,
+				apptTypeId: window.selectedApptType.apptTypeId,
+				sessionId: encodeURIComponent(sessionId),
+				patientId: encodeURIComponent(currentPatientId),
+			};
+
+			// Add provider IDs if selected (should always be there)
+			if (providerIdsParam) {
+				requestData.providerIds = providerIdsParam;
+			}
+
+			return $.ajax({
+				url: '/rsm/public/bookOnlineNew/patient/nextOpening.json',
+				type: 'GET',
+				data: requestData,
+				dataType: 'json'
+			});
+		}
+
+		function loadTimeSlots(selectedDate) {
+			// Format dates (YYYY-MM-DD format)
+			const selectedDateStr = selectedDate.toISOString().split('T')[0];
+
+			// Pass provider IDs as a comma separated string
+			let providerIdsParam = '';
+			if (window.selectedProviders && window.selectedProviders.length > 0) {
+				providerIdsParam = window.selectedProviders.map(provider => provider.providerId).join(',');
+			}
+
+			// Parameters
+			const requestData = {
+				a: encodeURIComponent(accountIdEnc),
+				date: selectedDateStr,
+				apptTypeId: window.selectedApptType.apptTypeId,
+				sessionId: encodeURIComponent(sessionId),
+				patientId: encodeURIComponent(currentPatientId),
+			};
+
+			// Add provider IDs if selected (should always be there)
+			if (providerIdsParam) {
+				requestData.providerIds = providerIdsParam;
+			}
+
+			$.ajax({
+				url: '/rsm/public/bookOnlineNew/patient/timeSlots.json',
+				type: 'GET',
+				data: requestData,
+				dataType: 'json',
+				success: function (data) {
+					// Reset session timeout
+					setupSessionTimeout();
+
+					const container = window.elements.apptAvailableContainer;
+					container.empty();
+
+					// Add "Multiple Appointments" legend if there are same time openings
+					if (data.sameTimeOpening) {
+						const multipleApptIndicator = `
+							<div class="d-flex align-items-center gap-2 pt-1">
+								<div class="bg-max-green rounded-circle" style="width: 16px; height: 16px;"></div>
+								<div>Multiple Appointments</div>
+							</div>
+						`;
+						container.append(multipleApptIndicator);
+					}
+
+					// Check if we have any openings
+					// Should not happen, but just in case somehow between loading calendar and now all the openings are gone.
+					if (!data.openings || data.openings.length === 0) {
+						container.append('<div class="text-center text-muted pt-4">No available time slots for this date.</div>');
+						return;
+					}
+
+					// Create the wrapper for all time slot buttons
+					const timeSlotsWrapper = $('<div class="d-flex align-items-center gap-3 flex-wrap pt-4"></div>');
+
+					data.openings.forEach((opening, index) => {
+						// Parse the start time
+						const startDateTime = new Date(opening.apptStartDate);
+						const timeStr = startDateTime.toLocaleTimeString('en-US', {
+							hour: 'numeric',
+							minute: '2-digit',
+							hour12: true
+						});
+
+						// Radio button ID
+						const timeId = 'time' + index;
+
+						// Determine if this slot has multiple openings
+						const hasMultiple = opening.openingNum > 1;
+
+						// Check if this opening matches the currently selected time slot
+						const isSelected = window.selectedTimeSlot &&
+							window.selectedTimeSlot.bookOnlineTypeId === opening.bookOnlineTypeId &&
+							window.selectedTimeSlot.apptStartDate === opening.apptStartDate &&
+							window.selectedTimeSlot.providerId === opening.providerId;
+
+						// Allow the patient to go processed if they already have a selection
+						if (isSelected) {
+							window.elements.nextStepBtn.prop('disabled', false);
+						}
+
+						// Create the time radio button HTML
+						const timeRadioBtnHtml = `
+							<div class="timeRadioBtn" style="width: 105px;" data-opening='` + JSON.stringify(opening) + `'>
+								<input type="radio" class="btn-check" name="timeRadio" id="` + timeId + `" autocomplete="off"` + (isSelected ? ' checked' : '') + `>
+								<label class="btn btn-sm btn-outline-primary px-2 py-1 rounded-4 w-100" for="` + timeId + `">
+									<span>` + timeStr + `</span>` + (hasMultiple ? `<span class="ms-1 d-inline-block rounded-circle bg-max-green text-white fs-7" style="width: 18px; height: 18px;">` + opening.openingNum + `</span>` : '') + `
+								</label>
+							</div>
+						`;
+
+						timeSlotsWrapper.append(timeRadioBtnHtml);
+					});
+
+					// Add the wrapper to the container
+					container.append(timeSlotsWrapper);
+					// Add event handler for time slot selection
+					container.find('input[name="timeRadio"]').on('change', function () {
+						if (this.checked) {
+							const selectedTimeSlot = $(this).closest('.timeRadioBtn');
+							const openingData = JSON.parse(selectedTimeSlot.attr('data-opening'));
+
+							// Store the selected opening data for later use
+							window.selectedTimeSlot = openingData;
+
+							console.log('Selected time slot:', openingData);
+
+							// Reserve the appt
+							reserveAppointment(openingData);
+
+							// Allow the user to navigate to the next section
+							window.elements.nextStepBtn.prop('disabled', false);
+
+							// Update patient object
+							const patient = getCurrentPatient();
+							if (patient) {
+								patient.appointmentType = window.selectedApptType;
+								patient.selectedProviders = selectedProviders;
+								patient.provider = selectedProviders.find(provider => provider.providerId === window.selectedTimeSlot.providerId);
+								patient.opening = window.selectedTimeSlot;
+							} else {
+								console.error('Patient object not found');
+							}
+						}
+					})
+				},
+				error: function (xhr, status, error) {
+					redirectToErrorPage(xhr, status, error);
+				}
+			});
+		}
+
+		/**
+		 * The next and previous step buttons events.
+		 */
+		function initNavigation() {
+			window.elements.nextStepBtn.on('click', function () {
+				navigateToSection(window.currentStep + 1);
+			});
+			window.elements.prevStepBtn.on('click', function () {
+				navigateToSection(window.currentStep - 1);
+			});
+		}
+
+		/**
+		 * Reserve an appointment
+		 */
+		function reserveAppointment(apptModel) {
+			// Don't reserve anything in preview mode
+			if (previewMode) {
+				return;
+			}
+
+			$.ajax({
+				url: '/rsm/public/bookOnlineNew/patient/reserveAppt.json',
+				type: 'POST',
+				async: false,
+				data: {
+					a: encodeURIComponent(accountIdEnc),
+					patientId: encodeURIComponent(currentPatientId),
+					appt: JSON.stringify(apptModel),
+					sessionId: encodeURIComponent(sessionId),
+				},
+				success: function(response) {
+					// Reset session timeout
+					setupSessionTimeout();
+
+					console.log('Appointment reserved successfully:', response);
+				},
+				error: function(xhr, status, error) {
+					redirectToErrorPage(xhr, status, error);
+				}
+			});
+		}
+
+		/**
+		 * Release an appointment
+		 **/
+		function releaseAppointment(patientId) {
+			// Don't release appt in preview mode
+			if (previewMode) {
+				return;
+			}
+
+			if (!patientId) {
+				patientId = currentPatientId;
+			}
+
+			$.ajax({
+				url: '/rsm/public/bookOnlineNew/patient/releaseAppt.json',
+				type: 'POST',
+				async: false,
+				data: {
+					a: encodeURIComponent(accountIdEnc),
+					patientId: encodeURIComponent(patientId),
+					sessionId: encodeURIComponent(sessionId),
+				},
+				success: function(response) {
+					// Reset session timeout
+					setupSessionTimeout();
+
+					console.log('Appointment released successfully:', response);
+				},
+				error: function(xhr, status, error) {
+					redirectToErrorPage(xhr, status, error);
+				}
+			});
+		}
+
+		/**
+		 * Navigates to back and forth between sections.
+		 *
+		 * @param {number} step - The step number to navigate to.
+		 * Valid values are 1 (appointment), 2 (patient info), 3 (review).
+		 */
+		function navigateToSection(step) {
+			// Don't allow navigation beyond steps
+			if (step < 1 || step > 3) {
+				return;
+			}
+
+			// Validate form if the user wants to continue to the review section
+			if (step === 3) {
+				validatePatientInfo(function(isValid) {
+					if (isValid) {
+						// Validation passed, proceed with navigation
+						performNavigation(step);
+
+						// populate review appointment section
+						generateReviewAppointments();
+					}
+					// If validation fails, stay on the patient info form
+				});
+				return;
+			}
+
+			// For other steps, navigate directly
+			performNavigation(step);
+		}
+
+		function performNavigation(step) {
+			// Set new navigation step
+			window.currentStep = step;
+
+			const progressBar = $('.progress-bar');
+			const dots = $('.progress-dots');
+			const labels = $('.progress-label');
+			const sections = $('.step-section');
+
+			// Reset all
+			dots.removeClass('bg-primary border-primary-subtle').addClass('bg-white');
+			labels.removeClass('fw-bold text-primary');
+			sections.addClass('d-none');
+			window.elements.reservationSection.addClass('d-none');
+
+			switch(step) {
+				case 1:
+					$(sections[0]).removeClass('d-none');
+					progressBar.css('width', '0');
+					$(dots[0]).removeClass('bg-white').addClass('bg-primary border-primary-subtle');
+					$(labels[0]).addClass('fw-bold text-primary');
+					window.elements.stepSection.removeClass('d-none');
+					window.elements.prevStepBtn.addClass('invisible');
+					break;
+				case 2:
+					$(sections[1]).removeClass('d-none');
+					progressBar.css('width', '50%');
+					$(dots[0]).removeClass('bg-white').addClass('bg-primary border-primary-subtle');
+					$(dots[1]).removeClass('bg-white').addClass('bg-primary border-primary-subtle');
+					$(labels[1]).addClass('fw-bold text-primary');
+					window.elements.stepSection.removeClass('d-none');
+					window.elements.prevStepBtn.removeClass('invisible');
+					break;
+				case 3:
+					$(sections[2]).removeClass('d-none');
+					progressBar.css('width', '100%');
+					dots.removeClass('bg-white').addClass('bg-primary border-primary-subtle');
+					$(labels[2]).addClass('fw-bold text-primary');
+					window.elements.stepSection.addClass('d-none');
+					window.elements.reservationSection.removeClass('d-none');
+					break;
+			}
+
+			elements.$progressSection[0].scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+		}
+
+		/**
+		 * Initializes the patient information form
+		 * Setting behavior for different form elements.
+		 * Handles dynamic show/hide of form fields based on user input
+		 */
+		function initPatientInfoForm() {
+			// Set today as max date for birthdate
+			const today = new Date().toISOString().split('T')[0];
+			$('#dob').attr('max', today);
+
+			const $existingPatientInputs = $('input[name="existingPatient"]');
+			const $insuranceInputs = $('input[name="insurance"]');
+
+            genderOptions.forEach(function (item, index) {
+                const genderOption = `
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="${genderHash[item]}" value="${item}" required>
+                            <label class="form-check-label" for="${genderHash[item]}">${genderHash[item]}</label>
+                        </div>`;
+                window.elements.$genderSection.append(genderOption);
+            });
+			$existingPatientInputs.on('change', function () {
+				if ($(this).val() === 'no') {
+					window.elements.$insuranceQuestion.show();
+					window.elements.$ascendInfo.show();
+                    window.elements.$genderSection.removeClass('d-none')
+					// Check if insurance was previously selected as "yes" and show insurance info if needed
+					const selectedInsurance = $('input[name="insurance"]:checked').val();
+					if (selectedInsurance === 'yes') {
+						window.elements.$insuranceInfo.show();
+					}
+				} else {
+					window.elements.$insuranceQuestion.hide();
+					window.elements.$insuranceInfo.hide();
+					//Hide Dentrix Ascend mandatory fields, because for existing patients, the address, state, city should already be in there.
+					window.elements.$ascendInfo.hide();
+					// Only clear validation classes, not the actual values
+					$insuranceInputs.removeClass('is-valid is-invalid');
+					window.elements.$insuranceInfo.find('input').removeClass('is-valid is-invalid');
+                    window.elements.$genderSection.addClass('d-none');
+				}
+
+				// Update SNL checkbox state
+				updateShortNoticeCheckboxState();
+			});
+
+			$insuranceInputs.on('change', function () {
+				if ($(this).val() === 'yes') {
+					window.elements.$insuranceInfo.show();
+				} else {
+					window.elements.$insuranceInfo.hide();
+					// Only clear validation classes, not the actual values
+					window.elements.$insuranceInfo.find('input').removeClass('is-valid is-invalid');
+				}
+			});
+
+			// Dummy data event handler
+			window.elements.$testPatientBtn.on('click', () => populatePatientForm());
+		}
+
+		function updateShortNoticeCheckboxState() {
+			if ($('input[name="existingPatient"]:checked').val() === 'yes' && window.selectedApptType.category === 'Hygiene / Recall') {
+				window.elements.$snlCheckboxCol.removeClass('d-none');
+			} else {
+				window.elements.$snlCheckboxCol.addClass('d-none');
+			}
+		}
+
+		/**
+		 * Validates the patient information entered in the form and handles validation feedback.
+		 */
+		function validatePatientInfo(callback) {
+			elements.$patientForm.find('.is-invalid').removeClass('is-invalid');
+
+			// Collect form data
+			const formData = {
+				firstName: elements.$firstName.val().trim(),
+				lastName: elements.$lastName.val().trim(),
+				dob: elements.$dob.val(),
+				phone: elements.$phone.val().trim(),
+				email: elements.$email.val().trim(),
+				existingPatient: $('input[name="existingPatient"]:checked').val(),
+                gender: genderHash[$('input[name="gender"]:checked').val()] || '',
+				note: elements.$note.val().trim()
+			};
+
+			// Only include CDCP if it exists in the form
+			const cdcpValue = $('input[name="cdcp"]:checked').val();
+			if (cdcpValue) {
+				formData.cdcp = cdcpValue;
+			}
+
+			// Only include insurance data if the insurance question is visible and answered
+			if (window.elements.$insuranceQuestion.is(':visible')) {
+				const insuranceValue = $('input[name="insurance"]:checked').val();
+				if (insuranceValue) {
+					formData.insurance = insuranceValue;
+
+					// Only include insurance details if insurance is "yes" and the info section is visible
+					if (insuranceValue === 'yes' && window.elements.$insuranceInfo.is(':visible')) {
+						formData.insuranceCompany = elements.$insuranceCompany.val().trim();
+						formData.subscriberName = elements.$subscriberName.val().trim();
+						formData.memberId = elements.$memberId.val().trim();
+						formData.groupId = elements.$groupId.val().trim();
+						formData.insurancePhone = elements.$insurancePhone.val().trim();
+					}
+				}
+			}
+
+			//Mandatory fields for ascend practices. Upon validation, ensure they are not empty and valid.
+			if (isAscendPractice) {
+				formData.city = elements.$city.val().trim();
+				formData.zipcode = elements.$zipcode.val().trim();
+                formData.address = elements.$address.val().trim();
+				formData.state = elements.$state.val().trim();
+			}
+
+			// Only include the SNL checkbox if it's visible
+			if (window.elements.$snlCheckboxCol.is(':visible')) {
+				formData.notifyEarlier = elements.$notifyEarlier.is(':checked');
+			}
+
+			// Send validation request to controller
+			$.ajax({
+				url: '/rsm/public/bookOnlineNew/patient/validatePatientInfo.json?a=' + encodeURIComponent(accountIdEnc) + '&sessionId=' + encodeURIComponent(sessionId) + "&patientId=" + encodeURIComponent(currentPatientId),
+				type: 'POST',
+				data: JSON.stringify(formData),
+				contentType: 'application/json',
+				success: function (response) {
+					// Reset session timeout
+					setupSessionTimeout();
+
+					const result = JSON.parse(response);
+
+					if (result.success) {
+
+						// Update patient object
+						const patient = getCurrentPatient();
+						if (patient) {
+							patient.patientInformation = formData;
+						} else {
+							console.error('Patient object not found');
+						}
+
+						callback(true);
+					} else {
+						// Validation failed
+						if (result.errors) {
+							Object.keys(result.errors).forEach(function (fieldName) {
+								const $field = fieldName === 'gender' ? elements['$genderSection'] :elements['$' + fieldName];
+								if ($field && $field.length) {
+									$field.addClass('is-invalid');
+									// Update custom error message if needed
+									const $feedback = $field.siblings('.invalid-feedback');
+									if ($feedback.length && result.errors[fieldName]) {
+										$feedback.text(result.errors[fieldName]);
+									} else {
+										const $formCheck = $field.closest('.form-check');
+										if ($formCheck.length) {
+											$formCheck.addClass('is-invalid');
+										}
+									}
+                                    if(fieldName === 'gender'){
+                                        const inputs = $field.find('input');
+                                        inputs.each(function() {
+                                            $(this).addClass('is-invalid');
+                                        });
+                                    }
+								}
+							});
+						}
+						callback(false);
+					}
+				},
+				error: function () {
+					console.error('Validation request failed');
+					callback(false);
+				}
+			});
+		}
+
+		function validateGuardianInfoForm(callback) {
+			elements.$guardianInfoForm.find('.is-invalid').removeClass('is-invalid');
+
+			// Collect form data
+			const formData = {
+				firstName: elements.$guardianFirstName.val().trim(),
+				lastName: elements.$guardianLastName.val().trim(),
+				email: elements.$guardianEmail.val().trim(),
+				phone: elements.$guardianCell.val().trim(),
+			};
+
+			// Send validation request to controller
+			$.ajax({
+				url: '/rsm/public/bookOnlineNew/patient/validateGuardianInfo.json?a=' + encodeURIComponent(accountIdEnc) + '&sessionId=' + encodeURIComponent(sessionId),
+				type: 'POST',
+				data: JSON.stringify(formData),
+				contentType: 'application/json',
+				success: function (response) {
+					// Reset session timeout
+					setupSessionTimeout();
+
+					const result = JSON.parse(response);
+
+					if (result.success) {
+
+						callback(true);
+					} else {
+						// Validation failed
+						if (result.errors) {
+							Object.keys(result.errors).forEach(function (fieldName) {
+								const $field = elements['$' + fieldName];
+								if ($field && $field.length) {
+									$field.addClass('is-invalid');
+									// Update custom error message if needed
+									const $feedback = $field.siblings('.invalid-feedback');
+									if ($feedback.length && result.errors[fieldName]) {
+										$feedback.text(result.errors[fieldName]);
+									}
+								}
+							});
+						}
+						callback(false);
+					}
+				},
+				error: function () {
+					console.error('Validation request failed');
+					callback(false);
+				}
+			});
+		}
+
+		function generateReviewAppointments() {
+			// Empty existing content
+			elements.$reviewApptContainer.empty();
+
+			// Check
+			if (!patientsData || patientsData.length === 0) {
+				console.log('No patients data found');
+				navigateToSection(1);
+				return;
+			}
+
+			patientsData.forEach(function (patient, index) {
+				const apptCard = `
+					<div class="patient-review-card col-12 col-sm-4 d-flex align-items-center d-flex flex-column position-relative" patient-id="${patient.id}">
+						<button class="patient-remove-btn btn btn-sm btn-max-gray position-absolute rounded-circle d-flex align-items-center justify-content-center d-none" style="top: -5px; right: 0; width: 24px; height: 24px;" aria-label="Close" data-patient-id=${patient.id}>X</button>
+						<div class="bg-max-green-100 px-3 py-1 rounded-top-left-5 rounded-top-right-5 w-100 text-center">
+							<a href="#" class="patient-name-link link-primary text-center" data-patient-id="${patient.id}">${patient.patientInformation.firstName} ${patient.patientInformation.lastName}</a>
+						</div>
+						<div class="pt-2 pb-1 px-1 d-flex align-items-center d-flex flex-column w-100 border border-top-0 rounded-bottom-left-5 rounded-bottom-right-5">
+							<div class="fw-bold fs-7 mb-2 text-truncate w-100 text-center">${patient.appointmentType.name}</div>
+							<div class="text-max-green fw-bold">${formatDate(patient.opening.apptStartDate)}</div>
+							<div class="text-max-green fw-bold">${formatTime(patient.opening.apptStartDate)}</div>
+							<div class="mt-2 fs-7 text-center text-truncate w-100">with ${patient.provider.name}</div>
+						</div>
+					</div>
+				`;
+
+				elements.$reviewApptContainer.append(apptCard);
+			});
+
+			// Check if guardian information should be shown
+			// Show or hide the guardian information section based on conditions
+			if (checkGuardianInfoRequired()) {
+				window.elements.$guardianInfoSection.removeClass('d-none');
+			} else {
+				window.elements.$guardianInfoSection.addClass('d-none');
+			}
+
+			// Allow the user to remove patients
+			if (window.patientsData.length > 1) {
+				elements.$reviewApptContainer.find('.patient-remove-btn').removeClass('d-none');
+			}
+
+			// Remove patient event handler
+			elements.$reviewApptContainer.find('.patient-remove-btn').on('click', function () {
+				window.selectedRemoveButton = this;
+				window.elements.$apptRemovalModal.modal('show');
+			});
+
+			// Patient name click handler - Edit appointment
+			elements.$reviewApptContainer.find('.patient-name-link').on('click', function (e) {
+				e.preventDefault();
+				const patientId = $(this).data('patient-id');
+
+				// Find the index using patientId (now patientId is the consistent key)
+				const index = window.patientsData.findIndex(patient => patient.id === patientId);
+
+				editPatientAppointment(index);
+			});
+		}
+
+		/**
+		 * Check if the guardian information section should be displayed
+		 * Returns true if at least one patient is under 18 and that patient answered 'No' to the 'Are you an existing patient?' question
+		 */
+		function checkGuardianInfoRequired() {
+			if (!window.patientsData || window.patientsData.length === 0) {
+				return false;
+			}
+
+			return window.patientsData.some(function(patient) {
+				const patientInfo = patient.patientInformation;
+
+				// Check if the patient is under 18
+				if (patientInfo.dob) {
+					const birthDate = new Date(patientInfo.dob);
+					const today = new Date();
+
+					// Check if the birthdate is in the future (invalid)
+					if (birthDate > today) {
+						return false; // Invalid birthdate, skip this patient
+					}
+
+					// Calculate age
+					let age = today.getFullYear() - birthDate.getFullYear();
+					const monthDiff = today.getMonth() - birthDate.getMonth();
+
+					// Adjust age if the birthday hasn't occurred this year
+					if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+						age--;
+					}
+
+					const isUnder18 = age < 18;
+
+					// Check if this patient is under 18 AND answered 'No' to an existing patient
+					if (isUnder18 && patientInfo.existingPatient === 'no') {
+						return true; // Found at least one patient that meets both criteria
+					}
+				}
+
+				return false;
+			});
+		}
+
+		/* ================= Patient ================= */
+		function createPatientTemplate() {
+			return {
+				id: createPatientId(),
+				appointmentType: {
+					apptTypeId: null,
+					name: null,
+					length: null,
+					category: null,
+					categoryIcon: null,
+				},
+				selectedProviders: [],
+				provider: {
+					providerId: null,
+					name: null,
+				},
+				opening: {
+					apptStartDate: null,
+					apptEndDate: null,
+					bookOnlineTypeId: null,
+					apptOperatoryAccountXrefId: null,
+				},
+				patientInformation: {
+					firstName: null,
+					lastName: null,
+					dob: null,
+					phone: null,
+					email: null,
+					cdcp: null,
+					existingPatient: null,
+					insurance: null,
+					insuranceCompany: null,
+					subscriberName: null,
+					memberId: null,
+					groupId: null,
+					insurancePhone: null,
+					notifyEarlier: null,
+					note: null,
+                    genderCd: null
+				}
+			}
+		}
+
+		function createPatientId() {
+			return 'Pat_' + sessionId + '_' + window.patientCount++;
+		}
+
+		function addPatientData() {
+			// Create a new patient object
+			const newPatient = createPatientTemplate();
+			// Add to the patient array
+			window.patientsData.push(newPatient);
+			// Set the current patient ID
+			window.currentPatientId = newPatient.id;
+
+			console.log('New patient added:', newPatient);
+			return newPatient;
+		}
+
+        /**
+         * Utility function to reset the patient but keep optional fields.
+         * @param patient The patient object
+         * @param fieldsToKeep An array of the specific keys in the patient object we want to keep
+         * */
+        function resetPatientAppointmentData(patient,fieldsToKeep) {
+            //Convert the list of key value pairs back to an object.
+            //Object.entries will be in the form of an array. [[id,id],[appointmentType,{}]], etc.
+            return Object.fromEntries(
+                Object.entries(patient).map(([key, value]) => {
+                    //Keep the field we specify
+                    if (fieldsToKeep.includes(key)) {
+                        return [key, value];
+                    }
+
+                    //Reset arrays
+                    if (Array.isArray(value)) {
+                        return [key, []];
+                    }
+
+                    //For each of the objects, such as opening, patientInformation, appointmentType
+	                //Set each field of that object to be null (to reset it)
+                    if (typeof value === 'object' && value !== null) {
+                        const resetObject = Object.fromEntries(
+                            Object.keys(value).map(k => [k, null])
+                        );
+                        return [key, resetObject];
+                    }
+
+                    //Mainly for the id field, but reset it if it's a primitive.
+                    return [key, null];
+                })
+            );
+        }
+
+		function removePatient(removeBtn) {
+			const patientId = $(removeBtn).data('patient-id');
+
+			// Find the index using patientId (now patientId is the consistent key)
+			const index = window.patientsData.findIndex(patient => patient.id === patientId);
+
+			// Call server to release the appt for this patient
+			releaseAppointment(window.patientsData[index].id);
+
+			// Remove the patient object
+			window.patientsData.splice(index, 1);
+
+			// Remove the card
+			$(removeBtn).closest('.patient-review-card').remove();
+
+			// Don't allow patient removal if there's only one patient left
+			if (patientsData.length === 1) {
+				elements.$reviewApptContainer.find('.patient-remove-btn').addClass('d-none');
+			}
+
+			// Check if guardian information should be shown
+			// Show or hide the guardian information section based on conditions
+			if (checkGuardianInfoRequired()) {
+				window.elements.$guardianInfoSection.removeClass('d-none');
+			} else {
+				window.elements.$guardianInfoSection.addClass('d-none');
+			}
+		}
+
+		// Get current patient data
+		function getCurrentPatient() {
+			return window.patientsData.find(patient => patient.id === currentPatientId);
+		}
+
+		function initPatientBooking() {
+			const firstPatient = addPatientData();
+			window.currentPatientId = firstPatient.id;
+			console.log('Booking initialized with first patient:', firstPatient.id);
+		}
+
+		function addNewPatient() {
+			// First, add patient data
+			addPatientData();
+
+			// Reset all variables
+			window.currentStep = 1;
+			window.selectedApptType = null;
+			window.selectedProviders = [];
+			window.selectedTimeSlot = null;
+
+			// Reset navigation
+			window.elements.prevStepBtn.prop('checked', false);
+			window.elements.nextStepBtn.prop('checked', false);
+
+			// Call individual reset functions
+			initCalendarWidget();
+			resetAppointmentSelection();
+			resetPatientInfoForm();
+
+			// Send the user to the first section
+			navigateToSection(1);
+		}
+
+		function resetAppointmentSelection () {
+			$('input[name="typeRadio"]').prop('checked', false);
+			window.elements.$availabilityContainer.addClass('d-none');
+		}
+
+		function populateAppointmentSelection(patient) {
+			// Selects the patient's appt type
+			$(`input[name="typeRadio"][value="${window.selectedApptType.apptTypeId}"]`).prop('checked', true);
+
+			// Jump to the selected date
+			const selectedDate = new Date(window.selectedTimeSlot.apptStartDate).toISOString().split('T')[0];
+
+			if (window.calendarWidget && typeof window.calendarWidget.selectDate === 'function') {
+
+				window.calendarWidget.selectDate(selectedDate);
+
+				// Setup provider selection
+				handleProviderSelection(window.selectedApptType.apptTypeId);
+				window.selectedProviders = patient.selectedProviders;
+
+				// Refresh availability after selecting the date
+				refreshAvailability();
+
+				window.elements.$availabilityContainer.removeClass('d-none');
+
+				// Selected the previously selected providers
+				updateProviderCheckboxes(window.selectedProviders);
+
+				// Scroll to calendar
+				window.elements.$calendarContainer[0].scrollIntoView({
+					behavior: 'instant',
+					block: 'start'
+				});
+			} else {
+				console.error('calendarWidget or selectDate method not available');
+				console.log('calendarWidget:', window.calendarWidget);
+			}
+		}
+
+		function resetPatientInfoForm() {
+			// Reset form
+			window.elements.$patientForm[0].reset();
+			// Hide sections
+			window.elements.$insuranceQuestion.hide();
+			window.elements.$insuranceInfo.hide();
+			// Hide SNL checkbox
+			window.elements.$snlCheckboxCol.addClass('d-none');
+			// Clear invalid style
+			$('#patientInfoForm input, #patientInfoForm textarea').removeClass('is-invalid');
+		}
+
+		function handlePatientRemoval() {
+			// Handle "Yes" button click in removal modal
+			window.elements.$apptRemovalSubmitBtn.on('click', function() {
+				if (window.selectedRemoveButton) {
+					removePatient(window.selectedRemoveButton);
+					window.elements.$apptRemovalModal.modal('hide');
+					window.selectedRemoveButton = null;
+				}
+			});
+
+			// Handle "No" button click in removal modal
+			window.elements.$apptRemovalCancelBtn.on('click', function() {
+				// Hide the modal and clear the reference
+				window.elements.$apptRemovalModal.modal('hide');
+				window.selectedRemoveButton = null;
+			});
+		}
+
+		function editPatientAppointment(patientIndex) {
+			// Check
+			if (!patientsData || patientIndex < 0 || patientIndex >= patientsData.length) {
+				console.error('Invalid patient index');
+				return;
+			}
+
+			const patient = patientsData[patientIndex];
+
+			// Update stored data
+			window.currentPatientId = patient.id;
+			window.selectedApptType = patient.appointmentType;
+			window.selectedTimeSlot = patient.opening;
+
+			// Call individual reset functions
+			initCalendarWidget();
+			resetAppointmentSelection();
+			resetPatientInfoForm();
+
+			// Go to the first section
+			navigateToSection(1);
+
+			populateAppointmentSelection(patient);
+			populatePatientForm(patient.patientInformation);
+		}
+        /**
+         * Function mainly deals with handling the case where the patient is taken back to the edit appointment screen.
+         * This workflow happens when
+         * @param patientIndex The index of the patient inside of the object patientsData. Gives us the patient in which the booking had an issue for.
+         * */
+        function resetPatientAppointment(patientIndex) {
+			// Check
+            if (!patientsData || patientIndex < 0 || patientIndex >= patientsData.length) {
+                console.error('Invalid patient index');
+                return;
+            }
+            const patient = patientsData[patientIndex];
+            // Update stored data
+            window.currentPatientId = patient.id;
+			releaseAppointment(patient.id);
+
+            //Reset the appointment selection for the patient in which the appointment expired for.
+            initCalendarWidget();
+            resetAppointmentSelection();
+            resetPatientInfoForm();
+
+            // Go to the first section
+            navigateToSection(1);
+            // Reset navigation
+            window.elements.prevStepBtn.prop('checked', false);
+            window.elements.nextStepBtn.prop('checked', false);
+            window.elements.nextStepBtn.prop('disabled', true);
+
+            populatePatientForm(patient.patientInformation);
+            // Reset all variables
+            window.selectedApptType = null;
+            window.selectedProviders = [];
+            window.selectedTimeSlot = null;
+            patientsData[patientIndex] = resetPatientAppointmentData(patient,['id','patientInformation']);
+        }
+
+		function submitAppointments() {
+			if (previewMode) {
+				return;
+			}
+
+			// Disable the reserve button
+			window.elements.$reserveBtn.prop('disabled', true);
+
+			// Guardian information if the section is visible
+			let guardianInformation = null;
+			if (window.elements.$guardianInfoSection.is(':visible')) {
+				guardianInformation = {
+					firstName: $('#guardianFirstName').val(),
+					lastName: $('#guardianLastName').val(),
+					email: $('#guardianEmail').val(),
+					cellPhone: $('#guardianCell').val()
+				};
+			}
+
+			const submissionData = {
+				patients: window.patientsData,
+				guardianInformation: guardianInformation
+			};
+
+			$.ajax({
+				url: '/rsm/public/bookOnlineNew/patient/submitAppointments.json?a=' + encodeURIComponent(accountIdEnc) + '&sessionId=' + encodeURIComponent(sessionId),
+				type: 'POST',
+				contentType: 'application/json',
+				data: JSON.stringify(submissionData),
+				success: function () {
+					loadPatientConfirmationScreen();
+				},
+				error: function (xhr, status, error) {
+                    //Handle the case where there is an error due to the Same Day Booking request being outside of the cutoff time
+                    if (xhr.status === 410) {
+                        //Gone status
+	                    // [{patientId : ""},{patientId : ""}]
+	                    const patientsArray = JSON.parse(xhr.responseText);
+                        $('#apptGoneModalPatientsList').empty();
+						$.each(patientsArray, function(key,value) {
+                            // {patientId : ""}
+							if (patientsData.length > 1) {
+                                const $patientErrorLi = $('<li>').text(value.patientName + " - " + formatDate(value.formattedAppointmentDateTime) + " " + formatTime(value.formattedAppointmentDateTime));
+                                $('#apptGoneModalPatientsList').append($patientErrorLi);
+							}
+                            elements.$apptGoneModalBtn.data(key+'', value.patientId);
+						});
+
+	                    elements.$apptGoneModal.modal('show');
+                        //Enable the reserve button again.
+                        window.elements.$reserveBtn.prop('disabled', true);
+                    } else {
+                        redirectToErrorPage(xhr, status, error);
+                    }
+				}
+			});
+		}
+
+		function loadPatientConfirmationScreen() {
+			// Hide all the other sections
+			$('.step-section').addClass('d-none');
+			window.elements.stepSection.addClass('d-none');
+			window.elements.reservationSection.addClass('d-none');
+
+			// Generate appt cards
+			window.elements.$confirmApptContainer.empty();
+			// Check
+			if (!patientsData || patientsData.length === 0) {
+				redirectToErrorPage();
+			}
+
+			patientsData.forEach(function (patient, index) {
+				const apptCard = `
+					<div class="patient-review-card col-12 col-sm-4 d-flex align-items-center d-flex flex-column position-relative">
+						<div class="bg-max-green-100 px-3 py-1 rounded-top-left-5 rounded-top-right-5 w-100 text-center">
+							<div>${patient.patientInformation.firstName} ${patient.patientInformation.lastName}</div>
+						</div>
+						<div class="pt-2 pb-1 px-1 d-flex align-items-center d-flex flex-column w-100 border border-top-0 rounded-bottom-left-5 rounded-bottom-right-5">
+							<div class="fw-bold fs-7 mb-2 text-truncate w-100 text-center">${patient.appointmentType.name}</div>
+							<div class="text-max-green fw-bold">${formatDate(patient.opening.apptStartDate)}</div>
+							<div class="text-max-green fw-bold">${formatTime(patient.opening.apptStartDate)}</div>
+							<div class="mt-2 fs-7 text-center text-truncate w-100">with ${patient.provider.name}</div>
+						</div>
+					</div>
+				`;
+
+				window.elements.$confirmApptContainer.append(apptCard);
+			});
+
+			// Show the confirmation section
+			window.elements.$confirmationSection.removeClass('d-none');
+
+			// Expire session
+			expireSession();
+		}
+
+		function expireSession() {
+			$.ajax({
+				url: '/rsm/public/bookOnline/patient/expireSession',
+				type: 'POST',
+				data: {
+					a: encodeURIComponent(accountIdEnc),
+					sessionId: encodeURIComponent(sessionId),
+				},
+				success: function () {
+					console.log('Session expired');
+				},
+				error: function (xhr, status, error) {
+					console.error('Error expiring session', error);
+				}
+			});
+		}
+
+		/* ================= Util Functions ================= */
+
+		function formatDate(date) {
+			const options = {
+				weekday: 'short',
+				year: 'numeric',
+				month: 'short',
+				day: 'numeric'
+			};
+			return new Date(date).toLocaleDateString('en-US', options);
+		}
+
+		function formatTime(date) {
+			const options = {
+				hour: 'numeric',
+				minute: '2-digit',
+				hour12: true
+			};
+			return new Date(date).toLocaleTimeString('en-US', options);
+		}
+
+		function getDateMonthYear(date) {
+
+			date = new Date(date + 'T00:00:00'); // this avoids timezone issues
+			const day = date.getDate();
+			const month = date.getMonth() + 1; // Months start from 0
+			const year = date.getFullYear();
+
+			return {day, month, year};
+		}
+
+		function formatDateForCalendar(date) {
+			const year = date.getFullYear();
+			const month = String(date.getMonth() + 1).padStart(2, '0');
+			const day = String(date.getDate()).padStart(2, '0');
+			return `${year}-${month}-${day}`;
+		}
+
+		function populatePatientForm(patientData = null) {
+			// If no patient data is provided, use dummy data
+			const data = patientData || {
+				firstName: 'John',
+				lastName: 'Doe',
+				dob: '1990-05-15',
+				phone: '5551234567',
+				email: 'john.doe@example.com',
+				existingPatient: 'no',
+				cdcp: 'no',
+				address: '123 N Pacific Coast Hwy',
+				zipcode: '12345',
+				state: 'CA',
+				city: 'Laguna Beach',
+				insurance: 'yes',
+				insuranceCompany: 'Red Cross',
+				subscriberName: 'John Doe',
+				memberId: 'ABC123456789',
+				groupId: 'GRP001',
+				insurancePhone: '8005550199',
+				notifyEarlier: false,
+				note: 'This is test data for development purposes.'
+			};
+
+			// Basic patient information
+			elements.$firstName.val(data.firstName || '');
+			elements.$lastName.val(data.lastName || '');
+			elements.$dob.val(data.dob || '');
+			elements.$phone.val(data.phone || '');
+			elements.$email.val(data.email || '');
+
+			// Set CDCP radio button if it exists
+			if (elements.$cdcpNo.length > 0 && data.cdcp) {
+				if (data.cdcp === 'yes') {
+					elements.$cdcpYes.prop('checked', true).trigger('change');
+				} else {
+					elements.$cdcpNo.prop('checked', true).trigger('change');
+				}
+			}
+			// Set existing patient radio button
+			if (data.existingPatient) {
+				if (data.existingPatient === 'yes') {
+					elements.$existingPatientYes.prop('checked', true).trigger('change');
+				} else {
+					elements.$existingPatientNo.prop('checked', true).trigger('change');
+                    // genderCd
+                    if(data.gender != null) {
+                        $('#'+data.gender).prop('checked', true).trigger('change')
+                    }
+				}
+			}
+
+			// Set insurance radio button if it exists
+			if (elements.$insuranceYes.length > 0 && data.insurance) {
+				if (data.insurance === 'yes') {
+					elements.$insuranceYes.prop('checked', true).trigger('change');
+
+					// Fill insurance information if insurance fields exist
+					setTimeout(() => {
+						elements.$insuranceCompany.val(data.insuranceCompany || '');
+						elements.$subscriberName.val(data.subscriberName || '');
+						elements.$memberId.val(data.memberId || '');
+						elements.$groupId.val(data.groupId || '');
+						elements.$insurancePhone.val(data.insurancePhone || '');
+					}, 100); // Small delay to ensure insurance fields are visible
+				} else if (data.insurance === 'no') {
+					elements.$insuranceNo.prop('checked', true).trigger('change');
+				} else if (data.insurance === 'bring') {
+					elements.$insuranceBring.prop('checked', true).trigger('change');
+				}
+			}
+
+			//Fill the Dentrix Ascend information for the patient if it exists.
+			if (isAscendPractice) {
+				// Fill insurance information if insurance fields exist
+				setTimeout(() => {
+					elements.$zipcode.val(data.zipcode || '');
+					elements.$address.val(data.address || '');
+					elements.$city.val(data.city || '');
+					elements.$state.val(data.state || '');
+				}, 100); // Small delay to ensure insurance fields are visible
+			}
+
+			// Set notify earlier checkbox if it exists
+			if (elements.$notifyEarlier.length > 0) {
+				elements.$notifyEarlier.prop('checked', data.notifyEarlier || false);
+			}
+
+			// Add a note
+			elements.$note.val(data.note || '');
+
+			const logMessage = patientData ? 'Patient form populated with patient data' : 'Patient form populated with dummy data';
+			console.log(logMessage);
+		}
+	});
+</script>
+
+</body></html>
